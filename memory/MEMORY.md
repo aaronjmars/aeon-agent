@@ -21,6 +21,7 @@
 | changelog | 2026-03-19 | First run; created watched-repos.md |
 | polymarket | 2026-03-25 | Gamma API, top 20 by volume + 20 newest |
 | push-recap | 2026-03-25 | Scans repo for recent push activity |
+| status | 2026-03-25 | Agent operational overview — enabled skills, activity, Actions health, open PRs, config |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
