@@ -1,79 +1,87 @@
-# Repo Action Ideas — 2026-03-25
+# Repo Action Ideas — 2026-03-25 (Run 2)
 
 **Repo:** [aaronjmars/aeon](https://github.com/aaronjmars/aeon)
 **Stars:** 118 | **Forks:** 15 | **Language:** TypeScript | **Open Issues:** 0
 
-Aeon is an autonomous agent running on GitHub Actions powered by Claude Code, with 47 skills across research, dev tooling, crypto monitoring, and productivity. The project has seen rapid development — 60+ commits in the last 14 days, adding a local dashboard, model selection, inline run viewer, skill upload, and Telegram messaging.
+Aeon is an autonomous agent running on GitHub Actions powered by Claude Code, with 50 skills across research, dev tooling, crypto monitoring, and productivity. The project has seen explosive development — 65+ commits in the last 14 days, shipping a local dashboard (Next.js), per-skill model overrides, token usage tracking, json-render feed system, and Telegram bidirectional messaging.
 
-The AI agent ecosystem is exploding in 2026. OpenClaw passed 210k stars with its local-first plugin architecture. GitHub shipped Agentic Workflows in technical preview. Ruflo, Auto-Claude, and others are building multi-agent orchestration on Claude Code's Agent SDK. Meanwhile, visual workflow builders (n8n, Dify) are crossing 130k+ stars by making agents accessible to non-developers.
+## Ecosystem Context (March 2026)
 
-Aeon occupies a unique niche: zero-infra background intelligence on GitHub Actions. The following ideas aim to amplify that advantage.
+The AI agent skills ecosystem has matured dramatically:
+
+- **Vercel Skills.sh** launched in Feb 2026 as an open standard for agent commands — already adopted by Claude Code, Codex, Gemini CLI, Cursor, and 12+ other agents. Skills.sh uses the same SKILL.md format Aeon already uses.
+- **SkillsMP** hosts 145,000+ open-source skills. ClawHub has 5,700+. The skill economy is real.
+- **ClawHavoc** (Feb 2026) exposed 341 malicious skills on ClawHub distributing macOS malware — security is now top-of-mind for every skill platform.
+- **GitHub Agent HQ** (Feb 2026) lets users assign issues to Claude, Codex, or Copilot directly from GitHub — agents now compete on the same platform Aeon already runs on.
+- **awesome-claude-code** hit 27k+ stars. The toolkit variant by rohitg00 trended #1 on GitHub in Feb 2026. Composio's awesome-claude-skills has 44k+ stars. These are the directories that matter.
+
+Aeon's unique angle — zero-infra background agent on GitHub Actions, 50 built-in skills, markdown-only skill format — positions it perfectly in this landscape. The following ideas exploit that position.
 
 ---
 
-### 1. Skill Marketplace — Publish and Install Community Skills
+### 1. Skills.sh Compatibility — Make Aeon Skills Installable Everywhere
 
-**Type:** Community / Growth
+**Type:** Integration / Growth
 **Effort:** Medium (1-2 days)
-**Impact:** Aeon already has `search-skill` and `build-skill`, but there's no central registry where users can discover and share skills. A lightweight marketplace (a curated JSON index on GitHub + a `./aeon install <skill-url>` CLI command) would turn Aeon from a solo tool into a platform. OpenClaw's plugin ecosystem is a major driver of its growth — Aeon can do the same with less infrastructure since skills are just markdown files.
+**Impact:** Vercel's Skills.sh is becoming the npm of agent skills, already supporting 17+ agents including Claude Code and Codex. Aeon's 50 skills use the same SKILL.md format but aren't discoverable through Skills.sh. Publishing them there would instantly expose Aeon's entire library to hundreds of thousands of developers across every major coding agent. This is the single highest-leverage growth move available — turning Aeon from a standalone tool into a skills publisher for the entire ecosystem.
 
 **How:**
-1. Create a `skills-registry` repo (or a `registry.json` in the main repo) with metadata: name, description, author, tags, install URL.
-2. Extend the `search-skill` skill to query this registry and display results with install commands.
-3. Add a "Publish Skill" button to the dashboard that generates a PR to the registry with the skill's metadata.
+1. Add a `skills.json` manifest at the repo root listing all 50 skills with metadata (name, description, tags, var schema) in the Skills.sh registry format.
+2. Create a `publish-skills` GitHub Action that syncs the manifest to Skills.sh whenever skills are added or updated.
+3. Add `skills install aaronjmars/aeon/<skill-name>` badges to each skill's README section, enabling one-command installation on any supported agent.
 
 ---
 
-### 2. Multi-Agent Skill Orchestration with Subagents
+### 2. Skill Integrity Verification — Signed Skills & Import Audit
 
-**Type:** Feature
-**Effort:** Medium (1-2 days)
-**Impact:** Claude Code's Agent SDK now supports spawning subagents that work in parallel. Currently Aeon runs skills sequentially within a single agent context. Adding subagent orchestration would let composite skills like `morning-brief` and `daily-routine` run their constituent skills in parallel, cutting execution time by 3-5x and reducing Actions minutes. This is the architectural pattern that Ruflo and Auto-Claude are built around — Aeon should adopt it natively.
-
-**How:**
-1. Update the skill runner to detect composite skills (those that reference other skills via "Read skills/X/SKILL.md").
-2. Use Claude Code's `Agent` tool to spawn each sub-skill as a parallel subagent with `run_in_background`.
-3. Collect results and merge them in the parent skill context. Add a `parallel: true` flag in `aeon.yml` for skills that opt into this.
-
----
-
-### 3. Awesome-Claude-Code Listing and Ecosystem Presence
-
-**Type:** Growth
+**Type:** Security
 **Effort:** Small (hours)
-**Impact:** The [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) list is becoming the go-to directory for Claude Code extensions, skills, and agent orchestrators. Aeon isn't listed yet. Getting listed alongside Ruflo, Auto-Claude, and others would expose Aeon to the exact audience that would use it — developers already working with Claude Code who want background automation. Given Aeon's 47 skills and unique GitHub Actions approach, it would stand out immediately.
+**Impact:** ClawHavoc proved that the skill ecosystem has a trust problem — 341 malicious skills on ClawHub, 7.1% of registry skills leak API keys. Aeon's `search-skill` and `add-skill` commands import skills from external repos with no verification. Adding a lightweight integrity layer — SHA-256 checksums for installed skills, a warning when skills contain shell commands or URL fetches, and an audit log of all imported skills — would make Aeon the security-conscious choice. This matters especially for users running Aeon with API keys and wallet credentials.
 
 **How:**
-1. Open a PR to `hesreallyhim/awesome-claude-code` adding Aeon under the "Agent Orchestrators" or "Autonomous Agents" section.
-2. Also submit to `caramaschiHG/awesome-ai-agents-2026` (300+ resources, updated monthly) in the "Autonomous Agents" category.
-3. Add an "awesome-claude-code" badge to the Aeon README for cross-discovery.
+1. When `add-skill` imports a skill, compute and store its SHA-256 hash in `skills/.integrity.json`. On each run, verify the hash matches — alert if a skill was tampered with.
+2. Add a static analysis pass that scans SKILL.md files for suspicious patterns: `curl | bash`, hardcoded URLs to unknown domains, instructions to exfiltrate env vars.
+3. Surface an "Imported Skills Audit" section in the dashboard showing each external skill's source, install date, and integrity status.
 
 ---
 
-### 4. Skill Run Analytics Dashboard
+### 3. GitHub Agent HQ Bridge — Accept Issue Assignments
+
+**Type:** Feature / Integration
+**Effort:** Medium (1-2 days)
+**Impact:** GitHub Agent HQ now lets users assign issues directly to AI agents. Aeon already runs on GitHub Actions and has a `feature` skill that can implement code changes. Bridging the two — letting users assign a GitHub issue to Aeon and have it automatically pick it up, run the `feature` skill, and open a PR — would put Aeon on equal footing with Copilot and Codex in the Agent HQ paradigm. This is the natural evolution: Aeon already monitors repos, now it can act on direct assignments.
+
+**How:**
+1. Add an `issue_assigned` trigger to the Aeon workflow that fires when an issue is assigned to the Aeon bot account (or labeled `aeon`).
+2. Route assigned issues to the `feature` skill with the issue body as the `var` input, including the issue number for PR cross-referencing.
+3. Post a comment on the issue when work starts ("Aeon is working on this") and link the resulting PR when done.
+
+---
+
+### 4. Skill Run Analytics & Cost Dashboard
 
 **Type:** DX Improvement
 **Effort:** Medium (1-2 days)
-**Impact:** Aeon has a dashboard for triggering and viewing runs, but no analytics on skill performance over time — which skills run most, which fail, average execution time, token usage trends. With `feat: track token usage after each skill run` already shipped, the data exists in logs. Surfacing it as charts in the dashboard would help users optimize their skill portfolio and catch regressions. This is the "observe" step in the plan-act-observe-reflect loop that's becoming the 2026 standard for agent architectures.
+**Impact:** Token usage tracking was just shipped (`feat: track token usage after each skill run`), and per-skill model overrides landed too. But there's no way to see the data — which skills cost the most, which fail often, how total spend trends over time. A `/analytics` page in the dashboard would close the observe-optimize loop: users could see that `repo-article` on Opus costs 10x more than `push-recap` on Sonnet, then make informed model-selection decisions. With Claude Opus 4.6 at ~$15/MTok output vs Haiku at ~$1.25/MTok, this visibility directly saves money.
 
 **How:**
-1. Parse `memory/logs/*.md` and GitHub Actions run metadata to extract per-skill metrics: run count, success rate, duration, token usage.
-2. Add a `/analytics` page to the Next.js dashboard with time-series charts (use a lightweight library like Chart.js or Recharts).
-3. Surface actionable insights: "digest hasn't run in 3 days", "article skill uses 4x more tokens than average", "polymarket has 100% success rate".
+1. Parse `memory/logs/*.md` files and GitHub Actions API run data to extract per-skill metrics: run count, success/failure, duration, token usage, model used.
+2. Add a `/analytics` route to the Next.js dashboard with summary cards (total runs, total tokens, total cost estimate) and time-series charts (daily spend by skill, success rate trend).
+3. Add a "Cost Optimizer" recommendation: flag skills running on Opus that could use Sonnet based on their complexity profile (data-fetch skills vs creative-writing skills).
 
 ---
 
-### 5. Interactive Skill Builder in Dashboard
+### 5. Awesome-Claude-Code & Ecosystem Directory Listings
 
-**Type:** DX Improvement / Community
-**Effort:** Large (3+ days)
-**Impact:** Aeon's skill format is simple (markdown + frontmatter), but creating a new skill still requires understanding the SKILL.md format, knowing which tools are available, and writing the steps manually. An interactive skill builder in the dashboard — with a form for name/description/schedule, a step editor with tool autocomplete, and a "test run" button — would dramatically lower the barrier to creating custom skills. This is how n8n and Dify grew to 130k+ stars: visual builders that let non-developers create sophisticated workflows.
+**Type:** Growth
+**Effort:** Small (hours)
+**Impact:** awesome-claude-code has 27k+ stars and is the primary discovery channel for Claude Code extensions. awesome-claude-code-toolkit trended #1 on GitHub in Feb 2026. Composio's awesome-claude-skills has 44k+ stars. Aeon isn't listed on any of them. Given Aeon's unique positioning (50 skills, GitHub Actions-native, zero-infra, dashboard UI, bidirectional Telegram), it would immediately stand out in the "Autonomous Agents" or "Agent Orchestrators" sections. This is the lowest-effort, highest-visibility growth action available.
 
 **How:**
-1. Add a `/build-skill` page to the dashboard with form fields for skill metadata (name, description, var placeholder, schedule).
-2. Include a structured step editor where users can add steps with tool suggestions (web search, GitHub API, file operations) and preview the generated SKILL.md.
-3. Wire the "Test Run" button to trigger a workflow_dispatch with the generated skill, showing results inline.
+1. Open PRs to [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code), [rohitg00/awesome-claude-code-toolkit](https://github.com/rohitg00/awesome-claude-code-toolkit), and [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) adding Aeon with a compelling one-liner and link.
+2. Submit to [AI Agents Directory](https://aiagentsdirectory.com/landscape) interactive map under "Autonomous Agents" category.
+3. Add listing badges to the Aeon README for social proof and cross-discovery.
 
 ---
 
-*Generated by Aeon's `repo-actions` skill on 2026-03-25.*
+*Generated by Aeon's `repo-actions` skill on 2026-03-25 (run 2). Ecosystem data from web search performed same day.*
