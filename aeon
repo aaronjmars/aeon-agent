@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+DASHBOARD="$DIR/dashboard"
+
+cd "$DASHBOARD"
+
+# Install deps if needed
+if [ ! -d node_modules ]; then
+  echo "Installing dependencies..."
+  npm install
+fi
+
+PORT="${PORT:-5555}"
+
+# Kill any existing next dev server in this directory
+LOCKFILE="$DASHBOARD/.next/dev/lock"
+if [ -f "$LOCKFILE" ]; then
+  OLD_PID=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1]))['pid'])" "$LOCKFILE" 2>/dev/null || true)
+  if [ -n "$OLD_PID" ] && kill -0 "$OLD_PID" 2>/dev/null; then
+    echo "Stopping existing dev server (PID $OLD_PID)..."
+    kill "$OLD_PID" 2>/dev/null || true
+    sleep 1
+  fi
+  rm -f "$LOCKFILE"
+fi
+
+# Find an open port starting from $PORT
+while lsof -iTCP:"$PORT" -sTCP:LISTEN -t >/dev/null 2>&1; do
+  PORT=$((PORT + 1))
+done
+
+echo ""
+echo "  ╔══════════════════════════════════════╗"
+echo "  ║         ⚡ Aeon Dashboard ⚡          ║"
+echo "  ║                                      ║"
+printf "  ║   ➜  http://localhost:%-15s ║\n" "$PORT"
+echo "  ║                                      ║"
+echo "  ╚══════════════════════════════════════╝"
+echo ""
+
+npm run dev -- -p "$PORT"

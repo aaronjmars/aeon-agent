@@ -1,0 +1,500 @@
+name: Messages
+run-name: "${{ inputs.message && format('msg ({0}): {1}', inputs.source || 'user', inputs.message) || 'messages: poll' }}"
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Message to process'
+        required: false
+        type: string
+      source:
+        description: 'Message source (telegram, discord, slack)'
+        required: false
+        type: string
+  repository_dispatch:
+    types: [telegram-message, discord-message, slack-message]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+  actions: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  NODE_OPTIONS: '--no-deprecation'
+
+# Poll runs serialize (prevent duplicate polls). Message runs get unique groups (parallel execution).
+concurrency:
+  group: ${{ (github.event_name == 'repository_dispatch' || (github.event_name == 'workflow_dispatch' && inputs.message != '')) && format('aeon-msg-{0}', github.run_id) || 'aeon-messages-poll' }}
+  cancel-in-progress: false
+
+jobs:
+  poll:
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.message == '')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Collect and dispatch messages
+        env:
+          GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: |
+          MESSAGES='[]'
+
+          # --- Telegram (collect ALL pending updates) ---
+          if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
+            RESPONSE=$(curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?timeout=0&allowed_updates=%5B%22message%22%5D")
+            COUNT=$(echo "$RESPONSE" | jq '.result | length')
+            MAX_UPDATE_ID=""
+
+            for ((i=0; i<COUNT; i++)); do
+              TEXT=$(echo "$RESPONSE" | jq -r ".result[$i].message.text // empty")
+              CHAT=$(echo "$RESPONSE" | jq -r ".result[$i].message.chat.id // empty")
+              UPDATE_ID=$(echo "$RESPONSE" | jq -r ".result[$i].update_id // empty")
+
+              if [ -n "$TEXT" ] && [ "$CHAT" = "$TELEGRAM_CHAT_ID" ]; then
+                MESSAGES=$(echo "$MESSAGES" | jq --arg src "telegram" --arg txt "$TEXT" '. + [{source: $src, text: $txt}]')
+                echo "Telegram: $TEXT"
+              fi
+              MAX_UPDATE_ID="$UPDATE_ID"
+            done
+
+            # Acknowledge all updates at once
+            if [ -n "$MAX_UPDATE_ID" ]; then
+              curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?offset=$((MAX_UPDATE_ID + 1))" > /dev/null
+            fi
+          fi
+
+          # --- Discord (collect ALL unprocessed messages) ---
+          if [ -n "${DISCORD_BOT_TOKEN:-}" ] && [ -n "${DISCORD_CHANNEL_ID:-}" ]; then
+            RESPONSE=$(curl -s -H "Authorization: Bot $DISCORD_BOT_TOKEN" \
+              "https://discord.com/api/v10/channels/$DISCORD_CHANNEL_ID/messages?limit=10")
+            COUNT=$(echo "$RESPONSE" | jq 'if type == "array" then length else 0 end')
+
+            for ((i=0; i<COUNT; i++)); do
+              CONTENT=$(echo "$RESPONSE" | jq -r ".[$i].content // empty")
+              IS_BOT=$(echo "$RESPONSE" | jq -r ".[$i].author.bot // false")
+              MSG_ID=$(echo "$RESPONSE" | jq -r ".[$i].id // empty")
+              HAS_CHECK=$(echo "$RESPONSE" | jq -r "[.[$i].reactions[]? | select(.emoji.name == \"✅\") | .me] | any")
+
+              if [ -n "$CONTENT" ] && [ "$IS_BOT" != "true" ] && [ "$HAS_CHECK" != "true" ]; then
+                # Mark as processed
+                curl -s -X PUT -H "Authorization: Bot $DISCORD_BOT_TOKEN" \
+                  "https://discord.com/api/v10/channels/$DISCORD_CHANNEL_ID/messages/$MSG_ID/reactions/%E2%9C%85/@me" > /dev/null
+                MESSAGES=$(echo "$MESSAGES" | jq --arg src "discord" --arg txt "$CONTENT" '. + [{source: $src, text: $txt}]')
+                echo "Discord: $CONTENT"
+              fi
+            done
+          fi
+
+          # --- Slack (collect ALL unprocessed messages) ---
+          if [ -n "${SLACK_BOT_TOKEN:-}" ] && [ -n "${SLACK_CHANNEL_ID:-}" ]; then
+            RESPONSE=$(curl -s -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+              "https://slack.com/api/conversations.history?channel=$SLACK_CHANNEL_ID&limit=10")
+            COUNT=$(echo "$RESPONSE" | jq '.messages | length')
+
+            for ((i=0; i<COUNT; i++)); do
+              TEXT=$(echo "$RESPONSE" | jq -r ".messages[$i].text // empty")
+              TS=$(echo "$RESPONSE" | jq -r ".messages[$i].ts // empty")
+              BOT_ID=$(echo "$RESPONSE" | jq -r ".messages[$i].bot_id // empty")
+              HAS_CHECK=$(echo "$RESPONSE" | jq -r ".messages[$i].reactions[]? | select(.name == \"white_check_mark\") | .name // empty")
+
+              if [ -n "$TEXT" ] && [ "$BOT_ID" = "null" ] && [ -z "$HAS_CHECK" ]; then
+                # Mark as processed
+                curl -s -X POST -H "Authorization: Bearer $SLACK_BOT_TOKEN" \
+                  -H "Content-Type: application/json" \
+                  -d "$(jq -n --arg ch "$SLACK_CHANNEL_ID" --arg ts "$TS" \
+                    '{channel: $ch, timestamp: $ts, name: "white_check_mark"}')" \
+                  "https://slack.com/api/reactions.add" > /dev/null
+                MESSAGES=$(echo "$MESSAGES" | jq --arg src "slack" --arg txt "$TEXT" '. + [{source: $src, text: $txt}]')
+                echo "Slack: $TEXT"
+              fi
+            done
+          fi
+
+          # Dispatch each message as a separate workflow run
+          MSG_COUNT=$(echo "$MESSAGES" | jq 'length')
+          echo "Found $MSG_COUNT message(s)"
+
+          for ((i=0; i<MSG_COUNT; i++)); do
+            SOURCE=$(echo "$MESSAGES" | jq -r ".[$i].source")
+            TEXT=$(echo "$MESSAGES" | jq -r ".[$i].text")
+            echo "Dispatching [$SOURCE]: $TEXT"
+            gh workflow run messages.yml -R "$GITHUB_REPOSITORY" -f source="$SOURCE" -f message="$TEXT"
+          done
+
+          if [ "$MSG_COUNT" -eq 0 ]; then
+            echo "No new messages"
+          fi
+
+  run:
+    if: github.event_name == 'repository_dispatch' || (github.event_name == 'workflow_dispatch' && inputs.message != '')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Extract message
+        id: msg
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            MESSAGE=$(echo '${{ toJson(github.event.client_payload.message) }}' | jq -r '.')
+            TYPE="${{ github.event.action }}"
+            SOURCE="webhook"
+            case "$TYPE" in
+              telegram-message) SOURCE="telegram" ;;
+              discord-message) SOURCE="discord" ;;
+              slack-message) SOURCE="slack" ;;
+            esac
+          else
+            MESSAGE="${{ inputs.message }}"
+            SOURCE="${{ inputs.source }}"
+          fi
+
+          if [ -n "$MESSAGE" ] && [ "$MESSAGE" != "null" ]; then
+            echo "source=$SOURCE" >> "$GITHUB_OUTPUT"
+            echo "message<<ENDOFMESSAGE" >> "$GITHUB_OUTPUT"
+            echo "$MESSAGE" >> "$GITHUB_OUTPUT"
+            echo "ENDOFMESSAGE" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout repo
+        if: steps.msg.outputs.source != ''
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        if: steps.msg.outputs.source != ''
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install Claude Code
+        if: steps.msg.outputs.source != ''
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run
+        id: run
+        if: steps.msg.outputs.source != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
+          MODEL="${CONFIG_MODEL:-claude-opus-4-6}"
+
+          cat > ./notify << 'NOTIFY_SCRIPT'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          MSG="$1"
+          if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
+            curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$MSG" '{chat_id: $chat, text: $text, parse_mode: "Markdown"}')" > /dev/null || true
+          fi
+          if [ -n "${DISCORD_WEBHOOK_URL:-}" ]; then
+            curl -sf -X POST "$DISCORD_WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg text "$MSG" '{content: $text}')" > /dev/null || true
+          fi
+          if [ -n "${SLACK_WEBHOOK_URL:-}" ]; then
+            curl -sf -X POST "$SLACK_WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg text "$MSG" '{text: $text}')" > /dev/null || true
+          fi
+          NOTIFY_SCRIPT
+          chmod +x ./notify
+
+          ALLOWED="Read,Write,Edit,Glob,Grep,WebFetch,WebSearch"
+          ALLOWED="$ALLOWED,Bash(curl:*),Bash(gh:*),Bash(git:*),Bash(jq:*)"
+          ALLOWED="$ALLOWED,Bash(./notify:*)"
+          ALLOWED="$ALLOWED,Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(chmod:*)"
+          ALLOWED="$ALLOWED,Bash(date:*),Bash(echo:*),Bash(node:*),Bash(npm:*),Bash(npx:*)"
+          ALLOWED="$ALLOWED,Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(sort:*),Bash(grep:*)"
+
+          SOURCE="${{ steps.msg.outputs.source }}"
+          MESSAGE="${{ steps.msg.outputs.message }}"
+          PROMPT="Today is $TODAY. You received this message from the user on ${SOURCE}:
+
+          \"$MESSAGE\"
+
+          Read memory/MEMORY.md for context. Look at the available skills in skills/ to understand what you can do.
+
+          Interpret what the user wants and act on it:
+          - If they want you to run a skill (e.g. \"write an article about X\", \"send me a digest\"), read that skill file and execute it.
+          - If they want information or have a question, research it and respond.
+          - If they want you to remember something, update memory/MEMORY.md.
+          - For anything else, do your best and explain what you did.
+
+          Always send your response back via ./notify so the user sees it."
+          CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
+            --model "$MODEL" --allowedTools "$ALLOWED" \
+            --output-format json)
+
+          # Extract and print the text result so logs still show skill output
+          echo "$CLAUDE_OUTPUT" | jq -r '.result // empty'
+
+          # Parse token usage from JSON response
+          INPUT_TOKENS=$(echo "$CLAUDE_OUTPUT" | jq '.usage.input_tokens // 0')
+          OUTPUT_TOKENS=$(echo "$CLAUDE_OUTPUT" | jq '.usage.output_tokens // 0')
+          CACHE_READ=$(echo "$CLAUDE_OUTPUT" | jq '.usage.cache_read_input_tokens // 0')
+          CACHE_CREATION=$(echo "$CLAUDE_OUTPUT" | jq '.usage.cache_creation_input_tokens // 0')
+          TOTAL_TOKENS=$((INPUT_TOKENS + OUTPUT_TOKENS))
+
+          echo "SKILL_INPUT_TOKENS=$INPUT_TOKENS" >> "$GITHUB_OUTPUT"
+          echo "SKILL_OUTPUT_TOKENS=$OUTPUT_TOKENS" >> "$GITHUB_OUTPUT"
+          echo "SKILL_CACHE_READ_TOKENS=$CACHE_READ" >> "$GITHUB_OUTPUT"
+          echo "SKILL_CACHE_CREATION_TOKENS=$CACHE_CREATION" >> "$GITHUB_OUTPUT"
+          echo "SKILL_TOTAL_TOKENS=$TOTAL_TOKENS" >> "$GITHUB_OUTPUT"
+
+          echo "::notice::Token usage — input: $INPUT_TOKENS, output: $OUTPUT_TOKENS, cache_read: $CACHE_READ, cache_creation: $CACHE_CREATION, total: $TOTAL_TOKENS"
+
+      - name: Log token usage
+        if: steps.msg.outputs.source != ''
+        run: |
+          SOURCE="${{ steps.msg.outputs.source }}"
+          INPUT="${{ steps.run.outputs.SKILL_INPUT_TOKENS }}"
+          OUTPUT="${{ steps.run.outputs.SKILL_OUTPUT_TOKENS }}"
+          CACHE_READ="${{ steps.run.outputs.SKILL_CACHE_READ_TOKENS }}"
+          CACHE_CREATION="${{ steps.run.outputs.SKILL_CACHE_CREATION_TOKENS }}"
+          TOTAL="${{ steps.run.outputs.SKILL_TOTAL_TOKENS }}"
+          echo "## Token Usage: message ($SOURCE)" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Metric | Tokens |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|--------|--------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Input | $INPUT |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Output | $OUTPUT |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Cache read | $CACHE_READ |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Cache creation | $CACHE_CREATION |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Total** | **$TOTAL** |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit results
+        if: steps.msg.outputs.source != ''
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          rm -f ./notify
+
+          CURRENT_BRANCH=$(git branch --show-current)
+          SOURCE="${{ steps.msg.outputs.source }}"
+
+          # If Claude created a feature branch, push it then switch back to main
+          if [ "$CURRENT_BRANCH" != "main" ] && [ -n "$CURRENT_BRANCH" ]; then
+            echo "On feature branch: $CURRENT_BRANCH"
+            git add -A
+            git diff --staged --quiet || git commit -m "chore($SOURCE): auto-commit $(date +%Y-%m-%d)"
+            git push --force-with-lease -u origin "$CURRENT_BRANCH" || true
+
+            # Switch back to main for memory/log commits
+            git checkout -f main
+            git pull --rebase origin main || true
+          fi
+
+          # Commit any remaining changes on main
+          git add -A
+          git diff --staged --quiet && exit 0
+          git commit -m "chore($SOURCE): auto-commit $(date +%Y-%m-%d)"
+          for i in 1 2 3; do
+            if git pull --rebase origin main; then
+              git push -u origin HEAD && exit 0
+            else
+              echo "Rebase conflict on attempt $i, auto-resolving..."
+              for f in $(git diff --name-only --diff-filter=U); do
+                if [[ "$f" == memory/logs/* ]] || [[ "$f" == memory/topics/* ]] || [[ "$f" == memory/MEMORY.md ]]; then
+                  sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$f"
+                  git add "$f"
+                else
+                  git checkout --theirs "$f"
+                  git add "$f"
+                fi
+              done
+              if git diff --cached --quiet; then
+                git rebase --skip
+              else
+                GIT_EDITOR=true git rebase --continue
+              fi
+            fi
+            echo "Push attempt $i failed, retrying..."
+          done
+          echo "Failed to push after 3 attempts"
+          exit 1
+
+  schedule:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine scheduled skills
+        id: skill
+        env:
+          GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+        run: |
+          MINUTE=$(date -u +%-M)
+          HOUR=$(date -u +%-H)
+          DOM=$(date -u +%-d)
+          MONTH=$(date -u +%-m)
+          DOW=$(date -u +%w)
+
+          # Also check previous hour for catch-up (GitHub Actions cron can miss windows)
+          PREV_HOUR=$(( (HOUR + 23) % 24 ))
+
+          cron_match() {
+            local field="$1" value="$2"
+            [ "$field" = "*" ] && return 0
+            if [[ "$field" == */* ]]; then
+              local interval="${field#*/}"
+              [ $((value % interval)) -eq 0 ] && return 0
+              return 1
+            fi
+            IFS=',' read -ra VALS <<< "$field"
+            for v in "${VALS[@]}"; do
+              [ "$v" = "$value" ] && return 0
+            done
+            return 1
+          }
+
+          NOW_EPOCH=$(date -u +%s)
+
+          # Batch-fetch all dispatched runs once (instead of per-skill API calls)
+          TODAY=$(date -u +%Y-%m-%d)
+          DISPATCHED_RUNS=$(gh run list --workflow=aeon.yml --created="$TODAY" \
+            --json displayTitle,createdAt \
+            --jq '.[] | "\(.createdAt)\t\(.displayTitle)"' 2>/dev/null || true)
+
+          # Check if skill was dispatched within last N minutes
+          recently_dispatched() {
+            local skill="$1" window_min="${2:-90}"
+            local cutoff=$((NOW_EPOCH - window_min * 60))
+            while IFS=$'\t' read -r ts title; do
+              [[ -z "$ts" ]] && continue
+              if [[ "$title" == *"$skill"* ]]; then
+                local run_epoch
+                run_epoch=$(date -u -d "$ts" +%s 2>/dev/null || echo 0)
+                [ "$run_epoch" -ge "$cutoff" ] && return 0
+              fi
+            done <<< "$DISPATCHED_RUNS"
+            return 1
+          }
+
+          declare -A SKILL_ENABLED SKILL_SCHEDULE SKILL_VAR
+          SKILL_ORDER=()
+          CURRENT_SKILL=""
+          while IFS= read -r line; do
+            # Support inline format: skill-name: { enabled: true, schedule: "..." }
+            if [[ "$line" =~ ^\ \ ([a-zA-Z0-9_-]+):\ *\{(.+)\} ]]; then
+              CURRENT_SKILL="${BASH_REMATCH[1]}"
+              INLINE="${BASH_REMATCH[2]}"
+              SKILL_ORDER+=("$CURRENT_SKILL")
+              if [[ "$INLINE" =~ enabled:\ *true ]]; then
+                SKILL_ENABLED["$CURRENT_SKILL"]="true"
+              else
+                SKILL_ENABLED["$CURRENT_SKILL"]="false"
+              fi
+              if [[ "$INLINE" =~ schedule:\ *\"([^\"]+)\" ]]; then
+                SKILL_SCHEDULE["$CURRENT_SKILL"]="${BASH_REMATCH[1]}"
+              fi
+              if [[ "$INLINE" =~ var:\ *\"([^\"]+)\" ]]; then
+                SKILL_VAR["$CURRENT_SKILL"]="${BASH_REMATCH[1]}"
+              fi
+              CURRENT_SKILL=""
+              continue
+            fi
+            # Support multi-line format
+            if [[ "$line" =~ ^\ \ ([a-zA-Z0-9_-]+):\ *$ ]]; then
+              CURRENT_SKILL="${BASH_REMATCH[1]}"
+              SKILL_ORDER+=("$CURRENT_SKILL")
+              SKILL_ENABLED["$CURRENT_SKILL"]="true"
+              SKILL_SCHEDULE["$CURRENT_SKILL"]=""
+              SKILL_VAR["$CURRENT_SKILL"]=""
+            fi
+            if [[ "$line" =~ ^\ \ \ \ enabled:\ *false ]] && [ -n "$CURRENT_SKILL" ]; then
+              SKILL_ENABLED["$CURRENT_SKILL"]="false"
+            fi
+            if [[ "$line" =~ ^\ \ \ \ schedule:\ *\"([^\"]+)\" ]] && [ -n "$CURRENT_SKILL" ]; then
+              SKILL_SCHEDULE["$CURRENT_SKILL"]="${BASH_REMATCH[1]}"
+            fi
+            if [[ "$line" =~ ^\ \ \ \ var:\ *\"([^\"]+)\" ]] && [ -n "$CURRENT_SKILL" ]; then
+              SKILL_VAR["$CURRENT_SKILL"]="${BASH_REMATCH[1]}"
+            fi
+          done < aeon.yml
+
+          MATCHED=()
+          for SKILL in "${SKILL_ORDER[@]}"; do
+            [ "${SKILL_ENABLED[$SKILL]}" = "false" ] && continue
+            SCHED="${SKILL_SCHEDULE[$SKILL]}"
+            [ -z "$SCHED" ] && continue
+
+            IFS=' ' read -r C_MIN C_HOUR C_DOM C_MONTH C_DOW <<< "$SCHED"
+
+            # Day/month/weekday must match current date (filter early)
+            cron_match "$C_DOM" "$DOM" || continue
+            cron_match "$C_MONTH" "$MONTH" || continue
+            cron_match "$C_DOW" "$DOW" || continue
+
+            SHOULD_RUN=false
+
+            # Normal check: schedule matches current hour and minute has passed
+            if cron_match "$C_HOUR" "$HOUR"; then
+              if [ "$C_MIN" = "*" ] || [ "$C_MIN" -le "$MINUTE" ]; then
+                SHOULD_RUN=true
+              fi
+            fi
+
+            # Catch-up: schedule matched the previous hour but was missed
+            if [ "$SHOULD_RUN" = "false" ] && cron_match "$C_HOUR" "$PREV_HOUR"; then
+              SHOULD_RUN=true
+            fi
+
+            [ "$SHOULD_RUN" = "false" ] && continue
+
+            # Smart dedup: skip if dispatched within last 90 minutes
+            if recently_dispatched "$SKILL" 90; then
+              echo "Skipping $SKILL (dispatched within last 90 min)"
+              continue
+            fi
+
+            MATCHED+=("$SKILL")
+            echo "Matched skill: $SKILL"
+          done
+
+          # Dispatch all matched skills via the Aeon workflow
+          for SKILL in "${MATCHED[@]}"; do
+            VAR="${SKILL_VAR[$SKILL]}"
+            if [ -n "$VAR" ]; then
+              echo "Dispatching: $SKILL (var: $VAR)"
+              gh workflow run aeon.yml -f skill="$SKILL" -f var="$VAR"
+            else
+              echo "Dispatching: $SKILL"
+              gh workflow run aeon.yml -f skill="$SKILL"
+            fi
+            sleep 2
+          done

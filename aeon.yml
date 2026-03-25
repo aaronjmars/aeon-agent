@@ -1,0 +1,87 @@
+# Aeon configuration
+#
+# Enable skills by setting enabled: true. Multiple skills at the same time run in parallel.
+# Set var: "value" to pass a default parameter to the skill.
+
+skills:
+  # --- Morning aggregation (7 AM UTC) ---
+  morning-brief: { enabled: false, schedule: "0 7 * * *" }
+  daily-routine: { enabled: false, schedule: "0 7 * * *" }
+  rss-digest: { enabled: false, schedule: "0 7 * * *" }
+  hacker-news-digest: { enabled: false, schedule: "0 7 * * *" }
+  hn-digest: { enabled: false, schedule: "0 7 * * *" }
+  paper-digest: { enabled: false, schedule: "0 7 * * *" }
+  tweet-digest: { enabled: false, schedule: "0 7 * * *" }
+  reddit-digest: { enabled: false, schedule: "0 7 * * *" }
+
+  # --- Mid-morning (9 AM UTC) ---
+  issue-triage: { enabled: false, schedule: "0 9 * * *" }
+  pr-review: { enabled: false, schedule: "0 9 * * *" }
+  github-monitor: { enabled: false, schedule: "0 9 * * *" }
+  github-issues: { enabled: false, schedule: "0 9 * * *" }
+  github-trending: { enabled: false, schedule: "0 9 * * *" }
+
+  # --- Midday (12 PM UTC) ---
+  token-alert: { enabled: false, schedule: "0 12 * * *" }
+  token-movers: { enabled: false, schedule: "0 12 * * *" }
+  trending-coins: { enabled: false, schedule: "0 12 * * *" }
+  wallet-digest: { enabled: false, schedule: "0 12 * * *" }
+  on-chain-monitor: { enabled: false, schedule: "0 12 * * *" }
+  defi-monitor: { enabled: false, schedule: "0 12 * * *" }
+  defi-overview: { enabled: false, schedule: "0 12 * * *" }
+  polymarket: { enabled: false, schedule: "0 12 * * *" }
+  polymarket-comments: { enabled: false, schedule: "0 12 * * *" }
+  monitor-runners: { enabled: false, schedule: "0 12 * * *" }
+  token-pick: { enabled: false, schedule: "0 12 * * *" }
+
+  # --- Afternoon (2 PM UTC) ---
+  article: { enabled: false, schedule: "0 14 * * *" }
+  digest: { enabled: false, schedule: "0 14 * * *" }
+  research-brief: { enabled: false, schedule: "0 14 * * *" }
+  paper-pick: { enabled: false, schedule: "0 14 * * *" }
+  search-papers: { enabled: false, schedule: "0 14 * * *" }
+  search-skill: { enabled: false, schedule: "0 14 * * *" }
+  security-digest: { enabled: false, schedule: "0 14 * * *" }
+  idea-capture: { enabled: false, schedule: "0 14 * * *" }
+
+  # --- Late afternoon (4 PM UTC) ---
+  code-health: { enabled: false, schedule: "0 16 * * *" }
+  changelog: { enabled: false, schedule: "0 16 * * *" }
+  feature: { enabled: false, schedule: "0 16 * * *" }
+  build-skill: { enabled: false, schedule: "0 16 * * *" }
+
+  # --- X / social (5 PM UTC) ---
+  fetch-tweets: { enabled: false, schedule: "0 17 * * *" }
+  refresh-x: { enabled: false, schedule: "0 17 * * *" }
+  list-digest: { enabled: false, schedule: "0 17 * * *" }
+  write-tweet: { enabled: false, schedule: "0 17 * * *" }
+  reply-maker: { enabled: false, schedule: "0 17 * * *" }
+
+  # --- Evening / meta (6 PM UTC) ---
+  goal-tracker: { enabled: false, schedule: "0 18 * * *" }
+  skill-health: { enabled: false, schedule: "0 18 * * *" }
+  self-review: { enabled: false, schedule: "0 18 * * *" }
+  reflect: { enabled: false, schedule: "0 18 * * *" }
+  memory-flush: { enabled: false, schedule: "0 18 * * *" }
+  action-converter: { enabled: false, schedule: "0 18 * * *" }
+  startup-idea: { enabled: false, schedule: "0 18 * * *" }
+
+  # --- Weekly (Monday only) ---
+  weekly-review: { enabled: false, schedule: "0 19 * * 1" }
+
+  # --- Fallback (must be last) ---
+  heartbeat: { enabled: true, schedule: "0 12 * * *" }
+
+# Default model for all skills. Override per-run via workflow_dispatch.
+# Options: claude-opus-4-6, claude-sonnet-4-6, claude-haiku-4-5-20251001
+model: claude-opus-4-6
+
+# Output channels
+channels:
+  jsonrender:
+    enabled: true  # Set to true (or JSONRENDER_ENABLED=true as repo var) to write json-render specs
+
+# Messaging integration
+# Polls for messages every 5 minutes on Telegram/Discord/Slack.
+telegram:
+  enabled: true

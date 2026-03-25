@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+# Usage: ./notify-jsonrender <skill_name> <markdown_output>
+# Converts skill markdown output into a json-render spec via Haiku,
+# then writes it to dashboard/outputs/ for the dashboard feed.
+# Works with both ANTHROPIC_API_KEY and CLAUDE_CODE_OAUTH_TOKEN.
+set -euo pipefail
+
+SKILL="$1"
+CONTENT="$2"
+TIMESTAMP=$(date -u +"%Y-%m-%dT%H-%M-%SZ")
+OUTDIR="dashboard/outputs"
+OUTFILE="$OUTDIR/${SKILL}-${TIMESTAMP}.json"
+
+mkdir -p "$OUTDIR"
+
+SYSTEM='You convert skill notification output into a json-render spec for a dashboard feed card. Your job is to FAITHFULLY represent ALL content — not to summarize it.
+
+Output a json-render spec as a single JSON object: { "root": "<id>", "state": {}, "elements": { "<id>": { "type": "...", "props": {...}, "children": [...] } } }
+
+COMPONENTS (use ONLY these — 15 total):
+
+Layout:
+- Card: props { title?, description? } — container, accepts children (array of element IDs)
+- Stack: props { direction?: "horizontal"|"vertical", gap?: "sm"|"md"|"lg" } — flex container, accepts children
+- Grid: props { columns?: number, gap?: "sm"|"md"|"lg" } — grid layout, accepts children
+- Separator: props { orientation?: "horizontal"|"vertical" } — NO children, visual divider between sections
+
+Text:
+- Heading: props { text: string, level?: "h1"|"h2"|"h3"|"h4" } — NO children, content goes in text prop
+- Text: props { text: string, variant?: "body"|"caption"|"muted"|"lead" } — NO children, content goes in text prop
+- Badge: props { text: string, variant?: "default"|"secondary"|"destructive"|"outline" } — NO children
+- Link: props { label: string, href: string } — NO children, clickable URL
+
+Data:
+- Table: props { columns: string[], rows: string[][] } — NO children, data in props
+- Stat: props { label?: string, value: string, delta?: string, trend?: "up"|"down"|"neutral" } — NO children. Shows a big number with optional change. Use for prices, TVL, volume, counts
+- Progress: props { value: number, max?: number (default 100), label?: string } — NO children, percentage bar
+
+Content cards:
+- TweetCard: props { author: string, handle?: string, text: string, likes?: number, retweets?: number } — NO children. Use for any tweet or social post
+- StoryLink: props { title: string, href: string, source?: string, score?: string } — NO children. Use for news items, HN stories, GitHub repos, papers — anything with a title + URL
+- Alert: props { title?: string, message?: string, type?: "info"|"warning"|"error"|"success" } — NO children, for warnings/advisories
+
+Other:
+- Button: props { label: string, variant?: "primary"|"secondary"|"danger" } — NO children
+
+CRITICAL RULES:
+1. Return ONLY valid JSON. No markdown fences. Every ID in a children array must exist in elements.
+2. You are a FAITHFUL TRANSCRIBER, not a summarizer. Include ALL content from the input — every line, every data point, every URL.
+3. Do NOT summarize, condense, or omit anything. If the input has 10 items, the output must have 10 items.
+4. ALL URLs must use Link or StoryLink (never plain text in a Text prop).
+5. Use StoryLink for news items, HN stories, repos, papers — anything with title + URL + optional source.
+6. Use TweetCard for tweets and social posts — not Text.
+7. Use Stat for any numeric value with a label (prices, volumes, TVL, odds, counts). Put % changes in delta with trend "up" or "down".
+8. Use Progress for odds and percentages that should be visualized as a bar.
+9. Use Badge for tags, labels, categories, or short status indicators.
+10. Use Alert for warnings, errors, or notable callouts.
+11. Use Separator between major sections.
+12. Wrap the whole output in one Card. Use the first heading or skill name as the Card title.
+11. Wrap the whole output in one Card. Use the first heading or skill name as the Card title.'
+
+# Use claude CLI — works with both API key and OAuth token
+SPEC=$(echo "$CONTENT" | claude -p "Convert this skill output into a json-render spec. Skill: ${SKILL}" \
+  --model claude-haiku-4-5-20251001 \
+  --system-prompt "$SYSTEM" \
+  --max-turns 1 \
+  --output-format text 2>/dev/null)
+
+# Strip markdown fences if Haiku wraps them
+SPEC=$(echo "$SPEC" | sed '/^```json$/d; /^```$/d')
+
+# Validate it parses as JSON before writing
+echo "$SPEC" | jq . > "$OUTFILE"
+
+echo "json-render: wrote $OUTFILE"

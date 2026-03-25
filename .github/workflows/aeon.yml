@@ -1,0 +1,342 @@
+name: Aeon
+run-name: "skill: ${{ inputs.skill || 'feature' }}${{ inputs.var && format(' ({0})', inputs.var) || '' }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      skill:
+        description: 'Skill'
+        required: true
+        type: choice
+        options:
+          - action-converter
+          - article
+          - build-skill
+          - changelog
+          - code-health
+          - daily-routine
+          - defi-monitor
+          - defi-overview
+          - digest
+          - feature
+          - fetch-tweets
+          - github-issues
+          - github-monitor
+          - github-trending
+          - goal-tracker
+          - hacker-news-digest
+          - heartbeat
+          - hn-digest
+          - idea-capture
+          - issue-triage
+          - list-digest
+          - memory-flush
+          - monitor-runners
+          - morning-brief
+          - on-chain-monitor
+          - paper-digest
+          - paper-pick
+          - polymarket
+          - polymarket-comments
+          - pr-review
+          - reddit-digest
+          - reflect
+          - refresh-x
+          - reply-maker
+          - research-brief
+          - rss-digest
+          - search-papers
+          - search-skill
+          - security-digest
+          - self-review
+          - skill-health
+          - startup-idea
+          - token-alert
+          - token-movers
+          - token-pick
+          - trending-coins
+          - tweet-digest
+          - wallet-digest
+          - weekly-review
+          - write-tweet
+      model:
+        description: 'Model'
+        required: false
+        type: choice
+        default: '(config default)'
+        options:
+          - '(config default)'
+          - claude-opus-4-6
+          - claude-sonnet-4-6
+          - claude-haiku-4-5-20251001
+      var:
+        description: 'Variable (e.g. AI, bitcoin, owner/repo)'
+        required: false
+        type: string
+  workflow_call:
+    inputs:
+      skill:
+        description: 'Skill to run'
+        required: true
+        type: string
+      model:
+        description: 'Model override'
+        required: false
+        type: string
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: read
+  actions: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  NODE_OPTIONS: '--no-deprecation'
+
+concurrency:
+  group: aeon-${{ inputs.skill || github.event.action || github.run_id }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    if: github.event_name != 'issues' || github.event.label.name == 'ai-build'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Early checkout
+        if: github.event_name == 'issues'
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine skill
+        id: skill
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event_name }}" = "workflow_call" ]; then
+            echo "name=${{ inputs.skill }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event_name }}" = "issues" ]; then
+            echo "name=feature" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check if there's work
+        id: work
+        run: |
+          if [ -n "${{ steps.skill.outputs.name }}" ]; then
+            echo "mode=skill" >> "$GITHUB_OUTPUT"
+            echo "label=${{ steps.skill.outputs.name }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "Nothing to do"
+          fi
+
+      - name: Checkout repo
+        if: steps.work.outputs.mode != ''
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        if: steps.work.outputs.mode != ''
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+
+      - name: Install Claude Code
+        if: steps.work.outputs.mode != ''
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Run
+        id: run
+        if: steps.work.outputs.mode != ''
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_CHANNEL_ID: ${{ secrets.DISCORD_CHANNEL_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
+          ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
+          JSONRENDER_ENABLED: ${{ vars.JSONRENDER_ENABLED || 'true' }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          SKILL_NAME="${{ steps.skill.outputs.name }}"
+          export SKILL_NAME
+          CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
+          # Check for per-skill model override in aeon.yml
+          SKILL_MODEL=$(awk "/^  ${SKILL_NAME}:/{found=1} found && /model:/{print; exit}" aeon.yml | sed 's/.*model: *"\?\([^"]*\)"\?/\1/' | tr -d ' ')
+          INPUT_MODEL="${{ inputs.model }}"
+          if [ -n "$INPUT_MODEL" ] && [ "$INPUT_MODEL" != "(config default)" ]; then
+            MODEL="$INPUT_MODEL"
+          elif [ -n "$SKILL_MODEL" ]; then
+            MODEL="$SKILL_MODEL"
+          else
+            MODEL="${CONFIG_MODEL:-claude-opus-4-6}"
+          fi
+          echo "Using model: $MODEL"
+          # Generate notify script in workspace (Claude calls: ./notify "message")
+          cat > ./notify << 'NOTIFY_SCRIPT'
+          #!/usr/bin/env bash
+          set -euo pipefail
+          MSG="$1"
+          if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
+            curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$MSG" '{chat_id: $chat, text: $text, parse_mode: "Markdown"}')" > /dev/null || true
+          fi
+          if [ -n "${DISCORD_WEBHOOK_URL:-}" ]; then
+            curl -sf -X POST "$DISCORD_WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg text "$MSG" '{content: $text}')" > /dev/null || true
+          fi
+          if [ -n "${SLACK_WEBHOOK_URL:-}" ]; then
+            curl -sf -X POST "$SLACK_WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg text "$MSG" '{text: $text}')" > /dev/null || true
+          fi
+          # json-render channel — save raw message for post-run conversion
+          if [ "${JSONRENDER_ENABLED:-false}" = "true" ] && [ -n "${SKILL_NAME:-}" ]; then
+            mkdir -p dashboard/outputs
+            echo "$MSG" > "dashboard/outputs/.pending-${SKILL_NAME}.md"
+          fi
+          NOTIFY_SCRIPT
+          chmod +x ./notify
+
+          ALLOWED="Read,Write,Edit,Glob,Grep,WebFetch,WebSearch"
+          ALLOWED="$ALLOWED,Bash(curl:*),Bash(gh:*),Bash(git:*),Bash(jq:*)"
+          ALLOWED="$ALLOWED,Bash(./notify:*),Bash(./notify-jsonrender:*)"
+          ALLOWED="$ALLOWED,Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(chmod:*)"
+          ALLOWED="$ALLOWED,Bash(date:*),Bash(echo:*),Bash(node:*),Bash(npm:*),Bash(npx:*)"
+          ALLOWED="$ALLOWED,Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(sort:*),Bash(grep:*)"
+
+          SKILL_NAME="${{ steps.skill.outputs.name }}"
+          VAR="${{ inputs.var }}"
+          PROMPT="Today is $TODAY. Read and execute the skill defined in skills/${SKILL_NAME}/SKILL.md"
+          if [ -n "$VAR" ]; then
+            PROMPT="$PROMPT
+
+          Use this variable (override the default in the skill file):
+          var=$VAR"
+          fi
+          CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
+            --model "$MODEL" --allowedTools "$ALLOWED" \
+            --output-format json)
+
+          # Extract and print the text result so logs still show skill output
+          echo "$CLAUDE_OUTPUT" | jq -r '.result // empty'
+
+          # Parse token usage from JSON response
+          INPUT_TOKENS=$(echo "$CLAUDE_OUTPUT" | jq '.usage.input_tokens // 0')
+          OUTPUT_TOKENS=$(echo "$CLAUDE_OUTPUT" | jq '.usage.output_tokens // 0')
+          CACHE_READ=$(echo "$CLAUDE_OUTPUT" | jq '.usage.cache_read_input_tokens // 0')
+          CACHE_CREATION=$(echo "$CLAUDE_OUTPUT" | jq '.usage.cache_creation_input_tokens // 0')
+          TOTAL_TOKENS=$((INPUT_TOKENS + OUTPUT_TOKENS))
+
+          echo "SKILL_INPUT_TOKENS=$INPUT_TOKENS" >> "$GITHUB_OUTPUT"
+          echo "SKILL_OUTPUT_TOKENS=$OUTPUT_TOKENS" >> "$GITHUB_OUTPUT"
+          echo "SKILL_CACHE_READ_TOKENS=$CACHE_READ" >> "$GITHUB_OUTPUT"
+          echo "SKILL_CACHE_CREATION_TOKENS=$CACHE_CREATION" >> "$GITHUB_OUTPUT"
+          echo "SKILL_TOTAL_TOKENS=$TOTAL_TOKENS" >> "$GITHUB_OUTPUT"
+
+          echo "::notice::Token usage — input: $INPUT_TOKENS, output: $OUTPUT_TOKENS, cache_read: $CACHE_READ, cache_creation: $CACHE_CREATION, total: $TOTAL_TOKENS"
+
+      - name: Log token usage
+        if: steps.work.outputs.mode != ''
+        run: |
+          SKILL="${{ steps.skill.outputs.name }}"
+          INPUT="${{ steps.run.outputs.SKILL_INPUT_TOKENS }}"
+          OUTPUT="${{ steps.run.outputs.SKILL_OUTPUT_TOKENS }}"
+          CACHE_READ="${{ steps.run.outputs.SKILL_CACHE_READ_TOKENS }}"
+          CACHE_CREATION="${{ steps.run.outputs.SKILL_CACHE_CREATION_TOKENS }}"
+          TOTAL="${{ steps.run.outputs.SKILL_TOTAL_TOKENS }}"
+          echo "## Token Usage: $SKILL" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Metric | Tokens |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|--------|--------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Input | $INPUT |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Output | $OUTPUT |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Cache read | $CACHE_READ |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Cache creation | $CACHE_CREATION |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| **Total** | **$TOTAL** |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Convert feed outputs
+        if: steps.work.outputs.mode != '' && vars.JSONRENDER_ENABLED != 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          for pending in dashboard/outputs/.pending-*.md; do
+            [ -f "$pending" ] || continue
+            SKILL=$(basename "$pending" .md | sed 's/^\.pending-//')
+            echo "json-render: converting $SKILL..."
+            ./notify-jsonrender "$SKILL" "$(cat "$pending")" && rm -f "$pending" || echo "json-render: $SKILL conversion failed (non-fatal)"
+          done
+
+      - name: Commit results
+        if: steps.work.outputs.mode != ''
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          rm -f ./notify  # Remove generated script before committing
+
+          CURRENT_BRANCH=$(git branch --show-current)
+          LABEL="${{ steps.work.outputs.label }}"
+
+          # If Claude created a feature branch, push it then switch back to main
+          if [ "$CURRENT_BRANCH" != "main" ] && [ -n "$CURRENT_BRANCH" ]; then
+            echo "On feature branch: $CURRENT_BRANCH"
+            git add -A
+            git diff --staged --quiet || git commit -m "chore($LABEL): auto-commit $(date +%Y-%m-%d)"
+            git push --force-with-lease -u origin "$CURRENT_BRANCH" || true
+
+            # Switch back to main and cherry-pick memory/log changes if any
+            git checkout main
+            git pull --rebase origin main || true
+          fi
+
+          # Commit any remaining changes on main
+          git add -A
+          git diff --staged --quiet && exit 0
+          git commit -m "chore($LABEL): auto-commit $(date +%Y-%m-%d)"
+          for i in 1 2 3; do
+            # Pull and rebase onto latest remote
+            if ! git pull --rebase origin main 2>/dev/null; then
+              echo "Rebase conflict on attempt $i, auto-resolving..."
+              while true; do
+                CONFLICTED=$(git diff --name-only --diff-filter=U) || true
+                [ -z "$CONFLICTED" ] && break
+                for f in $CONFLICTED; do
+                  if [[ "$f" == memory/logs/* ]] || [[ "$f" == memory/topics/* ]] || [[ "$f" == memory/MEMORY.md ]] || [[ "$f" == dashboard/outputs/* ]]; then
+                    sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$f"
+                    git add "$f"
+                  else
+                    git checkout --theirs "$f"
+                    git add "$f"
+                  fi
+                done
+                if git diff --cached --quiet; then
+                  git rebase --skip || true
+                else
+                  GIT_EDITOR=true git rebase --continue || true
+                fi
+              done
+            fi
+            # Try to push — if it fails, another job beat us, loop and re-pull
+            if git push -u origin HEAD 2>/dev/null; then
+              echo "Pushed successfully on attempt $i"
+              exit 0
+            fi
+            echo "Push attempt $i failed (ref moved), retrying in ${i}s..."
+            sleep "$i"
+          done
+          echo "Failed to push after 3 attempts"
+          exit 1
