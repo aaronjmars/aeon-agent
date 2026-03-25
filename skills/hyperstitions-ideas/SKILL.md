@@ -70,7 +70,7 @@ Bad examples (too generic, not project-specific):
 
 7. **Send notification** via `./notify`:
    ```
-   *Hyperstition Idea — ${today}*
+   *Hyperstitions Idea — ${today}*
 
    "[Market question]?"
 
@@ -81,6 +81,8 @@ Bad examples (too generic, not project-specific):
    Resolution: [Exact YES/NO criteria — what has to happen, by when, how it's verified]
 
    Scores: Reflexivity X/5 | Viral X/5
+
+   Soon on https://www.hyperstitions.com/ ?
    ```
 
 8. **Log** to `memory/logs/${today}.md`:
