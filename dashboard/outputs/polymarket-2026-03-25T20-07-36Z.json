@@ -1,0 +1,957 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Polymarket — 2026-03-25"
+      },
+      "children": [
+        "heading_top_vol",
+        "stack_top_vol",
+        "sep_1",
+        "heading_geo",
+        "stack_geo",
+        "sep_2",
+        "heading_context",
+        "text_context",
+        "sep_3",
+        "heading_liquidity",
+        "stack_liquidity"
+      ]
+    },
+    "heading_top_vol": {
+      "type": "Heading",
+      "props": {
+        "text": "Top by Volume (24h)",
+        "level": "h2"
+      }
+    },
+    "stack_top_vol": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6",
+        "m7",
+        "m8",
+        "m9",
+        "m10"
+      ]
+    },
+    "m1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m1_title",
+        "m1_row",
+        "m1_desc"
+      ]
+    },
+    "m1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Israel ground offensive in Lebanon by Mar 31?",
+        "variant": "lead"
+      }
+    },
+    "m1_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m1_badge",
+        "m1_odds",
+        "m1_vol"
+      ]
+    },
+    "m1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      }
+    },
+    "m1_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.9%"
+      }
+    },
+    "m1_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$46.1m",
+        "label": "24h Vol"
+      }
+    },
+    "m1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "IDF began ground ops Mar 16, now expanding to full Litani River operation",
+        "variant": "caption"
+      }
+    },
+    "m2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m2_title",
+        "m2_row"
+      ]
+    },
+    "m2_title": {
+      "type": "Text",
+      "props": {
+        "text": "Jobbik wins most seats in Hungarian election?",
+        "variant": "lead"
+      }
+    },
+    "m2_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m2_badge",
+        "m2_odds",
+        "m2_vol"
+      ]
+    },
+    "m2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "secondary"
+      }
+    },
+    "m2_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.9%"
+      }
+    },
+    "m2_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$9.3m",
+        "label": "24h Vol"
+      }
+    },
+    "m3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m3_title",
+        "m3_row",
+        "m3_desc"
+      ]
+    },
+    "m3_title": {
+      "type": "Text",
+      "props": {
+        "text": "US x Iran ceasefire by Mar 31?",
+        "variant": "lead"
+      }
+    },
+    "m3_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m3_badge",
+        "m3_odds",
+        "m3_vol"
+      ]
+    },
+    "m3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      }
+    },
+    "m3_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "15.5%"
+      }
+    },
+    "m3_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$5.2m",
+        "label": "24h Vol"
+      }
+    },
+    "m3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Iran rejected US 15-point plan as \"maximalist\"; war in 4th week",
+        "variant": "caption"
+      }
+    },
+    "m4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m4_title",
+        "m4_row"
+      ]
+    },
+    "m4_title": {
+      "type": "Text",
+      "props": {
+        "text": "Dialogue for Hungary wins most seats?",
+        "variant": "lead"
+      }
+    },
+    "m4_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m4_badge",
+        "m4_odds",
+        "m4_vol"
+      ]
+    },
+    "m4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "secondary"
+      }
+    },
+    "m4_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.9%"
+      }
+    },
+    "m4_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$2.6m",
+        "label": "24h Vol"
+      }
+    },
+    "m5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m5_title",
+        "m5_row"
+      ]
+    },
+    "m5_title": {
+      "type": "Text",
+      "props": {
+        "text": "Netanyahu out by Mar 31?",
+        "variant": "lead"
+      }
+    },
+    "m5_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m5_badge",
+        "m5_odds",
+        "m5_vol"
+      ]
+    },
+    "m5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "secondary"
+      }
+    },
+    "m5_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.2%"
+      }
+    },
+    "m5_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$2.6m",
+        "label": "24h Vol"
+      }
+    },
+    "m6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m6_title",
+        "m6_row",
+        "m6_desc"
+      ]
+    },
+    "m6_title": {
+      "type": "Text",
+      "props": {
+        "text": "US forces enter Iran by Mar 31?",
+        "variant": "lead"
+      }
+    },
+    "m6_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m6_badge",
+        "m6_odds",
+        "m6_vol"
+      ]
+    },
+    "m6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      }
+    },
+    "m6_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "17.5%"
+      }
+    },
+    "m6_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$2.4m",
+        "label": "24h Vol"
+      }
+    },
+    "m6_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Ground entry still unlikely near-term",
+        "variant": "caption"
+      }
+    },
+    "m7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m7_title",
+        "m7_row"
+      ]
+    },
+    "m7_title": {
+      "type": "Text",
+      "props": {
+        "text": "Rybakina vs Pegula (Miami Open)",
+        "variant": "lead"
+      }
+    },
+    "m7_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m7_badge",
+        "m7_odds",
+        "m7_vol"
+      ]
+    },
+    "m7_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      }
+    },
+    "m7_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.9%"
+      }
+    },
+    "m7_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.7m",
+        "label": "24h Vol"
+      }
+    },
+    "m8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m8_title",
+        "m8_row"
+      ]
+    },
+    "m8_title": {
+      "type": "Text",
+      "props": {
+        "text": "Fed cuts 50+ bps after Apr meeting?",
+        "variant": "lead"
+      }
+    },
+    "m8_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m8_badge",
+        "m8_odds",
+        "m8_vol"
+      ]
+    },
+    "m8_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "secondary"
+      }
+    },
+    "m8_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.6%"
+      }
+    },
+    "m8_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.4m",
+        "label": "24h Vol"
+      }
+    },
+    "m9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m9_title",
+        "m9_row"
+      ]
+    },
+    "m9_title": {
+      "type": "Text",
+      "props": {
+        "text": "Iran military action vs Israel Mar 19?",
+        "variant": "lead"
+      }
+    },
+    "m9_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m9_badge",
+        "m9_odds",
+        "m9_vol"
+      ]
+    },
+    "m9_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "secondary"
+      }
+    },
+    "m9_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.9%"
+      }
+    },
+    "m9_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.3m",
+        "label": "24h Vol"
+      }
+    },
+    "m10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "m10_title",
+        "m10_row"
+      ]
+    },
+    "m10_title": {
+      "type": "Text",
+      "props": {
+        "text": "Bitcoin $150k in March?",
+        "variant": "lead"
+      }
+    },
+    "m10_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "m10_badge",
+        "m10_odds",
+        "m10_vol"
+      ]
+    },
+    "m10_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NO",
+        "variant": "secondary"
+      }
+    },
+    "m10_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "99.9%"
+      }
+    },
+    "m10_vol": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.2m",
+        "label": "24h Vol"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_geo": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Geopolitical Markets",
+        "level": "h2"
+      }
+    },
+    "stack_geo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "geo1",
+        "geo2",
+        "geo3"
+      ]
+    },
+    "geo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "geo1_title",
+        "geo1_row",
+        "geo1_desc"
+      ]
+    },
+    "geo1_title": {
+      "type": "Text",
+      "props": {
+        "text": "US forces enter Iran by Apr 30?",
+        "variant": "lead"
+      }
+    },
+    "geo1_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "geo1_badge",
+        "geo1_odds",
+        "geo1_vol24",
+        "geo1_volfull"
+      ]
+    },
+    "geo1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      }
+    },
+    "geo1_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "58.5%",
+        "trend": "up"
+      }
+    },
+    "geo1_vol24": {
+      "type": "Stat",
+      "props": {
+        "value": "$708k",
+        "label": "24h Vol"
+      }
+    },
+    "geo1_volfull": {
+      "type": "Stat",
+      "props": {
+        "value": "$3.7m",
+        "label": "Total"
+      }
+    },
+    "geo1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Significant escalation priced in",
+        "variant": "caption"
+      }
+    },
+    "geo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "geo2_title",
+        "geo2_row"
+      ]
+    },
+    "geo2_title": {
+      "type": "Text",
+      "props": {
+        "text": "Iranian regime falls by Mar 31?",
+        "variant": "lead"
+      }
+    },
+    "geo2_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "geo2_badge",
+        "geo2_odds",
+        "geo2_vol24",
+        "geo2_volfull"
+      ]
+    },
+    "geo2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      }
+    },
+    "geo2_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "1.1%",
+        "trend": "neutral"
+      }
+    },
+    "geo2_vol24": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.1m",
+        "label": "24h Vol"
+      }
+    },
+    "geo2_volfull": {
+      "type": "Stat",
+      "props": {
+        "value": "$48.5m",
+        "label": "Total"
+      }
+    },
+    "geo3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "geo3_title",
+        "geo3_row"
+      ]
+    },
+    "geo3_title": {
+      "type": "Text",
+      "props": {
+        "text": "Kharg Island no longer under Iranian control by Mar 31?",
+        "variant": "lead"
+      }
+    },
+    "geo3_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "geo3_badge",
+        "geo3_odds",
+        "geo3_vol24",
+        "geo3_volfull"
+      ]
+    },
+    "geo3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "YES",
+        "variant": "default"
+      }
+    },
+    "geo3_odds": {
+      "type": "Stat",
+      "props": {
+        "value": "8.5%",
+        "trend": "neutral"
+      }
+    },
+    "geo3_vol24": {
+      "type": "Stat",
+      "props": {
+        "value": "$639k",
+        "label": "24h Vol"
+      }
+    },
+    "geo3_volfull": {
+      "type": "Stat",
+      "props": {
+        "value": "$5.0m",
+        "label": "Total"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_context": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h2"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "The Iran war (started Feb 28) dominates Polymarket. Iran rejected the US ceasefire proposal today. Israel launched its Lebanon ground offensive Mar 16 and is expanding south of the Litani. Bettors price US forces entering Iran by Apr 30 at 58.5% — the highest-conviction escalation market.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_liquidity": {
+      "type": "Heading",
+      "props": {
+        "text": "Liquidity Leaders",
+        "level": "h2"
+      }
+    },
+    "stack_liquidity": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "liq1",
+        "liq2",
+        "liq3",
+        "liq4",
+        "liq5"
+      ]
+    },
+    "liq1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liq1_title",
+        "liq1_amount"
+      ]
+    },
+    "liq1_title": {
+      "type": "Text",
+      "props": {
+        "text": "Bitcoin $150k in March?",
+        "variant": "body"
+      }
+    },
+    "liq1_amount": {
+      "type": "Stat",
+      "props": {
+        "value": "$2.5m",
+        "label": "Liquidity"
+      }
+    },
+    "liq2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liq2_title",
+        "liq2_amount"
+      ]
+    },
+    "liq2_title": {
+      "type": "Text",
+      "props": {
+        "text": "Iranian regime falls by Mar 31?",
+        "variant": "body"
+      }
+    },
+    "liq2_amount": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.9m",
+        "label": "Liquidity"
+      }
+    },
+    "liq3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liq3_title",
+        "liq3_amount"
+      ]
+    },
+    "liq3_title": {
+      "type": "Text",
+      "props": {
+        "text": "Jesus Christ returns before 2027?",
+        "variant": "body"
+      }
+    },
+    "liq3_amount": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.9m",
+        "label": "Liquidity"
+      }
+    },
+    "liq4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liq4_title",
+        "liq4_amount"
+      ]
+    },
+    "liq4_title": {
+      "type": "Text",
+      "props": {
+        "text": "Netanyahu out by Mar 31?",
+        "variant": "body"
+      }
+    },
+    "liq4_amount": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.8m",
+        "label": "Liquidity"
+      }
+    },
+    "liq5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liq5_title",
+        "liq5_amount"
+      ]
+    },
+    "liq5_title": {
+      "type": "Text",
+      "props": {
+        "text": "Fed cuts 50+ bps after Apr?",
+        "variant": "body"
+      }
+    },
+    "liq5_amount": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.5m",
+        "label": "Liquidity"
+      }
+    }
+  }
+}
