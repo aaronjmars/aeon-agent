@@ -25,11 +25,13 @@ Today is ${today}. Search X for tweets matching **${var}**.
    ```
    Parse the response JSON to extract the assistant's output text.
 
-2. **Save the results** to `memory/logs/${today}.md`.
+2. **If no tweets found** or the API returns an error/empty response: log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
 
-3. **Log to memory** what was fetched.
+3. **Save the results** to `memory/logs/${today}.md`.
 
-4. **Send a notification via `./notify`** with a quick summary.
+4. **Log to memory** what was fetched.
+
+5. **Send a notification via `./notify`** with a quick summary.
 
 ## Usage Examples
 

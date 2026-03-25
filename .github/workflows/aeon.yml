@@ -41,6 +41,8 @@ on:
           - pr-review
           - push-recap
           - reddit-digest
+          - repo-actions
+          - repo-article
           - reflect
           - refresh-x
           - reply-maker
@@ -53,6 +55,7 @@ on:
           - skill-health
           - startup-idea
           - token-alert
+          - token-report
           - token-movers
           - token-pick
           - trending-coins

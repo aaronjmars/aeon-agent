@@ -3,6 +3,12 @@
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
+- Linked to Telegram group — daily skills post repo state, content, and token updates
+
+## Tracked Token
+| Token | Contract | Chain |
+|-------|----------|-------|
+| AEON  | 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | base |
 
 ## Recent Articles
 | Date | Title | Topic |
