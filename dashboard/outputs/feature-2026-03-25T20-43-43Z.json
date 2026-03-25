@@ -1,0 +1,102 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Feature built: status skill"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "description",
+        "capabilities",
+        "branch"
+      ]
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "Generates at-a-glance agent operational overview"
+      }
+    },
+    "capabilities": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cap_label",
+        "badge_row"
+      ]
+    },
+    "cap_label": {
+      "type": "Text",
+      "props": {
+        "text": "Monitored items:",
+        "variant": "muted"
+      }
+    },
+    "badge_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
+    },
+    "b1": {
+      "type": "Badge",
+      "props": {
+        "text": "enabled skills"
+      }
+    },
+    "b2": {
+      "type": "Badge",
+      "props": {
+        "text": "activity"
+      }
+    },
+    "b3": {
+      "type": "Badge",
+      "props": {
+        "text": "Actions health"
+      }
+    },
+    "b4": {
+      "type": "Badge",
+      "props": {
+        "text": "open PRs"
+      }
+    },
+    "b5": {
+      "type": "Badge",
+      "props": {
+        "text": "config"
+      }
+    },
+    "branch": {
+      "type": "Text",
+      "props": {
+        "text": "Branch: feat/status-skill pushed to remote",
+        "variant": "caption"
+      }
+    }
+  }
+}
