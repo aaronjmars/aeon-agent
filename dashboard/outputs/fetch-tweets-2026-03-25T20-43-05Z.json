@@ -1,0 +1,84 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Fetch Tweets: 'aeon' (Mar 18-25)"
+      },
+      "children": [
+        "summary_text",
+        "sep1",
+        "tweets_stack",
+        "sep2",
+        "note_text"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Top 10 tweets dominated by Resident Evil #aeon (Ada/Leon ship) fan community. All fan art/discussion content."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@mirouse_",
+        "text": "RE9 content (Ada/Leon ship #aeon)",
+        "likes": 16100
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@zamusam",
+        "text": "Resident Evil #aeon fan art/discussion",
+        "likes": 14000
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@rikky_yn",
+        "text": "Resident Evil #aeon fan art/discussion",
+        "likes": 10500
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@cha_shaodog",
+        "text": "Resident Evil #aeon fan art/discussion",
+        "likes": 6100
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "note_text": {
+      "type": "Text",
+      "props": {
+        "text": "No notable non-RE mentions this week."
+      }
+    }
+  }
+}
