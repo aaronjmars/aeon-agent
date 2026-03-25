@@ -47,9 +47,9 @@ Read memory/watched-repos.md for the list of repos to track.
    ```
    If traffic endpoints return 403 (insufficient permissions), skip traffic data and note it in the report.
 
-5. **Calculate deltas** by comparing against the last logged values in `memory/logs/`. If no previous data exists, this is the first run — report current totals only.
+5. **Calculate deltas** by comparing against the last logged values in `memory/logs/`. If no previous data exists, this is the first run — treat it as a baseline and **always send a notification** with current totals (so the user confirms it's working).
 
-6. **If no new stars AND no new forks** since the last run: log "REPO_PULSE_QUIET" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
+6. **If this is NOT the first run** and there are no new stars AND no new forks since the last run: log "REPO_PULSE_QUIET" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**. On the first run (no previous data in logs), always send.
 
 7. **Send notification** via `./notify`:
    ```
