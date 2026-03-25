@@ -31,6 +31,7 @@
 | push-recap | 2026-03-25 | Scans repo for recent push activity |
 | status | 2026-03-25 | Agent operational overview — enabled skills, activity, Actions health, open PRs, config |
 | per-skill-model | 2026-03-25 | Scheduler passes per-skill model overrides for cost optimization |
+| analytics-dashboard | 2026-03-25 | Skill run analytics tab in dashboard — per-skill metrics, insights, bar charts |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
