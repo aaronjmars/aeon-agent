@@ -51,29 +51,26 @@ jobs:
         run: |
           MESSAGES='[]'
 
-          # --- Telegram (collect ALL pending updates) ---
-          if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
-            RESPONSE=$(curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?timeout=0&allowed_updates=%5B%22message%22%5D")
-            COUNT=$(echo "$RESPONSE" | jq '.result | length')
-            MAX_UPDATE_ID=""
-
-            for ((i=0; i<COUNT; i++)); do
-              TEXT=$(echo "$RESPONSE" | jq -r ".result[$i].message.text // empty")
-              CHAT=$(echo "$RESPONSE" | jq -r ".result[$i].message.chat.id // empty")
-              UPDATE_ID=$(echo "$RESPONSE" | jq -r ".result[$i].update_id // empty")
-
-              if [ -n "$TEXT" ] && [ "$CHAT" = "$TELEGRAM_CHAT_ID" ]; then
-                MESSAGES=$(echo "$MESSAGES" | jq --arg src "telegram" --arg txt "$TEXT" '. + [{source: $src, text: $txt}]')
-                echo "Telegram: $TEXT"
-              fi
-              MAX_UPDATE_ID="$UPDATE_ID"
-            done
-
-            # Acknowledge all updates at once
-            if [ -n "$MAX_UPDATE_ID" ]; then
-              curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?offset=$((MAX_UPDATE_ID + 1))" > /dev/null
-            fi
-          fi
+          # --- Telegram polling DISABLED ---
+          # To re-enable, uncomment the block below
+          # if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
+          #   RESPONSE=$(curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?timeout=0&allowed_updates=%5B%22message%22%5D")
+          #   COUNT=$(echo "$RESPONSE" | jq '.result | length')
+          #   MAX_UPDATE_ID=""
+          #   for ((i=0; i<COUNT; i++)); do
+          #     TEXT=$(echo "$RESPONSE" | jq -r ".result[$i].message.text // empty")
+          #     CHAT=$(echo "$RESPONSE" | jq -r ".result[$i].message.chat.id // empty")
+          #     UPDATE_ID=$(echo "$RESPONSE" | jq -r ".result[$i].update_id // empty")
+          #     if [ -n "$TEXT" ] && [ "$CHAT" = "$TELEGRAM_CHAT_ID" ]; then
+          #       MESSAGES=$(echo "$MESSAGES" | jq --arg src "telegram" --arg txt "$TEXT" '. + [{source: $src, text: $txt}]')
+          #       echo "Telegram: $TEXT"
+          #     fi
+          #     MAX_UPDATE_ID="$UPDATE_ID"
+          #   done
+          #   if [ -n "$MAX_UPDATE_ID" ]; then
+          #     curl -s "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/getUpdates?offset=$((MAX_UPDATE_ID + 1))" > /dev/null
+          #   fi
+          # fi
 
           # --- Discord (collect ALL unprocessed messages) ---
           if [ -n "${DISCORD_BOT_TOKEN:-}" ] && [ -n "${DISCORD_CHANNEL_ID:-}" ]; then

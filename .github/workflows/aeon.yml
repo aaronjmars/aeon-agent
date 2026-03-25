@@ -27,6 +27,7 @@ on:
           - hacker-news-digest
           - heartbeat
           - hn-digest
+          - hyperstitions-ideas
           - idea-capture
           - issue-triage
           - list-digest
@@ -43,6 +44,7 @@ on:
           - reddit-digest
           - repo-actions
           - repo-article
+          - repo-pulse
           - reflect
           - refresh-x
           - reply-maker
@@ -51,6 +53,7 @@ on:
           - search-papers
           - search-skill
           - security-digest
+          - self-improve
           - self-review
           - skill-health
           - startup-idea

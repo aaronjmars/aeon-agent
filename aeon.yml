@@ -10,15 +10,20 @@ skills:
   token-report: { enabled: true, schedule: "0 8 * * *" }
   fetch-tweets: { enabled: true, schedule: "30 8 * * *", var: "AEON crypto token on Base chain" }
 
+  # --- Late morning: Repo growth (10 AM UTC) ---
+  repo-pulse: { enabled: true, schedule: "0 10 * * *" }
+
   # --- Midday: Repo state + Content (12 PM UTC) ---
   push-recap: { enabled: true, schedule: "0 12 * * *" }
   repo-article: { enabled: true, schedule: "0 13 * * *" }
 
-  # --- Afternoon: Social + Ideas (3 PM UTC) ---
+  # --- Afternoon: Ideas (3 PM UTC) ---
   repo-actions: { enabled: true, schedule: "0 15 * * *" }
+  hyperstitions-ideas: { enabled: true, schedule: "30 15 * * *" }
 
   # --- Late afternoon: Build (4:30 PM UTC) ---
   feature: { enabled: true, schedule: "30 16 * * *" }
+  self-improve: { enabled: true, schedule: "0 17 * * *" }
 
   # === HOUSEKEEPING ===
   heartbeat: { enabled: true, schedule: "0 6 * * *" }
