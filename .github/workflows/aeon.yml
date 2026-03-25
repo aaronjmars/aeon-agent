@@ -194,11 +194,25 @@ jobs:
           #!/usr/bin/env bash
           set -euo pipefail
           MSG="$1"
+
+          # Telegram: 4096 char limit, strict Markdown parsing
           if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
+            TG_MSG="$MSG"
+            # Truncate to 4000 chars (leave room for truncation notice)
+            if [ ${#TG_MSG} -gt 4000 ]; then
+              TG_MSG="${TG_MSG:0:3990}
+
+          ...(truncated)"
+            fi
+            # Try Markdown first, fall back to plain text if it fails
             curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
               -H "Content-Type: application/json" \
-              -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$MSG" '{chat_id: $chat, text: $text, parse_mode: "Markdown"}')" > /dev/null || true
+              -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$TG_MSG" '{chat_id: $chat, text: $text, parse_mode: "Markdown"}')" > /dev/null 2>&1 || \
+            curl -sf -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              -H "Content-Type: application/json" \
+              -d "$(jq -n --arg chat "$TELEGRAM_CHAT_ID" --arg text "$TG_MSG" '{chat_id: $chat, text: $text}')" > /dev/null 2>&1 || true
           fi
+
           if [ -n "${DISCORD_WEBHOOK_URL:-}" ]; then
             curl -sf -X POST "$DISCORD_WEBHOOK_URL" \
               -H "Content-Type: application/json" \

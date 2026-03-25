@@ -8,7 +8,7 @@ skills:
 
   # --- Morning: Token + Social (8 AM UTC) ---
   token-report: { enabled: true, schedule: "0 8 * * *" }
-  fetch-tweets: { enabled: true, schedule: "30 8 * * *", var: "$aeon" }
+  fetch-tweets: { enabled: true, schedule: "30 8 * * *", var: "cashtag aeon OR $aeon token" }
 
   # --- Midday: Repo state + Content (12 PM UTC) ---
   push-recap: { enabled: true, schedule: "0 12 * * *" }

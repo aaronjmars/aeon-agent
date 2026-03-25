@@ -1,12 +1,19 @@
 ---
-name: Fetch Tweets
-description: Search X/Twitter for tweets by keyword, username, or both
+name: fetch-tweets
+description: Search X/Twitter for tweets about a token, keyword, username, or topic
 var: ""
 ---
-> **${var}** — Search query for X/Twitter — keyword, @user, or #hashtag. **Required** — set your query in aeon.yml.
-
+> **${var}** — Search query for X/Twitter. **Required** — set your query in aeon.yml.
 
 Today is ${today}. Search X for tweets matching **${var}**.
+
+## Important: Cashtag searches
+
+If the var contains "cashtag" (e.g. "cashtag aeon OR $aeon token"), the search MUST focus on the **crypto token** with that ticker symbol. Specifically:
+- Search for the dollar-sign cashtag (e.g. `$AEON`, `$MIROSHARK`)
+- Focus on crypto/token/trading context — price discussion, buy/sell, charts, community
+- EXCLUDE unrelated results (fandom ships, gaming, other meanings of the word)
+- If results are mostly non-crypto, note that the token has low social visibility this period
 
 ## Steps
 
@@ -25,21 +32,15 @@ Today is ${today}. Search X for tweets matching **${var}**.
    ```
    Parse the response JSON to extract the assistant's output text.
 
-2. **If no tweets found** or the API returns an error/empty response: log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
+2. **If no relevant tweets found** (no crypto-related results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
 
-3. **Save the results** to `memory/logs/${today}.md`.
+3. **Filter results** — if this is a cashtag search, discard any tweets that are clearly not about the crypto token (fandom, gaming, unrelated uses of the word).
 
-4. **Log to memory** what was fetched.
+4. **Save the results** to `memory/logs/${today}.md`.
 
-5. **Send a notification via `./notify`** with a quick summary.
+5. **Log to memory** what was fetched.
 
-## Usage Examples
-
-- `query=AI agents` — latest tweets about AI agents
-- `query=from:elonmusk` — tweets from a specific user
-- `query=solana NFT` — tweets about a topic
-- `query=from:vaborsh ethereum` — tweets from a user about a topic
-- `query=#DeFi` — tweets with a hashtag
+6. **Send a notification via `./notify`** with a summary of the relevant tweets found.
 
 ## Environment Variables Required
 

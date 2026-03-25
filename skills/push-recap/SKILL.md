@@ -119,7 +119,7 @@ Read memory/watched-repos.md for the list of repos to scan.
    - [third most impactful]
 
    Stats: X files changed, +Y/-Z lines
-   Full recap: https://github.com/${repo}/blob/main/articles/push-recap-${today}.md
+   Full recap: [link to articles/push-recap-${today}.md in THIS repo — get the repo name from `git remote get-url origin`, not the watched repo]
    ```
    The notification should give someone a full picture without needing to click through. Include actual substance — what was built, what was fixed, what it means — not just commit message summaries.
 

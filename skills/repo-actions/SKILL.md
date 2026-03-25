@@ -38,8 +38,9 @@ Read memory/watched-repos.md for the repo to analyze.
    - What's trending in this project's domain?
    - What integrations would make sense?
 
-4. **Generate 5 action ideas** — concrete, implementable suggestions. Each should be:
+4. **Generate 5 action ideas** — concrete, implementable suggestions that the `feature` skill can autonomously build tomorrow. Each should be:
    - Specific enough to be a GitHub issue
+   - Scoped so an AI agent can implement it autonomously (clear inputs/outputs, no ambiguous design decisions, no external approvals needed)
    - Feasible within 1-3 days of focused work
    - Valuable for the project's growth, quality, or community
 
@@ -67,14 +68,24 @@ Read memory/watched-repos.md for the repo to analyze.
 7. **Send notification** via `./notify`:
    ```
    *Repo Action Ideas — ${today}*
+   Generated from analysis of the current project — these are ideas that could be autonomously built by the feature skill tomorrow.
 
    1. [idea title] ([type], [effort])
-   2. [idea title] ([type], [effort])
-   3. [idea title] ([type], [effort])
-   4. [idea title] ([type], [effort])
-   5. [idea title] ([type], [effort])
+      [1-sentence description of what it does and why]
 
-   Full details: https://github.com/${repo}/blob/main/articles/repo-actions-${today}.md
+   2. [idea title] ([type], [effort])
+      [1-sentence description]
+
+   3. [idea title] ([type], [effort])
+      [1-sentence description]
+
+   4. [idea title] ([type], [effort])
+      [1-sentence description]
+
+   5. [idea title] ([type], [effort])
+      [1-sentence description]
+
+   Full details: [link to articles/repo-actions-${today}.md in THIS repo — get the repo name from `git remote get-url origin`, not the watched repo]
    ```
 
 8. **Log** to `memory/logs/${today}.md`.

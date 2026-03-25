@@ -78,7 +78,7 @@ Read memory/watched-repos.md for the repo to cover.
 
    [2-3 sentence summary of the article]
 
-   Read: https://github.com/${repo}/blob/main/articles/repo-article-${today}.md
+   Read: [link to articles/repo-article-${today}.md in THIS repo — get the repo name from `git remote get-url origin`, not the watched repo]
    ```
 
 8. **Log** to `memory/logs/${today}.md` and update `memory/MEMORY.md` Recent Articles table.
