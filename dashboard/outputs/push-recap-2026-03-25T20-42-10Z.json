@@ -1,0 +1,93 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-03-25"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo_link",
+        "author_info",
+        "sep1",
+        "changes_list"
+      ]
+    },
+    "repo_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon",
+        "source": "GitHub"
+      }
+    },
+    "author_info": {
+      "type": "Text",
+      "props": {
+        "text": "2 commits by Aaron Elijah Mars",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "changes_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change1",
+        "change2",
+        "change3",
+        "change4",
+        "change5"
+      ]
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "feat: json-render feed"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "Tailwind v4"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "operational hardening"
+      }
+    },
+    "change4": {
+      "type": "Text",
+      "props": {
+        "text": "3 new skills"
+      }
+    },
+    "change5": {
+      "type": "Text",
+      "props": {
+        "text": "Add support address to README"
+      }
+    }
+  }
+}
