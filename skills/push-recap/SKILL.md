@@ -32,13 +32,15 @@ Read memory/watched-repos.md for the list of repos to scan.
 
 4. **Deduplicate** commits by SHA across both sources.
 
-5. **Read the actual diffs** for each commit to understand what changed:
+5. **Check for already-reported commits.** Read `memory/logs/${today}.md` and look for commit SHAs that were already logged in a previous push-recap entry today. Remove any commits whose short SHA (first 7 chars) already appears in today's log under a "Push Recap" heading. If ALL commits were already reported, log "PUSH_RECAP_DEDUP: all N commits already covered in today's log" and **stop here — do NOT send any notification or rewrite the article**.
+
+6. **Read the actual diffs** for each commit to understand what changed:
    ```bash
    gh api repos/owner/repo/commits/FULL_SHA --jq '{files: [.files[] | {filename: .filename, status: .status, additions: .additions, deletions: .deletions, patch: .patch}]}'
    ```
    Read ALL commits in detail. If there are more than 15, read the 15 most significant (by lines changed) and summarize the rest.
 
-6. **Analyze and explain** each commit thoroughly:
+7. **Analyze and explain** each commit thoroughly:
    - Read the actual patch content — don't just repeat the commit message
    - What files were changed and what the diff actually shows
    - What feature, fix, or improvement this represents in plain language
@@ -46,9 +48,9 @@ Read memory/watched-repos.md for the list of repos to scan.
    - Any notable patterns (new dependencies, architecture changes, refactors, new APIs)
    - If a commit touches multiple areas, break it down by area
 
-7. **Group commits by theme** — don't just list them chronologically. Cluster related commits together under descriptive headings (e.g. "New token tracking system", "Dashboard UX overhaul", "CI/CD improvements").
+8. **Group commits by theme** — don't just list them chronologically. Cluster related commits together under descriptive headings (e.g. "New token tracking system", "Dashboard UX overhaul", "CI/CD improvements").
 
-8. **Write a deep recap** to `articles/push-recap-${today}.md`:
+9. **Write a deep recap** to `articles/push-recap-${today}.md`:
    ```markdown
    # Push Recap — ${today}
 
@@ -102,7 +104,7 @@ Read memory/watched-repos.md for the list of repos to scan.
    - [Branches created but not merged?]
    ```
 
-9. **Send a detailed notification** via `./notify`:
+10. **Send a detailed notification** via `./notify`:
    ```
    *Push Recap — ${today}*
    [repo] — X commits by Y authors
@@ -123,4 +125,4 @@ Read memory/watched-repos.md for the list of repos to scan.
    ```
    The notification should give someone a full picture without needing to click through. Include actual substance — what was built, what was fixed, what it means — not just commit message summaries.
 
-10. **Log** to `memory/logs/${today}.md`.
+11. **Log** to `memory/logs/${today}.md`.
