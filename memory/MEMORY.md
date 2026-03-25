@@ -15,6 +15,7 @@
 |------|-------|-------|
 | 2026-03-19 | Changelog (51 commits, 12 features) | repo-activity |
 | 2026-03-25 | Push Recap (2 commits: json-render feed, support addr) | repo-activity |
+| 2026-03-25 | Aeon Is the Anti-OpenClaw: Why Background AI Agents Might Win | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
