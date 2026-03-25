@@ -29,12 +29,14 @@
 | polymarket | 2026-03-25 | Gamma API, top 20 by volume + 20 newest |
 | push-recap | 2026-03-25 | Scans repo for recent push activity |
 | status | 2026-03-25 | Agent operational overview — enabled skills, activity, Actions health, open PRs, config |
+| per-skill-model | 2026-03-25 | Scheduler passes per-skill model overrides for cost optimization |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
 - Always save files AND commit before logging
 - Polymarket Gamma API: use volume_num_24hr sort for signal; newest markets are mostly noise (zero-volume crypto bets)
+- GITHUB_TOKEN cannot push workflow file changes — needs `workflows` permission (PAT or fine-grained token)
 
 ## Next Priorities
 - Run more digest types (HN, RSS, papers, DeFi)
-- Set up scheduled runs via GitHub Actions cron
+- Fix token permissions: need PAT with `workflows` scope to push workflow changes (blocks status-skill and per-skill-model PRs)
