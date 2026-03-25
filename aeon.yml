@@ -61,6 +61,7 @@ skills:
   push-recap: { enabled: true, schedule: "30 17 * * *" }
 
   # --- Evening / meta (6 PM UTC) ---
+  status: { enabled: false, schedule: "0 18 * * *" }
   goal-tracker: { enabled: false, schedule: "0 18 * * *" }
   skill-health: { enabled: false, schedule: "0 18 * * *" }
   self-review: { enabled: false, schedule: "0 18 * * *" }
