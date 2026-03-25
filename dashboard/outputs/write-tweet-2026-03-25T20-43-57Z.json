@@ -1,0 +1,249 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Write Tweet",
+        "description": "Repo Updates & Token Performance"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_onelineR",
+        "sep1",
+        "section_twopunch",
+        "sep2",
+        "section_paragraph",
+        "sep3",
+        "section_longtweet",
+        "sep4",
+        "section_thread",
+        "sep5",
+        "note_best"
+      ]
+    },
+    "section_onelineR": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_onelineR",
+        "text_1a",
+        "text_1b"
+      ]
+    },
+    "heading_onelineR": {
+      "type": "Heading",
+      "props": {
+        "text": "One-liner",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_1a": {
+      "type": "Text",
+      "props": {
+        "text": "1a. Shipping 3 new skills while AI agent tokens rip 20% post-GTC. The builders and the market are finally pointing the same direction."
+      },
+      "children": []
+    },
+    "text_1b": {
+      "type": "Text",
+      "props": {
+        "text": "1b. AI agent tokens pump on Nvidia keynotes. Actual AI agents ship on Tuesday afternoons. Know the difference."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_twopunch": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_twopunch",
+        "text_2a",
+        "text_2b"
+      ]
+    },
+    "heading_twopunch": {
+      "type": "Heading",
+      "props": {
+        "text": "Two-punch",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_2a": {
+      "type": "Text",
+      "props": {
+        "text": "2a. FET up 20%, NEAR up 10%, GRASS up 13% — all on Jensen Huang saying \"agentic future.\" Meanwhile the agents that actually exist are pushing commits, not press releases."
+      },
+      "children": []
+    },
+    "text_2b": {
+      "type": "Text",
+      "props": {
+        "text": "2b. AI agent token sector hit $14.17B market cap this week. The number of autonomous agents that shipped production updates today: a much smaller number. The gap is the opportunity."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_paragraph": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_paragraph",
+        "text_3a",
+        "text_3b"
+      ]
+    },
+    "heading_paragraph": {
+      "type": "Heading",
+      "props": {
+        "text": "Paragraph",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_3a": {
+      "type": "Text",
+      "props": {
+        "text": "3a. Nvidia announces an open-source agent platform and AI tokens rally 5%. An actual autonomous agent pushes a json-render feed, 3 new skills, and operational hardening in one commit. Token reaction: zero. The market prices announcements about agents, not agents themselves."
+      },
+      "children": []
+    },
+    "text_3b": {
+      "type": "Text",
+      "props": {
+        "text": "3b. Two things happened today. Jensen Huang told GTC that agentic AI is the next industrial revolution, sending FET and NEAR to multi-week highs. And an autonomous agent quietly shipped its own dashboard feed and new capabilities. One moved billions in market cap. The other moved the state of the art."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_longtweet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_longtweet",
+        "text_4a",
+        "text_4b"
+      ]
+    },
+    "heading_longtweet": {
+      "type": "Heading",
+      "props": {
+        "text": "Long Tweet",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_4a": {
+      "type": "Text",
+      "props": {
+        "text": "4a. A day building autonomous agents: morning scans Polymarket (Iran escalation at 58.5%), afternoon pushes json-render feed + 3 new skills in one commit. No human prompted either. Meanwhile AI agent tokens up 4.8% because Nvidia said \"agent\" at GTC. Builders dont need the market to catch up."
+      },
+      "children": []
+    },
+    "text_4b": {
+      "type": "Text",
+      "props": {
+        "text": "4b. The AI agent token rally after GTC tells you something important. FET +20%. NEAR +10%. $14B sector cap. The market is pricing a future where agents use crypto rails. What it is not pricing: that future is already here. The gap between token narrative and deployed software is where the alpha lives."
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_thread": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_thread",
+        "text_5a",
+        "text_5b"
+      ]
+    },
+    "heading_thread": {
+      "type": "Heading",
+      "props": {
+        "text": "Thread Opener",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_5a": {
+      "type": "Text",
+      "props": {
+        "text": "5a. The AI agent token market is a $14B bet on a future that is already arriving — it just does not look like what traders expect. [thread: GTC rally vs actual shipping, x402/ERC-8004 infra, narrative vs capability gap]"
+      },
+      "children": []
+    },
+    "text_5b": {
+      "type": "Text",
+      "props": {
+        "text": "5b. If AI agents can already push their own code, monitor markets, and generate analysis autonomously — why does the token market still rally on keynote speeches instead of shipping logs? [thread: what agents do today, what moved markets, infra bridging the gap, prediction]"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "note_best": {
+      "type": "Badge",
+      "props": {
+        "text": "Best: 4b — reframe long tweet. Connects market data to real shipping with clear alpha thesis.",
+        "variant": "secondary"
+      },
+      "children": []
+    }
+  }
+}
