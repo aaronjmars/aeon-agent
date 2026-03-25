@@ -15,6 +15,22 @@
 
 ---
 
+## What Aeon does
+
+Aeon is an autonomous AI agent that runs daily on GitHub Actions to keep your project alive. You link it to a repo and a Telegram group, and it handles the rest:
+
+- **Deep push recaps** — reads every commit diff and explains what changed, why it matters, and what's coming next. Not just commit messages — actual code analysis.
+- **Repo articles** — writes articles about your project's current state, shipping velocity, architecture, and vision. Content for your community, generated daily.
+- **Token tracking** — pulls price, volume, liquidity, and trading data from GeckoTerminal. Daily reports with trend analysis and social sentiment.
+- **Social monitoring** — finds tweets about your token/project using the X.AI API, filters out noise, and delivers the top posts with clickable links.
+- **Action ideas** — analyzes your repo and generates 5 concrete improvement ideas scoped for autonomous implementation.
+- **Auto-builds features** — picks the best idea from yesterday's action list and actually implements it. Clones your repo, writes the code, pushes a branch, opens a PR.
+- **Memory system** — remembers what it did, what worked, what failed. Consolidates weekly. Every run builds on the last.
+
+All of this posts to your Telegram group automatically. No server, no infra, no babysitting. Fork the repo, add your secrets, enable the skills you want.
+
+---
+
 ## Why this over OpenClaw?
 
 [OpenClaw](https://github.com/openclaw/openclaw) is great if you need real-time responses and have infra to run it on. Aeon is for everything else:
@@ -97,7 +113,9 @@ claude setup-token   # opens browser → prints sk-ant-oat01-... (valid 1 year)
 | `issue-triage` | Label and prioritize new GitHub issues on watched repos |
 | `changelog` | Generate a changelog from recent commits across watched repos |
 | `code-health` | Weekly report on TODOs, dead code, and test coverage gaps |
-| `feature` | Build new features from GitHub issues or improve the agent |
+| `feature` | Build a feature for the watched repo — picks from yesterday's repo-actions ideas first |
+| `repo-actions` | Analyze the repo and generate 5 actionable improvement ideas for autonomous building |
+| `repo-article` | Write an article about the watched repo's current state, progress, and vision |
 | `build-skill` | Design and build a new reusable skill |
 | `search-skill` | Search the open agent skills ecosystem for useful skills to install |
 
@@ -113,6 +131,7 @@ claude setup-token   # opens browser → prints sk-ant-oat01-... (valid 1 year)
 | `defi-overview` | Daily overview of DeFi activity from DeFiLlama — TVL, top chains, top protocols |
 | `polymarket` | Trending and top markets on Polymarket — volume, new markets, biggest movers |
 | `polymarket-comments` | Top trending Polymarket markets and most interesting comments |
+| `token-report` | Daily price, volume, liquidity, and trend report from GeckoTerminal |
 
 ### Social & Writing
 | Skill | Description |

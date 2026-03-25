@@ -7,17 +7,13 @@ var: ""
 
 Today is ${today}. Search X for tweets matching **${var}**.
 
-## Important: Cashtag searches
-
-If the var contains "cashtag" (e.g. "cashtag aeon OR $aeon token"), the search MUST focus on the **crypto token** with that ticker symbol. Specifically:
-- Search for the dollar-sign cashtag (e.g. `$AEON`, `$MIROSHARK`)
-- Focus on crypto/token/trading context — price discussion, buy/sell, charts, community
-- EXCLUDE unrelated results (fandom ships, gaming, other meanings of the word)
-- If results are mostly non-crypto, note that the token has low social visibility this period
-
 ## Steps
 
-1. **Search tweets via X.AI API** using curl:
+1. **Build the search prompt for Grok.** The prompt sent to Grok must be specific enough to get relevant results:
+   - If the query mentions a token/cashtag/crypto: include "crypto token", the chain name, and the contract address from `memory/MEMORY.md` in the Grok prompt. This eliminates false matches.
+   - Example: instead of searching "aeon", search "the $AEON crypto token on Base chain (contract 0xbf8e...) in the last 7 days. Only return tweets about the cryptocurrency."
+
+2. **Search tweets via X.AI API** using curl:
    ```bash
    FROM_DATE=$(date -u -d "7 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-7d +%Y-%m-%d)
    TO_DATE=$(date -u +%Y-%m-%d)
@@ -26,21 +22,43 @@ If the var contains "cashtag" (e.g. "cashtag aeon OR $aeon token"), the search M
      -H "Authorization: Bearer $XAI_API_KEY" \
      -d '{
        "model": "grok-4-1-fast",
-       "input": [{"role": "user", "content": "Search X for: ${var}. Date range: '"$FROM_DATE"' to '"$TO_DATE"'. Return 10 tweets — prioritize the most interesting, insightful, or highly-engaged posts. For each tweet include: @handle, the full text, date posted, engagement (likes/retweets if available), and the direct link (https://x.com/handle/status/ID). Return as a numbered list."}],
-       "tools": [{"type": "x_search", "from_date": "'"$FROM_DATE"'", "to_date": "'"$TO_DATE"'"}]
+       "input": [{"role": "user", "content": "YOUR_SEARCH_PROMPT_HERE. Date range: '"$FROM_DATE"' to '"$TO_DATE"'. Return 10 tweets — prioritize the most interesting, insightful, or highly-engaged posts. For each tweet include: @handle, the full text, date posted, engagement (likes/retweets if available), and the direct link (https://x.com/handle/status/ID). Return as a numbered list."}],
+       "tools": [{"type": "x_search"}]
      }'
    ```
-   Parse the response JSON to extract the assistant's output text.
+   Parse the response JSON to extract the text from the output array:
+   ```bash
+   echo "$RESPONSE" | jq -r '.output[] | select(.type == "message") | .content[] | select(.type == "output_text") | .text'
+   ```
 
-2. **If no relevant tweets found** (no crypto-related results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
-
-3. **Filter results** — if this is a cashtag search, discard any tweets that are clearly not about the crypto token (fandom, gaming, unrelated uses of the word).
+3. **If no relevant tweets found** (no results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
 
 4. **Save the results** to `memory/logs/${today}.md`.
 
 5. **Log to memory** what was fetched.
 
-6. **Send a notification via `./notify`** with a summary of the relevant tweets found.
+6. **Send a notification via `./notify`** with the top tweets. Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
+
+   Format the notification like this:
+   ```
+   *Top Tweets — ${var} (${today})*
+
+   1. x.com/handle — [brief summary of tweet content]
+   Likes: X | RTs: Y
+   [View tweet](https://x.com/handle/status/ID)
+
+   2. x.com/handle — [brief summary]
+   Likes: X | RTs: Y
+   [View tweet](https://x.com/handle/status/ID)
+
+   3. x.com/handle — [brief summary]
+   Likes: X | RTs: Y
+   [View tweet](https://x.com/handle/status/ID)
+
+   ... (up to 5 tweets)
+   ```
+
+   IMPORTANT: Do NOT use @handle format — it tags/pings users on Telegram. Use x.com/handle instead (shows the profile URL without tagging anyone). The `[View tweet](URL)` link is required so users can tap to open each tweet.
 
 ## Environment Variables Required
 
