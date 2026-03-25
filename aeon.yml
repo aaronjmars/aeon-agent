@@ -57,6 +57,9 @@ skills:
   write-tweet: { enabled: false, schedule: "0 17 * * *" }
   reply-maker: { enabled: false, schedule: "0 17 * * *" }
 
+  # --- Push activity (5:30 PM UTC) ---
+  push-recap: { enabled: true, schedule: "30 17 * * *" }
+
   # --- Evening / meta (6 PM UTC) ---
   goal-tracker: { enabled: false, schedule: "0 18 * * *" }
   skill-health: { enabled: false, schedule: "0 18 * * *" }
@@ -79,7 +82,7 @@ model: claude-opus-4-6
 # Output channels
 channels:
   jsonrender:
-    enabled: true  # Set to true (or JSONRENDER_ENABLED=true as repo var) to write json-render specs
+    enabled: false  # Set to true (or JSONRENDER_ENABLED=true as repo var) to write json-render specs
 
 # Messaging integration
 # Polls for messages every 5 minutes on Telegram/Discord/Slack.

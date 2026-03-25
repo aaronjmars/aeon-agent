@@ -39,6 +39,7 @@ on:
           - polymarket
           - polymarket-comments
           - pr-review
+          - push-recap
           - reddit-digest
           - reflect
           - refresh-x
