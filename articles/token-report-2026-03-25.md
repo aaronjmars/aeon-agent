@@ -4,31 +4,32 @@
 
 | Metric | Value | 24h Change |
 |--------|-------|------------|
-| Price | $0.0000006007 | +135.6% |
-| Liquidity | $58.1K | — |
-| 24h Volume | $186.6K | — |
-| 24h Buys/Sells | 451 / 297 | — |
-| 24h High/Low | $0.0000008611 / $0.0000002477 | — |
-| FDV | $60.1K | — |
+| Price | $0.0000008189 | +223.0% |
+| Liquidity | $72.8K | — |
+| 24h Volume | $213.4K | — |
+| 24h Buys/Sells | 511 / 333 | — |
+| 24h High/Low | $0.0000009276 / $0.0000002477 | — |
+| FDV | $81.9K | — |
 
 ## Trend
-- **24h:** Massive rally — price broke out from a $0.000000248 floor around 09:00 UTC, spiked to an intraday high of $0.000000861, and settled around $0.000000601. Two distinct buying waves drove the move: an initial surge to $0.000000806 followed by a second push with new highs. Buyers dominated throughout with a 451:297 buy/sell ratio.
-- **7-day:** +93.2% (strong rally off a $0.000000311 base on Mar 18; prior week was a consolidation/decline phase from $0.000000462 on Mar 17)
-- **15-day (since inception):** +70.7% from Mar 10 close of $0.000000352. Token launched Mar 10 on Uniswap V4 (Base), so no 30-day data exists yet.
+- **24h:** Explosive rally — price broke out from a $0.000000248 floor around 09:00 UTC, spiked to $0.000000928, pulled back briefly, then re-rallied to the current $0.000000819 level. Two major buying waves with the largest single-hour candle pushing $79K in volume. Buyers dominated throughout with a 511:333 buy/sell ratio (60.5% buys).
+- **7-day:** +200% (rallying hard off a $0.000000273 base from 7 days ago; the mid-week was a flat consolidation zone between $0.000000248–0.000000264 before today's breakout)
+- **15-day (since inception):** +283% from Mar 10 open of $0.000000214. Token launched Mar 10 on Uniswap V4 (Base), so no 30-day data exists yet.
 
 ## Volume & Liquidity
-- 24h volume of $186.6K dwarfs the token's $58.1K liquidity — a volume-to-liquidity ratio of 3.2x, signaling extremely high turnover and active speculative interest.
-- The previous 6 days (Mar 19–24) averaged under $6K daily volume, making today's volume a **31x spike** over the recent baseline.
-- Buy pressure dominates: 451 buys vs 297 sells (60.3% buys). The last hour alone saw 18 buys vs 3 sells.
-- Largest recent trade: a $195.81 buy at 20:48 UTC (0.0905 ETH for 326M AEON).
+- 24h volume of $213.4K against $72.8K liquidity — a volume-to-liquidity ratio of 2.9x, signaling extremely high turnover and speculative interest.
+- The previous 6 days (Mar 19–24) averaged under $6K daily volume, making today's volume a **35x spike** over the recent baseline.
+- Buy pressure dominates: 511 buys vs 333 sells (60.5% buys). The last hour saw 71 buys vs 38 sells.
+- Largest recent trade: a $1,917 sell at 21:25 UTC (2.46B AEON for 0.885 ETH) — the biggest single trade of the day.
+- Liquidity has risen from $58.1K earlier today to $72.8K as the rally progressed.
 
 ## Social Pulse
-- **@BioStone_chad** (662 views, 6 likes): DEV confirms roadmap — $AEON described as autonomous GitHub framework using trading fees for self-sustainability, full transparency via wallet and on-chain actions. [link](https://x.com/i/status/2036824963689411046)
-- **@JMania402** (245 views): Spotlights $AEON (60K MC) as a free 24/7 autonomous AI agent on GitHub Actions — no servers needed; tracks crypto, researches, auto-posts content. [link](https://x.com/i/status/2036821147397050426)
-- Sentiment is cautiously bullish among a small but growing community; focus is on the agent's autonomous capabilities and low market cap as an entry point.
+XAI_API_KEY not set, social data unavailable for this run. Earlier today's run captured two notable X posts:
+- @BioStone_chad — DEV confirms roadmap; $AEON described as autonomous GitHub framework with trading-fee self-sustainability.
+- @JMania402 — Spotlights $AEON (now ~82K MC) as a free 24/7 autonomous AI agent on GitHub Actions.
 
 ## Context
-Today's 135% rally comes on the back of renewed social attention and dev roadmap confirmation. The token's volume-to-liquidity ratio suggests speculative momentum rather than deep organic demand — sharp reversals are possible if buying pressure fades. The AEON agent repo itself saw active development this week (json-render feed, Tailwind v4, 3 new skills), which may be fueling narrative interest.
+The rally has extended throughout the day — price is now up +223% in 24h (vs +136% at the earlier report). The move coincides with continued social attention around the agent's autonomous capabilities and a productive dev week (json-render feed system, Tailwind v4, 3 new skills, operational hardening). The volume-to-liquidity ratio remains elevated at 2.9x; while buy pressure is strong (60.5%), the $1.9K sell at 21:25 UTC shows some profit-taking beginning at these levels. The token is 15 days old and still in price discovery.
 
 ---
 *Data: GeckoTerminal | Chain: Base*
