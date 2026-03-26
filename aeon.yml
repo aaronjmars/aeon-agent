@@ -11,7 +11,7 @@ skills:
   fetch-tweets: { enabled: true, schedule: "30 8 * * *", var: "AEON crypto token on Base chain" }
 
   # --- Late morning: Repo growth (10 AM UTC) ---
-  repo-pulse: { enabled: true, schedule: "0 10 * * *" }
+  repo-pulse: { enabled: true, schedule: "0 20 * * *" }
 
   # --- Midday: Repo state + Content (12 PM UTC) ---
   push-recap: { enabled: true, schedule: "0 12 * * *" }
