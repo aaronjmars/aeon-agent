@@ -26,7 +26,7 @@ skills:
   self-improve: { enabled: true, schedule: "0 17 * * *" }
 
   # === HOUSEKEEPING ===
-  heartbeat: { enabled: true, schedule: "0 6 * * *" }
+  heartbeat: { enabled: true, schedule: "0 21 * * *" }
   memory-flush: { enabled: true, schedule: "0 20 * * 0" }  # Sundays only
 
   # === DISABLED (available on demand) ===
