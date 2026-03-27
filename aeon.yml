@@ -2,16 +2,17 @@
 #
 # Enable skills by setting enabled: true. Multiple skills at the same time run in parallel.
 # Set var: "value" to pass a default parameter to the skill.
+# Set model: "claude-sonnet-4-6" to override the default model for cost optimization.
 
 skills:
   # === DAILY ACTIVE SKILLS ===
 
   # --- Morning: Token + Social (8 AM UTC) ---
-  token-report: { enabled: true, schedule: "0 8 * * *" }
-  fetch-tweets: { enabled: true, schedule: "30 8 * * *", var: "AEON crypto token on Base chain" }
+  token-report: { enabled: true, schedule: "0 8 * * *", model: "claude-sonnet-4-6" }
+  fetch-tweets: { enabled: true, schedule: "30 8 * * *", var: "AEON crypto token on Base chain", model: "claude-sonnet-4-6" }
 
   # --- Late morning: Repo growth (10 AM UTC) ---
-  repo-pulse: { enabled: true, schedule: "0 20 * * *" }
+  repo-pulse: { enabled: true, schedule: "0 20 * * *", model: "claude-sonnet-4-6" }
 
   # --- Midday: Repo state + Content (12 PM UTC) ---
   push-recap: { enabled: true, schedule: "0 12 * * *" }
@@ -26,8 +27,8 @@ skills:
   self-improve: { enabled: true, schedule: "0 17 * * *" }
 
   # === HOUSEKEEPING ===
-  heartbeat: { enabled: true, schedule: "0 21 * * *" }
-  memory-flush: { enabled: true, schedule: "0 20 * * 0" }  # Sundays only
+  heartbeat: { enabled: true, schedule: "0 21 * * *", model: "claude-sonnet-4-6" }
+  memory-flush: { enabled: true, schedule: "0 20 * * 0", model: "claude-sonnet-4-6" }  # Sundays only
 
   # === DISABLED (available on demand) ===
   morning-brief: { enabled: false, schedule: "0 7 * * *" }
@@ -76,8 +77,10 @@ skills:
   startup-idea: { enabled: false, schedule: "0 18 * * *" }
   weekly-review: { enabled: false, schedule: "0 19 * * 1" }
 
-# Default model for all skills. Override per-run via workflow_dispatch.
+# Default model for all skills. Override per-run via workflow_dispatch or per-skill above.
 # Options: claude-opus-4-6, claude-sonnet-4-6, claude-haiku-4-5-20251001
+# Strategy: opus for creative/analytical skills (articles, ideas, features, self-improve)
+#           sonnet for data-collection skills (token-report, repo-pulse, heartbeat, fetch-tweets)
 model: claude-opus-4-6
 
 # Output channels
