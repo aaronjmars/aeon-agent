@@ -36,6 +36,7 @@
 | per-skill-model | 2026-03-25 | Scheduler passes per-skill model overrides for cost optimization |
 | analytics-dashboard | 2026-03-25 | Skill run analytics tab in dashboard — per-skill metrics, insights, bar charts |
 | per-skill-model | 2026-03-27 | Sonnet for data skills (token-report, repo-pulse, heartbeat, fetch-tweets, memory-flush), opus for creative |
+| skill-forking | 2026-03-28 | skills.json manifest + export-skill for standalone skill distribution (PR #3 on aeon) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
