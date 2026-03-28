@@ -9,11 +9,13 @@ Today is ${today}. Search X for tweets matching **${var}**.
 
 ## Steps
 
-1. **Build the search prompt for Grok.** The prompt sent to Grok must be specific enough to get relevant results:
+1. **Load previously reported tweets.** Read the last 3 days of `memory/logs/` and extract any tweet URLs (x.com/handle/status/ID) or @handles that were already included in previous `## Fetch Tweets` log entries. Keep this list as `SEEN_TWEETS` — you'll use it in step 3 to avoid sending duplicate tweets in today's notification.
+
+2. **Build the search prompt for Grok.** The prompt sent to Grok must be specific enough to get relevant results:
    - If the query mentions a token/cashtag/crypto: include "crypto token", the chain name, and the contract address from `memory/MEMORY.md` in the Grok prompt. This eliminates false matches.
    - Example: instead of searching "aeon", search "the $AEON crypto token on Base chain (contract 0xbf8e...) in the last 7 days. Only return tweets about the cryptocurrency."
 
-2. **Search tweets via X.AI API** using curl:
+3. **Search tweets via X.AI API** using curl:
    ```bash
    FROM_DATE=$(date -u -d "7 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-7d +%Y-%m-%d)
    TO_DATE=$(date -u +%Y-%m-%d)
@@ -31,13 +33,15 @@ Today is ${today}. Search X for tweets matching **${var}**.
    echo "$RESPONSE" | jq -r '.output[] | select(.type == "message") | .content[] | select(.type == "output_text") | .text'
    ```
 
-3. **If no relevant tweets found** (no results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
+4. **Deduplicate results.** Compare the tweets returned by Grok against your `SEEN_TWEETS` list from step 1. Remove any tweet whose URL or @handle+date combo already appeared in a previous day's log. Keep only genuinely new tweets. If ALL tweets were already reported, log "FETCH_TWEETS_NO_NEW: all results were previously reported" and **stop here — do NOT send any notification**.
 
-4. **Save the results** to `memory/logs/${today}.md`.
+5. **If no relevant tweets found** (no results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
 
-5. **Log to memory** what was fetched.
+6. **Save the results** to `memory/logs/${today}.md`. Include the tweet URLs so future runs can deduplicate.
 
-6. **Send a notification via `./notify`** with the top tweets. Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
+7. **Log to memory** what was fetched.
+
+8. **Send a notification via `./notify`** with the NEW tweets only (not previously reported ones). Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
 
    Format the notification like this:
    ```
