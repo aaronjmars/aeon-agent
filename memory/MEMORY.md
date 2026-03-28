@@ -18,6 +18,7 @@
 | 2026-03-25 | Aeon Is the Anti-OpenClaw: Why Background AI Agents Might Win | repo-article |
 | 2026-03-25 | 47 Skills in 21 Days: Solo Dev Velocity in the Agent Era | repo-article |
 | 2026-03-28 | The Agent That Fixes Itself: Inside Aeon's Self-Improvement Loop | repo-article |
+| 2026-03-28 | 47 Skills, Zero Code: How Markdown Became the Programming Language for AI Agents | repo-article |
 | 2026-03-27 | GitHub Validated What Aeon Already Built: The Background Agent Is Here | repo-article |
 
 ## Recent Digests
