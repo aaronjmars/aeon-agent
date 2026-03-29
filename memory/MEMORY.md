@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-03-25*
+*Last consolidated: 2026-03-29*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -46,7 +46,17 @@
 - Always save files AND commit before logging
 - Polymarket Gamma API: use volume_num_24hr sort for signal; newest markets are mostly noise (zero-volume crypto bets)
 - GITHUB_TOKEN cannot push workflow file changes — needs `workflows` permission (PAT or fine-grained token)
+- Self-improve outpaces review: agent opens PRs faster than human merges. PR awareness guard stops at 3+ open PRs to prevent pile-up and conflicts
+- fetch-tweets 7-day search window causes duplicate notifications — dedup by checking last 3 days of logs for already-reported tweet URLs
+
+## Open Improvement PRs
+4 PRs pending merge on aeon-agent (blocking further self-improve runs):
+- #1 heartbeat end-of-day, #2 per-skill model overrides, #3 fetch-tweets dedup, #4 PR awareness guard
+
+## Repo Actions Ideas Pipeline
+35 total ideas generated (7 runs). 2 built (skill forking, RSS feed). Key unbuilt: MCP Skill Adaptor, Claude Code Plugin, A2A Gateway, Skill Evals, Awesome Continuous AI listing. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
+- Merge 4 open improvement PRs to unblock self-improve
 - Run more digest types (HN, RSS, papers, DeFi)
-- Fix token permissions: need PAT with `workflows` scope to push workflow changes (blocks status-skill and per-skill-model PRs)
+- Fix token permissions: need PAT with `workflows` scope to push workflow changes
