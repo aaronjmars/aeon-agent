@@ -41,6 +41,7 @@
 | skill-forking | 2026-03-28 | skills.json manifest + export-skill for standalone skill distribution (PR #3 on aeon) |
 | self-improve-pr-guard | 2026-03-28 | PR awareness check prevents pile-up — stops at 3+ open PRs, avoids conflicts (PR #4) |
 | rss-feed | 2026-03-29 | Atom feed from articles/ — subscribable output distribution (aeon PR #4) |
+| skill-security-scanner | 2026-03-30 | Audit imported skills for injection/exfiltration/prompt-injection before execution (aeon PR #5) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
@@ -55,7 +56,7 @@
 - #1 heartbeat end-of-day, #2 per-skill model overrides, #3 fetch-tweets dedup, #4 PR awareness guard
 
 ## Repo Actions Ideas Pipeline
-40 total ideas generated (8 runs). 2 built (skill forking, RSS feed). Key unbuilt: Skill Security Scanner, Autonomous Skill Discovery, GitHub Pages Gallery, Deep Research Mode, Fork Fleet Coordination, MCP Skill Adaptor, Claude Code Plugin, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
+40 total ideas generated (8 runs). 3 built (skill forking, RSS feed, skill security scanner). Key unbuilt: Autonomous Skill Discovery, GitHub Pages Gallery, Deep Research Mode, Fork Fleet Coordination, MCP Skill Adaptor, Claude Code Plugin, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
 - Merge 4 open improvement PRs to unblock self-improve
