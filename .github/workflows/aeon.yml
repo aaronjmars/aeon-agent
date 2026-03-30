@@ -145,6 +145,12 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Configure git identity
+        if: steps.work.outputs.mode != ''
+        run: |
+          git config user.name "aeonframework"
+          git config user.email "aeonframework@proton.me"
+
       - name: Setup Node.js
         if: steps.work.outputs.mode != ''
         uses: actions/setup-node@v5
@@ -309,8 +315,8 @@ jobs:
       - name: Commit results
         if: steps.work.outputs.mode != ''
         run: |
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
+          git config user.name "aeonframework"
+          git config user.email "aeonframework@proton.me"
           rm -f ./notify  # Remove generated script before committing
 
           CURRENT_BRANCH=$(git branch --show-current)
