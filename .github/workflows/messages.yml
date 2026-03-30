@@ -476,9 +476,10 @@ jobs:
 
             [ "$SHOULD_RUN" = "false" ] && continue
 
-            # Smart dedup: skip if dispatched within last 90 minutes
-            if recently_dispatched "$SKILL" 90; then
-              echo "Skipping $SKILL (dispatched within last 90 min)"
+            # Smart dedup: skip if dispatched within last 150 minutes
+            # (catch-up logic spans ~2 hours, so 90 min was too short)
+            if recently_dispatched "$SKILL" 150; then
+              echo "Skipping $SKILL (dispatched within last 150 min)"
               continue
             fi
 
