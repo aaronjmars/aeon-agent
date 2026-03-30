@@ -9,7 +9,17 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
 
 ## Steps
 
-1. **Assess what needs improving** (in this priority order):
+1. **Check open improvement PRs first** — before doing anything else:
+   ```bash
+   gh pr list --state open --search "improve:" --json number,title,createdAt,url
+   ```
+   - If there are **3 or more open improvement PRs**, do NOT create a new one. Instead:
+     - Log the open PRs to `memory/logs/${today}.md`
+     - Send a notification: "Self-Improve: 3+ open improvement PRs pending merge. Review and merge before creating new improvements: [list PR titles + URLs]"
+     - Stop here.
+   - If there are open PRs, note them — do NOT work on the same area or create conflicting changes. Factor them into your assessment below.
+
+2. **Assess what needs improving** (in this priority order):
    a. If `${var}` is set, work on that specific improvement.
    b. Check `memory/logs/` from the last 24 hours — look for:
       - Skills that logged errors or produced empty/low-quality output
@@ -25,9 +35,9 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
    e. Check `aeon.yml` and `.github/workflows/` for workflow improvements.
    f. If nothing needs improving, log "SELF_IMPROVE_SKIP: agent is healthy" and **do NOT send any notification. Stop here.**
 
-2. **Pick ONE improvement** — the most impactful, smallest-effort fix. Don't try to do everything at once.
+3. **Pick ONE improvement** — the most impactful, smallest-effort fix. Don't try to do everything at once. Verify it doesn't overlap with any open improvement PRs from step 1.
 
-3. **Implement the improvement** directly in this repo. You have full access to:
+4. **Implement the improvement** directly in this repo. You have full access to:
    - `skills/*/SKILL.md` — skill prompts and instructions
    - `aeon.yml` — skill config, schedules, vars
    - `.github/workflows/` — workflow files
@@ -36,7 +46,7 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
    - `memory/` — memory files
    - `notify` script template in workflows
 
-4. **Create a branch, commit, and push**:
+5. **Create a branch, commit, and push**:
    ```bash
    git checkout -b improve/short-description
    git add -A
@@ -44,7 +54,7 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
    git push -u origin improve/short-description
    ```
 
-5. **Open a PR** on this repo:
+6. **Open a PR** on this repo:
    ```bash
    gh pr create \
      --title "improve: short description" \
@@ -62,9 +72,9 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
    *Self-improved by Aeon*"
    ```
 
-6. **Update memory** — log to `memory/logs/${today}.md` and update `memory/MEMORY.md` Skills Built table.
+7. **Update memory** — log to `memory/logs/${today}.md` and update `memory/MEMORY.md` Skills Built table.
 
-7. **Send a DETAILED notification** via `./notify`:
+8. **Send a DETAILED notification** via `./notify`:
    ```
    *Agent Self-Improvement — ${today}*
 
