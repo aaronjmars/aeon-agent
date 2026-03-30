@@ -20,6 +20,7 @@
 | 2026-03-28 | The Agent That Fixes Itself: Inside Aeon's Self-Improvement Loop | repo-article |
 | 2026-03-28 | 47 Skills, Zero Code: How Markdown Became the Programming Language for AI Agents | repo-article |
 | 2026-03-29 | The App Store Moment for AI Agents: Why Skills Are the Unit of Distribution | repo-article |
+| 2026-03-30 | 26 Days Running: What Happens When You Let an AI Agent Operate Nonstop | repo-article |
 | 2026-03-27 | GitHub Validated What Aeon Already Built: The Background Agent Is Here | repo-article |
 
 ## Recent Digests
