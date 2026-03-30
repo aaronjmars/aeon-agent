@@ -55,7 +55,7 @@
 - #1 heartbeat end-of-day, #2 per-skill model overrides, #3 fetch-tweets dedup, #4 PR awareness guard
 
 ## Repo Actions Ideas Pipeline
-35 total ideas generated (7 runs). 2 built (skill forking, RSS feed). Key unbuilt: MCP Skill Adaptor, Claude Code Plugin, A2A Gateway, Skill Evals, Awesome Continuous AI listing. See `articles/repo-actions-*.md`.
+40 total ideas generated (8 runs). 2 built (skill forking, RSS feed). Key unbuilt: Skill Security Scanner, Autonomous Skill Discovery, GitHub Pages Gallery, Deep Research Mode, Fork Fleet Coordination, MCP Skill Adaptor, Claude Code Plugin, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
 - Merge 4 open improvement PRs to unblock self-improve
