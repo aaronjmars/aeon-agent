@@ -42,6 +42,7 @@
 | self-improve-pr-guard | 2026-03-28 | PR awareness check prevents pile-up — stops at 3+ open PRs, avoids conflicts (PR #4) |
 | rss-feed | 2026-03-29 | Atom feed from articles/ — subscribable output distribution (aeon PR #4) |
 | skill-security-scanner | 2026-03-30 | Audit imported skills for injection/exfiltration/prompt-injection before execution (aeon PR #5) |
+| skill-discover | 2026-04-01 | Autonomous discovery of trending skills from SkillsMP/GitHub; scores, security-checks, and ranks gap-filling candidates (aeon PR #6) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
