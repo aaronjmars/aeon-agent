@@ -43,6 +43,7 @@
 | rss-feed | 2026-03-29 | Atom feed from articles/ — subscribable output distribution (aeon PR #4) |
 | skill-security-scanner | 2026-03-30 | Audit imported skills for injection/exfiltration/prompt-injection before execution (aeon PR #5) |
 | skill-discover | 2026-04-01 | Autonomous discovery of trending skills from SkillsMP/GitHub; scores, security-checks, and ranks gap-filling candidates (aeon PR #6) |
+| github-pages-gallery | 2026-04-02 | Jekyll-based public gallery at docs/ — publishes articles as browsable posts; update-gallery skill syncs weekly (aeon PR #7) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
