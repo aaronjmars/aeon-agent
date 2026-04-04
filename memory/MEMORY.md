@@ -45,6 +45,7 @@
 | skill-discover | 2026-04-01 | Autonomous discovery of trending skills from SkillsMP/GitHub; scores, security-checks, and ranks gap-filling candidates (aeon PR #6) |
 | github-pages-gallery | 2026-04-02 | Jekyll-based public gallery at docs/ — publishes articles as browsable posts; update-gallery skill syncs weekly (aeon PR #7) |
 | deep-research | 2026-04-04 | Exhaustive multi-source synthesis (30–50 sources, 3K–5K words) using 1M context; shallow/deep modes via --depth flag (aeon PR #9) |
+| memory-flush (improved) | 2026-04-04 | Added stale-entry cleanup step: removes resolved PR lists, prunes Next Priorities, archives old Skills Built rows (aeon-agent PR #5) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
@@ -54,14 +55,10 @@
 - Self-improve outpaces review: agent opens PRs faster than human merges. PR awareness guard stops at 3+ open PRs to prevent pile-up and conflicts
 - fetch-tweets 7-day search window causes duplicate notifications — dedup by checking last 3 days of logs for already-reported tweet URLs
 
-## Open Improvement PRs
-4 PRs pending merge on aeon-agent (blocking further self-improve runs):
-- #1 heartbeat end-of-day, #2 per-skill model overrides, #3 fetch-tweets dedup, #4 PR awareness guard
-
 ## Repo Actions Ideas Pipeline
-40 total ideas generated (8 runs). 3 built (skill forking, RSS feed, skill security scanner). Key unbuilt: Autonomous Skill Discovery, GitHub Pages Gallery, Deep Research Mode, Fork Fleet Coordination, MCP Skill Adaptor, Claude Code Plugin, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
+40 total ideas generated (8 runs). Built: skill forking, RSS feed, skill security scanner, autonomous skill discovery, GitHub Pages gallery, deep research mode. Key unbuilt: Fork Fleet Coordination, Skill Run Cost Tracker, Workflow Security Audit, Dashboard Live Feed, Skill Dependency Chain, Memory Search API, MCP Skill Adaptor, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
-- Merge 4 open improvement PRs to unblock self-improve
 - Run more digest types (HN, RSS, papers, DeFi)
 - Fix token permissions: need PAT with `workflows` scope to push workflow changes
+- Consider building Skill Evals or Skill Run Cost Tracker (both medium effort, high value)
