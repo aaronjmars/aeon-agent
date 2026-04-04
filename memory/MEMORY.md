@@ -54,14 +54,10 @@
 - Self-improve outpaces review: agent opens PRs faster than human merges. PR awareness guard stops at 3+ open PRs to prevent pile-up and conflicts
 - fetch-tweets 7-day search window causes duplicate notifications — dedup by checking last 3 days of logs for already-reported tweet URLs
 
-## Open Improvement PRs
-4 PRs pending merge on aeon-agent (blocking further self-improve runs):
-- #1 heartbeat end-of-day, #2 per-skill model overrides, #3 fetch-tweets dedup, #4 PR awareness guard
-
 ## Repo Actions Ideas Pipeline
-40 total ideas generated (8 runs). 3 built (skill forking, RSS feed, skill security scanner). Key unbuilt: Autonomous Skill Discovery, GitHub Pages Gallery, Deep Research Mode, Fork Fleet Coordination, MCP Skill Adaptor, Claude Code Plugin, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
+40 total ideas generated (8 runs). Built: skill forking, RSS feed, skill security scanner, autonomous skill discovery, GitHub Pages gallery, deep research mode. Key unbuilt: Fork Fleet Coordination, Skill Run Cost Tracker, Workflow Security Audit, Dashboard Live Feed, Skill Dependency Chain, Memory Search API, MCP Skill Adaptor, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
-- Merge 4 open improvement PRs to unblock self-improve
 - Run more digest types (HN, RSS, papers, DeFi)
 - Fix token permissions: need PAT with `workflows` scope to push workflow changes
+- Consider building Skill Evals or Skill Run Cost Tracker (both medium effort, high value)
