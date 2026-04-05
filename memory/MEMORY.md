@@ -45,6 +45,7 @@
 | skill-discover | 2026-04-01 | Autonomous discovery of trending skills from SkillsMP/GitHub; scores, security-checks, and ranks gap-filling candidates (aeon PR #6) |
 | github-pages-gallery | 2026-04-02 | Jekyll-based public gallery at docs/ — publishes articles as browsable posts; update-gallery skill syncs weekly (aeon PR #7) |
 | deep-research | 2026-04-04 | Exhaustive multi-source synthesis (30–50 sources, 3K–5K words) using 1M context; shallow/deep modes via --depth flag (aeon PR #9) |
+| skill-smoke-tests | 2026-04-05 | Static SKILL.md validator + test-skills.yml CI workflow — runs on every PR touching skills/; checks frontmatter, cron, secrets, placeholders (aeon PR #10) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
