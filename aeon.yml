@@ -15,7 +15,7 @@ skills:
   # --- Day 2 (Tue+Fri): Content & Analysis ---
   push-recap: { enabled: true, schedule: "0 12 * * 2,5" }
   repo-article: { enabled: true, schedule: "0 13 * * 2,5" }
-  repo-actions: { enabled: true, schedule: "0 15 * * 2,5" }
+  repo-actions: { enabled: true, schedule: "0 15 * * 2,5", model: "claude-sonnet-4-6" }
 
   # --- Day 3 (Wed+Sat): Build & Meta ---
   hyperstitions-ideas: { enabled: true, schedule: "0 12 * * 6" }
