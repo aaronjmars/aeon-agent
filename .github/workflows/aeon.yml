@@ -340,8 +340,17 @@ jobs:
 
           # Commit any remaining changes on main
           git add -A
-          git diff --staged --quiet && exit 0
-          git commit -m "chore($LABEL): auto-commit $(date +%Y-%m-%d)"
+          if git diff --staged --quiet; then
+            # Nothing new to commit — but Claude may have committed during its run.
+            # Check for unpushed commits and push them if any exist.
+            if [ "$(git rev-list origin/main..HEAD --count 2>/dev/null)" = "0" ]; then
+              echo "No changes to commit or push"
+              exit 0
+            fi
+            echo "No new changes, but found unpushed commits — pushing"
+          else
+            git commit -m "chore($LABEL): auto-commit $(date +%Y-%m-%d)"
+          fi
           for i in 1 2 3; do
             # Pull and rebase onto latest remote
             if ! git pull --rebase origin main 2>/dev/null; then
