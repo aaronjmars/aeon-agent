@@ -9,7 +9,7 @@ skills:
 
   # --- Day 1 (Mon+Thu+Sun): Market & Social ---
   token-report: { enabled: true, schedule: "0 8 * * 0,1,4", model: "claude-sonnet-4-6" }
-  fetch-tweets: { enabled: true, schedule: "30 8 * * 0,1,4", var: "AEON crypto token on Base chain", model: "claude-sonnet-4-6" }
+  fetch-tweets: { enabled: true, schedule: "30 8 * * 0,1,4", var: "AEON crypto token on Base chain AND https://github.com/aaronjmars/aeon", model: "claude-sonnet-4-6" }
   repo-pulse: { enabled: true, schedule: "0 12 * * 0,1,4", model: "claude-sonnet-4-6" }
 
   # --- Day 2 (Tue+Fri): Content & Analysis ---
