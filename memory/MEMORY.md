@@ -46,6 +46,7 @@
 | github-pages-gallery | 2026-04-02 | Jekyll-based public gallery at docs/ — publishes articles as browsable posts; update-gallery skill syncs weekly (aeon PR #7) |
 | deep-research | 2026-04-04 | Exhaustive multi-source synthesis (30–50 sources, 3K–5K words) using 1M context; shallow/deep modes via --depth flag (aeon PR #9) |
 | memory-flush (improved) | 2026-04-04 | Added stale-entry cleanup step: removes resolved PR lists, prunes Next Priorities, archives old Skills Built rows (aeon-agent PR #5) |
+| skill-smoke-tests | 2026-04-05 | Static SKILL.md validator + test-skills.yml CI workflow — runs on every PR touching skills/; checks frontmatter, cron, secrets, placeholders (aeon PR #10) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
