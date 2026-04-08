@@ -1,3 +1,16 @@
 .env
 .claude/
 .DS_Store
+
+# Temp files created by skill runs — should never be committed
+_tmp_*
+tmp_*
+*.tmp
+notify
+xai_result.json
+xai_search.sh
+fetch_tweets.mjs
+fetch_tweets.py
+fetch_tweets_run.sh
+parse_markets.py
+pr-body.txt
