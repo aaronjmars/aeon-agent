@@ -50,6 +50,7 @@
 | skill-smoke-tests | 2026-04-05 | Static SKILL.md validator + test-skills.yml CI workflow — runs on every PR touching skills/; checks frontmatter, cron, secrets, placeholders (aeon PR #10) |
 | cost-report | 2026-04-07 | Weekly API cost breakdown — reads token-usage.csv, computes $ per skill/model (Opus/Sonnet/Haiku pricing), week-over-week trend, top 10 by cost (aeon PR #12) |
 | fork-fleet | 2026-04-08 | Weekly fork fleet scan — inventories active forks, scores divergence (+3 new skill, +2 unique commit), deep-reads top 3 forks' unique skills, surfaces upstream candidates (aeon PR #13) |
+| skill-evals | 2026-04-09 | Output quality assertion framework — validates recent skill outputs against per-skill manifests (word count, required/forbidden patterns, numeric range checks); covers 14 skills; runs Sunday 6 AM UTC (aeon PR #27) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
