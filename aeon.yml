@@ -5,26 +5,24 @@
 # Set model: "claude-sonnet-4-6" to override the default model for cost optimization.
 
 skills:
-  # === 3-DAY CYCLE (repeats Mon-Wed, Thu-Sat, Sun-Tue, ...) ===
+  # --- Daily: Market & Social ---
+  token-report: { enabled: true, schedule: "0 6 * * *", model: "claude-sonnet-4-6" }
+  fetch-tweets: { enabled: true, schedule: "30 6 * * *", var: "AEON crypto token on Base chain AND https://github.com/aaronjmars/aeon", model: "claude-sonnet-4-6" }
+  repo-pulse: { enabled: true, schedule: "0 10 * * *", model: "claude-sonnet-4-6" }
 
-  # --- Day 1 (Mon+Thu+Sun): Market & Social ---
-  token-report: { enabled: true, schedule: "0 8 * * 0,1,4", model: "claude-sonnet-4-6" }
-  fetch-tweets: { enabled: true, schedule: "30 8 * * 0,1,4", var: "AEON crypto token on Base chain AND https://github.com/aaronjmars/aeon", model: "claude-sonnet-4-6" }
-  repo-pulse: { enabled: true, schedule: "0 12 * * 0,1,4", model: "claude-sonnet-4-6" }
+  # --- Every 2 days: Content & Meta ---
+  repo-actions: { enabled: true, schedule: "0 14 */2 * *", model: "claude-sonnet-4-6" }
+  push-recap: { enabled: true, schedule: "0 15 */2 * *" }
+  repo-article: { enabled: true, schedule: "0 16 */2 * *" }
+  self-improve: { enabled: true, schedule: "0 13 */2 * *" }
 
-  # --- Day 2 (Tue+Fri): Content & Analysis ---
-  push-recap: { enabled: true, schedule: "0 12 * * 2,5" }
-  repo-article: { enabled: true, schedule: "0 13 * * 2,5" }
-  repo-actions: { enabled: true, schedule: "0 15 * * 2,5", model: "claude-sonnet-4-6" }
-
-  # --- Day 3 (Wed+Sat): Build & Meta ---
-  hyperstitions-ideas: { enabled: true, schedule: "0 12 * * 6" }
-  feature: { enabled: true, schedule: "0 13 * * *" }
-  self-improve: { enabled: true, schedule: "0 15 * * 3,6" }
+  # --- Build (Daily) ---
+  hyperstitions-ideas: { enabled: true, schedule: "0 10 * * 6" }
+  feature: { enabled: true, schedule: "0 11 * * *" }
 
   # === HOUSEKEEPING ===
-  heartbeat: { enabled: true, schedule: "0 21 * * *", model: "claude-sonnet-4-6" }
-  memory-flush: { enabled: true, schedule: "0 20 * * 0", model: "claude-sonnet-4-6" }  # Sundays only
+  heartbeat: { enabled: true, schedule: "0 19 * * *", model: "claude-sonnet-4-6" }
+  memory-flush: { enabled: true, schedule: "0 18 * * 0,3", model: "claude-sonnet-4-6" }  # Sun + Wed
 
   # === DISABLED (available on demand) ===
   morning-brief: { enabled: false, schedule: "0 7 * * *" }
