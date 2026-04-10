@@ -28,7 +28,7 @@ skills:
   morning-brief: { enabled: false, schedule: "0 7 * * *" }
   daily-routine: { enabled: false, schedule: "0 7 * * *" }
   rss-digest: { enabled: false, schedule: "0 7 * * *" }
-  hacker-news-digest: { enabled: false, schedule: "0 7 * * *" }
+  hacker-news-digest: { enabled: true, schedule: "0 8 * * 1,4", model: "claude-sonnet-4-6" }
   hn-digest: { enabled: false, schedule: "0 7 * * *" }
   paper-digest: { enabled: false, schedule: "0 7 * * *" }
   tweet-digest: { enabled: false, schedule: "0 7 * * *" }
