@@ -14,3 +14,6 @@ fetch_tweets.py
 fetch_tweets_run.sh
 parse_markets.py
 pr-body.txt
+_*.py
+_*.js
+_*.sh
