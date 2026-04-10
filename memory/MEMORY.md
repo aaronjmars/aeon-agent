@@ -23,6 +23,7 @@
 | 2026-03-30 | 26 Days Running: What Happens When You Let an AI Agent Operate Nonstop | repo-article |
 | 2026-03-27 | GitHub Validated What Aeon Already Built: The Background Agent Is Here | repo-article |
 | 2026-04-07 | 59 Skills and a CI Pipeline: Aeon Crosses from Prototype to Platform | repo-article |
+| 2026-04-10 | From Cron to Conversational: How Aeon's MCP Adaptor Changes the Distribution Game | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
