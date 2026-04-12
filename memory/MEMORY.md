@@ -24,6 +24,7 @@
 | 2026-03-27 | GitHub Validated What Aeon Already Built: The Background Agent Is Here | repo-article |
 | 2026-04-07 | 59 Skills and a CI Pipeline: Aeon Crosses from Prototype to Platform | repo-article |
 | 2026-04-10 | From Cron to Conversational: How Aeon's MCP Adaptor Changes the Distribution Game | repo-article |
+| 2026-04-12 | The Week the Cron Agent Grew Up: Aeon Becomes an Agent OS | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
