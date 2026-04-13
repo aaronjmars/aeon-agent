@@ -10,14 +10,20 @@ skills:
   fetch-tweets: { enabled: true, schedule: "30 6 * * *", var: "AEON crypto token on Base chain AND https://github.com/aaronjmars/aeon", model: "claude-sonnet-4-6" }
   repo-pulse: { enabled: true, schedule: "0 10 * * *", model: "claude-sonnet-4-6" }
 
+  # --- Daily: Shipping & Content ---
+  push-recap: { enabled: true, schedule: "0 15 * * *" }
+  project-lens: { enabled: true, schedule: "0 16 * * 1,3,5" }  # Mon, Wed, Fri
+
   # --- Every 2 days: Content & Meta ---
   repo-actions: { enabled: true, schedule: "0 14 */2 * *", model: "claude-sonnet-4-6" }
-  push-recap: { enabled: true, schedule: "0 15 */2 * *" }
-  repo-article: { enabled: true, schedule: "0 16 */2 * *" }
+  repo-article: { enabled: true, schedule: "0 16 */2 * 0,2,4,6" }  # Off-days from project-lens
   self-improve: { enabled: true, schedule: "0 13 */2 * *" }
 
-  # --- Build (Daily) ---
+  # --- Weekly ---
+  weekly-shiplog: { enabled: true, schedule: "0 9 * * 1" }  # Monday morning
   hyperstitions-ideas: { enabled: true, schedule: "0 10 * * 6" }
+
+  # --- Build (Daily) ---
   feature: { enabled: true, schedule: "0 11 * * *" }
 
   # === HOUSEKEEPING ===
