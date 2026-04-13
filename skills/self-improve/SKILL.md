@@ -21,7 +21,7 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
 
 2. **Assess what needs improving** (in this priority order):
    a. If `${var}` is set, work on that specific improvement.
-   b. Check `memory/logs/` from the last 24 hours — look for:
+   b. Check `memory/logs/` from the last 2 days — look for:
       - Skills that logged errors or produced empty/low-quality output
       - Notifications that were truncated or failed (Markdown parse errors)
       - Skills that ran but didn't send notifications when they should have
