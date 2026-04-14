@@ -21,6 +21,7 @@ skills:
 
   # --- Weekly ---
   weekly-shiplog: { enabled: true, schedule: "0 9 * * 1" }  # Monday morning
+  skill-leaderboard: { enabled: true, schedule: "0 17 * * 0", model: "claude-sonnet-4-6" }  # Sunday 17:00 UTC
   hyperstitions-ideas: { enabled: true, schedule: "0 10 * * 6" }
 
   # --- Build (Daily) ---
