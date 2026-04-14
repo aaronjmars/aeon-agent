@@ -14,7 +14,7 @@ Today is ${today}. Generate a leaderboard of the most popular Aeon skills across
 2. **Fetch all active forks** (pushed within the last 30 days):
    ```bash
    CUTOFF=$(date -u -d "30 days ago" +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || date -u -v-30d +%Y-%m-%dT%H:%M:%SZ)
-   gh api repos/${TARGET_REPO}/forks --jq "[.[] | select(.pushed_at > \"$CUTOFF\") | {owner: .owner.login, full_name: .full_name, pushed_at}]"
+   gh api repos/${TARGET_REPO}/forks --paginate --jq "[.[] | select(.pushed_at > \"$CUTOFF\") | {owner: .owner.login, full_name: .full_name, pushed_at}]"
    ```
    If no active forks found, log "SKILL_LEADERBOARD_NO_FORKS" and stop (no notification).
 
