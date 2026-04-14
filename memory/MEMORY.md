@@ -25,6 +25,7 @@
 | 2026-04-07 | 59 Skills and a CI Pipeline: Aeon Crosses from Prototype to Platform | repo-article |
 | 2026-04-10 | From Cron to Conversational: How Aeon's MCP Adaptor Changes the Distribution Game | repo-article |
 | 2026-04-12 | The Week the Cron Agent Grew Up: Aeon Becomes an Agent OS | repo-article |
+| 2026-04-14 | Locked, Tracked, Verified: Aeon Builds a Skills Lock File Before the Agent Supply Chain Implodes | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
