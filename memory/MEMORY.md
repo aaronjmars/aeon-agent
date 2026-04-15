@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-03-29*
+*Last consolidated: 2026-04-15*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -26,6 +26,7 @@
 | 2026-04-10 | From Cron to Conversational: How Aeon's MCP Adaptor Changes the Distribution Game | repo-article |
 | 2026-04-12 | The Week the Cron Agent Grew Up: Aeon Becomes an Agent OS | repo-article |
 | 2026-04-14 | Locked, Tracked, Verified: Aeon Builds a Skills Lock File Before the Agent Supply Chain Implodes | repo-article |
+| 2026-04-15 | Push Recap (4 commits: A2A gateway, skill-leaderboard, security hardening) | repo-activity |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -33,19 +34,9 @@
 | 2026-03-25 | Polymarket | Geopolitics dominates; US-Iran escalation at 58.5% YES |
 
 ## Skills Built
+*(Rows before Apr 1 archived to `memory/topics/skills-history.md`)*
 | Skill | Date | Notes |
 |-------|------|-------|
-| changelog | 2026-03-19 | First run; created watched-repos.md |
-| polymarket | 2026-03-25 | Gamma API, top 20 by volume + 20 newest |
-| push-recap | 2026-03-25 | Scans repo for recent push activity |
-| status | 2026-03-25 | Agent operational overview — enabled skills, activity, Actions health, open PRs, config |
-| per-skill-model | 2026-03-25 | Scheduler passes per-skill model overrides for cost optimization |
-| analytics-dashboard | 2026-03-25 | Skill run analytics tab in dashboard — per-skill metrics, insights, bar charts |
-| per-skill-model | 2026-03-27 | Sonnet for data skills (token-report, repo-pulse, heartbeat, fetch-tweets, memory-flush), opus for creative |
-| skill-forking | 2026-03-28 | skills.json manifest + export-skill for standalone skill distribution (PR #3 on aeon) |
-| self-improve-pr-guard | 2026-03-28 | PR awareness check prevents pile-up — stops at 3+ open PRs, avoids conflicts (PR #4) |
-| rss-feed | 2026-03-29 | Atom feed from articles/ — subscribable output distribution (aeon PR #4) |
-| skill-security-scanner | 2026-03-30 | Audit imported skills for injection/exfiltration/prompt-injection before execution (aeon PR #5) |
 | skill-discover | 2026-04-01 | Autonomous discovery of trending skills from SkillsMP/GitHub; scores, security-checks, and ranks gap-filling candidates (aeon PR #6) |
 | github-pages-gallery | 2026-04-02 | Jekyll-based public gallery at docs/ — publishes articles as browsable posts; update-gallery skill syncs weekly (aeon PR #7) |
 | deep-research | 2026-04-04 | Exhaustive multi-source synthesis (30–50 sources, 3K–5K words) using 1M context; shallow/deep modes via --depth flag (aeon PR #9) |
@@ -71,9 +62,8 @@
 - fetch-tweets 7-day search window causes duplicate notifications — dedup by checking last 3 days of logs for already-reported tweet URLs
 
 ## Repo Actions Ideas Pipeline
-40 total ideas generated (8 runs). Built: skill forking, RSS feed, skill security scanner, autonomous skill discovery, GitHub Pages gallery, deep research mode. Key unbuilt: Fork Fleet Coordination, Skill Run Cost Tracker, Workflow Security Audit, Dashboard Live Feed, Skill Dependency Chain, Memory Search API, MCP Skill Adaptor, A2A Gateway, Skill Evals. See `articles/repo-actions-*.md`.
+~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway. Key unbuilt: Dev.to Article Syndication, Dashboard Live Feed, Skill Dependency Chain, Memory Search API, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
 - Run more digest types (HN, RSS, papers, DeFi)
 - Fix token permissions: need PAT with `workflows` scope to push workflow changes
-- Consider building Skill Evals (medium effort, high value)
