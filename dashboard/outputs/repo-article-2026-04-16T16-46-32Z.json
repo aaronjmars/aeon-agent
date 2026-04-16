@@ -1,0 +1,30 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: The Interoperability Play Nobody Saw Coming"
+      },
+      "children": [
+        "description",
+        "link"
+      ]
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon shipped MCP and A2A protocol gateways in the same week, turning 90+ skills into a universal layer callable from LangChain, AutoGen, CrewAI, OpenAI Agents SDK, and Vertex AI. On the same day Anthropic launched Routines, Aeon posted its best growth day ever: +16 stars, +3 forks. The article covers the interoperability moat, why Routines validates the category, and the numbers behind the breakout."
+      }
+    },
+    "link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-16.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
