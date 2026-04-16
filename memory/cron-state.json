@@ -78,5 +78,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "push-recap": {
+    "last_dispatch": "2026-04-16T15:20:35Z",
+    "last_status": "dispatched"
   }
 }
