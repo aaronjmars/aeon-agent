@@ -1,60 +1,60 @@
 # Repo Action Ideas — 2026-04-16
 
-**Repos:** aaronjmars/aeon (173 stars, 20 forks, 90+ skills, 1 open PR) | aaronjmars/aeon-agent
+**Repos:** aaronjmars/aeon (173 stars, 20 forks, 90+ skills, 0 open PRs) | aaronjmars/aeon-agent
 
-**Context:** Best growth day on record: +16 stars and +3 forks in 24h. Second token breakout in 72h (+77%). The fork merge last week absorbed 25 community skills, pushing the catalog past 90. Reactive triggers, A2A gateway, MCP adaptor, skills.lock, and heartbeat escalation are all live or in-flight. Open PR #36 adds Dev.to syndication. With momentum at its highest, the priority shifts to converting new attention into active operators, closing the contributor loop, and building the distribution layer that compounds the growth.
+**Context:** Record-breaking growth: +16 stars and +3 forks in 24h. Token in second breakout leg (+77% 24h, +228% 7d). Dev.to syndication merged, A2A gateway live, MCP adaptor running. With 90+ skills and distribution infrastructure in place, the next frontier is making the system more self-documenting, extending reach to crypto-native channels, and converting raw growth into observable social moments. No open PRs or issues — clean slate for new work.
 
 ---
 
-### 1. Setup Wizard — `./aeon setup`
-**Type:** DX Improvement
-**Effort:** Small (hours)
-**Impact:** 16 new stars in one day means first-time visitors are arriving in volume. Current onboarding: read a 500-line README, manually edit aeon.yml. A setup wizard that outputs a ready-to-paste config in under 2 minutes converts passive stargazers into active operators — and each active fork is a distribution node. Even a 10% improvement in conversion compounds.
+### 1. Dashboard Live Feed
+**Type:** Feature
+**Effort:** Medium (1–2 days)
+**Impact:** Skills write json-render specs to `dashboard/outputs/` after every run, but the dashboard has no live update mechanism — operators reload manually or miss runs entirely. A real-time feed turns the dashboard from a static report viewer into an active ops center. This directly increases engagement for operators who have the dashboard open and makes Aeon feel alive rather than a batch system.
 **How:**
-1. Create a `setup` bash script at the repo root. Prompt for: (a) use case (crypto/content/developer/custom), (b) notification channel (Telegram/Discord/Slack/email), (c) preferred cadence (daily/weekly/on-demand).
-2. Generate a minimal aeon.yml snippet with the relevant skills pre-enabled, commented with which secrets to add.
-3. Print a final checklist: secrets to configure, how to verify with `gh workflow run aeon.yml`.
+1. Add a `/api/feed` Server-Sent Events endpoint to the Next.js dashboard that uses `fs.watch` on `dashboard/outputs/` and streams new file events as they land.
+2. Wire the dashboard front page to this SSE stream: new skill outputs animate into the top of the feed without a page reload.
+3. Add a pulsing "Live" indicator to the dashboard header that activates when a skill run is detected — matching the real-time feel of the token and notification panels already in place.
 
 ---
 
-### 2. Contributor Auto-Reward
+### 2. Farcaster Syndication
 **Type:** Integration
 **Effort:** Small (hours)
-**Impact:** The `distribute-tokens` skill exists but is manual. Wiring it to a reactive trigger on external PR merge creates a fully automated contributor incentive loop. An external contributor opens a PR, it merges, they receive AEON tokens automatically. This is a public viral moment — contributors announce it, which drives word-of-mouth for both the repo and the token. Directly closes the community loop that the A2A gateway and MCP adaptor opened.
+**Impact:** Dev.to reaches the developer audience; Farcaster reaches the crypto-native audience that overlaps most directly with AEON token holders and DeFi users. A post-process hook adds zero overhead to existing skill runs and extends Aeon's distribution footprint into a channel its audience already lives in. Follows the same pattern as `postprocess-devto.sh` — no sandbox changes needed.
 **How:**
-1. Add a reactive trigger to `aeon.yml`: `schedule: "reactive"` with `trigger: pr_merged` that fires when `PR author != merger` (i.e., external contribution).
-2. The triggered skill reads the PR author's GitHub username, looks them up in a `contributors.yml` registry (wallet address mapping), and calls `distribute-tokens` with the resolved address and a fixed reward amount.
-3. Send a notification with the contributor's name, PR title, and tokens distributed.
+1. Create `scripts/postprocess-farcaster.sh`: reads article URLs from `.pending-notify/`, formats a Farcaster cast (title + canonical URL + #aeon tag), and POSTs to the Neynar API using `NEYNAR_API_KEY` and `FARCASTER_FID`. Runs after Claude finishes, same as the Dev.to postprocess.
+2. Add `NEYNAR_API_KEY` and `FARCASTER_FID` to the Distribution group in `dashboard/app/api/secrets/route.ts`.
+3. No changes to `./notify` or any SKILL.md needed — the postprocess hook picks up existing `.pending-notify/` files automatically.
 
 ---
 
-### 3. Weekly Operator Newsletter
-**Type:** Content/Growth
+### 3. Star Milestone Announcer
+**Type:** Growth
 **Effort:** Small (hours)
-**Impact:** With 173+ stars and a working SendGrid integration, a weekly digest email is the highest-leverage retention play available. Most stars never return to the repo — a newsletter brings Aeon's output (token reports, repo articles, skill highlights) directly to their inbox. Converts passive audience into engaged operators. The distribution infrastructure is already built; this is a routing layer on top of it.
+**Impact:** Aeon tracks stars daily but never does anything with milestone crossings. When the count crosses a round number (175, 200, 250, 500...), an automated notification with a milestone message and a summary of what shipped to get there turns a passive metric into a shareable social moment. Operators share their own bot announcing its growth — free word-of-mouth at exactly the right audience (people already watching the repo).
 **How:**
-1. Create `skills/weekly-newsletter/SKILL.md`. It reads the past week's articles from `articles/`, pulls the token-report summary, and synthesizes a curated digest.
-2. Format as plain+HTML email with a consistent weekly structure: one lead story, token snapshot, skill spotlight, one tip for operators.
-3. Schedule Sunday 10:00 UTC. Use the existing SendGrid path (`SENDGRID_API_KEY`). Add an opt-in field to the dashboard secrets panel (`NOTIFY_NEWSLETTER_TO`) for subscriber emails.
+1. Add milestone detection to `skills/repo-pulse/SKILL.md`: after fetching `stargazers_count`, check against a milestone list `[175, 200, 250, 300, 500, 1000]`. If today's count crosses a threshold not recorded in `memory/topics/milestones.md`, send a bonus celebratory notification with the milestone count and 2–3 lines on what shipped since the last milestone.
+2. Write crossed milestones to `memory/topics/milestones.md` (create if absent) to prevent re-triggering on the next daily run.
+3. Notification links back to the repo — a natural share moment for the operator.
 
 ---
 
-### 4. Memory Search Skill
-**Type:** Feature
-**Effort:** Small–Medium (1 day)
-**Impact:** Aeon's memory corpus spans `logs/`, `topics/`, `issues/`, `MEMORY.md` — all unindexed. Skills currently read the index and recent logs but miss long-tail context. A search skill answers queries like "what happened with auto-merge?" or "find all token reports from March" by scanning the full memory tree. Surfaces relevant past context for deeper skill runs and lets operators query accumulated knowledge directly from the dashboard or CLI.
+### 4. Skill Dependency Map
+**Type:** Feature / DX
+**Effort:** Medium (1 day)
+**Impact:** With 90+ skills, `chains:` relationships, and `consume:` dependencies in `aeon.yml`, the architecture is opaque — even to contributors. A self-updating Mermaid diagram in `docs/skill-graph.md` makes the dependency DAG visible, helps new operators understand execution order, and is a compelling visual for repo articles and social posts (the chart itself tells a story about complexity managed). Zero ongoing maintenance cost once the generator skill is live.
 **How:**
-1. Create `skills/memory-search/SKILL.md` as `schedule: workflow_dispatch` (var: search query). Skill recursively reads all `.md` files under `memory/`, scores relevance to the query using keyword + semantic matching, and returns top 5 matches with excerpts.
-2. Cache results in `memory/search-cache/{query-hash}.md` with a 24h TTL to avoid re-scanning on repeated queries.
-3. Expose as an MCP tool via the existing `mcp-skill-adaptor` so Claude Desktop operators can query Aeon's memory in natural language.
+1. Create `skills/skill-graph/SKILL.md` as `workflow_dispatch`. Parse `aeon.yml` `chains:` and `consume:` fields to extract step-level dependencies. Scan SKILL.md files for inline references to other skill names (e.g. "read skills/X/SKILL.md", "chains consume:") to catch implicit relationships.
+2. Output a Mermaid `flowchart LR` diagram grouped by skill category to `docs/skill-graph.md`.
+3. PR the file to the repo and add a "Skill Architecture" link to the README under the skills table — makes the graph discoverable without cluttering the top-level docs.
 
 ---
 
-### 5. Fork Spotlight Page
-**Type:** Community/Growth
-**Effort:** Medium (1–2 days)
-**Impact:** 20 forks exist but are invisible to each other and to new visitors. A weekly-updated GitHub Pages page showcasing active forks — their purpose, top enabled skills, and unique customizations — creates social proof, incentivizes operators to differentiate their instances, and gives new visitors concrete production examples. Builds directly on the `fork-fleet` and `skill-leaderboard` data already collected weekly. Zero additional API calls needed; this is a rendering layer on existing outputs.
+### 5. Public Status Page
+**Type:** Community / DX
+**Effort:** Small (hours)
+**Impact:** 173 stars and 20 forks means there are operators running Aeon instances that new visitors can't see. A GitHub Pages status page at `aaronjmars.github.io/aeon/status` showing 30-day skill health (green/yellow/red per skill, success rates, last run time) builds credibility — "yes, this runs reliably in production" — and gives operators a URL to share when explaining their setup. All data is already in `memory/logs/`; this is a rendering layer on existing output.
 **How:**
-1. Extend `update-gallery` to also generate `docs/fleet.md` — a browsable page listing active forks with: operator handle, instance purpose (from their MEMORY.md), top 5 enabled skills, star count, last active date.
-2. Source data from `fork-fleet`'s weekly output (already written to `articles/fork-fleet-*.md`). Schedule `update-gallery` to run after `fork-fleet` on Sundays.
-3. Add a "Fleet" tab to the existing GitHub Pages gallery nav and link it from the main README under the "Instance Fleet" section.
+1. Extend `update-gallery` (already runs weekly) to also generate `docs/status.md` by parsing the last 30 days of heartbeat log entries. Extract per-skill status mentions, compute 30-day success rates, and format as a table with ✅/⚠️/❌ indicators.
+2. Add "Status" to the GitHub Pages gallery navigation alongside the existing Articles and Skills pages.
+3. Link from the README under the Instance Fleet section: "Check the live status page for uptime across all skills."

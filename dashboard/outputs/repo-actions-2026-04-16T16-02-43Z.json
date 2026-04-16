@@ -1,0 +1,300 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-04-16"
+      },
+      "children": [
+        "subtitle",
+        "sep1",
+        "ideas",
+        "sep2",
+        "full_details"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (173 stars, 20 forks, 90+ skills) — ideas for autonomous feature skill builds.",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ideas": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "idea1",
+        "idea2",
+        "idea3",
+        "idea4",
+        "idea5"
+      ]
+    },
+    "idea1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea1_title",
+        "idea1_tags",
+        "idea1_desc"
+      ]
+    },
+    "idea1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Dashboard Live Feed",
+        "level": "h4"
+      }
+    },
+    "idea1_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea1_type",
+        "idea1_size"
+      ]
+    },
+    "idea1_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "idea1_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium"
+      }
+    },
+    "idea1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "SSE endpoint streams new skill outputs to the dashboard in real time — operators see results appear without reloading."
+      }
+    },
+    "idea2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea2_title",
+        "idea2_tags",
+        "idea2_desc"
+      ]
+    },
+    "idea2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Farcaster Syndication",
+        "level": "h4"
+      }
+    },
+    "idea2_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea2_type",
+        "idea2_size"
+      ]
+    },
+    "idea2_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration"
+      }
+    },
+    "idea2_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "idea2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "postprocess-farcaster.sh auto-casts articles to crypto-native Farcaster audience via Neynar API — zero skill changes needed."
+      }
+    },
+    "idea3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea3_title",
+        "idea3_tags",
+        "idea3_desc"
+      ]
+    },
+    "idea3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Star Milestone Announcer",
+        "level": "h4"
+      }
+    },
+    "idea3_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea3_type",
+        "idea3_size"
+      ]
+    },
+    "idea3_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth"
+      }
+    },
+    "idea3_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "idea3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "repo-pulse detects milestone crossings (175, 200, 250...) and fires a celebratory notification — turns a passive metric into a share moment."
+      }
+    },
+    "idea4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea4_title",
+        "idea4_tags",
+        "idea4_desc"
+      ]
+    },
+    "idea4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Skill Dependency Map",
+        "level": "h4"
+      }
+    },
+    "idea4_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea4_type",
+        "idea4_size"
+      ]
+    },
+    "idea4_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature/DX"
+      }
+    },
+    "idea4_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium"
+      }
+    },
+    "idea4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Parses aeon.yml chains + SKILL.md files to produce a Mermaid DAG of all 90+ skill dependencies — self-documenting architecture."
+      }
+    },
+    "idea5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea5_title",
+        "idea5_tags",
+        "idea5_desc"
+      ]
+    },
+    "idea5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Public Status Page",
+        "level": "h4"
+      }
+    },
+    "idea5_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea5_type",
+        "idea5_size"
+      ]
+    },
+    "idea5_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Community/DX"
+      }
+    },
+    "idea5_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "idea5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub Pages status page at /status showing 30-day skill health from heartbeat logs — builds operator credibility with zero new data collection."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full_details": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-16.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
