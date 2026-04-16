@@ -27,7 +27,7 @@ Today is ${today}. Search X for tweets matching **${var}**.
      ```
    - If the cache file is missing or empty, **fall back to the direct API call** (this may fail inside the sandbox):
      ```bash
-     FROM_DATE=$(date -u -d "7 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-7d +%Y-%m-%d)
+     FROM_DATE=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
      TO_DATE=$(date -u +%Y-%m-%d)
      curl -s -X POST "https://api.x.ai/v1/responses" \
        -H "Content-Type: application/json" \
