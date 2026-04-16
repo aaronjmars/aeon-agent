@@ -1,0 +1,102 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — AEON (2026-04-16)",
+        "description": "3 new tweets since last report"
+      },
+      "children": [
+        "stack-1",
+        "stack-2",
+        "stack-3"
+      ]
+    },
+    "stack-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "aeon is the most autonomous agent framework. No approval loops. No babysitting. Configure once, forget forever.",
+        "likes": 29,
+        "retweets": 8
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2044466905407266867"
+      }
+    },
+    "stack-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "here is everything that my aeon agent shipped for miroshark during the weekend whats your excuse?",
+        "likes": 23,
+        "retweets": 1
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2043696965502865424"
+      }
+    },
+    "stack-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xalwaysonchain",
+        "handle": "0xalwaysonchain",
+        "text": "$AEON is heavily undervalued",
+        "likes": 4,
+        "retweets": 0
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xalwaysonchain/status/2043708901451817461"
+      }
+    }
+  }
+}
