@@ -1,0 +1,397 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-04-16",
+        "description": "Generated from analysis of aaronjmars/aeon — best growth day on record"
+      },
+      "children": [
+        "stats_stack",
+        "separator1",
+        "ideas_stack",
+        "separator2",
+        "details_link"
+      ]
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks",
+        "stat_skills",
+        "stat_star_growth",
+        "stat_fork_growth"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "173"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "20"
+      },
+      "children": []
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "90+"
+      },
+      "children": []
+    },
+    "stat_star_growth": {
+      "type": "Stat",
+      "props": {
+        "label": "Star Growth",
+        "value": "+16",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_fork_growth": {
+      "type": "Stat",
+      "props": {
+        "label": "Fork Growth",
+        "value": "+3",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "ideas_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "idea1",
+        "idea2",
+        "idea3",
+        "idea4",
+        "idea5"
+      ]
+    },
+    "idea1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea1_header",
+        "idea1_desc",
+        "idea1_cmd"
+      ]
+    },
+    "idea1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea1_title",
+        "idea1_badge_category",
+        "idea1_badge_size"
+      ]
+    },
+    "idea1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Setup Wizard",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "idea1_badge_category": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "idea1_badge_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "idea1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Interactive CLI → ready-to-paste aeon.yml for your use case in under 2 minutes.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "idea1_cmd": {
+      "type": "Text",
+      "props": {
+        "text": "./aeon setup",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "idea2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea2_header",
+        "idea2_desc"
+      ]
+    },
+    "idea2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea2_title",
+        "idea2_badge_category",
+        "idea2_badge_size"
+      ]
+    },
+    "idea2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Contributor Auto-Reward",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "idea2_badge_category": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "idea2_badge_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "idea2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Reactive trigger on PR merge → auto-distribute AEON tokens to external contributors via Bankr. Closes the community loop.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "idea3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea3_header",
+        "idea3_desc"
+      ]
+    },
+    "idea3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea3_title",
+        "idea3_badge_category",
+        "idea3_badge_size"
+      ]
+    },
+    "idea3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Weekly Operator Newsletter",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "idea3_badge_category": {
+      "type": "Badge",
+      "props": {
+        "text": "Content/Growth",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "idea3_badge_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "idea3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sunday digest email via SendGrid — token snapshot, top article, skill spotlight. Converts passive stars into engaged operators.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "idea4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea4_header",
+        "idea4_desc"
+      ]
+    },
+    "idea4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea4_title",
+        "idea4_badge_category",
+        "idea4_badge_size"
+      ]
+    },
+    "idea4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Memory Search Skill",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "idea4_badge_category": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "idea4_badge_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small–Medium",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "idea4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Index memory/ corpus, answer natural-language queries, expose as MCP tool. Surfaces long-tail context for deeper skill runs.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "idea5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea5_header",
+        "idea5_desc"
+      ]
+    },
+    "idea5_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea5_title",
+        "idea5_badge_category",
+        "idea5_badge_size"
+      ]
+    },
+    "idea5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Fork Spotlight Page",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "idea5_badge_category": {
+      "type": "Badge",
+      "props": {
+        "text": "Community/Growth",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "idea5_badge_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "idea5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub Pages fleet page showcasing active forks — purpose, top skills, customizations. Social proof for new visitors; zero new API calls needed.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "details_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-16.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
