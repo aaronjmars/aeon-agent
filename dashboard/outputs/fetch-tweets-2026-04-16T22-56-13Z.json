@@ -1,0 +1,227 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON (2026-04-16)"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1-stack",
+        "sep-1",
+        "tweet-2-stack",
+        "sep-2",
+        "tweet-3-stack",
+        "sep-3",
+        "tweet-4-stack",
+        "sep-4",
+        "tweet-5-stack",
+        "sep-5",
+        "tweet-6-stack"
+      ]
+    },
+    "tweet-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xDaes",
+        "text": "$AEON just works and people are using it before CT notices. Runs on GitHub Actions, forks and does stuff on schedule (research digests, PR reviews, token alerts). Way cheaper than openclaw.",
+        "likes": 16,
+        "retweets": 3
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xDaes/status/2043777375356256568"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "medonchain",
+        "text": "Most of Base CT missed this but knew it's a gem. $AEON can do ATH. (Includes CA: 0xBf8E8...)",
+        "likes": 15,
+        "retweets": 0
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/medonchain/status/2043757045262733765"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RickCrosschain",
+        "text": "Brought legendary traders together with base bagworkers into one coin. Built by one of the smartest devs. $AEON sitting at 200k mc.",
+        "likes": 11,
+        "retweets": 3
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/RickCrosschain/status/2043775534220382349"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "link-4"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "text": "Detailed breakdown: $AEON runs entirely on GitHub Actions, no server, no daemon, no Docker. 68 live skills, daily digests, crypto layer, fleet control. ~$137K mcap, 152 GitHub stars. Worth watching.",
+        "likes": 8,
+        "retweets": 3
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2043706197086203999"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5",
+        "link-5"
+      ]
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BioStone_chad",
+        "text": "$MIROSHARK is up 5x from 70k and $AEON is up 10x from 30k. $AEON: autonomous AI on GitHub that runs its own projects and generates revenue, fully transparent live wallet tracking.",
+        "likes": 7,
+        "retweets": 1
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BioStone_chad/status/2044069547477798983"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-6-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-6",
+        "link-6"
+      ]
+    },
+    "tweet-6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BioStone_chad",
+        "text": "$AEON 40k → 220k MC (5x). Dev hasn't dropped all news yet. Biggest strength: runs fully in background on GitHub Actions — cheap, no infrastructure, no maintenance.",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "link-6": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BioStone_chad/status/2043932411168469194"
+      }
+    }
+  }
+}
