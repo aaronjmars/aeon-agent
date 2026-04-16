@@ -18,5 +18,13 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "token-report": {
+    "last_dispatch": "2026-04-16T06:46:53Z",
+    "last_status": "dispatched"
+  },
+  "fetch-tweets": {
+    "last_dispatch": "2026-04-16T06:46:53Z",
+    "last_status": "dispatched"
   }
 }
