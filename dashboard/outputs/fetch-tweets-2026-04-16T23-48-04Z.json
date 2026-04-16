@@ -1,0 +1,314 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR aaronjmars/aeon (2026-04-16)"
+      },
+      "children": [
+        "stack_tweets"
+      ]
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4",
+        "tweet_5",
+        "tweet_6",
+        "tweet_7",
+        "tweet_8",
+        "tweet_9",
+        "tweet_10"
+      ]
+    },
+    "tweet_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_1",
+        "link_1"
+      ]
+    },
+    "tweetcard_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "Just shipped the biggest update for aeon ever. It started to ship a self-healing loop. Then auto-merge. Then fleet automation. My aeon honestly became 3x more useful in a week — all autonomously.",
+        "likes": 76,
+        "retweets": 12
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2044468855452418257"
+      }
+    },
+    "tweet_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_2",
+        "link_2"
+      ]
+    },
+    "tweetcard_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "@MrDegenWolf",
+        "text": "my current ai agents bag potential, gud dev, gud product higher. (includes $aeon)",
+        "likes": 54,
+        "retweets": 2
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2044194156734546298"
+      }
+    },
+    "tweet_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_3",
+        "link_3"
+      ]
+    },
+    "tweetcard_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "if you've shared/shilled $aeon / $miroshark in the past few days make sure you've linked your X account to your @bankrbot account — enabling a new skill (experimental) tomorrow",
+        "likes": 41,
+        "retweets": 5
+      }
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2044541594502639751"
+      }
+    },
+    "tweet_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_4",
+        "link_4"
+      ]
+    },
+    "tweetcard_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "@MrDegenWolf",
+        "text": "update: $aeon flying with @garrytan quote... it's time to win on @base",
+        "likes": 33,
+        "retweets": 3
+      }
+    },
+    "link_4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2044451059930665180"
+      }
+    },
+    "tweet_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_5",
+        "link_5"
+      ]
+    },
+    "tweetcard_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Aeon is the most autonomous agent framework. No approval loops. No babysitting. Configure once, forget forever.",
+        "likes": 29,
+        "retweets": 8
+      }
+    },
+    "link_5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2044466905407266867"
+      }
+    },
+    "tweet_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_6",
+        "link_6"
+      ]
+    },
+    "tweetcard_6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "handle": "@Whale_AI_net",
+        "text": "Pay attention to @aeonframework, $AEON — The CEO of Y Combinator likes it. When the head of a network worth $800B+ takes notice, you should too.",
+        "likes": 20,
+        "retweets": 6
+      }
+    },
+    "link_6": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2044443220273188971"
+      }
+    },
+    "tweet_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_7",
+        "link_7"
+      ]
+    },
+    "tweetcard_7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xDaes",
+        "handle": "@0xDaes",
+        "text": "Not gonna write a whole essay but $AEON by @aaronjmars just works. Fork it and it does stuff for you on a schedule — way cheaper to run than openclaw.",
+        "likes": 16,
+        "retweets": 3
+      }
+    },
+    "link_7": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xDaes/status/2043777375356256568"
+      }
+    },
+    "tweet_8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_8",
+        "link_8"
+      ]
+    },
+    "tweetcard_8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RickCrosschain",
+        "handle": "@RickCrosschain",
+        "text": "added $aeon as a conviction bag. I've known @aaronjmars since the 2020 days and have always respected his work. One of the rare smart degen builders you do not want to miss.",
+        "likes": 15,
+        "retweets": 3
+      }
+    },
+    "link_8": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/RickCrosschain/status/2043755727420874796"
+      }
+    },
+    "tweet_9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_9",
+        "link_9"
+      ]
+    },
+    "tweetcard_9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "medonchain",
+        "handle": "@medonchain",
+        "text": "Most of @base CT missed this but I knew it's a gem. $AEON can do ATH. Up over 3x from my shill.",
+        "likes": 15,
+        "retweets": 0
+      }
+    },
+    "link_9": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/medonchain/status/2043757045262733765"
+      }
+    },
+    "tweet_10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_10",
+        "link_10"
+      ]
+    },
+    "tweetcard_10": {
+      "type": "TweetCard",
+      "props": {
+        "author": "techy0x",
+        "handle": "@techy0x",
+        "text": "Always early to the ball on @base $AEON. 3x from that post when just me and @medonchain started looking at it. Acceleration phase.",
+        "likes": 14,
+        "retweets": 2
+      }
+    },
+    "link_10": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/techy0x/status/2044021285164904776"
+      }
+    }
+  }
+}
