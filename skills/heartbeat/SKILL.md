@@ -31,10 +31,24 @@ Check the following:
   - `repo-pulse` → `## Repo Pulse`
   When in doubt, also check the Actions run list — the `displayTitle` always contains the exact skill name from aeon.yml.
 
-Before sending any notification, grep memory/logs/ for the same item. If it appears in the last 48h of logs, skip it. Never notify about the same item twice. Batch missing-skill alerts into a single notification — don't send one per skill.
+## Dedup & Escalation Rules
+
+Before sending any notification, apply these rules in order:
+
+1. **48h dedup (transient issues):** Grep memory/logs/ for the same item. If a **notification was sent** for this exact issue in the last 48h (look for "Notification sent" or "notification sent" near the item), skip it. Log it as "within 48h dedup → no new notification."
+
+2. **Escalation (persistent issues):** If the same issue has been **logged but NOT resolved** for 3+ consecutive days (i.e., it appears in logs from 3 different dates without a corresponding resolution or fix), **re-notify** with an `ESCALATION:` prefix even if it was logged recently. This overrides the 48h dedup. A persistent unfixed problem is worse than a duplicate notification.
+   - To check: count how many distinct dates in `memory/logs/` contain the same finding (e.g., "project-lens — STILL MISSING"). If >= 3 dates, escalate.
+   - Escalation notifications should include: how many days the issue has persisted, what has been tried, and a concrete suggested action.
+
+3. **Batch:** Group all findings (both new and escalated) into a single notification — don't send one per issue.
+
+**Key distinction:** The dedup check looks for whether a *notification* was sent, not whether the issue was *logged*. Heartbeat logs findings every run for record-keeping, but that should not reset the dedup timer.
 
 If nothing needs attention, log "HEARTBEAT_OK" and end your response.
 
 If something needs attention:
 1. Send a concise notification via `./notify`
-2. Log the finding and action taken to memory/logs/${today}.md
+2. Log the finding and action taken to `memory/logs/${today}.md`
+   - For each finding, clearly mark: **"Notification sent: yes"** or **"Notification sent: no (48h dedup)"** or **"Notification sent: yes (ESCALATION — N days persistent)"**
+   - This distinction is critical — future heartbeats use it to decide whether to dedup or escalate
