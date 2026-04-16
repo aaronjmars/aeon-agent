@@ -4,3 +4,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-04-16,token-report,claude-sonnet-4-6,15,10216,368570,31541
 2026-04-16,repo-pulse,claude-sonnet-4-6,4361,4373,275356,30713
 2026-04-16,feature,claude-opus-4-6,2563,56110,6348557,138312
+2026-04-16,self-improve,claude-opus-4-6,9736,8767,1340325,58690

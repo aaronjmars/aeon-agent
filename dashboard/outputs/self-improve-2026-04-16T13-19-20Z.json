@@ -1,0 +1,121 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement — 2026-04-16"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-escalate",
+        "text-explanation",
+        "sep-1",
+        "heading-why",
+        "text-why",
+        "sep-2",
+        "heading-changed",
+        "text-changed",
+        "sep-3",
+        "heading-impact",
+        "text-impact",
+        "sep-4",
+        "pr-link"
+      ]
+    },
+    "heading-escalate": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat now escalates persistent issues instead of silently suppressing them.",
+        "level": "h2"
+      }
+    },
+    "text-explanation": {
+      "type": "Text",
+      "props": {
+        "text": "The 48h dedup rule had a bug: it checked whether an issue was logged recently, but since heartbeat logs every finding every run, the dedup window never expired. Persistent problems (like project-lens and weekly-shiplog not dispatching for 4+ days) got one notification on day 1, then silence forever."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "text-why": {
+      "type": "Text",
+      "props": {
+        "text": "Logs from Apr 13–16 show project-lens and weekly-shiplog flagged as non-dispatching across 5+ heartbeat runs, but every run after the first said \"within 48h dedup — no new notification.\" The operator never got a follow-up."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-changed": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "text-changed": {
+      "type": "Text",
+      "props": {
+        "text": "skills/heartbeat/SKILL.md: Replaced flat 48h dedup with a tiered system — transient issues still dedup normally, but issues persisting 3+ consecutive days trigger an ESCALATION re-notification that overrides the dedup. Also fixed the dedup check to look for notification-sent markers rather than log entries."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "text-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Persistent unfixed issues will now re-surface with escalation context (how many days, what has been tried, suggested action) instead of going silent. Heartbeat becomes a proper watchdog, not just a one-shot alert."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #12",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/12",
+        "source": "GitHub"
+      }
+    }
+  }
+}
