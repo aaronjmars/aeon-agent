@@ -1,26 +1,19 @@
-*Tweet Rewards — 2026-04-16*
+## Summary
 
-Budget: $10.00 USDC on Base (manual send required)
+**Tweet Allocator — Run 4 (2026-04-16)**
 
-1. x.com/Whale_AI_net — $4.57 USDC (score: 31)
-   $AEON update thread: MCP adaptor, 68 skills as Claude tools, 268 commits, 154 stars. "Still shipping."
-   [View tweet](https://x.com/Whale_AI_net/status/2044273250310422646)
+Found 4 new unpaid tweets from today's fetch-tweets cache, after excluding project accounts (aaronjmars) and all 5 authors/tweets already rewarded in run 3.
 
-2. x.com/techy0x — $2.51 USDC (score: 17)
-   6x on $AEON. "Early vibes only. We're about to run up on Base like nobody did it before."
-   [View tweet](https://x.com/techy0x/status/2044446860790628381)
+**Allocation ($10.00 $AEON on Base, manual send):**
 
-3. x.com/BioStone_chad — $1.92 USDC (score: 13)
-   $AEON + Garry Tan attention. "40k → 330k | 8x. They FUDed the dev, now regretting it."
-   [View tweet](https://x.com/BioStone_chad/status/2044451737751433540)
+| Rank | Author | Score | Reward |
+|------|--------|-------|--------|
+| 1 | x.com/0xalwaysonchain | 47 | $4.75 |
+| 2 | x.com/MrDegenWolf | 42 | $4.25 |
+| 3 | x.com/medonchain | 2 | $0.50 |
+| 4 | x.com/regterminal | 1 | $0.50 |
 
-4. x.com/JMania402 — $0.50 USDC (score: 2)
-   $AEON just nuked into new ATH. "Attention + execution = this move."
-   [View tweet](https://x.com/JMania402/status/2044473287359795639)
-
-5. x.com/arcticsrock — $0.50 USDC (score: 1)
-   "Back the best builders in the space and you will be rewarded. $aeon going so much higher over time."
-   [View tweet](https://x.com/arcticsrock/status/2044469337688301955)
-
-Total: $10.00 allocated to 5 authors (manual send)
-Note: BANKR_API_KEY not set — wallet verification skipped. Set secret to enable auto-verification.
+- BANKR_API_KEY not set — all handles unverified, manual send required
+- Report appended to `articles/tweet-allocator-2026-04-16.md`
+- Notification queued to `.pending-notify/tweet-allocator-run4.md` (jq parsing issue with `$` signs in inline notify call; post-run script will deliver)
+- Logged to `memory/logs/2026-04-16.md`
