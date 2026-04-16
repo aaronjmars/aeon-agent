@@ -7,15 +7,13 @@ var: ""
 
 Today is ${today}. Search X for tweets matching **${var}**.
 
-## Important — no deduplication
-
-**Do NOT deduplicate against `memory/logs/`.** Do not read prior `## Fetch Tweets` entries to filter out "already reported" tweets. Do not compute any SEEN_TWEETS set. If Grok returns a tweet URL that was reported yesterday, include it again today. Every run emits whatever Grok returns, unfiltered. Previous runs of this skill may show dedup language in the logs — that was an earlier behavior and has been removed. Ignore that pattern.
-
 ## Steps
 
-1. **Build the search prompt for Grok.** Pass `${var}` to Grok **verbatim** as the search query. Do NOT narrow it to a single angle (e.g. don't force "crypto token only", don't inject a contract address, don't filter by chain). Let Grok interpret OR/AND operators in the var as-is. The goal is broad coverage — token mentions, repo mentions, handle mentions, general chatter, all of it.
+1. **Load previously reported tweets.** Read the last 3 days of `memory/logs/` and extract any tweet URLs (x.com/handle/status/ID) that were already included in previous `## Fetch Tweets` log entries. Keep this list as `SEEN_TWEETS` — you'll use it in step 5 to avoid sending duplicate tweets in today's notification.
 
-2. **Search tweets — check pre-fetched cache first, then fall back to API.**
+2. **Build the search prompt for Grok.** Pass `${var}` to Grok **verbatim** as the search query. Do NOT narrow it to a single angle (e.g. don't force "crypto token only", don't inject a contract address, don't filter by chain). Let Grok interpret OR/AND operators in the var as-is. The goal is broad coverage — token mentions, repo mentions, handle mentions, general chatter, all of it.
+
+3. **Search tweets — check pre-fetched cache first, then fall back to API.**
 
    The workflow pre-fetches X.AI results outside the sandbox before Claude starts. Always try the cache first:
    ```bash
@@ -43,11 +41,13 @@ Today is ${today}. Search X for tweets matching **${var}**.
      - Extract any tweet URLs and summaries from the search results
      - If WebSearch also returns nothing, log `FETCH_TWEETS_EMPTY` and stop
 
-3. **If no relevant tweets found** (no results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
+4. **If no relevant tweets found** (no results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
 
-4. **Save the results** to `memory/logs/${today}.md`. Include tweet URLs, handles, and engagement so downstream skills (like `tweet-allocator`) can consume them. Do **NOT** add a "Deduplicated" or "already reported" field. Log every tweet Grok returned.
+5. **Deduplicate against `SEEN_TWEETS` from step 1.** Remove any tweet whose URL already appeared in a previous day's log. Keep only genuinely new tweets. If ALL tweets were already reported, log "FETCH_TWEETS_NO_NEW: all results were previously reported" and **stop here — do NOT send any notification**.
 
-5. **Send a notification via `./notify`** with up to 10 tweets (all of them — never "new since last report", always just "top tweets"). Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
+6. **Save the results** to `memory/logs/${today}.md`. Include the tweet URLs, handles, and engagement so future runs can deduplicate and so downstream skills (like `tweet-allocator`) can consume them.
+
+7. **Send a notification via `./notify`** with up to 10 NEW tweets (those that survived dedup). Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
 
    Format the notification like this:
    ```
