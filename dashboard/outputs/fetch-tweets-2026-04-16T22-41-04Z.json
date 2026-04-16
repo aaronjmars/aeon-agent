@@ -1,0 +1,68 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON (2026-04-16)"
+      },
+      "children": [
+        "stack_tweets"
+      ]
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "Shoutout to $AEON / $MIROSHARK shillers: link your X account to @bankrbot — new experimental skill dropping tomorrow.",
+        "likes": 41,
+        "retweets": 5
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "MrDegenWolf",
+        "text": "Base trenches update: $AEON flying with Garry Tan quote, $SHARP pamping with Clanker repost, $MIROSHARK solid.",
+        "likes": 33,
+        "retweets": 3
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xalwaysonchain",
+        "handle": "0xalwaysonchain",
+        "text": "Base is hot this week: $AEON full sending after Garry Tan recognized the dev's work (called at 50k), $SHARP accumulating with Chinese whales.",
+        "likes": 29,
+        "retweets": 6
+      }
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "MrDegenWolf",
+        "text": "bankr x aeon x miroshark (reply to aaronjmars skill post).",
+        "likes": 1,
+        "retweets": 0
+      }
+    }
+  }
+}

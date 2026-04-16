@@ -1,21 +1,17 @@
-*Top Tweets — AEON crypto token on Base chain (2026-04-16)*
+*Top Tweets — $AEON (2026-04-16)*
 
-1. x.com/aaronjmars — just shipped the biggest update for aeon ever — autonomy milestone: self-healing loop, auto-merge, fleet automation. "I'm building the most autonomous agent framework, which can self-replicate, create new instances, create new skills & merge them autonomously."
-Likes: 76 | RTs: 12
-[View tweet](https://x.com/aaronjmars/status/2044468855452418257)
+1. x.com/aaronjmars — Shoutout to $AEON / $MIROSHARK shillers: link your X account to @bankrbot — new experimental skill dropping tomorrow.
+Likes: 41 | RTs: 5
+[View tweet](https://x.com/aaronjmars/status/2044541594502639751)
 
-2. x.com/aeonframework — "aeon is the most autonomous agent framework. No approval loops. No babysitting. Configure once, forget forever."
-Likes: 29 | RTs: 8
-[View tweet](https://x.com/aeonframework/status/2044466905407266867)
+2. x.com/MrDegenWolf — Base trenches update: $AEON flying with Garry Tan quote, $SHARP pamping with Clanker repost, $MIROSHARK solid.
+Likes: 33 | RTs: 3
+[View tweet](https://x.com/MrDegenWolf/status/2044451059930665180)
 
-3. x.com/Whale_AI_net — $AEON update thread: MCP skill adaptor exposes all 68 skills as Claude tools, skill chaining with parallel execution, email notifications, 268 commits, 154 stars. "Still shipping."
-Likes: 19 | RTs: 4
-[View tweet](https://x.com/Whale_AI_net/status/2044273250310422646)
+3. x.com/0xalwaysonchain — Base is hot this week: $AEON full sending after Garry Tan recognized the dev's work (called at 50k), $SHARP accumulating with Chinese whales.
+Likes: 29 | RTs: 6
+[View tweet](https://x.com/0xalwaysonchain/status/2044448578932822059)
 
-4. x.com/aaronjmars — "u should check aeon for autonomous distribution engineering, can schedule ads, create content etc" — with repo link
-Likes: 21 | RTs: 0
-[View tweet](https://x.com/aaronjmars/status/2044487392489271529)
-
-5. x.com/techy0x — "6x on $AEON. Early vibes only. All these ones will come in my diary now - we're about to run up on Base like nobody did it before"
-Likes: 17 | RTs: 0
-[View tweet](https://x.com/techy0x/status/2044446860790628381)
+4. x.com/MrDegenWolf — bankr x aeon x miroshark (reply to aaronjmars skill post).
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/MrDegenWolf/status/2044542334721757481)
