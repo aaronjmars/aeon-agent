@@ -1,0 +1,304 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON (2026-04-16)"
+      },
+      "children": [
+        "tweets_stack"
+      ]
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_group",
+        "tweet2_group",
+        "tweet3_group",
+        "tweet4_group",
+        "tweet5_group",
+        "tweet6_group",
+        "tweet7_group",
+        "tweet8_group",
+        "tweet9_group",
+        "tweet10_group"
+      ]
+    },
+    "tweet1_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "text": "Recommends aeon for autonomous distribution engineering: scheduling ads, creating content, etc.",
+        "likes": 21,
+        "retweets": 0
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2044487392489271529"
+      }
+    },
+    "tweet2_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xDaes",
+        "text": "Not gonna write a whole essay but $AEON by aaronjmars is one of those things that just works... runs on GitHub Actions...",
+        "likes": 16,
+        "retweets": 3
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xDaes/status/2043777375356256568"
+      }
+    },
+    "tweet3_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "medonchain",
+        "text": "Most of Base CT missed this but I knew it's a gem. $AEON can do ATH. Up over 3x from my shill.",
+        "likes": 15,
+        "retweets": 0
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/medonchain/status/2043757045262733765"
+      }
+    },
+    "tweet4_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xdopesick",
+        "text": "Bought some $aeon cant fade the based dev",
+        "likes": 10,
+        "retweets": 0
+      }
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xdopesick/status/2044547687169618226"
+      }
+    },
+    "tweet5_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "link5"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "text": "A project worth stopping for — $AEON by aaronjmars. Background intelligence agent that runs entirely on GitHub Actions...",
+        "likes": 8,
+        "retweets": 3
+      }
+    },
+    "link5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2043706197086203999"
+      }
+    },
+    "tweet6_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet6",
+        "link6"
+      ]
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "text": "Shared the GitHub repo link",
+        "likes": 6,
+        "retweets": 0
+      }
+    },
+    "link6": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2044466958515544364"
+      }
+    },
+    "tweet7_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet7",
+        "link7"
+      ]
+    },
+    "tweet7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BioStone_chad",
+        "text": "$AEON Base 40k -> 220k MC | 5x... biggest strength is running fully in background on GitHub Actions",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "link7": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BioStone_chad/status/2043932411168469194"
+      }
+    },
+    "tweet8_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet8",
+        "link8"
+      ]
+    },
+    "tweet8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "arcticsrock",
+        "text": "WOW $AEON to 10m Send it with haste",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link8": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/arcticsrock/status/2044446433290371550"
+      }
+    },
+    "tweet9_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet9",
+        "link9"
+      ]
+    },
+    "tweet9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "text": "bankr x aeon x miroshark",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link9": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2044542334721757481"
+      }
+    },
+    "tweet10_group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet10",
+        "link10"
+      ]
+    },
+    "tweet10": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RickCrosschain",
+        "text": "check out $aeon by aaronjmars",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link10": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/RickCrosschain/status/2044040005580914817"
+      }
+    }
+  }
+}
