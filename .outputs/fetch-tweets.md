@@ -1,7 +1,11 @@
-Done. FETCH_TWEETS_EMPTY — same sandbox constraint as all runs since Apr 13. X.AI API blocked (variable expansion), WebSearch fallback found only pre-Apr-9 aaronjmars tweets outside the 7-day window. No notification sent.
-
 ## Summary
-- **SEEN_TWEETS loaded** from Apr 14–16 logs (6 tweet URLs)
-- **X.AI API**: blocked by GitHub Actions sandbox (env var expansion restricted)
-- **WebSearch fallback**: 8 queries run across multiple variations; only aaronjmars tweets from March 2026 returned (IDs ~2032–2039M, outside April 9–16 window)
-- **Result**: `FETCH_TWEETS_EMPTY` — logged to `memory/logs/2026-04-16.md`, no notification sent
+
+**Status: FETCH_TWEETS_EMPTY** — no notification sent.
+
+**What happened:**
+- Built SEEN_TWEETS from last 3 days of logs (6 known tweet URLs from Apr 12–16)
+- No `.xai-cache/fetch-tweets.json` — prefetch script didn't run (XAI_API_KEY not available at workflow start)
+- Direct XAI API call blocked by sandbox (env var expansion)
+- WebSearch fallback (`AEON crypto token Base chain`, `aaronjmars/aeon`, `@aeonframework`) returned only unrelated AEON.XYZ/AEONCoin projects — zero matches for the Base token (contract `0xbf8e8f...`)
+
+**Root cause:** The fix from PR #13 (skill reads from `.xai-cache/fetch-tweets.json` first) isn't merged yet. Once merged, the prefetch script will cache Grok results before Claude runs, resolving the persistent FETCH_TWEETS_EMPTY pattern.
