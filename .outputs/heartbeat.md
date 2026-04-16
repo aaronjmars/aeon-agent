@@ -1,3 +1,1 @@
-ESCALATION: weekly-shiplog has never dispatched since it was created on Apr 13 — 3 consecutive days logged without a run (Apr 13, 14, 15). Last Monday (Apr 14) it was 10h+ overdue with no Actions run found. All other skills dispatching normally; no obvious config error in aeon.yml. Next scheduled window: Mon Apr 21 09:00 UTC. Suggested action: manually trigger weekly-shiplog on Apr 21 and verify the GitHub Actions runner picks it up; if not, inspect the cron trigger for that specific skill.
-
-Good news: project-lens is now resolved — it ran successfully today (Apr 16 16:42 UTC) after 3 consecutive missed days.
+HEARTBEAT_OK. All 10 enabled skills ran successfully today per GitHub Actions. PR #13 is open but not stalled (<24h). Weekly-shiplog escalation was already sent in the earlier heartbeat — within 48h dedup, no re-notify. No urgent issues. Nothing new requires attention.
