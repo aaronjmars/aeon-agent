@@ -1,0 +1,147 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — AEON crypto token on Base chain (2026-04-16)"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "link1",
+        "sep1",
+        "tweet2",
+        "link2",
+        "sep2",
+        "tweet3",
+        "link3",
+        "sep3",
+        "tweet4",
+        "link4",
+        "sep4",
+        "tweet5",
+        "link5"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "just shipped the biggest update for aeon ever — autonomy milestone: self-healing loop, auto-merge, fleet automation. \"I'm building the most autonomous agent framework, which can self-replicate, create new instances, create new skills & merge them autonomously.\"",
+        "likes": 76,
+        "retweets": 12
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2044468855452418257"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "aeon is the most autonomous agent framework. No approval loops. No babysitting. Configure once, forget forever.",
+        "likes": 29,
+        "retweets": 8
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2044466905407266867"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "handle": "Whale_AI_net",
+        "text": "$AEON update thread: MCP skill adaptor exposes all 68 skills as Claude tools, skill chaining with parallel execution, email notifications, 268 commits, 154 stars. \"Still shipping.\"",
+        "likes": 19,
+        "retweets": 4
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2044273250310422646"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "u should check aeon for autonomous distribution engineering, can schedule ads, create content etc",
+        "likes": 21,
+        "retweets": 0
+      }
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2044487392489271529"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "techy0x",
+        "handle": "techy0x",
+        "text": "6x on $AEON. Early vibes only. All these ones will come in my diary now - we're about to run up on Base like nobody did it before",
+        "likes": 17,
+        "retweets": 0
+      }
+    },
+    "link5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/techy0x/status/2044446860790628381"
+      }
+    }
+  }
+}
