@@ -27,6 +27,8 @@
 | 2026-04-12 | The Week the Cron Agent Grew Up: Aeon Becomes an Agent OS | repo-article |
 | 2026-04-14 | Locked, Tracked, Verified: Aeon Builds a Skills Lock File Before the Agent Supply Chain Implodes | repo-article |
 | 2026-04-15 | Push Recap (4 commits: A2A gateway, skill-leaderboard, security hardening) | repo-activity |
+| 2026-04-16 | The Interoperability Play Nobody Saw Coming: How Aeon Became Every AI Agent's Skill Layer | repo-article |
+| 2026-04-16 | Push Recap (34 commits: syndicate-article, notification fixes, monitor-kalshi, README overhaul) | repo-activity |
 
 ## Recent Digests
 | Date | Type | Key Topics |
