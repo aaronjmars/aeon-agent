@@ -68,5 +68,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "repo-actions": {
+    "last_dispatch": "2026-04-16T14:01:46Z",
+    "last_status": "dispatched"
   }
 }
