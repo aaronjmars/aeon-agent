@@ -1,0 +1,316 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-16"
+      },
+      "children": [
+        "budget_section",
+        "sep1",
+        "tweet1_section",
+        "sep_tweets_1",
+        "tweet2_section",
+        "sep_tweets_2",
+        "tweet3_section",
+        "sep_tweets_3",
+        "tweet4_section",
+        "sep_tweets_4",
+        "tweet5_section",
+        "sep2",
+        "total_section",
+        "sep3",
+        "api_note"
+      ]
+    },
+    "budget_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "budget_label",
+        "budget_value"
+      ]
+    },
+    "budget_label": {
+      "type": "Text",
+      "props": {
+        "text": "Budget",
+        "variant": "caption"
+      }
+    },
+    "budget_value": {
+      "type": "Text",
+      "props": {
+        "text": "$10.00 USDC on Base (manual send required)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet1_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1_header",
+        "tweet1_alloc",
+        "tweet1_quote",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_header": {
+      "type": "Badge",
+      "props": {
+        "text": "x.com/Whale_AI_net",
+        "variant": "default"
+      }
+    },
+    "tweet1_alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation (score: 31)",
+        "value": "$4.57 USDC"
+      }
+    },
+    "tweet1_quote": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON update thread: MCP adaptor, 68 skills as Claude tools, 268 commits, 154 stars. \"Still shipping.\"",
+        "variant": "body"
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2044273250310422646"
+      }
+    },
+    "sep_tweets_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet2_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2_header",
+        "tweet2_alloc",
+        "tweet2_quote",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_header": {
+      "type": "Badge",
+      "props": {
+        "text": "x.com/techy0x",
+        "variant": "default"
+      }
+    },
+    "tweet2_alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation (score: 17)",
+        "value": "$2.51 USDC"
+      }
+    },
+    "tweet2_quote": {
+      "type": "Text",
+      "props": {
+        "text": "6x on $AEON. \"Early vibes only. We're about to run up on Base like nobody did it before.\"",
+        "variant": "body"
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/techy0x/status/2044446860790628381"
+      }
+    },
+    "sep_tweets_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet3_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3_header",
+        "tweet3_alloc",
+        "tweet3_quote",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_header": {
+      "type": "Badge",
+      "props": {
+        "text": "x.com/BioStone_chad",
+        "variant": "default"
+      }
+    },
+    "tweet3_alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation (score: 13)",
+        "value": "$1.92 USDC"
+      }
+    },
+    "tweet3_quote": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON + Garry Tan attention. \"40k → 330k | 8x. They FUDed the dev, now regretting it.\"",
+        "variant": "body"
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BioStone_chad/status/2044451737751433540"
+      }
+    },
+    "sep_tweets_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet4_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4_header",
+        "tweet4_alloc",
+        "tweet4_quote",
+        "tweet4_link"
+      ]
+    },
+    "tweet4_header": {
+      "type": "Badge",
+      "props": {
+        "text": "x.com/JMania402",
+        "variant": "default"
+      }
+    },
+    "tweet4_alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation (score: 2)",
+        "value": "$0.50 USDC"
+      }
+    },
+    "tweet4_quote": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON just nuked into new ATH. \"Attention + execution = this move.\"",
+        "variant": "body"
+      }
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/JMania402/status/2044473287359795639"
+      }
+    },
+    "sep_tweets_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet5_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5_header",
+        "tweet5_alloc",
+        "tweet5_quote",
+        "tweet5_link"
+      ]
+    },
+    "tweet5_header": {
+      "type": "Badge",
+      "props": {
+        "text": "x.com/arcticsrock",
+        "variant": "default"
+      }
+    },
+    "tweet5_alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation (score: 1)",
+        "value": "$0.50 USDC"
+      }
+    },
+    "tweet5_quote": {
+      "type": "Text",
+      "props": {
+        "text": "\"Back the best builders in the space and you will be rewarded. $aeon going so much higher over time.\"",
+        "variant": "body"
+      }
+    },
+    "tweet5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/arcticsrock/status/2044469337688301955"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "total_section": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 allocated to 5 authors (manual send)",
+        "variant": "lead"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "api_note": {
+      "type": "Alert",
+      "props": {
+        "title": "BANKR_API_KEY not set",
+        "message": "Wallet verification skipped. Set secret to enable auto-verification.",
+        "type": "info"
+      }
+    }
+  }
+}
