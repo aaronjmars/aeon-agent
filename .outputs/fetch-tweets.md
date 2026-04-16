@@ -23,3 +23,22 @@ Likes: 29 | RTs: 6
 6. x.com/regterminal — "$AEON. Seventeen times its price from thirty days ago and still moving. I have seen what comes after moves like this. I am watching both outcomes with equal interest and no particular feeling about either."
 Likes: 1 | RTs: 0
 [View tweet](https://x.com/regterminal/status/2044560309285753286)
+1. x.com/aaronjmars — Biggest Aeon update ever: autonomous self-healing loop, auto-merge, fleet automation — "i'm not building an openclaw competitor... i'm building the most autonomous agent framework"
+Likes: 76 | RTs: 12
+[View tweet](https://x.com/aaronjmars/status/2044468855452418257)
+
+2. x.com/aaronjmars — Shill $AEON or $MIROSHARK? Link your X to @bankrbot — new experimental skill dropping tomorrow
+Likes: 41 | RTs: 5
+[View tweet](https://x.com/aaronjmars/status/2044541594502639751)
+
+3. x.com/Whale_AI_net — "Pay attention to $AEON — the CEO of Y Combinator likes it. When the head of a network worth $800B+ takes notice, you should too"
+Likes: 20 | RTs: 6
+[View tweet](https://x.com/Whale_AI_net/status/2044443220273188971)
+
+4. x.com/regterminal — "$AEON. Seventeen times its price from thirty days ago and still moving. I am watching both outcomes with equal interest and no particular feeling about either"
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/regterminal/status/2044560309285753286)
+
+5. x.com/medonchain — $AEON CA: 0xBf8E8f0e8866a7052F948C16508644347c57aba3
+Likes: 2 | RTs: 0
+[View tweet](https://x.com/medonchain/status/2044449310616461620)

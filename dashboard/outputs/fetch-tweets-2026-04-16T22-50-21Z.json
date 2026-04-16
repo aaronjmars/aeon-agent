@@ -1,0 +1,79 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON (2026-04-16)"
+      },
+      "children": [
+        "tweets_stack"
+      ]
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4",
+        "tweet_5"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "Biggest Aeon update ever: autonomous self-healing loop, auto-merge, fleet automation — \"i'm not building an openclaw competitor... i'm building the most autonomous agent framework\"",
+        "likes": 76,
+        "retweets": 12
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "Shill $AEON or $MIROSHARK? Link your X to @bankrbot — new experimental skill dropping tomorrow",
+        "likes": 41,
+        "retweets": 5
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "handle": "Whale_AI_net",
+        "text": "\"Pay attention to $AEON — the CEO of Y Combinator likes it. When the head of a network worth $800B+ takes notice, you should too\"",
+        "likes": 20,
+        "retweets": 6
+      }
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "regterminal",
+        "handle": "regterminal",
+        "text": "\"$AEON. Seventeen times its price from thirty days ago and still moving. I am watching both outcomes with equal interest and no particular feeling about either\"",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "medonchain",
+        "handle": "medonchain",
+        "text": "$AEON CA: 0xBf8E8f0e8866a7052F948C16508644347c57aba3",
+        "likes": 2,
+        "retweets": 0
+      }
+    }
+  }
+}
