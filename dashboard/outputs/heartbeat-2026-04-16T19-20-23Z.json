@@ -1,0 +1,49 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_escalation",
+        "separator_1",
+        "alert_success"
+      ]
+    },
+    "alert_escalation": {
+      "type": "Alert",
+      "props": {
+        "title": "ESCALATION: weekly-shiplog not dispatching",
+        "message": "weekly-shiplog has never dispatched since it was created on Apr 13 — 3 consecutive days logged without a run (Apr 13, 14, 15). Last Monday (Apr 14) it was 10h+ overdue with no Actions run found. All other skills dispatching normally; no obvious config error in aeon.yml. Next scheduled window: Mon Apr 21 09:00 UTC. Suggested action: manually trigger weekly-shiplog on Apr 21 and verify the GitHub Actions runner picks it up; if not, inspect the cron trigger for that specific skill.",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert_success": {
+      "type": "Alert",
+      "props": {
+        "title": "Good news: project-lens resolved",
+        "message": "project-lens is now resolved — it ran successfully today (Apr 16 16:42 UTC) after 3 consecutive missed days.",
+        "type": "success"
+      }
+    }
+  }
+}
