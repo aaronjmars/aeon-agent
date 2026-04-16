@@ -9,13 +9,9 @@ Today is ${today}. Search X for tweets matching **${var}**.
 
 ## Steps
 
-1. **Load previously reported tweets.** Read the last 3 days of `memory/logs/` and extract any tweet URLs (x.com/handle/status/ID) or @handles that were already included in previous `## Fetch Tweets` log entries. Keep this list as `SEEN_TWEETS` — you'll use it in step 3 to avoid sending duplicate tweets in today's notification.
+1. **Build the search prompt for Grok.** Pass `${var}` to Grok **verbatim** as the search query. Do NOT narrow it to a single angle (e.g. don't force "crypto token only", don't inject a contract address, don't filter by chain). Let Grok interpret OR/AND operators in the var as-is. The goal is broad coverage — token mentions, repo mentions, handle mentions, general chatter, all of it.
 
-2. **Build the search prompt for Grok.** The prompt sent to Grok must be specific enough to get relevant results:
-   - If the query mentions a token/cashtag/crypto: include "crypto token", the chain name, and the contract address from `memory/MEMORY.md` in the Grok prompt. This eliminates false matches.
-   - Example: instead of searching "aeon", search "the $AEON crypto token on Base chain (contract 0xbf8e...) in the last 7 days. Only return tweets about the cryptocurrency."
-
-3. **Search tweets — check pre-fetched cache first, then fall back to API.**
+2. **Search tweets — check pre-fetched cache first, then fall back to API.**
 
    The workflow pre-fetches X.AI results outside the sandbox before Claude starts. Always try the cache first:
    ```bash
@@ -34,24 +30,20 @@ Today is ${today}. Search X for tweets matching **${var}**.
        -H "Authorization: Bearer $XAI_API_KEY" \
        -d '{
          "model": "grok-4-1-fast",
-         "input": [{"role": "user", "content": "YOUR_SEARCH_PROMPT_HERE. Date range: '"$FROM_DATE"' to '"$TO_DATE"'. Return 10 tweets — prioritize the most interesting, insightful, or highly-engaged posts. For each tweet include: @handle, the full text, date posted, engagement (likes/retweets if available), and the direct link (https://x.com/handle/status/ID). Return as a numbered list."}],
+         "input": [{"role": "user", "content": "Search X for ALL tweets about: ${var}. Date range: '"$FROM_DATE"' to '"$TO_DATE"'. Return at least 10 tweets (more if available) — prioritize the most interesting, insightful, or highly-engaged posts but also include smaller accounts. For each tweet include: @handle, the full text, date posted, engagement (likes/retweets if available), and the direct link (https://x.com/handle/status/ID). Return as a numbered list."}],
          "tools": [{"type": "x_search"}]
        }'
      ```
    - If both cache and direct API fail, **fall back to WebSearch**:
      - Use WebSearch with queries like `site:x.com "${var}"` and related variations
      - Extract any tweet URLs and summaries from the search results
-     - If WebSearch also returns nothing new, log `FETCH_TWEETS_EMPTY` and stop
+     - If WebSearch also returns nothing, log `FETCH_TWEETS_EMPTY` and stop
 
-4. **Deduplicate results.** Compare the tweets returned by Grok against your `SEEN_TWEETS` list from step 1. Remove any tweet whose URL or @handle+date combo already appeared in a previous day's log. Keep only genuinely new tweets. If ALL tweets were already reported, log "FETCH_TWEETS_NO_NEW: all results were previously reported" and **stop here — do NOT send any notification**.
+3. **If no relevant tweets found** (no results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
 
-5. **If no relevant tweets found** (no results, or API returns error/empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
+4. **Save the results** to `memory/logs/${today}.md`. Include tweet URLs, handles, and engagement so downstream skills (like `tweet-allocator`) can consume them.
 
-6. **Save the results** to `memory/logs/${today}.md`. Include the tweet URLs so future runs can deduplicate.
-
-7. **Log to memory** what was fetched.
-
-8. **Send a notification via `./notify`** with the NEW tweets only (not previously reported ones). Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
+5. **Send a notification via `./notify`** with up to 10 tweets. Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
 
    Format the notification like this:
    ```
@@ -62,10 +54,6 @@ Today is ${today}. Search X for tweets matching **${var}**.
    [View tweet](https://x.com/handle/status/ID)
 
    2. x.com/handle — [brief summary]
-   Likes: X | RTs: Y
-   [View tweet](https://x.com/handle/status/ID)
-
-   3. x.com/handle — [brief summary]
    Likes: X | RTs: Y
    [View tweet](https://x.com/handle/status/ID)
 
