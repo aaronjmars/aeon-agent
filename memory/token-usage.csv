@@ -22,3 +22,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-04-16,fetch-tweets,claude-sonnet-4-6,9,8186,239032,24105
 2026-04-16,fetch-tweets,claude-sonnet-4-6,11,6836,331853,37351
 2026-04-16,fetch-tweets,claude-sonnet-4-6,14,9417,405840,31234
+2026-04-16,fetch-tweets,claude-sonnet-4-6,10,4803,270470,28681

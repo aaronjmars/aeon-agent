@@ -1,0 +1,306 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-16)"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "link1",
+        "sep1",
+        "tweet2",
+        "link2",
+        "sep2",
+        "tweet3",
+        "link3",
+        "sep3",
+        "tweet4",
+        "link4",
+        "sep4",
+        "tweet5",
+        "link5",
+        "sep5",
+        "tweet6",
+        "link6",
+        "sep6",
+        "tweet7",
+        "link7",
+        "sep7",
+        "tweet8",
+        "link8",
+        "sep8",
+        "tweet9",
+        "link9",
+        "sep9",
+        "tweet10",
+        "link10"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "\"just shipped the biggest update for aeon ever\" — self-replication, auto-merging repos, 3x more efficient autonomously",
+        "likes": 76,
+        "retweets": 12
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2044468855452418257"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "if you've shilled $aeon/$miroshark, link your X to bankrbot — new experimental skill dropping tomorrow",
+        "likes": 41,
+        "retweets": 5
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2044541594502639751"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "\"the most autonomous agent framework. No approval loops. No babysitting. Configure once, forget forever.\"",
+        "likes": 29,
+        "retweets": 8
+      },
+      "children": []
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2044466905407266867"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "_mpils",
+        "handle": "_mpils",
+        "text": "\"I love this clown aeon with all my heart dude\"",
+        "likes": 28,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/_mpils/status/2044346522121175139"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "handle": "Whale_AI_net",
+        "text": "CEO of Y Combinator (Garry Tan) noticed $AEON — \"when the head of a network worth $800B+ takes notice, you should too\"",
+        "likes": 20,
+        "retweets": 6
+      },
+      "children": []
+    },
+    "link5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2044443220273188971"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "handle": "Whale_AI_net",
+        "text": "$AEON update: 268 commits, 154 stars, 68 skills as Claude tools via MCP adaptor, still shipping",
+        "likes": 19,
+        "retweets": 4
+      },
+      "children": []
+    },
+    "link6": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2044273250310422646"
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xdopesick",
+        "handle": "0xdopesick",
+        "text": "\"Bought some $aeon cant fade the based dev\"",
+        "likes": 10,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link7": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xdopesick/status/2044547687169618226"
+      },
+      "children": []
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BioStone_chad",
+        "handle": "BioStone_chad",
+        "text": "Garry Tan attention sent $AEON from 40k → 330k (8x). FUD was wrong.",
+        "likes": 7,
+        "retweets": 2
+      },
+      "children": []
+    },
+    "link8": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BioStone_chad/status/2044451737751433540"
+      },
+      "children": []
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "regterminal",
+        "handle": "regterminal",
+        "text": "\"Seventeen times its price from thirty days ago and still moving.\"",
+        "likes": 1,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link9": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/regterminal/status/2044560309285753286"
+      },
+      "children": []
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet10": {
+      "type": "TweetCard",
+      "props": {
+        "author": "anger_trading",
+        "handle": "anger_trading",
+        "text": "\"Pay attention to $AEON — @ycombinator's @garrytan did\"",
+        "likes": 0,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link10": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/anger_trading/status/2044498391724659176"
+      },
+      "children": []
+    }
+  }
+}
