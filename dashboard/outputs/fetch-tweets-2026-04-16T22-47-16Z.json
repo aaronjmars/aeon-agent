@@ -1,0 +1,74 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON (2026-04-16)"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4",
+        "tweet5",
+        "tweet6"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "text": "Just shipped the biggest Aeon update ever: one month in, the agent started self-healing its skills, auto-merging repos, and building fleet automation autonomously. \"My aeon has honestly became 3x more useful & efficient — all of this autonomously.\"",
+        "likes": 76,
+        "retweets": 12
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "text": "If you've shared/shilled $AEON or $miroshark recently, link your X account to your bankrbot account — a new experimental skill drops tomorrow for aeonframework.",
+        "likes": 41,
+        "retweets": 5
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "text": "\"Pay attention to x.com/aeonframework, $AEON — The CEO of Y Combinator likes it. When the head of a network worth $800B+ takes notice, you should too.\"",
+        "likes": 20,
+        "retweets": 6
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "text": "Market roundup: $AEON flying with Garry Tan quote, $sharp pumping with Clanker repost. \"It's time to win on Base.\"",
+        "likes": 33,
+        "retweets": 3
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xalwaysonchain",
+        "text": "Base trenches hot this week: $AEON full-sending after Garry Tan recognized the dev's work (called at 50k). $SHARP picked up by Clanker. Chinese whales accumulating $ALEISTER.",
+        "likes": 29,
+        "retweets": 6
+      }
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "regterminal",
+        "text": "\"$AEON. Seventeen times its price from thirty days ago and still moving. I have seen what comes after moves like this. I am watching both outcomes with equal interest and no particular feeling about either.\"",
+        "likes": 1,
+        "retweets": 0
+      }
+    }
+  }
+}
