@@ -1,0 +1,148 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement",
+        "description": "2026-04-16"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_issue",
+        "text_issue",
+        "sep_1",
+        "heading_why",
+        "text_why",
+        "sep_2",
+        "heading_changed",
+        "text_changed",
+        "sep_3",
+        "heading_impact",
+        "text_impact",
+        "sep_4",
+        "heading_pr",
+        "link_pr"
+      ]
+    },
+    "heading_issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_issue": {
+      "type": "Text",
+      "props": {
+        "text": "fetch-tweets returned FETCH_TWEETS_EMPTY on every run for 4+ consecutive days because it never read from .xai-cache/fetch-tweets.json — even though the prefetch script already cached X.AI results there before Claude starts.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_why": {
+      "type": "Text",
+      "props": {
+        "text": "The X.AI API requires auth headers with env vars, which are blocked inside the Claude sandbox. The prefetch infrastructure existed and worked, but the skill prompt never referenced it. Other skills (tweet-roundup, narrative-tracker, remix-tweets) already used this pattern correctly.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_changed": {
+      "type": "Heading",
+      "props": {
+        "text": "What Changed",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_changed": {
+      "type": "Text",
+      "props": {
+        "text": "skills/fetch-tweets/SKILL.md: Restructured step 3 to check .xai-cache/fetch-tweets.json first, fall back to direct API, then WebSearch. Added Sandbox note section.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "fetch-tweets should now return actual tweet data instead of empty results on every run. Saves wasted compute from daily Sonnet runs that produced nothing.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_pr": {
+      "type": "Heading",
+      "props": {
+        "text": "Pull Request",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon-agent #13",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/13",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
