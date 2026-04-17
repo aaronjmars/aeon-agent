@@ -2,6 +2,7 @@
 name: skill-leaderboard
 description: Weekly ranking of which skills are most popular across all active forks of the watched repo
 var: ""
+tags: [meta]
 ---
 > **${var}** — Optional: target repo to scan forks of (e.g. "aaronjmars/aeon"). If empty, reads from memory/watched-repos.md.
 
