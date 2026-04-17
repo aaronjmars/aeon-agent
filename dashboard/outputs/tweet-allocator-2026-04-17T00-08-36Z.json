@@ -1,0 +1,151 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-17"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "budget-text",
+        "tweets-stack",
+        "footer"
+      ]
+    },
+    "budget-text": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base"
+      }
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2",
+        "tweet-3"
+      ]
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "t1-meta",
+        "t1-card",
+        "t1-link"
+      ]
+    },
+    "t1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/_mpils — $7.18 in $AEON (score: 31)"
+      }
+    },
+    "t1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "_mpils",
+        "handle": "_mpils",
+        "text": "I love this clown aeon with all my heart dude"
+      }
+    },
+    "t1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/_mpils/status/2044346522121175139"
+      }
+    },
+    "tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "t2-meta",
+        "t2-card",
+        "t2-link"
+      ]
+    },
+    "t2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/0xdopesick — $2.32 in $AEON (score: 10)"
+      }
+    },
+    "t2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xdopesick",
+        "handle": "0xdopesick",
+        "text": "Bought some $aeon cant fade the based dev"
+      }
+    },
+    "t2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xdopesick/status/2044547687169618226"
+      }
+    },
+    "tweet-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "t3-meta",
+        "t3-card",
+        "t3-link"
+      ]
+    },
+    "t3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/anger_trading — $0.50 in $AEON (score: 1)"
+      }
+    },
+    "t3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "anger_trading",
+        "handle": "anger_trading",
+        "text": "Pay attention to $AEON — @ycombinator's @garrytan did"
+      }
+    },
+    "t3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/anger_trading/status/2044498391724659176"
+      }
+    },
+    "footer": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 3 authors (manual send — Bankr wallet verification required)",
+        "variant": "caption"
+      }
+    }
+  }
+}
