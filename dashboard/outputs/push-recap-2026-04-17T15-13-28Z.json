@@ -1,0 +1,236 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-17",
+        "description": "aeon-agent — 14 commits, aeon — 1 commit, 2 authors"
+      },
+      "children": [
+        "fetch-tweets-section",
+        "tweet-allocator-section",
+        "skill-graph-section",
+        "infrastructure-section",
+        "sep1",
+        "key-changes-section",
+        "stats-section",
+        "sep2",
+        "full-recap-link"
+      ]
+    },
+    "fetch-tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fetch-tweets-heading",
+        "fetch-tweets-desc"
+      ]
+    },
+    "fetch-tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fetch Tweets Pipeline Overhaul (8 commits)",
+        "level": "h3"
+      }
+    },
+    "fetch-tweets-desc": {
+      "type": "Text",
+      "props": {
+        "text": "The fetch-tweets skill went from 4+ days of FETCH_TWEETS_EMPTY to reliably returning 10+ tweets per run. Rebuilt the entire pipeline: cache-first XAI reads, broadened OR-based search queries, a Python post-filter for false positive bare-word matches, and persistent dedup via seen-file that survives log rotation.",
+        "variant": "body"
+      }
+    },
+    "tweet-allocator-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-allocator-heading",
+        "tweet-allocator-desc"
+      ]
+    },
+    "tweet-allocator-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Allocator $AEON Rewards (4 commits)",
+        "level": "h3"
+      }
+    },
+    "tweet-allocator-desc": {
+      "type": "Text",
+      "props": {
+        "text": "New skill distributes $10/day in $AEON to top tweeters. Rapid iteration from USDC to native $AEON denomination, Bankr wallet as single verification gate (no more unverified pending states), and required-token filter to prevent off-topic rewards.",
+        "variant": "body"
+      }
+    },
+    "skill-graph-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-graph-heading",
+        "skill-graph-desc"
+      ]
+    },
+    "skill-graph-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Dependency Graph (1 commit, aeon repo)",
+        "level": "h3"
+      }
+    },
+    "skill-graph-desc": {
+      "type": "Text",
+      "props": {
+        "text": "New meta-skill generates a Mermaid map of all 91 skills grouped by category. 73/91 fully independent, 5-skill self-healing loop, 4-skill content pipeline highlighted.",
+        "variant": "body"
+      }
+    },
+    "infrastructure-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "infrastructure-heading",
+        "infrastructure-desc"
+      ]
+    },
+    "infrastructure-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Infrastructure Fixes (2 commits)",
+        "level": "h3"
+      }
+    },
+    "infrastructure-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Telegram notifications switched from legacy Markdown to HTML mode — underscores in handles no longer eaten. Chain-runner .outputs/ unignored so skill outputs pass between steps.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key-changes-heading",
+        "key-changes-list"
+      ]
+    },
+    "key-changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes:",
+        "level": "h3"
+      }
+    },
+    "key-changes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change1",
+        "change2",
+        "change3",
+        "change4"
+      ]
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/filter-xai-tweets.py — new 110-line post-filter drops bare-word aeon matches from Grok results",
+        "variant": "body"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/prefetch-bankr.sh — new 133-line script pre-fetches Bankr wallets outside sandbox",
+        "variant": "body"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "skills/tweet-allocator/SKILL.md — simplified from 201 to 114 lines, Bankr wallet is the only gate",
+        "variant": "body"
+      }
+    },
+    "change4": {
+      "type": "Text",
+      "props": {
+        "text": "docs/skill-graph.md — 245-line Mermaid diagram with 91 nodes and 18 dependency edges",
+        "variant": "body"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-files",
+        "stat-additions",
+        "stat-deletions"
+      ]
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "~15"
+      }
+    },
+    "stat-additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+1,050"
+      }
+    },
+    "stat-deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "-250"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-recap-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-17.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
