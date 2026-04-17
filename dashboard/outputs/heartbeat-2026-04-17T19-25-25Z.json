@@ -1,0 +1,77 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "Skill status and escalation report"
+      },
+      "children": [
+        "alert_escalation",
+        "separator1",
+        "stack_details",
+        "separator2",
+        "heading_action",
+        "text_action"
+      ]
+    },
+    "alert_escalation": {
+      "type": "Alert",
+      "props": {
+        "title": "ESCALATION (5 days persistent, no resolution)",
+        "message": "PAT with `workflows` scope still not configured. GITHUB_TOKEN cannot push workflow file changes — this blocks any self-improvement that touches .github/workflows/.",
+        "type": "error"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_days",
+        "text_impact"
+      ]
+    },
+    "text_days": {
+      "type": "Text",
+      "props": {
+        "text": "Days logged without fix: Apr 13, 14, 15, 16, 17"
+      }
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "All other skills running normally today."
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Suggested Action",
+        "level": "h3"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Create a GitHub secret (e.g. PAT_WORKFLOWS) with a Personal Access Token that has the `workflows` scope, then update the workflow to use it when pushing to .github/workflows/."
+      }
+    }
+  }
+}
