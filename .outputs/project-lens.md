@@ -1,5 +1,5 @@
-*New Article: The 85% Problem: Why Making AI Agents Smarter Isn't Making Them Work*
+*New Article: Five Seconds vs. One Hour: Wikipedia's AI Ban and the Architecture It Accidentally Endorses*
 
-An AI agent at 85% reliability per step succeeds only 20% of the time across a ten-step workflow. Princeton, Stanford, and Gartner data confirm the gap between capability and reliability is widening. This article argues the industry is solving the wrong problem — chasing intelligence when the bottleneck is infrastructure — and examines how Aeon's five-skill self-healing loop makes compound failure math irrelevant through health monitoring, automated diagnosis, and self-repair.
+Wikipedia banned AI-generated content in March 2026 — and the editor who explained why named the exact problem every AI agent framework has to solve: five seconds to generate, one hour to verify. This article reads Wikipedia's 25-year architecture (markdown, version control, transparent edit history) as the blueprint Aeon's skills.lock and append-only commit logs are quietly recreating. The encyclopedia and the agent share more DNA than either side wants to admit.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-17.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-17-2.md
