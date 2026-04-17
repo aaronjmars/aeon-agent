@@ -1,0 +1,261 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-04-17 — aaronjmars/aeon"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo_link",
+        "stack_stats",
+        "separator_1",
+        "stargazers_section",
+        "separator_2",
+        "forks_section"
+      ]
+    },
+    "repo_link": {
+      "type": "Link",
+      "props": {
+        "label": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "182",
+        "delta": "+12",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "23",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazers_list"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers (12)",
+        "level": "h3"
+      }
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_stargazer_1",
+        "link_stargazer_2",
+        "link_stargazer_3",
+        "link_stargazer_4",
+        "link_stargazer_5",
+        "link_stargazer_6",
+        "link_stargazer_7",
+        "link_stargazer_8",
+        "link_stargazer_9",
+        "link_stargazer_10",
+        "link_stargazer_11",
+        "link_stargazer_12"
+      ]
+    },
+    "link_stargazer_1": {
+      "type": "Link",
+      "props": {
+        "label": "kevingrondin",
+        "href": "https://github.com/kevingrondin"
+      }
+    },
+    "link_stargazer_2": {
+      "type": "Link",
+      "props": {
+        "label": "zeroXserdar",
+        "href": "https://github.com/zeroXserdar"
+      }
+    },
+    "link_stargazer_3": {
+      "type": "Link",
+      "props": {
+        "label": "aliimmmss",
+        "href": "https://github.com/aliimmmss"
+      }
+    },
+    "link_stargazer_4": {
+      "type": "Link",
+      "props": {
+        "label": "moseslua",
+        "href": "https://github.com/moseslua"
+      }
+    },
+    "link_stargazer_5": {
+      "type": "Link",
+      "props": {
+        "label": "adinull",
+        "href": "https://github.com/adinull"
+      }
+    },
+    "link_stargazer_6": {
+      "type": "Link",
+      "props": {
+        "label": "Jeffreyon",
+        "href": "https://github.com/Jeffreyon"
+      }
+    },
+    "link_stargazer_7": {
+      "type": "Link",
+      "props": {
+        "label": "vnguyendc",
+        "href": "https://github.com/vnguyendc"
+      }
+    },
+    "link_stargazer_8": {
+      "type": "Link",
+      "props": {
+        "label": "jcksnykm",
+        "href": "https://github.com/jcksnykm"
+      }
+    },
+    "link_stargazer_9": {
+      "type": "Link",
+      "props": {
+        "label": "antus964",
+        "href": "https://github.com/antus964"
+      }
+    },
+    "link_stargazer_10": {
+      "type": "Link",
+      "props": {
+        "label": "Danilarious",
+        "href": "https://github.com/Danilarious"
+      }
+    },
+    "link_stargazer_11": {
+      "type": "Link",
+      "props": {
+        "label": "Namanj161",
+        "href": "https://github.com/Namanj161"
+      }
+    },
+    "link_stargazer_12": {
+      "type": "Link",
+      "props": {
+        "label": "dpacuszka",
+        "href": "https://github.com/dpacuszka"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forks_heading",
+        "forks_list"
+      ]
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks (4)",
+        "level": "h3"
+      }
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_1",
+        "link_fork_2",
+        "link_fork_3",
+        "link_fork_4"
+      ]
+    },
+    "link_fork_1": {
+      "type": "Link",
+      "props": {
+        "label": "kevingrondin/aeon",
+        "href": "https://github.com/kevingrondin/aeon"
+      }
+    },
+    "link_fork_2": {
+      "type": "Link",
+      "props": {
+        "label": "davenamovich/aeon",
+        "href": "https://github.com/davenamovich/aeon"
+      }
+    },
+    "link_fork_3": {
+      "type": "Link",
+      "props": {
+        "label": "yugo-engineer/aeon",
+        "href": "https://github.com/yugo-engineer/aeon"
+      }
+    },
+    "link_fork_4": {
+      "type": "Link",
+      "props": {
+        "label": "AcidicSoil/aeon",
+        "href": "https://github.com/AcidicSoil/aeon"
+      }
+    }
+  }
+}

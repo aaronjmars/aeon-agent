@@ -29,3 +29,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-04-17,token-report,claude-sonnet-4-6,469,13828,786957,49123
 2026-04-17,fetch-tweets,claude-sonnet-4-6,9,4679,209131,25744
 2026-04-17,tweet-allocator,claude-sonnet-4-6,6,2871,110949,18777
+2026-04-17,repo-pulse,claude-sonnet-4-6,10,3281,273113,29976
