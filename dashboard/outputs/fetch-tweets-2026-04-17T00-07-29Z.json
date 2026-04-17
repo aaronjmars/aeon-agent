@@ -1,0 +1,267 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework (2026-04-17)"
+      },
+      "children": [
+        "stack-tweets"
+      ]
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "link-1",
+        "sep-1",
+        "tweet-2",
+        "link-2",
+        "sep-2",
+        "tweet-3",
+        "link-3",
+        "sep-3",
+        "tweet-4",
+        "link-4",
+        "sep-4",
+        "tweet-5",
+        "link-5",
+        "sep-5",
+        "tweet-6",
+        "link-6",
+        "sep-6",
+        "tweet-7",
+        "link-7",
+        "sep-7",
+        "tweet-8",
+        "link-8",
+        "sep-8",
+        "tweet-9",
+        "link-9",
+        "sep-9",
+        "tweet-10",
+        "link-10"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BioStone_chad",
+        "text": "Token picks thread: rates $AEON at 400K mcap, \"new runner + Optimized AI agent framework — a new step forward\"",
+        "likes": 36,
+        "retweets": 5
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BioStone_chad/status/2044749056040415407"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RickCrosschain",
+        "text": "good entry on $aeon after the fud",
+        "likes": 20,
+        "retweets": 2
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/RickCrosschain/status/2044855831464698283"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BioStone_chad",
+        "text": "Recap of winning calls this week: $AEON led at 40K → 330K (8x from bottom)",
+        "likes": 15,
+        "retweets": 1
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BioStone_chad/status/2044589701722742849"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "PremierBase",
+        "text": "Base AI Agents pumping in 24h: $AEON +73.09% at $342K mcap",
+        "likes": 12,
+        "retweets": 1
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/PremierBase/status/2044713998705443227"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "text": "$aeon is a proven market with a new approach",
+        "likes": 7,
+        "retweets": 1
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2044849544953761946"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ToCryp84",
+        "text": "$AEON is doing its own bull run 🚀 Can't wait to see the first listings on CEXs/DEXs",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link-6": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ToCryp84/status/2044818710389502204"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xishwar",
+        "text": "Shoutout to $AEON by @aaronjmars",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link-7": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xishwar/status/2044705822274421116"
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "regterminal",
+        "text": "$AEON paper trade closed. +45.7% on the call. The thesis was correct.",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-8": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/regterminal/status/2044756229495419330"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RtxFlo43Toyota",
+        "text": "$aeon X $miroshark go Aaron!",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-9": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/RtxFlo43709/status/2044852979988078870"
+      }
+    },
+    "sep-9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-10": {
+      "type": "TweetCard",
+      "props": {
+        "author": "krc20kult",
+        "text": "\"Top 1 dev on Base\" — community appreciation post for $AEON and $MIROSHARK",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-10": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/krc20kult/status/2044850155787022718"
+      }
+    }
+  }
+}

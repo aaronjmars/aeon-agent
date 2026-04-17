@@ -1,41 +1,41 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-16)*
+*Top Tweets — $AEON OR @aeonframework (2026-04-17)*
 
-1. x.com/aaronjmars — "just shipped the biggest update for aeon ever" — self-replication, auto-merging repos, 3x more efficient autonomously
-Likes: 76 | RTs: 12
-[View tweet](https://x.com/aaronjmars/status/2044468855452418257)
+1. x.com/BioStone_chad — Token picks thread: rates $AEON at 400K mcap, "new runner + Optimized AI agent framework — a new step forward"
+Likes: 36 | RTs: 5
+[View tweet](https://x.com/BioStone_chad/status/2044749056040415407)
 
-2. x.com/aaronjmars — if you've shilled $aeon/$miroshark, link your X to bankrbot — new experimental skill dropping tomorrow
-Likes: 41 | RTs: 5
-[View tweet](https://x.com/aaronjmars/status/2044541594502639751)
+2. x.com/RickCrosschain — "good entry on $aeon after the fud"
+Likes: 20 | RTs: 2
+[View tweet](https://x.com/RickCrosschain/status/2044855831464698283)
 
-3. x.com/aeonframework — "the most autonomous agent framework. No approval loops. No babysitting. Configure once, forget forever."
-Likes: 29 | RTs: 8
-[View tweet](https://x.com/aeonframework/status/2044466905407266867)
+3. x.com/BioStone_chad — Recap of winning calls this week: $AEON led at 40K → 330K (8x from bottom)
+Likes: 15 | RTs: 1
+[View tweet](https://x.com/BioStone_chad/status/2044589701722742849)
 
-4. x.com/_mpils — "I love this clown aeon with all my heart dude"
-Likes: 28 | RTs: 1
-[View tweet](https://x.com/_mpils/status/2044346522121175139)
+4. x.com/PremierBase — Base AI Agents pumping in 24h: $AEON +73.09% at $342K mcap
+Likes: 12 | RTs: 1
+[View tweet](https://x.com/PremierBase/status/2044713998705443227)
 
-5. x.com/Whale_AI_net — CEO of Y Combinator (Garry Tan) noticed $AEON — "when the head of a network worth $800B+ takes notice, you should too"
-Likes: 20 | RTs: 6
-[View tweet](https://x.com/Whale_AI_net/status/2044443220273188971)
+5. x.com/joraweb3 — "$aeon is a proven market with a new approach"
+Likes: 7 | RTs: 1
+[View tweet](https://x.com/joraweb3/status/2044849544953761946)
 
-6. x.com/Whale_AI_net — $AEON update: 268 commits, 154 stars, 68 skills as Claude tools via MCP adaptor, still shipping
-Likes: 19 | RTs: 4
-[View tweet](https://x.com/Whale_AI_net/status/2044273250310422646)
-
-7. x.com/0xdopesick — "Bought some $aeon cant fade the based dev"
-Likes: 10 | RTs: 0
-[View tweet](https://x.com/0xdopesick/status/2044547687169618226)
-
-8. x.com/BioStone_chad — Garry Tan attention sent $AEON from 40k → 330k (8x). FUD was wrong.
-Likes: 7 | RTs: 2
-[View tweet](https://x.com/BioStone_chad/status/2044451737751433540)
-
-9. x.com/regterminal — "Seventeen times its price from thirty days ago and still moving."
+6. x.com/ToCryp84 — "$AEON is doing its own bull run 🚀 Can't wait to see the first listings on CEXs/DEXs"
 Likes: 1 | RTs: 0
-[View tweet](https://x.com/regterminal/status/2044560309285753286)
+[View tweet](https://x.com/ToCryp84/status/2044818710389502204)
 
-10. x.com/anger_trading — "Pay attention to $AEON — @ycombinator's @garrytan did"
+7. x.com/0xishwar — Shoutout to $AEON by \@aaronjmars
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/0xishwar/status/2044705822274421116)
+
+8. x.com/regterminal — "$AEON paper trade closed. +45.7% on the call. The thesis was correct."
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/anger_trading/status/2044498391724659176)
+[View tweet](https://x.com/regterminal/status/2044756229495419330)
+
+9. x.com/RtxFlo43Toyota — "$aeon X $miroshark go Aaron!"
+Likes: 0 | RTs: 0
+[View tweet](https://x.com/RtxFlo43709/status/2044852979988078870)
+
+10. x.com/krc20kult — "Top 1 dev on Base" — community appreciation post for $AEON and $MIROSHARK
+Likes: 0 | RTs: 0
+[View tweet](https://x.com/krc20kult/status/2044850155787022718)
