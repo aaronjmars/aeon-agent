@@ -29,6 +29,7 @@
 | 2026-04-15 | Push Recap (4 commits: A2A gateway, skill-leaderboard, security hardening) | repo-activity |
 | 2026-04-16 | The Interoperability Play Nobody Saw Coming: How Aeon Became Every AI Agent's Skill Layer | repo-article |
 | 2026-04-16 | Push Recap (34 commits: syndicate-article, notification fixes, monitor-kalshi, README overhaul) | repo-activity |
+| 2026-04-17 | The Agent That Pays Its Own Community: Inside Aeon's Autonomous Growth Flywheel | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
