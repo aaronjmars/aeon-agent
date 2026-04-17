@@ -1,0 +1,209 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "budget-text",
+        "sep1",
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4",
+        "tweet5",
+        "sep2",
+        "total-text"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Rewards — 2026-04-17 (Run 3)",
+        "level": "h1"
+      }
+    },
+    "budget-text": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1-header",
+        "tweet1-text",
+        "tweet1-link"
+      ]
+    },
+    "tweet1-header": {
+      "type": "Text",
+      "props": {
+        "text": "1. x.com/0xishwar — $2.00 in $AEON (score: 1)"
+      }
+    },
+    "tweet1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Shoutout to $AEON by aaronjmars"
+      }
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xishwar/status/2044705822274421116"
+      }
+    },
+    "tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2-header",
+        "tweet2-link"
+      ]
+    },
+    "tweet2-header": {
+      "type": "Text",
+      "props": {
+        "text": "2. x.com/LoDeFi31 — $2.00 in $AEON (score: 1)"
+      }
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/LoDeFi31/status/2044693680359936268"
+      }
+    },
+    "tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3-header",
+        "tweet3-text",
+        "tweet3-link"
+      ]
+    },
+    "tweet3-header": {
+      "type": "Text",
+      "props": {
+        "text": "3. x.com/regterminal — $2.00 in $AEON (score: 1)"
+      }
+    },
+    "tweet3-text": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON paper trade closed. +45.7%"
+      }
+    },
+    "tweet3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/regterminal/status/2044756229495419330"
+      }
+    },
+    "tweet4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4-header",
+        "tweet4-text",
+        "tweet4-link"
+      ]
+    },
+    "tweet4-header": {
+      "type": "Text",
+      "props": {
+        "text": "4. x.com/RtxFlo43709 — $2.00 in $AEON (score: 1)"
+      }
+    },
+    "tweet4-text": {
+      "type": "Text",
+      "props": {
+        "text": "$aeon X $miroshark go Aaron!"
+      }
+    },
+    "tweet4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/RtxFlo43709/status/2044852979988078870"
+      }
+    },
+    "tweet5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5-header",
+        "tweet5-text",
+        "tweet5-link"
+      ]
+    },
+    "tweet5-header": {
+      "type": "Text",
+      "props": {
+        "text": "5. x.com/krc20kult — $2.00 in $AEON (score: 1)"
+      }
+    },
+    "tweet5-text": {
+      "type": "Text",
+      "props": {
+        "text": "Top 1 dev on Base — $AEON and $MIROSHARK"
+      }
+    },
+    "tweet5-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/krc20kult/status/2044850155787022718"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "total-text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 5 authors (manual send pending)"
+      }
+    }
+  }
+}
