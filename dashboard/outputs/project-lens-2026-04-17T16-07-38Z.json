@@ -1,0 +1,49 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge",
+        "article-link",
+        "description"
+      ]
+    },
+    "badge": {
+      "type": "Badge",
+      "props": {
+        "text": "New Article",
+        "variant": "default"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The 85% Problem: Why Making AI Agents Smarter Isn't Making Them Work",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-17.md",
+        "source": "Aeon"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "An AI agent at 85% reliability per step succeeds only 20% of the time across a ten-step workflow. Princeton, Stanford, and Gartner data confirm the gap between capability and reliability is widening. This article argues the industry is solving the wrong problem — chasing intelligence when the bottleneck is infrastructure — and examines how Aeon's five-skill self-healing loop makes compound failure math irrelevant through health monitoring, automated diagnosis, and self-repair.",
+        "variant": "body"
+      }
+    }
+  }
+}

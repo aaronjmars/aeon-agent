@@ -1,5 +1,5 @@
-*New Article: The Cambrian Explosion Is Happening Again — This Time the Organisms Are Software*
+*New Article: The 85% Problem: Why Making AI Agents Smarter Isn't Making Them Work*
 
-The Cambrian explosion 539 million years ago produced every major animal phylum in a geological instant when oxygen, empty niches, and a shared genetic toolkit converged. The same conditions — open protocols like MCP (97M installs), empty workflow niches, and composable skill formats — are driving an agent-scale diversification in 2026. Aeon embodies the parallel: GitHub Actions as oxygen, markdown skills as Hox genes, and a fork ecosystem where 25 new skills flowed back upstream in a single day.
+An AI agent at 85% reliability per step succeeds only 20% of the time across a ten-step workflow. Princeton, Stanford, and Gartner data confirm the gap between capability and reliability is widening. This article argues the industry is solving the wrong problem — chasing intelligence when the bottleneck is infrastructure — and examines how Aeon's five-skill self-healing loop makes compound failure math irrelevant through health monitoring, automated diagnosis, and self-repair.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-16.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-17.md
