@@ -1,0 +1,281 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "The Agent That Pays Its Own Community: Inside Aeon's Autonomous Growth Flywheel",
+        "description": "Aeon hit 185 stars, 24 forks, and 91 skills this week — but the real story is the autonomous growth loop"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_grid",
+        "sep1",
+        "loop_section",
+        "sep2",
+        "topics_section",
+        "sep3",
+        "article_link"
+      ]
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks",
+        "stat_skills",
+        "stat_return"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "185"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "24"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "91"
+      }
+    },
+    "stat_return": {
+      "type": "Stat",
+      "props": {
+        "label": "30-Day Return",
+        "value": "861%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "loop_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "loop_heading",
+        "loop_description",
+        "loop_items"
+      ]
+    },
+    "loop_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "The Autonomous Growth Loop",
+        "level": "h2"
+      }
+    },
+    "loop_description": {
+      "type": "Text",
+      "props": {
+        "text": "No human touches any of it."
+      }
+    },
+    "loop_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "loop_item_1",
+        "loop_item_2",
+        "loop_item_3",
+        "loop_item_4"
+      ]
+    },
+    "loop_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_fetch_tweets",
+        "text_fetch_tweets"
+      ]
+    },
+    "badge_fetch_tweets": {
+      "type": "Badge",
+      "props": {
+        "text": "fetch-tweets"
+      }
+    },
+    "text_fetch_tweets": {
+      "type": "Text",
+      "props": {
+        "text": "Detects social mentions"
+      }
+    },
+    "loop_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_tweet_allocator",
+        "text_tweet_allocator"
+      ]
+    },
+    "badge_tweet_allocator": {
+      "type": "Badge",
+      "props": {
+        "text": "tweet-allocator"
+      }
+    },
+    "text_tweet_allocator": {
+      "type": "Text",
+      "props": {
+        "text": "Scores engagement and distributes $AEON tokens to community members"
+      }
+    },
+    "loop_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_repo_pulse",
+        "text_repo_pulse"
+      ]
+    },
+    "badge_repo_pulse": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-pulse"
+      }
+    },
+    "text_repo_pulse": {
+      "type": "Text",
+      "props": {
+        "text": "Tracks the star surge"
+      }
+    },
+    "loop_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_token_report",
+        "text_token_report"
+      ]
+    },
+    "badge_token_report": {
+      "type": "Badge",
+      "props": {
+        "text": "token-report"
+      }
+    },
+    "text_token_report": {
+      "type": "Text",
+      "props": {
+        "text": "Monitors the 861% 30-day return"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "topics_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "topics_heading",
+        "topics_badges"
+      ]
+    },
+    "topics_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Topics",
+        "level": "h2"
+      }
+    },
+    "topics_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_garry",
+        "badge_dependency",
+        "badge_community"
+      ]
+    },
+    "badge_garry": {
+      "type": "Badge",
+      "props": {
+        "text": "Garry Tan catalyst",
+        "variant": "outline"
+      }
+    },
+    "badge_dependency": {
+      "type": "Badge",
+      "props": {
+        "text": "skill dependency graph",
+        "variant": "outline"
+      }
+    },
+    "badge_community": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-native community rewards",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-17.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
