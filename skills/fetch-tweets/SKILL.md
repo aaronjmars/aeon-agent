@@ -9,7 +9,11 @@ Today is ${today}. Search X for tweets matching **${var}**.
 
 ## Steps
 
-1. **Load previously reported tweets.** Read the last 3 days of `memory/logs/` and extract any tweet URLs (x.com/handle/status/ID) that were already included in previous `## Fetch Tweets` log entries. Keep this list as `SEEN_TWEETS` — you'll use it in step 5 to avoid sending duplicate tweets in today's notification.
+1. **Load previously reported tweets** from two sources, then union them into `SEEN_TWEETS`:
+   - **Persistent seen-file** (`memory/fetch-tweets-seen.txt`) — if it exists, read all URLs. This file contains every tweet URL ever reported, preventing stale tweets from cycling back into notifications once log entries age out of the 3-day window.
+   - **Last 3 days of `memory/logs/`** — extract any tweet URLs (x.com/handle/status/ID) from previous `## Fetch Tweets` log entries (catches URLs not yet in the seen-file).
+   
+   You'll use `SEEN_TWEETS` in step 5 to avoid sending duplicate tweets in today's notification.
 
 2. **Build the search prompt for Grok.** Pass `${var}` to Grok **verbatim** as the search query. Do NOT narrow it to a single angle (e.g. don't force "crypto token only", don't inject a contract address, don't filter by chain). Let Grok interpret OR/AND operators in the var as-is. The goal is broad coverage — token mentions, repo mentions, handle mentions, general chatter, all of it.
 
@@ -46,6 +50,8 @@ Today is ${today}. Search X for tweets matching **${var}**.
 5. **Deduplicate against `SEEN_TWEETS` from step 1.** Remove any tweet whose URL already appeared in a previous day's log. Keep only genuinely new tweets. If ALL tweets were already reported, log "FETCH_TWEETS_NO_NEW: all results were previously reported" and **stop here — do NOT send any notification**.
 
 6. **Save the results** to `memory/logs/${today}.md`. Include the tweet URLs, handles, and engagement so future runs can deduplicate and so downstream skills (like `tweet-allocator`) can consume them.
+
+6b. **Update the persistent seen-file** — append each new tweet URL (one per line) to `memory/fetch-tweets-seen.txt`. Create the file if it doesn't exist. This ensures these URLs are excluded from all future runs, regardless of log rotation.
 
 7. **Send a notification via `./notify`** with up to 10 NEW tweets (those that survived dedup). Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
 
