@@ -1,0 +1,271 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-17 (updated)"
+      },
+      "children": [
+        "header-text",
+        "sep-1",
+        "fork-sync-section",
+        "sep-2",
+        "opus-section",
+        "sep-3",
+        "fetch-tweets-section",
+        "sep-4",
+        "tweet-allocator-section",
+        "sep-5",
+        "key-changes-section",
+        "sep-6",
+        "stats-section",
+        "sep-7",
+        "link-section"
+      ]
+    },
+    "header-text": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon + aaronjmars/aeon-agent — 35 meaningful commits by @aaronjmars and aeonframework",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fork-sync-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork-sync-heading",
+        "fork-sync-text"
+      ]
+    },
+    "fork-sync-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork ↔ Upstream Sync",
+        "level": "h2"
+      }
+    },
+    "fork-sync-text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon upstream absorbed fork-side resilience work (miroshark's fetch-tweets pipeline, eval-audit coverage tool, XAI 429 retry, GH_GLOBAL token fallback). Aeon-agent mirrored back upstream polish — tags frontmatter across 48 skills (100% coverage on shared skills), sandbox notes, path fixes."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "opus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opus-heading",
+        "opus-text"
+      ]
+    },
+    "opus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Opus 4.7 Upgrade",
+        "level": "h2"
+      }
+    },
+    "opus-text": {
+      "type": "Text",
+      "props": {
+        "text": "default model bumped from 4.6 → 4.7 across aeon.yml, workflows, README, dashboard picker, and cost-report pricing. Secret forwarding fix (DEVTO/NEYNAR/VERCEL/BANKR) patches a silent-failure class where new integration skills were calling WebFetch with unset Bearer tokens."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fetch-tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fetch-tweets-heading",
+        "fetch-tweets-text"
+      ]
+    },
+    "fetch-tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "fetch-tweets Stabilization",
+        "level": "h2"
+      }
+    },
+    "fetch-tweets-text": {
+      "type": "Text",
+      "props": {
+        "text": "11 commits in aeon-agent to fix dedup being too aggressive, Grok false positives (bare-word \"aeon\" matches), cache pollution, and non-persistent seen-lists. New post-filter script drops tweets without exact cashtag/handle/URL match. Persistent seen-file (58-URL seed) survives log rotation."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-allocator-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-allocator-heading",
+        "tweet-allocator-text"
+      ]
+    },
+    "tweet-allocator-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "tweet-allocator Rewrite",
+        "level": "h2"
+      }
+    },
+    "tweet-allocator-text": {
+      "type": "Text",
+      "props": {
+        "text": "Bankr wallet is now the single gate — no unverified/pending paths. Simplified from +144/-57 to a straight-line \"log → exclude → Bankr → pay\" flow. Successfully paid 10 verified handles today."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key-changes-heading",
+        "key-changes-list"
+      ]
+    },
+    "key-changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "key-changes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change-1",
+        "change-2",
+        "change-3",
+        "change-4"
+      ]
+    },
+    "change-1": {
+      "type": "Text",
+      "props": {
+        "text": "New scripts/eval-audit (272 lines, Python) on aeon — generates eval stubs for uncovered skills"
+      }
+    },
+    "change-2": {
+      "type": "Text",
+      "props": {
+        "text": "Telegram notify moved to HTML parse mode (fixes underscore-eating in handles like BioStone_chad)"
+      }
+    },
+    "change-3": {
+      "type": "Text",
+      "props": {
+        "text": "14 scratch files (634 lines) purged from aeon-agent; .gitignore standardized across both repos"
+      }
+    },
+    "change-4": {
+      "type": "Text",
+      "props": {
+        "text": "skill-graph PR #38 merged on upstream aeon — Mermaid map of 91 skills"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-heading",
+        "stats-text"
+      ]
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "stats-text": {
+      "type": "Text",
+      "props": {
+        "text": "~90 files changed, +2,200/-1,000 lines across 35 meaningful commits (plus ~40 auto-commits)."
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "full-recap-link"
+      ]
+    },
+    "full-recap-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-17.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
