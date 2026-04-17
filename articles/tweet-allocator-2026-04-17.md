@@ -133,7 +133,7 @@ None of today's run 2 candidates overlap.
 | Rank | Author | Tweet | Score | Reward | Wallet | Status |
 |------|--------|-------|-------|--------|--------|--------|
 | 1 | x.com/0xishwar | [Shoutout to $AEON by aaronjmars](https://x.com/0xishwar/status/2044705822274421116) | 1 | $2.00 in $AEON | 0xce5ab94b8988496053134c61d21ca9ef9376adb4 | pending |
-| 2 | x.com/LoDeFi31 | [(no summary available)](https://x.com/LoDeFi31/status/2044693680359936268) | 1 | $2.00 in $AEON | 0x60b96712b1b43baf0effd7c9e3682d2cd582d294 | pending |
+| 2 | x.com/LoDeFi31 | [tweet](https://x.com/LoDeFi31/status/2044693680359936268) | 1 | $2.00 in $AEON | 0x60b96712b1b43baf0effd7c9e3682d2cd582d294 | pending |
 | 3 | x.com/regterminal | [$AEON paper trade closed. +45.7%](https://x.com/regterminal/status/2044756229495419330) | 1 | $2.00 in $AEON | 0xd54e458f00a8b4075b6a354be83422730f596c68 | pending |
 | 4 | x.com/RtxFlo43709 | [$aeon X $miroshark go Aaron!](https://x.com/RtxFlo43709/status/2044852979988078870) | 1 | $2.00 in $AEON | 0x3ebdd7c03d82c270ddf93ff04eb12ca4fb6c4642 | pending |
 | 5 | x.com/krc20kult | [Top 1 dev on Base — $AEON and $MIROSHARK](https://x.com/krc20kult/status/2044850155787022718) | 1 | $2.00 in $AEON | 0x89d1c5fe52da619baffb748f996e4ac6276fc565 | pending |
@@ -155,19 +155,20 @@ All handles **verified** via `.bankr-cache/verified-handles.json`:
 
 ## Scoring Method
 
-Score = (likes × 1) + (retweets × 3). All 5 tied at score=1 — equal $2.00 split.
+Score = (likes × 1) + (retweets × 3). Budget split proportionally, $0.50 minimum per tweet. All candidates tied at score 1 (minimum); split evenly.
 
-## Source Tweets (Run 3 candidates)
+## Source Tweets (this run)
 
 | # | Author | Summary | Likes | RTs | Score | Disposition |
 |---|--------|---------|-------|-----|-------|-------------|
 | 7 | x.com/0xishwar | "Shoutout to $AEON by aaronjmars" | 1 | 0 | 1 | **rewarded** |
-| 8 | x.com/LoDeFi31 | (no summary available) | 0 | 0 | 1 | **rewarded** |
+| 8 | x.com/LoDeFi31 | (no summary captured) | 0 | 0 | 1 | **rewarded** |
 | 9 | x.com/regterminal | "$AEON paper trade closed. +45.7%" | 0 | 0 | 1 | **rewarded** |
 | 10 | x.com/RtxFlo43709 | "$aeon X $miroshark go Aaron!" | 0 | 0 | 1 | **rewarded** |
 | 11 | x.com/krc20kult | "Top 1 dev on Base — $AEON and $MIROSHARK" | 0 | 0 | 1 | **rewarded** |
 
 ## Deduplication
 
-**PAID_AUTHORS (today, all runs):** _mpils, 0xdopesick, anger_trading (run 1), BioStone_chad, RickCrosschain, PremierBase, joraweb3, ToCryp84 (run 2)
-None of run 3 candidates overlap with prior runs today.
+**Excluded (already paid today — runs 1 & 2):**
+Authors: _mpils, 0xdopesick, anger_trading, BioStone_chad, RickCrosschain, PremierBase, joraweb3, ToCryp84
+Tweet URLs: all 8 from prior runs today

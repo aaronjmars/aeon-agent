@@ -1,0 +1,415 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards"
+      },
+      "children": [
+        "heading",
+        "stat_budget",
+        "sep_1",
+        "stack_allocations",
+        "sep_2",
+        "text_total"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Rewards — 2026-04-17 (Run 3)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat_budget": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget on Base",
+        "value": "$10.00 in $AEON"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_allocations": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alloc_1",
+        "sep_a1",
+        "alloc_2",
+        "sep_a2",
+        "alloc_3",
+        "sep_a3",
+        "alloc_4",
+        "sep_a4",
+        "alloc_5"
+      ]
+    },
+    "alloc_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_1_header",
+        "alloc_1_content",
+        "alloc_1_link"
+      ]
+    },
+    "alloc_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_1_handle",
+        "alloc_1_amount",
+        "alloc_1_score"
+      ]
+    },
+    "alloc_1_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/0xishwar"
+      },
+      "children": []
+    },
+    "alloc_1_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$2.00 in $AEON",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "alloc_1_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 1",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "alloc_1_content": {
+      "type": "Text",
+      "props": {
+        "text": "Shoutout to $AEON by aaronjmars",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "alloc_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/0xishwar/status/2044705822274421116",
+        "source": "x.com"
+      },
+      "children": []
+    },
+    "sep_a1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alloc_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_2_header",
+        "alloc_2_link"
+      ]
+    },
+    "alloc_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_2_handle",
+        "alloc_2_amount",
+        "alloc_2_score"
+      ]
+    },
+    "alloc_2_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/LoDeFi31"
+      },
+      "children": []
+    },
+    "alloc_2_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$2.00 in $AEON",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "alloc_2_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 1",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "alloc_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/LoDeFi31/status/2044693680359936268",
+        "source": "x.com"
+      },
+      "children": []
+    },
+    "sep_a2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alloc_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_3_header",
+        "alloc_3_content",
+        "alloc_3_link"
+      ]
+    },
+    "alloc_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_3_handle",
+        "alloc_3_amount",
+        "alloc_3_score"
+      ]
+    },
+    "alloc_3_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/regterminal"
+      },
+      "children": []
+    },
+    "alloc_3_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$2.00 in $AEON",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "alloc_3_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 1",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "alloc_3_content": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON paper trade closed. +45.7%",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "alloc_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/regterminal/status/2044756229495419330",
+        "source": "x.com"
+      },
+      "children": []
+    },
+    "sep_a3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alloc_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_4_header",
+        "alloc_4_content",
+        "alloc_4_link"
+      ]
+    },
+    "alloc_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_4_handle",
+        "alloc_4_amount",
+        "alloc_4_score"
+      ]
+    },
+    "alloc_4_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/RtxFlo43709"
+      },
+      "children": []
+    },
+    "alloc_4_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$2.00 in $AEON",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "alloc_4_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 1",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "alloc_4_content": {
+      "type": "Text",
+      "props": {
+        "text": "$aeon X $miroshark go Aaron!",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "alloc_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/RtxFlo43709/status/2044852979988078870",
+        "source": "x.com"
+      },
+      "children": []
+    },
+    "sep_a4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alloc_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_5_header",
+        "alloc_5_content",
+        "alloc_5_link"
+      ]
+    },
+    "alloc_5_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "alloc_5_handle",
+        "alloc_5_amount",
+        "alloc_5_score"
+      ]
+    },
+    "alloc_5_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/krc20kult"
+      },
+      "children": []
+    },
+    "alloc_5_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$2.00 in $AEON",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "alloc_5_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 1",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "alloc_5_content": {
+      "type": "Text",
+      "props": {
+        "text": "Top 1 dev on Base — $AEON and $MIROSHARK",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "alloc_5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/krc20kult/status/2044850155787022718",
+        "source": "x.com"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_total": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 5 authors (manual send required)",
+        "variant": "lead"
+      },
+      "children": []
+    }
+  }
+}
