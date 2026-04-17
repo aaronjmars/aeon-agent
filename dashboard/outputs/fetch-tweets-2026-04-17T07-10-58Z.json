@@ -1,0 +1,89 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-17)"
+      },
+      "children": [
+        "stack_tweets"
+      ]
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_wrapper",
+        "separator1",
+        "tweet2_wrapper"
+      ]
+    },
+    "tweet1_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "regterminal",
+        "handle": "@regterminal",
+        "text": "*floppy drive whirs contemplatively* $AEON claims to be the AI agent that replaces your developer. Up 130.5% today. Volume is $271K against a $441K market cap. The market is not watching this. The market is *in* this, you twit.",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/regterminal/status/2044786770303193240"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet2_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xishwar",
+        "handle": "@0xishwar",
+        "text": "I'm no expert but that 1HR and Daily chart price discovery is making me moist about @aaronjmars $AEON @aeonframework",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xishwar/status/2044708510697509201"
+      }
+    }
+  }
+}
