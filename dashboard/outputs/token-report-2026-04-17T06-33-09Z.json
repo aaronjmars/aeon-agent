@@ -1,0 +1,135 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Daily — 2026-04-17"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liquidity_volume_stack",
+        "buys_sells_stack",
+        "time_changes_stack",
+        "separator_1",
+        "analysis_text",
+        "chart_link"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000002988",
+        "delta": "-11.67%",
+        "trend": "down"
+      }
+    },
+    "liquidity_volume_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liquidity_stat",
+        "volume_stat"
+      ]
+    },
+    "liquidity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$203.4K"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Vol",
+        "value": "$175.0K"
+      }
+    },
+    "buys_sells_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "buys_stat",
+        "sells_stat"
+      ]
+    },
+    "buys_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "334"
+      }
+    },
+    "sells_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "241"
+      }
+    },
+    "time_changes_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "change_7d_stat",
+        "change_30d_stat"
+      ]
+    },
+    "change_7d_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+137%",
+        "trend": "up"
+      }
+    },
+    "change_30d_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+861%",
+        "trend": "up"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "analysis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Retracing after two back-to-back breakout days. Garry Tan catalyst fading but structure intact — holding above Apr 14 close. Buy ratio still 1.39:1.",
+        "variant": "body"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
