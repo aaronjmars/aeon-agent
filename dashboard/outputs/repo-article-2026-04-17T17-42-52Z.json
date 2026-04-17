@@ -1,0 +1,42 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading_title",
+        "text_body",
+        "link_article"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "The Fork Patched Upstream — Aeon Crosses Into Open-Source Governance",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "For the first time, code flowed backward into Aeon: three commits today on aaronjmars/aeon ported eval-audit, hardened fetch-tweets, and 429 retry from a downstream fork (miroshark). With skill-version-tracking adding provenance and fork-fleet handling discovery, Aeon is now behaving like a federated open-source project, not a single-operator repo.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-17-2.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

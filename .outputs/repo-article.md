@@ -1,5 +1,5 @@
-*New Article: The Agent That Pays Its Own Community: Inside Aeon's Autonomous Growth Flywheel*
+*New Article: The Fork Patched Upstream — Aeon Crosses Into Open-Source Governance*
 
-Aeon hit 185 stars, 24 forks, and 91 skills this week — but the real story is the autonomous growth loop: fetch-tweets detects social mentions, tweet-allocator scores engagement and distributes $AEON tokens to community members, repo-pulse tracks the star surge, and token-report monitors the 861% 30-day return. No human touches any of it. The Garry Tan catalyst, the skill dependency graph, and what agent-native community rewards mean for the category.
+For the first time, code flowed backward into Aeon: three commits today on aaronjmars/aeon ported eval-audit, hardened fetch-tweets, and 429 retry from a downstream fork (miroshark). With skill-version-tracking adding provenance and fork-fleet handling discovery, Aeon is now behaving like a federated open-source project, not a single-operator repo.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-17.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-17-2.md
