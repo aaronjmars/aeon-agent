@@ -1,60 +1,60 @@
-# Repo Action Ideas — 2026-04-18
+# Repo Action Ideas — 2026-04-18 (Run 2)
 
 **Repos:** aaronjmars/aeon (189 stars, 28 forks, 92 skills, 2 open PRs) | aaronjmars/aeon-agent
 
-**Context:** MIT License landed today — first commit in the log. Two PRs still open: star-milestone (#39) and Farcaster syndication (#40). Token at +901% 30d, 7 new stars today, 28 forks with at least one proven upstream backport (miroshark, Apr 17). The A2A gateway and MCP adaptor are live with zero observed external integrations yet — adoption is the strategic gap. Distribution infrastructure is complete; the work now is converting infrastructure into observable community traction.
+**Context:** MIT License landed today, opening the repo to formal contributions. The A2A gateway (Apr 15) and MCP adaptor (Apr 10) are live infrastructure with zero observed external integrations — adoption is the outstanding gap. 28 forks active, one proven upstream backport (miroshark, Apr 17). Token +901% 30d. Run 1 today covered Contributor Auto-Reward, Dashboard Live Feed, A2A Client Examples, Public Status Page, and Smithery Listing. This run focuses on the next tier: memory exposure, event-driven architecture, ecosystem depth, and operator DX.
 
 ---
 
-### 1. Contributor Auto-Reward
-**Type:** Integration
-**Effort:** Small (hours)
-**Impact:** The fork-to-upstream flywheel exists on paper (miroshark proved it Apr 17) but there's no incentive loop closing it. When a PR from a fork maintainer merges into upstream, automatically distribute $AEON to the contributor's wallet — detected via GitHub PR merge event, wallet resolved via Bankr handle lookup. This turns a one-time event into a repeatable pattern: fork, improve, get paid. It's the only missing link between the tweet-allocator rewards model and the dev community.
-**How:**
-1. Create `skills/contributor-reward/SKILL.md` as `workflow_dispatch` with optional `var: "PR number"`. Skill reads merged PRs from the last 24h via `gh api repos/aaronjmars/aeon/pulls?state=closed`, filters for PRs from non-org forks, extracts the author's GitHub handle, looks up their wallet via `.bankr-cache/`, and writes a reward plan to `.pending-distribute/contributor-reward-<date>.json`.
-2. `postprocess-distribute-tokens.sh` (or extend existing distribute-tokens skill) reads the pending file and executes the on-chain transfer via the AEON contract on Base.
-3. Log the payment to `memory/logs/YYYY-MM-DD.md` and send a notification tagging the contributor — a public thank-you that encourages the next fork maintainer.
-
----
-
-### 2. Dashboard Live Feed
+### 1. Memory Search API
 **Type:** Feature
 **Effort:** Medium (1–2 days)
-**Impact:** Skills write json-render specs to `dashboard/outputs/` after every run, but the dashboard has no live update mechanism — operators reload manually or miss runs entirely. A real-time feed turns the dashboard from a static report viewer into an active ops center. With 189 stars and a growing operator base, making the dashboard feel alive is the difference between a tool people check and a tool people keep open.
+**Impact:** Agent memory lives in `memory/` as markdown files — queryable only by reading raw text. The MCP adaptor, A2A gateway, and the 28 fork operators who built their own tooling all need programmatic access to what the agent knows: recent logs, topic notes, tracked tokens, watched repos. A REST API at `/api/memory/search?q=` in the Next.js dashboard turns Aeon's memory into a queryable knowledge base for any tool in the stack. It's the missing bridge between the agent's private state and the public interfaces already shipping (MCP, A2A, dashboard).
 **How:**
-1. Add a `/api/feed` Server-Sent Events endpoint to the Next.js dashboard that uses `fs.watch` on `dashboard/outputs/` and streams new file events as they land.
-2. Wire the dashboard front page to this SSE stream: new skill outputs animate into the top of the feed without a page reload.
-3. Add a pulsing "Live" indicator to the dashboard header that activates when a skill run is detected — matching the real-time feel of the token and notification panels already in place.
+1. Add a `/api/memory/search` Next.js route that reads `memory/MEMORY.md` + all `memory/topics/*.md` files and returns matching excerpts scored by keyword relevance (simple TF-IDF or substring match is sufficient for file-scale data). Add a `/api/memory/logs?date=` route that returns the parsed log for a given day.
+2. Add a `/api/memory/topics` route listing all topic files with last-modified timestamps, and `/api/memory/topics/:slug` to return the full content of a topic file.
+3. Expose these routes in the MCP adaptor as `aeon-memory-search`, `aeon-memory-log`, and `aeon-memory-topic` tools — so Claude Code operators can ask "what has Aeon been tracking about crypto?" and get a live answer from the running instance.
 
 ---
 
-### 3. A2A Gateway Client Examples
+### 2. Webhook-to-Skill Bridge
+**Type:** Integration
+**Effort:** Medium (1–2 days)
+**Impact:** Every reactive skill (pr-review, issue-triage, github-monitor) runs on a cron schedule — a PR opened at 9:01 AM waits until 9 AM the next day to get reviewed. GitHub webhooks deliver events in seconds. A webhook receiver on the dashboard that maps incoming events (PR opened → `pr-review`, issue labeled `bug` → `issue-triage`, push to main → `push-recap`) and triggers the corresponding GitHub Actions workflow_dispatch would cut skill latency from hours to seconds for every event-driven use case. This is the infrastructure that turns Aeon from a "daily cron agent" into a "real-time reactive agent."
+**How:**
+1. Add a `/api/webhook/github` POST endpoint to the Next.js dashboard that validates the `X-Hub-Signature-256` header (using `GITHUB_WEBHOOK_SECRET`) and parses the event type and payload.
+2. Build an event→skill routing table (configurable in `aeon.yml` under a new `webhooks:` section) that maps `pull_request.opened` → `pr-review`, `issues.labeled` → `issue-triage`, etc. The handler calls `gh workflow run` with the appropriate skill and var.
+3. Add a "Webhooks" card to the dashboard Settings panel showing the webhook URL, a one-click copy button, and a log of the last 10 webhook events received — so operators can verify the bridge is wired up correctly.
+
+---
+
+### 3. Fork Contributor Leaderboard
+**Type:** Community
+**Effort:** Small (hours)
+**Impact:** The fork fleet has 28 forks and one proven upstream backport. The tweet-allocator rewards social mentions with $AEON, but code contributors get nothing — no recognition, no economic signal that upstream values their work. A weekly `fork-contributor-leaderboard` skill ranks fork operators by commit activity (commits since fork, PRs opened upstream, new skills added) and distributes $AEON to the top 3, mirroring the tweet-allocator mechanics but targeting developers. This closes the feedback loop: fork → contribute → get paid → fork more. It's the contributor version of the community growth flywheel that the tweet-allocator already runs for social.
+**How:**
+1. Create `skills/fork-contributor-leaderboard/SKILL.md` as a weekly skill (Sunday, after `fork-fleet`). It reads the fork list from `gh api repos/aaronjmars/aeon/forks`, queries each fork's commits since its creation date (`gh api repos/{fork}/commits?since={fork.created_at}`), and counts upstream PR contributions via `gh api repos/aaronjmars/aeon/pulls?state=all` filtered by fork-owner authors.
+2. Score each fork operator: +3 per commit since fork, +10 per merged upstream PR, +5 per new skill file detected in their `skills/` directory. Rank the top 10. Resolve wallet for top 3 via `.bankr-cache/` and write a reward plan to `.pending-distribute/fork-leaderboard-<date>.json`.
+3. Send a notification with the weekly leaderboard table and reward plan — publicly naming contributors drives social proof and encourages the next fork operator to contribute upstream.
+
+---
+
+### 4. Skill Template Library
 **Type:** DX / Community
-**Effort:** Medium (1 day)
-**Impact:** The A2A gateway (PR #35) has been live since Apr 15 with zero observed external integrations. The technical barrier isn't the protocol — it's "show me working code." A `examples/a2a/` directory with copy-paste snippets for LangChain, AutoGen, CrewAI, and OpenAI Agents SDK drops onboarding friction from "figure it out" to "run this." Each example is a natural share artifact for the framework communities where Aeon needs discovery.
+**Effort:** Small (hours)
+**Impact:** 28 operators have forked Aeon. The most common next step after forking is "now I want a skill that monitors X" — and right now that means reading an existing SKILL.md, copying its structure, and figuring out the right prefetch/postprocess patterns from scratch. A `templates/` directory with 6 pre-built skill starters (crypto tracker, research digest, code reviewer, social monitor, deploy watcher, community manager) reduces activation time from "30-minute exploration" to "copy-paste and edit two fields." Each template is a complete, runnable SKILL.md with secrets listed, sandbox fallbacks noted, and an `add-skill` install command at the top.
 **How:**
-1. Create `examples/a2a/langchain_example.py`, `autogen_example.py`, `crewai_example.py`, `openai_agents_example.py` — each ~50 lines, calling a real Aeon skill (e.g. `deep-research`) via the JSON-RPC endpoint with SSE streaming. Include a `requirements.txt` per example.
-2. Create `examples/a2a/README.md` with a quickstart section and links to the A2A gateway docs in the main README.
-3. PR to aaronjmars/aeon and link from the A2A section in the README — immediately gives every LangChain/AutoGen community member working code to try.
+1. Create `templates/` with six subdirectories, each containing a `SKILL.md` with `[REPLACE: ...]` tokens for the operator-specific parts (topic, schedule, var). Include a `TEMPLATE.md` at the root that explains the template format and lists available templates with one-line descriptions.
+2. Add a `./add-template <name>` CLI command (or extend `./add-skill`) that copies the chosen template into `skills/<chosen-name>/`, replaces the `[REPLACE: ...]` tokens interactively, and registers the skill in `aeon.yml`.
+3. Link the templates directory from the README under Quick Start: "Need a skill for X? Start from a template." — gives every fork operator a discovery path the first time they look for customization options.
 
 ---
 
-### 4. Public Status Page
-**Type:** Community / DX
+### 5. Skill Run Analytics Dashboard Widget
+**Type:** Feature
 **Effort:** Small (hours)
-**Impact:** 189 stars and 28 forks means there are operators running Aeon instances that new visitors can't see. A GitHub Pages status page at `aaronjmars.github.io/aeon/status` showing 30-day skill health (green/yellow/red per skill, success rates, last run time) builds credibility — "yes, this runs reliably in production" — and gives operators a URL to share when explaining their setup. All data is already in `memory/logs/`; this is a rendering layer on existing output.
+**Impact:** The cost-report skill generates weekly token-usage breakdowns, but operators have no real-time view inside the dashboard of how their skills are performing. A dashboard analytics widget — showing runs per skill (last 14 days), success rate, and estimated cost from `token-usage.csv` — surfaces degradation before the weekly report catches it and gives operators the data they need to optimize their schedule (disable expensive skills, downgrade model, add caching). All the raw data already exists in `token-usage.csv` and `memory/logs/`; this is a rendering layer, not new instrumentation.
 **How:**
-1. Extend `update-gallery` (already runs weekly) to also generate `docs/status.md` by parsing the last 30 days of heartbeat log entries. Extract per-skill status mentions, compute 30-day success rates, and format as a table with ✅/⚠️/❌ indicators.
-2. Add "Status" to the GitHub Pages gallery navigation alongside the existing Articles and Skills pages.
-3. Link from the README under the Skills section: "Live status across all 92 skills."
-
----
-
-### 5. Skill Marketplace Listing (Smithery / MCP Registry)
-**Type:** Growth
-**Effort:** Small (hours)
-**Impact:** The MCP adaptor wraps 92 skills as `aeon-<slug>` tools, but discovery requires cloning the repo. Smithery and the emerging MCP tool registries are where Claude Code users browse for new tools — Aeon belongs there. A listing puts 92 skills in front of every developer who opens Claude Code looking for automation tools, with zero ongoing maintenance cost once the listing is live.
-**How:**
-1. Generate a `smithery.yaml` manifest from `skills.json` — maps each skill's name, description, tags, and MCP tool signature to Smithery's schema. The `generate-skills-json` script already has all fields needed; add a `--smithery` flag that outputs the registry format.
-2. Submit to Smithery's registry via their GitHub PR-based submission process (`smithery-ai/registry`). The submission is a single JSON/YAML file pointing to the `npx @aeon/skill-mcp` package.
-3. Add a "Available on Smithery" badge to the README's MCP section — surfaces discovery from within the repo for operators who missed the listing.
+1. Add a `/api/analytics` Next.js route that reads `token-usage.csv`, aggregates by skill name and date (last 14 days), and returns per-skill stats: run count, total tokens, estimated cost (Opus/Sonnet/Haiku pricing from cost-report skill), and a 14-day sparkline array.
+2. Add an "Analytics" tab to the dashboard (alongside the existing Feed, Skills, and Secrets tabs) that renders a table of skills sorted by cost descending, with color-coded success rate indicators (green ≥90%, yellow 70–89%, red <70%) derived from `memory/logs/` heartbeat entries.
+3. Add a "Cost this week" summary card to the dashboard header — always-visible, single number, links to the Analytics tab. Makes cost visible without requiring a separate weekly report run.

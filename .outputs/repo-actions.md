@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-04-18*
-Generated from analysis of aaronjmars/aeon (189 stars, 28 forks, 92 skills, MIT License landed today).
+*Repo Action Ideas — 2026-04-18 (Run 2)*
+Generated from analysis of aaronjmars/aeon (189 stars, 28 forks, 92 skills, 2 open PRs) — five fresh ideas distinct from run 1.
 
-1. Contributor Auto-Reward (Integration, Small)
-   Auto-distribute $AEON to fork maintainers when their PRs merge upstream — closes the flywheel that miroshark's Apr 17 backport proved possible.
+1. Memory Search API (Feature, Medium)
+   REST endpoint at /api/memory/search exposes agent memory to MCP tools, A2A clients, and dashboard — the missing bridge between private state and the public interfaces already shipping.
 
-2. Dashboard Live Feed (Feature, Medium)
-   SSE endpoint on `/api/feed` streams new skill outputs to the dashboard in real time — turns a static viewer into an ops center operators keep open.
+2. Webhook-to-Skill Bridge (Integration, Medium)
+   Receive GitHub webhooks and trigger skills in seconds instead of waiting for the next cron cycle — turns Aeon from a daily cron agent into a real-time reactive agent.
 
-3. A2A Gateway Client Examples (DX/Community, Medium)
-   Working copy-paste code for LangChain, AutoGen, CrewAI, and OpenAI Agents SDK calling Aeon skills via the A2A gateway — drops the adoption barrier from zero external integrations to running code.
+3. Fork Contributor Leaderboard (Community, Small)
+   Weekly ranking of most active fork operators (commits, upstream PRs, new skills) with $AEON distributed to top 3 — the developer-side twin of the tweet-allocator flywheel.
 
-4. Public Status Page (Community/DX, Small)
-   Extend update-gallery to generate `docs/status.md` with 30-day per-skill health from heartbeat logs — credibility page for the 189 stars of operators who need a URL to share.
+4. Skill Template Library (DX, Small)
+   Six pre-built SKILL.md starters (crypto tracker, research digest, code reviewer, etc.) with a ./add-template CLI — cuts fork operator activation time from 30-minute exploration to copy-paste.
 
-5. Skill Marketplace Listing — Smithery (Growth, Small)
-   Submit the MCP adaptor's 92 skills to Smithery's registry — puts Aeon's tools in front of every Claude Code user browsing for automation, zero ongoing maintenance.
+5. Skill Run Analytics Dashboard Widget (Feature, Small)
+   Dashboard tab showing per-skill runs, success rate, and cost over 14 days from token-usage.csv — real-time visibility the weekly cost-report currently delays by 7 days.
 
 Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-18.md
