@@ -1,7 +1,9 @@
-**TWEET_ALLOCATOR_EMPTY** — All 13 tweets in today's log (11 original + 2 from Fetch Tweets Run 2) were already rewarded across Runs 1–3. No eligible candidates remain; no allocation or notification sent.
+*Tweet Rewards — 2026-04-18*
 
-## Summary
-- Read today's log: 13 tweets found, all 13 authors already paid in prior runs today
-- Bankr cache present and verified
-- Status: `TWEET_ALLOCATOR_EMPTY` — logged to `memory/logs/2026-04-17.md` (Run 4 entry)
-- No notification sent (nothing to report)
+Budget: $10.00 in $AEON on Base
+
+1. x.com/LemonMarkets — $10.00 in $AEON (score: 23)
+   Engaging tweet about $AEON — 8 likes, 5 retweets
+   [View tweet](https://x.com/LemonMarkets/status/2045192278071808182)
+
+Total: $10.00 in $AEON allocated to 1 author

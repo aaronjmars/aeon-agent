@@ -1,0 +1,123 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-18"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_budget",
+        "sep1",
+        "heading_allocations",
+        "stack_tweet",
+        "sep2",
+        "text_total"
+      ]
+    },
+    "stat_budget": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_allocations": {
+      "type": "Heading",
+      "props": {
+        "text": "Allocations",
+        "level": "h3"
+      }
+    },
+    "stack_tweet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_author",
+        "tweet_card",
+        "stack_tweet_meta",
+        "link_tweet"
+      ]
+    },
+    "text_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/LemonMarkets",
+        "variant": "lead"
+      }
+    },
+    "tweet_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "LemonMarkets",
+        "text": "Engaging tweet about $AEON",
+        "likes": 8,
+        "retweets": 5
+      }
+    },
+    "stack_tweet_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_score",
+        "stat_allocation"
+      ]
+    },
+    "stat_score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "23"
+      }
+    },
+    "stat_allocation": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation",
+        "value": "$10.00 in $AEON"
+      }
+    },
+    "link_tweet": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/LemonMarkets/status/2045192278071808182"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_total": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 1 author"
+      }
+    }
+  }
+}
