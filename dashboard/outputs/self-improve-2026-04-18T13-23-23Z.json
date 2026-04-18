@@ -1,0 +1,191 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement"
+      },
+      "children": [
+        "date_heading",
+        "intro_text",
+        "separator_1",
+        "why_section",
+        "separator_2",
+        "changes_section",
+        "separator_3",
+        "impact_section",
+        "separator_4",
+        "pr_section"
+      ]
+    },
+    "date_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-04-18",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "repo-pulse same-day dedup — subsequent runs of repo-pulse now notify only the delta since the prior run today, not the full 24h list. The first run of each day is unchanged; a second run computes delta_stars / delta_forks against the prior '## Repo Pulse' section and either skips (delta empty) or sends a 'since last run' pared-down notification."
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "why_heading",
+        "why_text"
+      ]
+    },
+    "why_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "why_text": {
+      "type": "Text",
+      "props": {
+        "text": "Apr 17 and Apr 18 both saw repo-pulse run twice per day. The 24h rolling window caused heavy overlap — Apr 18 Run 1 vs Run 2 reported the identical 7 stargazers and 3 of 4 forks overlapped. Both runs sent full notifications, so recipients got near-duplicate repo-pulse pings within hours."
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "changes_heading",
+        "changes_list"
+      ]
+    },
+    "changes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "changes_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "change_1",
+        "change_2",
+        "change_3"
+      ]
+    },
+    "change_1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/repo-pulse/SKILL.md: new step 5b (parse prior same-day sections, compute delta, decide notify vs skip), subsequent-run notification template, log format now inlines handle + fork lists so the next run can parse them"
+      },
+      "children": []
+    },
+    "change_2": {
+      "type": "Text",
+      "props": {
+        "text": "memory/logs/2026-04-18.md: self-improve trigger + diff logged"
+      },
+      "children": []
+    },
+    "change_3": {
+      "type": "Text",
+      "props": {
+        "text": "memory/MEMORY.md: Skills Built row for the improvement"
+      },
+      "children": []
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "impact_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "impact_heading",
+        "impact_text"
+      ]
+    },
+    "impact_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "impact_text": {
+      "type": "Text",
+      "props": {
+        "text": "cuts notification spam on multi-run repo-pulse days. Recipients get pinged for new activity only, not the same 24h list twice."
+      },
+      "children": []
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "pr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_heading",
+        "pr_link"
+      ]
+    },
+    "pr_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PR",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon-agent PR #15",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/15",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
