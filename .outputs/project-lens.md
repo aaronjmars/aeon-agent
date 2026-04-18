@@ -1,5 +1,5 @@
-*New Article: Five Seconds vs. One Hour: Wikipedia's AI Ban and the Architecture It Accidentally Endorses*
+*New Article: The Pipes Are Back: Why Unix Philosophy Is the Design Language AI Agent Frameworks Forgot*
 
-Wikipedia banned AI-generated content in March 2026 — and the editor who explained why named the exact problem every AI agent framework has to solve: five seconds to generate, one hour to verify. This article reads Wikipedia's 25-year architecture (markdown, version control, transparent edit history) as the blueprint Aeon's skills.lock and append-only commit logs are quietly recreating. The encyclopedia and the agent share more DNA than either side wants to admit.
+Doug McIlroy wrote down the Unix philosophy in 1978 — do one thing well, work together, handle text streams. Forty-five years later, AI agent frameworks are rediscovering why he was right by getting it wrong first (LangChain's 1,200 classes, the Java-EE-of-AI). Aeon's 103-skill markdown-based architecture is a point-by-point reimplementation of that 1978 memo — and it's why skills compose, forks backport upstream, and the same capabilities are already callable from LangChain, AutoGen, and CrewAI via A2A.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-17-2.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-18.md
