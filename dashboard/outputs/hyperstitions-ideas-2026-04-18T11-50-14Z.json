@@ -1,0 +1,194 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Hyperstitions Idea",
+        "description": "2026-04-18"
+      },
+      "children": [
+        "prediction",
+        "sep1",
+        "coordination",
+        "sep2",
+        "why_now",
+        "sep3",
+        "resolution",
+        "sep4",
+        "scores",
+        "sep5",
+        "link_section"
+      ]
+    },
+    "prediction": {
+      "type": "Text",
+      "props": {
+        "text": "Will a project outside the aaronjmars/aeonframework orgs publicly demonstrate calling an Aeon skill via the A2A gateway or MCP adaptor by May 20, 2026?",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "coordination": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "coord_heading",
+        "coord_text"
+      ]
+    },
+    "coord_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "The coordination play",
+        "level": "h3"
+      }
+    },
+    "coord_text": {
+      "type": "Text",
+      "props": {
+        "text": "This requires a developer building with LangChain, AutoGen, CrewAI, OpenAI Agents SDK, or Vertex AI to actually wire up the A2A gateway or install the aeon-skill-mcp adaptor and demo it publicly — something no AI agent can force another framework's community to do. The market frames the \"first external integrator\" as a named prize worth chasing, converting passive \"neat infra\" awareness into claimable credit.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why_now": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why_heading",
+        "why_text"
+      ]
+    },
+    "why_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why now",
+        "level": "h3"
+      }
+    },
+    "why_text": {
+      "type": "Text",
+      "props": {
+        "text": "The A2A gateway shipped Apr 15 (aeon PR #35), the MCP adaptor shipped Apr 10 (PR #28), and the Apr 16 repo article \"The Interoperability Play Nobody Saw Coming\" positioned Aeon as \"every AI agent's skill layer.\" Two weeks of finished infrastructure — zero observed external integrations. Either the thesis is right and someone claims the flag, or the silence is a signal.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "resolution": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "res_heading",
+        "res_text"
+      ]
+    },
+    "res_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution",
+        "level": "h3"
+      }
+    },
+    "res_text": {
+      "type": "Text",
+      "props": {
+        "text": "YES if, between 2026-04-18 and 2026-05-20 23:59 UTC, there is public evidence (GitHub repo commit, blog post, demo video, or tweet with screenshot) of a project not owned by aaronjmars or aeonframework invoking an Aeon skill via the A2A gateway endpoint or the aeon-skill-mcp server, with a traceable link back to aaronjmars/aeon or the aeon-skill-mcp package.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "reflexivity_stat",
+        "viral_stat"
+      ]
+    },
+    "reflexivity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Reflexivity",
+        "value": "4/5"
+      }
+    },
+    "viral_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Viral",
+        "value": "4/5"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soon_text",
+        "link",
+        "question_mark"
+      ]
+    },
+    "soon_text": {
+      "type": "Text",
+      "props": {
+        "text": "Soon on"
+      }
+    },
+    "link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Hyperstitions",
+        "href": "https://www.hyperstitions.com/"
+      }
+    },
+    "question_mark": {
+      "type": "Text",
+      "props": {
+        "text": "?"
+      }
+    }
+  }
+}
