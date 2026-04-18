@@ -1,0 +1,211 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-04-18"
+      },
+      "children": [
+        "repo_heading",
+        "stats_stack",
+        "separator1",
+        "stargazers_section",
+        "separator2",
+        "forks_section"
+      ]
+    },
+    "repo_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stars_stat",
+        "forks_stat"
+      ]
+    },
+    "stars_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "189",
+        "delta": "+7",
+        "trend": "up"
+      }
+    },
+    "forks_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "28",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazers_stack"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers (7)",
+        "level": "h3"
+      }
+    },
+    "stargazers_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_kagiso",
+        "link_fangliao",
+        "link_musichen",
+        "link_soundpulse",
+        "link_jayng",
+        "link_cale",
+        "link_tom"
+      ]
+    },
+    "link_kagiso": {
+      "type": "Link",
+      "props": {
+        "label": "KagisoDevGuru",
+        "href": "https://github.com/KagisoDevGuru"
+      }
+    },
+    "link_fangliao": {
+      "type": "Link",
+      "props": {
+        "label": "fangliaofan",
+        "href": "https://github.com/fangliaofan"
+      }
+    },
+    "link_musichen": {
+      "type": "Link",
+      "props": {
+        "label": "musichen",
+        "href": "https://github.com/musichen"
+      }
+    },
+    "link_soundpulse": {
+      "type": "Link",
+      "props": {
+        "label": "Soundpulse",
+        "href": "https://github.com/Soundpulse"
+      }
+    },
+    "link_jayng": {
+      "type": "Link",
+      "props": {
+        "label": "JayNgDigitalCaptain",
+        "href": "https://github.com/JayNgDigitalCaptain"
+      }
+    },
+    "link_cale": {
+      "type": "Link",
+      "props": {
+        "label": "CaleCorbett",
+        "href": "https://github.com/CaleCorbett"
+      }
+    },
+    "link_tom": {
+      "type": "Link",
+      "props": {
+        "label": "tomscaria",
+        "href": "https://github.com/tomscaria"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks_heading",
+        "forks_stack"
+      ]
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks (4)",
+        "level": "h3"
+      }
+    },
+    "forks_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork1",
+        "link_fork2",
+        "link_fork3",
+        "link_fork4"
+      ]
+    },
+    "link_fork1": {
+      "type": "Link",
+      "props": {
+        "label": "jcksnykm/993",
+        "href": "https://github.com/jcksnykm/993"
+      }
+    },
+    "link_fork2": {
+      "type": "Link",
+      "props": {
+        "label": "JayNgDigitalCaptain/aeon",
+        "href": "https://github.com/JayNgDigitalCaptain/aeon"
+      }
+    },
+    "link_fork3": {
+      "type": "Link",
+      "props": {
+        "label": "roadtogideon222-byte/aeon",
+        "href": "https://github.com/roadtogideon222-byte/aeon"
+      }
+    },
+    "link_fork4": {
+      "type": "Link",
+      "props": {
+        "label": "maacx2022/aeon",
+        "href": "https://github.com/maacx2022/aeon"
+      }
+    }
+  }
+}
