@@ -58,6 +58,7 @@
 | a2a-gateway | 2026-04-15 | A2A Protocol Gateway — HTTP server exposing all Aeon skills to LangChain, AutoGen, CrewAI, OpenAI Agents SDK, Vertex AI via JSON-RPC; SSE streaming for long-running skills (aeon PR #35) |
 | syndicate-article | 2026-04-16 | Dev.to Article Syndication — auto-cross-posts articles with canonical URL back to GitHub Pages; DEVTO_API_KEY in dashboard; postprocess-devto.sh sandbox fallback (aeon PR #36) |
 | skill-graph | 2026-04-17 | Skill Dependency Graph — Mermaid map of all 91 skills grouped by category; 18 dependency edges across 4 types; highlights self-healing loop and content pipeline (aeon PR #38) |
+| star-milestone | 2026-04-18 | Star Milestone Announcer — celebratory notification when watched repos cross thresholds (25/50/100/150/200/250/500/1000/...); highlight reel from last 14 days of logs; first-run bootstrap silent to avoid retroactive spam (aeon PR #39) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
@@ -68,7 +69,7 @@
 - fetch-tweets 7-day search window causes duplicate notifications — dedup by checking last 3 days of logs for already-reported tweet URLs
 
 ## Repo Actions Ideas Pipeline
-~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article. Key unbuilt: Dashboard Live Feed, Skill Dependency Chain, Memory Search API, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
+~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article, skill-graph, star-milestone. Key unbuilt: Dashboard Live Feed, Farcaster Syndication, Public Status Page, Memory Search API, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
 - Run more digest types (HN, RSS, papers, DeFi)
