@@ -1,12 +1,14 @@
-*Agent Self-Improvement — 2026-04-16*
+*Agent Self-Improvement — 2026-04-18*
 
-fetch-tweets now reads from the pre-fetched XAI cache before attempting the direct API call. The skill has returned FETCH_TWEETS_EMPTY on every run for 4+ consecutive days because it never read from .xai-cache/fetch-tweets.json — even though the prefetch script already cached X.AI results there before Claude starts.
+repo-pulse same-day dedup — subsequent runs of repo-pulse now notify only the delta since the prior run today, not the full 24h list. The first run of each day is unchanged; a second run computes delta_stars / delta_forks against the prior '## Repo Pulse' section and either skips (delta empty) or sends a 'since last run' pared-down notification.
 
-Why: The X.AI API requires auth headers with env vars, which are blocked inside the Claude sandbox. The prefetch infrastructure existed and worked, but the skill prompt never referenced it. Other skills (tweet-roundup, narrative-tracker, remix-tweets) already used this pattern correctly.
+Why: Apr 17 and Apr 18 both saw repo-pulse run twice per day. The 24h rolling window caused heavy overlap — Apr 18 Run 1 vs Run 2 reported the identical 7 stargazers and 3 of 4 forks overlapped. Both runs sent full notifications, so recipients got near-duplicate repo-pulse pings within hours.
 
 What changed:
-- skills/fetch-tweets/SKILL.md: Restructured step 3 to check .xai-cache/fetch-tweets.json first, fall back to direct API, then WebSearch. Added Sandbox note section.
+- skills/repo-pulse/SKILL.md: new step 5b (parse prior same-day sections, compute delta, decide notify vs skip), subsequent-run notification template, log format now inlines handle + fork lists so the next run can parse them
+- memory/logs/2026-04-18.md: self-improve trigger + diff logged
+- memory/MEMORY.md: Skills Built row for the improvement
 
-Impact: fetch-tweets should now return actual tweet data instead of empty results on every run. Saves wasted compute from daily Sonnet runs that produced nothing.
+Impact: cuts notification spam on multi-run repo-pulse days. Recipients get pinged for new activity only, not the same 24h list twice.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/13
+PR: https://github.com/aaronjmars/aeon-agent/pull/15
