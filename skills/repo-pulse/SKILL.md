@@ -44,14 +44,20 @@ Read memory/watched-repos.md for the list of repos to track. Skip any repo whose
    - **New stargazers from step 3**: any with `starred_at` >= the 24h cutoff
    - **New forks from step 4**: any with `created_at` >= the 24h cutoff
 
-   **Send a notification if ANY of these are true:**
-   - At least 1 new stargazer in the last 24h (unstars don't cancel this out)
-   - At least 1 new fork in the last 24h
-   - First run (no previous data in logs)
+5b. **Same-day dedup — compute delta since last run today.** Repo-pulse may run multiple times per day; rolling 24h windows overlap heavily, so unfiltered re-notification is spam. Scan `memory/logs/${today}.md` for prior `## Repo Pulse` sections on the same repo. Parse out previously-reported stargazer handles (from "New stars (24h):" lines) and fork `full_name`s (from "New forks (24h):" lines). Compute the delta:
+   - `delta_stars = today's 24h stargazers − previously-reported handles today`
+   - `delta_forks = today's 24h forks − previously-reported full_names today`
 
-   Only log "REPO_PULSE_QUIET" and skip notification if ZERO new stargazers AND ZERO new forks since the 24h cutoff.
+   **Notification rule:**
+   - **First run today** (no prior `## Repo Pulse` for this repo in today's log) → notify using the full 24h list (existing behavior).
+   - **Subsequent run, delta is empty** → log `REPO_PULSE_QUIET — no new stars or forks since last run today` and skip notification.
+   - **Subsequent run, delta has entries** → notify using `delta_stars` / `delta_forks` only (not the full 24h list), with a "Since last run" framing so the recipient knows these are incremental.
+
+   Only log "REPO_PULSE_QUIET" and skip notification if the first-run 24h view is empty, OR a subsequent-run delta is empty.
 
 6. **Send notification** via `./notify`:
+
+   **First-run format** (full 24h view):
    ```
    *Repo Pulse — ${today}*
    [owner/repo]
@@ -66,6 +72,21 @@ Read memory/watched-repos.md for the list of repos to track. Skip any repo whose
    github.com/user1/repo | github.com/user2/repo
    ```
 
+   **Subsequent-run format** (delta only, when `delta_stars` or `delta_forks` is non-empty):
+   ```
+   *Repo Pulse — ${today} (since last run)*
+   [owner/repo]
+
+   Stars: X total (+N since last run)
+   Forks: Y total (+N since last run)
+
+   New stargazers (since last run):
+   github.com/user1 | github.com/user2
+
+   New forks (since last run):
+   github.com/user1/repo
+   ```
+
    Format rules:
    - List stargazers on one line separated by ` | ` (not one per line)
    - Same for forks
@@ -73,11 +94,11 @@ Read memory/watched-repos.md for the list of repos to track. Skip any repo whose
    - Omit "New forks" section entirely if there are none
    - Do NOT include traffic data, watchers, or open issues
 
-7. **Log** to `memory/logs/${today}.md` — ALWAYS include the exact current counts so the next run can calculate deltas:
+7. **Log** to `memory/logs/${today}.md` — ALWAYS include the exact current counts AND the list of handles/forks so the next same-day run can compute its delta correctly:
    ```
    ## Repo Pulse
    - **aaronjmars/repo**: stargazers_count=X, forks_count=Y
-   - **New stars (24h):** N
-   - **New forks (24h):** N
-   - **Notification sent:** yes/no
+   - **New stars (24h):** N (handle1, handle2, ...)
+   - **New forks (24h):** N (owner1/repo, owner2/repo, ...)
+   - **Notification sent:** yes/no (reason if no, e.g. "delta empty since last run today")
    ```
