@@ -59,6 +59,7 @@
 | syndicate-article | 2026-04-16 | Dev.to Article Syndication — auto-cross-posts articles with canonical URL back to GitHub Pages; DEVTO_API_KEY in dashboard; postprocess-devto.sh sandbox fallback (aeon PR #36) |
 | skill-graph | 2026-04-17 | Skill Dependency Graph — Mermaid map of all 91 skills grouped by category; 18 dependency edges across 4 types; highlights self-healing loop and content pipeline (aeon PR #38) |
 | star-milestone | 2026-04-18 | Star Milestone Announcer — celebratory notification when watched repos cross thresholds (25/50/100/150/200/250/500/1000/...); highlight reel from last 14 days of logs; first-run bootstrap silent to avoid retroactive spam (aeon PR #39) |
+| syndicate-article (Farcaster) | 2026-04-18 | Farcaster Syndication — extends syndicate-article to cross-post every article to Farcaster via Neynar managed signer; independent channels (Dev.to and Farcaster can be enabled separately); signer UUID injected from env at POST time never lands on disk; drive-by fix passes DEVTO_API_KEY to post-process env (was missing upstream) (aeon PR #40) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
@@ -69,7 +70,7 @@
 - fetch-tweets 7-day search window causes duplicate notifications — dedup by checking last 3 days of logs for already-reported tweet URLs
 
 ## Repo Actions Ideas Pipeline
-~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article, skill-graph, star-milestone. Key unbuilt: Dashboard Live Feed, Farcaster Syndication, Public Status Page, Memory Search API, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
+~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article (Dev.to), skill-graph, star-milestone, syndicate-article (Farcaster). Key unbuilt: Dashboard Live Feed, Public Status Page, Memory Search API, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
 - Run more digest types (HN, RSS, papers, DeFi)

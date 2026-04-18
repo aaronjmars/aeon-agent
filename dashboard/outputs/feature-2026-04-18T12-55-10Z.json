@@ -1,0 +1,324 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-04-18"
+      },
+      "children": [
+        "meta",
+        "intro",
+        "sep1",
+        "why_section",
+        "sep2",
+        "built_section",
+        "sep3",
+        "how_section",
+        "sep4",
+        "next_section",
+        "sep5",
+        "pr"
+      ]
+    },
+    "meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "run_badge"
+      ]
+    },
+    "run_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Run 2",
+        "variant": "default"
+      }
+    },
+    "intro": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "intro_h",
+        "intro_p"
+      ]
+    },
+    "intro_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Farcaster Syndication",
+        "level": "h2"
+      }
+    },
+    "intro_p": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon articles now cross-post to Farcaster the same way they cross-post to Dev.to. The existing syndicate-article skill got a second channel — every article that runs through it can now land as a cast on Farcaster via Neynar, reaching the crypto-native audience that overlaps most directly with AEON token holders and DeFi users."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "why_h",
+        "why_p"
+      ]
+    },
+    "why_h": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters",
+        "level": "h3"
+      }
+    },
+    "why_p": {
+      "type": "Text",
+      "props": {
+        "text": "Dev.to reaches developers. Farcaster reaches the people actually holding the token. With AEON up +109% in 7 days and the 200-star milestone imminent, the gap was a distribution one — not content. This is idea #2 from the Apr 16 repo-actions batch and the cleanest-scoped one left: piggybacks on the existing Dev.to post-process pattern, zero new infra, one new script. Channels are independent — set DEVTO_API_KEY and Dev.to activates; set NEYNAR_SIGNER_UUID and Farcaster activates; set both and every article fans out to both."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "built_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "built_h",
+        "built_1",
+        "built_2",
+        "built_3",
+        "built_4",
+        "built_5"
+      ]
+    },
+    "built_h": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built",
+        "level": "h3"
+      }
+    },
+    "built_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "built_1_t",
+        "built_1_p"
+      ]
+    },
+    "built_1_t": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/postprocess-farcaster.sh",
+        "variant": "lead"
+      }
+    },
+    "built_1_p": {
+      "type": "Text",
+      "props": {
+        "text": "new post-process hook. Reads .pending-farcaster/*.json, injects NEYNAR_SIGNER_UUID from env at POST time (so the signer never touches disk), POSTs to the Neynar API with x-api-key: $NEYNAR_API_KEY, cleans up payloads on success. Handles 400/422 (duplicate), 401/403 (auth), and other errors non-fatally."
+      }
+    },
+    "built_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "built_2_t",
+        "built_2_p"
+      ]
+    },
+    "built_2_t": {
+      "type": "Text",
+      "props": {
+        "text": "skills/syndicate-article/SKILL.md",
+        "variant": "lead"
+      }
+    },
+    "built_2_p": {
+      "type": "Text",
+      "props": {
+        "text": "rewritten to treat Dev.to and Farcaster as independent channels with per-channel duplicate detection (SYNDICATED: vs FARCAST: log markers). If one channel is already posted, the other still runs. Writes the Farcaster payload (text + embed URL, no signer) to .pending-farcaster/<slug>-<date>.json during its run."
+      }
+    },
+    "built_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "built_3_t",
+        "built_3_p"
+      ]
+    },
+    "built_3_t": {
+      "type": "Text",
+      "props": {
+        "text": ".github/workflows/aeon.yml",
+        "variant": "lead"
+      }
+    },
+    "built_3_p": {
+      "type": "Text",
+      "props": {
+        "text": "passes NEYNAR_SIGNER_UUID to the Claude step and passes DEVTO_API_KEY, NEYNAR_API_KEY, NEYNAR_SIGNER_UUID to the post-process step. Drive-by fix: DEVTO_API_KEY was missing from the post-process env block entirely, so postprocess-devto.sh had been silently skipping every run."
+      }
+    },
+    "built_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "built_4_t",
+        "built_4_p"
+      ]
+    },
+    "built_4_t": {
+      "type": "Text",
+      "props": {
+        "text": "dashboard/app/api/secrets/route.ts",
+        "variant": "lead"
+      }
+    },
+    "built_4_p": {
+      "type": "Text",
+      "props": {
+        "text": "adds NEYNAR_API_KEY and NEYNAR_SIGNER_UUID to the Distribution group so operators can configure them from the dashboard Secrets panel alongside DEVTO_API_KEY."
+      }
+    },
+    "built_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "built_5_t",
+        "built_5_p"
+      ]
+    },
+    "built_5_t": {
+      "type": "Text",
+      "props": {
+        "text": ".gitignore",
+        "variant": "lead"
+      }
+    },
+    "built_5_p": {
+      "type": "Text",
+      "props": {
+        "text": "adds .pending-devto/ and .pending-farcaster/ so failed payloads never accidentally land in a commit."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "how_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "how_h",
+        "how_p1",
+        "neynar_link",
+        "how_p2"
+      ]
+    },
+    "how_h": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works",
+        "level": "h3"
+      }
+    },
+    "how_p1": {
+      "type": "Text",
+      "props": {
+        "text": "The skill never calls Neynar inline. During its run it just writes a JSON payload — cast text (New post: <title>\\n\\n<url>) plus an embed URL — to .pending-farcaster/. After Claude finishes, the workflow's post-process step runs every scripts/postprocess-*.sh hook; postprocess-farcaster.sh picks up the payload, injects the signer UUID at the last possible moment, POSTs to"
+      }
+    },
+    "neynar_link": {
+      "type": "Link",
+      "props": {
+        "label": "https://api.neynar.com/v2/farcaster/cast",
+        "href": "https://api.neynar.com/v2/farcaster/cast"
+      }
+    },
+    "how_p2": {
+      "type": "Text",
+      "props": {
+        "text": "with x-api-key: $NEYNAR_API_KEY, cleans up payloads on success. This mirrors the Dev.to pattern exactly and sidesteps the sandbox's env-var-in-curl-headers limitation. The signer UUID — the credential that actually controls which Farcaster account posts — is never written to disk, never committed, and only exists in the GitHub Actions runner env for the duration of the post-process step."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "next_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "next_h",
+        "next_p"
+      ]
+    },
+    "next_h": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next",
+        "level": "h3"
+      }
+    },
+    "next_p": {
+      "type": "Text",
+      "props": {
+        "text": "Could add channel posting (channel_id: \"aeon\") once a dedicated Farcaster channel exists, or fan Farcaster syndication out to a second publisher skill (repo-article, changelog) rather than only the article pipeline. The next unbuilt repo-actions ideas are Dashboard Live Feed (SSE for dashboard/outputs/) and Public Status Page (30-day skill health at docs/status.md)."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #40",
+        "href": "https://github.com/aaronjmars/aeon/pull/40",
+        "source": "GitHub"
+      }
+    }
+  }
+}
