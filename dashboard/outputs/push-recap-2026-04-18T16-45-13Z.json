@@ -1,0 +1,247 @@
+{
+  "root": "recap-card",
+  "state": {},
+  "elements": {
+    "recap-card": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-18 (Run 2)"
+      },
+      "children": [
+        "summary-section",
+        "sep1",
+        "license-section",
+        "sep2",
+        "star-section",
+        "sep3",
+        "farcaster-section",
+        "sep4",
+        "repopulse-section",
+        "sep5",
+        "changes-section",
+        "sep6",
+        "stats-section",
+        "sep7",
+        "recap-link"
+      ]
+    },
+    "summary-section": {
+      "type": "Text",
+      "props": {
+        "text": "aeon: 2 main commits + 2 open PRs; aeon-agent: ~50 cron chores + 1 open PR (new since Run 1)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "license-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "license-heading",
+        "license-text"
+      ]
+    },
+    "license-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "MIT License landed on aeon main (d25a16c)",
+        "level": "h2"
+      }
+    },
+    "license-text": {
+      "type": "Text",
+      "props": {
+        "text": "45-day governance gap closed. Forks now have explicit backport permission; A2A/MCP consumers have a clean downstream license."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "star-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "star-heading",
+        "star-text"
+      ]
+    },
+    "star-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Star Milestone Announcer (PR #39)",
+        "level": "h2"
+      }
+    },
+    "star-text": {
+      "type": "Text",
+      "props": {
+        "text": "New skill catches threshold crossings (25/50/100/150/200/.../100000) with a 14-day highlight reel. First-run bootstrap silent. aeon sits at 189 stars — 200 is 11 stars away, ~2 days at current rate."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "farcaster-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "farcaster-heading",
+        "farcaster-text"
+      ]
+    },
+    "farcaster-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Farcaster Syndication (PR #40)",
+        "level": "h2"
+      }
+    },
+    "farcaster-text": {
+      "type": "Text",
+      "props": {
+        "text": "syndicate-article now cross-posts to Farcaster via Neynar alongside Dev.to. Independent channels. Signer UUID never touches disk — injected at POST time. Drive-by fix restores a silently-broken Dev.to post-process env (was missing DEVTO_API_KEY for weeks)."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "repopulse-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repopulse-heading",
+        "repopulse-text"
+      ]
+    },
+    "repopulse-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "repo-pulse same-day dedup (aeon-agent PR #15, NEW)",
+        "level": "h2"
+      }
+    },
+    "repopulse-text": {
+      "type": "Text",
+      "props": {
+        "text": "Self-improve loop noticed its own duplicate notifications on multi-run days and filed a fix. Subsequent runs now skip if delta is empty or send a 'since last run' view. Agent reading its own logs as a feedback signal."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "changes-heading",
+        "changes-list"
+      ]
+    },
+    "changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "changes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change-1",
+        "change-2",
+        "change-3",
+        "change-4"
+      ]
+    },
+    "change-1": {
+      "type": "Text",
+      "props": {
+        "text": "LICENSE (+21 lines) — first legal artifact on the repo"
+      }
+    },
+    "change-2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/syndicate-article/SKILL.md — Dev.to + Farcaster as independent channels with per-channel dedup markers"
+      }
+    },
+    "change-3": {
+      "type": "Text",
+      "props": {
+        "text": "skills/repo-pulse/SKILL.md — delta-only output on subsequent runs, inline handle/fork lists for parse-ability"
+      }
+    },
+    "change-4": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/postprocess-farcaster.sh — 0-disk signer pattern; post-process for sandbox auth"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stats-heading",
+        "stats-text"
+      ]
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "stats-text": {
+      "type": "Text",
+      "props": {
+        "text": "~18 files, +542/-74 across 5 branches. Plus ~50 cron chore commits on aeon-agent main (no code). First recorded full autonomous cron day on aeon-agent — zero human source commits."
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recap-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Push recap article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-18.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
