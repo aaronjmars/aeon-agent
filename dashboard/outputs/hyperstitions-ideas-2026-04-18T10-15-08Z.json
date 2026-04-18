@@ -1,0 +1,129 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Hyperstitions Idea — 2026-04-18"
+      },
+      "children": [
+        "question",
+        "sep1",
+        "coordination_heading",
+        "coordination_text",
+        "sep2",
+        "why_now_heading",
+        "why_now_text",
+        "sep3",
+        "resolution_heading",
+        "resolution_text",
+        "sep4",
+        "scores_heading",
+        "scores_stack",
+        "sep5",
+        "website_link"
+      ]
+    },
+    "question": {
+      "type": "Heading",
+      "props": {
+        "text": "Will a second fork-to-upstream code backport merge into aaronjmars/aeon by May 15, 2026?",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "coordination_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "The coordination play",
+        "level": "h3"
+      }
+    },
+    "coordination_text": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday miroshark/aeon-aaron became the first fork to ship code back into upstream aeon (3 commits: XAI 429 retry, eval-audit, fetch-tweets hardening). The market makes that a repeatable pattern instead of a one-off. Fork maintainers running their own skill variants now have a concrete reason to surface their best work and open a PR upstream — something an agent can't do on their behalf. Every active fork (24 today) is a potential YES resolver."
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "why_now_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why now",
+        "level": "h3"
+      }
+    },
+    "why_now_text": {
+      "type": "Text",
+      "props": {
+        "text": "Apr 17 was the first-ever fork→upstream backport in Aeon's history. The story shipped as a repo article (\"The Fork Patched Upstream\") the same day. Today the template exists; tomorrow it's either a pattern or a curiosity."
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "resolution_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution",
+        "level": "h3"
+      }
+    },
+    "resolution_text": {
+      "type": "Text",
+      "props": {
+        "text": "YES if at least one PR merged into aaronjmars/aeon main between 2026-04-18 and 2026-05-15 23:59 UTC originates from a fork repo not owned by aaronjmars or aeonframework AND contains at least one commit authored by the fork maintainer. Verified via GitHub PR head/base + commit authorship."
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "scores_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scores",
+        "level": "h3"
+      }
+    },
+    "scores_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "reflexivity_stat",
+        "viral_stat"
+      ]
+    },
+    "reflexivity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Reflexivity",
+        "value": "4/5"
+      }
+    },
+    "viral_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Viral",
+        "value": "3/5"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "website_link": {
+      "type": "Link",
+      "props": {
+        "label": "Soon on hyperstitions.com",
+        "href": "https://www.hyperstitions.com/"
+      }
+    }
+  }
+}
