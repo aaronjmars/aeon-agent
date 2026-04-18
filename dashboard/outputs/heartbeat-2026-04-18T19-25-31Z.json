@@ -1,0 +1,343 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "escalation_alert",
+        "escalation_details",
+        "separator1",
+        "nominal_header",
+        "nominal_skills",
+        "separator2",
+        "prs_section",
+        "separator3",
+        "issues_section"
+      ]
+    },
+    "escalation_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ESCALATION (6 days persistent)",
+        "message": "weekly-shiplog has never dispatched since creation on Apr 13",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "escalation_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "esc_info",
+        "esc_causes_section",
+        "esc_action"
+      ]
+    },
+    "esc_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "esc_skill",
+        "esc_schedule",
+        "esc_created",
+        "esc_should_run",
+        "esc_next"
+      ]
+    },
+    "esc_skill": {
+      "type": "Text",
+      "props": {
+        "text": "Skill: weekly-shiplog"
+      },
+      "children": []
+    },
+    "esc_schedule": {
+      "type": "Text",
+      "props": {
+        "text": "Schedule: Mon 09:00 UTC"
+      },
+      "children": []
+    },
+    "esc_created": {
+      "type": "Text",
+      "props": {
+        "text": "Created: Apr 13"
+      },
+      "children": []
+    },
+    "esc_should_run": {
+      "type": "Text",
+      "props": {
+        "text": "Should have run: Apr 14"
+      },
+      "children": []
+    },
+    "esc_next": {
+      "type": "Text",
+      "props": {
+        "text": "Next scheduled run: Apr 21"
+      },
+      "children": []
+    },
+    "esc_causes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "causes_heading",
+        "causes_list"
+      ]
+    },
+    "causes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Possible causes",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "causes_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cause_secret",
+        "cause_skill",
+        "cause_workflow"
+      ]
+    },
+    "cause_secret": {
+      "type": "Text",
+      "props": {
+        "text": "• Secret missing"
+      },
+      "children": []
+    },
+    "cause_skill": {
+      "type": "Text",
+      "props": {
+        "text": "• SKILL.md issue"
+      },
+      "children": []
+    },
+    "cause_workflow": {
+      "type": "Text",
+      "props": {
+        "text": "• Workflow registration gap"
+      },
+      "children": []
+    },
+    "esc_action": {
+      "type": "Alert",
+      "props": {
+        "title": "Suggested action",
+        "message": "Manually trigger weekly-shiplog via workflow_dispatch and inspect the run output",
+        "type": "info"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "nominal_header": {
+      "type": "Heading",
+      "props": {
+        "text": "All other skills today (nominal)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "nominal_skills": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "sm"
+      },
+      "children": [
+        "skill_token_report",
+        "skill_fetch_tweets",
+        "skill_tweet_allocator",
+        "skill_repo_pulse",
+        "skill_feature",
+        "skill_self_improve",
+        "skill_repo_actions",
+        "skill_push_recap",
+        "skill_project_lens",
+        "skill_repo_article",
+        "skill_hyperstitions_ideas"
+      ]
+    },
+    "skill_token_report": {
+      "type": "Badge",
+      "props": {
+        "text": "token-report",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_fetch_tweets": {
+      "type": "Badge",
+      "props": {
+        "text": "fetch-tweets",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_tweet_allocator": {
+      "type": "Badge",
+      "props": {
+        "text": "tweet-allocator",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_repo_pulse": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-pulse",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_feature": {
+      "type": "Badge",
+      "props": {
+        "text": "feature",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_self_improve": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_repo_actions": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-actions",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_push_recap": {
+      "type": "Badge",
+      "props": {
+        "text": "push-recap",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_project_lens": {
+      "type": "Badge",
+      "props": {
+        "text": "project-lens",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_repo_article": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-article",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "skill_hyperstitions_ideas": {
+      "type": "Badge",
+      "props": {
+        "text": "hyperstitions-ideas",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "prs_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "prs_heading",
+        "prs_text"
+      ]
+    },
+    "prs_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pull Requests",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "prs_text": {
+      "type": "Text",
+      "props": {
+        "text": "No open PRs"
+      },
+      "children": []
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "issues_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "issues_heading",
+        "issues_text"
+      ]
+    },
+    "issues_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issues",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "issues_text": {
+      "type": "Text",
+      "props": {
+        "text": "No urgent issues"
+      },
+      "children": []
+    }
+  }
+}
