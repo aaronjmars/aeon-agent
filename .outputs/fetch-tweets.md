@@ -1,9 +1,25 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-17)*
+*Top Tweets — $AEON / @aeonframework (2026-04-18)*
 
-1. x.com/regterminal — "\*floppy drive whirs contemplatively\* $AEON claims to be the AI agent that replaces your developer. Up 130.5% today. Volume is $271K against a $441K market cap. The market is not watching this. The market is \*in\* this, you twit."
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/regterminal/status/2044786770303193240)
+1. x.com/aaronjmars — Director feature shipped autonomously by aeon (miroshark simulation dynamics)
+Likes: 23 | RTs: 7
+[View tweet](https://x.com/aaronjmars/status/2045169027933171856)
 
-2. x.com/0xishwar — "I'm no expert but that 1HR and Daily chart price discovery is making me moist about @aaronjmars $AEON @aeonframework"
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/0xishwar/status/2044708510697509201)
+2. x.com/LemonMarkets — New Listing Alert: aeon/WETH now tradeable on Lemon Markets
+Likes: 8 | RTs: 5
+[View tweet](https://x.com/LemonMarkets/status/2045192278071808182)
+
+3. x.com/aaronjmars — aeon + github.com/aaronjmars/aeon
+Likes: 9 | RTs: 0
+[View tweet](https://x.com/aaronjmars/status/2045239099829674223)
+
+4. x.com/aaronjmars — Or you can just aeon & do it in a few clicks
+Likes: 2 | RTs: 1
+[View tweet](https://x.com/aaronjmars/status/2045173316214800408)
+
+5. x.com/aeonframework — Sharing github.com/aaronjmars/aeon
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/aeonframework/status/2045184136885817655)
+
+6. x.com/aaronjmars — Technical-explainer skill available on github.com/aaronjmars/aeon
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/aaronjmars/status/2045147555332251736)
