@@ -1,0 +1,43 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens",
+        "description": "New Article"
+      },
+      "children": [
+        "heading_title",
+        "text_body",
+        "link_article"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "The Plugin Pattern Always Wins — Agent Skills Are WordPress in Fast-Forward",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "WordPress took 7 years to reach 10,000 plugins. SKILL.md crossed it in 6 weeks — and is now at 425,000+ across SkillsMP and skills.sh, with 13.4% carrying critical security issues per Snyk's February audit. Aeon's last two weeks of plumbing — skills.lock, skill-update-check, workflow-security-audit, skill-leaderboard — are the same provenance/security retrofits WordPress.org spent a decade adding, except shipped before the ecosystem grew old enough to demand them. The skill is the asset; the runtime is the rental car.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The Plugin Pattern Always Wins — Agent Skills Are WordPress in Fast-Forward",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-18-2.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

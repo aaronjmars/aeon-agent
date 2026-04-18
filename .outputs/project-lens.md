@@ -1,5 +1,5 @@
-*New Article: The Pipes Are Back: Why Unix Philosophy Is the Design Language AI Agent Frameworks Forgot*
+*New Article: The Plugin Pattern Always Wins — Agent Skills Are WordPress in Fast-Forward*
 
-Doug McIlroy wrote down the Unix philosophy in 1978 — do one thing well, work together, handle text streams. Forty-five years later, AI agent frameworks are rediscovering why he was right by getting it wrong first (LangChain's 1,200 classes, the Java-EE-of-AI). Aeon's 103-skill markdown-based architecture is a point-by-point reimplementation of that 1978 memo — and it's why skills compose, forks backport upstream, and the same capabilities are already callable from LangChain, AutoGen, and CrewAI via A2A.
+WordPress took 7 years to reach 10,000 plugins. SKILL.md crossed it in 6 weeks — and is now at 425,000+ across SkillsMP and skills.sh, with 13.4% carrying critical security issues per Snyk's February audit. Aeon's last two weeks of plumbing — skills.lock, skill-update-check, workflow-security-audit, skill-leaderboard — are the same provenance/security retrofits WordPress.org spent a decade adding, except shipped before the ecosystem grew old enough to demand them. The skill is the asset; the runtime is the rental car.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-18.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-18-2.md
