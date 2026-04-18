@@ -70,8 +70,8 @@
     "success_rate": 1
   },
   "repo-actions": {
-    "last_dispatch": "2026-04-18T14:07:51Z",
-    "last_status": "success",
+    "last_dispatch": "2026-04-18T15:45:15Z",
+    "last_status": "dispatched",
     "last_success": "2026-04-18T14:11:26Z",
     "total_runs": 3,
     "total_successes": 3,
