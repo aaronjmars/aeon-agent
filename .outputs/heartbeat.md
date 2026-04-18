@@ -1,1 +1,8 @@
-ESCALATION (6 days persistent): weekly-shiplog has never dispatched since creation on Apr 13. Schedule is Mon 09:00 UTC — it should have run Apr 14 and Apr 21 is the next chance. Possible causes: secret missing, SKILL.md issue, or workflow registration gap. Suggested action: manually trigger weekly-shiplog via workflow_dispatch and inspect the run output. All other skills today nominal (token-report, fetch-tweets, tweet-allocator, repo-pulse, feature, self-improve, repo-actions, push-recap, project-lens, repo-article, hyperstitions-ideas all success). No open PRs. No urgent issues.
+HEARTBEAT_OK. All 11 scheduled skills for Saturday Apr 18 confirmed via GitHub Actions runs and today's logs. No open PRs, no urgent issues. Two persistent issues (weekly-shiplog 7 days, PAT workflows scope) both within 48h dedup — no new notification sent.
+
+## Summary
+
+- All scheduled skills ran: token-report, fetch-tweets, tweet-allocator, repo-pulse, hyperstitions-ideas, feature, self-improve, repo-actions, push-recap, project-lens, repo-article, heartbeat
+- No open PRs, no urgent issues
+- Persistent issues dedup'd (weekly-shiplog escalation sent earlier today; PAT scope notified Apr 17)
+- Log appended to `memory/logs/2026-04-18.md`
