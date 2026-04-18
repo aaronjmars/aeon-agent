@@ -31,6 +31,7 @@
 | 2026-04-16 | Push Recap (34 commits: syndicate-article, notification fixes, monitor-kalshi, README overhaul) | repo-activity |
 | 2026-04-17 | The Agent That Pays Its Own Community: Inside Aeon's Autonomous Growth Flywheel | repo-article |
 | 2026-04-17 | The Fork Patched Upstream: Aeon Crosses Into Open-Source Governance | repo-article |
+| 2026-04-18 | Eleven Stars from a Threshold: The Day Aeon Built Its Own Growth Event | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |

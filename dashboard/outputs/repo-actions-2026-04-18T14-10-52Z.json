@@ -1,0 +1,326 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas",
+        "description": "2026-04-18"
+      },
+      "children": [
+        "metadata",
+        "sep1",
+        "items_stack"
+      ]
+    },
+    "metadata": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (189 stars, 28 forks, 92 skills, MIT License landed today).",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "items_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1",
+        "item2",
+        "item3",
+        "item4",
+        "item5",
+        "sep2",
+        "footer"
+      ]
+    },
+    "item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item1_title",
+        "item1_badges",
+        "item1_desc"
+      ]
+    },
+    "item1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Contributor Auto-Reward",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item1_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item1_badge1",
+        "item1_badge2"
+      ]
+    },
+    "item1_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration"
+      },
+      "children": []
+    },
+    "item1_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "item1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Auto-distribute $AEON to fork maintainers when their PRs merge upstream — closes the flywheel that miroshark's Apr 17 backport proved possible."
+      },
+      "children": []
+    },
+    "item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item2_title",
+        "item2_badges",
+        "item2_desc"
+      ]
+    },
+    "item2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Dashboard Live Feed",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item2_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item2_badge1",
+        "item2_badge2"
+      ]
+    },
+    "item2_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      },
+      "children": []
+    },
+    "item2_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "item2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "SSE endpoint on `/api/feed` streams new skill outputs to the dashboard in real time — turns a static viewer into an ops center operators keep open."
+      },
+      "children": []
+    },
+    "item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item3_title",
+        "item3_badges",
+        "item3_desc"
+      ]
+    },
+    "item3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. A2A Gateway Client Examples",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item3_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item3_badge1",
+        "item3_badge2"
+      ]
+    },
+    "item3_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "DX/Community"
+      },
+      "children": []
+    },
+    "item3_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "item3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Working copy-paste code for LangChain, AutoGen, CrewAI, and OpenAI Agents SDK calling Aeon skills via the A2A gateway — drops the adoption barrier from zero external integrations to running code."
+      },
+      "children": []
+    },
+    "item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item4_title",
+        "item4_badges",
+        "item4_desc"
+      ]
+    },
+    "item4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Public Status Page",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item4_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item4_badge1",
+        "item4_badge2"
+      ]
+    },
+    "item4_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Community/DX"
+      },
+      "children": []
+    },
+    "item4_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "item4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Extend update-gallery to generate `docs/status.md` with 30-day per-skill health from heartbeat logs — credibility page for the 189 stars of operators who need a URL to share."
+      },
+      "children": []
+    },
+    "item5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item5_title",
+        "item5_badges",
+        "item5_desc"
+      ]
+    },
+    "item5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Skill Marketplace Listing — Smithery",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item5_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "item5_badge1",
+        "item5_badge2"
+      ]
+    },
+    "item5_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth"
+      },
+      "children": []
+    },
+    "item5_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "item5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Submit the MCP adaptor's 92 skills to Smithery's registry — puts Aeon's tools in front of every Claude Code user browsing for automation, zero ongoing maintenance."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "footer": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-18.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

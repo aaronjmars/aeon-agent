@@ -1,0 +1,21 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "push-recap"
+      },
+      "children": [
+        "text"
+      ]
+    },
+    "text": {
+      "type": "Text",
+      "props": {
+        "text": "test from push-recap verify"
+      }
+    }
+  }
+}

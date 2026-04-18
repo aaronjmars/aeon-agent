@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-04-16*
-Generated from analysis of aaronjmars/aeon (173 stars, 20 forks, 90+ skills) — ideas for autonomous feature skill builds.
+*Repo Action Ideas — 2026-04-18 (Run 2)*
+Generated from analysis of aaronjmars/aeon (189 stars, 28 forks, 92 skills, 2 open PRs) — five fresh ideas distinct from run 1.
 
-1. Dashboard Live Feed (Feature, Medium)
-   SSE endpoint streams new skill outputs to the dashboard in real time — operators see results appear without reloading.
+1. Memory Search API (Feature, Medium)
+   REST endpoint at /api/memory/search exposes agent memory to MCP tools, A2A clients, and dashboard — the missing bridge between private state and the public interfaces already shipping.
 
-2. Farcaster Syndication (Integration, Small)
-   postprocess-farcaster.sh auto-casts articles to crypto-native Farcaster audience via Neynar API — zero skill changes needed.
+2. Webhook-to-Skill Bridge (Integration, Medium)
+   Receive GitHub webhooks and trigger skills in seconds instead of waiting for the next cron cycle — turns Aeon from a daily cron agent into a real-time reactive agent.
 
-3. Star Milestone Announcer (Growth, Small)
-   repo-pulse detects milestone crossings (175, 200, 250...) and fires a celebratory notification — turns a passive metric into a share moment.
+3. Fork Contributor Leaderboard (Community, Small)
+   Weekly ranking of most active fork operators (commits, upstream PRs, new skills) with $AEON distributed to top 3 — the developer-side twin of the tweet-allocator flywheel.
 
-4. Skill Dependency Map (Feature/DX, Medium)
-   Parses aeon.yml chains + SKILL.md files to produce a Mermaid DAG of all 90+ skill dependencies — self-documenting architecture.
+4. Skill Template Library (DX, Small)
+   Six pre-built SKILL.md starters (crypto tracker, research digest, code reviewer, etc.) with a ./add-template CLI — cuts fork operator activation time from 30-minute exploration to copy-paste.
 
-5. Public Status Page (Community/DX, Small)
-   GitHub Pages status page at /status showing 30-day skill health from heartbeat logs — builds operator credibility with zero new data collection.
+5. Skill Run Analytics Dashboard Widget (Feature, Small)
+   Dashboard tab showing per-skill runs, success rate, and cost over 14 days from token-usage.csv — real-time visibility the weekly cost-report currently delays by 7 days.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-16.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-18.md
