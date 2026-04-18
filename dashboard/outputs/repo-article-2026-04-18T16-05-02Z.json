@@ -1,0 +1,129 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Eleven Stars from a Threshold: The Day Aeon Built Its Own Growth Event"
+      },
+      "children": [
+        "mainStack"
+      ]
+    },
+    "mainStack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "descText",
+        "sep1",
+        "statsSection",
+        "sep2",
+        "shippedSection",
+        "sep3",
+        "linkSection"
+      ]
+    },
+    "descText": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon sits at 189 stars — nine from 200 — and in the same 24 hours shipped MIT License, Star Milestone Announcer skill (PR #39), and Farcaster syndication (PR #40). Three infrastructures for a growth event the agent is forecasting. First time the self-improvement loop has closed around a predicted future event instead of a present bug."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "statsSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "starStat",
+        "distanceStat"
+      ]
+    },
+    "starStat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "189"
+      }
+    },
+    "distanceStat": {
+      "type": "Stat",
+      "props": {
+        "label": "From milestone",
+        "value": "9"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "shippedSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shippedHeading",
+        "item1",
+        "item2",
+        "item3"
+      ]
+    },
+    "shippedHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped in 24 hours",
+        "level": "h3"
+      }
+    },
+    "item1": {
+      "type": "Text",
+      "props": {
+        "text": "MIT License"
+      }
+    },
+    "item2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Star Milestone Announcer skill",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/39",
+        "source": "PR #39"
+      }
+    },
+    "item3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Farcaster syndication",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/40",
+        "source": "PR #40"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "linkSection": {
+      "type": "Link",
+      "props": {
+        "label": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-18.md"
+      }
+    }
+  }
+}
