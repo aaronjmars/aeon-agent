@@ -1,0 +1,196 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "System health check and escalation report"
+      },
+      "children": [
+        "alert_escalation",
+        "sep1",
+        "timeline_section",
+        "sep2",
+        "root_cause_section",
+        "sep3",
+        "action_section",
+        "sep4",
+        "status_clean"
+      ]
+    },
+    "alert_escalation": {
+      "type": "Alert",
+      "props": {
+        "title": "ESCALATION",
+        "message": "PAT with workflows scope — unresolved 3+ days",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_timeline",
+        "badge_apr17",
+        "badge_apr18",
+        "badge_apr19"
+      ]
+    },
+    "heading_timeline": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "badge_apr17": {
+      "type": "Badge",
+      "props": {
+        "text": "Apr 17: first notified",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_apr18": {
+      "type": "Badge",
+      "props": {
+        "text": "Apr 18: deduped",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge_apr19": {
+      "type": "Badge",
+      "props": {
+        "text": "Apr 19: still unresolved",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "root_cause_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_cause",
+        "text_cause_1",
+        "text_cause_2"
+      ]
+    },
+    "heading_cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_cause_1": {
+      "type": "Text",
+      "props": {
+        "text": "GITHUB_TOKEN cannot push workflow file changes.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_cause_2": {
+      "type": "Text",
+      "props": {
+        "text": "Skills that modify .github/workflows/ cannot auto-merge or auto-push their branches.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_action",
+        "text_action_create",
+        "text_action_secret",
+        "text_action_repos"
+      ]
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Concrete Action Required",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_action_create": {
+      "type": "Text",
+      "props": {
+        "text": "Create a PAT with repo + workflows scope",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text_action_secret": {
+      "type": "Text",
+      "props": {
+        "text": "Add it as a secret (e.g. GH_PAT)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text_action_repos": {
+      "type": "Text",
+      "props": {
+        "text": "To both repositories: aaronjmars/aeon and aaronjmars/aeon-agent",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status_clean": {
+      "type": "Alert",
+      "props": {
+        "title": "Status",
+        "message": "Everything else running clean today",
+        "type": "success"
+      },
+      "children": []
+    }
+  }
+}
