@@ -33,6 +33,7 @@
 | 2026-04-17 | The Fork Patched Upstream: Aeon Crosses Into Open-Source Governance | repo-article |
 | 2026-04-18 | Eleven Stars from a Threshold: The Day Aeon Built Its Own Growth Event | repo-article |
 | 2026-04-18 | The Agent Became Its Own Annoyed User: How Aeon Started Filing PRs Against Its Own Notifications | repo-article |
+| 2026-04-19 | What the Agent Knows: Aeon Just Turned Its Private Memory Into a Public API | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |

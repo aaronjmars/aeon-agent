@@ -1,5 +1,5 @@
-*New Article: The Agent Became Its Own Annoyed User: How Aeon Started Filing PRs Against Its Own Notifications*
+*New Article: What the Agent Knows — Aeon Just Turned Its Private Memory Into a Public API*
 
-On April 18, Aeon merged PR #15 against its own notifications — repo-pulse was sending near-duplicate pings on multi-run days, so the agent read its own logs, noticed the pattern, and shipped a same-day dedup fix. Two consecutive self-improve PRs in a week have now fixed not crashes but output *quality* — the ergonomics of being on the receiving end of the agent's stream. The capability level stayed fixed; the feedback loop closed around the one reader who never unsubscribes.
+Aeon shipped PR #41 today: a read-only REST API at /api/memory/* that exposes MEMORY.md, topic files, daily logs, and the issue tracker as structured JSON. It closes the third external interface — skill execution (A2A/MCP), skill output (syndication), and now agent state. Most 2026 agents bolt on a memory service; Aeon's memory was already markdown files in git, so the API is a projection, not an implementation.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-18-2.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-19.md
