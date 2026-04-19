@@ -1,0 +1,177 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-19"
+      },
+      "children": [
+        "summary",
+        "sep1",
+        "section-dedup",
+        "sep2",
+        "section-skip",
+        "sep3",
+        "section-merge",
+        "sep4",
+        "key-changes-section",
+        "sep5",
+        "stats",
+        "link"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "aeon + aeon-agent — 7 meaningful commits by @aaronjmars + 1 PR merge (aeonframework)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-dedup": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-dedup",
+        "t-dedup"
+      ]
+    },
+    "h-dedup": {
+      "type": "Heading",
+      "props": {
+        "text": "Notification & scheduler dedup",
+        "level": "h3"
+      }
+    },
+    "t-dedup": {
+      "type": "Text",
+      "props": {
+        "text": "Aaron shipped two late-night fixes to both repos (~23:40 UTC Apr 18) that close duplicate-notification paths. Scheduler catch-up no longer fires if the skill already ran at the earlier tick; ./notify dedups by SHA256 hash within a run and suppresses short test/trace probes."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-skip": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-skip",
+        "t-skip"
+      ]
+    },
+    "h-skip": {
+      "type": "Heading",
+      "props": {
+        "text": "Skip-path notifications",
+        "level": "h3"
+      }
+    },
+    "t-skip": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent fetch-tweets and tweet-allocator now notify on empty days instead of exiting silently — operators can distinguish \"nothing to report\" from \"silent crash.\""
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-merge": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-merge",
+        "t-merge"
+      ]
+    },
+    "h-merge": {
+      "type": "Heading",
+      "props": {
+        "text": "Feature merges (pre-window edge)",
+        "level": "h3"
+      }
+    },
+    "t-merge": {
+      "type": "Text",
+      "props": {
+        "text": "star-milestone skill #39 and Farcaster syndication #40 landed on aeon main at 16:42–16:43 UTC. PR #15 (repo-pulse same-day dedup) merged to aeon-agent main at 16:47."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h-changes",
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "h-changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon .github/workflows/aeon.yml +54/-3: notify dedup via hash file + trace-probe suppression (<120-char test/trace/ping/debug messages dropped)"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon/aeon-agent messages.yml +21/-7: scheduler catch-up gate — LAST_DISPATCH_EPOCH < SCHED_EPOCH required to fire"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent skills/fetch-tweets + skills/tweet-allocator: skip-path \"stop silently\" replaced with one-line ./notify calls"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats": {
+      "type": "Text",
+      "props": {
+        "text": "Stats: 8 files changed across 7 commits, +358/-79 lines (excluding 43 chore auto-commits)"
+      }
+    },
+    "link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-19.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

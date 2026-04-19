@@ -1,20 +1,16 @@
-*Push Recap — 2026-04-18 (Run 2)*
-aeon: 2 main commits + 2 open PRs; aeon-agent: ~50 cron chores + 1 open PR (new since Run 1)
+*Push Recap — 2026-04-19*
+aeon + aeon-agent — 7 meaningful commits by @aaronjmars + 1 PR merge (aeonframework)
 
-*MIT License landed on aeon main* (d25a16c): 45-day governance gap closed. Forks now have explicit backport permission; A2A/MCP consumers have a clean downstream license.
+Notification & scheduler dedup: Aaron shipped two late-night fixes to both repos (~23:40 UTC Apr 18) that close duplicate-notification paths. Scheduler catch-up no longer fires if the skill already ran at the earlier tick; ./notify dedups by SHA256 hash within a run and suppresses short test/trace probes.
 
-*Star Milestone Announcer (PR #39)*: new skill catches threshold crossings (25/50/100/150/200/.../100000) with a 14-day highlight reel. First-run bootstrap silent. aeon sits at 189 stars — 200 is 11 stars away, ~2 days at current rate.
+Skip-path notifications: aeon-agent fetch-tweets and tweet-allocator now notify on empty days instead of exiting silently — operators can distinguish "nothing to report" from "silent crash."
 
-*Farcaster Syndication (PR #40)*: syndicate-article now cross-posts to Farcaster via Neynar alongside Dev.to. Independent channels. Signer UUID never touches disk — injected at POST time. Drive-by fix restores a silently-broken Dev.to post-process env (was missing DEVTO_API_KEY for weeks).
-
-*repo-pulse same-day dedup (aeon-agent PR #15, NEW)*: self-improve loop noticed its own duplicate notifications on multi-run days and filed a fix. Subsequent runs now skip if delta is empty or send a 'since last run' view. Agent reading its own logs as a feedback signal.
+Feature merges (pre-window edge): star-milestone skill #39 and Farcaster syndication #40 landed on aeon main at 16:42–16:43 UTC. PR #15 (repo-pulse same-day dedup) merged to aeon-agent main at 16:47.
 
 Key changes:
-- LICENSE (+21 lines) — first legal artifact on the repo
-- skills/syndicate-article/SKILL.md — Dev.to + Farcaster as independent channels with per-channel dedup markers
-- skills/repo-pulse/SKILL.md — delta-only output on subsequent runs, inline handle/fork lists for parse-ability
-- scripts/postprocess-farcaster.sh — 0-disk signer pattern; post-process for sandbox auth
+- aeon .github/workflows/aeon.yml +54/-3: notify dedup via hash file + trace-probe suppression (<120-char test/trace/ping/debug messages dropped)
+- aeon/aeon-agent messages.yml +21/-7: scheduler catch-up gate — LAST_DISPATCH_EPOCH < SCHED_EPOCH required to fire
+- aeon-agent skills/fetch-tweets + skills/tweet-allocator: skip-path "stop silently" replaced with one-line ./notify calls
 
-Stats: ~18 files, +542/-74 across 5 branches. Plus ~50 cron chore commits on aeon-agent main (no code). First recorded full autonomous cron day on aeon-agent — zero human source commits.
-
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-18.md
+Stats: 8 files changed across 7 commits, +358/-79 lines (excluding 43 chore auto-commits)
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-19.md
