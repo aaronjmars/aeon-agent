@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-04-15*
+*Last consolidated: 2026-04-19*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -11,29 +11,22 @@
 | AEON  | 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | base |
 
 ## Recent Articles
+*(Entries before 2026-04-14 archived to `memory/topics/articles-history.md`)*
 | Date | Title | Topic |
 |------|-------|-------|
-| 2026-03-19 | Changelog (51 commits, 12 features) | repo-activity |
-| 2026-03-25 | Push Recap (2 commits: json-render feed, support addr) | repo-activity |
-| 2026-03-25 | Aeon Is the Anti-OpenClaw: Why Background AI Agents Might Win | repo-article |
-| 2026-03-25 | 47 Skills in 21 Days: Solo Dev Velocity in the Agent Era | repo-article |
-| 2026-03-28 | The Agent That Fixes Itself: Inside Aeon's Self-Improvement Loop | repo-article |
-| 2026-03-28 | 47 Skills, Zero Code: How Markdown Became the Programming Language for AI Agents | repo-article |
-| 2026-03-29 | The App Store Moment for AI Agents: Why Skills Are the Unit of Distribution | repo-article |
-| 2026-03-30 | 26 Days Running: What Happens When You Let an AI Agent Operate Nonstop | repo-article |
-| 2026-03-27 | GitHub Validated What Aeon Already Built: The Background Agent Is Here | repo-article |
-| 2026-04-07 | 59 Skills and a CI Pipeline: Aeon Crosses from Prototype to Platform | repo-article |
-| 2026-04-10 | From Cron to Conversational: How Aeon's MCP Adaptor Changes the Distribution Game | repo-article |
-| 2026-04-12 | The Week the Cron Agent Grew Up: Aeon Becomes an Agent OS | repo-article |
 | 2026-04-14 | Locked, Tracked, Verified: Aeon Builds a Skills Lock File Before the Agent Supply Chain Implodes | repo-article |
 | 2026-04-15 | Push Recap (4 commits: A2A gateway, skill-leaderboard, security hardening) | repo-activity |
 | 2026-04-16 | The Interoperability Play Nobody Saw Coming: How Aeon Became Every AI Agent's Skill Layer | repo-article |
 | 2026-04-16 | Push Recap (34 commits: syndicate-article, notification fixes, monitor-kalshi, README overhaul) | repo-activity |
 | 2026-04-17 | The Agent That Pays Its Own Community: Inside Aeon's Autonomous Growth Flywheel | repo-article |
 | 2026-04-17 | The Fork Patched Upstream: Aeon Crosses Into Open-Source Governance | repo-article |
+| 2026-04-17 | Push Recap (35 commits: Fork↔Upstream Sync, Opus 4.7, fetch-tweets/tweet-allocator overhaul) | repo-activity |
 | 2026-04-18 | Eleven Stars from a Threshold: The Day Aeon Built Its Own Growth Event | repo-article |
 | 2026-04-18 | The Agent Became Its Own Annoyed User: How Aeon Started Filing PRs Against Its Own Notifications | repo-article |
+| 2026-04-18 | Weekly Shiplog (Apr 12–18, 8 themes: MCP/A2A, auto-merge, syndication, MIT License, Opus 4.7) | repo-activity |
+| 2026-04-18 | Push Recap (MIT License, star-milestone PR #39, Farcaster PR #40, repo-pulse dedup) | repo-activity |
 | 2026-04-19 | What the Agent Knows: Aeon Just Turned Its Private Memory Into a Public API | repo-article |
+| 2026-04-19 | Push Recap (7 commits: notify/scheduler dedup, 3-layer dedup stacked end-to-end) | repo-activity |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -41,17 +34,9 @@
 | 2026-03-25 | Polymarket | Geopolitics dominates; US-Iran escalation at 58.5% YES |
 
 ## Skills Built
-*(Rows before Apr 1 archived to `memory/topics/skills-history.md`)*
+*(Rows before 2026-04-10 archived to `memory/topics/skills-history.md`)*
 | Skill | Date | Notes |
 |-------|------|-------|
-| skill-discover | 2026-04-01 | Autonomous discovery of trending skills from SkillsMP/GitHub; scores, security-checks, and ranks gap-filling candidates (aeon PR #6) |
-| github-pages-gallery | 2026-04-02 | Jekyll-based public gallery at docs/ — publishes articles as browsable posts; update-gallery skill syncs weekly (aeon PR #7) |
-| deep-research | 2026-04-04 | Exhaustive multi-source synthesis (30–50 sources, 3K–5K words) using 1M context; shallow/deep modes via --depth flag (aeon PR #9) |
-| memory-flush (improved) | 2026-04-04 | Added stale-entry cleanup step: removes resolved PR lists, prunes Next Priorities, archives old Skills Built rows (aeon-agent PR #5) |
-| skill-smoke-tests | 2026-04-05 | Static SKILL.md validator + test-skills.yml CI workflow — runs on every PR touching skills/; checks frontmatter, cron, secrets, placeholders (aeon PR #10) |
-| cost-report | 2026-04-07 | Weekly API cost breakdown — reads token-usage.csv, computes $ per skill/model (Opus/Sonnet/Haiku pricing), week-over-week trend, top 10 by cost (aeon PR #12) |
-| fork-fleet | 2026-04-08 | Weekly fork fleet scan — inventories active forks, scores divergence (+3 new skill, +2 unique commit), deep-reads top 3 forks' unique skills, surfaces upstream candidates (aeon PR #13) |
-| skill-evals | 2026-04-09 | Output quality assertion framework — validates recent skill outputs against per-skill manifests (word count, required/forbidden patterns, numeric range checks); covers 14 skills; runs Sunday 6 AM UTC (aeon PR #27) |
 | mcp-skill-adaptor | 2026-04-10 | TypeScript MCP server wrapping all 54 Aeon skills as aeon-<slug> tools; one-command install via ./add-mcp; works with Claude Code and Claude Desktop (aeon PR #28) |
 | workflow-security-audit | 2026-04-11 | On-demand skill that audits .github/workflows/ for script injection, over-permissioning, unverified actions; fixed 2 critical injection vectors in messages.yml (aeon PR #29) |
 | email-notification | 2026-04-12 | Fourth notification channel via SendGrid — SENDGRID_API_KEY + NOTIFY_EMAIL_TO secrets, Email group in dashboard, plain+HTML email body; configurable subject prefix (aeon PR #30) |
@@ -72,7 +57,8 @@
 - Polymarket Gamma API: use volume_num_24hr sort for signal; newest markets are mostly noise (zero-volume crypto bets)
 - GITHUB_TOKEN cannot push workflow file changes — needs `workflows` permission (PAT or fine-grained token)
 - Self-improve outpaces review: agent opens PRs faster than human merges. PR awareness guard stops at 3+ open PRs to prevent pile-up and conflicts
-- fetch-tweets 7-day search window causes duplicate notifications — dedup by checking last 3 days of logs for already-reported tweet URLs
+- fetch-tweets dedup: now handled by persistent seen-file; notify has SHA256 message-hash layer; repo-pulse has per-run delta; scheduler has catch-up gate — three dedup layers stack end-to-end
+- weekly-shiplog heartbeat escalation (6 days) was a false positive — skill works; Mon-only cron simply hadn't fired during heartbeat's observation window
 
 ## Repo Actions Ideas Pipeline
 ~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article (Dev.to), skill-graph, star-milestone, syndicate-article (Farcaster), memory-search-api. Key unbuilt: Dashboard Live Feed, Public Status Page, Webhook-to-Skill Bridge, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
