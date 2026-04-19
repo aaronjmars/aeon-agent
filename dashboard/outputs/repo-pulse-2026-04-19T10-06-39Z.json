@@ -1,0 +1,172 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "repo_header",
+        "stats_section",
+        "sep1",
+        "stargazers_heading",
+        "stargazers_list",
+        "sep2",
+        "forks_heading",
+        "forks_list"
+      ]
+    },
+    "repo_header": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "193",
+        "delta": "+4",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "30",
+        "delta": "+3",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazer_1",
+        "stargazer_2",
+        "stargazer_3",
+        "stargazer_4"
+      ]
+    },
+    "stargazer_1": {
+      "type": "Link",
+      "props": {
+        "label": "adcdesarrollocomunitario-ops",
+        "href": "https://github.com/adcdesarrollocomunitario-ops"
+      },
+      "children": []
+    },
+    "stargazer_2": {
+      "type": "Link",
+      "props": {
+        "label": "mikedemarais",
+        "href": "https://github.com/mikedemarais"
+      },
+      "children": []
+    },
+    "stargazer_3": {
+      "type": "Link",
+      "props": {
+        "label": "akigler",
+        "href": "https://github.com/akigler"
+      },
+      "children": []
+    },
+    "stargazer_4": {
+      "type": "Link",
+      "props": {
+        "label": "valekar",
+        "href": "https://github.com/valekar"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork_1",
+        "fork_2",
+        "fork_3"
+      ]
+    },
+    "fork_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "morashad1010/aeon",
+        "href": "https://github.com/morashad1010/aeon"
+      },
+      "children": []
+    },
+    "fork_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "brandong1987/aeon",
+        "href": "https://github.com/brandong1987/aeon"
+      },
+      "children": []
+    },
+    "fork_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "maacx2022/aeon",
+        "href": "https://github.com/maacx2022/aeon"
+      },
+      "children": []
+    }
+  }
+}
