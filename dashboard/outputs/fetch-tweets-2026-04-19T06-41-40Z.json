@@ -1,0 +1,49 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Fetch Tweets",
+        "description": "2026-04-19"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_result",
+        "text_search_terms",
+        "text_api_status"
+      ]
+    },
+    "alert_result": {
+      "type": "Alert",
+      "props": {
+        "title": "No new tweets found",
+        "type": "info"
+      }
+    },
+    "text_search_terms": {
+      "type": "Text",
+      "props": {
+        "text": "Search terms: AEON OR aeonframework OR github.com/aaronjmars/aeon",
+        "variant": "body"
+      }
+    },
+    "text_api_status": {
+      "type": "Text",
+      "props": {
+        "text": "XAI_API_KEY unavailable; WebSearch fallback returned no unseen results from last 48h",
+        "variant": "caption"
+      }
+    }
+  }
+}
