@@ -1,0 +1,155 @@
+{
+  "root": "card-leaderboard",
+  "state": {},
+  "elements": {
+    "card-leaderboard": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard — 2026-04-19"
+      },
+      "children": [
+        "heading-top-skills",
+        "table-leaderboard",
+        "separator-1",
+        "heading-consensus",
+        "stack-consensus-content",
+        "separator-2",
+        "heading-adoption-gaps",
+        "text-adoption-gaps",
+        "separator-3",
+        "link-full-leaderboard"
+      ]
+    },
+    "heading-top-skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Top skills across 26 active forks",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "table-leaderboard": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Forks",
+          "Adoption"
+        ],
+        "rows": [
+          [
+            "heartbeat",
+            "26",
+            "100%"
+          ],
+          [
+            "morning-brief",
+            "1",
+            "4%"
+          ],
+          [
+            "hacker-news-digest",
+            "1",
+            "4%"
+          ],
+          [
+            "token-movers",
+            "1",
+            "4%"
+          ],
+          [
+            "token-report",
+            "1",
+            "4%"
+          ],
+          [
+            "skill-health",
+            "1",
+            "4%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-consensus": {
+      "type": "Heading",
+      "props": {
+        "text": "Consensus",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack-consensus-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-heartbeat",
+        "text-consensus-detail"
+      ]
+    },
+    "badge-heartbeat": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text-consensus-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Only skill enabled by >50% of forks",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-adoption-gaps": {
+      "type": "Heading",
+      "props": {
+        "text": "Adoption Gaps",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-adoption-gaps": {
+      "type": "Text",
+      "props": {
+        "text": "article, repo-pulse, auto-merge, self-improve, syndicate-article, skill-evals, fork-fleet, and ~75 more skills have zero/near-zero fleet penetration",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-full-leaderboard": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "articles/skill-leaderboard-2026-04-19.md"
+      },
+      "children": []
+    }
+  }
+}
