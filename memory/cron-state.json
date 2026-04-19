@@ -137,5 +137,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "skill-leaderboard": {
+    "last_dispatch": "2026-04-19T17:18:31Z",
+    "last_status": "dispatched"
   }
 }
