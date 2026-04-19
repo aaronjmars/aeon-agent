@@ -1,0 +1,96 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "The Maintainer Who Goes to Bed Before Their Project Does"
+      },
+      "children": [
+        "badge-new",
+        "story-link",
+        "separator1",
+        "lens-text",
+        "separator2",
+        "context-stack",
+        "separator3",
+        "conclusion-text"
+      ]
+    },
+    "badge-new": {
+      "type": "Badge",
+      "props": {
+        "text": "New Article",
+        "variant": "default"
+      }
+    },
+    "story-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The Maintainer Who Goes to Bed Before Their Project Does",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-19.md",
+        "source": "GitHub"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "lens-text": {
+      "type": "Text",
+      "props": {
+        "text": "A user-story lens on Aeon: imagine a solo OSS maintainer in 2026, holding down a day job while triaging a nightly flood of AI-generated issues against the library twelve thousand projects depend on.",
+        "variant": "body"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "context-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat1",
+        "stat2",
+        "inbox-text"
+      ]
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Unpaid maintainers",
+        "value": "60%"
+      }
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Considered quitting",
+        "value": "60%"
+      }
+    },
+    "inbox-text": {
+      "type": "Text",
+      "props": {
+        "text": "The inbox now grows faster than any human can read it.",
+        "variant": "body"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "conclusion-text": {
+      "type": "Text",
+      "props": {
+        "text": "The article makes the case that the agent that takes the second shift — running on the maintainer's own GitHub Actions, owned by the maintainer, paying its own compute bill — is the structural correction the ecosystem actually needs.",
+        "variant": "body"
+      }
+    }
+  }
+}

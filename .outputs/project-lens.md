@@ -1,5 +1,5 @@
-*New Article: The Plugin Pattern Always Wins — Agent Skills Are WordPress in Fast-Forward*
+*New Article: The Maintainer Who Goes to Bed Before Their Project Does*
 
-WordPress took 7 years to reach 10,000 plugins. SKILL.md crossed it in 6 weeks — and is now at 425,000+ across SkillsMP and skills.sh, with 13.4% carrying critical security issues per Snyk's February audit. Aeon's last two weeks of plumbing — skills.lock, skill-update-check, workflow-security-audit, skill-leaderboard — are the same provenance/security retrofits WordPress.org spent a decade adding, except shipped before the ecosystem grew old enough to demand them. The skill is the asset; the runtime is the rental car.
+A user-story lens on Aeon: imagine a solo OSS maintainer in 2026, holding down a day job while triaging a nightly flood of AI-generated issues against the library twelve thousand projects depend on. 60% of maintainers are unpaid; 60% have considered quitting; the inbox now grows faster than any human can read it. The article makes the case that the agent that takes the second shift — running on the maintainer's own GitHub Actions, owned by the maintainer, paying its own compute bill — is the structural correction the ecosystem actually needs.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-18-2.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-19.md
