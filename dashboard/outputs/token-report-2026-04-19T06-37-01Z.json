@@ -1,0 +1,122 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Daily — 2026-04-19"
+      },
+      "children": [
+        "price-stat",
+        "separator1",
+        "liquidity-volume-section",
+        "separator2",
+        "buys-sells-stat",
+        "separator3",
+        "time-period-section",
+        "separator4",
+        "commentary",
+        "chart-link"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000002139",
+        "delta": "-19.0%",
+        "trend": "down"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "liquidity-volume-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liquidity-stat",
+        "volume-stat"
+      ]
+    },
+    "liquidity-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$167.1K"
+      }
+    },
+    "volume-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Vol",
+        "value": "$81.7K"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "buys-sells-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "155/114 (1.36:1)"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "time-period-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "7d-stat",
+        "30d-stat"
+      ]
+    },
+    "7d-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+102%",
+        "trend": "up"
+      }
+    },
+    "30d-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+711%",
+        "trend": "up"
+      }
+    },
+    "separator4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "commentary": {
+      "type": "Text",
+      "props": {
+        "text": "Post-breakout retracement continues; price down 56% from Apr 16 peak but structure intact — buy ratio positive and 7d gains still +102%.",
+        "variant": "body"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
