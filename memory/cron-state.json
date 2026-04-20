@@ -60,8 +60,8 @@
     "success_rate": 1
   },
   "self-improve": {
-    "last_dispatch": "2026-04-18T13:18:45Z",
-    "last_status": "success",
+    "last_dispatch": "2026-04-20T13:39:24Z",
+    "last_status": "dispatched",
     "last_success": "2026-04-18T13:24:20Z",
     "total_runs": 3,
     "total_successes": 3,
