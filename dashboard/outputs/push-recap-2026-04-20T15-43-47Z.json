@@ -1,0 +1,334 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-20"
+      },
+      "children": [
+        "summary-section",
+        "sep1",
+        "features-section",
+        "sep2",
+        "notification-section",
+        "sep3",
+        "fetch-tweets-section",
+        "sep4",
+        "key-changes-section",
+        "sep5",
+        "stats-section"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-text",
+        "summary-stat"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon: 5 PRs merged · aeon-agent: 4 mirror commits · all @aaronjmars",
+        "variant": "lead"
+      }
+    },
+    "summary-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines changed",
+        "value": "+795/-56"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "features-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "features-heading",
+        "pr41-stack",
+        "pr42-stack"
+      ]
+    },
+    "features-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Features shipped",
+        "level": "h2"
+      }
+    },
+    "pr41-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr41-link",
+        "pr41-text"
+      ]
+    },
+    "pr41-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #41 Memory Search API",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/41"
+      }
+    },
+    "pr41-text": {
+      "type": "Text",
+      "props": {
+        "text": "read-only REST at /api/memory/* exposing MEMORY.md, topics, logs, issues as JSON — path-safe reader + token-scored search, +480 lines across 8 new files",
+        "variant": "body"
+      }
+    },
+    "pr42-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr42-link",
+        "pr42-text"
+      ]
+    },
+    "pr42-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #42 fork-contributor-leaderboard",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/42"
+      }
+    },
+    "pr42-text": {
+      "type": "Text",
+      "props": {
+        "text": "weekly Sunday skill ranking community devs across the 30+ fork fleet by merged/open PRs, commits, new skills, stars — bots filtered, opt-out supported, first run 2026-04-26",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notification-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notif-heading",
+        "pr45-stack",
+        "pr44-stack"
+      ]
+    },
+    "notif-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notification stack hardening (3 PRs)",
+        "level": "h2"
+      }
+    },
+    "pr45-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr45-link",
+        "pr45-text"
+      ]
+    },
+    "pr45-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #45 Telegram message chunking",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/45"
+      }
+    },
+    "pr45-text": {
+      "type": "Text",
+      "props": {
+        "text": "chunks long Telegram messages at paragraph/line boundaries with [i/N] suffix instead of slicing them at byte 3990 — feature + weekly-shiplog were losing PR links mid-paragraph",
+        "variant": "body"
+      }
+    },
+    "pr44-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr44-link",
+        "pr44-text"
+      ]
+    },
+    "pr44-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #44 Repository variable migration",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/44"
+      }
+    },
+    "pr44-text": {
+      "type": "Text",
+      "props": {
+        "text": "migrates three skill notifications from ambiguous \"OWNER/REPO\" literals to $GITHUB_REPOSITORY so article links are clickable and point at the running repo, not the watched one",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fetch-tweets-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fetch-tweets-heading",
+        "pr43-link",
+        "fetch-tweets-bugs",
+        "fetch-tweets-verification"
+      ]
+    },
+    "fetch-tweets-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "fetch-tweets reliability (PR #43)",
+        "level": "h2"
+      }
+    },
+    "pr43-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #43 fetch-tweets fixes",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/43"
+      }
+    },
+    "fetch-tweets-bugs": {
+      "type": "Text",
+      "props": {
+        "text": "Two real bugs, two silent-failure days. (1) scripts/prefetch-xai.sh had curl --max-time 60 on Grok x_search calls that routinely take 60-120s — every run timed out, cache never written, skill fell through to dead-end WebSearch. Bumped to 180s + one retry on exit 28. (2) The pre-fetch workflow step inlined ${{ inputs.var }} into bash source, so cashtags like $AEON were expanded to empty before reaching the filter — 2/3 OR-patterns survived, most tweets dropped. Fix: route via a SKILL_VAR env var.",
+        "variant": "body"
+      }
+    },
+    "fetch-tweets-verification": {
+      "type": "Text",
+      "props": {
+        "text": "Verified on miroshark-aeon: 0/5 → 11/11 kept, 12:32 UTC aeon-agent run posted 12 tweets",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key-changes-heading",
+        "key-change-1",
+        "key-change-2",
+        "key-change-3"
+      ]
+    },
+    "key-changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "key-change-1": {
+      "type": "Text",
+      "props": {
+        "text": "Memory Search API adds 8 routes + 480 lines of additive surface — Aeon's markdown state is now queryable without scraping raw files (PR #41)",
+        "variant": "body"
+      }
+    },
+    "key-change-2": {
+      "type": "Text",
+      "props": {
+        "text": "Telegram chunker: base64-piped, HTML-converted per-chunk, 0.3s ordered delay — no more mid-paragraph truncation (PR #45)",
+        "variant": "body"
+      }
+    },
+    "key-change-3": {
+      "type": "Text",
+      "props": {
+        "text": "fetch-tweets comes back online after 48h of silent FETCH_TWEETS_EMPTY days — 180s timeout + SKILL_VAR env restore 12-tweet yield (PR #43)",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-heading",
+        "stats-text",
+        "recap-link"
+      ]
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "stats-text": {
+      "type": "Text",
+      "props": {
+        "text": "13 files changed, +795/-56 lines (excluding 44 cron chore auto-commits on aeon-agent)",
+        "variant": "body"
+      }
+    },
+    "recap-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap: push-recap-2026-04-20.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-20.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
