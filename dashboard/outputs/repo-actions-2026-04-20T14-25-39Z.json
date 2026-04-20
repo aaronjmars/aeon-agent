@@ -1,0 +1,334 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-04-20"
+      },
+      "children": [
+        "desc-text",
+        "repo-stats",
+        "separator-1",
+        "ideas-stack",
+        "separator-2",
+        "article-link"
+      ]
+    },
+    "desc-text": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon — these are ideas that could be autonomously built by the feature skill tomorrow.",
+        "variant": "muted"
+      }
+    },
+    "repo-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks",
+        "stat-skills"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "198"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "32"
+      }
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills",
+        "value": "93"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ideas-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "idea-1",
+        "idea-2",
+        "idea-3",
+        "idea-4",
+        "idea-5"
+      ]
+    },
+    "idea-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-1-title",
+        "idea-1-badges",
+        "idea-1-desc"
+      ]
+    },
+    "idea-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "A2A / MCP Client Integration Examples",
+        "level": "h3"
+      }
+    },
+    "idea-1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1-cat",
+        "badge-1-size"
+      ]
+    },
+    "badge-1-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Community/DX"
+      }
+    },
+    "badge-1-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "idea-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Working LangChain/AutoGen/CrewAI/OpenAI Agents SDK scripts calling real Aeon skills — zero observed integrations despite gateway being live for weeks, this fixes the adoption gap."
+      }
+    },
+    "idea-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-2-title",
+        "idea-2-badges",
+        "idea-2-desc"
+      ]
+    },
+    "idea-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator Onboarding Validator",
+        "level": "h3"
+      }
+    },
+    "idea-2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-2-cat",
+        "badge-2-size"
+      ]
+    },
+    "badge-2-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX"
+      }
+    },
+    "badge-2-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "idea-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "One-shot skill that checks secrets, Actions, notification channels, and memory write access — sends a step-by-step checklist with fix instructions to reduce fork abandonment from misconfiguration."
+      }
+    },
+    "idea-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-3-title",
+        "idea-3-badges",
+        "idea-3-desc"
+      ]
+    },
+    "idea-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Reactive Inbound Commands via Telegram/Discord",
+        "level": "h3"
+      }
+    },
+    "idea-3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-3-cat",
+        "badge-3-size"
+      ]
+    },
+    "badge-3-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration"
+      }
+    },
+    "badge-3-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium"
+      }
+    },
+    "idea-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Parse free-form messages ('run fetch-tweets', 'show token price') from configured channels and dispatch skills via workflow_dispatch — turns notification channels into bidirectional remote controls."
+      }
+    },
+    "idea-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-4-title",
+        "idea-4-badges",
+        "idea-4-desc"
+      ]
+    },
+    "idea-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Cross-Fork Skill Customization Digest",
+        "level": "h3"
+      }
+    },
+    "idea-4-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-4-cat",
+        "badge-4-size"
+      ]
+    },
+    "badge-4-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Community"
+      }
+    },
+    "badge-4-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "idea-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly diff of each fork's aeon.yml against upstream, surfacing the 10 most-customized skills and common var patterns — proxy for upstream feature priorities without requiring anyone to file an issue."
+      }
+    },
+    "idea-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-5-title",
+        "idea-5-badges",
+        "idea-5-desc"
+      ]
+    },
+    "idea-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Smithery / MCP Directory Submission",
+        "level": "h3"
+      }
+    },
+    "idea-5-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-5-cat",
+        "badge-5-size"
+      ]
+    },
+    "badge-5-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth"
+      }
+    },
+    "badge-5-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "idea-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Submit the 93-tool MCP adaptor to Smithery.ai + Anthropic plugin directory; weekly health check that the listing stays current — puts Aeon in front of every developer searching for agent tools."
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-20.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
