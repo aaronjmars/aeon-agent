@@ -1,0 +1,277 @@
+{
+  "root": "root",
+  "state": {},
+  "elements": {
+    "root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-20)"
+      },
+      "children": [
+        "tweets_stack"
+      ]
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_card",
+        "tweet1_link",
+        "sep1",
+        "tweet2_card",
+        "tweet2_link",
+        "sep2",
+        "tweet3_card",
+        "tweet3_link",
+        "sep3",
+        "tweet4_card",
+        "tweet4_link",
+        "sep4",
+        "tweet5_card",
+        "tweet5_link",
+        "sep5",
+        "tweet6_card",
+        "tweet6_link",
+        "sep6",
+        "tweet7_card",
+        "tweet7_link",
+        "sep7",
+        "tweet8_card",
+        "tweet8_link",
+        "sep8",
+        "tweet9_card",
+        "tweet9_link",
+        "sep9",
+        "tweet10_card",
+        "tweet10_link"
+      ]
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Whale_AI_net",
+        "handle": "Whale_AI_net",
+        "text": "Wild timing: $AEON autonomously fixed a high-severity Vercel vuln the day before Vercel admitted unauthorized internal access. Built different.",
+        "likes": 25,
+        "retweets": 7
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Whale_AI_net/status/2045913820825309690"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MazfuLucianazwa",
+        "handle": "MazfuLucianazwa",
+        "text": "Top 9 on DexScreener. Real infrastructure play. $AEON found and fixed a high-severity Vercel issue autonomously.",
+        "likes": 7,
+        "retweets": 3
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MazfuLucianazwa/status/2045982611395465345"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "10xgemhunter",
+        "handle": "10xgemhunter",
+        "text": "Gem picker includes $AEON in recent 3x calls alongside other movers.",
+        "likes": 3,
+        "retweets": 0
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/10xgemhunter/status/2045874620625256476"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaWachu80608",
+        "handle": "DaWachu80608",
+        "text": "Yesterday $AEON found that bug and fixed it by himself.",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaWachu80608/status/2045935173573713943"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet5_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MazfuLucianazwa",
+        "handle": "MazfuLucianazwa",
+        "text": "Vercel incident + Aeon PR moment: tagging ecosystem accounts.",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MazfuLucianazwa/status/2045975797614403747"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet6_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BaseWhaleAlert",
+        "handle": "BaseWhaleAlert",
+        "text": "Whale bought $2.28K of $AEON at $303K MC.",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet6_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BaseWhaleAlert/status/2045914000064414069"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet7_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xkarmaFi",
+        "handle": "0xkarmaFi",
+        "text": "Entry at ~80K, watching how far it goes.",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet7_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xkarmaFi/status/2046014793606451636"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet8_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SeismicCrypto",
+        "handle": "SeismicCrypto",
+        "text": "Top 10 Meme Movers: $AEON ranked #1.",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet8_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/SeismicCrypto/status/2045925464447807759"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet9_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BaseWhaleAlert",
+        "handle": "BaseWhaleAlert",
+        "text": "Whale bought $2.27K of $AEON at $335K MC.",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet9_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BaseWhaleAlert/status/2045927266639618368"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet10_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BaseWhaleAlert",
+        "handle": "BaseWhaleAlert",
+        "text": "Whale bought $1.39K of $AEON at $277K MC.",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet10_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BaseWhaleAlert/status/2045829019107533006"
+      }
+    }
+  }
+}
