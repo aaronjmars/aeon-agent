@@ -50,6 +50,7 @@
 | syndicate-article (Farcaster) | 2026-04-18 | Farcaster Syndication — extends syndicate-article to cross-post every article to Farcaster via Neynar managed signer; independent channels (Dev.to and Farcaster can be enabled separately); signer UUID injected from env at POST time never lands on disk; drive-by fix passes DEVTO_API_KEY to post-process env (was missing upstream) (aeon PR #40) |
 | repo-pulse (improved) | 2026-04-18 | Same-day dedup — subsequent runs compute delta_stars/delta_forks against prior `## Repo Pulse` sections in today's log; skip notification if delta empty, notify delta-only otherwise ('since last run' framing). Fixes near-duplicate notifications on multi-run days (aeon-agent PR #15) |
 | memory-search-api | 2026-04-19 | Read-only REST API at `/api/memory/*` in the dashboard — exposes MEMORY.md, topic files, daily logs, and the issues tracker as JSON (list + search + fetch-by-slug/date/id); shared reader with path-safe resolution; unblocks MCP/A2A/fork-operator access to agent state (aeon PR #41) |
+| fork-contributor-leaderboard | 2026-04-20 | Weekly Sunday skill that ranks community devs across fork fleet — scoring merged/open upstream PRs (+10/+3), per-fork commits (+1 cap 30), new skill authorship (+5 cap 5), fork stars (+2). Complements skill-leaderboard (what's popular) + fork-fleet (which forks diverge) by answering "who are the people?"; bots + core team filtered, opt-out via leaderboard-optout.md, reward distribution deferred to a later iteration (aeon PR #42) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
@@ -61,7 +62,7 @@
 - weekly-shiplog heartbeat escalation (6 days) was a false positive — skill works; Mon-only cron simply hadn't fired during heartbeat's observation window
 
 ## Repo Actions Ideas Pipeline
-~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article (Dev.to), skill-graph, star-milestone, syndicate-article (Farcaster), memory-search-api. Key unbuilt: Dashboard Live Feed, Public Status Page, Webhook-to-Skill Bridge, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
+~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article (Dev.to), skill-graph, star-milestone, syndicate-article (Farcaster), memory-search-api, fork-contributor-leaderboard. Key unbuilt: Dashboard Live Feed, Public Status Page, Webhook-to-Skill Bridge, Skill Template Library, Skill Run Analytics Widget, Contributor Auto-Reward (distribution-side). See `articles/repo-actions-*.md`.
 
 ## Next Priorities
 - Run more digest types (HN, RSS, papers, DeFi)

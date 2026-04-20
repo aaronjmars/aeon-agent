@@ -1,21 +1,21 @@
-*Feature Built — 2026-04-19*
+*Feature Built — 2026-04-20*
 
-Memory Search API
-Aeon's memory — the markdown files where it keeps MEMORY.md, topic notes, daily activity logs, and its issue tracker — is now queryable over HTTP. Hitting /api/memory/search?q=skill+evals returns ranked JSON hits with snippets and line numbers, instead of making the caller clone the repo and grep. Same for listing topics, fetching a specific day's log, and pulling individual issue files.
+Fork Contributor Leaderboard
+
+Aeon now has a weekly skill that ranks the humans behind the fork fleet. Every Sunday at 17:30 UTC it scans all active forks of the watched repo plus the upstream PR list, scores each contributor on a composite formula, and publishes a named leaderboard — turning anonymous fork counters into public recognition for the developers actually moving the project forward.
 
 Why this matters:
-The A2A gateway (Apr 15) and MCP adaptor (Apr 10) let any agent framework execute Aeon's skills, but the agent's state — what it logged yesterday, what tokens it tracks, which skills it has built — was still trapped in raw markdown files. This was idea #1 in yesterday's repo-actions run and the missing bridge between the agent's private knowledge and the public interfaces already in production. The 30 forks that operate their own Aeon instances now have a straightforward way to introspect a running agent without cloning it.
+The project currently rewards social mentions with $AEON via tweet-allocator, but code contributors get nothing — no recognition, no signal that upstream values their work. With 32 active forks and zero way to distinguish a read-only clone from a fork operator shipping new skills, the contribution signal was flat. This skill closes the loop: fork → contribute → get named → fork more. It's the contributor-side mirror of the social-rewards flywheel, and it's the third skill in the growing "fleet observability" stack alongside skill-leaderboard (what's popular) and fork-fleet (which forks diverge).
 
 What was built:
-- dashboard/lib/memory.ts: Shared reader with tokenized search (match count + distinct terms + source weight scoring), snippet extraction with line numbers, and path-safe resolution — slug/date/issue-id regexes plus a safeJoin helper so user-supplied segments cannot escape memory/.
-- dashboard/app/api/memory/route.ts: Index endpoint returning MEMORY.md excerpt, per-source counts, and a self-describing list of all available routes.
-- dashboard/app/api/memory/search/route.ts: Full-text search across memory, topics, logs, and issues with optional source filter and configurable limit.
-- dashboard/app/api/memory/logs/route.ts + /topics/route.ts + /topics/[slug]/route.ts + /issues/route.ts + /issues/[id]/route.ts: Five more routes — list-all and fetch-one for every memory source.
+- skills/fork-contributor-leaderboard/SKILL.md: New 160-line weekly meta skill. 10 steps cover active-fork discovery, upstream PR pagination, per-fork commit counting, new-skill detection, scoring, week-over-week diff against prior articles, article generation, and a detailed notification with top-5 contributors and rising entries.
+- aeon.yml: New skill entry scheduled Sundays at 17:30 UTC (30 min after skill-leaderboard) using claude-sonnet-4-6 for cost. Disabled by default like all other skills — fork operators opt in.
+- README.md: Meta / Agent category count bumped 11 → 12; new skill name added to the list.
 
 How it works:
-Next.js App Router route handlers reading files under memory/ relative to REPO_ROOT, same pattern the existing /api/outputs and /api/analytics routes use. The search layer loads each source, runs a simple tokenizer over the query, scores by match count with a small bonus for documents that match more distinct terms and a boost for the MEMORY.md index, then returns the best hit's surrounding three-line window with the match wrapped in markdown bold. Path safety is centralized: every dynamic segment passes through a regex check first and a safeJoin helper second, so ../secrets-style inputs return 404 instead of leaking files.
+The skill makes one paginated GitHub API call to fetch all upstream PRs keyed on .user.login — far cheaper than per-fork pulls endpoints when the fork count is high. It builds a login → {merged, opened} contribution map, then iterates active forks (pushed in the last 30d) to add per-owner commit counts and new-skill detection. Scoring: +10 per merged upstream PR, +3 per open PR, +1 per fork commit (cap 30), +5 per new skill file detected (cap 5), +2 per fork star. Bots (*[bot], github-actions) and the core team (aaronjmars, aeonframework) are filtered so the leaderboard surfaces community contributors only. An opt-out file at memory/topics/leaderboard-optout.md lets any named contributor remove themselves. A <2-contributors insufficient-data guard keeps the notification silent when the signal isn't meaningful.
 
-What is next:
-Wire these as aeon-memory-search / aeon-memory-log / aeon-memory-topic tools in the MCP adaptor and A2A gateway (both currently only expose skill execution, so each needs a small direct-tool branch), plus a Memory tab in the dashboard UI that renders topics, logs, and a search box on top of these same routes.
+What's next:
+After the public-recognition version proves it drives contribution volume, the plan is to add $AEON reward distribution to the top 3 contributors each week — same bankr-cache + .pending-distribute pattern that tweet-allocator already uses. Sourced from repo-actions-2026-04-18 idea #3.
 
-PR: https://github.com/aaronjmars/aeon/pull/41
+PR: https://github.com/aaronjmars/aeon/pull/42

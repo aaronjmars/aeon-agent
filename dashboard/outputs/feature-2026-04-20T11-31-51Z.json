@@ -1,0 +1,164 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-04-20"
+      },
+      "children": [
+        "heading_feature",
+        "text_intro",
+        "separator_1",
+        "heading_why",
+        "text_why",
+        "separator_2",
+        "heading_built",
+        "stack_built",
+        "separator_3",
+        "heading_how",
+        "text_how",
+        "separator_4",
+        "heading_next",
+        "text_next",
+        "separator_5",
+        "pr_link"
+      ]
+    },
+    "heading_feature": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork Contributor Leaderboard",
+        "level": "h2"
+      }
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon now has a weekly skill that ranks the humans behind the fork fleet. Every Sunday at 17:30 UTC it scans all active forks of the watched repo plus the upstream PR list, scores each contributor on a composite formula, and publishes a named leaderboard — turning anonymous fork counters into public recognition for the developers actually moving the project forward.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters",
+        "level": "h3"
+      }
+    },
+    "text_why": {
+      "type": "Text",
+      "props": {
+        "text": "The project currently rewards social mentions with $AEON via tweet-allocator, but code contributors get nothing — no recognition, no signal that upstream values their work. With 32 active forks and zero way to distinguish a read-only clone from a fork operator shipping new skills, the contribution signal was flat. This skill closes the loop: fork → contribute → get named → fork more. It's the contributor-side mirror of the social-rewards flywheel, and it's the third skill in the growing \"fleet observability\" stack alongside skill-leaderboard (what's popular) and fork-fleet (which forks diverge).",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_built": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built",
+        "level": "h3"
+      }
+    },
+    "stack_built": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_built_1",
+        "text_built_2",
+        "text_built_3"
+      ]
+    },
+    "text_built_1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/fork-contributor-leaderboard/SKILL.md: New 160-line weekly meta skill. 10 steps cover active-fork discovery, upstream PR pagination, per-fork commit counting, new-skill detection, scoring, week-over-week diff against prior articles, article generation, and a detailed notification with top-5 contributors and rising entries.",
+        "variant": "body"
+      }
+    },
+    "text_built_2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml: New skill entry scheduled Sundays at 17:30 UTC (30 min after skill-leaderboard) using claude-sonnet-4-6 for cost. Disabled by default like all other skills — fork operators opt in.",
+        "variant": "body"
+      }
+    },
+    "text_built_3": {
+      "type": "Text",
+      "props": {
+        "text": "README.md: Meta / Agent category count bumped 11 → 12; new skill name added to the list.",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_how": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works",
+        "level": "h3"
+      }
+    },
+    "text_how": {
+      "type": "Text",
+      "props": {
+        "text": "The skill makes one paginated GitHub API call to fetch all upstream PRs keyed on .user.login — far cheaper than per-fork pulls endpoints when the fork count is high. It builds a login → {merged, opened} contribution map, then iterates active forks (pushed in the last 30d) to add per-owner commit counts and new-skill detection. Scoring: +10 per merged upstream PR, +3 per open PR, +1 per fork commit (cap 30), +5 per new skill file detected (cap 5), +2 per fork star. Bots (*[bot], github-actions) and the core team (aaronjmars, aeonframework) are filtered so the leaderboard surfaces community contributors only. An opt-out file at memory/topics/leaderboard-optout.md lets any named contributor remove themselves. A <2-contributors insufficient-data guard keeps the notification silent when the signal isn't meaningful.",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_next": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next",
+        "level": "h3"
+      }
+    },
+    "text_next": {
+      "type": "Text",
+      "props": {
+        "text": "After the public-recognition version proves it drives contribution volume, the plan is to add $AEON reward distribution to the top 3 contributors each week — same bankr-cache + .pending-distribute pattern that tweet-allocator already uses. Sourced from repo-actions-2026-04-18 idea #3.",
+        "variant": "body"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #42",
+        "href": "https://github.com/aaronjmars/aeon/pull/42",
+        "source": "GitHub"
+      }
+    }
+  }
+}
