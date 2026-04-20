@@ -1,14 +1,16 @@
-*Agent Self-Improvement — 2026-04-18*
+*Agent Self-Improvement — 2026-04-20*
 
-repo-pulse same-day dedup — subsequent runs of repo-pulse now notify only the delta since the prior run today, not the full 24h list. The first run of each day is unchanged; a second run computes delta_stars / delta_forks against the prior '## Repo Pulse' section and either skips (delta empty) or sends a 'since last run' pared-down notification.
+Prefetch error marker + skill short-circuit on XAI failures
 
-Why: Apr 17 and Apr 18 both saw repo-pulse run twice per day. The 24h rolling window caused heavy overlap — Apr 18 Run 1 vs Run 2 reported the identical 7 stargazers and 3 of 4 forks overlapped. Both runs sent full notifications, so recipients got near-duplicate repo-pulse pings within hours.
+When the XAI prefetch curl fails (timeout or HTTP error), `scripts/prefetch-xai.sh` now writes a one-line reason to `.xai-cache/<outfile>.error`. The fetch-tweets skill checks this marker and skips Path B (sandbox blocks `$XAI_API_KEY` env-var expansion) and Path C (WebSearch returns 0 fresh tweets when XAI is the source of truth) — both fall-back paths that consistently fail anyway. The prefetch script also gets a third retry, an explicit `--connect-timeout 30`, and `-sS` so curl errors surface to stderr.
+
+Why: Apr 19 and Apr 20 morning fetch-tweets runs both logged FETCH_TWEETS_EMPTY because the XAI prefetch curl exited at exactly 60s with no visible retry, after which the skill burned ~10K tokens probing dead-end fallbacks before giving up. Two failures in two days; same shape.
 
 What changed:
-- skills/repo-pulse/SKILL.md: new step 5b (parse prior same-day sections, compute delta, decide notify vs skip), subsequent-run notification template, log format now inlines handle + fork lists so the next run can parse them
-- memory/logs/2026-04-18.md: self-improve trigger + diff logged
-- memory/MEMORY.md: Skills Built row for the improvement
+- scripts/prefetch-xai.sh: write `.xai-cache/<outfile>.error` on terminal failure (curl exit or HTTP non-200), retry budget 2→3 attempts, --connect-timeout 30, -sS, retry-iteration logging
+- skills/fetch-tweets/SKILL.md: Path A short-circuit step — if cache JSON missing AND error marker present, jump to FETCH_TWEETS_PREFETCH_FAILED with the reason in the notification
+- memory/MEMORY.md, memory/logs/2026-04-20.md: log entry + Skills Built row
 
-Impact: cuts notification spam on multi-run repo-pulse days. Recipients get pinged for new activity only, not the same 24h list twice.
+Impact: ~10K tokens saved per prefetch-failure run, faster failure detection (3 attempts × 30s connect ≈ 90s worst case vs. burning multi-step Claude exploration), and persistent XAI outages now surface a specific reason in notifications instead of a generic "no tweets found." Fix is generic across all xai_search() callers (refresh-x, remix-tweets, narrative-tracker, article, tweet-roundup).
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/15
+PR: https://github.com/aaronjmars/aeon-agent/pull/16
