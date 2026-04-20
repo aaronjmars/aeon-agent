@@ -1,0 +1,224 @@
+{
+  "root": "card-shiplog",
+  "state": {},
+  "elements": {
+    "card-shiplog": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog"
+      },
+      "children": [
+        "heading-main",
+        "text-narrative",
+        "sep-1",
+        "heading-shipped",
+        "shipped-items",
+        "sep-2",
+        "heading-stats",
+        "stats-stack",
+        "sep-3",
+        "link-fullupdate"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly Shiplog — 2026-04-20",
+        "level": "h1"
+      },
+      "children": []
+    },
+    "text-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon closed its loops this week — three independent dedup layers (per-skill, per-scheduler, per-message) now stack end-to-end after a crescendo of new surfaces (MCP + A2A + 25 fork-merge skills + MIT License) and ended with memory exposed as a public REST API.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "shipped-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-1",
+        "item-2",
+        "item-3"
+      ]
+    },
+    "item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-1-title",
+        "item-1-desc"
+      ]
+    },
+    "item-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Memory Search API",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "PR #41 open — read-only REST at /api/memory/* unblocks MCP/A2A access to agent state",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-2-title",
+        "item-2-desc"
+      ]
+    },
+    "item-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Three-layer notification dedup stack",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Repo-pulse same-day (PR #15), scheduler catch-up gating, notify SHA256 hashing",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-3-title",
+        "item-3-desc"
+      ]
+    },
+    "item-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Star Milestone + Farcaster syndication",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Merged just before the imminent 200-star crossing (aeon at 195)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-commits",
+        "stat-prs",
+        "stat-lines",
+        "stat-aeon"
+      ]
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Meaningful commits",
+        "value": "~100"
+      },
+      "children": []
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs merged",
+        "value": "19"
+      },
+      "children": []
+    },
+    "stat-lines": {
+      "type": "Text",
+      "props": {
+        "text": "Lines changed: +15,000 / -3,500",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stat-aeon": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON 24h",
+        "value": "+48.62%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-fullupdate": {
+      "type": "Link",
+      "props": {
+        "label": "Full update",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-04-20.md"
+      },
+      "children": []
+    }
+  }
+}
