@@ -1,0 +1,82 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-main",
+        "text-full",
+        "grid-details",
+        "link-article"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon Stopped Counting Forks and Started Naming Names"
+      }
+    },
+    "text-full": {
+      "type": "Text",
+      "props": {
+        "text": "Today's ship — fork-contributor-leaderboard (PR #42) — completes Aeon's fork intelligence triad: skill-leaderboard answers what's popular, fork-fleet answers which forks diverge, and now this one answers who the contributors are. With 32 forks (26 active), the agent finally has a way to read its community as people instead of as a count. Token ripped +48% on a maintenance day with no flagship feature."
+      }
+    },
+    "grid-details": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-forks",
+        "stat-active",
+        "stat-token"
+      ]
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Forks",
+        "value": "32"
+      }
+    },
+    "stat-active": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Forks",
+        "value": "26"
+      }
+    },
+    "stat-token": {
+      "type": "Stat",
+      "props": {
+        "label": "Token Performance",
+        "value": "+48%",
+        "trend": "up"
+      }
+    },
+    "link-article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-20.md",
+        "source": "repo-article"
+      }
+    }
+  }
+}

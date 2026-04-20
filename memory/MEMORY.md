@@ -27,6 +27,9 @@
 | 2026-04-18 | Push Recap (MIT License, star-milestone PR #39, Farcaster PR #40, repo-pulse dedup) | repo-activity |
 | 2026-04-19 | What the Agent Knows: Aeon Just Turned Its Private Memory Into a Public API | repo-article |
 | 2026-04-19 | Push Recap (7 commits: notify/scheduler dedup, 3-layer dedup stacked end-to-end) | repo-activity |
+| 2026-04-20 | Aeon Stopped Counting Forks and Started Naming Names | repo-article |
+| 2026-04-20 | Push Recap (9 commits: PRs #41-#45 — Memory Search API, fork-contributor-leaderboard, notification stack hardening) | repo-activity |
+| 2026-04-20 | Weekly Shiplog Apr 13–20 (8 themes: MCP/A2A, Memory API, fork intelligence, dedup stack) | repo-activity |
 
 ## Recent Digests
 | Date | Type | Key Topics |
