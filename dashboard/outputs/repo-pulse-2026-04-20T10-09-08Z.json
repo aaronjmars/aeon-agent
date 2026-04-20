@@ -1,0 +1,163 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "repo-link",
+        "separator1",
+        "stats-stack",
+        "separator2",
+        "stargazers-section",
+        "separator3",
+        "forks-section"
+      ]
+    },
+    "repo-link": {
+      "type": "Link",
+      "props": {
+        "label": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stars-stat",
+        "forks-stat"
+      ]
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "195",
+        "delta": "+3",
+        "trend": "up"
+      }
+    },
+    "forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "32",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers-heading",
+        "stargazers-stack"
+      ]
+    },
+    "stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazer1",
+        "stargazer2",
+        "stargazer3"
+      ]
+    },
+    "stargazer1": {
+      "type": "Link",
+      "props": {
+        "label": "CodeXcor3",
+        "href": "https://github.com/CodeXcor3"
+      }
+    },
+    "stargazer2": {
+      "type": "Link",
+      "props": {
+        "label": "sripwoud",
+        "href": "https://github.com/sripwoud"
+      }
+    },
+    "stargazer3": {
+      "type": "Link",
+      "props": {
+        "label": "Zelza-Sagaz",
+        "href": "https://github.com/Zelza-Sagaz"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks-heading",
+        "forks-stack"
+      ]
+    },
+    "forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1",
+        "fork2"
+      ]
+    },
+    "fork1": {
+      "type": "Link",
+      "props": {
+        "label": "0xfreddy/aeon",
+        "href": "https://github.com/0xfreddy/aeon"
+      }
+    },
+    "fork2": {
+      "type": "Link",
+      "props": {
+        "label": "moseslua/talon",
+        "href": "https://github.com/moseslua/talon"
+      }
+    }
+  }
+}
