@@ -40,10 +40,18 @@ fi
 mkdir -p .xai-cache
 
 # Generic XAI search call. Args: output_file, prompt, [from_date], [to_date], [extra_tools_json]
+# On failure, writes .xai-cache/<outfile>.error with the reason so downstream skills can
+# detect prefetch failures (cache absent + .error present) and skip wasteful sandbox-blocked
+# fallback paths instead of burning tokens on Path B (curl, env-var blocked) and Path C
+# (WebSearch, almost always returns no fresh tweets).
 xai_search() {
   local outfile="$1" prompt="$2"
   local from_date="${3:-$YESTERDAY}" to_date="${4:-$TODAY}"
   local extra_tools="${5:-}"
+  local errfile=".xai-cache/${outfile}.error"
+
+  # Clear any stale error marker from a previous failed run
+  rm -f "$errfile"
 
   local tools
   if [ -n "$extra_tools" ]; then
@@ -61,26 +69,33 @@ xai_search() {
     --arg prompt "$prompt" \
     --argjson tools "$tools" \
     '{model: $model, input: [{role: "user", content: $prompt}], tools: $tools}')
+  # Allow up to 3 attempts (1 initial + 2 retries). XAI api occasionally has
+  # transient 60s-ish timeouts that recover on retry — retry budget is per-call.
   local attempt=1
+  local max_attempts=3
   while : ; do
     local curl_exit=0
-    response=$(curl -s --max-time 180 -w "\n__HTTP_CODE__%{http_code}" -X POST "https://api.x.ai/v1/responses" \
+    response=$(curl -sS --max-time 180 --connect-timeout 30 \
+      -w "\n__HTTP_CODE__%{http_code}" -X POST "https://api.x.ai/v1/responses" \
       -H "Content-Type: application/json" \
       -H "Authorization: Bearer $XAI_API_KEY" \
       -d "$body" 2>&1) || curl_exit=$?
     if [ "$curl_exit" -ne 0 ]; then
-      if [ "$curl_exit" = "28" ] && [ "$attempt" -lt 2 ]; then
-        echo "xai-prefetch: curl timeout on $outfile (attempt $attempt), retrying once"
+      if [ "$curl_exit" = "28" ] && [ "$attempt" -lt "$max_attempts" ]; then
+        echo "xai-prefetch: curl timeout on $outfile (attempt $attempt/$max_attempts), retrying"
         attempt=$((attempt + 1))
+        sleep 5
         continue
       fi
-      echo "::warning::xai-prefetch: FAILED $outfile (curl error: $curl_exit)"
+      echo "::warning::xai-prefetch: FAILED $outfile (curl error: $curl_exit after $attempt attempts)"
+      mkdir -p .xai-cache
+      echo "curl error $curl_exit after $attempt attempts (XAI api unreachable or timed out)" > "$errfile"
       return 1
     fi
     http_code=$(echo "$response" | grep '__HTTP_CODE__' | sed 's/__HTTP_CODE__//')
     response=$(echo "$response" | grep -v '__HTTP_CODE__')
-    if [ "$http_code" = "429" ] && [ "$attempt" -lt 2 ]; then
-      echo "xai-prefetch: HTTP 429 on $outfile, backing off 30s then retrying"
+    if [ "$http_code" = "429" ] && [ "$attempt" -lt "$max_attempts" ]; then
+      echo "xai-prefetch: HTTP 429 on $outfile (attempt $attempt/$max_attempts), backing off 30s then retrying"
       sleep 30
       attempt=$((attempt + 1))
       continue
@@ -90,6 +105,8 @@ xai_search() {
   if [ "$http_code" != "200" ]; then
     echo "::warning::xai-prefetch: FAILED $outfile (HTTP $http_code)"
     echo "::warning::xai-prefetch: response: $(echo "$response" | head -c 300)"
+    mkdir -p .xai-cache
+    echo "HTTP $http_code from XAI api: $(echo "$response" | head -c 200)" > "$errfile"
     return 1
   fi
 
