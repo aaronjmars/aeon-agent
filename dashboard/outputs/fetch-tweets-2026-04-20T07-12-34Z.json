@@ -1,0 +1,107 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "fetch-tweets",
+        "description": "2026-04-20"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-main",
+        "separator-1",
+        "stack-searches",
+        "separator-2",
+        "stack-details"
+      ]
+    },
+    "text-main": {
+      "type": "Text",
+      "props": {
+        "text": "No new tweets found for $AEON OR @aeonframework OR github.com/aaronjmars/aeon",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-searches": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-aeon",
+        "badge-framework",
+        "badge-github"
+      ]
+    },
+    "badge-aeon": {
+      "type": "Badge",
+      "props": {
+        "text": "$AEON",
+        "variant": "outline"
+      }
+    },
+    "badge-framework": {
+      "type": "Badge",
+      "props": {
+        "text": "@aeonframework",
+        "variant": "outline"
+      }
+    },
+    "badge-github": {
+      "type": "Badge",
+      "props": {
+        "text": "github.com/aaronjmars/aeon",
+        "variant": "outline"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-reason-1",
+        "text-reason-2"
+      ]
+    },
+    "text-reason-1": {
+      "type": "Text",
+      "props": {
+        "text": "XAI_API_KEY unavailable in sandbox",
+        "variant": "caption"
+      }
+    },
+    "text-reason-2": {
+      "type": "Text",
+      "props": {
+        "text": "WebSearch returned no fresh X.com results",
+        "variant": "caption"
+      }
+    }
+  }
+}
