@@ -1,7 +1,1 @@
-HEARTBEAT_OK. All 13 expected skills ran successfully today. One open PR (#16, created today — not stalled). No urgent issues. PAT/workflows-scope issue persists but was escalated yesterday — within 48h dedup window, no new notification sent.
-
-## Summary
-- All enabled skills confirmed via Actions runs and today's logs
-- No stalled PRs, no urgent issues
-- PAT workflows-scope finding: deduped (escalation sent Apr 19, <48h)
-- Logged to `memory/logs/2026-04-20.md`
+ESCALATION (day 5): PAT with `workflows` scope still unresolved. Skills that modify .github/workflows/ files cannot push directly to the repo — changes must go through manual PRs instead of autonomous merges. This has been flagged every 48h since Apr 17. Concrete action needed: add a fine-grained PAT (or classic PAT) with `workflows` scope as a GitHub Actions secret (e.g. WORKFLOWS_PAT). Until then, any skill that edits workflow files will open a PR that stalls at the auto-merge gate.

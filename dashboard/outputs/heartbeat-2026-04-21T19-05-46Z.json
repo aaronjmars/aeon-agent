@@ -1,0 +1,150 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat: PAT Workflow Scope Escalation",
+        "description": "Day 5 – manual action required to resolve workflow push blocking"
+      },
+      "children": [
+        "alert",
+        "sep1",
+        "timeline_section",
+        "sep2",
+        "impact_section",
+        "sep3",
+        "action_section"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "PAT with 'workflows' Scope Unresolved",
+        "message": "Skills modifying .github/workflows/ files cannot push directly to the repo. All changes must go through manual PRs instead of autonomous merges."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "timeline_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "escalation_badge",
+        "timeline_text"
+      ]
+    },
+    "escalation_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Day 5 Escalation",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "timeline_text": {
+      "type": "Text",
+      "props": {
+        "text": "Flagged every 48 hours since April 17, 2026",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "impact_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "impact_heading",
+        "impact_text"
+      ]
+    },
+    "impact_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "impact_text": {
+      "type": "Text",
+      "props": {
+        "text": "Any skill that edits workflow files will open a PR that stalls at the auto-merge gate, requiring manual review and merge instead of autonomous completion."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_heading",
+        "action_details"
+      ]
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required (Concrete)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_main",
+        "action_example"
+      ]
+    },
+    "action_main": {
+      "type": "Text",
+      "props": {
+        "text": "Add a fine-grained PAT (or classic PAT) with 'workflows' scope as a GitHub Actions secret (e.g. WORKFLOWS_PAT)"
+      },
+      "children": []
+    },
+    "action_example": {
+      "type": "Text",
+      "props": {
+        "text": "Until then, any skill that edits workflow files will open a PR that stalls at the auto-merge gate.",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
