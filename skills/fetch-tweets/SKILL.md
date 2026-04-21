@@ -25,7 +25,7 @@ Today is ${today}. Search X for tweets matching **${var}**.
    cat .xai-cache/fetch-tweets.json 2>/dev/null | jq -r '.output[] | select(.type == "message") | .content[] | select(.type == "output_text") | .text'
    ```
 
-   **Path A error short-circuit:** if `.xai-cache/fetch-tweets.json` is missing AND `.xai-cache/fetch-tweets.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). In that case **skip Paths B and C entirely** — Path B's curl call requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, and Path C's WebSearch path consistently returns 0 fresh tweets when XAI is the actual source of truth. Read the one-line reason from `.xai-cache/fetch-tweets.error`, jump straight to step 4 with status `FETCH_TWEETS_PREFETCH_FAILED`, and include the prefetch error reason in the notification so operators can spot persistent XAI outages.
+   **Path A error short-circuit:** if `.xai-cache/fetch-tweets.json` is missing AND `.xai-cache/fetch-tweets.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). In that case **skip Paths B and C entirely** — Path B's curl call requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, and Path C's WebSearch path consistently returns 0 fresh tweets when XAI is the actual source of truth. Read the one-line reason from `.xai-cache/fetch-tweets.json.error`, jump straight to step 4 with status `FETCH_TWEETS_PREFETCH_FAILED`, and include the prefetch error reason in the notification so operators can spot persistent XAI outages.
 
    **Path B — X.AI API** (fallback, use when `XAI_API_KEY` is set and cache is empty):
    ```bash
