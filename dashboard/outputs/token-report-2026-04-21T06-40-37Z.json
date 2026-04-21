@@ -1,0 +1,137 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Daily — 2026-04-21"
+      },
+      "children": [
+        "price_stat",
+        "sep1",
+        "market_stack",
+        "sep2",
+        "buys_sells",
+        "sep3",
+        "perf_stack",
+        "sep4",
+        "analysis",
+        "sep5",
+        "chart_link"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000003040",
+        "delta": "-11.76%",
+        "trend": "down"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liquidity",
+        "volume"
+      ]
+    },
+    "liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$207.7K"
+      }
+    },
+    "volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$67.5K"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "buys_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "123/120"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "perf_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "perf_7d",
+        "perf_30d"
+      ]
+    },
+    "perf_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+69%",
+        "trend": "up"
+      }
+    },
+    "perf_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "~+1,000%",
+        "trend": "up"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "analysis": {
+      "type": "Text",
+      "props": {
+        "text": "Post-snapback consolidation. Dipped to $2.29e-6 overnight, bounced hard (+18.5% last hour) back to $3.04e-6. Volume light, buy/sell balanced — digesting the Apr 13–16 breakout.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart: GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
