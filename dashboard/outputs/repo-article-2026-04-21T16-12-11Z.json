@@ -1,0 +1,41 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "The Night Aeon Rewired Itself — 80 Skills, One Thesis, 28 Minutes"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "narrative-text",
+        "article-link"
+      ]
+    },
+    "narrative-text": {
+      "type": "Text",
+      "props": {
+        "text": "On April 20 between 17:16 and 17:45 UTC, Aeon rewrote 80 of its 96 skills via its own `autoresearch` loop — eighty PRs opened, scored against a six-criterion rubric, auto-merged, squash-deleted. 83% of the agent's cognitive surface replaced in 28 minutes, with no human approval step. The striking bit: nearly every winning variation independently converged on the same output thesis — verdict tags, delta-vs-prior-run, significance-gated notifications.",
+        "variant": "body"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The Night Aeon Rewired Itself — 80 Skills, One Thesis, 28 Minutes",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-21.md",
+        "source": "repo-article"
+      }
+    }
+  }
+}
