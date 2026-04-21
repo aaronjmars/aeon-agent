@@ -1,0 +1,148 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-04-21"
+      },
+      "children": [
+        "repo_name",
+        "stats_container",
+        "separator_1",
+        "stargazers_heading",
+        "stargazers_stack"
+      ]
+    },
+    "repo_name": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "stats_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "204",
+        "delta": "+9",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "32"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_mookachaka",
+        "link_ciprianoaugusto",
+        "link_aqilarifti",
+        "link_brandong1987",
+        "link_nyashkn",
+        "link_mhuruuk",
+        "link_quantumlyy",
+        "link_mark47tech",
+        "link_alchooligan"
+      ]
+    },
+    "link_mookachaka": {
+      "type": "Link",
+      "props": {
+        "label": "mookachaka",
+        "href": "https://github.com/mookachaka"
+      }
+    },
+    "link_ciprianoaugusto": {
+      "type": "Link",
+      "props": {
+        "label": "CiprianoAugusto",
+        "href": "https://github.com/CiprianoAugusto"
+      }
+    },
+    "link_aqilarifti": {
+      "type": "Link",
+      "props": {
+        "label": "AqilaRifti",
+        "href": "https://github.com/AqilaRifti"
+      }
+    },
+    "link_brandong1987": {
+      "type": "Link",
+      "props": {
+        "label": "brandong1987",
+        "href": "https://github.com/brandong1987"
+      }
+    },
+    "link_nyashkn": {
+      "type": "Link",
+      "props": {
+        "label": "nyashkn",
+        "href": "https://github.com/nyashkn"
+      }
+    },
+    "link_mhuruuk": {
+      "type": "Link",
+      "props": {
+        "label": "mhuruuk",
+        "href": "https://github.com/mhuruuk"
+      }
+    },
+    "link_quantumlyy": {
+      "type": "Link",
+      "props": {
+        "label": "Quantumlyy",
+        "href": "https://github.com/Quantumlyy"
+      }
+    },
+    "link_mark47tech": {
+      "type": "Link",
+      "props": {
+        "label": "mark47-tech",
+        "href": "https://github.com/mark47-tech"
+      }
+    },
+    "link_alchooligan": {
+      "type": "Link",
+      "props": {
+        "label": "alchooligan",
+        "href": "https://github.com/alchooligan"
+      }
+    }
+  }
+}

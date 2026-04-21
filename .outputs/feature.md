@@ -1,21 +1,24 @@
-*Feature Built — 2026-04-20*
+*Feature Built — 2026-04-21*
 
-Fork Contributor Leaderboard
-
-Aeon now has a weekly skill that ranks the humans behind the fork fleet. Every Sunday at 17:30 UTC it scans all active forks of the watched repo plus the upstream PR list, scores each contributor on a composite formula, and publishes a named leaderboard — turning anonymous fork counters into public recognition for the developers actually moving the project forward.
+Integration Examples for A2A Gateway and MCP Server
+The Aeon repo now ships an `examples/` directory with copy-paste client scripts for every major agent framework. Operators who want to call Aeon skills from LangChain, AutoGen, CrewAI, the OpenAI Agents SDK, or Claude Desktop can now go from "I have an agent" to "it just called an Aeon skill" in under five minutes — no spec reading, no protocol guesswork.
 
 Why this matters:
-The project currently rewards social mentions with $AEON via tweet-allocator, but code contributors get nothing — no recognition, no signal that upstream values their work. With 32 active forks and zero way to distinguish a read-only clone from a fork operator shipping new skills, the contribution signal was flat. This skill closes the loop: fork → contribute → get named → fork more. It's the contributor-side mirror of the social-rewards flywheel, and it's the third skill in the growing "fleet observability" stack alongside skill-leaderboard (what's popular) and fork-fleet (which forks diverge).
+The A2A gateway and MCP adaptor have been live for weeks but zero external integrations have been observed in the wild. Yesterday's repo-actions flagged this as the highest-impact gap: the bottleneck wasn't protocol complexity, it was that operators hit a blank page after `./add-a2a` and had nowhere to copy from. With 198 stars and 32 forks, even two or three confirmed downstream integrations would meaningfully change the project's adoption story — and pair naturally with the recent fork-contributor-leaderboard, which already rewards the people doing the wiring.
 
 What was built:
-- skills/fork-contributor-leaderboard/SKILL.md: New 160-line weekly meta skill. 10 steps cover active-fork discovery, upstream PR pagination, per-fork commit counting, new-skill detection, scoring, week-over-week diff against prior articles, article generation, and a detailed notification with top-5 contributors and rising entries.
-- aeon.yml: New skill entry scheduled Sundays at 17:30 UTC (30 min after skill-leaderboard) using claude-sonnet-4-6 for cost. Disabled by default like all other skills — fork operators opt in.
-- README.md: Meta / Agent category count bumped 11 → 12; new skill name added to the list.
+- examples/a2a/langchain_client.py: wraps `aeon-fetch-tweets` as a `langchain.tools.Tool`, polls JSON-RPC for completion, ready to drop into any LangChain agent
+- examples/a2a/autogen_workflow.py: registers `aeon-deep-research` as an AutoGen function tool inside an AssistantAgent ↔ UserProxyAgent chat
+- examples/a2a/crewai_task.py: subclasses CrewAI's `BaseTool` for `aeon-pr-review`, hands it to a senior-reviewer agent that produces a standup summary
+- examples/a2a/openai_agents_client.py: uses the new `@function_tool` decorator pattern to expose `aeon-token-report` to a crypto-analyst Agent
+- examples/mcp/test_connection.py: minimal Anthropic MCP-client smoke test that auto-locates the repo root, spawns the stdio server, lists every aeon-* tool, and invokes one — if this works, Claude Desktop wiring works
+- examples/mcp/claude_desktop_config.json: drop-in `mcpServers` snippet
+- examples/README.md + new README "Integration examples" subsection: walk-through with start commands and links
 
 How it works:
-The skill makes one paginated GitHub API call to fetch all upstream PRs keyed on .user.login — far cheaper than per-fork pulls endpoints when the fork count is high. It builds a login → {merged, opened} contribution map, then iterates active forks (pushed in the last 30d) to add per-owner commit counts and new-skill detection. Scoring: +10 per merged upstream PR, +3 per open PR, +1 per fork commit (cap 30), +5 per new skill file detected (cap 5), +2 per fork star. Bots (*[bot], github-actions) and the core team (aaronjmars, aeonframework) are filtered so the leaderboard surfaces community contributors only. An opt-out file at memory/topics/leaderboard-optout.md lets any named contributor remove themselves. A <2-contributors insufficient-data guard keeps the notification silent when the signal isn't meaningful.
+All four A2A scripts share the same submit/poll pattern over JSON-RPC: POST `tasks/send` with `skillId` + `var`, then poll `tasks/get` every 5 seconds for up to 10 minutes (matching the GitHub Actions skill timeout). They depend only on `requests` plus their respective framework SDKs, and each reads its endpoint from the public `A2A_GATEWAY_URL` env var — no Aeon-internal secrets ever leave the gateway box. The MCP test script uses the official `mcp` Python client over stdio, walks up from its own location to find the Aeon repo root via the presence of `skills.json`, and spawns `node mcp-server/dist/index.js` directly. Pure additive surface — no changes to the gateway, MCP server, or any skill.
 
 What's next:
-After the public-recognition version proves it drives contribution volume, the plan is to add $AEON reward distribution to the top 3 contributors each week — same bankr-cache + .pending-distribute pattern that tweet-allocator already uses. Sourced from repo-actions-2026-04-18 idea #3.
+With copy-paste scripts in place, the natural follow-ups are a Smithery / MCP-directory submission so Claude Desktop users discover Aeon organically (idea #5 in yesterday's repo-actions), and a short integrations gallery in the docs site to surface confirmed downstream uses as they appear.
 
-PR: https://github.com/aaronjmars/aeon/pull/42
+PR: https://github.com/aaronjmars/aeon/pull/137

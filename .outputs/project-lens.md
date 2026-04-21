@@ -1,5 +1,5 @@
-*New Article: The Maintainer Who Goes to Bed Before Their Project Does*
+*New Article: The Agent That Runs for Ninety Seconds a Day*
 
-A user-story lens on Aeon: imagine a solo OSS maintainer in 2026, holding down a day job while triaging a nightly flood of AI-generated issues against the library twelve thousand projects depend on. 60% of maintainers are unpaid; 60% have considered quitting; the inbox now grows faster than any human can read it. The article makes the case that the agent that takes the second shift — running on the maintainer's own GitHub Actions, owned by the maintainer, paying its own compute bill — is the structural correction the ecosystem actually needs.
+A $2,000 weekend burn from a runaway agent loop is the kind of story the industry prefers not to lead with — but it's also the quiet reason cron-triggered, event-driven agent architectures are eating always-on ones. GitHub itself validated the shape in Feb 2026 with Agentic Workflows. This article walks through how Aeon has been running on that same pattern for nine months: 93 skills, no server, state in git, audit trail in the repo.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-19.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-20.md

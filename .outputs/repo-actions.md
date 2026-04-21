@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-04-18 (Run 2)*
-Generated from analysis of aaronjmars/aeon (189 stars, 28 forks, 92 skills, 2 open PRs) — five fresh ideas distinct from run 1.
+*Repo Action Ideas — 2026-04-20*
+Generated from analysis of aaronjmars/aeon (198 stars, 32 forks, 93 skills) — these are ideas that could be autonomously built by the feature skill tomorrow.
 
-1. Memory Search API (Feature, Medium)
-   REST endpoint at /api/memory/search exposes agent memory to MCP tools, A2A clients, and dashboard — the missing bridge between private state and the public interfaces already shipping.
+1. A2A / MCP Client Integration Examples (Community/DX, Small)
+   Working LangChain/AutoGen/CrewAI/OpenAI Agents SDK scripts calling real Aeon skills — zero observed integrations despite gateway being live for weeks, this fixes the adoption gap.
 
-2. Webhook-to-Skill Bridge (Integration, Medium)
-   Receive GitHub webhooks and trigger skills in seconds instead of waiting for the next cron cycle — turns Aeon from a daily cron agent into a real-time reactive agent.
+2. Operator Onboarding Validator (DX, Small)
+   One-shot skill that checks secrets, Actions, notification channels, and memory write access — sends a step-by-step checklist with fix instructions to reduce fork abandonment from misconfiguration.
 
-3. Fork Contributor Leaderboard (Community, Small)
-   Weekly ranking of most active fork operators (commits, upstream PRs, new skills) with $AEON distributed to top 3 — the developer-side twin of the tweet-allocator flywheel.
+3. Reactive Inbound Commands via Telegram/Discord (Integration, Medium)
+   Parse free-form messages ('run fetch-tweets', 'show token price') from configured channels and dispatch skills via workflow_dispatch — turns notification channels into bidirectional remote controls.
 
-4. Skill Template Library (DX, Small)
-   Six pre-built SKILL.md starters (crypto tracker, research digest, code reviewer, etc.) with a ./add-template CLI — cuts fork operator activation time from 30-minute exploration to copy-paste.
+4. Cross-Fork Skill Customization Digest (Community, Small)
+   Weekly diff of each fork's aeon.yml against upstream, surfacing the 10 most-customized skills and common var patterns — proxy for upstream feature priorities without requiring anyone to file an issue.
 
-5. Skill Run Analytics Dashboard Widget (Feature, Small)
-   Dashboard tab showing per-skill runs, success rate, and cost over 14 days from token-usage.csv — real-time visibility the weekly cost-report currently delays by 7 days.
+5. Smithery / MCP Directory Submission (Growth, Small)
+   Submit the 93-tool MCP adaptor to Smithery.ai + Anthropic plugin directory; weekly health check that the listing stays current — puts Aeon in front of every developer searching for agent tools.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-18.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-20.md

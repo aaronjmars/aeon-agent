@@ -1,0 +1,210 @@
+{
+  "root": "card-self-improve",
+  "state": {},
+  "elements": {
+    "card-self-improve": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement — 2026-04-20",
+        "description": "Prefetch error marker + skill short-circuit on XAI failures"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-problem",
+        "separator-1",
+        "heading-why",
+        "text-why-content",
+        "separator-2",
+        "heading-changes",
+        "changes-stack",
+        "separator-3",
+        "heading-impact",
+        "impact-stack",
+        "separator-4",
+        "link-pr"
+      ]
+    },
+    "text-problem": {
+      "type": "Text",
+      "props": {
+        "text": "When the XAI prefetch curl fails (timeout or HTTP error), scripts/prefetch-xai.sh now writes a one-line reason to .xai-cache/<outfile>.error. The fetch-tweets skill checks this marker and skips Path B (sandbox blocks $XAI_API_KEY env-var expansion) and Path C (WebSearch returns 0 fresh tweets when XAI is the source of truth) — both fall-back paths that consistently fail anyway. The prefetch script also gets a third retry, an explicit --connect-timeout 30, and -sS so curl errors surface to stderr.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "text-why-content": {
+      "type": "Text",
+      "props": {
+        "text": "Apr 19 and Apr 20 morning fetch-tweets runs both logged FETCH_TWEETS_EMPTY because the XAI prefetch curl exited at exactly 60s with no visible retry, after which the skill burned ~10K tokens probing dead-end fallbacks before giving up. Two failures in two days; same shape.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-changes": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "changes-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "change-1-file",
+        "change-1-text",
+        "change-2-file",
+        "change-2-text",
+        "change-3-file",
+        "change-3-text"
+      ]
+    },
+    "change-1-file": {
+      "type": "Badge",
+      "props": {
+        "text": "scripts/prefetch-xai.sh",
+        "variant": "secondary"
+      }
+    },
+    "change-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Write .xai-cache/<outfile>.error on terminal failure (curl exit or HTTP non-200), retry budget 2→3 attempts, --connect-timeout 30, -sS, retry-iteration logging",
+        "variant": "body"
+      }
+    },
+    "change-2-file": {
+      "type": "Badge",
+      "props": {
+        "text": "skills/fetch-tweets/SKILL.md",
+        "variant": "secondary"
+      }
+    },
+    "change-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Path A short-circuit step — if cache JSON missing AND error marker present, jump to FETCH_TWEETS_PREFETCH_FAILED with the reason in the notification",
+        "variant": "body"
+      }
+    },
+    "change-3-file": {
+      "type": "Badge",
+      "props": {
+        "text": "memory/MEMORY.md, memory/logs/2026-04-20.md",
+        "variant": "secondary"
+      }
+    },
+    "change-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Log entry + Skills Built row",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impact-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-tokens",
+        "stat-detection",
+        "stat-worst-case",
+        "text-scope",
+        "text-callers"
+      ]
+    },
+    "stat-tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokens saved per prefetch-failure run",
+        "value": "~10K"
+      }
+    },
+    "stat-detection": {
+      "type": "Stat",
+      "props": {
+        "label": "Failure detection improvement",
+        "value": "Faster failure detection (3 attempts × 30s connect timeout vs. multi-step Claude exploration)"
+      }
+    },
+    "stat-worst-case": {
+      "type": "Stat",
+      "props": {
+        "label": "Worst case failure time",
+        "value": "~90s"
+      }
+    },
+    "text-scope": {
+      "type": "Text",
+      "props": {
+        "text": "Persistent XAI outages now surface a specific reason in notifications instead of a generic 'no tweets found.'",
+        "variant": "body"
+      }
+    },
+    "text-callers": {
+      "type": "Text",
+      "props": {
+        "text": "Fix is generic across all xai_search() callers: refresh-x, remix-tweets, narrative-tracker, article, tweet-roundup",
+        "variant": "caption"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #16: Agent Self-Improvement",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/16",
+        "source": "GitHub"
+      }
+    }
+  }
+}

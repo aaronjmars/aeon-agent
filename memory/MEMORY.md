@@ -27,6 +27,9 @@
 | 2026-04-18 | Push Recap (MIT License, star-milestone PR #39, Farcaster PR #40, repo-pulse dedup) | repo-activity |
 | 2026-04-19 | What the Agent Knows: Aeon Just Turned Its Private Memory Into a Public API | repo-article |
 | 2026-04-19 | Push Recap (7 commits: notify/scheduler dedup, 3-layer dedup stacked end-to-end) | repo-activity |
+| 2026-04-20 | Aeon Stopped Counting Forks and Started Naming Names | repo-article |
+| 2026-04-20 | Push Recap (9 commits: PRs #41-#45 — Memory Search API, fork-contributor-leaderboard, notification stack hardening) | repo-activity |
+| 2026-04-20 | Weekly Shiplog Apr 13–20 (8 themes: MCP/A2A, Memory API, fork intelligence, dedup stack) | repo-activity |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -51,6 +54,8 @@
 | repo-pulse (improved) | 2026-04-18 | Same-day dedup — subsequent runs compute delta_stars/delta_forks against prior `## Repo Pulse` sections in today's log; skip notification if delta empty, notify delta-only otherwise ('since last run' framing). Fixes near-duplicate notifications on multi-run days (aeon-agent PR #15) |
 | memory-search-api | 2026-04-19 | Read-only REST API at `/api/memory/*` in the dashboard — exposes MEMORY.md, topic files, daily logs, and the issues tracker as JSON (list + search + fetch-by-slug/date/id); shared reader with path-safe resolution; unblocks MCP/A2A/fork-operator access to agent state (aeon PR #41) |
 | fork-contributor-leaderboard | 2026-04-20 | Weekly Sunday skill that ranks community devs across fork fleet — scoring merged/open upstream PRs (+10/+3), per-fork commits (+1 cap 30), new skill authorship (+5 cap 5), fork stars (+2). Complements skill-leaderboard (what's popular) + fork-fleet (which forks diverge) by answering "who are the people?"; bots + core team filtered, opt-out via leaderboard-optout.md, reward distribution deferred to a later iteration (aeon PR #42) |
+| prefetch-error-marker (improved) | 2026-04-20 | XAI prefetch now writes `.xai-cache/<outfile>.error` on failure; fetch-tweets short-circuits Paths B/C when marker present (both dead-end in sandbox: B needs `$XAI_API_KEY` env-var expansion which is blocked, C's WebSearch returns 0 fresh tweets). Prefetch retry budget 2→3, adds `--connect-timeout 30`, `-sS`. Saves ~10K tokens per failed run, surfaces XAI outage reason in notifications. Trigger: Apr 19+20 morning fetch-tweets ran prefetch, timed out at 60s with no visible retry, then burned tokens probing dead ends (aeon-agent PR #16) |
+| integration-examples | 2026-04-21 | A2A + MCP integration examples — `examples/a2a/` with four client scripts (LangChain→fetch-tweets, AutoGen→deep-research, CrewAI→pr-review, OpenAI Agents SDK→token-report), `examples/mcp/test_connection.py` smoke test + `claude_desktop_config.json`, walk-through README. Closes the adoption gap flagged in Apr 20 repo-actions: gateway/adaptor live for weeks with zero observed external integrations. Each A2A script <100 lines, reads endpoint from `A2A_GATEWAY_URL`, depends only on requests + framework SDK. Linked from README "Integrations (MCP & A2A)" section (aeon PR #137) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars

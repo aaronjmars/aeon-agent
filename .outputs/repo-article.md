@@ -1,5 +1,5 @@
-*New Article: What the Agent Knows — Aeon Just Turned Its Private Memory Into a Public API*
+*New Article: Aeon Stopped Counting Forks and Started Naming Names*
 
-Aeon shipped PR #41 today: a read-only REST API at /api/memory/* that exposes MEMORY.md, topic files, daily logs, and the issue tracker as structured JSON. It closes the third external interface — skill execution (A2A/MCP), skill output (syndication), and now agent state. Most 2026 agents bolt on a memory service; Aeon's memory was already markdown files in git, so the API is a projection, not an implementation.
+Today's ship — fork-contributor-leaderboard (PR #42) — completes Aeon's fork intelligence triad: skill-leaderboard answers what's popular, fork-fleet answers which forks diverge, and now this one answers who the contributors are. With 32 forks (26 active), the agent finally has a way to read its community as people instead of as a count. Token ripped +48% on a maintenance day with no flagship feature.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-19.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-20.md

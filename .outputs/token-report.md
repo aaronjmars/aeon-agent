@@ -1,10 +1,10 @@
-*$AEON Daily — 2026-04-20*
+*$aeon Daily — 2026-04-21*
 
-Price: $0.000003251 (+48.6% 24h)
-Liquidity: $214.7K | 24h Vol: $163.9K
-Buys/Sells: 291/167
-7d: +87.4% | 30d: +1,180%
+Price: $0.000003040 (-11.76% 24h)
+Liquidity: $207.7K | 24h Vol: $67.5K
+Buys/Sells: 123/120
+7d: +69% | 30d: ~+1,000%
 
-Snapped a 2-day pullback with a spike to $3.97, now consolidating at $3.25 — structure recovering above the Apr 16-19 range.
+Post-snapback consolidation. Dipped to $2.29e-6 overnight, bounced hard (+18.5% last hour) back to $3.04e-6. Volume light, buy/sell balanced — digesting the Apr 13–16 breakout.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
