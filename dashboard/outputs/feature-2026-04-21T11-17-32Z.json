@@ -1,0 +1,192 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built"
+      },
+      "children": [
+        "badge_date",
+        "heading_main",
+        "text_intro",
+        "sep_1",
+        "heading_why",
+        "text_why",
+        "sep_2",
+        "heading_what",
+        "stack_what",
+        "sep_3",
+        "heading_how",
+        "text_how",
+        "sep_4",
+        "heading_next",
+        "text_next",
+        "sep_5",
+        "link_pr"
+      ]
+    },
+    "badge_date": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-04-21"
+      }
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Integration Examples for A2A Gateway and MCP Server",
+        "level": "h2"
+      }
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "The Aeon repo now ships an `examples/` directory with copy-paste client scripts for every major agent framework. Operators who want to call Aeon skills from LangChain, AutoGen, CrewAI, the OpenAI Agents SDK, or Claude Desktop can now go from \"I have an agent\" to \"it just called an Aeon skill\" in under five minutes — no spec reading, no protocol guesswork."
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters:",
+        "level": "h3"
+      }
+    },
+    "text_why": {
+      "type": "Text",
+      "props": {
+        "text": "The A2A gateway and MCP adaptor have been live for weeks but zero external integrations have been observed in the wild. Yesterday's repo-actions flagged this as the highest-impact gap: the bottleneck wasn't protocol complexity, it was that operators hit a blank page after `./add-a2a` and had nowhere to copy from. With 198 stars and 32 forks, even two or three confirmed downstream integrations would meaningfully change the project's adoption story — and pair naturally with the recent fork-contributor-leaderboard, which already rewards the people doing the wiring."
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_what": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built:",
+        "level": "h3"
+      }
+    },
+    "stack_what": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "what_1",
+        "what_2",
+        "what_3",
+        "what_4",
+        "what_5",
+        "what_6",
+        "what_7"
+      ]
+    },
+    "what_1": {
+      "type": "Text",
+      "props": {
+        "text": "examples/a2a/langchain_client.py: wraps `aeon-fetch-tweets` as a `langchain.tools.Tool`, polls JSON-RPC for completion, ready to drop into any LangChain agent"
+      }
+    },
+    "what_2": {
+      "type": "Text",
+      "props": {
+        "text": "examples/a2a/autogen_workflow.py: registers `aeon-deep-research` as an AutoGen function tool inside an AssistantAgent ↔ UserProxyAgent chat"
+      }
+    },
+    "what_3": {
+      "type": "Text",
+      "props": {
+        "text": "examples/a2a/crewai_task.py: subclasses CrewAI's `BaseTool` for `aeon-pr-review`, hands it to a senior-reviewer agent that produces a standup summary"
+      }
+    },
+    "what_4": {
+      "type": "Text",
+      "props": {
+        "text": "examples/a2a/openai_agents_client.py: uses the new `@function_tool` decorator pattern to expose `aeon-token-report` to a crypto-analyst Agent"
+      }
+    },
+    "what_5": {
+      "type": "Text",
+      "props": {
+        "text": "examples/mcp/test_connection.py: minimal Anthropic MCP-client smoke test that auto-locates the repo root, spawns the stdio server, lists every aeon-* tool, and invokes one — if this works, Claude Desktop wiring works"
+      }
+    },
+    "what_6": {
+      "type": "Text",
+      "props": {
+        "text": "examples/mcp/claude_desktop_config.json: drop-in `mcpServers` snippet"
+      }
+    },
+    "what_7": {
+      "type": "Text",
+      "props": {
+        "text": "examples/README.md + new README \"Integration examples\" subsection: walk-through with start commands and links"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_how": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works:",
+        "level": "h3"
+      }
+    },
+    "text_how": {
+      "type": "Text",
+      "props": {
+        "text": "All four A2A scripts share the same submit/poll pattern over JSON-RPC: POST `tasks/send` with `skillId` + `var`, then poll `tasks/get` every 5 seconds for up to 10 minutes (matching the GitHub Actions skill timeout). They depend only on `requests` plus their respective framework SDKs, and each reads its endpoint from the public `A2A_GATEWAY_URL` env var — no Aeon-internal secrets ever leave the gateway box. The MCP test script uses the official `mcp` Python client over stdio, walks up from its own location to find the Aeon repo root via the presence of `skills.json`, and spawns `node mcp-server/dist/index.js` directly. Pure additive surface — no changes to the gateway, MCP server, or any skill."
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_next": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next:",
+        "level": "h3"
+      }
+    },
+    "text_next": {
+      "type": "Text",
+      "props": {
+        "text": "With copy-paste scripts in place, the natural follow-ups are a Smithery / MCP-directory submission so Claude Desktop users discover Aeon organically (idea #5 in yesterday's repo-actions), and a short integrations gallery in the docs site to surface confirmed downstream uses as they appear."
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #137: Integration Examples for A2A Gateway and MCP Server",
+        "href": "https://github.com/aaronjmars/aeon/pull/137",
+        "source": "GitHub"
+      }
+    }
+  }
+}
