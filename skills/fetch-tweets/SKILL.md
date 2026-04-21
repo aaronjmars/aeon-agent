@@ -25,6 +25,8 @@ Today is ${today}. Search X for tweets matching **${var}**.
    cat .xai-cache/fetch-tweets.json 2>/dev/null | jq -r '.output[] | select(.type == "message") | .content[] | select(.type == "output_text") | .text'
    ```
 
+   **Path A error short-circuit:** if `.xai-cache/fetch-tweets.json` is missing AND `.xai-cache/fetch-tweets.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). In that case **skip Paths B and C entirely** — Path B's curl call requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, and Path C's WebSearch path consistently returns 0 fresh tweets when XAI is the actual source of truth. Read the one-line reason from `.xai-cache/fetch-tweets.json.error`, jump straight to step 4 with status `FETCH_TWEETS_PREFETCH_FAILED`, and include the prefetch error reason in the notification so operators can spot persistent XAI outages.
+
    **Path B — X.AI API** (fallback, use when `XAI_API_KEY` is set and cache is empty):
    ```bash
    FROM_DATE=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
@@ -48,7 +50,7 @@ Today is ${today}. Search X for tweets matching **${var}**.
    `site:x.com "${query_terms}" after:${FROM_DATE}`
    Note at the top of the log entry: "XAI_API_KEY not available; results compiled via WebSearch". WebSearch rankings favour high-engagement older tweets — **prioritise results that mention a date within the last 48 hours** when possible.
 
-4. **If no relevant tweets found** (no results, API error, or empty): log "FETCH_TWEETS_EMPTY" to `memory/logs/${today}.md`, send a one-line notification via `./notify` (e.g. `Fetch Tweets — ${today}: no new tweets found for ${var}.`), and stop.
+4. **If no relevant tweets found** (no results, API error, or empty): log `FETCH_TWEETS_EMPTY` (or `FETCH_TWEETS_PREFETCH_FAILED` with the prefetch error reason if Path A short-circuited) to `memory/logs/${today}.md`, send a one-line notification via `./notify` (e.g. `Fetch Tweets — ${today}: no new tweets found for ${var}.` or `Fetch Tweets — ${today}: prefetch failed (${reason}); no tweets fetched.`), and stop.
 
 5. **Deduplicate against `SEEN_TWEETS` from step 1.** Compare each candidate tweet URL against the collected set of already-reported URLs. Remove any tweet that was already reported in the last 3 days. If ALL tweets found are already in the recent logs: log "FETCH_TWEETS_NO_NEW: all results already reported" to `memory/logs/${today}.md`, send a one-line notification via `./notify` (e.g. `Fetch Tweets — ${today}: N results found, all already reported in last 3 days.`), and stop.
 
