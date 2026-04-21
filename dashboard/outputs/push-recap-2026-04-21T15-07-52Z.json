@@ -1,0 +1,293 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-21"
+      },
+      "children": [
+        "repo_info_stack",
+        "separator_1",
+        "autoresearch_section",
+        "separator_2",
+        "a2a_section",
+        "separator_3",
+        "xai_section",
+        "separator_4",
+        "key_changes_section",
+        "separator_5",
+        "stats_section",
+        "separator_6",
+        "full_recap_link"
+      ]
+    },
+    "repo_info_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_aeon",
+        "badge_aeon_agent",
+        "badge_authors"
+      ]
+    },
+    "badge_aeon": {
+      "type": "Badge",
+      "props": {
+        "text": "aaronjmars/aeon — 82 commits"
+      }
+    },
+    "badge_aeon_agent": {
+      "type": "Badge",
+      "props": {
+        "text": "aaronjmars/aeon-agent — 2 meaningful commits"
+      }
+    },
+    "badge_authors": {
+      "type": "Badge",
+      "props": {
+        "text": "@aaronjmars all authors"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "autoresearch_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_autoresearch",
+        "text_autoresearch_main",
+        "text_autoresearch_pattern",
+        "text_autoresearch_largest",
+        "text_workflow_security"
+      ]
+    },
+    "heading_autoresearch": {
+      "type": "Heading",
+      "props": {
+        "text": "Autoresearch Evolution sweep",
+        "level": "h2"
+      }
+    },
+    "text_autoresearch_main": {
+      "type": "Text",
+      "props": {
+        "text": "80 skills rewritten in one day on aeon. Every PR runs the same four-variation scoring loop (better inputs / sharper output / more robust / rethink) and merges the winner as the new SKILL.md — almost always Variation B by design."
+      }
+    },
+    "text_autoresearch_pattern": {
+      "type": "Text",
+      "props": {
+        "text": "Shared pattern: kill flat-list output, add tier/rank + delta classification + significance-gated notifications + explicit exit taxonomy."
+      }
+    },
+    "text_autoresearch_largest": {
+      "type": "Text",
+      "props": {
+        "text": "Largest: spawn-instance (+354/-172), fork-fleet (+277/-121), skill-leaderboard (+250/-91 — now scores against *configured* fork denominator only, outputs Promote/Match/Sunset tiers), fleet-control (+248/-124), vuln-scanner (+248/-161)."
+      }
+    },
+    "text_workflow_security": {
+      "type": "Text",
+      "props": {
+        "text": "workflow-security-audit (#127) replaces hand-rolled 5-category checklist with zizmor + actionlint + NEW/REINTRODUCED/UNCHANGED/RESOLVED delta classification + attack-chain narrative (entry → vector → sink → reachable secrets → blast radius)."
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "a2a_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_a2a",
+        "text_a2a_adoption",
+        "text_a2a_files",
+        "text_a2a_demos",
+        "text_a2a_gateway"
+      ]
+    },
+    "heading_a2a": {
+      "type": "Heading",
+      "props": {
+        "text": "A2A + MCP Integration Examples (PR #137)",
+        "level": "h2"
+      }
+    },
+    "text_a2a_adoption": {
+      "type": "Text",
+      "props": {
+        "text": "Closes the adoption gap flagged in yesterday's repo-actions. New examples/a2a/langchain_client.py, autogen_workflow.py, crewai_task.py, openai_agents_client.py + examples/mcp/test_connection.py + claude_desktop_config.json."
+      }
+    },
+    "text_a2a_files": {
+      "type": "Text",
+      "props": {
+        "text": "Six working client scripts + walk-through README (+520 lines, 8 new files)."
+      }
+    },
+    "text_a2a_demos": {
+      "type": "Text",
+      "props": {
+        "text": "Every framework gets a <100-line copy-paste demo pointed at aeon-fetch-tweets / aeon-deep-research / aeon-pr-review / aeon-token-report / aeon-cost-report."
+      }
+    },
+    "text_a2a_gateway": {
+      "type": "Text",
+      "props": {
+        "text": "First production-ready external-integration surface for the gateway."
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "xai_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_xai",
+        "text_xai_changes",
+        "text_xai_error_handling",
+        "text_xai_shortcircuit",
+        "text_xai_savings",
+        "text_xai_fix"
+      ]
+    },
+    "heading_xai": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI Prefetch Error Marker merged (aeon-agent PR #16)",
+        "level": "h2"
+      }
+    },
+    "text_xai_changes": {
+      "type": "Text",
+      "props": {
+        "text": "Prefetch retry budget 2→3, --connect-timeout 30."
+      }
+    },
+    "text_xai_error_handling": {
+      "type": "Text",
+      "props": {
+        "text": "Writes .xai-cache/<outfile>.error on failure."
+      }
+    },
+    "text_xai_shortcircuit": {
+      "type": "Text",
+      "props": {
+        "text": "fetch-tweets short-circuits dead-end Paths B/C when marker present."
+      }
+    },
+    "text_xai_savings": {
+      "type": "Text",
+      "props": {
+        "text": "Saves ~10K tokens per failed run."
+      }
+    },
+    "text_xai_fix": {
+      "type": "Text",
+      "props": {
+        "text": "Squash-time fix aligns marker filename with what the script actually writes (fetch-tweets.json.error, not fetch-tweets.error — the original short-circuit would never have fired)."
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_key_changes",
+        "text_key_changes_1",
+        "text_key_changes_2",
+        "text_key_changes_3"
+      ]
+    },
+    "heading_key_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "text_key_changes_1": {
+      "type": "Text",
+      "props": {
+        "text": "80 skill SKILL.md rewrites on aeon under a uniform tier+delta+gate+taxonomy contract (+12,118/-4,935 lines across 80 files) — NOT yet deployed on this aeon-agent instance; will arrive via skill-update-check PRs or fork sync."
+      }
+    },
+    "text_key_changes_2": {
+      "type": "Text",
+      "props": {
+        "text": "examples/ directory added to aeon with six working client scripts + walk-through README (+520 lines, 8 new files); README 'Integration examples' subsection links them."
+      }
+    },
+    "text_key_changes_3": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/prefetch-xai.sh + skills/fetch-tweets/SKILL.md on aeon-agent: XAI-outage-observable short-circuit replaces 10K-token dead-end probing."
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stats",
+        "text_stats"
+      ]
+    },
+    "heading_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "text_stats": {
+      "type": "Text",
+      "props": {
+        "text": "89 files changed, +12,213/-4,961 lines across 83 meaningful commits (26 autonomous chore auto-commits excluded)."
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full_recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-21.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
