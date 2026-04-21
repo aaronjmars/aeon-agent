@@ -1,11 +1,8 @@
-*Repo Pulse — 2026-04-20*
-[aaronjmars/aeon]
+*Repo Pulse — 2026-04-21*
+aaronjmars/aeon
 
-Stars: 195 total (+3 new)
-Forks: 32 total (+2 new)
+Stars: 204 total (+9 new)
+Forks: 32 total
 
 New stargazers:
-github.com/CodeXcor3 | github.com/sripwoud | github.com/Zelza-Sagaz
-
-New forks:
-github.com/0xfreddy/aeon | github.com/moseslua/talon
+github.com/mookachaka | github.com/CiprianoAugusto | github.com/AqilaRifti | github.com/brandong1987 | github.com/nyashkn | github.com/mhuruuk | github.com/Quantumlyy | github.com/mark47-tech | github.com/alchooligan
