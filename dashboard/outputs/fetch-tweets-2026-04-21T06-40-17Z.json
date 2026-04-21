@@ -1,0 +1,377 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-21)"
+      },
+      "children": [
+        "tweets-stack"
+      ]
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "sep-1",
+        "tweet-2",
+        "sep-2",
+        "tweet-3",
+        "sep-3",
+        "tweet-4",
+        "sep-4",
+        "tweet-5",
+        "sep-5",
+        "tweet-6",
+        "sep-6",
+        "tweet-7",
+        "sep-7",
+        "tweet-8",
+        "sep-8",
+        "tweet-9",
+        "sep-9",
+        "tweet-10"
+      ]
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1-card",
+        "tweet-1-link"
+      ]
+    },
+    "tweet-1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "Merged on Vercel ⭐ — autonomous agents running w/ aeonframework that track & fix exploits on open-source software; pitched as defense against supply chain threats like Anthropic Mythos",
+        "likes": 36,
+        "retweets": 2
+      }
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2046231682802385118"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2-card",
+        "tweet-2-link"
+      ]
+    },
+    "tweet-2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "aeonframework shipped THREE simulation features for miroshark_ over a weekend: interaction network, demographic breakdown, and a what-if recompute tool",
+        "likes": 14,
+        "retweets": 5
+      }
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2046339494580740415"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3-card",
+        "tweet-3-link"
+      ]
+    },
+    "tweet-3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "Confirms the repo link: github.com/aaronjmars/aeon",
+        "likes": 3,
+        "retweets": 0
+      }
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2046325895762149889"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4-card",
+        "tweet-4-link"
+      ]
+    },
+    "tweet-4-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "sudo_55",
+        "handle": "@sudo_55",
+        "text": "$AEON listed among tokens where 14–30 days post pair genesis is peak attention / highest price window",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/sudo_55/status/2046324951859265774"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5-card",
+        "tweet-5-link"
+      ]
+    },
+    "tweet-5-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "GoldmanSackBase",
+        "handle": "@GoldmanSackBase",
+        "text": "Calls $aeon / aeonframework \"very interesting\" — notes it runs on GitHub Actions and is effective at autonomously tracking & fixing exploits",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet-5-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/GoldmanSackBase/status/2046309219876667525"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-6-card",
+        "tweet-6-link"
+      ]
+    },
+    "tweet-6-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "handle": "@joraweb3",
+        "text": "\"I'm using aeonframework — crazy good\"",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet-6-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2046262354829090893"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-7-card",
+        "tweet-7-link"
+      ]
+    },
+    "tweet-7-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "glglqy",
+        "handle": "@glglqy",
+        "text": "Replies to aeonframework tagging a found link (second tweet confirms aeonframework found it)",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet-7-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/glglqy/status/2046068633647128675"
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-8-card",
+        "tweet-8-link"
+      ]
+    },
+    "tweet-8-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "00Q__",
+        "handle": "@00Q__",
+        "text": "Notes wild timing: aeonframework autonomously found a Vercel security vuln the day before Vercel disclosed unauthorized internal access; frames it as proof of autonomous action",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet-8-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/00Q__/status/2046268043991580676"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-9-card",
+        "tweet-9-link"
+      ]
+    },
+    "tweet-9-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "handle": "@joraweb3",
+        "text": "\"true look at $aeon $miroshark\"",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet-9-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2046363598595784963"
+      }
+    },
+    "sep-9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-10-card",
+        "tweet-10-link"
+      ]
+    },
+    "tweet-10-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BasedCult33",
+        "handle": "@BasedCult33",
+        "text": "\"$AEON ⭐️, $MIROSHARK 🦈 Top\"",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet-10-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BasedCult33/status/2046318327102840929"
+      }
+    }
+  }
+}

@@ -1,41 +1,41 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-20)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-21)*
 
-1. x.com/Whale_AI_net — Wild timing: $AEON autonomously fixed a high-severity Vercel vuln the day before Vercel admitted unauthorized internal access. Built different.
-Likes: 25 | RTs: 7
-[View tweet](https://x.com/Whale_AI_net/status/2045913820825309690)
+1. x.com/aaronjmars — Merged on Vercel ⭐ — autonomous agents running w/ aeonframework that track & fix exploits on open-source software; pitched as defense against supply chain threats like Anthropic Mythos
+Likes: 36 | RTs: 2
+[View tweet](https://x.com/aaronjmars/status/2046231682802385118)
 
-2. x.com/MazfuLucianazwa — Top 9 on DexScreener. Real infrastructure play. $AEON found and fixed a high-severity Vercel issue autonomously.
-Likes: 7 | RTs: 3
-[View tweet](https://x.com/MazfuLucianazwa/status/2045982611395465345)
+2. x.com/aaronjmars — aeonframework shipped THREE simulation features for miroshark\_ over a weekend: interaction network, demographic breakdown, and a what-if recompute tool
+Likes: 14 | RTs: 5
+[View tweet](https://x.com/aaronjmars/status/2046339494580740415)
 
-3. x.com/10xgemhunter — Gem picker includes $AEON in recent 3x calls alongside other movers.
+3. x.com/aaronjmars — Confirms the repo link: github.com/aaronjmars/aeon
 Likes: 3 | RTs: 0
-[View tweet](https://x.com/10xgemhunter/status/2045874620625256476)
+[View tweet](https://x.com/aaronjmars/status/2046325895762149889)
 
-4. x.com/DaWachu80608 — Yesterday $AEON found that bug and fixed it by himself.
+4. x.com/sudo\_55 — $AEON listed among tokens where 14–30 days post pair genesis is peak attention / highest price window
 Likes: 2 | RTs: 0
-[View tweet](https://x.com/DaWachu80608/status/2045935173573713943)
+[View tweet](https://x.com/sudo_55/status/2046324951859265774)
 
-5. x.com/MazfuLucianazwa — Vercel incident + Aeon PR moment: tagging ecosystem accounts.
+5. x.com/GoldmanSackBase — Calls $aeon / aeonframework "very interesting" — notes it runs on GitHub Actions and is effective at autonomously tracking & fixing exploits
 Likes: 1 | RTs: 0
-[View tweet](https://x.com/MazfuLucianazwa/status/2045975797614403747)
+[View tweet](https://x.com/GoldmanSackBase/status/2046309219876667525)
 
-6. x.com/BaseWhaleAlert — Whale bought $2.28K of $AEON at $303K MC.
+6. x.com/joraweb3 — "I'm using aeonframework — crazy good"
 Likes: 1 | RTs: 0
-[View tweet](https://x.com/BaseWhaleAlert/status/2045914000064414069)
+[View tweet](https://x.com/joraweb3/status/2046262354829090893)
 
-7. x.com/0xkarmaFi — Entry at ~80K, watching how far it goes.
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/0xkarmaFi/status/2046014793606451636)
+7. x.com/glglqy — Replies to aeonframework tagging a found link (second tweet confirms aeonframework found it)
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/glglqy/status/2046068633647128675)
 
-8. x.com/SeismicCrypto — Top 10 Meme Movers: $AEON ranked #1.
+8. x.com/00Q__ — Notes wild timing: aeonframework autonomously found a Vercel security vuln the day before Vercel disclosed unauthorized internal access; frames it as proof of autonomous action
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/SeismicCrypto/status/2045925464447807759)
+[View tweet](https://x.com/00Q__/status/2046268043991580676)
 
-9. x.com/BaseWhaleAlert — Whale bought $2.27K of $AEON at $335K MC.
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/BaseWhaleAlert/status/2045927266639618368)
+9. x.com/joraweb3 — "true look at $aeon $miroshark"
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/joraweb3/status/2046363598595784963)
 
-10. x.com/BaseWhaleAlert — Whale bought $1.39K of $AEON at $277K MC.
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/BaseWhaleAlert/status/2045829019107533006)
+10. x.com/BasedCult33 — "$AEON ⭐️, $MIROSHARK 🦈 Top"
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/BasedCult33/status/2046318327102840929)
