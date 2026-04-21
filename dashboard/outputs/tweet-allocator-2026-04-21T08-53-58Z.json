@@ -1,0 +1,298 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-21",
+        "description": "Budget: $10.00 in $AEON on Base"
+      },
+      "children": [
+        "stack_all_tweets",
+        "separator_final",
+        "stat_summary"
+      ]
+    },
+    "stack_all_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5"
+      ]
+    },
+    "item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "info_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "sudo_55",
+        "handle": "sudo_55",
+        "text": "14-30 days after pair genesis is when max attention occurs — narrative timing analysis for $AEON"
+      }
+    },
+    "info_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "amt_1",
+        "score_1",
+        "link_1"
+      ]
+    },
+    "amt_1": {
+      "type": "Stat",
+      "props": {
+        "value": "$3.33",
+        "label": "Allocation"
+      }
+    },
+    "score_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 2"
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/sudo_55/status/2046324951859265774"
+      }
+    },
+    "item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "info_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "GoldmanSackBase",
+        "handle": "GoldmanSackBase",
+        "text": "Very interesting autonomous agent $aeon — smart and simple, autonomously tracking & fixing exploits"
+      }
+    },
+    "info_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "amt_2",
+        "score_2",
+        "link_2"
+      ]
+    },
+    "amt_2": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.67",
+        "label": "Allocation"
+      }
+    },
+    "score_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 1"
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/GoldmanSackBase/status/2046309219876667525"
+      }
+    },
+    "item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3",
+        "info_3"
+      ]
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "handle": "joraweb3",
+        "text": "I'm using @aeonframework crazy good"
+      }
+    },
+    "info_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "amt_3",
+        "score_3",
+        "link_3"
+      ]
+    },
+    "amt_3": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.67",
+        "label": "Allocation"
+      }
+    },
+    "score_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 1"
+      }
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2046262354829090893"
+      }
+    },
+    "item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4",
+        "info_4"
+      ]
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AL4YERCAKE",
+        "handle": "AL4YERCAKE",
+        "text": "$aeon"
+      }
+    },
+    "info_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "amt_4",
+        "score_4",
+        "link_4"
+      ]
+    },
+    "amt_4": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.67",
+        "label": "Allocation"
+      }
+    },
+    "score_4": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 1"
+      }
+    },
+    "link_4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/AL4YERCAKE/status/2046364175400665395"
+      }
+    },
+    "item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_5",
+        "info_5"
+      ]
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "glglqy",
+        "handle": "glglqy",
+        "text": "yes, and it was found by @aeonframework"
+      }
+    },
+    "info_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "amt_5",
+        "score_5",
+        "link_5"
+      ]
+    },
+    "amt_5": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.66",
+        "label": "Allocation"
+      }
+    },
+    "score_5": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 1"
+      }
+    },
+    "link_5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/glglqy/status/2046068633647128675"
+      }
+    },
+    "separator_final": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stat_summary": {
+      "type": "Stat",
+      "props": {
+        "label": "Total allocated to 5 authors",
+        "value": "$10.00"
+      }
+    }
+  }
+}
