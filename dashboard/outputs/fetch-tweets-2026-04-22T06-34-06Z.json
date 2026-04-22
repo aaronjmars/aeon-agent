@@ -1,0 +1,134 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-22)"
+      },
+      "children": [
+        "stack-tweets"
+      ]
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "tweet-4",
+        "tweet-5",
+        "tweet-6",
+        "tweet-7",
+        "tweet-8",
+        "tweet-9",
+        "tweet-10"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "handle": "@joraweb3",
+        "text": "$aeon slowly getting picked up more ppl starting to use it, me included can't wait for v3 w/ OpenAI API support",
+        "likes": 3,
+        "retweets": 0
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "aeon coded https://github.com/aaronjmars/aeon",
+        "likes": 3,
+        "retweets": 0
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "matestroz",
+        "handle": "@matestroz",
+        "text": "$aeon more I look into it, more impressed I am.",
+        "likes": 3,
+        "retweets": 0
+      }
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Jsxontop",
+        "handle": "@Jsxontop",
+        "text": "$AEON dev providing relentless output.",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ntltnt",
+        "handle": "@ntltnt",
+        "text": "Hey, can you evaluate and rank these tokens? $instaclaw $felix $woon $aeon @aeonframework",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet-6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "handle": "@joraweb3",
+        "text": "$aeon $miroshark $WBC",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet-7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "NHarambe13",
+        "handle": "@NHarambe13",
+        "text": "Bullish on $aeon",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet-8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AnaMaria451456",
+        "handle": "@AnaMaria451456",
+        "text": "bullish enough on $aeon?",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet-9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AnaMaria451456",
+        "handle": "@AnaMaria451456",
+        "text": "$aeon 100%. Re-wrote itself in a night",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet-10": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "https://github.com/aaronjmars/aeon",
+        "likes": 0,
+        "retweets": 0
+      }
+    }
+  }
+}

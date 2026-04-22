@@ -1,41 +1,41 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-21)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-22)*
 
-1. x.com/aaronjmars — Merged on Vercel ⭐ — autonomous agents running w/ aeonframework that track & fix exploits on open-source software; pitched as defense against supply chain threats like Anthropic Mythos
-Likes: 36 | RTs: 2
-[View tweet](https://x.com/aaronjmars/status/2046231682802385118)
-
-2. x.com/aaronjmars — aeonframework shipped THREE simulation features for miroshark\_ over a weekend: interaction network, demographic breakdown, and a what-if recompute tool
-Likes: 14 | RTs: 5
-[View tweet](https://x.com/aaronjmars/status/2046339494580740415)
-
-3. x.com/aaronjmars — Confirms the repo link: github.com/aaronjmars/aeon
+1. x.com/joraweb3 — "$aeon slowly getting picked up more ppl starting to use it, me included can't wait for v3 w/ OpenAI API support"
 Likes: 3 | RTs: 0
-[View tweet](https://x.com/aaronjmars/status/2046325895762149889)
+[View tweet](https://x.com/joraweb3/status/2046603640299827323)
 
-4. x.com/sudo\_55 — $AEON listed among tokens where 14–30 days post pair genesis is peak attention / highest price window
+2. x.com/aaronjmars — "aeon coded https://github.com/aaronjmars/aeon"
+Likes: 3 | RTs: 0
+[View tweet](https://x.com/aaronjmars/status/2046610680028037410)
+
+3. x.com/matestroz — "$aeon more I look into it, more impressed I am."
+Likes: 3 | RTs: 0
+[View tweet](https://x.com/matestroz/status/2046694050581913947)
+
+4. x.com/Jsxontop — "$AEON dev providing relentless output."
 Likes: 2 | RTs: 0
-[View tweet](https://x.com/sudo_55/status/2046324951859265774)
+[View tweet](https://x.com/Jsxontop/status/2046623409757425831)
 
-5. x.com/GoldmanSackBase — Calls $aeon / aeonframework "very interesting" — notes it runs on GitHub Actions and is effective at autonomously tracking & fixing exploits
+5. x.com/ntltnt — "Hey, can you evaluate and rank these tokens? $instaclaw $felix $woon $aeon @aeonframework"
+Likes: 2 | RTs: 0
+[View tweet](https://x.com/ntltnt/status/2046475894504747301)
+
+6. x.com/joraweb3 — "$aeon $miroshark $WBC"
+Likes: 2 | RTs: 0
+[View tweet](https://x.com/joraweb3/status/2046677328692969708)
+
+7. x.com/NHarambe13 — "Bullish on $aeon"
 Likes: 1 | RTs: 0
-[View tweet](https://x.com/GoldmanSackBase/status/2046309219876667525)
+[View tweet](https://x.com/NHarambe13/status/2046683357984039329)
 
-6. x.com/joraweb3 — "I'm using aeonframework — crazy good"
+8. x.com/AnaMaria451456 — "bullish enough on $aeon?"
 Likes: 1 | RTs: 0
-[View tweet](https://x.com/joraweb3/status/2046262354829090893)
+[View tweet](https://x.com/AnaMaria451456/status/2046680857780347140)
 
-7. x.com/glglqy — Replies to aeonframework tagging a found link (second tweet confirms aeonframework found it)
-Likes: 1 | RTs: 0
-[View tweet](https://x.com/glglqy/status/2046068633647128675)
-
-8. x.com/00Q__ — Notes wild timing: aeonframework autonomously found a Vercel security vuln the day before Vercel disclosed unauthorized internal access; frames it as proof of autonomous action
+9. x.com/AnaMaria451456 — "$aeon 100%. Re-wrote itself in a night"
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/00Q__/status/2046268043991580676)
+[View tweet](https://x.com/AnaMaria451456/status/2046680521229389881)
 
-9. x.com/joraweb3 — "true look at $aeon $miroshark"
-Likes: 1 | RTs: 0
-[View tweet](https://x.com/joraweb3/status/2046363598595784963)
-
-10. x.com/BasedCult33 — "$AEON ⭐️, $MIROSHARK 🦈 Top"
-Likes: 1 | RTs: 0
-[View tweet](https://x.com/BasedCult33/status/2046318327102840929)
+10. x.com/aeonframework — "https://github.com/aaronjmars/aeon"
+Likes: 0 | RTs: 0
+[View tweet](https://x.com/aeonframework/status/2046680243004489871)
