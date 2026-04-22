@@ -1,0 +1,295 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-04-22"
+      },
+      "children": [
+        "heading-main",
+        "desc-intro",
+        "sep1",
+        "section-why",
+        "sep2",
+        "section-built",
+        "sep3",
+        "section-how",
+        "sep4",
+        "section-next",
+        "sep5",
+        "link-pr"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Onboard Validator",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "desc-intro": {
+      "type": "Text",
+      "props": {
+        "text": "A guided setup checker for fresh Aeon forks. Drops two new things into the repo: a `./onboard` command operators run after they fork, and a matching `onboard` skill that does the same checks inside GitHub Actions and posts the result to their notification channel. Whichever path they take, they get a checklist that says exactly what is missing and the exact command to fix it.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-why",
+        "text-why-1",
+        "text-why-2"
+      ]
+    },
+    "heading-why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters:",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-why-1": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon has 33 forks but the path from \"I forked the repo\" to \"first skill is running\" was undocumented. Operators set some secrets, missed others, and went silent. This was idea #2 in the 2026-04-20 repo-actions digest — flagged as recoverable growth: even 20% setup-stage abandonment at the current fork rate is a meaningful loss of community.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-why-2": {
+      "type": "Text",
+      "props": {
+        "text": "The onboard skill closes that gap by turning \"fork and hope\" into a guided 10-minute setup with a confirmation message that says \"you're done.\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section-built": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-built",
+        "item-cli",
+        "item-skill",
+        "item-yml",
+        "item-readme"
+      ]
+    },
+    "heading-built": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built:",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item-cli": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-cli-title",
+        "item-cli-desc"
+      ]
+    },
+    "item-cli-title": {
+      "type": "Text",
+      "props": {
+        "text": "onboard (executable, 315 lines)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "item-cli-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Local bash CLI. Runs 8 read-only checks — workflow files present, aeon.yml has skills enabled, memory/ writable, ANTHROPIC_API_KEY or CLAUDE_CODE_OAUTH_TOKEN set, at least one notification channel configured (Telegram / Discord / Slack / Email), GitHub Actions has run, memory/logs/ has entries, optional GH_GLOBAL PAT for cross-repo skills. Each gap prints the exact `gh secret set ...` or `chmod ...` or `git checkout ...` command. Modes: --remote (dispatch the skill), --quiet, --json, --help. Exits 1 on any failure for CI use.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item-skill": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-skill-title",
+        "item-skill-desc"
+      ]
+    },
+    "item-skill-title": {
+      "type": "Text",
+      "props": {
+        "text": "skills/onboard/SKILL.md (93 lines)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "item-skill-desc": {
+      "type": "Text",
+      "props": {
+        "text": "workflow_dispatch one-shot skill. Runs `./onboard --json`, formats the result as a verdict + grouped checklist with embedded fixes, sends via ./notify. Optional `var: --silent-on-pass` for nightly self-audits that only notify on regression. Logs every run to memory/logs/ and a one-line trend to memory/topics/onboard-history.md.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item-yml": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-yml-title",
+        "item-yml-desc"
+      ]
+    },
+    "item-yml-title": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "item-yml-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Registers `onboard` as workflow_dispatch (disabled by default since it is operator-triggered).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "item-readme": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-readme-title",
+        "item-readme-desc"
+      ]
+    },
+    "item-readme-title": {
+      "type": "Text",
+      "props": {
+        "text": "generate-skills-json + README.md",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "item-readme-desc": {
+      "type": "Text",
+      "props": {
+        "text": "onboard categorized as productivity/meta; Quick start gains step 5 \"Verify\"; project-structure listing for ./onboard; Meta/Agent skill count bumped 12 → 13.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section-how": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-how",
+        "text-how"
+      ]
+    },
+    "heading-how": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works:",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-how": {
+      "type": "Text",
+      "props": {
+        "text": "The CLI is the single source of truth — every check, fix string, and exit-code rule lives there. The SKILL.md is a thin wrapper that runs the CLI in --json mode, transforms output, and routes through ./notify. That keeps the contract testable: you run ./onboard locally, see the checklist, fix gaps, and rerun. The local-vs-remote split is the design point — local gives instant terminal feedback while operators are still in the setup loop, and `./onboard --remote` confirms the full GH Actions + secrets + ./notify pipeline actually works end-to-end (catches the \"I set the secret but it is not visible to Actions\" failures local-only checks would miss). gh secret list calls go through gh's built-in auth, which bypasses the env-var-in-curl sandbox restriction documented in CLAUDE.md.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "section-next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-next",
+        "text-next"
+      ]
+    },
+    "heading-next": {
+      "type": "Heading",
+      "props": {
+        "text": "What is next:",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-next": {
+      "type": "Text",
+      "props": {
+        "text": "Could surface onboard status in the dashboard as a top-level health card (currently the dashboard shows skill runs but not setup completeness). Could also wire onboard into add-skill so each new skill installation prompts a re-validation if it depends on a secret the operator has not configured yet.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #139",
+        "href": "https://github.com/aaronjmars/aeon/pull/139"
+      },
+      "children": []
+    }
+  }
+}
