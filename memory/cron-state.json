@@ -80,8 +80,8 @@
     "success_rate": 1
   },
   "push-recap": {
-    "last_dispatch": "2026-04-21T15:00:19Z",
-    "last_status": "success",
+    "last_dispatch": "2026-04-22T15:02:05Z",
+    "last_status": "dispatched",
     "last_success": "2026-04-21T15:08:55Z",
     "total_runs": 8,
     "total_successes": 8,
