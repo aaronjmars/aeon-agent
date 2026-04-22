@@ -1,0 +1,207 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-22",
+        "description": "aeon + aeon-agent — 3 meaningful commits by @aaronjmars (Aeon autonomous PRs)"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_onboarding",
+        "sep1",
+        "section_ads",
+        "sep2",
+        "section_xai",
+        "sep3",
+        "section_key_changes",
+        "sep4",
+        "section_stats",
+        "sep5",
+        "section_full_recap"
+      ]
+    },
+    "section_onboarding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_onboarding",
+        "text_onboarding"
+      ]
+    },
+    "heading_onboarding": {
+      "type": "Heading",
+      "props": {
+        "text": "Onboarding validator (aeon #139)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_onboarding": {
+      "type": "Text",
+      "props": {
+        "text": "new ./onboard CLI + skills/onboard/SKILL.md run 8 read-only checks (workflows, enabled skills, memory writable, auth secret, notification channel, Actions history, log evidence, optional GH_GLOBAL) with per-gap fix commands. --remote dispatches the skill inside Actions to catch \"secret set but Actions cannot see it\" failures local checks miss. Closes the silent-fork abandonment gap flagged Apr 20."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_ads": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_ads",
+        "text_ads"
+      ]
+    },
+    "heading_ads": {
+      "type": "Heading",
+      "props": {
+        "text": "Paid-ads surface (aeon #138)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_ads": {
+      "type": "Text",
+      "props": {
+        "text": "three new skills land together because they compose — aixbt-pulse (twice-daily cross-domain market pulse from AIXBT free tier, no key, writes artifacts other skills consume), schedule-ads (declarative ad launcher via AdManage.ai; PAUSED by default + dailySpendCap circuit breaker + dry-run), create-campaign (idempotent Meta campaign+ad-set provisioner; tracks state in .admanage-state/campaigns.json). Two new postprocess scripts handle the credentialed API calls outside the Claude sandbox."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_xai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_xai",
+        "text_xai"
+      ]
+    },
+    "heading_xai": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI prefetch short-circuit propagation (aeon-agent #17)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_xai": {
+      "type": "Text",
+      "props": {
+        "text": "the .xai-cache/<outfile>.error guard pattern shipped April 20 in fetch-tweets now applies to narrative-tracker, remix-tweets, tweet-roundup. On prefetch failure each skill either stops with a clear reason (remix-tweets — no useful WebSearch fallback) or skips the sandbox-broken curl and falls through to WebSearch (narrative-tracker, tweet-roundup). ~10K tokens saved per failed run, now across 4 skills instead of 1."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_key_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_changes",
+        "change_1",
+        "change_2",
+        "change_3"
+      ]
+    },
+    "heading_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes:",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "change_1": {
+      "type": "Text",
+      "props": {
+        "text": "./onboard CLI (+315) — canonical 8-check validator with --json + --remote + per-gap fix commands; first skill to embed the explicit exit-status taxonomy the autoresearch-evolution rewrites are converging on"
+      },
+      "children": []
+    },
+    "change_2": {
+      "type": "Text",
+      "props": {
+        "text": "schedule-ads + create-campaign + scripts/postprocess-admanage*.sh (+838) — three stacked spend guardrails (PAUSED default, dailySpendCap, dry-run) + sandbox-split intent/API pattern; first Aeon skills to provision state on external paid SaaS"
+      },
+      "children": []
+    },
+    "change_3": {
+      "type": "Text",
+      "props": {
+        "text": "aixbt-pulse (+185) — free-tier cross-domain pulse writing .outputs/aixbt-pulse.md for morning-brief / narrative-tracker / market-context-refresh to consume"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Stats: 20 files changed, +1833/-15 lines across 3 commits (26 autonomous scheduler/cron auto-commits on aeon-agent excluded)."
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_full_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-22.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
