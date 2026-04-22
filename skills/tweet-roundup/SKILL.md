@@ -25,7 +25,9 @@ Read the last 2 days of memory/logs/ to avoid repeating items.
    - Otherwise: read `.xai-cache/roundup-*.json` files matching your configured topics
    - If cache files exist and contain results, use that data. Extract the tweet lists from each response.
 
-   **If no cache files exist**, try the direct API call:
+   **Prefetch error short-circuit:** if the expected cache file (e.g. `.xai-cache/roundup-var.json`) is missing AND its `.error` companion (e.g. `.xai-cache/roundup-var.json.error`) exists, the prefetch failed (XAI api timeout, HTTP error, etc.). The direct API call below requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, so skip it. Read the one-line reason from the `.error` file, note `XAI prefetch failed (<reason>); roundup compiled via WebSearch only` at the top of the log entry, and proceed with the **WebSearch fallback only** (no curl call). Notification should still go out if WebSearch yields useful gists.
+
+   **If no cache files exist** (and no `.error` marker), try the direct API call:
    ```bash
    FROM_DATE=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
    TO_DATE=$(date -u +%Y-%m-%d)

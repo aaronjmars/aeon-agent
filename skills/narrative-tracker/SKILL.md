@@ -24,7 +24,9 @@ Read the last 3 days of memory/logs/ to avoid repeating analysis.
    **First, check for pre-fetched data** (the workflow pre-fetches XAI results outside the sandbox):
    - Read `.xai-cache/narratives.json` — if it exists and contains results, use that data.
 
-   **If no cache file exists**, try the direct API call:
+   **Prefetch error short-circuit:** if `.xai-cache/narratives.json` is missing AND `.xai-cache/narratives.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). The direct API call below requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, so skip it. Read the one-line reason from `.xai-cache/narratives.json.error`, note `XAI prefetch failed (<reason>); narratives compiled via WebSearch only` at the top of the log entry, and proceed using **WebSearch only** for steps 1+ (no curl call). The notification should still be sent if WebSearch yields useful narratives.
+
+   **If no cache file exists** (and no `.error` marker), try the direct API call:
    ```bash
    FROM_DATE=$(date -u -d "3 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-3d +%Y-%m-%d)
    TO_DATE=$(date -u +%Y-%m-%d)
