@@ -1,0 +1,303 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-22"
+      },
+      "children": [
+        "budget_info",
+        "sep1",
+        "tweets_list",
+        "sep2",
+        "summary"
+      ]
+    },
+    "budget_info": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "tweets_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1_block",
+        "tweet_2_block",
+        "tweet_3_block",
+        "tweet_4_block",
+        "tweet_5_block"
+      ]
+    },
+    "tweet_1_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1_card",
+        "tweet_1_meta"
+      ]
+    },
+    "tweet_1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "text": "$aeon slowly getting picked up — can't wait for v3 w/ OpenAI API support"
+      }
+    },
+    "tweet_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1_reward",
+        "tweet_1_score",
+        "tweet_1_link"
+      ]
+    },
+    "tweet_1_reward": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$2.50 in $AEON"
+      }
+    },
+    "tweet_1_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 3"
+      }
+    },
+    "tweet_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2046603640299827323"
+      }
+    },
+    "tweet_2_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2_card",
+        "tweet_2_meta"
+      ]
+    },
+    "tweet_2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "matestroz",
+        "text": "More I look into $aeon, more impressed I am."
+      }
+    },
+    "tweet_2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_2_reward",
+        "tweet_2_score",
+        "tweet_2_link"
+      ]
+    },
+    "tweet_2_reward": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$2.50 in $AEON"
+      }
+    },
+    "tweet_2_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 3"
+      }
+    },
+    "tweet_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/matestroz/status/2046694050581913947"
+      }
+    },
+    "tweet_3_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3_card",
+        "tweet_3_meta"
+      ]
+    },
+    "tweet_3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "text": "$aeon $miroshark $WBC"
+      }
+    },
+    "tweet_3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_3_reward",
+        "tweet_3_score",
+        "tweet_3_link"
+      ]
+    },
+    "tweet_3_reward": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$1.67 in $AEON"
+      }
+    },
+    "tweet_3_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 2"
+      }
+    },
+    "tweet_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2046677328692969708"
+      }
+    },
+    "tweet_4_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4_card",
+        "tweet_4_meta"
+      ]
+    },
+    "tweet_4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Jsxontop",
+        "text": "$AEON dev providing relentless output."
+      }
+    },
+    "tweet_4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_4_reward",
+        "tweet_4_score",
+        "tweet_4_link"
+      ]
+    },
+    "tweet_4_reward": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$1.67 in $AEON"
+      }
+    },
+    "tweet_4_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 2"
+      }
+    },
+    "tweet_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Jsxontop/status/2046623409757425831"
+      }
+    },
+    "tweet_5_block": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_5_card",
+        "tweet_5_meta"
+      ]
+    },
+    "tweet_5_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ntltnt",
+        "text": "Asked @aixbt_agent to evaluate and rank $aeon out of 100."
+      }
+    },
+    "tweet_5_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_5_reward",
+        "tweet_5_score",
+        "tweet_5_link"
+      ]
+    },
+    "tweet_5_reward": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$1.66 in $AEON"
+      }
+    },
+    "tweet_5_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 2"
+      }
+    },
+    "tweet_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ntltnt/status/2046475894504747301"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 5 tweets (4 unique authors)",
+        "variant": "caption"
+      }
+    }
+  }
+}
