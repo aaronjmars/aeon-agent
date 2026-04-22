@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-04-19*
+*Last consolidated: 2026-04-22*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -30,8 +30,13 @@
 | 2026-04-20 | Aeon Stopped Counting Forks and Started Naming Names | repo-article |
 | 2026-04-20 | Push Recap (9 commits: PRs #41-#45 — Memory Search API, fork-contributor-leaderboard, notification stack hardening) | repo-activity |
 | 2026-04-20 | Weekly Shiplog Apr 13–20 (8 themes: MCP/A2A, Memory API, fork intelligence, dedup stack) | repo-activity |
+| 2026-04-20 | The Agent That Runs for Ninety Seconds a Day | project-lens |
 | 2026-04-21 | The Night Aeon Rewired Itself: 80 Skills, One Thesis, 28 Minutes | repo-article |
+| 2026-04-21 | Push Recap (83 commits: 80 autoresearch rewrites, A2A examples, XAI prefetch reliability) | repo-activity |
+| 2026-04-21 | The Third Floor Over a Fire Station: Software's 1894 Moment | project-lens |
 | 2026-04-22 | Aeon Got a Credit Card. The First Thing It Did Was Triple-Lock the Safe. | repo-article |
+| 2026-04-22 | Push Recap (3 commits: onboard #139, paid-ads #138, XAI prefetch propagated to 3 sibling skills) | repo-activity |
+| 2026-04-22 | The Agent Stack Has Six Layers. Most Maps Only Show Two. | project-lens |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -39,14 +44,9 @@
 | 2026-03-25 | Polymarket | Geopolitics dominates; US-Iran escalation at 58.5% YES |
 
 ## Skills Built
-*(Rows before 2026-04-10 archived to `memory/topics/skills-history.md`)*
+*(Rows before 2026-04-14 archived to `memory/topics/skills-history.md`)*
 | Skill | Date | Notes |
 |-------|------|-------|
-| mcp-skill-adaptor | 2026-04-10 | TypeScript MCP server wrapping all 54 Aeon skills as aeon-<slug> tools; one-command install via ./add-mcp; works with Claude Code and Claude Desktop (aeon PR #28) |
-| workflow-security-audit | 2026-04-11 | On-demand skill that audits .github/workflows/ for script injection, over-permissioning, unverified actions; fixed 2 critical injection vectors in messages.yml (aeon PR #29) |
-| email-notification | 2026-04-12 | Fourth notification channel via SendGrid — SENDGRID_API_KEY + NOTIFY_EMAIL_TO secrets, Email group in dashboard, plain+HTML email body; configurable subject prefix (aeon PR #30) |
-| auto-merge | 2026-04-13 | Merges fully-green PRs (MERGEABLE + no CHANGES_REQUESTED + all checks SUCCESS/NEUTRAL/SKIPPED) — max 3/run, squash+delete-branch; closes the self-improve cycle stalled at 3-PR guard (aeon PR #31) |
-| skill-version-tracking | 2026-04-14 | `add-skill` records provenance (source_repo, commit_sha, imported_at) into `skills.lock`; new `skill-update-check` skill diffs upstream changes weekly and runs security scan on changed content (aeon PR #32) |
 | skill-leaderboard | 2026-04-14 | Weekly ranking of most popular skills across active forks — scans fork aeon.yml files, aggregates enabled skill counts, surfaces consensus skills and adoption gaps (aeon-agent PR #9) |
 | a2a-gateway | 2026-04-15 | A2A Protocol Gateway — HTTP server exposing all Aeon skills to LangChain, AutoGen, CrewAI, OpenAI Agents SDK, Vertex AI via JSON-RPC; SSE streaming for long-running skills (aeon PR #35) |
 | syndicate-article | 2026-04-16 | Dev.to Article Syndication — auto-cross-posts articles with canonical URL back to GitHub Pages; DEVTO_API_KEY in dashboard; postprocess-devto.sh sandbox fallback (aeon PR #36) |
@@ -69,10 +69,14 @@
 - Self-improve outpaces review: agent opens PRs faster than human merges. PR awareness guard stops at 3+ open PRs to prevent pile-up and conflicts
 - fetch-tweets dedup: now handled by persistent seen-file; notify has SHA256 message-hash layer; repo-pulse has per-run delta; scheduler has catch-up gate — three dedup layers stack end-to-end
 - weekly-shiplog heartbeat escalation (6 days) was a false positive — skill works; Mon-only cron simply hadn't fired during heartbeat's observation window
+- aeon-agent still at pre-autoresearch-evolution SKILL.md versions (aeon PRs #46–#136 not yet backported) — exit taxonomy (SKIP_UNCHANGED/NEW_INFO), significance gates, delta-vs-prior patterns not active on this running instance yet
+- Paid-ads skill cluster (aixbt-pulse/schedule-ads/create-campaign, PR #138) is the first Aeon category to spend real money on external platforms — three stacked guardrails: PAUSED-by-default launches, daily spend cap circuit breaker, dry-run silent mode
 
 ## Repo Actions Ideas Pipeline
-~45 ideas generated (9 runs). Recently built: cost-report, fork-fleet, skill-evals, mcp-skill-adaptor, workflow-security-audit, skill-version-tracking, skill-leaderboard, a2a-gateway, syndicate-article (Dev.to), skill-graph, star-milestone, syndicate-article (Farcaster), memory-search-api, fork-contributor-leaderboard, integration-examples (Apr-20 idea #1), onboard (Apr-20 idea #2). Apr-20 idea #3 (Reactive Inbound Commands) deferred — medium effort, depends on inbound-message infra extension. Apr-20 idea #4 (Cross-Fork Skill Customization Digest) and #5 (Smithery / MCP Directory Submission) still unbuilt. Key earlier-pipeline unbuilt: Dashboard Live Feed, Public Status Page, Webhook-to-Skill Bridge, Skill Template Library, Skill Run Analytics Widget, Contributor Auto-Reward (distribution-side). See `articles/repo-actions-*.md`.
+~50 ideas generated (10 runs). Recently built: memory-search-api, fork-contributor-leaderboard, integration-examples (Apr-20 idea #1), onboard (Apr-20 idea #2). Apr-20 idea #3 (Reactive Inbound Commands) deferred — medium effort, depends on inbound-message infra extension. Apr-22 re-surfaced highest-priority unbuilts: Smithery + MCP Registry Submission (idea #1, Growth/Small), Cross-Fork Skill Customization Digest (idea #2, Community/Small). Still unbuilt from pipeline: Dashboard Live Feed, Webhook-to-Skill Bridge, Public Agent Status Page, Skill Template Library, Skill Run Analytics Widget, Contributor Auto-Reward. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
+- Backport 80 autoresearch-evolution rewrites (aeon PRs #46–#136) to aeon-agent — pre-evolution SKILL.md versions still running here
+- Submit aeon-mcp adaptor to Smithery.ai + MCP directory (Apr-22 repo-actions idea #1, highest-priority growth unbuilt)
 - Run more digest types (HN, RSS, papers, DeFi)
 - Fix token permissions: need PAT with `workflows` scope to push workflow changes

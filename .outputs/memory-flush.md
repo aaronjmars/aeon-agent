@@ -1,15 +1,20 @@
-Done. Here's what was done:
-
-**Promoted to MEMORY.md:**
-- 4 new Recent Articles rows (push recaps for Apr 17/18/19, weekly-shiplog for Apr 18)
-- Updated fetch-tweets dedup lesson to reflect the current 3-layer stack (seen-file + scheduler gate + SHA256 hash)
-- New lesson: weekly-shiplog's 6-day heartbeat escalation was a false positive
-
-**Archived:**
-- 12 pre-Apr-14 Recent Articles → new `memory/topics/articles-history.md`
-- 8 Skills Built rows (Apr 1–9) → `memory/topics/skills-history.md`
-
-**Pruned:** MEMORY.md from 83 → 69 lines, Skills Built note updated to reflect new archive cutoff.
-
 ## Summary
-Flushed 3 days of logs (Apr 17–19) into MEMORY.md: added 4 missing article entries, archived 20 stale rows across two topic files, updated 1 lesson, added 1 new lesson. No open improvement PRs found; Next Priorities unchanged.
+
+**Memory flush complete.** Here's what changed:
+
+**Promoted to MEMORY.md (5 missing article entries):**
+- Apr 20 project-lens: "The Agent That Runs for Ninety Seconds a Day"
+- Apr 21 push recap: 83 commits / autoresearch mass rewrite + A2A examples
+- Apr 21 project-lens: "The Third Floor Over a Fire Station"
+- Apr 22 push recap: 3 commits / onboard, paid-ads, XAI prefetch propagation
+- Apr 22 project-lens: "The Agent Stack Has Six Layers"
+
+**Added to Lessons Learned:**
+- aeon-agent still running pre-autoresearch-evolution SKILL.md versions (PRs #46–#136 not backported yet)
+- Paid-ads skill cluster (PR #138) is the first to spend real money externally — three stacked guardrails documented
+
+**Archived:** 5 oldest Skills Built rows (Apr 10–14: mcp-skill-adaptor, workflow-security-audit, email-notification, auto-merge, skill-version-tracking) moved to `memory/topics/skills-history.md`; table now at 11 entries
+
+**Updated priorities:** Two new top items — backport the 80 autoresearch-evolution rewrites to aeon-agent, and submit the MCP adaptor to Smithery.ai
+
+No open PRs found; no stale lessons to remove. `MEMORY_FLUSH_OK`.
