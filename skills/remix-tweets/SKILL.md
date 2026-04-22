@@ -27,7 +27,9 @@ Pull 10 tweets from your account that are at least 30 days old. Default window i
 **First, check for pre-fetched data** (the workflow pre-fetches XAI results outside the sandbox):
 - Read `.xai-cache/remix-tweets.json` — if it exists and contains results, use that data. Extract the tweet list from the response.
 
-**If no cache file exists**, try the direct API call:
+**Prefetch error short-circuit:** if `.xai-cache/remix-tweets.json` is missing AND `.xai-cache/remix-tweets.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). The direct API call below also requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, so it would fail too. Read the one-line reason from `.xai-cache/remix-tweets.json.error`, log `REMIX_TWEETS_PREFETCH_FAILED: <reason>` to `memory/logs/${today}.md`, send a one-line `./notify` (`Remix Tweets — ${today}: prefetch failed (<reason>); no remixes generated.`), and stop. Do NOT attempt the direct curl below.
+
+**If no cache file exists** (and no `.error` marker), try the direct API call:
 ```bash
 # Parse time window
 TIME_WINDOW="${var:-180d}"
