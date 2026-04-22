@@ -1,0 +1,42 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading",
+        "content",
+        "storylink"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Article: Aeon Got a Credit Card. The First Thing It Did Was Triple-Lock the Safe.",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "content": {
+      "type": "Text",
+      "props": {
+        "text": "PR #138 lands aixbt-pulse + schedule-ads + create-campaign — the first Aeon skill category that spends real external money on Meta ads via AdManage.ai. The article unpacks the three stacked guardrails (PAUSED by default, daily spend circuit breaker, DRY_RUN + no-config-silent) that distinguish this drop from the 2026 autonomous-optimizer crowd managing $500M+ in auto-executed campaigns.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "storylink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-22.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

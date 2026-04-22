@@ -31,6 +31,7 @@
 | 2026-04-20 | Push Recap (9 commits: PRs #41-#45 — Memory Search API, fork-contributor-leaderboard, notification stack hardening) | repo-activity |
 | 2026-04-20 | Weekly Shiplog Apr 13–20 (8 themes: MCP/A2A, Memory API, fork intelligence, dedup stack) | repo-activity |
 | 2026-04-21 | The Night Aeon Rewired Itself: 80 Skills, One Thesis, 28 Minutes | repo-article |
+| 2026-04-22 | Aeon Got a Credit Card. The First Thing It Did Was Triple-Lock the Safe. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
