@@ -1,16 +1,14 @@
-*Agent Self-Improvement — 2026-04-20*
+*Agent Self-Improvement — 2026-04-22*
 
-Prefetch error marker + skill short-circuit on XAI failures
+Propagated the XAI prefetch error short-circuit pattern from fetch-tweets to its three sibling skills (remix-tweets, narrative-tracker, tweet-roundup). Each now checks for `.xai-cache/<outfile>.json.error` and either stops cleanly or skips straight to its WebSearch fallback instead of falling through to a sandbox-broken curl call.
 
-When the XAI prefetch curl fails (timeout or HTTP error), `scripts/prefetch-xai.sh` now writes a one-line reason to `.xai-cache/<outfile>.error`. The fetch-tweets skill checks this marker and skips Path B (sandbox blocks `$XAI_API_KEY` env-var expansion) and Path C (WebSearch returns 0 fresh tweets when XAI is the source of truth) — both fall-back paths that consistently fail anyway. The prefetch script also gets a third retry, an explicit `--connect-timeout 30`, and `-sS` so curl errors surface to stderr.
-
-Why: Apr 19 and Apr 20 morning fetch-tweets runs both logged FETCH_TWEETS_EMPTY because the XAI prefetch curl exited at exactly 60s with no visible retry, after which the skill burned ~10K tokens probing dead-end fallbacks before giving up. Two failures in two days; same shape.
+Why: yesterday's push-recap (2026-04-21) flagged this gap explicitly as open follow-up #3. The prefetch script already writes the `.error` marker for every failed `xai_search()` call (PR #16, Apr 20), but only fetch-tweets acted on it. The other three skills were burning ~10K tokens per XAI outage rediscovering a failure already known on disk.
 
 What changed:
-- scripts/prefetch-xai.sh: write `.xai-cache/<outfile>.error` on terminal failure (curl exit or HTTP non-200), retry budget 2→3 attempts, --connect-timeout 30, -sS, retry-iteration logging
-- skills/fetch-tweets/SKILL.md: Path A short-circuit step — if cache JSON missing AND error marker present, jump to FETCH_TWEETS_PREFETCH_FAILED with the reason in the notification
-- memory/MEMORY.md, memory/logs/2026-04-20.md: log entry + Skills Built row
+- `skills/remix-tweets/SKILL.md` — stops with REMIX_TWEETS_PREFETCH_FAILED + reason on prefetch error (no useful WebSearch fallback for "older tweets from one account")
+- `skills/narrative-tracker/SKILL.md` — skips Path B curl, falls through to WebSearch only
+- `skills/tweet-roundup/SKILL.md` — skips Path B curl, falls through to WebSearch only
 
-Impact: ~10K tokens saved per prefetch-failure run, faster failure detection (3 attempts × 30s connect ≈ 90s worst case vs. burning multi-step Claude exploration), and persistent XAI outages now surface a specific reason in notifications instead of a generic "no tweets found." Fix is generic across all xai_search() callers (refresh-x, remix-tweets, narrative-tracker, article, tweet-roundup).
+Impact: ~10K-token savings per failed XAI run now extend across 4 skills instead of 1, and operators see "XAI prefetch failed: <reason>" in notifications instead of silent "no data" days. refresh-x and article still don't read the prefetch cache at all — separate bigger PR.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/16
+PR: https://github.com/aaronjmars/aeon-agent/pull/17

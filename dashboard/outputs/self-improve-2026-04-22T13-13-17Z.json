@@ -1,0 +1,204 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement — 2026-04-22",
+        "description": "Propagated the XAI prefetch error short-circuit pattern across sibling skills"
+      },
+      "children": [
+        "text-what",
+        "sep-1",
+        "heading-context",
+        "text-context-date",
+        "text-context-detail",
+        "sep-2",
+        "heading-files",
+        "stack-files",
+        "sep-3",
+        "heading-impact",
+        "stat-skills",
+        "text-impact-tokens",
+        "text-impact-notifications",
+        "text-impact-other",
+        "sep-4",
+        "storylink-pr"
+      ]
+    },
+    "text-what": {
+      "type": "Text",
+      "props": {
+        "text": "Extended the XAI prefetch error short-circuit pattern from fetch-tweets to three sibling skills (remix-tweets, narrative-tracker, tweet-roundup). Each now checks for .xai-cache/<outfile>.json.error and either stops cleanly or skips straight to its WebSearch fallback instead of falling through to a sandbox-broken curl call."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-context": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h3"
+      }
+    },
+    "text-context-date": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's push-recap (2026-04-21) flagged this gap explicitly as open follow-up #3. The prefetch script already writes the .error marker for every failed xai_search() call (PR #16, Apr 20), but only fetch-tweets acted on it."
+      }
+    },
+    "text-context-detail": {
+      "type": "Text",
+      "props": {
+        "text": "The other three skills were burning ~10K tokens per XAI outage rediscovering a failure already known on disk."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-files": {
+      "type": "Heading",
+      "props": {
+        "text": "Files Modified",
+        "level": "h3"
+      }
+    },
+    "stack-files": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "file-1",
+        "file-2",
+        "file-3"
+      ]
+    },
+    "file-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-file-1",
+        "text-file-1"
+      ]
+    },
+    "badge-file-1": {
+      "type": "Badge",
+      "props": {
+        "text": "skills/remix-tweets/SKILL.md",
+        "variant": "outline"
+      }
+    },
+    "text-file-1": {
+      "type": "Text",
+      "props": {
+        "text": "Stops with REMIX_TWEETS_PREFETCH_FAILED + reason on prefetch error (no useful WebSearch fallback for \"older tweets from one account\")"
+      }
+    },
+    "file-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-file-2",
+        "text-file-2"
+      ]
+    },
+    "badge-file-2": {
+      "type": "Badge",
+      "props": {
+        "text": "skills/narrative-tracker/SKILL.md",
+        "variant": "outline"
+      }
+    },
+    "text-file-2": {
+      "type": "Text",
+      "props": {
+        "text": "Skips Path B curl, falls through to WebSearch only"
+      }
+    },
+    "file-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-file-3",
+        "text-file-3"
+      ]
+    },
+    "badge-file-3": {
+      "type": "Badge",
+      "props": {
+        "text": "skills/tweet-roundup/SKILL.md",
+        "variant": "outline"
+      }
+    },
+    "text-file-3": {
+      "type": "Text",
+      "props": {
+        "text": "Skips Path B curl, falls through to WebSearch only"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills with prefetch error handling",
+        "value": "4",
+        "delta": "+3"
+      }
+    },
+    "text-impact-tokens": {
+      "type": "Text",
+      "props": {
+        "text": "~10K-token savings per failed XAI run now extend across 4 skills instead of 1"
+      }
+    },
+    "text-impact-notifications": {
+      "type": "Text",
+      "props": {
+        "text": "Operators see \"XAI prefetch failed: <reason>\" in notifications instead of silent \"no data\" days"
+      }
+    },
+    "text-impact-other": {
+      "type": "Text",
+      "props": {
+        "text": "Note: refresh-x and article still don't read the prefetch cache at all — separate bigger PR"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "storylink-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #17: XAI prefetch error handling propagation",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/17",
+        "source": "GitHub"
+      }
+    }
+  }
+}
