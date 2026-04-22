@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-04-20*
-Generated from analysis of aaronjmars/aeon (198 stars, 32 forks, 93 skills) — these are ideas that could be autonomously built by the feature skill tomorrow.
+*Repo Action Ideas — 2026-04-22*
+Generated from analysis of aaronjmars/aeon (208 ★, 33 forks) — 5 ideas the feature skill can autonomously build.
 
-1. A2A / MCP Client Integration Examples (Community/DX, Small)
-   Working LangChain/AutoGen/CrewAI/OpenAI Agents SDK scripts calling real Aeon skills — zero observed integrations despite gateway being live for weeks, this fixes the adoption gap.
+1. Smithery + MCP Registry Submission (Growth, Small)
+   Submit the MCP adaptor to Smithery.ai and the Anthropic MCP servers directory — first inbound discovery path for the 93-tool adaptor live since Apr 10.
 
-2. Operator Onboarding Validator (DX, Small)
-   One-shot skill that checks secrets, Actions, notification channels, and memory write access — sends a step-by-step checklist with fix instructions to reduce fork abandonment from misconfiguration.
+2. Cross-Fork Skill Customization Digest (Community, Small)
+   Weekly scan of all 33 fork aeon.yml files to surface skill enable/disable divergence vs upstream — the missing peer-learning layer.
 
-3. Reactive Inbound Commands via Telegram/Discord (Integration, Medium)
-   Parse free-form messages ('run fetch-tweets', 'show token price') from configured channels and dispatch skills via workflow_dispatch — turns notification channels into bidirectional remote controls.
+3. Webhook-to-Skill Bridge (Integration, Medium)
+   .pending-webhook/ drop-in + Cloudflare Worker template so external systems (GitHub webhooks, Zapier, Make.com) can dispatch any aeon skill reactively.
 
-4. Cross-Fork Skill Customization Digest (Community, Small)
-   Weekly diff of each fork's aeon.yml against upstream, surfacing the 10 most-customized skills and common var patterns — proxy for upstream feature priorities without requiring anyone to file an issue.
+4. Public Agent Status Page (DX, Small)
+   Heartbeat auto-commits docs/status.md after each run — a public-readable trust signal for fork operators and potential adopters, rendered by GitHub Pages.
 
-5. Smithery / MCP Directory Submission (Growth, Small)
-   Submit the 93-tool MCP adaptor to Smithery.ai + Anthropic plugin directory; weekly health check that the listing stays current — puts Aeon in front of every developer searching for agent tools.
+5. Skill Run Analytics Widget (DX, Small)
+   New weekly skill that reads 7-day skill-runs data and emits a fleet-level ranked table (run count, success rate, anomaly flags) — closes the gap between heartbeat (binary ok/not-ok) and skill-health (single-skill deep audit).
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-20.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-22.md

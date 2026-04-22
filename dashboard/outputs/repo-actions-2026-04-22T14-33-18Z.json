@@ -1,0 +1,315 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-04-22"
+      },
+      "children": [
+        "subtitle",
+        "sep-1",
+        "ideas-stack",
+        "sep-2",
+        "link-details"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (208 ★, 33 forks) — 5 ideas the feature skill can autonomously build.",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "ideas-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "idea-1",
+        "idea-2",
+        "idea-3",
+        "idea-4",
+        "idea-5"
+      ]
+    },
+    "idea-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-1-header",
+        "idea-1-desc"
+      ]
+    },
+    "idea-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-1-title",
+        "badge-1-cat",
+        "badge-1-size"
+      ]
+    },
+    "idea-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Smithery + MCP Registry Submission",
+        "level": "h3"
+      }
+    },
+    "badge-1-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth",
+        "variant": "default"
+      }
+    },
+    "badge-1-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Submit the MCP adaptor to Smithery.ai and the Anthropic MCP servers directory — first inbound discovery path for the 93-tool adaptor live since Apr 10.",
+        "variant": "body"
+      }
+    },
+    "idea-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-2-header",
+        "idea-2-desc"
+      ]
+    },
+    "idea-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-2-title",
+        "badge-2-cat",
+        "badge-2-size"
+      ]
+    },
+    "idea-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Cross-Fork Skill Customization Digest",
+        "level": "h3"
+      }
+    },
+    "badge-2-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Community",
+        "variant": "default"
+      }
+    },
+    "badge-2-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly scan of all 33 fork aeon.yml files to surface skill enable/disable divergence vs upstream — the missing peer-learning layer.",
+        "variant": "body"
+      }
+    },
+    "idea-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-3-header",
+        "idea-3-desc"
+      ]
+    },
+    "idea-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-3-title",
+        "badge-3-cat",
+        "badge-3-size"
+      ]
+    },
+    "idea-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Webhook-to-Skill Bridge",
+        "level": "h3"
+      }
+    },
+    "badge-3-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "default"
+      }
+    },
+    "badge-3-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "idea-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": ".pending-webhook/ drop-in + Cloudflare Worker template so external systems (GitHub webhooks, Zapier, Make.com) can dispatch any aeon skill reactively.",
+        "variant": "body"
+      }
+    },
+    "idea-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-4-header",
+        "idea-4-desc"
+      ]
+    },
+    "idea-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-4-title",
+        "badge-4-cat",
+        "badge-4-size"
+      ]
+    },
+    "idea-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Public Agent Status Page",
+        "level": "h3"
+      }
+    },
+    "badge-4-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      }
+    },
+    "badge-4-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat auto-commits docs/status.md after each run — a public-readable trust signal for fork operators and potential adopters, rendered by GitHub Pages.",
+        "variant": "body"
+      }
+    },
+    "idea-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-5-header",
+        "idea-5-desc"
+      ]
+    },
+    "idea-5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "idea-5-title",
+        "badge-5-cat",
+        "badge-5-size"
+      ]
+    },
+    "idea-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Skill Run Analytics Widget",
+        "level": "h3"
+      }
+    },
+    "badge-5-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      }
+    },
+    "badge-5-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "New weekly skill that reads 7-day skill-runs data and emits a fleet-level ranked table (run count, success rate, anomaly flags) — closes the gap between heartbeat (binary ok/not-ok) and skill-health (single-skill deep audit).",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-details": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-22.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
