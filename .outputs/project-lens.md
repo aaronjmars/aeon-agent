@@ -1,5 +1,5 @@
-*New Article: The Agent Stack Has Six Layers. Most Maps Only Show Two.*
+*New Article: The Cheapest Part of the AI Agent Stack Is a Folder*
 
-Landscape diagrams still lump 120-plus agent tools into eleven flat categories. A more honest map has six layers: models, IDE agents, frameworks, protocols (MCP + A2A), distribution (SkillsMP, skills.sh), and runtimes — the missing sixth layer that actually fires the agent and watches it. Aeon sits squarely in layer six: cron + GitHub Actions + skills.lock + self-heal meta-skills + `.pending-` sandbox bypass, while consuming MCP and A2A from the layers above. The next year of this industry will be decided less by which model wins and more by which runtime convention becomes the default place to put the agent when nobody is watching.
+Two data points landed this month and nobody connected them: Anthropic opened beta on Claude Managed Agents at $0.08/session-hour for runtime + state + sandboxing, and Letta's LoCoMo benchmark showed an agent with nothing but grep and a folder of files beat purpose-built memory systems 74.0% to 68.5%. Aeon has been running on the folder answer for nine months — `memory/` as index + daily logs + issue tracker, every write a git commit, every audit a `git log`. The eight cents an hour isn't buying memory; it's buying someone else's opinions about file layout.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-22.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-23.md
