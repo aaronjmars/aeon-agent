@@ -1,0 +1,203 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards"
+      },
+      "children": [
+        "heading",
+        "sep1",
+        "authors_grid",
+        "sep2",
+        "summary"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Tweet Rewards 2026-04-23: 4 authors rewarded",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "authors_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "author1_stack",
+        "author2_stack",
+        "author3_stack",
+        "author4_stack"
+      ]
+    },
+    "author1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author1_link",
+        "reward1_stat",
+        "score1_stat"
+      ]
+    },
+    "author1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "0xkarmaFi",
+        "href": "https://x.com/0xkarmaFi"
+      }
+    },
+    "reward1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "7.29 AEON"
+      }
+    },
+    "score1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "17"
+      }
+    },
+    "author2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author2_link",
+        "reward2_stat",
+        "score2_stat"
+      ]
+    },
+    "author2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "jon_day2",
+        "href": "https://x.com/jon_day2"
+      }
+    },
+    "reward2_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "1.71 AEON"
+      }
+    },
+    "score2_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "4"
+      }
+    },
+    "author3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author3_link",
+        "reward3_stat",
+        "score3_stat"
+      ]
+    },
+    "author3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "0xalwaysonchain",
+        "href": "https://x.com/0xalwaysonchain"
+      }
+    },
+    "reward3_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "0.50 AEON"
+      }
+    },
+    "score3_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "1"
+      }
+    },
+    "author4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "author4_link",
+        "reward4_stat",
+        "score4_stat"
+      ]
+    },
+    "author4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "zbruip",
+        "href": "https://x.com/zbruip"
+      }
+    },
+    "reward4_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "0.50 AEON"
+      }
+    },
+    "score4_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "1"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "total_stat",
+        "chain_text"
+      ]
+    },
+    "total_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Allocated",
+        "value": "10.00 AEON"
+      }
+    },
+    "chain_text": {
+      "type": "Text",
+      "props": {
+        "text": "Blockchain: Base"
+      }
+    }
+  }
+}
