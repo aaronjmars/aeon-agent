@@ -1,0 +1,162 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-04-23"
+      },
+      "children": [
+        "repo-link",
+        "separator-1",
+        "stats-section",
+        "separator-2",
+        "stargazers-section"
+      ]
+    },
+    "repo-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stars-stat",
+        "forks-stat"
+      ]
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "215",
+        "delta": "+7",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "33"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazers-heading",
+        "stargazers-list"
+      ]
+    },
+    "stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-0xWCME",
+        "link-zakrivera",
+        "link-remyjkim",
+        "link-huyibin",
+        "link-thisisrick25",
+        "link-TengriArc",
+        "link-SidU"
+      ]
+    },
+    "link-0xWCME": {
+      "type": "Link",
+      "props": {
+        "label": "0xWCME",
+        "href": "https://github.com/0xWCME"
+      },
+      "children": []
+    },
+    "link-zakrivera": {
+      "type": "Link",
+      "props": {
+        "label": "zakrivera",
+        "href": "https://github.com/zakrivera"
+      },
+      "children": []
+    },
+    "link-remyjkim": {
+      "type": "Link",
+      "props": {
+        "label": "remyjkim",
+        "href": "https://github.com/remyjkim"
+      },
+      "children": []
+    },
+    "link-huyibin": {
+      "type": "Link",
+      "props": {
+        "label": "huyibin",
+        "href": "https://github.com/huyibin"
+      },
+      "children": []
+    },
+    "link-thisisrick25": {
+      "type": "Link",
+      "props": {
+        "label": "thisisrick25",
+        "href": "https://github.com/thisisrick25"
+      },
+      "children": []
+    },
+    "link-TengriArc": {
+      "type": "Link",
+      "props": {
+        "label": "TengriArc",
+        "href": "https://github.com/TengriArc"
+      },
+      "children": []
+    },
+    "link-SidU": {
+      "type": "Link",
+      "props": {
+        "label": "SidU",
+        "href": "https://github.com/SidU"
+      },
+      "children": []
+    }
+  }
+}
