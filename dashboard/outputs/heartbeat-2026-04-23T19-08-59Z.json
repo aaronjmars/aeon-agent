@@ -1,0 +1,89 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat Escalation",
+        "description": "PAT with workflows scope — 7 days unresolved since Apr 17"
+      },
+      "children": [
+        "alert_main",
+        "separator_1",
+        "stack_details"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "title": "PAT with workflows scope unresolved",
+        "message": "7 days unresolved since Apr 17. Agent cannot push workflow file changes to aeon.yml or .github/workflows/.",
+        "type": "error"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_impact",
+        "text_impact",
+        "heading_action",
+        "text_action",
+        "heading_history",
+        "text_history"
+      ]
+    },
+    "heading_impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h4"
+      }
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Without it, the agent cannot push workflow file changes to aeon.yml or .github/workflows/.",
+        "variant": "body"
+      }
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Immediate Action Required",
+        "level": "h4"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "Generate a fine-grained PAT with workflows write permission and set it as the GH_GLOBAL secret in repository settings.",
+        "variant": "body"
+      }
+    },
+    "heading_history": {
+      "type": "Heading",
+      "props": {
+        "text": "Escalation History",
+        "level": "h4"
+      }
+    },
+    "text_history": {
+      "type": "Text",
+      "props": {
+        "text": "Escalated Apr 19, Apr 21, and now Apr 23 (3 escalations over 6 days)",
+        "variant": "caption"
+      }
+    }
+  }
+}
