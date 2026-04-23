@@ -37,6 +37,7 @@
 | 2026-04-22 | Aeon Got a Credit Card. The First Thing It Did Was Triple-Lock the Safe. | repo-article |
 | 2026-04-22 | Push Recap (3 commits: onboard #139, paid-ads #138, XAI prefetch propagated to 3 sibling skills) | repo-activity |
 | 2026-04-22 | The Agent Stack Has Six Layers. Most Maps Only Show Two. | project-lens |
+| 2026-04-23 | Thirty-Four Forks Now Get a Vote on What Aeon Ships | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
