@@ -1,0 +1,299 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-23"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "commit-section",
+        "sep1",
+        "fork-intel-section",
+        "sep2",
+        "peer-learning-section",
+        "sep3",
+        "significance-gate-section",
+        "sep4",
+        "key-changes-section",
+        "sep5",
+        "stats-section"
+      ]
+    },
+    "commit-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-stat",
+        "aeon-agent-stat"
+      ]
+    },
+    "aeon-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon",
+        "value": "1 meaningful commit",
+        "delta": "by @aaronjmars (squash-merged from aeonframework autonomous PR)"
+      }
+    },
+    "aeon-agent-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon-agent",
+        "value": "0 meaningful commits",
+        "delta": "27 autonomous cron/scheduler auto-commits excluded"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fork-intel-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork-intel-heading",
+        "fork-intel-desc",
+        "fork-intel-buckets",
+        "fork-intel-closes"
+      ]
+    },
+    "fork-intel-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork-Intelligence Triangle Complete",
+        "level": "h2"
+      }
+    },
+    "fork-intel-desc": {
+      "type": "Text",
+      "props": {
+        "text": "PR #140 lands fork-skill-digest — a Sunday 18:30 UTC skill that reads every active fork's aeon.yml, compares vs upstream, and bins divergence into 5 buckets:",
+        "variant": "body"
+      }
+    },
+    "fork-intel-buckets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bucket-flip-enable",
+        "bucket-flip-disable",
+        "bucket-model-consensus",
+        "bucket-var-hotspot",
+        "bucket-emerging-watchlist"
+      ]
+    },
+    "bucket-flip-enable": {
+      "type": "Badge",
+      "props": {
+        "text": "flip-enable",
+        "variant": "secondary"
+      }
+    },
+    "bucket-flip-disable": {
+      "type": "Badge",
+      "props": {
+        "text": "flip-disable",
+        "variant": "secondary"
+      }
+    },
+    "bucket-model-consensus": {
+      "type": "Badge",
+      "props": {
+        "text": "model-consensus",
+        "variant": "secondary"
+      }
+    },
+    "bucket-var-hotspot": {
+      "type": "Badge",
+      "props": {
+        "text": "var-hotspot",
+        "variant": "secondary"
+      }
+    },
+    "bucket-emerging-watchlist": {
+      "type": "Badge",
+      "props": {
+        "text": "emerging-watchlist",
+        "variant": "secondary"
+      }
+    },
+    "fork-intel-closes": {
+      "type": "Text",
+      "props": {
+        "text": "Closes Apr-22 repo-actions idea #2 — second of two highest-priority unbuilts.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "peer-learning-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "peer-learning-heading",
+        "peer-learning-text"
+      ]
+    },
+    "peer-learning-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Peer-Learning Layer Now Exists",
+        "level": "h2"
+      }
+    },
+    "peer-learning-text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-leaderboard ranks what's popular; fork-fleet surfaces per-fork work; fork-skill-digest is the first skill that answers \"where does the fleet consistently disagree with upstream defaults\" — converts 33 forks' implicit ballot on each default into a weekly actionable signal.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "significance-gate-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "significance-gate-heading",
+        "significance-gate-text"
+      ]
+    },
+    "significance-gate-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Significance-Gate Pattern Shipped Greenfield",
+        "level": "h2"
+      }
+    },
+    "significance-gate-text": {
+      "type": "Text",
+      "props": {
+        "text": "Constraint block codifies \"silent runs are correct, not failures\" — notification fires only on N_CONFIGURED ≥ 2 AND ≥ 1 signal bucket non-empty. First skill to land this pattern without retrofit; pre-evolution push-recap (still running here) and weekly-shiplog are next candidates.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key-changes-heading",
+        "change-1",
+        "change-2",
+        "change-3"
+      ]
+    },
+    "key-changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h2"
+      }
+    },
+    "change-1": {
+      "type": "Text",
+      "props": {
+        "text": "New skills/fork-skill-digest/SKILL.md (+357) — 14-step spec with 5-bucket divergence taxonomy, week-over-week state persisted to memory/topics/fork-skill-digest-state.json, template-fork exclusion, six-priority verdict line picker, 5-state exit taxonomy.",
+        "variant": "body"
+      }
+    },
+    "change-2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml (+1) — slot after skill-leaderboard (17:00) and fork-contributor-leaderboard (17:30) to cluster all three fork-intelligence skills in one Sunday window.",
+        "variant": "body"
+      }
+    },
+    "change-3": {
+      "type": "Text",
+      "props": {
+        "text": "State-file-as-contract pattern extended: fork-skill-digest-state.json is authoritative (article text is derivative), mirrors .admanage-state/campaigns.json from Apr-22's paid-ads PR.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-heading",
+        "files-changed-stat",
+        "full-recap-link"
+      ]
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "files-changed-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Changes",
+        "value": "3 files changed, +359 / -1 lines"
+      }
+    },
+    "full-recap-link": {
+      "type": "Link",
+      "props": {
+        "label": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-23.md"
+      }
+    }
+  }
+}
