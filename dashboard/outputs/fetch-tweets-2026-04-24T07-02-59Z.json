@@ -1,0 +1,178 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "fetch-tweets"
+      },
+      "children": [
+        "heading",
+        "tweet1-stack",
+        "tweet2-stack",
+        "tweet3-stack",
+        "tweet4-stack",
+        "tweet5-stack"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-24)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1-link"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "tom_doerr",
+        "handle": "tom_doerr",
+        "text": "Autonomous agent framework with over 90 skills — links the GitHub repo",
+        "likes": 21,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/tom_doerr/status/2047227091356090510"
+      },
+      "children": []
+    },
+    "tweet2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2-link"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Karma_Nfa",
+        "handle": "Karma_Nfa",
+        "text": "Morning market update via @bankrbot, lists $AEON alongside BTC/ETH/SOL",
+        "likes": 10,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2047270728920182925"
+      },
+      "children": []
+    },
+    "tweet3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "tweet3-link"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xkarmaFi",
+        "handle": "0xkarmaFi",
+        "text": "Founder of $AEON is literally a chad. 10m views in a single day",
+        "likes": 4,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xkarmaFi/status/2047282906054439264"
+      },
+      "children": []
+    },
+    "tweet4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "tweet4-link"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "10xgemhunter",
+        "handle": "10xgemhunter",
+        "text": "Paid group calls recap: lists $AEON 3x among recent winners",
+        "likes": 4,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "tweet4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/10xgemhunter/status/2047230590047641620"
+      },
+      "children": []
+    },
+    "tweet5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "tweet5-link"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xalwaysonchain",
+        "handle": "0xalwaysonchain",
+        "text": "$AEON highly undervalued here. Both will reach millions",
+        "likes": 3,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet5-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xalwaysonchain/status/2047268951558685155"
+      },
+      "children": []
+    }
+  }
+}
