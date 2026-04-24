@@ -1,0 +1,343 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-24",
+        "description": "Budget: $10.00 in $AEON on Base"
+      },
+      "children": [
+        "sep_1",
+        "tweet_1",
+        "sep_2",
+        "tweet_2",
+        "sep_3",
+        "tweet_3",
+        "sep_4",
+        "tweet_4",
+        "sep_5",
+        "tweet_5",
+        "sep_6",
+        "total_text"
+      ]
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1_header",
+        "tweet_1_desc",
+        "tweet_1_link"
+      ]
+    },
+    "tweet_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1_author",
+        "tweet_1_amount",
+        "tweet_1_score"
+      ]
+    },
+    "tweet_1_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/tom_doerr",
+        "variant": "lead"
+      }
+    },
+    "tweet_1_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$4.71 in $AEON",
+        "variant": "secondary"
+      }
+    },
+    "tweet_1_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 24"
+      }
+    },
+    "tweet_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Autonomous agent framework with over 90 skills"
+      }
+    },
+    "tweet_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/tom_doerr/status/2047227091356090510"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2_header",
+        "tweet_2_desc",
+        "tweet_2_link"
+      ]
+    },
+    "tweet_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_2_author",
+        "tweet_2_amount",
+        "tweet_2_score"
+      ]
+    },
+    "tweet_2_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/Karma_Nfa",
+        "variant": "lead"
+      }
+    },
+    "tweet_2_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$2.55 in $AEON",
+        "variant": "secondary"
+      }
+    },
+    "tweet_2_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 13"
+      }
+    },
+    "tweet_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Morning market update @bankrbot including $AEON"
+      }
+    },
+    "tweet_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2047270728920182925"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3_header",
+        "tweet_3_desc",
+        "tweet_3_link"
+      ]
+    },
+    "tweet_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_3_author",
+        "tweet_3_amount",
+        "tweet_3_score"
+      ]
+    },
+    "tweet_3_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/10xgemhunter",
+        "variant": "lead"
+      }
+    },
+    "tweet_3_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$1.37 in $AEON",
+        "variant": "secondary"
+      }
+    },
+    "tweet_3_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 7"
+      }
+    },
+    "tweet_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Paid group calls recap, lists $AEON 3x"
+      }
+    },
+    "tweet_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/10xgemhunter/status/2047230590047641620"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4_header",
+        "tweet_4_desc",
+        "tweet_4_link"
+      ]
+    },
+    "tweet_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_4_author",
+        "tweet_4_amount",
+        "tweet_4_score"
+      ]
+    },
+    "tweet_4_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/0xkarmaFi",
+        "variant": "lead"
+      }
+    },
+    "tweet_4_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$0.78 in $AEON",
+        "variant": "secondary"
+      }
+    },
+    "tweet_4_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 4"
+      }
+    },
+    "tweet_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Founder of $AEON is literally a chad. 10m views in a single day"
+      }
+    },
+    "tweet_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xkarmaFi/status/2047282906054439264"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_5_header",
+        "tweet_5_desc",
+        "tweet_5_link"
+      ]
+    },
+    "tweet_5_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_5_author",
+        "tweet_5_amount",
+        "tweet_5_score"
+      ]
+    },
+    "tweet_5_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/0xalwaysonchain",
+        "variant": "lead"
+      }
+    },
+    "tweet_5_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$0.59 in $AEON",
+        "variant": "secondary"
+      }
+    },
+    "tweet_5_score": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 3"
+      }
+    },
+    "tweet_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON highly undervalued here"
+      }
+    },
+    "tweet_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xalwaysonchain/status/2047268951558685155"
+      }
+    },
+    "sep_6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "total_text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 5 authors",
+        "variant": "lead"
+      }
+    }
+  }
+}
