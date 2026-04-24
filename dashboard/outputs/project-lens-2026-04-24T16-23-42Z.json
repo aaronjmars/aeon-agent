@@ -1,0 +1,135 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "heading_article",
+        "text_survey_intro",
+        "separator_1",
+        "stats_container",
+        "separator_2",
+        "text_crisis_context",
+        "separator_3",
+        "heading_aeon",
+        "text_aeon_answer",
+        "separator_4",
+        "storylink_article"
+      ]
+    },
+    "heading_article": {
+      "type": "Heading",
+      "props": {
+        "text": "Eighty-Two Percent of Enterprises Can't Find Their Own AI Agents",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_survey_intro": {
+      "type": "Text",
+      "props": {
+        "text": "The Cloud Security Alliance's April 21 survey found:"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_82",
+        "stat_65",
+        "stat_21"
+      ]
+    },
+    "stat_82": {
+      "type": "Stat",
+      "props": {
+        "label": "Organizations discovered previously unknown AI agents",
+        "value": "82%"
+      },
+      "children": []
+    },
+    "stat_65": {
+      "type": "Stat",
+      "props": {
+        "label": "Have had security incidents",
+        "value": "65%"
+      },
+      "children": []
+    },
+    "stat_21": {
+      "type": "Stat",
+      "props": {
+        "label": "Have a formal decommissioning process",
+        "value": "21%"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_crisis_context": {
+      "type": "Text",
+      "props": {
+        "text": "Combined with the 13-hour Amazon Kiro outage from December, the shape of the 2026 agent-security crisis becomes clear."
+      },
+      "children": []
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_aeon": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon's Answer",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_aeon_answer": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon's answer is not a security product — it's a 161-line YAML file. No agent exists unless it's in aeon.yml, every change is a PR, every run is in git log, and decommissioning is a one-line diff."
+      },
+      "children": []
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "storylink_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Eighty-Two Percent of Enterprises Can't Find Their Own AI Agents",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-24.md",
+        "source": "project-lens"
+      },
+      "children": []
+    }
+  }
+}
