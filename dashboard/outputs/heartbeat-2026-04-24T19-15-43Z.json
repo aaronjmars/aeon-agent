@@ -1,0 +1,148 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert",
+        "sep1",
+        "metrics",
+        "sep2",
+        "details"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ESCALATION: PAT with `workflows` scope",
+        "message": "Day 7 unresolved since Apr 17 — Escalation #5",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_days",
+        "stat_escalation",
+        "stat_skills"
+      ]
+    },
+    "stat_days": {
+      "type": "Stat",
+      "props": {
+        "label": "Days unresolved",
+        "value": "7",
+        "trend": "down"
+      }
+    },
+    "stat_escalation": {
+      "type": "Stat",
+      "props": {
+        "label": "Escalation number",
+        "value": "5"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Scheduled skills (clean)",
+        "value": "10"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "rule_section",
+        "sep3",
+        "action_section"
+      ]
+    },
+    "rule_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "rule_heading",
+        "rule_text1",
+        "rule_text2"
+      ]
+    },
+    "rule_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notification Rules",
+        "level": "h3"
+      }
+    },
+    "rule_text1": {
+      "type": "Text",
+      "props": {
+        "text": "This is the last 48h-cadence ping under the new extended-persistence rule",
+        "variant": "body"
+      }
+    },
+    "rule_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Next re-notify ~May 1 (7d backoff now active)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action_heading",
+        "action_text"
+      ]
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Required",
+        "level": "h3"
+      }
+    },
+    "action_text": {
+      "type": "Text",
+      "props": {
+        "text": "Generate a fine-grained PAT with `workflows` write permission, set as GH_GLOBAL secret"
+      }
+    }
+  }
+}
