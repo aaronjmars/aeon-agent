@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-04-22*
-Generated from analysis of aaronjmars/aeon (208 ★, 33 forks) — 5 ideas the feature skill can autonomously build.
+*Repo Action Ideas — 2026-04-24*
+Generated from analysis of aaronjmars/aeon (229 stars, 35 forks) — 11 new stars today from @tom_doerr viral tweet. Five ideas for the feature skill to build autonomously.
 
-1. Smithery + MCP Registry Submission (Growth, Small)
-   Submit the MCP adaptor to Smithery.ai and the Anthropic MCP servers directory — first inbound discovery path for the 93-tool adaptor live since Apr 10.
+1. Skill Run Analytics Widget (DX, Small)
+   Fleet-level observability: which skills fail most, which have not run in their expected window, which have new exit codes — significance-gated, Wednesday cron.
 
-2. Cross-Fork Skill Customization Digest (Community, Small)
-   Weekly scan of all 33 fork aeon.yml files to surface skill enable/disable divergence vs upstream — the missing peer-learning layer.
+2. Contributor Auto-Reward (Community, Medium)
+   fork-contributor-leaderboard already scores people; tweet-allocator already has the payment pipeline. Weekly Monday run converts leaderboard scores into AEON distributions via existing postprocess-notify.
 
-3. Webhook-to-Skill Bridge (Integration, Medium)
-   .pending-webhook/ drop-in + Cloudflare Worker template so external systems (GitHub webhooks, Zapier, Make.com) can dispatch any aeon skill reactively.
+3. Twitter Thread Auto-Formatter (Content, Small)
+   Reads todays biggest log event, generates ready-to-post 5-7 tweet thread with hook, body, CTA — operators copy-paste; tweet-allocator rewards amplifiers. Multiplies the 10/day paid program ROI.
 
-4. Public Agent Status Page (DX, Small)
-   Heartbeat auto-commits docs/status.md after each run — a public-readable trust signal for fork operators and potential adopters, rendered by GitHub Pages.
+4. Repo Discovery Refresh (Growth, Small)
+   5 new GitHub topics + SHOWCASE.md with real output samples + Why Aeon? comparison table vs AutoGen/CrewAI/n8n/LangGraph — designed for new eyes arriving from viral-moment traffic.
 
-5. Skill Run Analytics Widget (DX, Small)
-   New weekly skill that reads 7-day skill-runs data and emits a fleet-level ranked table (run count, success rate, anomaly flags) — closes the gap between heartbeat (binary ok/not-ok) and skill-health (single-skill deep audit).
+5. AEON Token Pulse on Public Status Page (Community/DX, Small)
+   Heartbeat already generates docs/status.md; token-report already fetches price/volume. Add a compact token row — dual-use: operator skill health + community token health in one URL.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-22.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-24.md

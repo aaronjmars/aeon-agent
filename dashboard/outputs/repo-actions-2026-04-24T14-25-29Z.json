@@ -1,0 +1,333 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-04-24"
+      },
+      "children": [
+        "header_text",
+        "sep1",
+        "idea1",
+        "sep2",
+        "idea2",
+        "sep3",
+        "idea3",
+        "sep4",
+        "idea4",
+        "sep5",
+        "idea5",
+        "sep6",
+        "footer"
+      ]
+    },
+    "header_text": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (229 stars, 35 forks) — 11 new stars today from @tom_doerr viral tweet. Five ideas for the feature skill to build autonomously.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea1_title",
+        "idea1_badges",
+        "idea1_desc"
+      ]
+    },
+    "idea1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Skill Run Analytics Widget",
+        "level": "h3"
+      }
+    },
+    "idea1_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_dx",
+        "badge_small1"
+      ]
+    },
+    "badge_dx": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge_small1": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet-level observability: which skills fail most, which have not run in their expected window, which have new exit codes — significance-gated, Wednesday cron.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea2_title",
+        "idea2_badges",
+        "idea2_desc"
+      ]
+    },
+    "idea2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Contributor Auto-Reward",
+        "level": "h3"
+      }
+    },
+    "idea2_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_community",
+        "badge_medium"
+      ]
+    },
+    "badge_community": {
+      "type": "Badge",
+      "props": {
+        "text": "Community",
+        "variant": "secondary"
+      }
+    },
+    "badge_medium": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "idea2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "fork-contributor-leaderboard already scores people; tweet-allocator already has the payment pipeline. Weekly Monday run converts leaderboard scores into AEON distributions via existing postprocess-notify.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea3_title",
+        "idea3_badges",
+        "idea3_desc"
+      ]
+    },
+    "idea3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Twitter Thread Auto-Formatter",
+        "level": "h3"
+      }
+    },
+    "idea3_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_content",
+        "badge_small2"
+      ]
+    },
+    "badge_content": {
+      "type": "Badge",
+      "props": {
+        "text": "Content",
+        "variant": "secondary"
+      }
+    },
+    "badge_small2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Reads todays biggest log event, generates ready-to-post 5-7 tweet thread with hook, body, CTA — operators copy-paste; tweet-allocator rewards amplifiers. Multiplies the 10/day paid program ROI.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea4_title",
+        "idea4_badges",
+        "idea4_desc"
+      ]
+    },
+    "idea4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Repo Discovery Refresh",
+        "level": "h3"
+      }
+    },
+    "idea4_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_growth",
+        "badge_small3"
+      ]
+    },
+    "badge_growth": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth",
+        "variant": "secondary"
+      }
+    },
+    "badge_small3": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "5 new GitHub topics + SHOWCASE.md with real output samples + Why Aeon? comparison table vs AutoGen/CrewAI/n8n/LangGraph — designed for new eyes arriving from viral-moment traffic.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea5_title",
+        "idea5_badges",
+        "idea5_desc"
+      ]
+    },
+    "idea5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. AEON Token Pulse on Public Status Page",
+        "level": "h3"
+      }
+    },
+    "idea5_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_communitydx",
+        "badge_small4"
+      ]
+    },
+    "badge_communitydx": {
+      "type": "Badge",
+      "props": {
+        "text": "Community/DX",
+        "variant": "secondary"
+      }
+    },
+    "badge_small4": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat already generates docs/status.md; token-report already fetches price/volume. Add a compact token row — dual-use: operator skill health + community token health in one URL.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-24.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
