@@ -1,0 +1,221 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-24"
+      },
+      "children": [
+        "repos-section",
+        "sep1",
+        "heartbeat-title",
+        "heartbeat-pr141",
+        "heartbeat-pr18",
+        "heartbeat-note",
+        "sep2",
+        "changes-title",
+        "changes-list",
+        "sep3",
+        "stats-section",
+        "sep4",
+        "recap-link"
+      ]
+    },
+    "repos-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repos-heading",
+        "repos-commit-info"
+      ]
+    },
+    "repos-heading": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon + aaronjmars/aeon-agent",
+        "variant": "lead"
+      }
+    },
+    "repos-commit-info": {
+      "type": "Badge",
+      "props": {
+        "text": "2 meaningful commits by @aaronjmars (squash-merged from autonomous PRs)",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heartbeat-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat Evolution",
+        "level": "h3"
+      }
+    },
+    "heartbeat-pr141": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr141-text",
+        "pr141-link"
+      ]
+    },
+    "pr141-text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #141 (aeon) turns heartbeat into a public broadcaster — every run now regenerates docs/status.md with a 🟢/🟡/🔴 verdict, per-skill table, and open-issues feed. Forks that enable Pages inherit the page for free.",
+        "variant": "body"
+      }
+    },
+    "pr141-link": {
+      "type": "Link",
+      "props": {
+        "label": "Status page: aaronjmars.github.io/aeon/status/",
+        "href": "https://aaronjmars.github.io/aeon/status/"
+      }
+    },
+    "heartbeat-pr18": {
+      "type": "Text",
+      "props": {
+        "text": "PR #18 (aeon-agent) goes the other way — once an issue has been escalated for 7+ consecutive days, the 48h re-notify cadence drops to every 7 days so operator-dependent issues stop pinging every-other-day indefinitely.",
+        "variant": "body"
+      }
+    },
+    "heartbeat-note": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Heartbeat got louder externally and quieter internally in the same push window, both via pure skill-spec edits with zero net-new data sources or secrets."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "changes-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h3"
+      }
+    },
+    "changes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "change-1",
+        "change-2",
+        "change-3"
+      ]
+    },
+    "change-1": {
+      "type": "Text",
+      "props": {
+        "text": "docs/status.md (new, +31) + skills/heartbeat/SKILL.md (+69/-1) — new Public status page section codifies 3 overall states (DEGRADED/WATCH/OK), the exact markdown template, and formatting rules; README gains a shields.io agent-status badge",
+        "variant": "body"
+      }
+    },
+    "change-2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/heartbeat/SKILL.md in aeon-agent (+8/-3) — 3rd-tier escalation rule 'Extended-persistence backoff (7+ days)', plus new log marker 'Notification sent: no (7d extended-persistence backoff)' so future runs detect + respect the backoff",
+        "variant": "body"
+      }
+    },
+    "change-3": {
+      "type": "Text",
+      "props": {
+        "text": "PAT-workflows-scope issue (day 7) is the triggering case: today's heartbeat 20:00 UTC still fires on 48h cadence; next re-notify ~May 1 under the new rule",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-title",
+        "stats-grid",
+        "stats-note"
+      ]
+    },
+    "stats-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-files",
+        "stat-additions",
+        "stat-deletions"
+      ]
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files Changed",
+        "value": "5"
+      }
+    },
+    "stat-additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+110"
+      }
+    },
+    "stat-deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "-4"
+      }
+    },
+    "stats-note": {
+      "type": "Text",
+      "props": {
+        "text": "24 autonomous scheduler/cron commits excluded from this count",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recap-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Recap: push-recap-2026-04-24.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-24.md",
+        "source": "aeon-agent"
+      }
+    }
+  }
+}
