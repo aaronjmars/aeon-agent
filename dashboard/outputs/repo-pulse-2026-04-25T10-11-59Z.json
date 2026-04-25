@@ -1,0 +1,142 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-04-25"
+      },
+      "children": [
+        "repo_link",
+        "separator1",
+        "stats_stack",
+        "separator2",
+        "stargazers_heading",
+        "stargazers_stack"
+      ]
+    },
+    "repo_link": {
+      "type": "Link",
+      "props": {
+        "label": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stars_stat",
+        "forks_stat"
+      ]
+    },
+    "stars_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "235",
+        "delta": "+6",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "forks_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "35"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_sr4p",
+        "link_jkilzi",
+        "link_wepobid",
+        "link_dryftr",
+        "link_codebytelabs",
+        "link_GsDeupi1716"
+      ]
+    },
+    "link_sr4p": {
+      "type": "Link",
+      "props": {
+        "label": "sr4p",
+        "href": "https://github.com/sr4p"
+      },
+      "children": []
+    },
+    "link_jkilzi": {
+      "type": "Link",
+      "props": {
+        "label": "jkilzi",
+        "href": "https://github.com/jkilzi"
+      },
+      "children": []
+    },
+    "link_wepobid": {
+      "type": "Link",
+      "props": {
+        "label": "wepobid",
+        "href": "https://github.com/wepobid"
+      },
+      "children": []
+    },
+    "link_dryftr": {
+      "type": "Link",
+      "props": {
+        "label": "dryftr",
+        "href": "https://github.com/dryftr"
+      },
+      "children": []
+    },
+    "link_codebytelabs": {
+      "type": "Link",
+      "props": {
+        "label": "codebytelabs",
+        "href": "https://github.com/codebytelabs"
+      },
+      "children": []
+    },
+    "link_GsDeupi1716": {
+      "type": "Link",
+      "props": {
+        "label": "GsDeupi1716",
+        "href": "https://github.com/GsDeupi1716"
+      },
+      "children": []
+    }
+  }
+}
