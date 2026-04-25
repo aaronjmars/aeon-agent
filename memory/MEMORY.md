@@ -39,6 +39,7 @@
 | 2026-04-22 | The Agent Stack Has Six Layers. Most Maps Only Show Two. | project-lens |
 | 2026-04-23 | Thirty-Four Forks Now Get a Vote on What Aeon Ships | repo-article |
 | 2026-04-24 | The Agent That Publishes Its Own Heartbeat | repo-article |
+| 2026-04-25 | Aeon's Backlog Picked the Same Skill Twice. Today the Agent Just Built It. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |

@@ -1,0 +1,33 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Aeon's Backlog Picked the Same Skill Twice. Today the Agent Just Built It."
+      },
+      "children": [
+        "text_1",
+        "storylink_1"
+      ]
+    },
+    "text_1": {
+      "type": "Text",
+      "props": {
+        "text": "The agent's own daily brainstorm flagged `skill-analytics` as the highest-priority unbuilt for two cycles running. This morning at 11:20 UTC the `feature` skill picked it off the list and opened PR #142 — 318 lines that close the observability triangle (per-run heartbeat + per-skill health + new fleet-wide analytics) and finally let quiet-success exits like SKIP_UNCHANGED be distinguished from actual failures. Sixth merge-ready autonomous PR in six days.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "storylink_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-25.md",
+        "source": "repo-article"
+      },
+      "children": []
+    }
+  }
+}
