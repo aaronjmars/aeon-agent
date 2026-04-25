@@ -1,0 +1,360 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — Skill Analytics Widget",
+        "description": "Fleet-wide skill performance tracking and anomaly detection"
+      },
+      "children": [
+        "date_badge",
+        "separator_1",
+        "description_text",
+        "summary_text",
+        "separator_2",
+        "anomalies_section",
+        "separator_3",
+        "taxonomy_section",
+        "separator_4",
+        "impact_section",
+        "separator_5",
+        "config_section",
+        "separator_6",
+        "outputs_section",
+        "separator_7",
+        "pr_link"
+      ]
+    },
+    "date_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Built 2026-04-25 • Wired Wed 18:30 UTC",
+        "variant": "default"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "description_text": {
+      "type": "Text",
+      "props": {
+        "text": "Wednesday-evening fleet-wide performance view. Ranks every skill that ran in the last 7 days by run count.",
+        "variant": "lead"
+      }
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Significance-gated — clean fleet = silent run. Detects performance anomalies and surfaces autoresearch-evolution exit taxonomy that older health checks misclassify.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "anomalies_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "anomalies_heading",
+        "anomalies_grid"
+      ]
+    },
+    "anomalies_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "6 Anomaly Types Detected",
+        "level": "h3"
+      }
+    },
+    "anomalies_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "sm"
+      },
+      "children": [
+        "anomaly_silent",
+        "anomaly_allfail",
+        "anomaly_consecutive",
+        "anomaly_lowsuccess",
+        "anomaly_allskip",
+        "anomaly_duplicate"
+      ]
+    },
+    "anomaly_silent": {
+      "type": "Badge",
+      "props": {
+        "text": "SILENT",
+        "variant": "outline"
+      }
+    },
+    "anomaly_allfail": {
+      "type": "Badge",
+      "props": {
+        "text": "ALL_FAIL",
+        "variant": "destructive"
+      }
+    },
+    "anomaly_consecutive": {
+      "type": "Badge",
+      "props": {
+        "text": "CONSECUTIVE_FAILURES",
+        "variant": "destructive"
+      }
+    },
+    "anomaly_lowsuccess": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW_SUCCESS",
+        "variant": "outline"
+      }
+    },
+    "anomaly_allskip": {
+      "type": "Badge",
+      "props": {
+        "text": "ALL_SKIP",
+        "variant": "outline"
+      }
+    },
+    "anomaly_duplicate": {
+      "type": "Badge",
+      "props": {
+        "text": "DUPLICATE_RUNS",
+        "variant": "secondary"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "taxonomy_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "taxonomy_heading",
+        "taxonomy_note",
+        "taxonomy_badges"
+      ]
+    },
+    "taxonomy_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Autoresearch-Evolution Exit Taxonomy",
+        "level": "h3"
+      }
+    },
+    "taxonomy_note": {
+      "type": "Text",
+      "props": {
+        "text": "Surfaces exit taxonomy that older health checks misclassify:",
+        "variant": "caption"
+      }
+    },
+    "taxonomy_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "tax_skip_unchanged",
+        "tax_new_info",
+        "tax_skip_quiet"
+      ]
+    },
+    "tax_skip_unchanged": {
+      "type": "Badge",
+      "props": {
+        "text": "SKIP_UNCHANGED",
+        "variant": "secondary"
+      }
+    },
+    "tax_new_info": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW_INFO",
+        "variant": "default"
+      }
+    },
+    "tax_skip_quiet": {
+      "type": "Badge",
+      "props": {
+        "text": "SKIP_QUIET",
+        "variant": "secondary"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "impact_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "impact_heading",
+        "closes_text",
+        "priority_badge"
+      ]
+    },
+    "impact_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "closes_text": {
+      "type": "Text",
+      "props": {
+        "text": "Closes Apr-22 idea #5 and Apr-24 idea #1 — the highest-priority unbuilt features for two repo-actions cycles in a row.",
+        "variant": "body"
+      }
+    },
+    "priority_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "2-Cycle Priority",
+        "variant": "default"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "config_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "config_heading",
+        "config_items"
+      ]
+    },
+    "config_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Configuration",
+        "level": "h3"
+      }
+    },
+    "config_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "config_aeon",
+        "config_model",
+        "config_disabled",
+        "config_sandbox"
+      ]
+    },
+    "config_aeon": {
+      "type": "Text",
+      "props": {
+        "text": "Wired in aeon.yml",
+        "variant": "body"
+      }
+    },
+    "config_model": {
+      "type": "Badge",
+      "props": {
+        "text": "Sonnet",
+        "variant": "secondary"
+      }
+    },
+    "config_disabled": {
+      "type": "Badge",
+      "props": {
+        "text": "Disabled by default",
+        "variant": "outline"
+      }
+    },
+    "config_sandbox": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-safe: gh api auth via existing scripts/skill-runs",
+        "variant": "caption"
+      }
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "outputs_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "outputs_heading",
+        "output_articles",
+        "output_dashboard"
+      ]
+    },
+    "outputs_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Outputs",
+        "level": "h3"
+      }
+    },
+    "output_articles": {
+      "type": "Text",
+      "props": {
+        "text": "articles/skill-analytics-DATE.md",
+        "variant": "body"
+      }
+    },
+    "output_dashboard": {
+      "type": "Text",
+      "props": {
+        "text": "dashboard/outputs/skill-analytics.json",
+        "variant": "body"
+      }
+    },
+    "separator_7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "Link",
+      "props": {
+        "label": "Pull Request #142",
+        "href": "https://github.com/aaronjmars/aeon/pull/142"
+      }
+    }
+  }
+}

@@ -114,3 +114,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-04-25,fetch-tweets,claude-sonnet-4-6,14,7439,422901,30559
 2026-04-25,tweet-allocator,claude-sonnet-4-6,7,3039,143590,18738
 2026-04-25,hyperstitions-ideas,claude-opus-4-7,13,8483,387392,49952
+2026-04-25,feature,claude-opus-4-7,105,39939,10613814,177718
