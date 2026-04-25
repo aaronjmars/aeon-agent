@@ -1,14 +1,16 @@
-*Push Recap — 2026-04-24*
-aaronjmars/aeon + aaronjmars/aeon-agent — 2 meaningful commits by @aaronjmars (squash-merged from autonomous PRs)
+## Summary
 
-Heartbeat evolves in two directions simultaneously. PR #141 (aeon) turns heartbeat into a public broadcaster — every run now regenerates docs/status.md with a 🟢/🟡/🔴 verdict, per-skill table, and open-issues feed at aaronjmars.github.io/aeon/status/. Forks that enable Pages inherit the page for free. PR #18 (aeon-agent) goes the other way — once an issue has been escalated for 7+ consecutive days, the 48h re-notify cadence drops to every 7 days so operator-dependent issues stop pinging every-other-day indefinitely.
+**Status:** `PUSH_RECAP_QUIET` — no notification sent (per SKILL.md step 3).
 
-Heartbeat got louder externally and quieter internally in the same push window, both via pure skill-spec edits with zero net-new data sources or secrets.
+**Window:** 2026-04-24T15:18:51Z → 2026-04-25T15:18:51Z
 
-Key changes:
-- docs/status.md (new, +31) + skills/heartbeat/SKILL.md (+69/-1) — new Public status page section codifies 3 overall states (DEGRADED/WATCH/OK), the exact markdown template, and formatting rules; README gains a shields.io agent-status badge
-- skills/heartbeat/SKILL.md in aeon-agent (+8/-3) — 3rd-tier escalation rule 'Extended-persistence backoff (7+ days)', plus new log marker 'Notification sent: no (7d extended-persistence backoff)' so future runs detect + respect the backoff
-- PAT-workflows-scope issue (day 7) is the triggering case: today's heartbeat 20:00 UTC still fires on 48h cadence; next re-notify ~May 1 under the new rule
+**What I found:**
+- **aaronjmars/aeon** — 0 commits to main in window. Last merge was PR #141 (public-status-page) at Apr 24 13:20 UTC, before the cutoff. PR #142 (skill-analytics, +318/-1, 3 files) was opened today by this morning's autonomous `feature` skill but is still open/unmerged.
+- **aaronjmars/aeon-agent** — 30 commits, all autonomous `aeonframework` scheduler/cron/skill auto-commits (token-report, fetch-tweets, tweet-allocator, repo-pulse, hyperstitions-ideas, feature, plus yesterday's tail). Zero PR merges, zero skill-spec changes, zero human pushes.
 
-Stats: 5 files changed, +110/-4 lines across 2 meaningful commits (24 autonomous scheduler/cron commits excluded)
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-24.md
+**Files modified:**
+- `memory/logs/2026-04-25.md` — appended `## Push Recap — 2026-04-25` block with `PUSH_RECAP_QUIET` status, scan window, the open PR #142 note, filtered-noise rationale, and follow-ups carried from yesterday.
+
+**No-ops (per skill spec):** no article written, no `./notify` call, no commit.
+
+**Follow-up:** PR #142 (skill-analytics) likely merges within hours and will appear in tomorrow's recap.
