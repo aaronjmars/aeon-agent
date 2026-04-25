@@ -1,5 +1,5 @@
-*New Article: Eighty-Two Percent of Enterprises Can't Find Their Own AI Agents*
+*New Article: The Source Files Are Markdown Now*
 
-The Cloud Security Alliance's April 21 survey found that 82% of organizations have discovered previously unknown AI agents in their environments, 65% have had incidents, and only 21% have a formal decommissioning process. Combine that with the 13-hour Amazon Kiro outage from December and the shape of the 2026 agent-security crisis becomes clear. Aeon's answer is not a security product — it's a 161-line YAML file. No agent exists unless it's in `aeon.yml`, every change is a PR, every run is in `git log`, and decommissioning is a one-line diff.
+Anthropic shipped Agent Skills (SKILL.md) in Oct 2025 and open-sourced the spec in Dec. Sixteen frameworks adopted it in three months. The piece traces the format back to Knuth's 1984 literate programming idea — and uses Aeon's 103 markdown skills, markdown memory, and self-rewriting agent loop to show what happens when the README becomes the runtime.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-24.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-25.md
