@@ -1,0 +1,97 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-25)",
+        "description": "6 new tweets found"
+      },
+      "children": [
+        "stack_tweets"
+      ]
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4",
+        "tweet_5",
+        "tweet_6"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "the prompt box is dying. next-gen apps observe what you're doing and act on your behalf. quoting a post on AI agency, flagging @aeonframework",
+        "likes": 25,
+        "retweets": 4
+      },
+      "children": []
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "handle": "joraweb3",
+        "text": "$aeon accumulation. $miroshark accumulation. $wbc + $gitlawb price discovery. calling next legs across the basket.",
+        "likes": 7,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AnaMaria451456",
+        "handle": "AnaMaria451456",
+        "text": "And still $aeon is trending sub 300k - market cap call, replying to a space recap that mentioned @aaronjmars",
+        "likes": 0,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "racksonbase",
+        "handle": "racksonbase",
+        "text": "multi-token shoutout including $AEON alongside $SHARP on Base",
+        "likes": 0,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Lycanbull",
+        "handle": "Lycanbull",
+        "text": "AEON Biopharma AGM notice ($AEON pharma ticker — unrelated to this project)",
+        "likes": 0,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet_6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MultibaggAIHQ",
+        "handle": "MultibaggAIHQ",
+        "text": "AEON Biopharma AGM Jun 17 + going-concern flag ($AEON pharma ticker — unrelated)",
+        "likes": 0,
+        "retweets": 0
+      },
+      "children": []
+    }
+  }
+}
