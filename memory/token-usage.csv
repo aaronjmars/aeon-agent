@@ -113,4 +113,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-04-25,token-report,claude-sonnet-4-6,14,11080,446964,37072
 2026-04-25,fetch-tweets,claude-sonnet-4-6,14,7439,422901,30559
 2026-04-25,tweet-allocator,claude-sonnet-4-6,7,3039,143590,18738
-2026-04-25,repo-pulse,claude-sonnet-4-6,11,3723,322055,30473
+2026-04-25,hyperstitions-ideas,claude-opus-4-7,13,8483,387392,49952

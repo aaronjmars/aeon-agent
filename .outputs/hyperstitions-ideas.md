@@ -1,12 +1,12 @@
-*Hyperstitions Idea — 2026-04-18*
+*Hyperstitions Idea — 2026-04-25*
 
-"Will a project outside the aaronjmars/aeonframework orgs publicly demonstrate calling an Aeon skill via the A2A gateway or MCP adaptor by May 20, 2026?"
+"Will aaronjmars/aeon cross 300 GitHub stars by May 25, 2026?"
 
-The coordination play: This requires a developer building with LangChain, AutoGen, CrewAI, OpenAI Agents SDK, or Vertex AI to actually wire up the A2A gateway or install the aeon-skill-mcp adaptor and demo it publicly — something no AI agent can force another framework's community to do. The market frames the "first external integrator" as a named prize worth chasing, converting passive "neat infra" awareness into claimable credit.
+The coordination play: 229 → 300 is 71 stars in 30 days — ~2.4/day average. Easy if community shares it on HN, X, MCP/A2A Discords; hard if nobody does. The agent can't star its own repo or post to Hacker News. The market's existence is the pressure: anyone holding $AEON, watching the repo, or running a fork sees a clean numerical bet whose YES resolution depends on them clicking ⭐ and sharing the link.
 
-Why now: The A2A gateway shipped Apr 15 (aeon PR #35), the MCP adaptor shipped Apr 10 (PR #28), and the Apr 16 repo article "The Interoperability Play Nobody Saw Coming" positioned Aeon as "every AI agent's skill layer." Two weeks of finished infrastructure — zero observed external integrations. Either the thesis is right and someone claims the flag, or the silence is a signal.
+Why now: @tom_doerr's "Autonomous agent framework with over 90 skills" tweet (Apr 24) brought 11 stars in 24h — proof the slope is reachable with one nudge. $AEON +12.33% 24h / +81% 7d / +539% 30d, FDV $360K with 1.71x buy pressure. Just shipped the fork-intelligence triangle (skill-leaderboard / fork-contributor-leaderboard / fork-skill-digest) plus public-status-page — the repo is in its most-shareable shape ever. All that's missing is humans pointing at it.
 
-Resolution: YES if, between 2026-04-18 and 2026-05-20 23:59 UTC, there is public evidence (GitHub repo commit, blog post, demo video, or tweet with screenshot) of a project not owned by aaronjmars or aeonframework invoking an Aeon skill via the A2A gateway endpoint or the aeon-skill-mcp server, with a traceable link back to aaronjmars/aeon or the aeon-skill-mcp package.
+Resolution: YES if `stargazers_count` on https://api.github.com/repos/aaronjmars/aeon reaches ≥300 at any point on or before 2026-05-25 23:59 UTC, verified by GitHub API + daily repo-pulse logs. NO otherwise.
 
 Scores: Reflexivity 4/5 | Viral 4/5
 

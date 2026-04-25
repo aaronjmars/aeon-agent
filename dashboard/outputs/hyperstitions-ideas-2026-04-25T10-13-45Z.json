@@ -1,0 +1,338 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Hyperstitions Idea — 2026-04-25"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-question",
+        "sep-1",
+        "section-coordination",
+        "sep-2",
+        "section-why",
+        "sep-3",
+        "section-resolution",
+        "sep-4",
+        "section-scores",
+        "sep-5",
+        "footer-stack"
+      ]
+    },
+    "heading-question": {
+      "type": "Heading",
+      "props": {
+        "text": "Will aaronjmars/aeon cross 300 GitHub stars by May 25, 2026?",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-coordination": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-coord-title",
+        "text-coord-desc",
+        "grid-coord-stats"
+      ]
+    },
+    "text-coord-title": {
+      "type": "Heading",
+      "props": {
+        "text": "The Coordination Play",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-coord-desc": {
+      "type": "Text",
+      "props": {
+        "text": "229 → 300 is 71 stars in 30 days — ~2.4/day average. Easy if community shares it on HN, X, MCP/A2A Discords; hard if nobody does. The agent can't star its own repo or post to Hacker News. The market's existence is the pressure: anyone holding $AEON, watching the repo, or running a fork sees a clean numerical bet whose YES resolution depends on them clicking ⭐ and sharing the link.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "grid-coord-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-current-stars",
+        "stat-target-stars",
+        "stat-daily-rate"
+      ]
+    },
+    "stat-current-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Stars",
+        "value": "229"
+      },
+      "children": []
+    },
+    "stat-target-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Target Stars",
+        "value": "300"
+      },
+      "children": []
+    },
+    "stat-daily-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Required Daily Rate",
+        "value": "~2.4/day"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-why-title",
+        "text-proof",
+        "grid-aeon-metrics",
+        "text-shipped"
+      ]
+    },
+    "text-why-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Why Now",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-proof": {
+      "type": "Text",
+      "props": {
+        "text": "@tom_doerr's \"Autonomous agent framework with over 90 skills\" tweet (Apr 24) brought 11 stars in 24h — proof the slope is reachable with one nudge.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "grid-aeon-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-aeon-24h",
+        "stat-aeon-7d",
+        "stat-aeon-30d",
+        "stat-aeon-fdv"
+      ]
+    },
+    "stat-aeon-24h": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON 24h",
+        "value": "+12.33%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-aeon-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON 7d",
+        "value": "+81%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-aeon-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON 30d",
+        "value": "+539%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-aeon-fdv": {
+      "type": "Stat",
+      "props": {
+        "label": "FDV",
+        "value": "$360K",
+        "delta": "1.71x buy pressure"
+      },
+      "children": []
+    },
+    "text-shipped": {
+      "type": "Text",
+      "props": {
+        "text": "Just shipped the fork-intelligence triangle (skill-leaderboard / fork-contributor-leaderboard / fork-skill-digest) plus public-status-page — the repo is in its most-shareable shape ever. All that's missing is humans pointing at it.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-resolution": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-resolution-title",
+        "alert-resolution"
+      ]
+    },
+    "text-resolution-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "alert-resolution": {
+      "type": "Alert",
+      "props": {
+        "title": "Criteria: YES if stargazers_count ≥ 300",
+        "message": "Verified by GitHub API at https://api.github.com/repos/aaronjmars/aeon on or before 2026-05-25 23:59 UTC, via daily repo-pulse logs. NO otherwise.",
+        "type": "info"
+      },
+      "children": []
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-scores": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-scores-title",
+        "grid-scores"
+      ]
+    },
+    "text-scores-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Scores",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-scores": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-reflexivity",
+        "stat-viral"
+      ]
+    },
+    "stat-reflexivity": {
+      "type": "Stat",
+      "props": {
+        "label": "Reflexivity",
+        "value": "4/5"
+      },
+      "children": []
+    },
+    "stat-viral": {
+      "type": "Stat",
+      "props": {
+        "label": "Viral",
+        "value": "4/5"
+      },
+      "children": []
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-soon",
+        "link-hyperstitions",
+        "text-question"
+      ]
+    },
+    "text-soon": {
+      "type": "Text",
+      "props": {
+        "text": "Soon on",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "link-hyperstitions": {
+      "type": "Link",
+      "props": {
+        "label": "hyperstitions.com",
+        "href": "https://www.hyperstitions.com/"
+      },
+      "children": []
+    },
+    "text-question": {
+      "type": "Text",
+      "props": {
+        "text": "?",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
