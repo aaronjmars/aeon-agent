@@ -1,0 +1,166 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert_stalling",
+        "sep1",
+        "heading_prs",
+        "stack_pr_list",
+        "sep2",
+        "heading_status",
+        "stack_health"
+      ]
+    },
+    "alert_stalling": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "PR queue stalling",
+        "message": "aaronjmars/aeon PR #142 (skill-analytics) is 32h old — merge cadence has slipped past the 24h baseline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Pending PRs",
+        "level": "h3"
+      }
+    },
+    "stack_pr_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_row_142",
+        "pr_row_143",
+        "pr_row_144"
+      ]
+    },
+    "pr_row_142": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr_142",
+        "badge_142"
+      ]
+    },
+    "pr_142": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#142: skill-analytics",
+        "href": "https://github.com/aaronjmars/aeon/pull/142",
+        "source": "aaronjmars/aeon"
+      }
+    },
+    "badge_142": {
+      "type": "Badge",
+      "props": {
+        "text": "32h old",
+        "variant": "destructive"
+      }
+    },
+    "pr_row_143": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr_143",
+        "badge_143"
+      ]
+    },
+    "pr_143": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#143: external community",
+        "href": "https://github.com/aaronjmars/aeon/pull/143",
+        "source": "aaronjmars/aeon"
+      }
+    },
+    "badge_143": {
+      "type": "Badge",
+      "props": {
+        "text": "21h old",
+        "variant": "secondary"
+      }
+    },
+    "pr_row_144": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr_144",
+        "badge_144"
+      ]
+    },
+    "pr_144": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#144: contributor-reward",
+        "href": "https://github.com/aaronjmars/aeon/pull/144",
+        "source": "aaronjmars/aeon"
+      }
+    },
+    "badge_144": {
+      "type": "Badge",
+      "props": {
+        "text": "8h old",
+        "variant": "default"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Today's Status",
+        "level": "h3"
+      }
+    },
+    "stack_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_skills",
+        "stat_issues"
+      ]
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Scheduled skills completed",
+        "value": "13"
+      }
+    },
+    "stat_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open issues",
+        "value": "0"
+      }
+    }
+  }
+}
