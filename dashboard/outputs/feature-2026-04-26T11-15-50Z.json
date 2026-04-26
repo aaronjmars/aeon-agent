@@ -1,0 +1,197 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-04-26"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_contributor_reward",
+        "desc_main",
+        "sep1",
+        "section_why",
+        "sep2",
+        "section_what_built",
+        "sep3",
+        "section_how_works",
+        "sep4",
+        "section_what_next",
+        "sep5",
+        "pr_link"
+      ]
+    },
+    "heading_contributor_reward": {
+      "type": "Heading",
+      "props": {
+        "text": "Contributor Reward",
+        "level": "h2"
+      }
+    },
+    "desc_main": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon now has a skill that turns the weekly fork contributor leaderboard into an actual paycheck. Every Sunday the leaderboard ranks community devs by merged PRs, reviews, fork commits, and new skills. Every Monday this new skill reads that ranking, prices each top-5 contributor against a tier table (rank 1 gets 25 USDC, 2 gets 15, 3 gets 10, 4-5 get 5 each, plus a one-time 5 USDC first-PR bonus), writes the plan into the same config file the on-chain transfer skill already reads, and pings the operator with a one-line command to send it."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_why",
+        "why_content1",
+        "why_content2"
+      ]
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters:",
+        "level": "h3"
+      }
+    },
+    "why_content1": {
+      "type": "Text",
+      "props": {
+        "text": "The leaderboard names the people doing the work. The distribute-tokens skill moves USDC on Base. Until today, nothing connected them — a contributor's score on Sunday had no path to a wallet credit on Monday. The leaderboard's own SKILL.md flagged this as a future iteration five weeks ago. Apr-24 repo-actions brainstorm flagged it as the highest-impact unbuilt idea (\"Medium effort, all deps met\") right after skill-analytics shipped yesterday."
+      }
+    },
+    "why_content2": {
+      "type": "Text",
+      "props": {
+        "text": "With 35 forks, +21 stars this week, and a community in viral-momentum mode (@tom_doerr just brought 11 stars in a single day), giving contributors concrete economic signal that their work is valued is the missing link in the community flywheel."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_what_built": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_what_built",
+        "what_built_item1",
+        "what_built_item2"
+      ]
+    },
+    "heading_what_built": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built:",
+        "level": "h3"
+      }
+    },
+    "what_built_item1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/contributor-reward/SKILL.md (new): 10-step pipeline. Parses var (supports `dry-run` and explicit week override `2026-W17`), finds the latest fork-contributor-leaderboard article and rejects anything older than 8 days, extracts the Top Contributors table with a tolerant regex on the documented column layout, loads idempotency state from memory/state/contributor-reward-state.json (bootstraps if missing), computes the plan with tier pricing and first-PR bonus, diffs against any prior state for the same week, renders a human-readable plan, updates memory/distributions.yml (replaces existing list for the same week or appends if new — preserves other lists), atomically writes state via tempfile + mv, notifies the operator with the plan plus the one-line `distribute-tokens dry-run:contributors-YYYY-Wnn` command, and logs the run. Full exit taxonomy: OK / DRY_RUN / ALREADY_PROCESSED / NO_LEADERBOARD / STALE_LEADERBOARD / PARSE_FAIL / NO_ELIGIBLE / ERROR with silent exits for the no-op cases."
+      }
+    },
+    "what_built_item2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml (+1 line): registered next to fork-contributor-leaderboard with Monday 09:30 UTC schedule (16h after Sunday's 17:30 leaderboard run, comfortable headroom). claude-sonnet-4-6 model, disabled by default — operators opt in deliberately because the skill writes to a money-adjacent config file."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_how_works": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_how_works",
+        "how_works_content"
+      ]
+    },
+    "heading_how_works": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works:",
+        "level": "h3"
+      }
+    },
+    "how_works_content": {
+      "type": "Text",
+      "props": {
+        "text": "The skill is plan generation only — it never executes transfers. That was the deliberate design choice: distribute-tokens already has full per-recipient idempotency, balance preflight, and dry-run mode; re-implementing transfers would fragment that state. Keeping the human-visible distributions.yml diff between plan write and execution is the cheapest possible audit trail when real money is involved. The plan lands in git; the operator (or a future chain step) runs `distribute-tokens dry-run:contributors-2026-Wnn` to preview wallet resolution and balance check, then drops the dry-run prefix to execute. Idempotency is per-(week, login) — re-runs in the same week with identical plans exit silently; re-runs with diffs (leaderboard re-ran with a late update) add only the deltas and never claw back demoted entries. First-PR bonus is once-ever per login, tracked in a flat first_pr_bonus_paid list. Pure local file I/O — no curl, no env-var-expansion, no new prefetch or postprocess scripts."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_what_next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_what_next",
+        "what_next_content"
+      ]
+    },
+    "heading_what_next": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next:",
+        "level": "h3"
+      }
+    },
+    "what_next_content": {
+      "type": "Text",
+      "props": {
+        "text": "First real run is next Monday May 4 at 09:30 UTC against this Sunday's leaderboard. After a month of runs validates the tier curve, the natural follow-up is wiring this as a chain (`fork-contributor-leaderboard → contributor-reward → distribute-tokens dry-run`) for end-to-end automation — pieces all exist; chain wiring is a one-line aeon.yml change."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #144: Feature Built",
+        "href": "https://github.com/aaronjmars/aeon/pull/144",
+        "source": "GitHub"
+      }
+    }
+  }
+}
