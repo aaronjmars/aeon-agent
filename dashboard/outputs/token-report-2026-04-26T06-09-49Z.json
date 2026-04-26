@@ -1,0 +1,146 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Daily — 2026-04-26"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "sep1",
+        "stack_liquidity",
+        "sep2",
+        "text_buysells",
+        "sep3",
+        "stack_returns",
+        "sep4",
+        "text_analysis",
+        "sep5",
+        "link_chart"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000003761",
+        "delta": "+4.48%",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_liquidity": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_liquidity",
+        "stat_volume"
+      ]
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$249.8K"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$100.5K"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_buysells": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 122/111"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_returns": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_7d",
+        "stat_30d"
+      ]
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+38.7%",
+        "trend": "up"
+      }
+    },
+    "stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+947.6%",
+        "trend": "up"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "Consolidating above the Apr 24 breakout zone after two high-vol sessions — buy/sell ratio tilts bullish, volume cooling from spike levels but still healthy at ~$100K/day.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "Chart (GeckoTerminal)",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

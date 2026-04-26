@@ -1,10 +1,10 @@
-*$AEON Daily — 2026-04-25*
+*$AEON Daily — 2026-04-26*
 
-Price: $0.00000360 (+12.33% 24h)
-Liquidity: $237.7K | 24h Vol: $195.0K
-Buys/Sells: 373/218 (1.71x buy pressure)
-7d: +81.3% | 30d: +539%
+Price: $0.000003761 (+4.48% 24h)
+Liquidity: $249.8K | 24h Vol: $100.5K
+Buys/Sells: 122/111
+7d: +38.7% | 30d: +947.6%
 
-Intraday spike to $0.00000503 on a $102K-volume candle, pulled back and held. Buy pressure strong — accumulation pattern holding.
+Consolidating above the Apr 24 breakout zone after two high-vol sessions — buy/sell ratio tilts bullish, volume cooling from spike levels but still healthy at ~$100K/day.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
