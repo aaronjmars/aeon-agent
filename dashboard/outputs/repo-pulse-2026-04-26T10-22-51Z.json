@@ -1,0 +1,201 @@
+{
+  "root": "card-repo-pulse",
+  "state": {},
+  "elements": {
+    "card-repo-pulse": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "repo-title",
+        "stats-stack",
+        "sep-1",
+        "stargazers-section",
+        "sep-2",
+        "forks-section"
+      ]
+    },
+    "repo-title": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "241",
+        "delta": "+7",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "36",
+        "delta": "+1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-stargazers",
+        "stargazers-list"
+      ]
+    },
+    "heading-stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-star-jeffreylean",
+        "link-star-nodegptjs",
+        "link-star-optimystical",
+        "link-star-ketchalegend",
+        "link-star-adinull",
+        "link-star-fzn0x",
+        "link-star-solserer-labs"
+      ]
+    },
+    "link-star-jeffreylean": {
+      "type": "Link",
+      "props": {
+        "label": "jeffreylean",
+        "href": "https://github.com/jeffreylean"
+      },
+      "children": []
+    },
+    "link-star-nodegptjs": {
+      "type": "Link",
+      "props": {
+        "label": "NodeGPTjs",
+        "href": "https://github.com/NodeGPTjs"
+      },
+      "children": []
+    },
+    "link-star-optimystical": {
+      "type": "Link",
+      "props": {
+        "label": "optimystical",
+        "href": "https://github.com/optimystical"
+      },
+      "children": []
+    },
+    "link-star-ketchalegend": {
+      "type": "Link",
+      "props": {
+        "label": "ketchalegend",
+        "href": "https://github.com/ketchalegend"
+      },
+      "children": []
+    },
+    "link-star-adinull": {
+      "type": "Link",
+      "props": {
+        "label": "adinull",
+        "href": "https://github.com/adinull"
+      },
+      "children": []
+    },
+    "link-star-fzn0x": {
+      "type": "Link",
+      "props": {
+        "label": "fzn0x",
+        "href": "https://github.com/fzn0x"
+      },
+      "children": []
+    },
+    "link-star-solserer-labs": {
+      "type": "Link",
+      "props": {
+        "label": "solserer-labs",
+        "href": "https://github.com/solserer-labs"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-forks",
+        "forks-list"
+      ]
+    },
+    "heading-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "forks-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-fork-tomscaria"
+      ]
+    },
+    "link-fork-tomscaria": {
+      "type": "Link",
+      "props": {
+        "label": "tomscaria/aeon",
+        "href": "https://github.com/tomscaria/aeon"
+      },
+      "children": []
+    }
+  }
+}
