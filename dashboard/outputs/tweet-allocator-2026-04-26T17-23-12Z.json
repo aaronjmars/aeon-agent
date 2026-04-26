@@ -1,0 +1,24 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Allocator",
+        "description": "2026-04-26"
+      },
+      "children": [
+        "alert"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "ERROR",
+        "message": "Bankr cache missing or empty, check BANKR_API_KEY secret.",
+        "type": "error"
+      }
+    }
+  }
+}
