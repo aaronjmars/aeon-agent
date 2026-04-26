@@ -1,0 +1,259 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas",
+        "description": "Generated from analysis of aaronjmars/aeon (241 stars, 36 forks). Three unbuilts carried from Apr-24; two new signals (PR queue backlog + first community PR)."
+      },
+      "children": [
+        "repo-stats",
+        "separator1",
+        "actions-container",
+        "separator2",
+        "details-link"
+      ]
+    },
+    "repo-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "241"
+      },
+      "children": []
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "36"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "actions-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action-1",
+        "action-2",
+        "action-3",
+        "action-4",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-1-heading",
+        "action-1-badge",
+        "action-1-desc"
+      ]
+    },
+    "action-1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Auto-Merge Agent PRs",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action-1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DX, Small"
+      },
+      "children": []
+    },
+    "action-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Closes the last human-in-the-loop gap — agent PRs sit open until @aaronjmars merges; auto-merge after 2h + passing checks with path-limited safeguards.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-2-heading",
+        "action-2-badge",
+        "action-2-desc"
+      ]
+    },
+    "action-2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Repo Discovery Refresh",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action-2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth, Small"
+      },
+      "children": []
+    },
+    "action-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Repo has only 3 topics; add 10 (autonomous-agent, github-actions, llm, claude, anthropic, etc.) + SHOWCASE.md + comparison table vs AutoGen/CrewAI/n8n — direct fuel for the 300-star run.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-3-heading",
+        "action-3-badge",
+        "action-3-desc"
+      ]
+    },
+    "action-3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "3. AEON Token Pulse on Status Page",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action-3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Community/DX, Small"
+      },
+      "children": []
+    },
+    "action-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Add $AEON price/24h/FDV row to the public /status/ page using existing token-report data — zero new API calls.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-4-heading",
+        "action-4-badge",
+        "action-4-desc"
+      ]
+    },
+    "action-4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Twitter Thread Auto-Formatter",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action-4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Content, Small"
+      },
+      "children": []
+    },
+    "action-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Reads daily log, picks top event, generates a 5-tweet thread ready to post — multiplies tweet-allocator ROI without touching the budget.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action-5-heading",
+        "action-5-badge",
+        "action-5-desc"
+      ]
+    },
+    "action-5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "5. External PR Triage",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "action-5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Community, Small"
+      },
+      "children": []
+    },
+    "action-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "PR #143 from community contributor arrived untriaged; a triage skill reads the diff, applies a rubric, and posts accept/defer/out-of-scope comment — scales as fork count grows.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "details-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-26.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

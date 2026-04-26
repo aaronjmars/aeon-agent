@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-04-24*
-Generated from analysis of aaronjmars/aeon (229 stars, 35 forks) — 11 new stars today from @tom_doerr viral tweet. Five ideas for the feature skill to build autonomously.
+*Repo Action Ideas — 2026-04-26*
+Generated from analysis of aaronjmars/aeon (241 stars, 36 forks). Three unbuilts carried from Apr-24; two new signals (PR queue backlog + first community PR).
 
-1. Skill Run Analytics Widget (DX, Small)
-   Fleet-level observability: which skills fail most, which have not run in their expected window, which have new exit codes — significance-gated, Wednesday cron.
+1. Auto-Merge Agent PRs (DX, Small)
+   Closes the last human-in-the-loop gap — agent PRs sit open until @aaronjmars merges; auto-merge after 2h + passing checks with path-limited safeguards.
 
-2. Contributor Auto-Reward (Community, Medium)
-   fork-contributor-leaderboard already scores people; tweet-allocator already has the payment pipeline. Weekly Monday run converts leaderboard scores into AEON distributions via existing postprocess-notify.
+2. Repo Discovery Refresh (Growth, Small)
+   Repo has only 3 topics; add 10 (autonomous-agent, github-actions, llm, claude, anthropic, etc.) + SHOWCASE.md + comparison table vs AutoGen/CrewAI/n8n — direct fuel for the 300-star run.
 
-3. Twitter Thread Auto-Formatter (Content, Small)
-   Reads todays biggest log event, generates ready-to-post 5-7 tweet thread with hook, body, CTA — operators copy-paste; tweet-allocator rewards amplifiers. Multiplies the 10/day paid program ROI.
+3. AEON Token Pulse on Status Page (Community/DX, Small)
+   Add $AEON price/24h/FDV row to the public /status/ page using existing token-report data — zero new API calls.
 
-4. Repo Discovery Refresh (Growth, Small)
-   5 new GitHub topics + SHOWCASE.md with real output samples + Why Aeon? comparison table vs AutoGen/CrewAI/n8n/LangGraph — designed for new eyes arriving from viral-moment traffic.
+4. Twitter Thread Auto-Formatter (Content, Small)
+   Reads daily log, picks top event, generates a 5-tweet thread ready to post — multiplies tweet-allocator ROI without touching the budget.
 
-5. AEON Token Pulse on Public Status Page (Community/DX, Small)
-   Heartbeat already generates docs/status.md; token-report already fetches price/volume. Add a compact token row — dual-use: operator skill health + community token health in one URL.
+5. External PR Triage (Community, Small)
+   PR #143 from community contributor arrived untriaged; a triage skill reads the diff, applies a rubric, and posts accept/defer/out-of-scope comment — scales as fork count grows.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-24.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-26.md
