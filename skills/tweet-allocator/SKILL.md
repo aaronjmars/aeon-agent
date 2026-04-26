@@ -38,9 +38,15 @@ Project-owned accounts. Valuable signal, but self-dealing:
    - Value is a `0x...` address → **eligible**, keep for allocation.
    - Value is `null`, or handle missing from the cache → **not eligible**, drop silently.
 
-   **Hard stop if the cache is missing or empty.** Log `TWEET_ALLOCATOR_ERROR — .bankr-cache/verified-handles.json missing; check BANKR_API_KEY secret and prefetch-bankr.sh workflow output`, send an alert notification via `./notify` (e.g. `Tweet Allocator — ${today}: ERROR — Bankr cache missing, check BANKR_API_KEY secret.`), and stop. No "unverified" fallback — no wallet, no payment.
+   **Hard stop if the cache is missing or empty (`{}`).** This is operator-dependent (`BANKR_API_KEY` not set, invalid, or every lookup failed) and won't fix itself between runs. To avoid daily duplicate alerts:
 
-   If zero candidates remain after this step, log `TWEET_ALLOCATOR_EMPTY — no eligible tweets (nobody in today's log has a Bankr wallet)`, send a one-line notification via `./notify` (e.g. `Tweet Allocator — ${today}: no eligible tweeters (none had a verified Bankr wallet today).`), and stop.
+   1. **48h dedup check.** Scan `memory/logs/` for the two prior days (`${today-1}.md`, `${today-2}.md`) for a `## Tweet Allocator` block whose `Status:` line is `TWEET_ALLOCATOR_ERROR` AND whose reason references the Bankr cache (e.g. "cache missing", "cache empty", "bankr-cache").
+   2. **If a matching prior error exists within the last 48h:** log `TWEET_ALLOCATOR_ERROR — Bankr cache missing/empty (48h dedup — last alert YYYY-MM-DD)`, write the log block with `Notification sent: no (48h dedup — last alert YYYY-MM-DD)`, and stop. **Do NOT call `./notify`.**
+   3. **Otherwise (first occurrence in 48h):** log `TWEET_ALLOCATOR_ERROR — .bankr-cache/verified-handles.json missing or empty; check BANKR_API_KEY secret and prefetch-bankr.sh workflow output`, send an alert via `./notify` (e.g. `Tweet Allocator — ${today}: ERROR — Bankr cache missing/empty, check BANKR_API_KEY secret.`), and stop.
+
+   No "unverified" fallback — no wallet, no payment.
+
+   If zero candidates remain after this step (cache present and non-empty, but nobody in today's log has a wallet), log `TWEET_ALLOCATOR_EMPTY — no eligible tweets (nobody in today's log has a Bankr wallet)`, send a one-line notification via `./notify` (e.g. `Tweet Allocator — ${today}: no eligible tweeters (none had a verified Bankr wallet today).`), and stop.
 
 5. **Score and rank.** `score = likes + 3 * retweets`. If both are zero/missing, score = 1. Sort descending. Take top 5.
 
@@ -120,4 +126,4 @@ The Bankr Agent API requires `BANKR_API_KEY` in the header — **the sandbox blo
 
 - `TWEET_ALLOCATOR_OK` — allocation plan produced (or auto-send completed).
 - `TWEET_ALLOCATOR_EMPTY` — no tweets in today's log, OR no candidates have a Bankr wallet.
-- `TWEET_ALLOCATOR_ERROR` — Bankr cache missing (prefetch didn't run or `BANKR_API_KEY` not set).
+- `TWEET_ALLOCATOR_ERROR` — Bankr cache missing or empty (prefetch didn't run, `BANKR_API_KEY` not set, key invalid, or every lookup failed). 48h-dedup'd: first occurrence notifies, subsequent occurrences within 48h log silently with `Notification sent: no (48h dedup — last alert YYYY-MM-DD)`. Resolution (a successful run) resets the dedup window automatically — next failure notifies again.
