@@ -1,0 +1,173 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-26"
+      },
+      "children": [
+        "stat_budget",
+        "sep1",
+        "tweets_stack",
+        "sep2",
+        "summary_stack"
+      ]
+    },
+    "stat_budget": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_container",
+        "sep_t1",
+        "tweet2_container",
+        "sep_t2",
+        "tweet3_container"
+      ]
+    },
+    "tweet1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1_header",
+        "tweet1_card",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_header": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/0xalwaysonchain — $6.00 in $AEON (score: 3)"
+      }
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xalwaysonchain",
+        "text": "$REPPO $ODAI $AEON $DCLAW as well is one to look out for"
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xalwaysonchain/status/2048074724295540991"
+      }
+    },
+    "sep_t1": {
+      "type": "Separator"
+    },
+    "tweet2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2_header",
+        "tweet2_card",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_header": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/10xgemhunter — $2.00 in $AEON (score: 1)"
+      }
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "10xgemhunter",
+        "text": "paid group calls recap listing $AEON 3x"
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/10xgemhunter/status/2047976876472467641"
+      }
+    },
+    "sep_t2": {
+      "type": "Separator"
+    },
+    "tweet3_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3_header",
+        "tweet3_card",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_header": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/DaMikey23 — $2.00 in $AEON (score: 1)"
+      }
+    },
+    "tweet3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "text": "$AEON $MIROSHARK"
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2048187510287728643"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "summary_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "total_stat",
+        "summary_text"
+      ]
+    },
+    "total_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total allocated",
+        "value": "$10.00 in $AEON"
+      }
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "3 authors (manual send — BANKR_SEND_KEY not set)",
+        "variant": "caption"
+      }
+    }
+  }
+}
