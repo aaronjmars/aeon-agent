@@ -1,0 +1,90 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "The Agent Just Wrote the Code That Pays Strangers"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipping_text",
+        "design_section",
+        "queue_section",
+        "article_link"
+      ]
+    },
+    "shipping_text": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon's autonomous feature skill shipped PR #144 (contributor-reward) this morning — the missing wiring between the weekly fork-contributor leaderboard and the distribute-tokens USDC pipeline on Base."
+      }
+    },
+    "design_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "design_title",
+        "design_points"
+      ]
+    },
+    "design_title": {
+      "type": "Text",
+      "props": {
+        "text": "Plan-only by design:",
+        "variant": "lead"
+      }
+    },
+    "design_points": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "point1",
+        "point2"
+      ]
+    },
+    "point1": {
+      "type": "Text",
+      "props": {
+        "text": "Writes a labelled distribution to memory/distributions.yml and hands the run line to the operator"
+      }
+    },
+    "point2": {
+      "type": "Text",
+      "props": {
+        "text": "Keeping the audit trail as a YAML diff.",
+        "variant": "caption"
+      }
+    },
+    "queue_section": {
+      "type": "Text",
+      "props": {
+        "text": "Build queue is now visibly outpacing the merge queue — three PRs (#142, #143, #144) sitting open simultaneously."
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-26.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
