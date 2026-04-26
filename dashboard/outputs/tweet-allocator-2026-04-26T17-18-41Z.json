@@ -1,0 +1,41 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Allocator"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-date",
+        "alert-error"
+      ]
+    },
+    "text-date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-04-26",
+        "variant": "caption"
+      }
+    },
+    "alert-error": {
+      "type": "Alert",
+      "props": {
+        "title": "ERROR",
+        "message": "Bankr cache empty, check BANKR_API_KEY secret and prefetch-bankr.sh workflow output.",
+        "type": "error"
+      }
+    }
+  }
+}
