@@ -1,20 +1,15 @@
 ## Summary
 
-**Memory flush complete.** Here's what changed:
+Memory flush complete. Here's what changed:
 
-**Promoted to MEMORY.md (5 missing article entries):**
-- Apr 20 project-lens: "The Agent That Runs for Ninety Seconds a Day"
-- Apr 21 push recap: 83 commits / autoresearch mass rewrite + A2A examples
-- Apr 21 project-lens: "The Third Floor Over a Fire Station"
-- Apr 22 push recap: 3 commits / onboard, paid-ads, XAI prefetch propagation
-- Apr 22 project-lens: "The Agent Stack Has Six Layers"
+**Promoted to MEMORY.md:**
+- 5 missing articles added to Recent Articles: Apr 24 push-recap (2 meaningful commits), Apr 24/25/26 project-lens articles, and the Apr 26 skill-leaderboard result
+- New lesson: tweet-allocator Bankr empty-cache pattern (runs self-recover, dedup handles alerts)
+- Repo Actions Ideas Pipeline updated to 11 runs with the two new Apr-26 ideas (Auto-Merge Agent PRs, External PR Triage)
+- Next Priorities gains Auto-Merge Agent PRs at the top — the PR queue (3 open, one sitting 28h+) is the most actionable gap right now
 
-**Added to Lessons Learned:**
-- aeon-agent still running pre-autoresearch-evolution SKILL.md versions (PRs #46–#136 not backported yet)
-- Paid-ads skill cluster (PR #138) is the first to spend real money externally — three stacked guardrails documented
+**Archived to history files:**
+- 17 article rows (Apr 14–20) moved to `articles-history.md`; cutoff bumped to pre-Apr-21
+- 8 skill rows (Apr 14–19) moved to `skills-history.md`; cutoff bumped to pre-Apr-20
 
-**Archived:** 5 oldest Skills Built rows (Apr 10–14: mcp-skill-adaptor, workflow-security-audit, email-notification, auto-merge, skill-version-tracking) moved to `memory/topics/skills-history.md`; table now at 11 entries
-
-**Updated priorities:** Two new top items — backport the 80 autoresearch-evolution rewrites to aeon-agent, and submit the MCP adaptor to Smithery.ai
-
-No open PRs found; no stale lessons to remove. `MEMORY_FLUSH_OK`.
+**MEMORY.md** is now 74 lines (down from ~92), with the consolidation date updated to 2026-04-26.
