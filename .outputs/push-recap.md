@@ -1,16 +1,20 @@
 ## Summary
 
-**Status:** `PUSH_RECAP_QUIET` — no notification sent (per SKILL.md step 3).
+**push-recap exit:** `PUSH_RECAP_QUIET` (silent — no notification sent, no article written).
 
-**Window:** 2026-04-24T15:18:51Z → 2026-04-25T15:18:51Z
+**Window:** 2026-04-25T15:22Z → 2026-04-26T15:22Z (24h).
 
-**What I found:**
-- **aaronjmars/aeon** — 0 commits to main in window. Last merge was PR #141 (public-status-page) at Apr 24 13:20 UTC, before the cutoff. PR #142 (skill-analytics, +318/-1, 3 files) was opened today by this morning's autonomous `feature` skill but is still open/unmerged.
-- **aaronjmars/aeon-agent** — 30 commits, all autonomous `aeonframework` scheduler/cron/skill auto-commits (token-report, fetch-tweets, tweet-allocator, repo-pulse, hyperstitions-ideas, feature, plus yesterday's tail). Zero PR merges, zero skill-spec changes, zero human pushes.
+**Results:**
+- `aaronjmars/aeon` main: 0 commits in window. Three PRs sit open: #142 skill-analytics (~28h old now — backlog forming), #143 external "Claude/camo fault analysis tool" by @pezetel (first new community PR since #45, needs triage), #144 contributor-reward (opened today by autonomous `feature` skill, see today's log).
+- `aaronjmars/aeon-agent` main: 29 commits, all autonomous `aeonframework` scheduler/cron/skill auto-commits (token-report, fetch-tweets, tweet-allocator, repo-pulse, feature, repo-actions, self-improve, heartbeat tail). Zero human pushes, zero PR merges, zero skill-spec changes. PR #19 (tweet-allocator error dedup) opened today by @aaronjmars, still open.
 
-**Files modified:**
-- `memory/logs/2026-04-25.md` — appended `## Push Recap — 2026-04-25` block with `PUSH_RECAP_QUIET` status, scan window, the open PR #142 note, filtered-noise rationale, and follow-ups carried from yesterday.
+**Per SKILL.md step 3** + Apr-24/Apr-25 precedent: autonomous scheduler/cron auto-commits filtered as noise; nothing meaningful remains, so silent exit.
 
-**No-ops (per skill spec):** no article written, no `./notify` call, no commit.
+**Files modified:** `memory/logs/2026-04-26.md` (appended Push Recap block — status, scanned repos, window, follow-ups carried).
 
-**Follow-up:** PR #142 (skill-analytics) likely merges within hours and will appear in tomorrow's recap.
+**Follow-ups flagged in log:**
+1. **New:** Autonomous-PR queue starting to back up (#142 + #144 both open) — historical merge cadence is ~2h, #142 is at 28h.
+2. **New:** PR #143 is the first new external PR since #45 — validates today's repo-actions brainstorm idea #5 (External PR Triage).
+3. Backport 80 autoresearch-evolution rewrites (aeon-agent) — day 9.
+4. Smithery + MCP Registry submission — still unbuilt.
+5. PAT `workflows` scope — day 9, in 7-day backoff (next ping ~May 1).
