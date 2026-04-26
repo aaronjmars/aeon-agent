@@ -1,0 +1,300 @@
+{
+  "root": "mainCard",
+  "state": {},
+  "elements": {
+    "mainCard": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard",
+        "description": "2026-04-26"
+      },
+      "children": [
+        "mainStack"
+      ]
+    },
+    "mainStack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "topSection",
+        "sep1",
+        "consensusSection",
+        "sep2",
+        "gapsSection",
+        "sep3",
+        "fleetSection",
+        "sep4",
+        "linkSection"
+      ]
+    },
+    "topSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "topHeading",
+        "topTable"
+      ]
+    },
+    "topHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Skills across 24 Active Forks",
+        "level": "h2"
+      }
+    },
+    "topTable": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Forks",
+          "Adoption %"
+        ],
+        "rows": [
+          [
+            "heartbeat",
+            "24",
+            "100%"
+          ],
+          [
+            "github-trending",
+            "3",
+            "12.5%"
+          ],
+          [
+            "morning-brief",
+            "2",
+            "8.3%"
+          ],
+          [
+            "hacker-news-digest",
+            "2",
+            "8.3%"
+          ],
+          [
+            "token-report",
+            "2",
+            "8.3%"
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "consensusSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "consensusHeading",
+        "consensusBadge"
+      ]
+    },
+    "consensusHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Consensus",
+        "level": "h3"
+      }
+    },
+    "consensusBadge": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat (100%)",
+        "variant": "default"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "gapsSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "gapsHeading",
+        "gapsList"
+      ]
+    },
+    "gapsHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Adoption Gaps",
+        "level": "h3"
+      }
+    },
+    "gapsList": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "gap1",
+        "gap2",
+        "gap3",
+        "gap4",
+        "gap5"
+      ]
+    },
+    "gap1": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-scanner",
+        "variant": "outline"
+      }
+    },
+    "gap2": {
+      "type": "Badge",
+      "props": {
+        "text": "syndicate-article",
+        "variant": "outline"
+      }
+    },
+    "gap3": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "outline"
+      }
+    },
+    "gap4": {
+      "type": "Badge",
+      "props": {
+        "text": "vercel-projects",
+        "variant": "outline"
+      }
+    },
+    "gap5": {
+      "type": "Badge",
+      "props": {
+        "text": "contributor-reward",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleetSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleetHeading",
+        "fleetGrid",
+        "fleetDetails"
+      ]
+    },
+    "fleetHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Snapshot",
+        "level": "h3"
+      }
+    },
+    "fleetGrid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat1",
+        "stat2",
+        "stat3",
+        "stat4"
+      ]
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Forks",
+        "value": "24"
+      }
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Skill Slots",
+        "value": "137",
+        "delta": "+95",
+        "trend": "up"
+      }
+    },
+    "stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "Unique Skills",
+        "value": "95"
+      }
+    },
+    "stat4": {
+      "type": "Stat",
+      "props": {
+        "label": "tomscaria/aeon",
+        "value": "69%"
+      }
+    },
+    "fleetDetails": {
+      "type": "Text",
+      "props": {
+        "text": "Up from 42 slots last week. One fork (tomscaria/aeon, 94 skills) accounts for 69% of all enabled skill slots fleet-wide.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "linkSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "linkHeading",
+        "leaderboardLink"
+      ]
+    },
+    "linkHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Full Leaderboard",
+        "level": "h3"
+      }
+    },
+    "leaderboardLink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-leaderboard-2026-04-26.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-04-26.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
