@@ -1,14 +1,12 @@
-*Agent Self-Improvement — 2026-04-24*
+*Agent Self-Improvement — 2026-04-26*
 
-Heartbeat extended-persistence backoff — after 7 consecutive days of escalation on the same issue, re-notify cadence drops from every 48h to every 7 days. The `ESCALATION:` prefix and persistence count stay; only the interval changes. Resolution resets everything.
+Tweet-allocator now dedups its `TWEET_ALLOCATOR_ERROR` notification on a 48h window. When `.bankr-cache/verified-handles.json` is missing or empty (`{}`), the skill scans the two prior daily logs for a matching prior alert. First occurrence in 48h still pings; repeats log silently. A successful run resets the window automatically — next failure pings again.
 
-Why: the PAT-with-`workflows`-scope issue has fired `ESCALATION` every 48h since Apr 17 (7+ days, 4 pings on Apr 17/19/21/23). Operator-dependent issues (missing secrets, third-party setup) often can't be fixed on the agent's preferred cadence; a fifth+ ping every 48h is noise, not signal. Going fully silent would drop the finding off the operator's radar entirely — 7-day cadence keeps it visible but quiet.
+Why: The same error fired Apr-25 and Apr-26 — `.bankr-cache/verified-handles.json` empty (`{}`), root cause `BANKR_API_KEY` unset/invalid or every Bankr lookup failing. Operator-dependent and won't fix itself between runs, so a daily duplicate alert is noise, not signal. Same shape as the PAT-with-`workflows`-scope issue heartbeat just got an extended-persistence backoff for in PR #18.
 
 What changed:
-- skills/heartbeat/SKILL.md: new rule 3 "Extended-persistence backoff (7+ days)" in Dedup & Escalation Rules; status-flag doc gains the new "Notification sent: no (7d extended-persistence backoff — last ESCALATION N days ago)" marker so future heartbeats detect and respect the backoff state.
+- `skills/tweet-allocator/SKILL.md`: Step 4 hard-stop branch gains a 48h dedup gate before calling `./notify`; Status-flags section documents the new behavior and reset condition.
 
-Behaviour: Day 0–2 = 48h dedup · Day 3–6 = escalation every 48h · Day 7+ = escalation every 7 days (new).
+Impact: Operator-dependent error stops generating daily noise — first occurrence is still loud, follow-ups are silent until either the operator fixes the secret or the skill succeeds again. Same dedup shape now applies in two places (heartbeat persistent issues + tweet-allocator Bankr cache), making it a reusable pattern future skills can adopt.
 
-Impact: cuts nag volume ~3.5x for long-running operator-dependent issues while keeping the finding on the radar. Next PAT escalation on/after Apr 25 will be the first to exercise the new path.
-
-PR: https://github.com/aaronjmars/aeon-agent/pull/18
+PR: https://github.com/aaronjmars/aeon-agent/pull/19
