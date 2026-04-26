@@ -1,5 +1,5 @@
-*New Article: The Source Files Are Markdown Now*
+*New Article: Stop Piloting AI Agents. Check Them In.*
 
-Anthropic shipped Agent Skills (SKILL.md) in Oct 2025 and open-sourced the spec in Dec. Sixteen frameworks adopted it in three months. The piece traces the format back to Knuth's 1984 literate programming idea — and uses Aeon's 103 markdown skills, markdown memory, and self-rewriting agent loop to show what happens when the README becomes the runtime.
+A March 2026 survey put the agentic-AI pilot-to-production failure rate at 86%; DigitalOcean's broader study landed near 90%. The consultancy fix is to bolt on a production-engineering function. The contrarian read is that the pilot itself is the category error — agents that live in the repo they edit have no gap to cross. Aeon is the worked example: 144 PRs, ~100 skills, observability and bug tracker checked in alongside the code.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-25.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-26.md
