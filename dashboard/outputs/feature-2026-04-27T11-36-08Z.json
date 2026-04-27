@@ -1,0 +1,635 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-04-27"
+      },
+      "children": [
+        "heading-showcase",
+        "intro-text",
+        "sep-1",
+        "stats-row",
+        "sep-2",
+        "why-section",
+        "sep-3",
+        "built-section",
+        "sep-4",
+        "forks-section",
+        "sep-5",
+        "comparison-section",
+        "sep-6",
+        "how-section",
+        "sep-7",
+        "next-section",
+        "sep-8",
+        "pr-link"
+      ]
+    },
+    "heading-showcase": {
+      "type": "Heading",
+      "props": {
+        "text": "SHOWCASE.md — Active Forks + Ecosystem Comparison",
+        "level": "h2"
+      }
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "The Aeon repo just got a dedicated Showcase page. It does two things visitors couldn't do before from the README alone: see who's actually running an Aeon fork in production right now, and read a side-by-side of how Aeon stacks up against the agent frameworks people already know — AutoGen, CrewAI, n8n, LangGraph.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks",
+        "stat-topics",
+        "stat-showcase-lines"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "GitHub Stars",
+        "value": "244"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "36"
+      }
+    },
+    "stat-topics": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Topics",
+        "value": "3"
+      }
+    },
+    "stat-showcase-lines": {
+      "type": "Stat",
+      "props": {
+        "label": "SHOWCASE.md Size",
+        "value": "74 lines"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "why-heading",
+        "why-text-1",
+        "why-text-2"
+      ]
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters",
+        "level": "h3"
+      }
+    },
+    "why-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "With 244 stars, 36 forks, and only 3 GitHub topics on the repo, anyone landing from a Hacker News thread or an MCP-registry comparison had no answer to \"why Aeon vs X?\" — the existing README only compared against Claude-side tools (Claude Code, Hermes, OpenClaw).",
+        "variant": "body"
+      }
+    },
+    "why-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "This was Apr-26 repo-actions idea #2 (Repo Discovery Refresh, Growth/Small impact). Picked it over the higher-priority Apr-26 idea #1 (Auto-Merge Agent PRs) because that one needs a PAT with `workflows` scope the agent doesn't have. With the 300-star May-25 hyperstition deadline approaching, discoverability is the cheapest lever — and a SHOWCASE page costs zero new infrastructure.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "built-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "built-heading",
+        "built-showcase-file",
+        "built-readme-file"
+      ]
+    },
+    "built-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built",
+        "level": "h3"
+      }
+    },
+    "built-showcase-file": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "built-showcase-title",
+        "built-showcase-text"
+      ]
+    },
+    "built-showcase-title": {
+      "type": "Heading",
+      "props": {
+        "text": "SHOWCASE.md (new, 74 lines)",
+        "level": "h4"
+      }
+    },
+    "built-showcase-text": {
+      "type": "Text",
+      "props": {
+        "text": "Two main sections plus an \"Add yourself\" note. Active Forks table lists the top 6 most-active forks with one-line focus notes per fork — sourced from this week's skill-leaderboard article so the data viewpoint is consistent with the rest of the agent's reporting. Ecosystem Comparison table compares Aeon against AutoGen, CrewAI, n8n, and LangGraph across 11 dimensions (runtime, scheduling, skill format, persistent memory, self-healing, quality scoring, reactive triggers, setup floor, hosting cost, operator role, external integration), followed by one-line summaries that explain when each framework is the right pick.",
+        "variant": "body"
+      }
+    },
+    "built-readme-file": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "built-readme-title",
+        "built-readme-text"
+      ]
+    },
+    "built-readme-title": {
+      "type": "Heading",
+      "props": {
+        "text": "README.md (+1 line)",
+        "level": "h4"
+      }
+    },
+    "built-readme-text": {
+      "type": "Text",
+      "props": {
+        "text": "One-line pointer to SHOWCASE.md from the existing \"Why most autonomous agent framework?\" section. The existing comparison stays untouched — SHOWCASE complements rather than replaces it.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks-heading",
+        "forks-table"
+      ]
+    },
+    "forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top 6 Active Forks",
+        "level": "h3"
+      }
+    },
+    "forks-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Fork Owner",
+          "Skills Enabled"
+        ],
+        "rows": [
+          [
+            "tomscaria",
+            "94"
+          ],
+          [
+            "maacx2022",
+            "15"
+          ],
+          [
+            "DannyTsaii",
+            "3"
+          ],
+          [
+            "davenamovich",
+            "3"
+          ],
+          [
+            "0xfreddy",
+            "2"
+          ],
+          [
+            "pezetel",
+            "2"
+          ]
+        ]
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "comparison-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "comparison-heading",
+        "comparison-frameworks",
+        "comparison-dimensions-heading",
+        "comparison-dimensions-grid"
+      ]
+    },
+    "comparison-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Ecosystem Comparison",
+        "level": "h3"
+      }
+    },
+    "comparison-frameworks": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "framework-aeon",
+        "framework-autogen",
+        "framework-crewai",
+        "framework-n8n",
+        "framework-langgraph"
+      ]
+    },
+    "framework-aeon": {
+      "type": "Badge",
+      "props": {
+        "text": "Aeon",
+        "variant": "default"
+      }
+    },
+    "framework-autogen": {
+      "type": "Badge",
+      "props": {
+        "text": "AutoGen",
+        "variant": "outline"
+      }
+    },
+    "framework-crewai": {
+      "type": "Badge",
+      "props": {
+        "text": "CrewAI",
+        "variant": "outline"
+      }
+    },
+    "framework-n8n": {
+      "type": "Badge",
+      "props": {
+        "text": "n8n",
+        "variant": "outline"
+      }
+    },
+    "framework-langgraph": {
+      "type": "Badge",
+      "props": {
+        "text": "LangGraph",
+        "variant": "outline"
+      }
+    },
+    "comparison-dimensions-heading": {
+      "type": "Text",
+      "props": {
+        "text": "11 Comparison Dimensions",
+        "variant": "caption"
+      }
+    },
+    "comparison-dimensions-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "dim-1",
+        "dim-2",
+        "dim-3",
+        "dim-4",
+        "dim-5",
+        "dim-6",
+        "dim-7",
+        "dim-8",
+        "dim-9",
+        "dim-10",
+        "dim-11"
+      ]
+    },
+    "dim-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Runtime",
+        "variant": "outline"
+      }
+    },
+    "dim-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Scheduling",
+        "variant": "outline"
+      }
+    },
+    "dim-3": {
+      "type": "Badge",
+      "props": {
+        "text": "Skill Format",
+        "variant": "outline"
+      }
+    },
+    "dim-4": {
+      "type": "Badge",
+      "props": {
+        "text": "Persistent Memory",
+        "variant": "outline"
+      }
+    },
+    "dim-5": {
+      "type": "Badge",
+      "props": {
+        "text": "Self-Healing",
+        "variant": "outline"
+      }
+    },
+    "dim-6": {
+      "type": "Badge",
+      "props": {
+        "text": "Quality Scoring",
+        "variant": "outline"
+      }
+    },
+    "dim-7": {
+      "type": "Badge",
+      "props": {
+        "text": "Reactive Triggers",
+        "variant": "outline"
+      }
+    },
+    "dim-8": {
+      "type": "Badge",
+      "props": {
+        "text": "Setup Floor",
+        "variant": "outline"
+      }
+    },
+    "dim-9": {
+      "type": "Badge",
+      "props": {
+        "text": "Hosting Cost",
+        "variant": "outline"
+      }
+    },
+    "dim-10": {
+      "type": "Badge",
+      "props": {
+        "text": "Operator Role",
+        "variant": "outline"
+      }
+    },
+    "dim-11": {
+      "type": "Badge",
+      "props": {
+        "text": "External Integration",
+        "variant": "outline"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "how-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "how-heading",
+        "how-text-1",
+        "how-text-2"
+      ]
+    },
+    "how-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works",
+        "level": "h3"
+      }
+    },
+    "how-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "The fork data isn't manually curated — it's lifted from articles/skill-leaderboard-2026-04-26.md, which the weekly skill-leaderboard skill regenerates against the GitHub forks API every Sunday. So as the fleet shifts, the underlying data source updates automatically, and a future iteration can auto-regenerate the table.",
+        "variant": "body"
+      }
+    },
+    "how-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "The framework comparison is hand-written to stay accurate to each tool's actual positioning rather than scoring them against Aeon's preferred axes — every \"best for X\" line names a real strength of the alternative, which makes the comparison legible to people actually evaluating these frameworks. Discoverability via GitHub Topics expansion (the second half of the repo-actions idea) is deferred: the agent's token lacks admin scope on aaronjmars/aeon for `gh api repos/X/topics`, so the exact one-shot command is included in the PR body for the maintainer to run.",
+        "variant": "body"
+      }
+    },
+    "sep-7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "next-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "next-heading",
+        "next-text-1",
+        "next-text-2",
+        "topics-heading",
+        "topics-grid"
+      ]
+    },
+    "next-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next",
+        "level": "h3"
+      }
+    },
+    "next-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "A future iteration of skill-leaderboard or fork-skill-digest could auto-regenerate the Active Forks table on a weekly cadence rather than relying on copy-from-article.",
+        "variant": "body"
+      }
+    },
+    "next-text-2": {
+      "type": "Text",
+      "props": {
+        "text": "The deferred Topics expansion gets applied as soon as a maintainer-scope token lands in CI, or by a maintainer running the one-line gh command in PR #145.",
+        "variant": "body"
+      }
+    },
+    "topics-heading": {
+      "type": "Text",
+      "props": {
+        "text": "Proposed 10 GitHub Topics",
+        "variant": "caption"
+      }
+    },
+    "topics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "sm"
+      },
+      "children": [
+        "topic-1",
+        "topic-2",
+        "topic-3",
+        "topic-4",
+        "topic-5",
+        "topic-6",
+        "topic-7",
+        "topic-8",
+        "topic-9",
+        "topic-10"
+      ]
+    },
+    "topic-1": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon",
+        "variant": "secondary"
+      }
+    },
+    "topic-2": {
+      "type": "Badge",
+      "props": {
+        "text": "ai-agents",
+        "variant": "secondary"
+      }
+    },
+    "topic-3": {
+      "type": "Badge",
+      "props": {
+        "text": "claude-code",
+        "variant": "secondary"
+      }
+    },
+    "topic-4": {
+      "type": "Badge",
+      "props": {
+        "text": "autonomous-agents",
+        "variant": "secondary"
+      }
+    },
+    "topic-5": {
+      "type": "Badge",
+      "props": {
+        "text": "github-actions",
+        "variant": "secondary"
+      }
+    },
+    "topic-6": {
+      "type": "Badge",
+      "props": {
+        "text": "llm",
+        "variant": "secondary"
+      }
+    },
+    "topic-7": {
+      "type": "Badge",
+      "props": {
+        "text": "claude",
+        "variant": "secondary"
+      }
+    },
+    "topic-8": {
+      "type": "Badge",
+      "props": {
+        "text": "anthropic",
+        "variant": "secondary"
+      }
+    },
+    "topic-9": {
+      "type": "Badge",
+      "props": {
+        "text": "automation",
+        "variant": "secondary"
+      }
+    },
+    "topic-10": {
+      "type": "Badge",
+      "props": {
+        "text": "agent-framework",
+        "variant": "secondary"
+      }
+    },
+    "sep-8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #145: SHOWCASE.md — Active Forks + Ecosystem Comparison",
+        "href": "https://github.com/aaronjmars/aeon/pull/145",
+        "source": "GitHub"
+      }
+    }
+  }
+}
