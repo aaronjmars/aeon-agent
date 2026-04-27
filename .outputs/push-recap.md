@@ -1,20 +1,14 @@
-## Summary
+*Push Recap — 2026-04-27*
+After 2 quiet days, 4 meaningful commits across both repos — 3 PR merges on aaronjmars/aeon flushed the top of the backlog in one window, and a 2-line aeon-agent fix ended a 2-day BANKR outage.
 
-**push-recap exit:** `PUSH_RECAP_QUIET` (silent — no notification sent, no article written).
+*Backlog Flush (aeon):* skill-analytics (#142), contributor-reward (#144), and SHOWCASE.md (#145) all merged in a 22-hour window — the three highest-priority unbuilts from the last two repo-actions cycles. Together they fill the fleet-observability gap (heartbeat + skill-health + skill-analytics now triangulate), close the leaderboard→distribute-tokens loop (plan-only, distributions.yml stays the audit trail), and turn discoverability into a single landing page before the May-25 300-star deadline.
 
-**Window:** 2026-04-25T15:22Z → 2026-04-26T15:22Z (24h).
+*BANKR Outage Resolved (aeon-agent):* PR #20 sends `maxMode: {enabled: true, model: claude-sonnet-4.6}` in the prefetch payload — Bankr's /agent/prompt started gating AI prompts behind Bankr Club / Max Mode around Apr 25, leaving the verified-handles cache empty for two days. Tweet-allocator's run 4 yesterday (post-merge) succeeded, today's run paid 2 tweets / $10 in $AEON. Operator-facing requirement: BANKR_API_KEY accounts now need LLM credits topped up separately.
 
-**Results:**
-- `aaronjmars/aeon` main: 0 commits in window. Three PRs sit open: #142 skill-analytics (~28h old now — backlog forming), #143 external "Claude/camo fault analysis tool" by @pezetel (first new community PR since #45, needs triage), #144 contributor-reward (opened today by autonomous `feature` skill, see today's log).
-- `aaronjmars/aeon-agent` main: 29 commits, all autonomous `aeonframework` scheduler/cron/skill auto-commits (token-report, fetch-tweets, tweet-allocator, repo-pulse, feature, repo-actions, self-improve, heartbeat tail). Zero human pushes, zero PR merges, zero skill-spec changes. PR #19 (tweet-allocator error dedup) opened today by @aaronjmars, still open.
+Key changes:
+- skills/skill-analytics/SKILL.md (+316) — Wed 18:30 UTC fleet-wide ranked view; 6-flag anomaly table (🔴 SILENT / ALL_FAIL, 🟠 CONSECUTIVE_FAILURES / LOW_SUCCESS, 🟡 ALL_SKIP / DUPLICATE_RUNS); first run lands Apr 29.
+- skills/contributor-reward/SKILL.md (+254) — Mon 09:30 UTC tier pricing (1=25 / 2=15 / 3=10 / 4-5=5 USDC, +5 first-PR bonus); writes plans to memory/distributions.yml, doesn't move money.
+- scripts/prefetch-bankr.sh (+2/-1) — the entire BANKR fix is one jq payload addition; SKILL.md doc updated for fresh-fork operators.
 
-**Per SKILL.md step 3** + Apr-24/Apr-25 precedent: autonomous scheduler/cron auto-commits filtered as noise; nothing meaningful remains, so silent exit.
-
-**Files modified:** `memory/logs/2026-04-26.md` (appended Push Recap block — status, scanned repos, window, follow-ups carried).
-
-**Follow-ups flagged in log:**
-1. **New:** Autonomous-PR queue starting to back up (#142 + #144 both open) — historical merge cadence is ~2h, #142 is at 28h.
-2. **New:** PR #143 is the first new external PR since #45 — validates today's repo-actions brainstorm idea #5 (External PR Triage).
-3. Backport 80 autoresearch-evolution rewrites (aeon-agent) — day 9.
-4. Smithery + MCP Registry submission — still unbuilt.
-5. PAT `workflows` scope — day 9, in 7-day backoff (next ping ~May 1).
+Stats: 12 files, +874/-3 lines (~30 autonomous scheduler/cron auto-commits filtered)
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-27.md

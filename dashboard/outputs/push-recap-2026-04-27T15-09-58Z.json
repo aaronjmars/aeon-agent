@@ -1,0 +1,216 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-27"
+      },
+      "children": [
+        "summary_text",
+        "sep1",
+        "backlog_section",
+        "sep2",
+        "bankr_section",
+        "sep3",
+        "changes_section",
+        "sep4",
+        "stats_section"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "After 2 quiet days, 4 meaningful commits across both repos — 3 PR merges on aaronjmars/aeon flushed the top of the backlog in one window, and a 2-line aeon-agent fix ended a 2-day BANKR outage."
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "backlog_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "backlog_heading",
+        "backlog_prs",
+        "backlog_impact"
+      ]
+    },
+    "backlog_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Backlog Flush (aeon)",
+        "level": "h2"
+      }
+    },
+    "backlog_prs": {
+      "type": "Text",
+      "props": {
+        "text": "skill-analytics (#142), contributor-reward (#144), and SHOWCASE.md (#145) all merged in a 22-hour window — the three highest-priority unbuilts from the last two repo-actions cycles."
+      }
+    },
+    "backlog_impact": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "impact_1",
+        "impact_2",
+        "impact_3"
+      ]
+    },
+    "impact_1": {
+      "type": "Text",
+      "props": {
+        "text": "Fill the fleet-observability gap: heartbeat + skill-health + skill-analytics now triangulate"
+      }
+    },
+    "impact_2": {
+      "type": "Text",
+      "props": {
+        "text": "Close the leaderboard→distribute-tokens loop (plan-only, distributions.yml stays the audit trail)"
+      }
+    },
+    "impact_3": {
+      "type": "Text",
+      "props": {
+        "text": "Turn discoverability into a single landing page before the May-25 300-star deadline"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "bankr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bankr_heading",
+        "bankr_pr",
+        "bankr_issue",
+        "bankr_fix",
+        "bankr_require"
+      ]
+    },
+    "bankr_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "BANKR Outage Resolved (aeon-agent)",
+        "level": "h2"
+      }
+    },
+    "bankr_pr": {
+      "type": "Text",
+      "props": {
+        "text": "PR #20 sends `maxMode: {enabled: true, model: claude-sonnet-4.6}` in the prefetch payload"
+      }
+    },
+    "bankr_issue": {
+      "type": "Text",
+      "props": {
+        "text": "Bankr's /agent/prompt started gating AI prompts behind Bankr Club / Max Mode around Apr 25, leaving the verified-handles cache empty for two days."
+      }
+    },
+    "bankr_fix": {
+      "type": "Text",
+      "props": {
+        "text": "Tweet-allocator's run 4 yesterday (post-merge) succeeded, today's run paid 2 tweets / $10 in $AEON"
+      }
+    },
+    "bankr_require": {
+      "type": "Alert",
+      "props": {
+        "title": "Operator Requirement",
+        "message": "BANKR_API_KEY accounts now need LLM credits topped up separately",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "changes_heading",
+        "changes_list"
+      ]
+    },
+    "changes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h2"
+      }
+    },
+    "changes_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "change_1",
+        "change_2",
+        "change_3"
+      ]
+    },
+    "change_1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/skill-analytics/SKILL.md (+316) — Wed 18:30 UTC fleet-wide ranked view; 6-flag anomaly table (🔴 SILENT / ALL_FAIL, 🟠 CONSECUTIVE_FAILURES / LOW_SUCCESS, 🟡 ALL_SKIP / DUPLICATE_RUNS); first run lands Apr 29"
+      }
+    },
+    "change_2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/contributor-reward/SKILL.md (+254) — Mon 09:30 UTC tier pricing (1=25 / 2=15 / 3=10 / 4-5=5 USDC, +5 first-PR bonus); writes plans to memory/distributions.yml, doesn't move money"
+      }
+    },
+    "change_3": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/prefetch-bankr.sh (+2/-1) — the entire BANKR fix is one jq payload addition; SKILL.md doc updated for fresh-fork operators"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_text",
+        "full_recap_link"
+      ]
+    },
+    "stats_text": {
+      "type": "Text",
+      "props": {
+        "text": "12 files, +874/-3 lines (~30 autonomous scheduler/cron auto-commits filtered)"
+      }
+    },
+    "full_recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-27.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
