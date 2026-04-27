@@ -1,0 +1,256 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-04-27",
+        "description": "The week Aeon turned the cameras inward — every meta-skill shipped this week watches what the other skills do."
+      },
+      "children": [
+        "section_shipped",
+        "separator_1",
+        "section_stats",
+        "separator_2",
+        "link_full"
+      ]
+    },
+    "section_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_shipped",
+        "story_140",
+        "story_141",
+        "story_142",
+        "story_144",
+        "story_139",
+        "story_138",
+        "heading_reliability",
+        "story_17",
+        "story_18",
+        "story_20"
+      ]
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "story_140": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fork-skill-digest — closed the fork-intelligence triangle alongside skill-leaderboard + fork-contributor-leaderboard",
+        "source": "#140",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/140"
+      },
+      "children": []
+    },
+    "story_141": {
+      "type": "StoryLink",
+      "props": {
+        "title": "public status page — made heartbeat a broadcaster — 36 forks now inherit /status/ for free",
+        "source": "#141",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/141"
+      },
+      "children": []
+    },
+    "story_142": {
+      "type": "StoryLink",
+      "props": {
+        "title": "skill-analytics — gives the fleet a Wednesday observability widget; six anomaly classes",
+        "source": "#142",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/142"
+      },
+      "children": []
+    },
+    "story_144": {
+      "type": "StoryLink",
+      "props": {
+        "title": "contributor-reward — closed the leaderboard → distribution loop with a plan-only audit trail",
+        "source": "#144",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/144"
+      },
+      "children": []
+    },
+    "story_139": {
+      "type": "StoryLink",
+      "props": {
+        "title": "onboard validator — gave silent forks an 8-check setup gate",
+        "source": "#139",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/139"
+      },
+      "children": []
+    },
+    "story_138": {
+      "type": "StoryLink",
+      "props": {
+        "title": "paid-ads cluster — shipped Aeon's first money-spending skills with three stacked guardrails",
+        "source": "#138",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/138"
+      },
+      "children": []
+    },
+    "heading_reliability": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon-agent reliability",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "story_17": {
+      "type": "StoryLink",
+      "props": {
+        "title": "XAI prefetch propagation",
+        "source": "#17",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/17"
+      },
+      "children": []
+    },
+    "story_18": {
+      "type": "StoryLink",
+      "props": {
+        "title": "heartbeat 7d backoff",
+        "source": "#18",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/18"
+      },
+      "children": []
+    },
+    "story_20": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Bankr maxMode fix",
+        "source": "#20",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/20"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stats",
+        "stats_grid"
+      ]
+    },
+    "heading_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_prs",
+        "stat_lines_add",
+        "stat_lines_del",
+        "stat_stars",
+        "stat_forks",
+        "stat_aeon_7d",
+        "stat_aeon_30d"
+      ]
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs merged",
+        "value": "11"
+      },
+      "children": []
+    },
+    "stat_lines_add": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines added",
+        "value": "+3,650"
+      },
+      "children": []
+    },
+    "stat_lines_del": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines deleted",
+        "value": "-32"
+      },
+      "children": []
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "244",
+        "delta": "+49",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "36",
+        "delta": "+4",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_aeon_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON (7d)",
+        "value": "+20.7%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_aeon_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON (30d)",
+        "value": "+714%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_full": {
+      "type": "Link",
+      "props": {
+        "label": "Full update",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-04-27.md"
+      },
+      "children": []
+    }
+  }
+}
