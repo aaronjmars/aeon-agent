@@ -1,0 +1,57 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-27)"
+      },
+      "children": [
+        "text_count",
+        "stack_tweets"
+      ]
+    },
+    "text_count": {
+      "type": "Text",
+      "props": {
+        "text": "2 new tweets found.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "MrDegenWolf",
+        "text": "wolf mentality: research → intuition → conviction → execution; next step obvious for $AEON & $MIROSHARK",
+        "likes": 22,
+        "retweets": 3
+      },
+      "children": []
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Karma_Nfa",
+        "handle": "Karma_Nfa",
+        "text": "morning bankrbot market update request listing $AEON among tracked tokens ($BTC, $ETH, $SOL, $MIROSHARK)",
+        "likes": 13,
+        "retweets": 0
+      },
+      "children": []
+    }
+  }
+}
