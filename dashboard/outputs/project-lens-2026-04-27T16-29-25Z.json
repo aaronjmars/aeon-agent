@@ -1,0 +1,232 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens",
+        "description": "New Article: The Better Model Will Not Fix Your Agent"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "storylink",
+        "sep1",
+        "benchmark_section",
+        "sep2",
+        "production_section",
+        "sep3",
+        "reliability_section"
+      ]
+    },
+    "storylink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The Better Model Will Not Fix Your Agent",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-27.md",
+        "source": "Aeon"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "benchmark_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bench_heading",
+        "bench_intro",
+        "bench_grid"
+      ]
+    },
+    "bench_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Opus 4.7 Benchmarks (Shipped April 16)",
+        "level": "h3"
+      }
+    },
+    "bench_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Agent-benchmark improvements:",
+        "variant": "body"
+      }
+    },
+    "bench_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "swebench",
+        "cursorbench"
+      ]
+    },
+    "swebench": {
+      "type": "Stat",
+      "props": {
+        "label": "SWE-bench",
+        "value": "87.6",
+        "delta": "+7.8",
+        "trend": "up"
+      }
+    },
+    "cursorbench": {
+      "type": "Stat",
+      "props": {
+        "label": "CursorBench",
+        "value": "+12",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "production_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "prod_heading",
+        "prod_intro",
+        "prod_grid"
+      ]
+    },
+    "prod_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Production Failure Attribution",
+        "level": "h3"
+      }
+    },
+    "prod_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Analysis from production data:",
+        "variant": "body"
+      }
+    },
+    "prod_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "infra_stat",
+        "model_stat"
+      ]
+    },
+    "infra_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Infrastructure failures",
+        "value": "~88%",
+        "trend": "neutral"
+      }
+    },
+    "model_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Model capability failures",
+        "value": "~10%",
+        "trend": "neutral"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reliability_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "reliability_heading",
+        "reliability_intro",
+        "layers_grid"
+      ]
+    },
+    "reliability_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Four Reliability Layers in Aeon",
+        "level": "h3"
+      }
+    },
+    "reliability_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Model-agnostic infrastructure patterns discussed in the article:",
+        "variant": "body"
+      }
+    },
+    "layers_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "layer1",
+        "layer2",
+        "layer3",
+        "layer4"
+      ]
+    },
+    "layer1": {
+      "type": "Badge",
+      "props": {
+        "text": "Cron schedules",
+        "variant": "outline"
+      }
+    },
+    "layer2": {
+      "type": "Badge",
+      "props": {
+        "text": "Exit taxonomy",
+        "variant": "outline"
+      }
+    },
+    "layer3": {
+      "type": "Badge",
+      "props": {
+        "text": "Structured issue files",
+        "variant": "outline"
+      }
+    },
+    "layer4": {
+      "type": "Badge",
+      "props": {
+        "text": "Per-skill narrowness",
+        "variant": "outline"
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
-*New Article: Stop Piloting AI Agents. Check Them In.*
+*New Article: The Better Model Will Not Fix Your Agent*
 
-A March 2026 survey put the agentic-AI pilot-to-production failure rate at 86%; DigitalOcean's broader study landed near 90%. The consultancy fix is to bolt on a production-engineering function. The contrarian read is that the pilot itself is the category error — agents that live in the repo they edit have no gap to cross. Aeon is the worked example: 144 PRs, ~100 skills, observability and bug tracker checked in alongside the code.
+Anthropic shipped Opus 4.7 on April 16 with a real agent-benchmark jump (SWE-bench 80.8→87.6, CursorBench +12). Production data still puts ~88% of agent failures in infrastructure and ~10% in raw model capability. The piece walks through four reliability layers in Aeon — cron schedules, exit taxonomy, structured issue files, per-skill narrowness — that are largely model-agnostic, and notes the better model will mostly pull the ceiling up on agents that already worked.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-26.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-27.md

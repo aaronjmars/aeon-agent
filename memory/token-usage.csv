@@ -140,3 +140,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-04-27,feature,claude-opus-4-7,62,28001,3504829,113563
 2026-04-27,push-recap,claude-opus-4-7,40,13445,1733796,122480
 2026-04-27,repo-article,claude-opus-4-7,34,11167,1096437,90872
+2026-04-27,project-lens,claude-opus-4-7,62,21614,2965838,93713
