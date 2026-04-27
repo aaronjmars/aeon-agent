@@ -1,17 +1,13 @@
-*Tweet Rewards — 2026-04-26*
+*Tweet Rewards — 2026-04-27*
 
 Budget: $10.00 in $AEON on Base
 
-1. x.com/0xalwaysonchain — $6.00 in $AEON (score: 3)
-   $REPPO $ODAI $AEON $DCLAW as well is one to look out for
-   [View tweet](https://x.com/0xalwaysonchain/status/2048074724295540991)
+1. x.com/MrDegenWolf — $7.05 in $AEON (score: 31)
+   wolf mentality: research → conviction → execution; next step obvious for $AEON
+   [View tweet](https://x.com/MrDegenWolf/status/2048443336625709443)
 
-2. x.com/10xgemhunter — $2.00 in $AEON (score: 1)
-   paid group calls recap listing $AEON 3x
-   [View tweet](https://x.com/10xgemhunter/status/2047976876472467641)
+2. x.com/Karma_Nfa — $2.95 in $AEON (score: 13)
+   morning market update listing $AEON among tracked tokens
+   [View tweet](https://x.com/Karma_Nfa/status/2048355405646950593)
 
-3. x.com/DaMikey23 — $2.00 in $AEON (score: 1)
-   $AEON $MIROSHARK
-   [View tweet](https://x.com/DaMikey23/status/2048187510287728643)
-
-Total: $10.00 in $AEON allocated to 3 authors (manual send — BANKR_SEND_KEY not set)
+Total: $10.00 in $AEON allocated to 2 authors

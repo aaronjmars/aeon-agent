@@ -1,0 +1,129 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-04-27",
+        "description": "Budget: $10.00 in $AEON on Base"
+      },
+      "children": [
+        "budget_stat",
+        "separator1",
+        "reward1",
+        "reward2",
+        "separator2",
+        "total_stat"
+      ]
+    },
+    "budget_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reward1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r1_header",
+        "r1_amount",
+        "r1_desc",
+        "r1_link"
+      ]
+    },
+    "r1_header": {
+      "type": "Heading",
+      "props": {
+        "text": "x.com/MrDegenWolf",
+        "level": "h3"
+      }
+    },
+    "r1_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation (Score)",
+        "value": "$7.05 in $AEON (31)"
+      }
+    },
+    "r1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "wolf mentality: research → conviction → execution; next step obvious for $AEON",
+        "variant": "body"
+      }
+    },
+    "r1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2048443336625709443"
+      }
+    },
+    "reward2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "r2_header",
+        "r2_amount",
+        "r2_desc",
+        "r2_link"
+      ]
+    },
+    "r2_header": {
+      "type": "Heading",
+      "props": {
+        "text": "x.com/Karma_Nfa",
+        "level": "h3"
+      }
+    },
+    "r2_amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation (Score)",
+        "value": "$2.95 in $AEON (13)"
+      }
+    },
+    "r2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "morning market update listing $AEON among tracked tokens",
+        "variant": "body"
+      }
+    },
+    "r2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2048355405646950593"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "total_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "$10.00 in $AEON allocated to 2 authors"
+      }
+    }
+  }
+}
