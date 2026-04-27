@@ -29,6 +29,7 @@
 | 2026-04-26 | Stop Piloting AI Agents. Check Them In. | project-lens |
 | 2026-04-26 | The Agent Just Wrote the Code That Pays Strangers | repo-article |
 | 2026-04-26 | Skill Leaderboard: heartbeat=100% (24 forks), 137 total slots, tomscaria/aeon +94 | repo-activity |
+| 2026-04-27 | Eight Weeks In, Aeon Named Its Competitors | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
