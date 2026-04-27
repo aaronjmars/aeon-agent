@@ -1,0 +1,127 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Daily — 2026-04-27"
+      },
+      "children": [
+        "stack_metrics",
+        "text_description",
+        "link_chart"
+      ]
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "grid_liquidity_vol",
+        "text_buys_sells",
+        "grid_periods",
+        "separator1"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000003683",
+        "delta": "-2.64%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "grid_liquidity_vol": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_liquidity",
+        "stat_vol_24h"
+      ]
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$247.8K"
+      },
+      "children": []
+    },
+    "stat_vol_24h": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$62.97K"
+      },
+      "children": []
+    },
+    "text_buys_sells": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 115/96"
+      },
+      "children": []
+    },
+    "grid_periods": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_7d",
+        "stat_30d"
+      ]
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+20.7%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+714%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "Post-spike digestion after yesterday's intraday high of $0.00000438. Buy/sell ratio still tilted constructive. Contributor-reward skill (PR #144) shipped yesterday — first automated USDC pipeline for fork contributors.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}

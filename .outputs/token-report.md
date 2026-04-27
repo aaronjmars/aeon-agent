@@ -1,10 +1,10 @@
-*$AEON Daily — 2026-04-26*
+*$AEON Daily — 2026-04-27*
 
-Price: $0.000003761 (+4.48% 24h)
-Liquidity: $249.8K | 24h Vol: $100.5K
-Buys/Sells: 122/111
-7d: +38.7% | 30d: +947.6%
+Price: $0.000003683 (-2.64% 24h)
+Liquidity: $247.8K | 24h Vol: $62.97K
+Buys/Sells: 115/96
+7d: +20.7% | 30d: +714%
 
-Consolidating above the Apr 24 breakout zone after two high-vol sessions — buy/sell ratio tilts bullish, volume cooling from spike levels but still healthy at ~$100K/day.
+Post-spike digestion after yesterday's intraday high of $0.00000438. Buy/sell ratio still tilted constructive. Contributor-reward skill (PR #144) shipped yesterday — first automated USDC pipeline for fork contributors.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
