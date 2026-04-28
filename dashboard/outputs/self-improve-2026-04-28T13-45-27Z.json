@@ -1,0 +1,151 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement",
+        "description": "2026-04-28"
+      },
+      "children": [
+        "heading_main",
+        "sep1",
+        "content_stack"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "self-improve now cross-checks workflow failures via scripts/skill-runs",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "intro_para",
+        "why_section",
+        "what_changed_section",
+        "impact_section",
+        "pr_link"
+      ]
+    },
+    "intro_para": {
+      "type": "Text",
+      "props": {
+        "text": "The self-improve skill's assessment phase used to scan only memory/logs/ for the last 2 days. From this PR onward it also runs `./scripts/skill-runs --hours 48 --failures` and cross-references any workflow-level failures against the logs.",
+        "variant": "body"
+      }
+    },
+    "why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why_heading",
+        "why_text"
+      ]
+    },
+    "why_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "why_text": {
+      "type": "Text",
+      "props": {
+        "text": "Logs are self-reported. A skill that crashes, times out, or fails in a pre-skill workflow step (prefetch script, sandbox limit, runner setup) never reaches the log-write step — so today's self-improve assessment was blind to that whole class of failures. GitHub Actions' workflow conclusion is the ground truth, and skill-analytics + heartbeat already use scripts/skill-runs the same way.",
+        "variant": "body"
+      }
+    },
+    "what_changed_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "what_heading",
+        "what_items"
+      ]
+    },
+    "what_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "what_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "what_item1",
+        "what_item2"
+      ]
+    },
+    "what_item1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/self-improve/SKILL.md: new step 2b2 — run scripts/skill-runs --hours 48 --failures, cross-reference against the existing log scan, and treat a workflow failure with no corresponding log entry as the strongest infrastructure-class signal (points to workflow yml / prefetch script / sandbox limit, not the skill prompt).",
+        "variant": "body"
+      }
+    },
+    "what_item2": {
+      "type": "Text",
+      "props": {
+        "text": "memory/MEMORY.md + memory/logs/2026-04-28.md: skills-built table + today's log.",
+        "variant": "body"
+      }
+    },
+    "impact_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "impact_heading",
+        "impact_text"
+      ]
+    },
+    "impact_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impact_text": {
+      "type": "Text",
+      "props": {
+        "text": "Self-improve gains visibility into the failure class it most needs to fix — silent infrastructure errors. Same data source already powers two other meta-skills, so no new dependencies and no new secrets.",
+        "variant": "body"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #21",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/21",
+        "source": "GitHub"
+      }
+    }
+  }
+}
