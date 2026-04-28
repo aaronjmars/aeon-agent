@@ -1,0 +1,125 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "date_text",
+        "repo_text",
+        "separator_1",
+        "stats_stack",
+        "separator_2",
+        "stargazers_section"
+      ]
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-04-28",
+        "variant": "muted"
+      }
+    },
+    "repo_text": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon"
+      }
+    },
+    "separator_1": {
+      "type": "Separator"
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stars_stat",
+        "forks_stat"
+      ]
+    },
+    "stars_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "248",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "forks_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "36"
+      }
+    },
+    "separator_2": {
+      "type": "Separator"
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazers_stack"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_kurt0ne",
+        "link_s62dads4rgb",
+        "link_alovesoupreme",
+        "link_thinkrivan"
+      ]
+    },
+    "link_kurt0ne": {
+      "type": "Link",
+      "props": {
+        "label": "Kurt0ne",
+        "href": "https://github.com/Kurt0ne"
+      }
+    },
+    "link_s62dads4rgb": {
+      "type": "Link",
+      "props": {
+        "label": "s62dads4-rgb",
+        "href": "https://github.com/s62dads4-rgb"
+      }
+    },
+    "link_alovesoupreme": {
+      "type": "Link",
+      "props": {
+        "label": "alovesoupreme",
+        "href": "https://github.com/alovesoupreme"
+      }
+    },
+    "link_thinkrivan": {
+      "type": "Link",
+      "props": {
+        "label": "thinkrivan",
+        "href": "https://github.com/thinkrivan"
+      }
+    }
+  }
+}
