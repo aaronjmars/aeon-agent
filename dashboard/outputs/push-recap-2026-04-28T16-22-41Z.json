@@ -1,0 +1,284 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date_badge",
+        "sep1",
+        "repo_section",
+        "sep2",
+        "feature_section",
+        "sep3",
+        "why_section",
+        "sep4",
+        "changes_section",
+        "sep5",
+        "stats_line",
+        "recap_link"
+      ]
+    },
+    "date_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-04-28",
+        "variant": "outline"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "repo_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_line1",
+        "repo_line2"
+      ]
+    },
+    "repo_line1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_text1",
+        "pr_badge"
+      ]
+    },
+    "repo_text1": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon — 1 meaningful commit by @aaronjmars",
+        "variant": "body"
+      }
+    },
+    "pr_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #146",
+        "variant": "secondary"
+      }
+    },
+    "repo_line2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent — 31 commits, all autonomous-scheduler bookkeeping (filtered)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "feature_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "feature_heading",
+        "feature_desc",
+        "token_metrics"
+      ]
+    },
+    "feature_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Public Status Page Learns About the Token",
+        "level": "h3"
+      }
+    },
+    "feature_desc": {
+      "type": "Text",
+      "props": {
+        "text": "The same /status/ page that already broadcasts agent health now also broadcasts token health — a Price / 24h / Liquidity / Volume(24h) / FDV row read out of the latest articles/token-report-*.md. Zero new APIs, zero new secrets, zero new cron entries. Today's heartbeat already populated it.",
+        "variant": "body"
+      }
+    },
+    "token_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liquidity",
+        "stat_volume",
+        "stat_fdv",
+        "verdict_badge"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON",
+        "value": "$0.0000032626",
+        "delta": "-11.16%",
+        "trend": "down"
+      }
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$223.4K"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$41.3K"
+      }
+    },
+    "stat_fdv": {
+      "type": "Stat",
+      "props": {
+        "label": "FDV",
+        "value": "$326.3K"
+      }
+    },
+    "verdict_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SLIDING",
+        "variant": "destructive"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why_heading",
+        "why_text"
+      ]
+    },
+    "why_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why It Matters",
+        "level": "h3"
+      }
+    },
+    "why_text": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's PR #145 made the repo pitch itself to inbound traffic; PR #146 makes the destination URL pull double duty. Anyone landing from SHOWCASE.md, MCP directories, or HN gets one URL answering both reliability and market questions.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "changes_heading",
+        "changes_list"
+      ]
+    },
+    "changes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h3"
+      }
+    },
+    "changes_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/heartbeat/SKILL.md (+25/−1): tolerant regex extracts both old (Value | 24h Change) and new (Now | 24h Δ) token-report layouts so forks at different evolution stages keep working with no per-fork conditional",
+        "variant": "body"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "docs/status.md (+6/−2): seeded Token pulse placeholder, updated intro and data-sources footer",
+        "variant": "body"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "24h staleness fallback (_No recent token data..._) and section-omit when no report exists — token-less forks still get a clean page",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_line": {
+      "type": "Text",
+      "props": {
+        "text": "Stats: 2 files changed, +31/−3 lines",
+        "variant": "caption"
+      }
+    },
+    "recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-28.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
