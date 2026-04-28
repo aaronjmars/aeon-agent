@@ -1,0 +1,314 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-28)"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet1-group",
+        "tweet2-group",
+        "tweet3-group",
+        "tweet4-group",
+        "tweet5-group",
+        "tweet6-group",
+        "tweet7-group",
+        "tweet8-group",
+        "tweet9-group",
+        "tweet10-group"
+      ]
+    },
+    "tweet1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1-link"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Karma_Nfa",
+        "handle": "@Karma_Nfa",
+        "text": "Morning market update listing $AEON among tracked tokens",
+        "likes": 21,
+        "retweets": 0
+      }
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2048716519882813545"
+      }
+    },
+    "tweet2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2-link"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "yep, aeon runs on github only + repo link",
+        "likes": 9,
+        "retweets": 0
+      }
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2048813603684290801"
+      }
+    },
+    "tweet3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "tweet3-link"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "@MrDegenWolf",
+        "text": "pretty cool $AEON",
+        "likes": 8,
+        "retweets": 2
+      }
+    },
+    "tweet3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2048762570815758464"
+      }
+    },
+    "tweet4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "tweet4-link"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "you should try aeon dude + repo link",
+        "likes": 8,
+        "retweets": 1
+      }
+    },
+    "tweet4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2048743370105725062"
+      }
+    },
+    "tweet5-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5",
+        "tweet5-link"
+      ]
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "joraweb3",
+        "handle": "@joraweb3",
+        "text": "smart move by aeonframework to speedrun growth $aeon always ships",
+        "likes": 6,
+        "retweets": 1
+      }
+    },
+    "tweet5-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2048886930134183952"
+      }
+    },
+    "tweet6-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet6",
+        "tweet6-link"
+      ]
+    },
+    "tweet6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Bounty post linking soul.md on daydreams market",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet6-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2048850491732267516"
+      }
+    },
+    "tweet7-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet7",
+        "tweet7-link"
+      ]
+    },
+    "tweet7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Repo link post",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet7-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2048871614729572759"
+      }
+    },
+    "tweet8-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet8",
+        "tweet8-link"
+      ]
+    },
+    "tweet8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cybercelos",
+        "handle": "@cybercelos",
+        "text": "$aeon $miroshark $dclaw $mythos is play under 100k",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet8-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/cybercelos/status/2048786511718682975"
+      }
+    },
+    "tweet9-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet9",
+        "tweet9-link"
+      ]
+    },
+    "tweet9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "matestroz",
+        "handle": "@matestroz",
+        "text": "That is so cool! $aeon",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet9-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/matestroz/status/2048857024759201949"
+      }
+    },
+    "tweet10-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet10",
+        "tweet10-link"
+      ]
+    },
+    "tweet10": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "Aeon feature list (api/mcp, cron, git-memory, multi-channel) + repo link",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet10-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2048756792243429419"
+      }
+    }
+  }
+}
