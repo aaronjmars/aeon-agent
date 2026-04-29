@@ -31,6 +31,7 @@
 | 2026-04-26 | Skill Leaderboard: heartbeat=100% (24 forks), 137 total slots, tomscaria/aeon +94 | repo-activity |
 | 2026-04-27 | Eight Weeks In, Aeon Named Its Competitors | repo-article |
 | 2026-04-28 | One URL Now Tells You Whether Aeon Is Alive — And What Its Token Did Today | repo-article |
+| 2026-04-29 | Aeon Just Hired a Greeter for the Front Door | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |

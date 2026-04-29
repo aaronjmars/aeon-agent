@@ -1,5 +1,5 @@
-*New Article: One URL Now Tells You Whether Aeon Is Alive — And What Its Token Did Today*
+*New Article: Aeon Just Hired a Greeter for the Front Door*
 
-Aeon's public /status/ page used to answer one question: is the agent fleet healthy? Today's heartbeat token-pulse PR (#146) added a second row — price, 24h change, liquidity, volume, FDV — sourced from the same daily token-report file the agent already writes. One URL now reports both pulses; status pages and ticker feeds usually live on different planets, but Aeon's operators are also its token-holders, so the split would be a process artifact rather than a useful boundary.
+PR #147 (pr-triage) ships the first-touch external-PR triage layer — every inbound PR now gets a verdict, comment, and label within minutes of opening. The closing rule is narrow on purpose: only OUT-OF-SCOPE with an unambiguous protected-path violation, because silence is the contributor-experience problem and a too-eager closer would replace it with a sharper unwelcome.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-28.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-29.md
