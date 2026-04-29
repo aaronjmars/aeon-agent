@@ -33,3 +33,15 @@ Older entries archived from MEMORY.md Recent Articles table to keep the index un
 | 2026-04-20 | Push Recap (9 commits: PRs #41-#45 — Memory Search API, fork-contributor-leaderboard, notification stack hardening) | repo-activity |
 | 2026-04-20 | Weekly Shiplog Apr 13–20 (8 themes: MCP/A2A, Memory API, fork intelligence, dedup stack) | repo-activity |
 | 2026-04-20 | The Agent That Runs for Ninety Seconds a Day | project-lens |
+| 2026-04-21 | The Night Aeon Rewired Itself: 80 Skills, One Thesis, 28 Minutes | repo-article |
+| 2026-04-21 | Push Recap (83 commits: 80 autoresearch rewrites, A2A examples, XAI prefetch reliability) | repo-activity |
+| 2026-04-21 | The Third Floor Over a Fire Station: Software's 1894 Moment | project-lens |
+| 2026-04-22 | Aeon Got a Credit Card. The First Thing It Did Was Triple-Lock the Safe. | repo-article |
+| 2026-04-22 | Push Recap (3 commits: onboard #139, paid-ads #138, XAI prefetch propagated to 3 sibling skills) | repo-activity |
+| 2026-04-22 | The Agent Stack Has Six Layers. Most Maps Only Show Two. | project-lens |
+| 2026-04-23 | Thirty-Four Forks Now Get a Vote on What Aeon Ships | repo-article |
+| 2026-04-24 | Push Recap (2 commits: #141 public-status-page, #18 heartbeat-backoff) | repo-activity |
+| 2026-04-24 | Eighty-Two Percent of Enterprises Can't Find Their Own AI Agents | project-lens |
+| 2026-04-24 | The Agent That Publishes Its Own Heartbeat | repo-article |
+| 2026-04-25 | The Source Files Are Markdown Now | project-lens |
+| 2026-04-25 | Aeon's Backlog Picked the Same Skill Twice. Today the Agent Just Built It. | repo-article |

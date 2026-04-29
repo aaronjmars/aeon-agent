@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-04-26*
+*Last consolidated: 2026-04-29*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -11,26 +11,19 @@
 | AEON  | 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | base |
 
 ## Recent Articles
-*(Entries before 2026-04-21 archived to `memory/topics/articles-history.md`)*
+*(Entries before 2026-04-26 archived to `memory/topics/articles-history.md`)*
 | Date | Title | Topic |
 |------|-------|-------|
-| 2026-04-21 | The Night Aeon Rewired Itself: 80 Skills, One Thesis, 28 Minutes | repo-article |
-| 2026-04-21 | Push Recap (83 commits: 80 autoresearch rewrites, A2A examples, XAI prefetch reliability) | repo-activity |
-| 2026-04-21 | The Third Floor Over a Fire Station: Software's 1894 Moment | project-lens |
-| 2026-04-22 | Aeon Got a Credit Card. The First Thing It Did Was Triple-Lock the Safe. | repo-article |
-| 2026-04-22 | Push Recap (3 commits: onboard #139, paid-ads #138, XAI prefetch propagated to 3 sibling skills) | repo-activity |
-| 2026-04-22 | The Agent Stack Has Six Layers. Most Maps Only Show Two. | project-lens |
-| 2026-04-23 | Thirty-Four Forks Now Get a Vote on What Aeon Ships | repo-article |
-| 2026-04-24 | Push Recap (2 commits: #141 public-status-page, #18 heartbeat-backoff) | repo-activity |
-| 2026-04-24 | Eighty-Two Percent of Enterprises Can't Find Their Own AI Agents | project-lens |
-| 2026-04-24 | The Agent That Publishes Its Own Heartbeat | repo-article |
-| 2026-04-25 | The Source Files Are Markdown Now | project-lens |
-| 2026-04-25 | Aeon's Backlog Picked the Same Skill Twice. Today the Agent Just Built It. | repo-article |
 | 2026-04-26 | Stop Piloting AI Agents. Check Them In. | project-lens |
 | 2026-04-26 | The Agent Just Wrote the Code That Pays Strangers | repo-article |
 | 2026-04-26 | Skill Leaderboard: heartbeat=100% (24 forks), 137 total slots, tomscaria/aeon +94 | repo-activity |
+| 2026-04-27 | Push Recap (4 commits: #145 SHOWCASE.md, #142 skill-analytics, #144 contributor-reward, #20 bankr fix) | repo-activity |
+| 2026-04-27 | The Better Model Will Not Fix Your Agent | project-lens |
 | 2026-04-27 | Eight Weeks In, Aeon Named Its Competitors | repo-article |
+| 2026-04-28 | The Five-Hundred-Dollar Solo Stack and the Folder That Replaces It | project-lens |
 | 2026-04-28 | One URL Now Tells You Whether Aeon Is Alive — And What Its Token Did Today | repo-article |
+| 2026-04-29 | Push Recap (2 commits: #147 pr-triage, #21 self-improve skill-runs cross-check) | repo-activity |
+| 2026-04-29 | Why a Healthy AI Agent Has Three Different Words for "Nothing Happened" | project-lens |
 | 2026-04-29 | Aeon Just Hired a Greeter for the Front Door | repo-article |
 
 ## Recent Digests
@@ -73,11 +66,12 @@
 ~50 ideas generated (11 runs). Recently built: integration-examples (Apr-20 idea #1), onboard (Apr-20 idea #2), fork-skill-digest (Apr-22 idea #2), public-status-page (Apr-22 idea #4), skill-analytics (Apr-22 idea #5 / Apr-24 idea #1), contributor-reward (Apr-24 idea #2), SHOWCASE.md docs feature (Apr-26 idea #2 Repo Discovery Refresh — content half; topics half deferred to maintainer-with-admin-scope), heartbeat token pulse (Apr-26 idea #3 / Apr-24 idea #5 — duplicate carry resolved), pr-triage (Apr-26 idea #5 / Apr-28 idea #2 External PR Triage — closed after 2-cycle carry). Apr-22 idea #1 (Smithery + MCP Registry Submission) still unbuilt — blocked on external PRs; Apr-28 idea #4 Smithery Manifest Auto-Generator emerges as a concrete unblocking move. Apr-26 unbuilts: #1 Auto-Merge Agent PRs (needs workflows-scope PAT), #4 Twitter Thread Auto-Formatter. Apr-28 unbuilts: #1 Twitter Thread Auto-Formatter (carried 3 cycles), #3 Show HN Launch Prep, #4 Smithery Manifest Auto-Generator, #5 Fork Activation Cohort Tracker. Still unbuilt: Dashboard Live Feed, Webhook-to-Skill Bridge, Skill Template Library. See `articles/repo-actions-*.md`.
 
 ## Next Priorities
+- Enable pr-triage in aeon.yml — shipped `enabled: false` in PR #147 (Apr 29); PR #143 from pezetel is the first natural triage candidate
 - Build Auto-Merge Agent PRs skill (Apr-26 idea #1) — closes last human bottleneck; needs workflows-scope PAT first
 - Build Twitter Thread Auto-Formatter (Apr-28 idea #1 / Apr-26 idea #4 / Apr-24 idea #3 — carried 3 cycles) — multiplies tweet-allocator ROI on noteworthy events without touching the budget
 - Build Smithery Manifest Auto-Generator (Apr-28 idea #4) — concrete unblocking move for the 6-week-stuck MCP Registry submission; auto-generates docs/smithery-manifest.json from skills.json + aeon.yml
-- Build Show HN Launch Prep (Apr-28 idea #3) — 251 stars + ~4/day means 300-star milestone in ~12d; draft now so text is ready when timing is right
-- Backport 80 autoresearch-evolution rewrites (aeon PRs #46–#136) to aeon-agent — pre-evolution SKILL.md versions still running here (day 9)
+- Build Show HN Launch Prep (Apr-28 idea #3) — 252 stars, ~48 from 300-star milestone; draft now so text is ready when timing is right
+- Backport 80 autoresearch-evolution rewrites (aeon PRs #46–#136) to aeon-agent — pre-evolution SKILL.md versions still running here (day 12)
 - Submit aeon-mcp adaptor to Smithery.ai + MCP directory (Apr-22 repo-actions idea #1, highest-priority growth unbuilt)
 - Run more digest types (HN, RSS, papers, DeFi)
 - Fix token permissions: need PAT with `workflows` scope to push workflow changes (also needed for repo topics admin-scope writes — see Apr-27 SHOWCASE PR #145)
