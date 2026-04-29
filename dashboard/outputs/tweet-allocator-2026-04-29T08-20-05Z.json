@@ -1,0 +1,325 @@
+{
+  "root": "card-rewards",
+  "state": {},
+  "elements": {
+    "card-rewards": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards",
+        "description": "2026-04-29"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-budget",
+        "sep-header",
+        "stack-tweets",
+        "sep-footer",
+        "stat-total"
+      ]
+    },
+    "stat-budget": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "sep-header": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet-1-group",
+        "tweet-2-group",
+        "tweet-3-group",
+        "tweet-4-group",
+        "tweet-5-group"
+      ]
+    },
+    "tweet-1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-1-meta"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "LoDeFi31",
+        "handle": "@LoDeFi31",
+        "text": "\"$DCLAW $SHARP $AEON $NOELCLAW\" basket call"
+      }
+    },
+    "tweet-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-score-1",
+        "stat-amount-1",
+        "link-1"
+      ]
+    },
+    "badge-score-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 7",
+        "variant": "default"
+      }
+    },
+    "stat-amount-1": {
+      "type": "Stat",
+      "props": {
+        "value": "$5.83 in $AEON"
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/LoDeFi31/status/2049036199306662104"
+      }
+    },
+    "tweet-2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "tweet-2-meta"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "dippy_eth",
+        "handle": "@dippy_eth",
+        "text": "also check out $AEON?"
+      }
+    },
+    "tweet-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-score-2",
+        "stat-amount-2",
+        "link-2"
+      ]
+    },
+    "badge-score-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 2",
+        "variant": "default"
+      }
+    },
+    "stat-amount-2": {
+      "type": "Stat",
+      "props": {
+        "value": "$1.67 in $AEON"
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/dippy_eth/status/2049106365319115100"
+      }
+    },
+    "tweet-3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "tweet-3-meta"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BasedCult33",
+        "handle": "@BasedCult33",
+        "text": "@aaronjmars is the man for this job.. @aeonframework"
+      }
+    },
+    "tweet-3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-score-3",
+        "stat-amount-3",
+        "link-3"
+      ]
+    },
+    "badge-score-3": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 1",
+        "variant": "default"
+      }
+    },
+    "stat-amount-3": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.83 in $AEON"
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BasedCult33/status/2049161913850871950"
+      }
+    },
+    "tweet-4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "tweet-4-meta"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "@MrDegenWolf",
+        "text": "@aeonframework on @base"
+      }
+    },
+    "tweet-4-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-score-4",
+        "stat-amount-4",
+        "link-4"
+      ]
+    },
+    "badge-score-4": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 1",
+        "variant": "default"
+      }
+    },
+    "stat-amount-4": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.83 in $AEON"
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2049245328524620098"
+      }
+    },
+    "tweet-5-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5",
+        "tweet-5-meta"
+      ]
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "handle": "@DaMikey23",
+        "text": "\"$AEON\" quote of @aaronjmars"
+      }
+    },
+    "tweet-5-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-score-5",
+        "stat-amount-5",
+        "link-5"
+      ]
+    },
+    "badge-score-5": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 1",
+        "variant": "default"
+      }
+    },
+    "stat-amount-5": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.83 in $AEON"
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2049195772088926289"
+      }
+    },
+    "sep-footer": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Allocated",
+        "value": "$9.99 in $AEON to 5 authors"
+      }
+    }
+  }
+}
