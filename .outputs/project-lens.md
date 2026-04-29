@@ -1,5 +1,5 @@
-*New Article: The Five-Hundred-Dollar Solo Stack and the Folder That Replaces It*
+*New Article: Why a Healthy AI Agent Has Three Different Words for "Nothing Happened"*
 
-The 2026 "solo founder AI agent stack" genre frames the problem as a shopping list: six SaaS subscriptions for $300–$500/mo. This piece walks through a Tuesday morning of someone running a fork instead — token report, tweet research, micro-payouts, public status page already done by the time they pour coffee. The runtime is GitHub Actions, the skills are Markdown files, the deployment is `git push`. The genre's missing row at the bottom of the comparison table: where the agent is a folder the operator owns, not a service they subscribe to.
+A 2026 deep-dive on Aeon's exit taxonomy — the architectural answer to AI-driven notification fatigue. With 80% of enterprise apps embedding copilots by year-end and on-call teams already drowning in alerts, the agents that scale are the ones whose skills end in named exits (OK, SKIP_UNCHANGED, NEW_INFO, ERROR…) and whose default mode is silent. ~100 skill runs a day on this project; 4–8 notifications. The decision to *not* notify happens inside the skill, before any router sees it.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-28.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-29.md
