@@ -1,14 +1,14 @@
-*Agent Self-Improvement — 2026-04-24*
+*Agent Self-Improvement — 2026-04-28*
 
-Heartbeat extended-persistence backoff — after 7 consecutive days of escalation on the same issue, re-notify cadence drops from every 48h to every 7 days. The `ESCALATION:` prefix and persistence count stay; only the interval changes. Resolution resets everything.
+self-improve now cross-checks workflow failures via scripts/skill-runs
+The self-improve skill's assessment phase used to scan only memory/logs/ for the last 2 days. From this PR onward it also runs `./scripts/skill-runs --hours 48 --failures` and cross-references any workflow-level failures against the logs.
 
-Why: the PAT-with-`workflows`-scope issue has fired `ESCALATION` every 48h since Apr 17 (7+ days, 4 pings on Apr 17/19/21/23). Operator-dependent issues (missing secrets, third-party setup) often can't be fixed on the agent's preferred cadence; a fifth+ ping every 48h is noise, not signal. Going fully silent would drop the finding off the operator's radar entirely — 7-day cadence keeps it visible but quiet.
+Why: Logs are self-reported. A skill that crashes, times out, or fails in a pre-skill workflow step (prefetch script, sandbox limit, runner setup) never reaches the log-write step — so today's self-improve assessment was blind to that whole class of failures. GitHub Actions' workflow conclusion is the ground truth, and skill-analytics + heartbeat already use scripts/skill-runs the same way.
 
 What changed:
-- skills/heartbeat/SKILL.md: new rule 3 "Extended-persistence backoff (7+ days)" in Dedup & Escalation Rules; status-flag doc gains the new "Notification sent: no (7d extended-persistence backoff — last ESCALATION N days ago)" marker so future heartbeats detect and respect the backoff state.
+- skills/self-improve/SKILL.md: new step 2b2 — run scripts/skill-runs --hours 48 --failures, cross-reference against the existing log scan, and treat a workflow failure with no corresponding log entry as the strongest infrastructure-class signal (points to workflow yml / prefetch script / sandbox limit, not the skill prompt).
+- memory/MEMORY.md + memory/logs/2026-04-28.md: skills-built table + today's log.
 
-Behaviour: Day 0–2 = 48h dedup · Day 3–6 = escalation every 48h · Day 7+ = escalation every 7 days (new).
+Impact: Self-improve gains visibility into the failure class it most needs to fix — silent infrastructure errors. Same data source already powers two other meta-skills, so no new dependencies and no new secrets.
 
-Impact: cuts nag volume ~3.5x for long-running operator-dependent issues while keeping the finding on the radar. Next PAT escalation on/after Apr 25 will be the first to exercise the new path.
-
-PR: https://github.com/aaronjmars/aeon-agent/pull/18
+PR: https://github.com/aaronjmars/aeon-agent/pull/21

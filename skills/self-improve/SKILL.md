@@ -27,6 +27,7 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
       - Notifications that were truncated or failed (Markdown parse errors)
       - Skills that ran but didn't send notifications when they should have
       - Patterns in the logs that suggest a skill needs tweaking
+   b2. Run `./scripts/skill-runs --hours 48 --failures` to catch workflow-level failures that may not appear in `memory/logs/` (Claude crashes, timeouts, or pre-skill steps failing all leave the workflow as `conclusion: failure` but skip the log-write step). Cross-reference any failure here against the logs from step 2b — a workflow failure with no corresponding log entry is a stronger signal than a logged error, and usually points to infrastructure (workflow yml, prefetch script, sandbox limit) rather than the skill prompt itself.
    c. Check `articles/repo-actions-*.md` for ideas that target the agent itself (not the watched project repos).
    d. Read the current skills in `skills/` — look for:
       - Prompts that are vague or produce inconsistent results
