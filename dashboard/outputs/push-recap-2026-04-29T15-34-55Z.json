@@ -1,0 +1,174 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-29"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "heading1",
+        "pr147-text",
+        "rubric-text",
+        "closure-text",
+        "trigger-text",
+        "sep2",
+        "heading2",
+        "pr21-text",
+        "assessment-text",
+        "blind-spot-text",
+        "sep3",
+        "heading3",
+        "changes1",
+        "changes2",
+        "changes3",
+        "sep4",
+        "heading4",
+        "stats",
+        "sep5",
+        "recap-link"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "2 PRs merged across aeon + aeon-agent. Both target the agent's interaction layer with humans, not its content output."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "External PR welcome layer ships",
+        "level": "h3"
+      }
+    },
+    "pr147-text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #147 adds skills/pr-triage — first-touch triage for every external PR (verdict + label + welcoming comment within minutes of open)."
+      }
+    },
+    "rubric-text": {
+      "type": "Text",
+      "props": {
+        "text": "Four-check rubric (scope/format/originality/size) → ACCEPTED / NEEDS-CHANGES / DEFER / OUT-OF-SCOPE."
+      }
+    },
+    "closure-text": {
+      "type": "Text",
+      "props": {
+        "text": "Closes only on OUT-OF-SCOPE with unambiguous protected-path match; everything else is label-only."
+      }
+    },
+    "trigger-text": {
+      "type": "Text",
+      "props": {
+        "text": "Trigger: pezetel's PR #143 sat 4 days untouched. Slots between issue-triage (09:00) and pr-review/auto-merge (later in day)."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-improve sees workflow failures",
+        "level": "h3"
+      }
+    },
+    "pr21-text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #21 adds one paragraph to skills/self-improve/SKILL.md — assessment now also runs ./scripts/skill-runs --hours 48 --failures alongside the existing log scan."
+      }
+    },
+    "assessment-text": {
+      "type": "Text",
+      "props": {
+        "text": "Closes a structural blind spot: logs are self-reported, so a skill that crashes before its log-write step was previously invisible."
+      }
+    },
+    "blind-spot-text": {
+      "type": "Text",
+      "props": {
+        "text": "A workflow failure with no log entry is now treated as the strongest infrastructure-class signal (workflow.yml / prefetch / sandbox limit, not the prompt)."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading3": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "changes1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/pr-triage/SKILL.md (+248 lines, new) — full skill prompt with idempotency state, defensive 7-day comment-prefix dedup, significance-gated notify"
+      }
+    },
+    "changes2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/self-improve/SKILL.md (+1 line) — new step b2 cross-references workflow conclusions against logs"
+      }
+    },
+    "changes3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml (+1) + skills.json (+13/-1, 92→93) — pr-triage wired in disabled-by-default at \"30 9 * * *\""
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading4": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stats": {
+      "type": "Text",
+      "props": {
+        "text": "10 files changed, +436/-10 lines across 2 meaningful commits (31 auto-commits filtered on aeon-agent)."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recap-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-29.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
