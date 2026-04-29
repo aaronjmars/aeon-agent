@@ -1,5 +1,5 @@
-*New Article: The Better Model Will Not Fix Your Agent*
+*New Article: The Five-Hundred-Dollar Solo Stack and the Folder That Replaces It*
 
-Anthropic shipped Opus 4.7 on April 16 with a real agent-benchmark jump (SWE-bench 80.8→87.6, CursorBench +12). Production data still puts ~88% of agent failures in infrastructure and ~10% in raw model capability. The piece walks through four reliability layers in Aeon — cron schedules, exit taxonomy, structured issue files, per-skill narrowness — that are largely model-agnostic, and notes the better model will mostly pull the ceiling up on agents that already worked.
+The 2026 "solo founder AI agent stack" genre frames the problem as a shopping list: six SaaS subscriptions for $300–$500/mo. This piece walks through a Tuesday morning of someone running a fork instead — token report, tweet research, micro-payouts, public status page already done by the time they pour coffee. The runtime is GitHub Actions, the skills are Markdown files, the deployment is `git push`. The genre's missing row at the bottom of the comparison table: where the agent is a folder the operator owns, not a service they subscribe to.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-27.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-28.md

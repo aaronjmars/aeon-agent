@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-04-26*
-Generated from analysis of aaronjmars/aeon (241 stars, 36 forks). Three unbuilts carried from Apr-24; two new signals (PR queue backlog + first community PR).
+*Repo Action Ideas — 2026-04-28*
+Generated from analysis of aaronjmars/aeon (251★, 36 forks, 0 open PRs) — five ideas the feature skill can autonomously build tomorrow.
 
-1. Auto-Merge Agent PRs (DX, Small)
-   Closes the last human-in-the-loop gap — agent PRs sit open until @aaronjmars merges; auto-merge after 2h + passing checks with path-limited safeguards.
+1. Twitter Thread Auto-Formatter (Content, Small)
+   Reads today's memory log, picks the top event (new skill, price move, star milestone), and formats a ready-to-post 5-tweet thread — multiplies tweet-allocator ROI without touching the budget.
 
-2. Repo Discovery Refresh (Growth, Small)
-   Repo has only 3 topics; add 10 (autonomous-agent, github-actions, llm, claude, anthropic, etc.) + SHOWCASE.md + comparison table vs AutoGen/CrewAI/n8n — direct fuel for the 300-star run.
+2. External PR Triage (Community, Small)
+   Auto-assesses inbound community PRs using a structured rubric (paths touched, format compliance, size, overlap) and posts a comment within minutes — signals to contributors that their work is seen even when the operator is offline.
 
-3. AEON Token Pulse on Status Page (Community/DX, Small)
-   Add $AEON price/24h/FDV row to the public /status/ page using existing token-report data — zero new API calls.
+3. Show HN Launch Prep (Growth, Small)
+   At 251 stars with 4/day momentum, 300-star milestone arrives in ~12 days — prime Show HN timing. Drafts two ready-to-post variants (HN title + body, r/MachineLearning format) using README + SHOWCASE + recent articles as source material.
 
-4. Twitter Thread Auto-Formatter (Content, Small)
-   Reads daily log, picks top event, generates a 5-tweet thread ready to post — multiplies tweet-allocator ROI without touching the budget.
+4. Smithery Manifest Auto-Generator (Integration, Small)
+   Closes the Apr-22 Smithery/MCP Registry blocker: auto-generates docs/smithery-manifest.json from live skills.json + aeon.yml enabled flags, writes a copy-paste submission PR body, opens PR on the aeon repo.
 
-5. External PR Triage (Community, Small)
-   PR #143 from community contributor arrived untriaged; a triage skill reads the diff, applies a rubric, and posts accept/defer/out-of-scope comment — scales as fork count grows.
+5. Fork Activation Cohort Tracker (Community, Small)
+   Buckets all 36 forks into COLD / STALE / ACTIVE / POWER stages using Actions run history; tracks week-over-week transitions; flags any fork that just went dark — early detection of abandonment.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-26.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-04-28.md

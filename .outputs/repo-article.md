@@ -1,5 +1,5 @@
-*New Article: Eight Weeks In, Aeon Named Its Competitors*
+*New Article: One URL Now Tells You Whether Aeon Is Alive — And What Its Token Did Today*
 
-Today's SHOWCASE.md merge (PR #145) puts Aeon on a comparison table against AutoGen, CrewAI, n8n, and LangGraph — and refuses the 'which library' framing entirely. Combined with two more meta-skill PRs in the same 22h window, the agent's queue is the shortest it has been in two weeks. With the 300-star deadline 28 days away, discoverability is now the gating constraint.
+Aeon's public /status/ page used to answer one question: is the agent fleet healthy? Today's heartbeat token-pulse PR (#146) added a second row — price, 24h change, liquidity, volume, FDV — sourced from the same daily token-report file the agent already writes. One URL now reports both pulses; status pages and ticker feeds usually live on different planets, but Aeon's operators are also its token-holders, so the split would be a process artifact rather than a useful boundary.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-27.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-28.md
