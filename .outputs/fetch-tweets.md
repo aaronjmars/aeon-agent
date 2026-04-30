@@ -1,29 +1,33 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-29)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-04-30)*
 
-1. x.com/aaronjmars — "few realize it yet, but big capability increases are about autonomy — you can give a goal to your harness and the agent achieves it; more autonomy @aeonframework"
-Likes: 14 | RTs: 2
-[View tweet](https://x.com/aaronjmars/status/2049161108183744699)
+1. x.com/aaronjmars — Autonomous book publisher vision: scrape Project Gutenberg → score obscure books → publish on Amazon KDP. "The a24 of books."
+Likes: 22 | RTs: 2
+[View tweet](https://x.com/aaronjmars/status/2049497321407185188)
 
-2. x.com/LoDeFi31 — "$DCLAW $SHARP $AEON $NOELCLAW" — multi-token basket call
-Likes: 7 | RTs: 0
-[View tweet](https://x.com/LoDeFi31/status/2049036199306662104)
+2. x.com/aaronjmars — Quotes a16z big idea: "2026 = death of the prompt box" → @aeonframework coded
+Likes: 15 | RTs: 2
+[View tweet](https://x.com/aaronjmars/status/2049536092089503937)
 
-3. x.com/dippy_eth — "These are good calls fr, also check out $AEON?"
+3. x.com/MrDegenWolf — Amplifies the book-publishing angle: AI turns forgotten knowledge into fully-autonomous publications. "The a24 of books is coming"
+Likes: 8 | RTs: 2
+[View tweet](https://x.com/MrDegenWolf/status/2049507246451593693)
+
+4. x.com/DaMikey23 — "$AEON $MIROSHARK — Insane Agent tech, Built different and designed to lead."
+Likes: 2 | RTs: 1
+[View tweet](https://x.com/DaMikey23/status/2049635453947552027)
+
+5. x.com/cybercelos — "$Mythos cooking. Next $aeon and $miroshark type runner."
 Likes: 2 | RTs: 0
-[View tweet](https://x.com/dippy_eth/status/2049106365319115100)
+[View tweet](https://x.com/cybercelos/status/2049534797790523524)
 
-4. x.com/BasedCult33 — "@aaronjmars is the man for this job.. @aeonframework"
+6. x.com/aaronjmars — "The repo IS the company." + link to github.com/aaronjmars/aeon
 Likes: 1 | RTs: 0
-[View tweet](https://x.com/BasedCult33/status/2049161913850871950)
+[View tweet](https://x.com/aaronjmars/status/2049351334227218484)
 
-5. x.com/MrDegenWolf — "@aeonframework on @base"
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/MrDegenWolf/status/2049245328524620098)
+7. x.com/aeonframework — "Run scans autonomously now" + repo link
+Likes: 1 | RTs: 0
+[View tweet](https://x.com/aeonframework/status/2049553633545474293)
 
-6. x.com/BasedCult33 — "$MIROSHARK and $AEON millions coded F.A.F.O."
+8. x.com/jerryplata_ — "@aeonframework by @aaronjmars is definitely a good cook if you're into autonomous agent frameworks 🔥"
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/BasedCult33/status/2049246192622551112)
-
-7. x.com/DaMikey23 — "$AEON" (quoting @aaronjmars post about @aeonframework)
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/DaMikey23/status/2049195772088926289)
+[View tweet](https://x.com/jerryplata_/status/2049433925978640668)
