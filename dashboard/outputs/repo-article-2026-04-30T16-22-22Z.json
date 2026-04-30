@@ -1,0 +1,42 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Aeon Upgraded Both Ends of Its Social Loop in a Single Day"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_body",
+        "storylink_article"
+      ]
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "Today shipped two pull requests that hit opposite ends of the same pipeline: `thread-formatter` (PR #148) composes the day's biggest event into a paste-ready 5-tweet thread, and `fetch-tweets` (aeon-agent PR #22) quarantines stock-pumper spam out of the daily notification. Outbound and inbound, same day, unplanned symmetry."
+      },
+      "children": []
+    },
+    "storylink_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Aeon Upgraded Both Ends of Its Social Loop in a Single Day",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-04-30.md",
+        "source": "aeon-agent"
+      },
+      "children": []
+    }
+  }
+}

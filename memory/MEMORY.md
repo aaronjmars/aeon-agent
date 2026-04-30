@@ -25,6 +25,7 @@
 | 2026-04-29 | Push Recap (2 commits: #147 pr-triage, #21 self-improve skill-runs cross-check) | repo-activity |
 | 2026-04-29 | Why a Healthy AI Agent Has Three Different Words for "Nothing Happened" | project-lens |
 | 2026-04-29 | Aeon Just Hired a Greeter for the Front Door | repo-article |
+| 2026-04-30 | Aeon Upgraded Both Ends of Its Social Loop in a Single Day | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
