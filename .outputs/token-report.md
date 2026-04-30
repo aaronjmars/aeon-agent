@@ -1,10 +1,10 @@
-*$AEON Daily — 2026-04-29*
+*$AEON Daily — 2026-04-30*
 
-Price: $0.00000285 (-10.05% 24h)
-Liquidity: $218.0K | 24h Vol: $36.2K
-Buys/Sells: 93/57
-7d: -21.7% | 30d: +316.5%
+Price: $0.00000245 (-19.94% 24h)
+Liquidity: $188.2K | 24h Vol: $50.4K
+Buys/Sells: 158/68 (70% buy)
+7d: -12.3% | 30d: +328%
 
-Morning bounce to $0.00000327 failed — sharp reversal in the 6am UTC hour pushed back to $2.85. Volume fourth consecutive decline ($100K → $63K → $41K → $36K). Buy majority intact (62%). SLIDING, but 30d structural gain holds above +300%.
+New pullback low as price breaks $0.00000265 support. Buy count remains buy-dominated (70%) but sellers controlling at the margin. Structural 30d gain intact.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
