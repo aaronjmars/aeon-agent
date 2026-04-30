@@ -1,0 +1,66 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "description",
+        "article-section"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Frameworks Are Where ETL Was Before dbt",
+        "level": "h2"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "dbt won the data-transform layer by hoisting SQL out of imperative Python pipelines into declarative files in git — and every property the field was chasing (review, lineage, packages, drift detection) fell out as a side effect. The 2026 agent stack (LangGraph, CrewAI, AutoGen) is still in the pre-dbt era: the artifact is Python code, the runtime is heavy, and 18% token overhead and opaque five-agent debugging are this generation's Airflow-2018 problems. Aeon, by accident, is shaped like dbt for agents — skills are markdown files, aeon.yml is dbt_project.yml, the chains: consume: edge is ref(), and 36 forks behave like packages because the unit of sharing is a file, not a deployment.",
+        "variant": "body"
+      }
+    },
+    "article-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "read-label",
+        "article-link"
+      ]
+    },
+    "read-label": {
+      "type": "Text",
+      "props": {
+        "text": "Read:",
+        "variant": "body"
+      }
+    },
+    "article-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-30.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-30.md"
+      }
+    }
+  }
+}

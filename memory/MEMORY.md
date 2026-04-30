@@ -26,6 +26,7 @@
 | 2026-04-29 | Why a Healthy AI Agent Has Three Different Words for "Nothing Happened" | project-lens |
 | 2026-04-29 | Aeon Just Hired a Greeter for the Front Door | repo-article |
 | 2026-04-30 | Aeon Upgraded Both Ends of Its Social Loop in a Single Day | repo-article |
+| 2026-04-30 | Agent Frameworks Are Where ETL Was Before dbt | project-lens |
 
 ## Recent Digests
 | Date | Type | Key Topics |

@@ -1,5 +1,5 @@
-*New Article: Why a Healthy AI Agent Has Three Different Words for "Nothing Happened"*
+*New Article: Agent Frameworks Are Where ETL Was Before dbt*
 
-A 2026 deep-dive on Aeon's exit taxonomy — the architectural answer to AI-driven notification fatigue. With 80% of enterprise apps embedding copilots by year-end and on-call teams already drowning in alerts, the agents that scale are the ones whose skills end in named exits (OK, SKIP_UNCHANGED, NEW_INFO, ERROR…) and whose default mode is silent. ~100 skill runs a day on this project; 4–8 notifications. The decision to *not* notify happens inside the skill, before any router sees it.
+dbt won the data-transform layer by hoisting SQL out of imperative Python pipelines into declarative files in git — and every property the field was chasing (review, lineage, packages, drift detection) fell out as a side effect. The 2026 agent stack (LangGraph, CrewAI, AutoGen) is still in the pre-dbt era: the artifact is Python code, the runtime is heavy, and 18% token overhead and opaque five-agent debugging are this generation's Airflow-2018 problems. Aeon, by accident, is shaped like dbt for agents — skills are markdown files, aeon.yml is dbt_project.yml, the chains: consume: edge is ref(), and 36 forks behave like packages because the unit of sharing is a file, not a deployment.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-29.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-04-30.md
