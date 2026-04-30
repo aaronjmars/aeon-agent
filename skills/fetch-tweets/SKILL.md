@@ -54,11 +54,18 @@ Today is ${today}. Search X for tweets matching **${var}**.
 
 5. **Deduplicate against `SEEN_TWEETS` from step 1.** Compare each candidate tweet URL against the collected set of already-reported URLs. Remove any tweet that was already reported in the last 3 days. If ALL tweets found are already in the recent logs: log "FETCH_TWEETS_NO_NEW: all results already reported" to `memory/logs/${today}.md`, send a one-line notification via `./notify` (e.g. `Fetch Tweets — ${today}: N results found, all already reported in last 3 days.`), and stop.
 
-6. **Save the results** (new tweets only) to `memory/logs/${today}.md`. Include the tweet URLs, handles, and engagement so future runs can deduplicate and so downstream skills (like `tweet-allocator`) can consume them.
+5b. **Quarantine stock-watchlist spam.** Mark a tweet as spam (`SPAM_FLAG`) when it matches **all** of these signals — this is a tight, conservative filter, not a general low-quality cull:
+   - Engagement is 0 likes **AND** 0 retweets **AND** 0 replies.
+   - The tweet body treats `$AEON` as one entry in a list of stock tickers (3+ tickers, no link to `aeonframework`/`github.com/aaronjmars/aeon`, no mention of agents/framework/token contract).
+   - The author handle has no prior `aeon`/`aeonframework` mention in `memory/fetch-tweets-seen.txt` or recent logs, AND looks like a stock-spam bot pattern (e.g. `FirstnameLastnameNNNNN` with trailing random digits, generic-influencer template handle).
 
-6b. **Update the persistent seen-file** — append each new tweet URL (one per line) to `memory/fetch-tweets-seen.txt`. Create the file if it doesn't exist. This ensures these URLs are excluded from all future runs, regardless of log rotation.
+   Quarantined tweets are **still** added to the seen-file in step 6b (so they don't recycle) and **still** logged in step 6 — but under a separate `### Filtered (spam)` subsection rather than the main numbered list. They are **excluded** from the notification in step 7 so the daily message stays signal-only. If filtering would leave fewer than 3 tweets in the notification, fall back to including borderline cases (rank by engagement) so the notification is never empty when real tweets exist.
 
-7. **Send a notification via `./notify`** with up to 10 NEW tweets (those that survived dedup). Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
+6. **Save the results** (new tweets only) to `memory/logs/${today}.md`. Include the tweet URLs, handles, and engagement so future runs can deduplicate and so downstream skills (like `tweet-allocator`) can consume them. List quarantined spam tweets under a `### Filtered (spam)` subsection with the reason (e.g. "stock-watchlist spam, 0 engagement"), keeping the main numbered list signal-only.
+
+6b. **Update the persistent seen-file** — append every new tweet URL, **including spam-flagged ones**, to `memory/fetch-tweets-seen.txt` (one per line). Create the file if it doesn't exist. Spam tweets get tracked here too so the same accounts don't cycle back into future notifications.
+
+7. **Send a notification via `./notify`** with up to 10 NEW non-spam tweets (those that survived dedup AND were not quarantined in step 5b). Each tweet MUST include a clickable link. Use Telegram Markdown link format: `[link text](url)`.
 
    Format the notification like this:
    ```
