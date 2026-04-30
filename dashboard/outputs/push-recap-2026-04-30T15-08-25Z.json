@@ -1,0 +1,206 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-04-30"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "theme1_stack",
+        "sep2",
+        "theme2_stack",
+        "sep3",
+        "key_changes_stack",
+        "sep4",
+        "stats_stack",
+        "sep5",
+        "recap_link"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon + aeon-agent — 2 meaningful commits by @aaronjmars (31 scheduler auto-commits filtered)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "theme1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme1_title",
+        "theme1_pr",
+        "theme1_description"
+      ]
+    },
+    "theme1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme 1 — New skill: Thread Formatter",
+        "level": "h3"
+      }
+    },
+    "theme1_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #148 (+203/-0)",
+        "href": "https://github.com/aaronjmars/aeon/pull/148",
+        "source": "aaronjmars/aeon"
+      }
+    },
+    "theme1_description": {
+      "type": "Text",
+      "props": {
+        "text": "Closes a 3-cycle-carried repo-actions idea. Reads memory/logs/${today}.md, scores events on a defined signal table (PR shipped +6, star milestone +5, ≥15% price move +5, skill built +4, notable PR merge +3, ≥20-like tweet +3, recognizable new fork +2), picks the highest-signal event, emits a 5-tweet thread (hook → context → context → implication → CTA) with hard 280-char limits and one URL max in tweet 5. Threshold gate (top score < 3 → NO_SIGNAL) prevents forced threads on quiet days; 3-day topic dedup prevents repetition. Ships enabled: false; first natural use is the 300-star milestone (~46 stars, ~11 days). Key file: skills/thread-formatter/SKILL.md (new, +190) — full skill prompt, scoring table, 4-exit taxonomy.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "theme2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme2_title",
+        "theme2_pr",
+        "theme2_description"
+      ]
+    },
+    "theme2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme 2 — Self-improve cleanup: fetch-tweets spam quarantine",
+        "level": "h3"
+      }
+    },
+    "theme2_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #22 (+131/-11)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/22",
+        "source": "aaronjmars/aeon-agent"
+      }
+    },
+    "theme2_description": {
+      "type": "Text",
+      "props": {
+        "text": "Three-signal AND filter (0 engagement + $AEON in unrelated stock-ticker list + spam-bot-pattern handle with no aeon history) routes stock-watchlist spam to a Filtered (spam) log subsection instead of the daily Top Tweets notification. Spam URLs still go to seen-file so accounts don't recycle. Min-3-tweet floor falls back to borderline cases when filtering would empty the notification. Triggered by 2 days of recurring noise (PorterMark60200 ×2, VeronicaWe87856, KellyBrady8253) the agent already classified as spam in logs but still piped into the message. Key changes: skills/fetch-tweets/SKILL.md (+10/-3) — load-bearing 3-signal quarantine; aeon.yml + skills.json — thread-formatter wired at 30 17 * * * UTC, social category, total 94.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key_changes_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key_changes_title",
+        "key_changes_list"
+      ]
+    },
+    "key_changes_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "key_changes_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kc_item1",
+        "kc_item2",
+        "kc_item3"
+      ]
+    },
+    "kc_item1": {
+      "type": "Text",
+      "props": {
+        "text": "• skills/thread-formatter/SKILL.md (new, +190) — full skill prompt, scoring table, 4-exit taxonomy",
+        "variant": "caption"
+      }
+    },
+    "kc_item2": {
+      "type": "Text",
+      "props": {
+        "text": "• skills/fetch-tweets/SKILL.md (+10/-3) — load-bearing 3-signal quarantine",
+        "variant": "caption"
+      }
+    },
+    "kc_item3": {
+      "type": "Text",
+      "props": {
+        "text": "• aeon.yml + skills.json — thread-formatter wired at 30 17 * * * UTC, social category, total 94",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_files",
+        "stat_lines"
+      ]
+    },
+    "stat_files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "9"
+      }
+    },
+    "stat_lines": {
+      "type": "Stat",
+      "props": {
+        "label": "Net lines",
+        "value": "+334",
+        "delta": "-11",
+        "trend": "up"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap: push-recap-2026-04-30.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-04-30.md",
+        "source": "aaronjmars/aeon-agent"
+      }
+    }
+  }
+}
