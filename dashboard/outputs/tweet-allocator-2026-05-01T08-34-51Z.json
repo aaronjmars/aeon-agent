@@ -1,0 +1,337 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-01"
+      },
+      "children": [
+        "budget_text",
+        "sep1",
+        "tweets_container",
+        "sep2",
+        "total_text"
+      ]
+    },
+    "budget_text": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4",
+        "tweet5"
+      ]
+    },
+    "tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t1_header",
+        "t1_description",
+        "t1_link"
+      ]
+    },
+    "t1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "t1_author",
+        "t1_amount",
+        "t1_score"
+      ]
+    },
+    "t1_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/MrDegenWolf",
+        "variant": "lead"
+      }
+    },
+    "t1_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$4.85 in $AEON"
+      }
+    },
+    "t1_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 32"
+      }
+    },
+    "t1_description": {
+      "type": "Text",
+      "props": {
+        "text": "Bullish $MIROSHARK/$AEON thesis: MiroShark beating research tools on AI simulations, $AEON captures upside while big players move slow"
+      }
+    },
+    "t1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2049845405337141327"
+      }
+    },
+    "tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t2_header",
+        "t2_description",
+        "t2_link"
+      ]
+    },
+    "t2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "t2_author",
+        "t2_amount",
+        "t2_score"
+      ]
+    },
+    "t2_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/joraweb3",
+        "variant": "lead"
+      }
+    },
+    "t2_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$2.12 in $AEON"
+      }
+    },
+    "t2_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 14"
+      }
+    },
+    "t2_description": {
+      "type": "Text",
+      "props": {
+        "text": "Positive shout re: aeonframework PR feed; calls out autonomous agent progress, 'boys are pushing'"
+      }
+    },
+    "t2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/joraweb3/status/2049929039528243465"
+      }
+    },
+    "tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t3_header",
+        "t3_description",
+        "t3_link"
+      ]
+    },
+    "t3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "t3_author",
+        "t3_amount",
+        "t3_score"
+      ]
+    },
+    "t3_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/Karma_Nfa",
+        "variant": "lead"
+      }
+    },
+    "t3_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$1.67 in $AEON"
+      }
+    },
+    "t3_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 11"
+      }
+    },
+    "t3_description": {
+      "type": "Text",
+      "props": {
+        "text": "Bankrbot morning market update listing $AEON alongside $MIROSHARK, $BTC, $ETH and others"
+      }
+    },
+    "t3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2049825429020696602"
+      }
+    },
+    "tweet4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t4_header",
+        "t4_description",
+        "t4_link"
+      ]
+    },
+    "t4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "t4_author",
+        "t4_amount",
+        "t4_score"
+      ]
+    },
+    "t4_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/DaMikey23",
+        "variant": "lead"
+      }
+    },
+    "t4_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$0.76 in $AEON"
+      }
+    },
+    "t4_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 5"
+      }
+    },
+    "t4_description": {
+      "type": "Text",
+      "props": {
+        "text": "$MIROSHARK $AEON ticker mention"
+      }
+    },
+    "t4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2049994446628921433"
+      }
+    },
+    "tweet5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "t5_header",
+        "t5_description",
+        "t5_link"
+      ]
+    },
+    "t5_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "t5_author",
+        "t5_amount",
+        "t5_score"
+      ]
+    },
+    "t5_author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/Dannyhbrown",
+        "variant": "lead"
+      }
+    },
+    "t5_amount": {
+      "type": "Badge",
+      "props": {
+        "text": "$0.61 in $AEON"
+      }
+    },
+    "t5_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 4"
+      }
+    },
+    "t5_description": {
+      "type": "Text",
+      "props": {
+        "text": "Community appreciation post naming @aeonframework among the 'most based builders'"
+      }
+    },
+    "t5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Dannyhbrown/status/2049989410393858446"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "total_text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.01 in $AEON allocated to 5 authors"
+      }
+    }
+  }
+}
