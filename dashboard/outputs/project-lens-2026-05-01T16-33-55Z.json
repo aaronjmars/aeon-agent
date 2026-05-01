@@ -1,0 +1,82 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-article",
+        "text-intro",
+        "grid-stats",
+        "separator-1",
+        "story-article"
+      ]
+    },
+    "heading-article": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-Hosting Used to Mean a Compiler. Now It Means an Agent.",
+        "level": "h2"
+      }
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "The historical 'self-hosting' threshold — the moment a compiler can compile itself — has an agent-era twin: the moment an autonomous agent commits more code than its operators do. The piece argues the architectural reason this works isn't model strength; it's that Aeon's unit of labor is a Markdown file in a git repo, which makes every self-improvement a reviewable, revertable commit. The bottleneck moves from authorship to direction-setting — the same shift Lisp went through in 1962.",
+        "variant": "body"
+      }
+    },
+    "grid-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-miroshark",
+        "stat-own-repos"
+      ]
+    },
+    "stat-miroshark": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged PRs on aeon-miroshark",
+        "value": "63%"
+      }
+    },
+    "stat-own-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged PRs on own repos",
+        "value": "21%"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "story-article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Self-Hosting Used to Mean a Compiler. Now It Means an Agent.",
+        "href": "https://github.com/aeonframework/aeon-agent/blob/main/articles/project-lens-2026-05-01.md",
+        "source": "project-lens"
+      }
+    }
+  }
+}
