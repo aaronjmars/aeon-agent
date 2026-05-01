@@ -82,10 +82,10 @@
   },
   "push-recap": {
     "last_dispatch": "2026-05-01T15:06:34Z",
-    "last_status": "dispatched",
-    "last_success": "2026-04-30T15:08:55Z",
-    "total_runs": 17,
-    "total_successes": 17,
+    "last_status": "success",
+    "last_success": "2026-05-01T15:10:43Z",
+    "total_runs": 18,
+    "total_successes": 18,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
