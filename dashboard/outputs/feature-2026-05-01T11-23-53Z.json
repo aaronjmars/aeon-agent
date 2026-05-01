@@ -1,0 +1,226 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "smithery-manifest skill",
+        "description": "Feature Built — 2026-05-01"
+      },
+      "children": [
+        "badge_date",
+        "text_intro",
+        "separator_1",
+        "heading_why",
+        "text_why",
+        "separator_2",
+        "heading_what",
+        "stack_what",
+        "separator_3",
+        "heading_how",
+        "text_how",
+        "separator_4",
+        "heading_next",
+        "stack_next",
+        "link_pr"
+      ]
+    },
+    "badge_date": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-05-01",
+        "variant": "secondary"
+      }
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon now has a skill that auto-generates the submission docs needed to list its MCP server on Smithery.ai and the official Model Context Protocol Registry. Re-running the skill regenerates three files in docs/ — a server.json manifest, a smithery.yaml deployment config, and a paste-ready submission body — so listing aeon-mcp goes from 'write everything by hand' to 'fill in the form.'",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters",
+        "level": "h2"
+      }
+    },
+    "text_why": {
+      "type": "Text",
+      "props": {
+        "text": "The Smithery + MCP Registry submission has been Aeon's highest-priority unbuilt growth play for six straight weeks (Apr-22 repo-actions idea #1, carried through every cycle since). The actual blocker was never the submission process — it was always 'manifest not written.' Inbound discovery from the growing MCP ecosystem has been quietly missing Aeon for over a month because of one missing JSON file and a paste-ready doc. This skill closes that gap and automates it forward, so the catalog stays in sync with skills.json without anyone touching YAML.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_what": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built",
+        "level": "h2"
+      }
+    },
+    "stack_what": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_what_1",
+        "stack_what_2",
+        "text_what_3",
+        "text_what_4",
+        "text_what_5"
+      ]
+    },
+    "text_what_1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/smithery-manifest/SKILL.md: New skill that reads skills.json + aeon.yml + mcp-server/package.json + README, generates three submission artifacts, byte-diffs them against the current docs/, and PRs + notifies only on real change. Idempotent re-runs on stable input are silent.",
+        "variant": "body"
+      }
+    },
+    "stack_what_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_what_2_1",
+        "link_schema",
+        "text_what_2_2"
+      ]
+    },
+    "text_what_2_1": {
+      "type": "Text",
+      "props": {
+        "text": "docs/smithery-manifest.json: server.json compatible with the MCP Registry schema (",
+        "variant": "body"
+      }
+    },
+    "link_schema": {
+      "type": "Link",
+      "props": {
+        "label": "schema",
+        "href": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json"
+      }
+    },
+    "text_what_2_2": {
+      "type": "Text",
+      "props": {
+        "text": "). Reverse-DNS name io.github.aaronjmars/aeon-mcp; full 95-tool catalog mirrored under _meta.io.github.aaronjmars/aeon, sorted alphabetically by tool name.",
+        "variant": "body"
+      }
+    },
+    "text_what_3": {
+      "type": "Text",
+      "props": {
+        "text": "docs/smithery.yaml: Smithery deployment config — startCommand: stdio plus a commandFunction that spawns 'node {repoPath}/mcp-server/dist/index.js' with the operator's existing env (so ANTHROPIC_API_KEY / CLAUDE_CODE_OAUTH_TOKEN flow through without an extra config step).",
+        "variant": "body"
+      }
+    },
+    "text_what_4": {
+      "type": "Text",
+      "props": {
+        "text": "docs/smithery-submission.md: Paste-ready submission body — field values, short and long descriptions, the full 95-row tool table, and Claude Desktop install instructions for macOS, Linux, and Windows.",
+        "variant": "body"
+      }
+    },
+    "text_what_5": {
+      "type": "Text",
+      "props": {
+        "text": "skills.json + aeon.yml: smithery-manifest registered (productivity, weekly Monday 06:00 UTC, sonnet model). Total skill count synced to actual length, 93 → 95.",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_how": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works",
+        "level": "h2"
+      }
+    },
+    "text_how": {
+      "type": "Text",
+      "props": {
+        "text": "The skill is pure local file I/O — no curl, no env-var-in-headers, no prefetch script needed. It loads the catalog once, builds the augmented skills array (sorted alphabetically), maps each entry to an aeon-<slug> tool description matching mcp-server/src/index.ts:skillToToolName() exactly so the static manifest stays 1:1 with the live MCP server. Tool descriptions follow the format '[Aeon · <Category>] <skill description> (cron: <schedule>)' — workflow_dispatch and reactive schedules render as '(on-demand)'. After writing the three files, it byte-compares against existing docs and only opens a PR when something actually changed; this makes the weekly cron quiet by default and lets the manifest auto-refresh whenever skills are added or descriptions edited.",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_next": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next",
+        "level": "h2"
+      }
+    },
+    "stack_next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_next_1",
+        "link_smithery",
+        "text_next_2"
+      ]
+    },
+    "text_next_1": {
+      "type": "Text",
+      "props": {
+        "text": "Maintainer reviews PR #149, optionally publishes aeon-mcp to npm (currently referenced in packages[] but unpublished — the block can be stripped if not), then submits docs/smithery.yaml to ",
+        "variant": "body"
+      }
+    },
+    "link_smithery": {
+      "type": "Link",
+      "props": {
+        "label": "https://smithery.ai/server/new",
+        "href": "https://smithery.ai/server/new"
+      }
+    },
+    "text_next_2": {
+      "type": "Text",
+      "props": {
+        "text": " and opens a PR at modelcontextprotocol/registry adding servers/io.github.aaronjmars/aeon-mcp.json. Once the listing lands, Aeon becomes discoverable from inside Claude Desktop's Smithery picker — closing the loop on six weeks of carried unbuilt growth.",
+        "variant": "body"
+      }
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #149",
+        "href": "https://github.com/aaronjmars/aeon/pull/149",
+        "source": "github.com"
+      }
+    }
+  }
+}
