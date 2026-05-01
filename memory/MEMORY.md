@@ -27,6 +27,7 @@
 | 2026-04-29 | Aeon Just Hired a Greeter for the Front Door | repo-article |
 | 2026-04-30 | Aeon Upgraded Both Ends of Its Social Loop in a Single Day | repo-article |
 | 2026-04-30 | Agent Frameworks Are Where ETL Was Before dbt | project-lens |
+| 2026-05-01 | Aeon Wrote Its Own Application to the Agent Registry | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
