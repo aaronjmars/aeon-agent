@@ -1,0 +1,236 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-01"
+      },
+      "children": [
+        "stack_repos",
+        "sep1",
+        "stack_smithery",
+        "sep2",
+        "stack_readme",
+        "sep3",
+        "heading_changes",
+        "stack_changes",
+        "sep4",
+        "heading_stats",
+        "stack_stats",
+        "sep5",
+        "link_recap"
+      ]
+    },
+    "stack_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_aeon",
+        "text_aeon_agent"
+      ]
+    },
+    "text_aeon": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon — 2 commits by aaronjmars"
+      }
+    },
+    "text_aeon_agent": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon-agent — 25 routine bot auto-commits, no human work"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_smithery": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_smithery",
+        "text_smithery_desc",
+        "text_smithery_impact",
+        "text_smithery_workflow"
+      ]
+    },
+    "heading_smithery": {
+      "type": "Heading",
+      "props": {
+        "text": "Smithery + MCP Registry submission pipeline",
+        "level": "h3"
+      }
+    },
+    "text_smithery_desc": {
+      "type": "Text",
+      "props": {
+        "text": "New smithery-manifest skill auto-generates three artifacts (server.json, smithery.yaml, paste-ready submission body) needed to list aeon-mcp on Smithery and the MCP Registry."
+      }
+    },
+    "text_smithery_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Closes the longest-carried 6-week growth unbuilt (Apr-22 #1). The writing work is now automated—maintainer pastes one yaml and opens one registry PR."
+      }
+    },
+    "text_smithery_workflow": {
+      "type": "Text",
+      "props": {
+        "text": "Workflow: maintainer pastes one yaml + opens one registry PR; all artifact generation is handled.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_readme": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_readme",
+        "text_readme_desc",
+        "text_readme_detail"
+      ]
+    },
+    "heading_readme": {
+      "type": "Heading",
+      "props": {
+        "text": "README Cleanup",
+        "level": "h3"
+      }
+    },
+    "text_readme_desc": {
+      "type": "Text",
+      "props": {
+        "text": "agent-status badge removed from README header."
+      }
+    },
+    "text_readme_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Status page itself still ships; only the discoverability surface in the README is trimmed.",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h3"
+      }
+    },
+    "stack_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_change1",
+        "text_change2",
+        "text_change3"
+      ]
+    },
+    "text_change1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/smithery-manifest/SKILL.md (+281): weekly cron, byte-equality diff vs disk before notify, exit taxonomy OK | NO_INPUT | NO_CHANGE"
+      }
+    },
+    "text_change2": {
+      "type": "Text",
+      "props": {
+        "text": "docs/smithery-manifest.json (+420): full 95-tool catalog, reverse-DNS name io.github.aaronjmars/aeon-mcp, MCP Registry schema 2025-12-11"
+      }
+    },
+    "text_change3": {
+      "type": "Text",
+      "props": {
+        "text": "docs/smithery.yaml (+29): stdio + commandFunction → node mcp-server/dist/index.js; repoPath configSchema optional"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_files",
+        "stat_lines",
+        "text_commits"
+      ]
+    },
+    "stat_files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files Changed",
+        "value": "7"
+      }
+    },
+    "stat_lines": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines Changed",
+        "value": "+906 / -3"
+      }
+    },
+    "text_commits": {
+      "type": "Text",
+      "props": {
+        "text": "Across 2 substantive commits",
+        "variant": "caption"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Push Recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-01.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
