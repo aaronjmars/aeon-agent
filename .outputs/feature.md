@@ -1,22 +1,22 @@
-*Feature Built — 2026-05-01*
+*Feature Built — 2026-05-01 — aaronjmars/minitor*
 
-smithery-manifest skill
-Aeon now has a skill that auto-generates the submission docs needed to list its MCP server on Smithery.ai and the official Model Context Protocol Registry. Re-running the skill regenerates three files in docs/ — a server.json manifest, a smithery.yaml deployment config, and a paste-ready submission body — so listing aeon-mcp goes from 'write everything by hand' to 'fill in the form.'
+GitHub releases column
+Minitor — the dashboard-of-feeds with 30 column types — now has a per-repo release tracker. Operators can add a column like Stars or Forks but for releases instead, with a checkbox to include or exclude pre-releases. Until now you had to drop down to a generic RSS column on the repo's `releases.atom` feed, which lost tag and pre-release metadata and didn't get the per-source rendering treatment.
 
 Why this matters:
-The Smithery + MCP Registry submission has been Aeon's highest-priority unbuilt growth play for six straight weeks (Apr-22 repo-actions idea #1, carried through every cycle since). The actual blocker was never the submission process — it was always 'manifest not written.' Inbound discovery from the growing MCP ecosystem has been quietly missing Aeon for over a month because of one missing JSON file and a paste-ready doc. This skill closes that gap and automates it forward, so the catalog stays in sync with skills.json without anyone touching YAML.
+Minitor already had 7 GitHub plugins (trending, issues, prs, stars, forks, search, backlinks). Releases was the obvious missing one — it's a top-3 monitoring need for any operator tracking dependencies, library upgrades, or competitor velocity. The README's GitHub row literally already said `(8)` but only listed 7 entries; the count was right for the planned set, wrong for the shipped set. The integration layer (`lib/integrations/github.ts`) had `fetchReleases` and a `'releases'` branch in `fetchGitHub` that no plugin was using — the plumbing was there, just no surface.
 
 What was built:
-- skills/smithery-manifest/SKILL.md: New skill that reads skills.json + aeon.yml + mcp-server/package.json + README, generates three submission artifacts, byte-diffs them against the current docs/, and PRs + notifies only on real change. Idempotent re-runs on stable input are silent.
-- docs/smithery-manifest.json: server.json compatible with the MCP Registry schema (https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json). Reverse-DNS name io.github.aaronjmars/aeon-mcp; full 95-tool catalog mirrored under _meta.io.github.aaronjmars/aeon, sorted alphabetically by tool name.
-- docs/smithery.yaml: Smithery deployment config — startCommand: stdio plus a commandFunction that spawns 'node {repoPath}/mcp-server/dist/index.js' with the operator's existing env (so ANTHROPIC_API_KEY / CLAUDE_CODE_OAUTH_TOKEN flow through without an extra config step).
-- docs/smithery-submission.md: Paste-ready submission body — field values, short and long descriptions, the full 95-row tool table, and Claude Desktop install instructions for macOS, Linux, and Windows.
-- skills.json + aeon.yml: smithery-manifest registered (productivity, weekly Monday 06:00 UTC, sonnet model). Total skill count synced to actual length, 93 → 95.
+- lib/columns/plugins/github-releases/plugin.ts: Zod config `{ repo, includePrereleases: boolean = true }`, Tag icon (lucide), green `#22c55e` accent — distinct from the orange flame on github-trending and yellow star on github-stars
+- lib/columns/plugins/github-releases/server.ts: calls `fetchGitHub('releases', { repo }, PAGE_SIZE, page)`; pagination cursor uses upstream page size NOT post-filter size so the pre-release toggle doesn't stop pagination early on release-heavy repos
+- lib/columns/plugins/github-releases/client.tsx: ConfigForm with repo input + prerelease checkbox; ItemRenderer shows release/pre-release pill, repo name, monospace tag, relative time, the title in serif (matching github-trending's heading treatment), and body line-clamp-3
+- lib/columns/plugins/manifest.ts + registry.ts + server-registry.ts: the 3 standard registry edits (parity check at server module init throws if any drift)
+- README.md: GitHub row entries 7 → 8, count `(8)` already correct
 
 How it works:
-The skill is pure local file I/O — no curl, no env-var-in-headers, no prefetch script needed. It loads the catalog once, builds the augmented skills array (sorted alphabetically), maps each entry to an aeon-<slug> tool description matching mcp-server/src/index.ts:skillToToolName() exactly so the static manifest stays 1:1 with the live MCP server. Tool descriptions follow the format '[Aeon · <Category>] <skill description> (cron: <schedule>)' — workflow_dispatch and reactive schedules render as '(on-demand)'. After writing the three files, it byte-compares against existing docs and only opens a PR when something actually changed; this makes the weekly cron quiet by default and lets the manifest auto-refresh whenever skills are added or descriptions edited.
+The 3-file plugin contract (`plugin.ts` / `server.ts` / `client.tsx`) is the documented way to add a new column type. The plugin metadata declares the icon, Zod schema, accent color, and capabilities. The server fetcher is server-only and reuses the existing GitHub integration. The client renderer is `"use client"` and gets a typed `FeedItem<GHReleasesMeta>` so it doesn't need runtime type guards. The manifest is the canonical id list — both registries are validated against it at server module init. Pagination uses the same pattern as github-trending: when the upstream page is full (PAGE_SIZE items), advance regardless of how many items the local filter dropped.
 
 What's next:
-Maintainer reviews PR #149, optionally publishes aeon-mcp to npm (currently referenced in packages[] but unpublished — the block can be stripped if not), then submits docs/smithery.yaml to https://smithery.ai/server/new and opens a PR at modelcontextprotocol/registry adding servers/io.github.aaronjmars/aeon-mcp.json. Once the listing lands, Aeon becomes discoverable from inside Claude Desktop's Smithery picker — closing the loop on six weeks of carried unbuilt growth.
+Natural follow-ups: a global "watchlist" column that aggregates releases across multiple watched repos, or a release-frequency badge in the renderer (e.g. "first release in 90 days"). Both would build on this plugin without changing the contract.
 
-PR: https://github.com/aaronjmars/aeon/pull/149
+PR: https://github.com/aaronjmars/minitor/pull/23

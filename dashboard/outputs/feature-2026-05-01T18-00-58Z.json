@@ -1,0 +1,200 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — Minitor GitHub Releases Column",
+        "description": "2026-05-01 — aaronjmars/minitor"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "heading_why",
+        "why_section",
+        "sep2",
+        "heading_built",
+        "built_section",
+        "sep3",
+        "heading_how",
+        "how_section",
+        "sep4",
+        "heading_next",
+        "next_section",
+        "sep5",
+        "pr_link"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "Minitor — the dashboard-of-feeds with 30 column types — now has a per-repo release tracker. Operators can add a column like Stars or Forks but for releases instead, with a checkbox to include or exclude pre-releases. Until now you had to drop down to a generic RSS column on the repo's releases.atom feed, which lost tag and pre-release metadata and didn't get the per-source rendering treatment.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters",
+        "level": "h2"
+      }
+    },
+    "why_section": {
+      "type": "Text",
+      "props": {
+        "text": "Minitor already had 7 GitHub plugins (trending, issues, prs, stars, forks, search, backlinks). Releases was the obvious missing one — it's a top-3 monitoring need for any operator tracking dependencies, library upgrades, or competitor velocity. The README's GitHub row literally already said (8) but only listed 7 entries; the count was right for the planned set, wrong for the shipped set. The integration layer (lib/integrations/github.ts) had fetchReleases and a 'releases' branch in fetchGitHub that no plugin was using — the plumbing was there, just no surface.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_built": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built",
+        "level": "h2"
+      }
+    },
+    "built_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "built_item1",
+        "built_item2",
+        "built_item3",
+        "built_item4",
+        "built_item5"
+      ]
+    },
+    "built_item1": {
+      "type": "Text",
+      "props": {
+        "text": "lib/columns/plugins/github-releases/plugin.ts: Zod config { repo, includePrereleases: boolean = true }, Tag icon (lucide), green #22c55e accent — distinct from the orange flame on github-trending and yellow star on github-stars",
+        "variant": "body"
+      }
+    },
+    "built_item2": {
+      "type": "Text",
+      "props": {
+        "text": "lib/columns/plugins/github-releases/server.ts: calls fetchGitHub('releases', { repo }, PAGE_SIZE, page); pagination cursor uses upstream page size NOT post-filter size so the pre-release toggle doesn't stop pagination early on release-heavy repos",
+        "variant": "body"
+      }
+    },
+    "built_item3": {
+      "type": "Text",
+      "props": {
+        "text": "lib/columns/plugins/github-releases/client.tsx: ConfigForm with repo input + prerelease checkbox; ItemRenderer shows release/pre-release pill, repo name, monospace tag, relative time, the title in serif (matching github-trending's heading treatment), and body line-clamp-3",
+        "variant": "body"
+      }
+    },
+    "built_item4": {
+      "type": "Text",
+      "props": {
+        "text": "lib/columns/plugins/manifest.ts + registry.ts + server-registry.ts: the 3 standard registry edits (parity check at server module init throws if any drift)",
+        "variant": "body"
+      }
+    },
+    "built_item5": {
+      "type": "Text",
+      "props": {
+        "text": "README.md: GitHub row entries 7 → 8, count (8) already correct",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_how": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works",
+        "level": "h2"
+      }
+    },
+    "how_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "how_para1",
+        "how_para2"
+      ]
+    },
+    "how_para1": {
+      "type": "Text",
+      "props": {
+        "text": "The 3-file plugin contract (plugin.ts / server.ts / client.tsx) is the documented way to add a new column type. The plugin metadata declares the icon, Zod schema, accent color, and capabilities. The server fetcher is server-only and reuses the existing GitHub integration. The client renderer is \"use client\" and gets a typed FeedItem<GHReleasesMeta> so it doesn't need runtime type guards.",
+        "variant": "body"
+      }
+    },
+    "how_para2": {
+      "type": "Text",
+      "props": {
+        "text": "The manifest is the canonical id list — both registries are validated against it at server module init. Pagination uses the same pattern as github-trending: when the upstream page is full (PAGE_SIZE items), advance regardless of how many items the local filter dropped.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_next": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next",
+        "level": "h2"
+      }
+    },
+    "next_section": {
+      "type": "Text",
+      "props": {
+        "text": "Natural follow-ups: a global \"watchlist\" column that aggregates releases across multiple watched repos, or a release-frequency badge in the renderer (e.g. \"first release in 90 days\"). Both would build on this plugin without changing the contract.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "Link",
+      "props": {
+        "label": "PR: minitor#23",
+        "href": "https://github.com/aaronjmars/minitor/pull/23"
+      }
+    }
+  }
+}
