@@ -1,11 +1,1 @@
-Log written. **HEARTBEAT_OK** — all 11 enabled skills that were expected today (Thursday Apr 30) completed successfully. No stalled PRs, no open issues, no missing skill runs. The PAT `workflows`-scope issue remains in 7-day extended-persistence backoff (last escalation Apr 24, next fire May 1 tomorrow).
-
-## Summary
-
-- **Checked:** 11 enabled skills scheduled for Thursday Apr 30 — all ran and succeeded per both Actions run list and today's log
-- **Open PRs:** none
-- **GitHub issues:** none
-- **Memory issues:** none
-- **PAT `workflows` scope:** day 13 persistent; backoff active, no notification (next escalation May 1)
-- **Log appended:** `memory/logs/2026-04-30.md`
-- **No notification sent** — nothing requires operator attention today
+ESCALATION (day 14, 7-day cadence): PAT with `workflows` scope still missing. Effect: agent cannot push workflow file changes autonomously — auto-merge skill (Apr-26 idea #1) remains blocked, and skills shipped `enabled: false` (thread-formatter, pr-triage, smithery-manifest, show-hn-draft) require a manual flip or a PAT to enable. Fix: create a PAT with `repo + workflows` scope and add it to repo secrets (GH_GLOBAL). Next escalation: May 8.
