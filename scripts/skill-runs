@@ -2,13 +2,17 @@
 # skill-runs — audit recent GitHub Actions skill runs
 #
 # Usage:
-#   ./scripts/skill-runs              # last 24h, brief summary
-#   ./scripts/skill-runs --hours 48   # last 48h
-#   ./scripts/skill-runs --full       # detailed per-skill breakdown
-#   ./scripts/skill-runs --json       # machine-readable JSON output
-#   ./scripts/skill-runs --failures   # only show failed runs
+#   ./scripts/skill-runs                    # last 24h, brief summary
+#   ./scripts/skill-runs --hours 48         # last 48h
+#   ./scripts/skill-runs --full             # detailed per-skill breakdown (adds duration column)
+#   ./scripts/skill-runs --json             # machine-readable JSON output
+#   ./scripts/skill-runs --failures         # only show failed runs
+#   ./scripts/skill-runs --duration         # per-skill wall-clock duration stats (mean / p95 / max / last)
+#   ./scripts/skill-runs --skill heartbeat  # filter to a single skill (exact match)
 #
-# Output: skill run statistics — counts, pass/fail rates, duplicates, anomalies.
+# Filters and modes can be combined: --skill heartbeat --duration --hours 168
+#
+# Output: skill run statistics — counts, pass/fail rates, duplicates, anomalies, durations.
 # Used by: heartbeat, skill-health, cost-report, weekly-review, self-review.
 # Dependencies: gh (GitHub CLI), jq, date
 
@@ -17,6 +21,8 @@ set -euo pipefail
 HOURS=24
 FORMAT="brief"
 FAILURES_ONLY=false
+DURATION_MODE=false
+SKILL_FILTER=""
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -24,8 +30,10 @@ while [[ $# -gt 0 ]]; do
     --full) FORMAT="full"; shift ;;
     --json) FORMAT="json"; shift ;;
     --failures) FAILURES_ONLY=true; shift ;;
+    --duration) DURATION_MODE=true; shift ;;
+    --skill) SKILL_FILTER="$2"; shift 2 ;;
     -h|--help)
-      sed -n '2,8p' "$0" | sed 's/^# \?//'
+      sed -n '2,12p' "$0" | sed 's/^# \?//'
       exit 0
       ;;
     *) echo "Unknown arg: $1"; exit 1 ;;
@@ -57,7 +65,7 @@ if [ -z "$RUNS" ]; then
   exit 0
 fi
 
-# Parse into a compact JSON array
+# Parse into a compact JSON array — duration_seconds is null for in-progress runs
 DATA=$(echo "$RUNS" | jq -s '[.[] | {
   skill: (.name | ltrimstr("skill: ")),
   status: .status,
@@ -66,8 +74,24 @@ DATA=$(echo "$RUNS" | jq -s '[.[] | {
   updated: .updated_at,
   started: .run_started_at,
   id: .id,
-  attempt: .run_attempt
+  attempt: .run_attempt,
+  duration_seconds: (
+    if .status == "completed" and (.run_started_at != null) and (.updated_at != null) then
+      ((.updated_at | fromdateiso8601) - (.run_started_at | fromdateiso8601))
+    else
+      null
+    end
+  )
 }]')
+
+# Optional --skill <name> filter — applied early so every downstream stat reflects the filter
+if [ -n "$SKILL_FILTER" ]; then
+  DATA=$(echo "$DATA" | jq --arg s "$SKILL_FILTER" '[.[] | select(.skill == $s)]')
+  if [ "$(echo "$DATA" | jq 'length')" = "0" ]; then
+    echo "No runs of skill '$SKILL_FILTER' found in the last ${HOURS}h"
+    exit 0
+  fi
+fi
 
 TOTAL=$(echo "$DATA" | jq 'length')
 COMPLETED=$(echo "$DATA" | jq '[.[] | select(.status == "completed")] | length')
@@ -76,18 +100,33 @@ SUCCEEDED=$(echo "$DATA" | jq '[.[] | select(.conclusion == "success")] | length
 FAILED=$(echo "$DATA" | jq '[.[] | select(.conclusion == "failure")] | length')
 CANCELLED=$(echo "$DATA" | jq '[.[] | select(.conclusion == "cancelled")] | length')
 
-# Per-skill breakdown
+# Per-skill breakdown — includes duration stats (null when no completed runs to measure)
 SKILL_STATS=$(echo "$DATA" | jq '
-  group_by(.skill) | map({
-    skill: .[0].skill,
-    total: length,
-    success: [.[] | select(.conclusion == "success")] | length,
-    failure: [.[] | select(.conclusion == "failure")] | length,
-    cancelled: [.[] | select(.conclusion == "cancelled")] | length,
-    in_progress: [.[] | select(.status == "in_progress")] | length,
-    last_run: (sort_by(.created) | last | .created),
-    last_conclusion: (sort_by(.created) | last | .conclusion)
-  }) | sort_by(.skill)')
+  group_by(.skill) | map(
+    . as $runs |
+    ([.[] | .duration_seconds | select(. != null)]) as $durs |
+    {
+      skill: .[0].skill,
+      total: length,
+      success: [.[] | select(.conclusion == "success")] | length,
+      failure: [.[] | select(.conclusion == "failure")] | length,
+      cancelled: [.[] | select(.conclusion == "cancelled")] | length,
+      in_progress: [.[] | select(.status == "in_progress")] | length,
+      last_run: (sort_by(.created) | last | .created),
+      last_conclusion: (sort_by(.created) | last | .conclusion),
+      last_duration_seconds: ((sort_by(.created) | last | .duration_seconds) as $d | if $d == null then null else ($d | floor) end),
+      duration_count: ($durs | length),
+      duration_mean: (if ($durs | length) > 0 then (($durs | add) / ($durs | length) | floor) else null end),
+      duration_max: (if ($durs | length) > 0 then ($durs | max | floor) else null end),
+      duration_p95: (
+        if ($durs | length) > 0 then
+          ($durs | sort) as $sorted |
+          ($sorted | length) as $n |
+          ($sorted[ ([($n - 1), ((($n - 1) * 0.95) | floor)] | min) ] | floor)
+        else null end
+      )
+    }
+  ) | sort_by(.skill)')
 
 # Detect anomalies
 DUPLICATES=$(echo "$SKILL_STATS" | jq '[.[] | select(.total > 2)] | sort_by(-.total)')
@@ -99,6 +138,7 @@ if [ "$FORMAT" = "json" ]; then
   jq -n \
     --arg since "$SINCE" \
     --arg now "$NOW" \
+    --arg skill_filter "$SKILL_FILTER" \
     --argjson hours "$HOURS" \
     --argjson total "$TOTAL" \
     --argjson succeeded "$SUCCEEDED" \
@@ -109,7 +149,7 @@ if [ "$FORMAT" = "json" ]; then
     --argjson duplicates "$DUPLICATES" \
     --argjson failing "$FAILING" \
     '{
-      period: {since: $since, until: $now, hours: $hours},
+      period: {since: $since, until: $now, hours: $hours, skill_filter: (if $skill_filter == "" then null else $skill_filter end)},
       summary: {total: $total, succeeded: $succeeded, failed: $failed, cancelled: $cancelled, in_progress: $in_progress},
       skills: $skills,
       anomalies: {duplicates: $duplicates, failing: $failing}
@@ -130,15 +170,40 @@ if [ "$FAILURES_ONLY" = "true" ]; then
   exit 0
 fi
 
+# --duration mode: per-skill wall-clock duration stats — independent of brief/full/failures
+if [ "$DURATION_MODE" = "true" ]; then
+  HEADER_SUFFIX=""
+  [ -n "$SKILL_FILTER" ] && HEADER_SUFFIX=" — skill=${SKILL_FILTER}"
+  echo "=== Skill Durations (last ${HOURS}h${HEADER_SUFFIX}) ==="
+  if [ "$(echo "$SKILL_STATS" | jq '[.[] | select(.duration_count > 0)] | length')" = "0" ]; then
+    echo "No completed runs with measurable duration in the window."
+    exit 0
+  fi
+  printf "%-32s %6s %8s %8s %8s %8s\n" "skill" "runs" "mean" "p95" "max" "last"
+  echo "$SKILL_STATS" \
+    | jq -r '.[] | select(.duration_count > 0)
+        | [.skill, .duration_count, .duration_mean, .duration_p95, .duration_max, (.last_duration_seconds // "")]
+        | @tsv' \
+    | sort -t$'\t' -k3,3nr \
+    | awk -F'\t' '{
+        last = ($6 == "" ? "—" : $6"s")
+        printf "%-32s %6d %8s %8s %8s %8s\n", $1, $2, $3"s", $4"s", $5"s", last
+      }'
+  exit 0
+fi
+
 # Brief output
-echo "=== Skill Runs (last ${HOURS}h) ==="
+HEADER_SUFFIX=""
+[ -n "$SKILL_FILTER" ] && HEADER_SUFFIX=" — skill=${SKILL_FILTER}"
+echo "=== Skill Runs (last ${HOURS}h${HEADER_SUFFIX}) ==="
 echo "Total: ${TOTAL} | OK: ${SUCCEEDED} | Fail: ${FAILED} | Running: ${IN_PROGRESS} | Cancelled: ${CANCELLED}"
 echo ""
 
 if [ "$FORMAT" = "full" ]; then
   echo "--- Per-skill breakdown ---"
   echo "$SKILL_STATS" | jq -r '.[] |
-    "\(.skill): \(.total) runs (\(.success) ok, \(.failure) fail, \(.in_progress) running) — last: \(.last_run | split("T") | .[1] | split("Z") | .[0]) UTC [\(.last_conclusion)]"'
+    (if .duration_mean then " avg \(.duration_mean)s" else "" end) as $dur |
+    "\(.skill): \(.total) runs (\(.success) ok, \(.failure) fail, \(.in_progress) running) — last: \(.last_run | split("T") | .[1] | split("Z") | .[0]) UTC [\(.last_conclusion)]\($dur)"'
   echo ""
 fi
 
