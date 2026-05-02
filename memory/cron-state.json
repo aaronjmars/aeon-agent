@@ -111,10 +111,10 @@
     "success_rate": 1
   },
   "tweet-allocator": {
-    "last_status": "dispatched",
-    "last_success": "2026-05-01T08:35:33Z",
-    "total_runs": 25,
-    "total_successes": 25,
+    "last_status": "success",
+    "last_success": "2026-05-02T08:09:19Z",
+    "total_runs": 26,
+    "total_successes": 26,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
