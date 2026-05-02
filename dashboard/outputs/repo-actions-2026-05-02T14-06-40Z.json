@@ -1,0 +1,359 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas"
+      },
+      "children": [
+        "context-info",
+        "sep-1",
+        "actions-list",
+        "sep-2",
+        "details-link"
+      ]
+    },
+    "context-info": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (260★, 39 forks), aeon-agent (3 open PRs), and minitor (5★, 31 column types). v4 redesign ~2 weeks out, 300-star milestone ~10 days away, 9 open unreviewed PRs across all repos.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "actions-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "action-1",
+        "sep-a",
+        "action-2",
+        "sep-b",
+        "action-3",
+        "sep-c",
+        "action-4",
+        "sep-d",
+        "action-5"
+      ]
+    },
+    "action-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-heading",
+        "a1-badges",
+        "a1-desc"
+      ]
+    },
+    "a1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator Value Scorecard",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a1-badge-dx",
+        "a1-badge-small"
+      ]
+    },
+    "a1-badge-dx": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "a1-badge-small": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "a1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly Monday skill synthesizing skill-analytics + heartbeat + tweet-allocator + token-report + repo-pulse into a 3-paragraph plain-language answer to 'was this worth it?' — carried 2 cycles",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-a": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "action-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-heading",
+        "a2-badges",
+        "a2-desc"
+      ]
+    },
+    "a2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Dependency Freshness Validator",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a2-badge-feature",
+        "a2-badge-small"
+      ]
+    },
+    "a2-badge-feature": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "a2-badge-small": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "a2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Scans every SKILL.md and aeon.yml consume: edges, checks mtime of each upstream file, and alerts when a chained skill is reading stale data — carried 2 cycles",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-b": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "action-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-heading",
+        "a3-badges",
+        "a3-desc"
+      ]
+    },
+    "a3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Star Momentum Alert",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a3-badge-growth",
+        "a3-badge-small"
+      ]
+    },
+    "a3-badge-growth": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "a3-badge-small": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "a3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Reads 14 days of repo-pulse deltas, projects 300-star milestone date, fires a one-time notification when the launch window aligns with Tue–Thu morning — coordinates show-hn-draft dispatch timing",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-c": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "action-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-heading",
+        "a4-badges",
+        "a4-desc"
+      ]
+    },
+    "a4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Mastodon Column for minitor",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a4-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a4-badge-integration",
+        "a4-badge-small"
+      ]
+    },
+    "a4-badge-integration": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "a4-badge-small": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "a4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Public API, no key required; completes decentralized social trifecta alongside Bluesky (shipped today) + Farcaster — standard 3-file plugin, same pattern as Bluesky column",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-d": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "action-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-heading",
+        "a5-badges",
+        "a5-desc"
+      ]
+    },
+    "a5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "v4 Readiness Checker",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "a5-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "a5-badge-dx",
+        "a5-badge-small"
+      ]
+    },
+    "a5-badge-dx": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "a5-badge-small": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "a5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "workflow_dispatch skill that reads current aeon.yml + skills.json and generates a personalized upgrade checklist for 39 forks before v4 ships in ~2 weeks",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "details-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-02.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
