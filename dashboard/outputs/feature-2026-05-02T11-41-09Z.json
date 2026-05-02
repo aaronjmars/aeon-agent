@@ -1,0 +1,360 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built: Bluesky Column Type",
+        "description": "aaronjmars/minitor — 2026-05-02"
+      },
+      "children": [
+        "heading-feature",
+        "intro-text",
+        "sep1",
+        "section-why",
+        "sep2",
+        "section-built",
+        "sep3",
+        "section-how",
+        "sep4",
+        "section-next",
+        "sep5",
+        "pr-link"
+      ]
+    },
+    "heading-feature": {
+      "type": "Heading",
+      "props": {
+        "text": "Bluesky Column Type",
+        "level": "h2"
+      }
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "Minitor just got a Bluesky column. Two modes: search by keyword (latest posts, sorted newest first) and follow a single author by handle. It's keyless — no API key, no env var, no signup. The column works the moment you add it."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "why-heading",
+        "why-text",
+        "why-badges"
+      ]
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why This Matters",
+        "level": "h3"
+      }
+    },
+    "why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Minitor leads with a \"first column up in under a minute, zero infra\" promise, and the founder-dashboard, journalist, and OSS-maintainer use cases in the README all benefit from cross-platform monitoring. Bluesky has captured a meaningful share of the X-exodus crowd over the past year — and the public AppView at public.api.bsky.app is keyless and well-documented, so adding it preserves the zero-config promise. The Social cluster grows from 5 plugins (x-search, x-trending, reddit, hacker-news, farcaster) to 6, and minitor's total column count goes from 30 to 31."
+      }
+    },
+    "why-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-keyless",
+        "badge-cluster",
+        "badge-columns"
+      ]
+    },
+    "badge-keyless": {
+      "type": "Badge",
+      "props": {
+        "text": "Keyless & Zero-Config",
+        "variant": "default"
+      }
+    },
+    "badge-cluster": {
+      "type": "Badge",
+      "props": {
+        "text": "Social cluster: 5 → 6 plugins",
+        "variant": "secondary"
+      }
+    },
+    "badge-columns": {
+      "type": "Badge",
+      "props": {
+        "text": "Total columns: 30 → 31",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-built": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "built-heading",
+        "file-1",
+        "file-2",
+        "file-3",
+        "file-4",
+        "file-5"
+      ]
+    },
+    "built-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What Was Built",
+        "level": "h3"
+      }
+    },
+    "file-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file-1-name",
+        "file-1-desc"
+      ]
+    },
+    "file-1-name": {
+      "type": "Heading",
+      "props": {
+        "text": "lib/integrations/bluesky.ts",
+        "level": "h4"
+      }
+    },
+    "file-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Keyless integration for app.bsky.feed.searchPosts and app.bsky.feed.getAuthorFeed; handles three Bluesky-specific quirks — at:// URI to bsky.app permalink conversion via small regex with raw-URI fallback for schema drift, handle normalization (bare \"jay\" resolves to \"jay.bsky.social\", \"@user.com\" strips the leading @, custom domains pass through unchanged), and a repost filter on author feeds because Bluesky's filter=posts_no_replies removes replies but keeps reposts which would break the \"by @author\" attribution; schema-drift safe (drops posts missing handle or uri rather than rendering dead content)."
+      }
+    },
+    "file-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file-2-name",
+        "file-2-desc"
+      ]
+    },
+    "file-2-name": {
+      "type": "Heading",
+      "props": {
+        "text": "lib/columns/plugins/bluesky/plugin.ts",
+        "level": "h4"
+      }
+    },
+    "file-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Zod schema { mode: \"search\"|\"author\", query, handle }, Cloud icon, Bluesky brand blue #0085ff accent (distinct from x-search's #1d9bf0 so the social cluster stays visually differentiated), paginated capability."
+      }
+    },
+    "file-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file-3-name",
+        "file-3-desc"
+      ]
+    },
+    "file-3-name": {
+      "type": "Heading",
+      "props": {
+        "text": "lib/columns/plugins/bluesky/server.ts",
+        "level": "h4"
+      }
+    },
+    "file-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Typed fetcher passing PAGE_SIZE through with cursor-based pagination."
+      }
+    },
+    "file-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file-4-name",
+        "file-4-desc"
+      ]
+    },
+    "file-4-name": {
+      "type": "Heading",
+      "props": {
+        "text": "lib/columns/plugins/bluesky/client.tsx",
+        "level": "h4"
+      }
+    },
+    "file-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "ConfigForm with mode select + mode-conditional input (query field for search, handle field for author with the bare-username hint inline); ItemRenderer matches farcaster's avatar-led card layout with serif post text and engagement footer (replies / reposts / likes — quote-counts collapsed into reposts since Bluesky exposes them separately but readers consume them as the same primitive)."
+      }
+    },
+    "file-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file-5-name",
+        "file-5-desc"
+      ]
+    },
+    "file-5-name": {
+      "type": "Heading",
+      "props": {
+        "text": "README.md",
+        "level": "h4"
+      }
+    },
+    "file-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Column count 30 → 31, Social row 5 → 6 entries, description list adds Bluesky between X and Reddit."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-how": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "how-heading",
+        "how-text-1",
+        "how-text-2"
+      ]
+    },
+    "how-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "How It Works",
+        "level": "h3"
+      }
+    },
+    "how-text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Standard 3-file plugin (plugin.ts + server.ts + client.tsx) plus the 3 registry edits — manifest.ts, registry.ts, server-registry.ts. The parity check at server module init throws loudly if any of the three drift, so out-of-sync registries fail at boot rather than 404 at request time. Cursor pagination flows through unchanged: Bluesky returns an opaque cursor field that we pass straight to the next call. No new env vars, no new build dependencies, no schema migration."
+      }
+    },
+    "how-text-2": {
+      "type": "Text",
+      "props": {
+        "variant": "caption",
+        "text": "Registry parity check ensures consistency at boot time, preventing runtime 404s from schema drift."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "next-heading",
+        "next-text",
+        "next-items"
+      ]
+    },
+    "next-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What's Next",
+        "level": "h3"
+      }
+    },
+    "next-text": {
+      "type": "Text",
+      "props": {
+        "text": "Two natural follow-ups when demand surfaces:"
+      }
+    },
+    "next-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "next-item-1",
+        "next-item-2"
+      ]
+    },
+    "next-item-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Feed-level keyword filtering (Bluesky supports starter packs and labelled feeds, both keyless)",
+        "variant": "outline"
+      }
+    },
+    "next-item-2": {
+      "type": "Badge",
+      "props": {
+        "text": "NewsNow-style \"trending posts on Bluesky right now\" feed if/when Bluesky publishes a public trending endpoint",
+        "variant": "outline"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #25: Add Bluesky column",
+        "href": "https://github.com/aaronjmars/minitor/pull/25",
+        "source": "GitHub"
+      }
+    }
+  }
+}

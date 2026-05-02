@@ -1,22 +1,22 @@
-*Feature Built — 2026-05-01 — aaronjmars/minitor*
+*Feature Built — 2026-05-02 — aaronjmars/minitor*
 
-GitHub releases column
-Minitor — the dashboard-of-feeds with 30 column types — now has a per-repo release tracker. Operators can add a column like Stars or Forks but for releases instead, with a checkbox to include or exclude pre-releases. Until now you had to drop down to a generic RSS column on the repo's `releases.atom` feed, which lost tag and pre-release metadata and didn't get the per-source rendering treatment.
+Bluesky column type
+Minitor just got a Bluesky column. Two modes: search by keyword (latest posts, sorted newest first) and follow a single author by handle. It's keyless — no API key, no env var, no signup. The column works the moment you add it.
 
 Why this matters:
-Minitor already had 7 GitHub plugins (trending, issues, prs, stars, forks, search, backlinks). Releases was the obvious missing one — it's a top-3 monitoring need for any operator tracking dependencies, library upgrades, or competitor velocity. The README's GitHub row literally already said `(8)` but only listed 7 entries; the count was right for the planned set, wrong for the shipped set. The integration layer (`lib/integrations/github.ts`) had `fetchReleases` and a `'releases'` branch in `fetchGitHub` that no plugin was using — the plumbing was there, just no surface.
+Minitor leads with a "first column up in under a minute, zero infra" promise, and the founder-dashboard, journalist, and OSS-maintainer use cases in the README all benefit from cross-platform monitoring. Bluesky has captured a meaningful share of the X-exodus crowd over the past year — and the public AppView at public.api.bsky.app is keyless and well-documented, so adding it preserves the zero-config promise. The Social cluster grows from 5 plugins (x-search, x-trending, reddit, hacker-news, farcaster) to 6, and minitor's total column count goes from 30 to 31.
 
 What was built:
-- lib/columns/plugins/github-releases/plugin.ts: Zod config `{ repo, includePrereleases: boolean = true }`, Tag icon (lucide), green `#22c55e` accent — distinct from the orange flame on github-trending and yellow star on github-stars
-- lib/columns/plugins/github-releases/server.ts: calls `fetchGitHub('releases', { repo }, PAGE_SIZE, page)`; pagination cursor uses upstream page size NOT post-filter size so the pre-release toggle doesn't stop pagination early on release-heavy repos
-- lib/columns/plugins/github-releases/client.tsx: ConfigForm with repo input + prerelease checkbox; ItemRenderer shows release/pre-release pill, repo name, monospace tag, relative time, the title in serif (matching github-trending's heading treatment), and body line-clamp-3
-- lib/columns/plugins/manifest.ts + registry.ts + server-registry.ts: the 3 standard registry edits (parity check at server module init throws if any drift)
-- README.md: GitHub row entries 7 → 8, count `(8)` already correct
+- lib/integrations/bluesky.ts: keyless integration for app.bsky.feed.searchPosts and app.bsky.feed.getAuthorFeed; handles three Bluesky-specific quirks — at:// URI to bsky.app permalink conversion via small regex with raw-URI fallback for schema drift, handle normalization (bare "jay" resolves to "jay.bsky.social", "@user.com" strips the leading @, custom domains pass through unchanged), and a repost filter on author feeds because Bluesky's filter=posts_no_replies removes replies but keeps reposts which would break the "by @author" attribution; schema-drift safe (drops posts missing handle or uri rather than rendering dead content).
+- lib/columns/plugins/bluesky/plugin.ts: Zod schema { mode: "search"|"author", query, handle }, Cloud icon, Bluesky brand blue #0085ff accent (distinct from x-search's #1d9bf0 so the social cluster stays visually differentiated), paginated capability.
+- lib/columns/plugins/bluesky/server.ts: typed fetcher passing PAGE_SIZE through with cursor-based pagination.
+- lib/columns/plugins/bluesky/client.tsx: ConfigForm with mode select + mode-conditional input (query field for search, handle field for author with the bare-username hint inline); ItemRenderer matches farcaster's avatar-led card layout with serif post text and engagement footer (replies / reposts / likes — quote-counts collapsed into reposts since Bluesky exposes them separately but readers consume them as the same primitive).
+- README.md: column count 30 → 31, Social row 5 → 6 entries, description list adds Bluesky between X and Reddit.
 
 How it works:
-The 3-file plugin contract (`plugin.ts` / `server.ts` / `client.tsx`) is the documented way to add a new column type. The plugin metadata declares the icon, Zod schema, accent color, and capabilities. The server fetcher is server-only and reuses the existing GitHub integration. The client renderer is `"use client"` and gets a typed `FeedItem<GHReleasesMeta>` so it doesn't need runtime type guards. The manifest is the canonical id list — both registries are validated against it at server module init. Pagination uses the same pattern as github-trending: when the upstream page is full (PAGE_SIZE items), advance regardless of how many items the local filter dropped.
+Standard 3-file plugin (plugin.ts + server.ts + client.tsx) plus the 3 registry edits — manifest.ts, registry.ts, server-registry.ts. The parity check at server module init throws loudly if any of the three drift, so out-of-sync registries fail at boot rather than 404 at request time. Cursor pagination flows through unchanged: Bluesky returns an opaque cursor field that we pass straight to the next call. No new env vars, no new build dependencies, no schema migration.
 
 What's next:
-Natural follow-ups: a global "watchlist" column that aggregates releases across multiple watched repos, or a release-frequency badge in the renderer (e.g. "first release in 90 days"). Both would build on this plugin without changing the contract.
+Two natural follow-ups when demand surfaces — feed-level keyword filtering (Bluesky supports starter packs and labelled feeds, both keyless) and a NewsNow-style "trending posts on Bluesky right now" feed if/when Bluesky publishes a public trending endpoint.
 
-PR: https://github.com/aaronjmars/minitor/pull/23
+PR: https://github.com/aaronjmars/minitor/pull/25
