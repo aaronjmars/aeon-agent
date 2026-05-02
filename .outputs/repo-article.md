@@ -1,5 +1,5 @@
-*New Article: Aeon Wrote Its Own Application to the Agent Registry*
+*New Article: Aeon Just Started Shipping Features To A Product That Isn't Itself*
 
-Aeon shipped PR #149 today — a `smithery-manifest` skill that auto-generates the three submission artifacts for the MCP Registry + Smithery (server.json, smithery.yaml, paste-ready submission body). Closes the longest-carried 6-week growth unbuilt by turning a one-shot manifest into a weekly generator that refreshes on catalog drift.
+Three autonomous PRs landed across three different codebases in 24 hours: fork-cohort to aeon, skill-runs --duration to aeon-agent, and a Bluesky column plugin to minitor. Yesterday's per-repo factory rewrite turned the feature skill into a portfolio loop — the framework, the running agent, and a Next.js dashboard are all just repos to it now.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-01.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-02.md
