@@ -1,0 +1,295 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "stack-repos"
+      ]
+    },
+    "stack-repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo-aeon",
+        "repo-minitor"
+      ]
+    },
+    "repo-aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-aeon",
+        "stack-aeon-stats",
+        "separator-aeon1",
+        "text-aeon-stars-label",
+        "stack-aeon-stargazers",
+        "separator-aeon2",
+        "text-aeon-forks-label",
+        "stack-aeon-forks"
+      ]
+    },
+    "heading-aeon": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-aeon-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-aeon-stars",
+        "stat-aeon-forks"
+      ]
+    },
+    "stat-aeon-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "260",
+        "delta": "+5",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-aeon-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "39",
+        "delta": "+1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator-aeon1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-aeon-stars-label": {
+      "type": "Text",
+      "props": {
+        "text": "New stargazers:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stack-aeon-stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-adamPoi",
+        "link-supermomonga1",
+        "link-rjgladish",
+        "link-autoeverything",
+        "link-romainquellec"
+      ]
+    },
+    "link-adamPoi": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/AdamPoi",
+        "href": "https://github.com/AdamPoi"
+      },
+      "children": []
+    },
+    "link-supermomonga1": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/supermomonga",
+        "href": "https://github.com/supermomonga"
+      },
+      "children": []
+    },
+    "link-rjgladish": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/rjgladish",
+        "href": "https://github.com/rjgladish"
+      },
+      "children": []
+    },
+    "link-autoeverything": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/autoeverything",
+        "href": "https://github.com/autoeverything"
+      },
+      "children": []
+    },
+    "link-romainquellec": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/romainquellec",
+        "href": "https://github.com/romainquellec"
+      },
+      "children": []
+    },
+    "separator-aeon2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-aeon-forks-label": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stack-aeon-forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-artlu99"
+      ]
+    },
+    "link-artlu99": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/artlu99/aeon",
+        "href": "https://github.com/artlu99/aeon"
+      },
+      "children": []
+    },
+    "repo-minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-minitor",
+        "stack-minitor-stats",
+        "separator-minitor1",
+        "text-minitor-stars-label",
+        "stack-minitor-stargazers"
+      ]
+    },
+    "heading-minitor": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/minitor",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-minitor-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-minitor-stars",
+        "stat-minitor-forks"
+      ]
+    },
+    "stat-minitor-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "4",
+        "delta": "+4",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-minitor-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "0"
+      },
+      "children": []
+    },
+    "separator-minitor1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-minitor-stars-label": {
+      "type": "Text",
+      "props": {
+        "text": "New stargazers:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stack-minitor-stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-aaronjmars",
+        "link-jordanfxlab",
+        "link-supermomonga2",
+        "link-favcryptodev"
+      ]
+    },
+    "link-aaronjmars": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/aaronjmars",
+        "href": "https://github.com/aaronjmars"
+      },
+      "children": []
+    },
+    "link-jordanfxlab": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/jordanfxlab",
+        "href": "https://github.com/jordanfxlab"
+      },
+      "children": []
+    },
+    "link-supermomonga2": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/supermomonga",
+        "href": "https://github.com/supermomonga"
+      },
+      "children": []
+    },
+    "link-favcryptodev": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Favcryptodev",
+        "href": "https://github.com/Favcryptodev"
+      },
+      "children": []
+    }
+  }
+}
