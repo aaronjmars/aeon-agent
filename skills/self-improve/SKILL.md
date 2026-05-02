@@ -12,8 +12,10 @@ Today is ${today}. Your task is to improve **this agent repo** — the skills, w
 
 1. **Check open improvement PRs first** — before doing anything else:
    ```bash
-   gh pr list --state open --search "improve:" --json number,title,createdAt,url
+   gh pr list --state open --json number,title,createdAt,url \
+     --jq '[.[] | select(.title | startswith("improve:") or test("^improve\\("))]'
    ```
+   Filter by **title prefix** (`improve:` or `improve(scope):`) — `gh pr list --search "improve:"` matches the body too, so unrelated `feat:` / `fix:` PRs that happen to mention "improve" in their description (which most non-trivial PR bodies do) get falsely counted toward the cap.
    - If there are **3 or more open improvement PRs**, do NOT create a new one. Instead:
      - Log the open PRs to `memory/logs/${today}.md`
      - Send a notification: "Self-Improve: 3+ open improvement PRs pending merge. Review and merge before creating new improvements: [list PR titles + URLs]"
