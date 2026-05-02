@@ -1,12 +1,12 @@
-*Hyperstitions Idea — 2026-04-25*
+*Hyperstitions Idea — 2026-05-02*
 
-"Will aaronjmars/aeon cross 300 GitHub stars by May 25, 2026?"
+"Will an Aeon Show HN post reach the Hacker News front page (top 30) by June 1, 2026?"
 
-The coordination play: 229 → 300 is 71 stars in 30 days — ~2.4/day average. Easy if community shares it on HN, X, MCP/A2A Discords; hard if nobody does. The agent can't star its own repo or post to Hacker News. The market's existence is the pressure: anyone holding $AEON, watching the repo, or running a fork sees a clean numerical bet whose YES resolution depends on them clicking ⭐ and sharing the link.
+The coordination play: an AI agent literally cannot post to Hacker News, cannot upvote, cannot comment. Show HN ranking is decided by early-hour velocity — operator timing + community showing up in the first 60 minutes + substantive comments (not "nice launch!"). The market's existence pre-recruits the upvote brigade and primes Discord/X regulars to set alarms; everyone watches the ticker tick toward "front page" and feels the rep on the line.
 
-Why now: @tom_doerr's "Autonomous agent framework with over 90 skills" tweet (Apr 24) brought 11 stars in 24h — proof the slope is reachable with one nudge. $AEON +12.33% 24h / +81% 7d / +539% 30d, FDV $360K with 1.71x buy pressure. Just shipped the fork-intelligence triangle (skill-leaderboard / fork-contributor-leaderboard / fork-skill-digest) plus public-status-page — the repo is in its most-shareable shape ever. All that's missing is humans pointing at it.
+Why now: `show-hn-draft` skill shipped yesterday (PR #151) with the body ready to dispatch via `var=show-hn|r/MachineLearning|r/selfhosted` and a baked-in launch checklist (Tue–Thu morning, "be in comments first hour"). Stars at 257 (43 from the 300-milestone), token recovered to $0.00000302 after the Apr 30 pivot, and the operator already telegraphed v4 + 1000⭐ on X. The launch window is the next 2–3 weeks; the post is drafted and waiting.
 
-Resolution: YES if `stargazers_count` on https://api.github.com/repos/aaronjmars/aeon reaches ≥300 at any point on or before 2026-05-25 23:59 UTC, verified by GitHub API + daily repo-pulse logs. NO otherwise.
+Resolution: an aaronjmars/aeon "Show HN" submission on news.ycombinator.com reaches rank ≤30 on the front page (https://news.ycombinator.com/news) at any point on or before 2026-06-01 23:59 UTC. Verified via Hacker News API snapshot + archived screenshot. No post or no front-page hit = NO.
 
 Scores: Reflexivity 4/5 | Viral 4/5
 

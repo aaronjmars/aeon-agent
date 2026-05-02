@@ -1,0 +1,239 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Hyperstitions Idea"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date-text",
+        "question-heading",
+        "sep1",
+        "coordination-stack",
+        "sep2",
+        "why-now-stack",
+        "sep3",
+        "resolution-stack",
+        "sep4",
+        "scores-stack",
+        "footer-stack"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-02",
+        "variant": "muted"
+      }
+    },
+    "question-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Will an Aeon Show HN post reach the Hacker News front page (top 30) by June 1, 2026?",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "coordination-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "The Coordination Play",
+        "level": "h3"
+      }
+    },
+    "coordination-text": {
+      "type": "Text",
+      "props": {
+        "text": "An AI agent literally cannot post to Hacker News, cannot upvote, cannot comment. Show HN ranking is decided by early-hour velocity — operator timing + community showing up in the first 60 minutes + substantive comments (not \"nice launch!\"). The market's existence pre-recruits the upvote brigade and primes Discord/X regulars to set alarms; everyone watches the ticker tick toward \"front page\" and feels the rep on the line."
+      }
+    },
+    "coordination-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "coordination-heading",
+        "coordination-text"
+      ]
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why-now-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why Now",
+        "level": "h3"
+      }
+    },
+    "why-now-intro": {
+      "type": "Text",
+      "props": {
+        "text": "show-hn-draft skill shipped yesterday (PR #151) with the body ready to dispatch via var=show-hn|r/MachineLearning|r/selfhosted and a baked-in launch checklist (Tue–Thu morning, \"be in comments first hour\")."
+      }
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "257",
+        "delta": "43 toward 300-milestone"
+      }
+    },
+    "token-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Token price",
+        "value": "$0.00000302",
+        "delta": "Recovered after Apr 30 pivot",
+        "trend": "up"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stars-stat",
+        "token-stat"
+      ]
+    },
+    "why-now-outro": {
+      "type": "Text",
+      "props": {
+        "text": "Operator already telegraphed v4 + 1000⭐ on X. Launch window is the next 2–3 weeks; the post is drafted and waiting."
+      }
+    },
+    "why-now-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "why-now-heading",
+        "why-now-intro",
+        "stats-grid",
+        "why-now-outro"
+      ]
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "resolution-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution",
+        "level": "h3"
+      }
+    },
+    "resolution-criteria": {
+      "type": "Text",
+      "props": {
+        "text": "An aaronjmars/aeon \"Show HN\" submission on news.ycombinator.com reaches rank ≤30 on the front page at any point on or before 2026-06-01 23:59 UTC. Verified via Hacker News API snapshot + archived screenshot. No post or no front-page hit = NO."
+      }
+    },
+    "hn-link": {
+      "type": "Link",
+      "props": {
+        "label": "Hacker News front page",
+        "href": "https://news.ycombinator.com/news"
+      }
+    },
+    "resolution-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "resolution-heading",
+        "resolution-criteria",
+        "hn-link"
+      ]
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reflexivity-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Reflexivity 4/5",
+        "variant": "default"
+      }
+    },
+    "viral-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Viral 4/5",
+        "variant": "default"
+      }
+    },
+    "scores-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "reflexivity-badge",
+        "viral-badge"
+      ]
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "Soon on",
+        "variant": "caption"
+      }
+    },
+    "footer-link": {
+      "type": "Link",
+      "props": {
+        "label": "hyperstitions.com",
+        "href": "https://www.hyperstitions.com/"
+      }
+    },
+    "footer-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-text",
+        "footer-link"
+      ]
+    }
+  }
+}
