@@ -1,22 +1,20 @@
-*Feature Built — 2026-05-02 — aaronjmars/minitor*
+*Feature Built — 2026-05-03 — aaronjmars/minitor*
 
-Bluesky column type
-Minitor just got a Bluesky column. Two modes: search by keyword (latest posts, sorted newest first) and follow a single author by handle. It's keyless — no API key, no env var, no signup. The column works the moment you add it.
+Mastodon column
+Minitor's 32nd column type and the third in the federated/decentralized social cluster — Bluesky shipped yesterday, Farcaster has been in main for weeks, and Mastodon completes the trifecta. Two keyless modes: hashtag (any tag, any public Mastodon instance) and author (federated user@server lookup, no auth required).
 
 Why this matters:
-Minitor leads with a "first column up in under a minute, zero infra" promise, and the founder-dashboard, journalist, and OSS-maintainer use cases in the README all benefit from cross-platform monitoring. Bluesky has captured a meaningful share of the X-exodus crowd over the past year — and the public AppView at public.api.bsky.app is keyless and well-documented, so adding it preserves the zero-config promise. The Social cluster grows from 5 plugins (x-search, x-trending, reddit, hacker-news, farcaster) to 6, and minitor's total column count goes from 30 to 31.
+The decentralized social space splintered after the X exodus into three live ecosystems with real audiences — Bluesky, Farcaster, Mastodon. Minitor already covered Farcaster; Bluesky landed yesterday in PR #25; without Mastodon the cluster was incomplete. Mastodon is also the obvious "long-tail" entry — every public instance (mastodon.social, fosstodon, hachyderm, infosec.exchange, dozens of niche communities) gets monitored from the same column type. May-2 repo-actions idea #4 — closed same cycle since the Bluesky implementation gave us a battle-tested template.
 
 What was built:
-- lib/integrations/bluesky.ts: keyless integration for app.bsky.feed.searchPosts and app.bsky.feed.getAuthorFeed; handles three Bluesky-specific quirks — at:// URI to bsky.app permalink conversion via small regex with raw-URI fallback for schema drift, handle normalization (bare "jay" resolves to "jay.bsky.social", "@user.com" strips the leading @, custom domains pass through unchanged), and a repost filter on author feeds because Bluesky's filter=posts_no_replies removes replies but keeps reposts which would break the "by @author" attribution; schema-drift safe (drops posts missing handle or uri rather than rendering dead content).
-- lib/columns/plugins/bluesky/plugin.ts: Zod schema { mode: "search"|"author", query, handle }, Cloud icon, Bluesky brand blue #0085ff accent (distinct from x-search's #1d9bf0 so the social cluster stays visually differentiated), paginated capability.
-- lib/columns/plugins/bluesky/server.ts: typed fetcher passing PAGE_SIZE through with cursor-based pagination.
-- lib/columns/plugins/bluesky/client.tsx: ConfigForm with mode select + mode-conditional input (query field for search, handle field for author with the bare-username hint inline); ItemRenderer matches farcaster's avatar-led card layout with serif post text and engagement footer (replies / reposts / likes — quote-counts collapsed into reposts since Bluesky exposes them separately but readers consume them as the same primitive).
-- README.md: column count 30 → 31, Social row 5 → 6 entries, description list adds Bluesky between X and Reddit.
+- lib/integrations/mastodon.ts: keyless via the public Mastodon REST API. Two fetcher functions — fetchMastodonHashtag (GET /api/v1/timelines/tag/{tag}) and fetchMastodonAuthor (GET /api/v1/accounts/lookup + /statuses with exclude_reblogs=true).
+- lib/columns/plugins/mastodon/{plugin.ts, server.ts, client.tsx}: standard 3-file plugin. Zod { instance: 'mastodon.social' default, mode: 'hashtag'|'author', query, handle }, AtSign icon, Mastodon brand purple #6364ff (distinct from x-search blue, farcaster purple, Bluesky blue — social cluster stays visually differentiated). Renderer matches farcaster's avatar-led card layout with serif post text and engagement footer (replies/reblogs/favourites).
+- 3 registry edits (manifest, registry, server-registry parity check throws at module init if drift) + README column count 30 → 31, Social row 5 → 6.
 
 How it works:
-Standard 3-file plugin (plugin.ts + server.ts + client.tsx) plus the 3 registry edits — manifest.ts, registry.ts, server-registry.ts. The parity check at server module init throws loudly if any of the three drift, so out-of-sync registries fail at boot rather than 404 at request time. Cursor pagination flows through unchanged: Bluesky returns an opaque cursor field that we pass straight to the next call. No new env vars, no new build dependencies, no schema migration.
+Mastodon's full-text status search (/api/v2/search?type=statuses) requires authentication on every public instance — the keyless contract is the whole point, so we deliberately don't use it. Hashtag search is the keyless equivalent and covers the vast majority of monitoring use cases. Six Mastodon-specific quirks handled in the integration layer: HTML status content stripped to plain text via targeted regex (Mastodon returns sanitized fragments with p/br/a/span only — safe without a full parser); local-account acct normalization (bare 'gargron' rendered as 'gargron@mastodon.social' for unambiguous attribution); federated handle parsing (user@server form transparently routes the lookup to that server, not the configured instance — so a mastodon.social column can still follow @gargron@example.org without misconfiguring `instance`); reblog filter on author timelines (exclude_reblogs=true API + defensive guard); content-warning prefix on statuses with spoiler_text ([CW: …]); schema-drift safe (drops statuses missing id or url rather than rendering dead content).
 
 What's next:
-Two natural follow-ups when demand surfaces — feed-level keyword filtering (Bluesky supports starter packs and labelled feeds, both keyless) and a NewsNow-style "trending posts on Bluesky right now" feed if/when Bluesky publishes a public trending endpoint.
+The decentralized-social cluster is now feature-complete on minitor. Next obvious extension: a "federated mentions" column that searches a configurable handle across Bluesky + Farcaster + Mastodon at once. Also: a Threads column once Meta's API opens up (Threads supports ActivityPub now but the federation surface is partial).
 
-PR: https://github.com/aaronjmars/minitor/pull/25
+PR: https://github.com/aaronjmars/minitor/pull/26
