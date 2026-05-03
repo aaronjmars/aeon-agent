@@ -1,0 +1,96 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement",
+        "description": "2026-05-02"
+      },
+      "children": [
+        "main-desc",
+        "sep-1",
+        "why-heading",
+        "why-text",
+        "sep-2",
+        "changes-heading",
+        "changes-text",
+        "sep-3",
+        "impact-heading",
+        "impact-text",
+        "sep-4",
+        "pr-link"
+      ]
+    },
+    "main-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Tightens the open-improvement-PR awareness check in skills/self-improve/SKILL.md from `gh pr list --search \"improve:\"` (matches title OR body) to a `--jq` post-filter on `title | startswith(\"improve:\") or test(\"^improve\\\\(\")` (title prefix only). Fixes a sleeper bug in the 3-PR cap that has been silently misclassifying unrelated PRs since day one."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "why-text": {
+      "type": "Text",
+      "props": {
+        "text": "Today's PR #25 `feat(skill-runs)` showed up in the existing open-improvement-PR query — not because it's an improve PR, but because GitHub's `--search` is full-text and PR #25's body mentions self-improve as a downstream consumer. This run was correctly under cap (1 < 3) but the query was fragile — once a few more `feat:`/`fix:` PRs whose bodies mention \"improve\" pile up, self-improve would silently stop running."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "changes-text": {
+      "type": "Text",
+      "props": {
+        "text": "• `skills/self-improve/SKILL.md`: replace `--search \"improve:\"` with title-prefix jq filter; add one-line rationale block so future maintainers don't revert\n• `memory/MEMORY.md`: Skills Built row\n• `memory/logs/2026-05-02.md`: self-improve log entry"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "impact-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impact-text": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve's pile-up guard now counts only true `improve:` / `improve(scope):` PRs. Validated against every historical self-improve PR (#1 / #4 / #5 / #6 / #8 / #9 / #12 / #13 / #14 / #15 / #16 / #17 / #18 / #21 / #22) — all match; PR #25 correctly excluded."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #26",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/26",
+        "source": "GitHub"
+      }
+    }
+  }
+}
