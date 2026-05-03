@@ -1,10 +1,10 @@
-*$AEON Daily — 2026-05-02*
+*$AEON Daily — 2026-05-03*
 
-Price: $0.000003028 (-1.47% 24h)
-Liquidity: $216.2K | 24h Vol: $50.4K
-Buys/Sells: 95/54 | FDV: $302.8K
-7d: -1.3% | 30d: +526%
+Price: $0.00000303 (-0.06% 24h)
+Liquidity: $217.6K | 24h Vol: $46.2K
+Buys/Sells: 78/54
+7d: -22.8% | 30d: +524%
 
-Consolidating after two-session recovery from Apr 30 lows. 30% intraday range (low $0.00000288 → high $0.00000375) resolved near flat. Structural uptrend intact.
+Range-bound: dipped to $0.00000273 and recovered to $0.00000338 in 24h, settling flat. Recovery from Apr 30 lows holding but losing volume.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
