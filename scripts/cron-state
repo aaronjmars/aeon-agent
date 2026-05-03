@@ -1,0 +1,248 @@
+#!/usr/bin/env bash
+# cron-state — view and inspect memory/cron-state.json
+#
+# Usage:
+#   ./scripts/cron-state                  # brief table for every skill
+#   ./scripts/cron-state --skill <name>   # detail view for one skill
+#   ./scripts/cron-state --unhealthy      # only skills with issues (exit 1 if any)
+#   ./scripts/cron-state --stale [hours]  # skills whose last_dispatch is older than N hours (default 168)
+#   ./scripts/cron-state --json           # pretty-printed full JSON
+#   ./scripts/cron-state -h | --help      # show this help
+#
+# Output: scheduler-side state per skill — last status, dispatch, runs, success rate, consecutive failures.
+# Used by: self-improve, skill-repair, heartbeat (when gh api is rate-limited or sandbox-blocked).
+# Complements: scripts/skill-runs (queries GitHub Actions API for ground truth).
+# Dependencies: jq, date
+
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+STATE_FILE="${CRON_STATE_FILE:-$ROOT/memory/cron-state.json}"
+
+MODE="brief"
+SKILL_FILTER=""
+STALE_HOURS=168
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --skill) MODE="skill"; SKILL_FILTER="${2:-}"; shift 2 ;;
+    --unhealthy) MODE="unhealthy"; shift ;;
+    --stale)
+      MODE="stale"; shift
+      if [[ ${1:-} =~ ^[0-9]+$ ]]; then STALE_HOURS="$1"; shift; fi
+      ;;
+    --json) MODE="json"; shift ;;
+    -h|--help)
+      sed -n '2,10p' "$0" | sed 's/^# \?//'
+      exit 0
+      ;;
+    *) echo "Unknown arg: $1" >&2; exit 2 ;;
+  esac
+done
+
+if [[ ! -f "$STATE_FILE" ]]; then
+  echo "ERROR: cron-state.json not found at $STATE_FILE" >&2
+  echo "  Set CRON_STATE_FILE env to override, or run from repo root." >&2
+  exit 2
+fi
+
+if ! command -v jq >/dev/null 2>&1; then
+  echo "ERROR: jq is required" >&2
+  exit 2
+fi
+
+NOW_EPOCH=$(date -u +%s)
+
+# Compute age in hours from an ISO timestamp (returns "" if unparseable)
+age_hours() {
+  local ts="$1"
+  [[ -z "$ts" || "$ts" == "null" ]] && { echo ""; return; }
+  local epoch
+  if epoch=$(date -u -d "$ts" +%s 2>/dev/null); then
+    :
+  elif epoch=$(date -u -j -f "%Y-%m-%dT%H:%M:%SZ" "$ts" +%s 2>/dev/null); then
+    :
+  else
+    echo ""; return
+  fi
+  echo $(( (NOW_EPOCH - epoch) / 3600 ))
+}
+
+# Format an age in hours as a compact human string
+fmt_age() {
+  local h="$1"
+  [[ -z "$h" ]] && { echo "—"; return; }
+  if (( h < 1 )); then echo "<1h"
+  elif (( h < 24 )); then echo "${h}h"
+  elif (( h < 168 )); then echo "$(( h / 24 ))d"
+  else echo "$(( h / 168 ))w"
+  fi
+}
+
+# Status icon for a skill row
+status_icon() {
+  local status="$1" consec="$2" rate="$3"
+  if [[ "$status" == "failure" ]] && (( consec >= 3 )); then echo "🔴"
+  elif [[ "$status" == "failure" ]]; then echo "🟠"
+  elif [[ "$status" == "success" ]] && [[ -n "$rate" ]] && awk -v r="$rate" 'BEGIN{exit !(r < 0.8)}'; then echo "🟡"
+  elif [[ "$status" == "success" ]]; then echo "🟢"
+  else echo "⚪"
+  fi
+}
+
+# JSON mode — pretty-print full state
+if [[ "$MODE" == "json" ]]; then
+  jq '.' "$STATE_FILE"
+  exit 0
+fi
+
+# Single-skill detail
+if [[ "$MODE" == "skill" ]]; then
+  if [[ -z "$SKILL_FILTER" ]]; then
+    echo "ERROR: --skill requires a skill name" >&2
+    exit 2
+  fi
+  if ! jq -e --arg s "$SKILL_FILTER" 'has($s)' "$STATE_FILE" >/dev/null; then
+    echo "Skill '$SKILL_FILTER' not found in cron-state.json"
+    echo ""
+    echo "Available skills:"
+    jq -r 'keys[]' "$STATE_FILE" | sed 's/^/  /'
+    exit 1
+  fi
+
+  ENTRY=$(jq --arg s "$SKILL_FILTER" '.[$s]' "$STATE_FILE")
+  LAST_DISPATCH=$(echo "$ENTRY" | jq -r '.last_dispatch // empty')
+  LAST_STATUS=$(echo "$ENTRY" | jq -r '.last_status // "unknown"')
+  LAST_SUCCESS=$(echo "$ENTRY" | jq -r '.last_success // empty')
+  LAST_FAILURE=$(echo "$ENTRY" | jq -r '.last_failure // empty')
+  TOTAL_RUNS=$(echo "$ENTRY" | jq -r '.total_runs // 0')
+  TOTAL_SUCC=$(echo "$ENTRY" | jq -r '.total_successes // 0')
+  TOTAL_FAIL=$(echo "$ENTRY" | jq -r '.total_failures // 0')
+  CONSEC=$(echo "$ENTRY" | jq -r '.consecutive_failures // 0')
+  RATE=$(echo "$ENTRY" | jq -r '.success_rate // 0')
+  RATE_PCT=$(awk -v r="$RATE" 'BEGIN{printf "%d%%", r * 100}')
+
+  AGE_DISP=$(age_hours "$LAST_DISPATCH")
+  AGE_SUCC=$(age_hours "$LAST_SUCCESS")
+  AGE_FAIL=$(age_hours "$LAST_FAILURE")
+  ICON=$(status_icon "$LAST_STATUS" "$CONSEC" "$RATE")
+
+  echo "=== $SKILL_FILTER $ICON ==="
+  echo "Last status:        $LAST_STATUS"
+  echo "Last dispatch:      ${LAST_DISPATCH:-—} ($(fmt_age "$AGE_DISP") ago)"
+  echo "Last success:       ${LAST_SUCCESS:-—} ($(fmt_age "$AGE_SUCC") ago)"
+  echo "Last failure:       ${LAST_FAILURE:-—} ($(fmt_age "$AGE_FAIL") ago)"
+  echo "Runs (total):       $TOTAL_RUNS"
+  echo "Successes:          $TOTAL_SUCC"
+  echo "Failures:           $TOTAL_FAIL"
+  echo "Consecutive fails:  $CONSEC"
+  echo "Success rate:       $RATE_PCT"
+  exit 0
+fi
+
+# Build a sorted skills array shared by brief / unhealthy / stale modes
+SKILLS_JSON=$(jq -r '
+  to_entries
+  | map({
+      skill: .key,
+      last_status: (.value.last_status // "unknown"),
+      last_dispatch: (.value.last_dispatch // ""),
+      total_runs: (.value.total_runs // 0),
+      consecutive_failures: (.value.consecutive_failures // 0),
+      success_rate: (.value.success_rate // 0)
+    })
+  | sort_by(.skill)
+' "$STATE_FILE")
+
+UNHEALTHY_FOUND=0
+STALE_FOUND=0
+
+print_header() {
+  printf "%-30s %-3s %-12s %-9s %-7s %-7s %-10s\n" \
+    "Skill" "" "Status" "Last run" "Runs" "Success" "ConsecFail"
+  printf "%-30s %-3s %-12s %-9s %-7s %-7s %-10s\n" \
+    "------------------------------" "---" "------------" "---------" "-------" "-------" "----------"
+}
+
+print_row() {
+  local row="$1"
+  local skill last_status last_dispatch total_runs consec rate icon age age_str rate_pct
+  skill=$(echo "$row" | jq -r '.skill')
+  last_status=$(echo "$row" | jq -r '.last_status')
+  last_dispatch=$(echo "$row" | jq -r '.last_dispatch')
+  total_runs=$(echo "$row" | jq -r '.total_runs')
+  consec=$(echo "$row" | jq -r '.consecutive_failures')
+  rate=$(echo "$row" | jq -r '.success_rate')
+
+  age=$(age_hours "$last_dispatch")
+  age_str=$(fmt_age "$age")
+  icon=$(status_icon "$last_status" "$consec" "$rate")
+  rate_pct=$(awk -v r="$rate" 'BEGIN{printf "%d%%", r * 100}')
+
+  printf "%-30s %-3s %-12s %-9s %-7s %-7s %-10s\n" \
+    "$skill" "$icon" "$last_status" "$age_str" "$total_runs" "$rate_pct" "$consec"
+}
+
+case "$MODE" in
+  brief)
+    COUNT=$(echo "$SKILLS_JSON" | jq 'length')
+    if [[ "$COUNT" == "0" ]]; then
+      echo "cron-state.json contains no skills"
+      exit 0
+    fi
+    echo "=== Cron state ($STATE_FILE) ==="
+    print_header
+    echo "$SKILLS_JSON" | jq -c '.[]' | while IFS= read -r row; do
+      print_row "$row"
+    done
+
+    UNHEALTHY=$(echo "$SKILLS_JSON" | jq '[.[] | select(.consecutive_failures >= 3 or .success_rate < 0.5)] | length')
+    if [[ "$UNHEALTHY" -gt 0 ]]; then
+      echo ""
+      echo "$UNHEALTHY skill(s) unhealthy — run with --unhealthy for the filtered view."
+    fi
+    ;;
+
+  unhealthy)
+    UNHEALTHY_JSON=$(echo "$SKILLS_JSON" | jq '[.[] | select(.consecutive_failures >= 3 or .success_rate < 0.5)]')
+    UNHEALTHY_COUNT=$(echo "$UNHEALTHY_JSON" | jq 'length')
+    if [[ "$UNHEALTHY_COUNT" == "0" ]]; then
+      echo "All skills healthy — no consecutive_failures>=3 and no success_rate<0.5."
+      exit 0
+    fi
+    echo "=== Unhealthy skills ($UNHEALTHY_COUNT) ==="
+    print_header
+    echo "$UNHEALTHY_JSON" | jq -c '.[]' | while IFS= read -r row; do
+      print_row "$row"
+    done
+    UNHEALTHY_FOUND=1
+    ;;
+
+  stale)
+    STALE_JSON=$(echo "$SKILLS_JSON" | jq -c '.[]' | while IFS= read -r row; do
+      last_dispatch=$(echo "$row" | jq -r '.last_dispatch')
+      age=$(age_hours "$last_dispatch")
+      if [[ -n "$age" ]] && (( age >= STALE_HOURS )); then
+        echo "$row"
+      fi
+    done)
+    STALE_COUNT=$(echo "$STALE_JSON" | grep -c . || true)
+    if [[ "$STALE_COUNT" == "0" ]]; then
+      echo "No skills stale (every dispatched skill has run within last ${STALE_HOURS}h)."
+      exit 0
+    fi
+    echo "=== Stale skills (no dispatch in last ${STALE_HOURS}h, $STALE_COUNT total) ==="
+    print_header
+    echo "$STALE_JSON" | while IFS= read -r row; do
+      [[ -z "$row" ]] && continue
+      print_row "$row"
+    done
+    STALE_FOUND=1
+    ;;
+esac
+
+# Exit codes: 0 = clean, 1 = at least one unhealthy or stale entry surfaced
+if [[ "$UNHEALTHY_FOUND" == "1" || "$STALE_FOUND" == "1" ]]; then
+  exit 1
+fi
+exit 0

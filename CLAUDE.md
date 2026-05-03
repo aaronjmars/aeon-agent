@@ -42,6 +42,7 @@ When consolidating memory (reflect, memory-flush), move detail into topic files 
 - **`./notify "message"`** — Send to all configured notification channels (Telegram, Discord, Slack, json-render). Skips unconfigured channels silently.
 - **`./notify-jsonrender <skill_name> <markdown>`** — Convert skill output to a json-render spec and write to `dashboard/outputs/`. Called automatically by `./notify` when `JSONRENDER_ENABLED=true`.
 - **`./scripts/skill-runs [--hours N] [--full] [--json] [--failures]`** — Audit recent GitHub Actions skill runs. Shows counts, pass/fail rates, anomalies.
+- **`./scripts/cron-state [--skill <name>] [--unhealthy] [--stale [hours]] [--json]`** — Local view of `memory/cron-state.json`: per-skill last status, dispatch age, run totals, success rate, consecutive failures. Useful when `gh api` is rate-limited or sandbox-blocked. Exits 1 when `--unhealthy` or `--stale` surface entries.
 - Use Claude Code's built-in **WebSearch** and **WebFetch** for web searches and URL fetching.
 
 ## MCP Servers (local mode only)
