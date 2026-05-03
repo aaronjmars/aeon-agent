@@ -1,15 +1,15 @@
-*Skill Leaderboard — 2026-04-26*
+*Skill Leaderboard — 2026-05-03*
 
-Top skills across 24 active forks:
-1. heartbeat — 24 forks (100%)
-2. github-trending — 3 forks (12.5%)
-3. morning-brief — 2 forks (8.3%)
-3. hacker-news-digest — 2 forks (8.3%)
-3. token-report — 2 forks (8.3%)
+Top skills across 28 active forks:
+1. heartbeat — 28 forks (100%)
+2. github-trending — 3 forks (10.7%)
+3. morning-brief — 2 forks (7.1%)
+3. hacker-news-digest — 2 forks (7.1%)
+3. token-report — 2 forks (7.1%)
 
-Consensus: heartbeat (100%)
-Adoption gaps: repo-scanner, syndicate-article, skill-analytics, vercel-projects, contributor-reward
+Consensus: heartbeat only (100%)
+Adoption gaps: 11 skills with zero fork enables (6 new this week — contributor-reward, skill-analytics, smithery-manifest, show-hn-draft, fork-cohort, operator-scorecard shipped enabled:false; syndicate-article, repo-scanner still at 0)
 
-Fleet snapshot: 24 active forks, 137 total skill slots, 95 unique skills — up from 42 slots last week. One fork (tomscaria/aeon, 94 skills) accounts for 69% of all enabled skill slots fleet-wide.
+Fleet: 28 active forks (+4 vs last week), 139 total slots (+2), 95 unique skills
 
-Full leaderboard: https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-04-26.md
+Full leaderboard: https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-05-03.md

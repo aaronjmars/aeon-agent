@@ -1,0 +1,319 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard — 2026-05-03"
+      },
+      "children": [
+        "top-skills-section",
+        "separator-1",
+        "consensus-section",
+        "separator-2",
+        "adoption-gaps-section",
+        "separator-3",
+        "fleet-section",
+        "separator-4",
+        "full-leaderboard-link"
+      ]
+    },
+    "top-skills-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "top-skills-heading",
+        "top-skills-table"
+      ]
+    },
+    "top-skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Skills Across 28 Active Forks",
+        "level": "h2"
+      }
+    },
+    "top-skills-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Forks",
+          "Percentage"
+        ],
+        "rows": [
+          [
+            "1",
+            "heartbeat",
+            "28",
+            "100%"
+          ],
+          [
+            "2",
+            "github-trending",
+            "3",
+            "10.7%"
+          ],
+          [
+            "3",
+            "morning-brief",
+            "2",
+            "7.1%"
+          ],
+          [
+            "3",
+            "hacker-news-digest",
+            "2",
+            "7.1%"
+          ],
+          [
+            "3",
+            "token-report",
+            "2",
+            "7.1%"
+          ]
+        ]
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "consensus-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "consensus-heading",
+        "consensus-text"
+      ]
+    },
+    "consensus-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Consensus",
+        "level": "h3"
+      }
+    },
+    "consensus-text": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat only (100%)"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "adoption-gaps-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "adoption-gaps-heading",
+        "adoption-gaps-summary",
+        "new-skills-subheading",
+        "new-skills-stack",
+        "existing-zero-label",
+        "existing-zero-stack"
+      ]
+    },
+    "adoption-gaps-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Adoption Gaps",
+        "level": "h3"
+      }
+    },
+    "adoption-gaps-summary": {
+      "type": "Text",
+      "props": {
+        "text": "11 skills with zero fork enables"
+      }
+    },
+    "new-skills-subheading": {
+      "type": "Heading",
+      "props": {
+        "text": "6 New This Week (shipped enabled:false)",
+        "level": "h4"
+      }
+    },
+    "new-skills-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-skill-1",
+        "new-skill-2",
+        "new-skill-3",
+        "new-skill-4",
+        "new-skill-5",
+        "new-skill-6"
+      ]
+    },
+    "new-skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "contributor-reward",
+        "variant": "secondary"
+      }
+    },
+    "new-skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics",
+        "variant": "secondary"
+      }
+    },
+    "new-skill-3": {
+      "type": "Badge",
+      "props": {
+        "text": "smithery-manifest",
+        "variant": "secondary"
+      }
+    },
+    "new-skill-4": {
+      "type": "Badge",
+      "props": {
+        "text": "show-hn-draft",
+        "variant": "secondary"
+      }
+    },
+    "new-skill-5": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "secondary"
+      }
+    },
+    "new-skill-6": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "secondary"
+      }
+    },
+    "existing-zero-label": {
+      "type": "Text",
+      "props": {
+        "text": "Still at 0:",
+        "variant": "muted"
+      }
+    },
+    "existing-zero-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "existing-zero-skill-1",
+        "existing-zero-skill-2"
+      ]
+    },
+    "existing-zero-skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "syndicate-article",
+        "variant": "outline"
+      }
+    },
+    "existing-zero-skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-scanner",
+        "variant": "outline"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet-heading",
+        "fleet-grid"
+      ]
+    },
+    "fleet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet",
+        "level": "h3"
+      }
+    },
+    "fleet-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-active-forks",
+        "stat-total-slots",
+        "stat-unique-skills"
+      ]
+    },
+    "stat-active-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Forks",
+        "value": "28",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "stat-total-slots": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Slots",
+        "value": "139",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat-unique-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Unique Skills",
+        "value": "95"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-leaderboard-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Full Leaderboard",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-05-03.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
