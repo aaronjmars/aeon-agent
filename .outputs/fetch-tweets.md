@@ -1,13 +1,13 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-02)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-03)*
 
-1. x.com/aaronjmars — running minitor, by @aeonframework — fastest way to monitor anything on the internet; X Pro costs $40/month and only supports one platform
-Likes: 16 | RTs: 1
-[View tweet](https://x.com/aaronjmars/status/2050222281368973719)
+1. x.com/aaronjmars — Aeon helped secure the first two ⭐ on a fastest-growing-GitHub-repos-in-finance list
+Likes: 22 | RTs: 4
+[View tweet](https://x.com/aaronjmars/status/2050698192828658053)
 
-2. x.com/Karma_Nfa — morning market update request for $AEON, $BNKR, $BTC and others via @bankrbot
-Likes: 11 | RTs: 2
-[View tweet](https://x.com/Karma_Nfa/status/2050199346738589740)
+2. x.com/DaMikey23 — $AEON Is doing so many different things people don't even know about yet. (YET)
+Likes: 6 | RTs: 1
+[View tweet](https://x.com/DaMikey23/status/2050700214646800789)
 
-3. x.com/BaseWhaleAlert — a CLAWD whale just bought $1.13K of $AEON at $333.52K MC
-Likes: 1 | RTs: 0
-[View tweet](https://x.com/BaseWhaleAlert/status/2050070317758820530)
+3. x.com/ggdotxyz — conviction gets rewarded $aeon coded
+Likes: 4 | RTs: 0
+[View tweet](https://x.com/ggdotxyz/status/2050685564634927218)
