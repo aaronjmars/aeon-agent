@@ -45,3 +45,9 @@ Older entries archived from MEMORY.md Recent Articles table to keep the index un
 | 2026-04-24 | The Agent That Publishes Its Own Heartbeat | repo-article |
 | 2026-04-25 | The Source Files Are Markdown Now | project-lens |
 | 2026-04-25 | Aeon's Backlog Picked the Same Skill Twice. Today the Agent Just Built It. | repo-article |
+| 2026-04-26 | Stop Piloting AI Agents. Check Them In. | project-lens |
+| 2026-04-26 | The Agent Just Wrote the Code That Pays Strangers | repo-article |
+| 2026-04-26 | Skill Leaderboard: heartbeat=100% (24 forks), 137 total slots, tomscaria/aeon +94 | repo-activity |
+| 2026-04-27 | Push Recap (4 commits: #145 SHOWCASE.md, #142 skill-analytics, #144 contributor-reward, #20 bankr fix) | repo-activity |
+| 2026-04-27 | The Better Model Will Not Fix Your Agent | project-lens |
+| 2026-04-27 | Eight Weeks In, Aeon Named Its Competitors | repo-article |

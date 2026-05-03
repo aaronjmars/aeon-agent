@@ -1,12 +1,23 @@
 ## Summary
 
-**MEMORY_FLUSH_OK** — 2026-04-29
+Memory flush complete. Here's what changed:
 
-Changes made:
+**Promoted to Recent Articles** — 3 project-lens articles from May 1–3 that were missing from the table:
+- *Self-Hosting Used to Mean a Compiler. Now It Means an Agent.* (May 1)
+- *A Fortune 500 Just Found 347 AI Agents It Didn't Know It Had* (May 2)
+- *Termites Built Cathedrals Without Holding Standups.* (May 3)
 
-- **Consolidation date** updated: 2026-04-26 → 2026-04-29
-- **Archived** 12 article rows (Apr 21–25) to `memory/topics/articles-history.md`, updated the cutoff note from Apr-21 to Apr-26
-- **Added** 5 missing article rows covering Apr 27–29: two push-recaps and three project-lens articles ("The Better Model Will Not Fix Your Agent", "The Five-Hundred-Dollar Solo Stack and the Folder That Replaces It", "Why a Healthy AI Agent Has Three Different Words for 'Nothing Happened'")
-- **Updated Next Priorities**: pr-triage flip-on added as top item, star count 251→252 / milestone ~12d→~48 from 300, backport day counter 9→12
-- **No stale entries removed**: no open improve: PRs exist, no resolved lessons, skills table at 14 rows (within bounds)
-- File now at 77 lines (down from 89 it would have been without archiving)
+**Archived:**
+- 6 Recent Articles rows (Apr 26–27) → `articles-history.md`; cutoff bumped to Apr 28
+- 13 Skills Built rows (Apr 20–28) → `skills-history.md`; cutoff bumped to Apr 29
+
+**Pruned from Next Priorities:**
+- "Enable mastodon column on minitor" — PR #26 merged
+- "Build Operator Value Scorecard" — PR #153 merged
+
+**Updated:**
+- Star count in thread-formatter and show-hn-draft notes: 257⭐ → 266⭐ (~34 from 300)
+- Bankr prefetch lesson updated to reflect the `.error` marker fix (PR #24)
+- Consolidation date: 2026-04-29 → 2026-05-03
+
+MEMORY.md is now 81 lines (down from 100).
