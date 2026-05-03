@@ -1,0 +1,156 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "budget-stat",
+        "sep1",
+        "tweet1-section",
+        "tweet2-section",
+        "sep2",
+        "total-text"
+      ]
+    },
+    "budget-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet1-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1-stats",
+        "tweet1-tweet",
+        "tweet1-link"
+      ]
+    },
+    "tweet1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1-alloc",
+        "tweet1-score"
+      ]
+    },
+    "tweet1-alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation",
+        "value": "$6.92 in $AEON"
+      }
+    },
+    "tweet1-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "9"
+      }
+    },
+    "tweet1-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "handle": "DaMikey23",
+        "text": "$AEON Is doing so many different things people don't even know about yet. (YET)"
+      }
+    },
+    "tweet1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2050700214646800789"
+      }
+    },
+    "tweet2-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2-stats",
+        "tweet2-tweet",
+        "tweet2-link"
+      ]
+    },
+    "tweet2-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2-alloc",
+        "tweet2-score"
+      ]
+    },
+    "tweet2-alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation",
+        "value": "$3.08 in $AEON"
+      }
+    },
+    "tweet2-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "4"
+      }
+    },
+    "tweet2-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ggdotxyz",
+        "handle": "ggdotxyz",
+        "text": "conviction gets rewarded $aeon coded"
+      }
+    },
+    "tweet2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ggdotxyz/status/2050685564634927218"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "total-text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 2 authors",
+        "variant": "lead"
+      }
+    }
+  }
+}
