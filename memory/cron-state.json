@@ -111,14 +111,14 @@
     "success_rate": 1
   },
   "tweet-allocator": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-02T08:09:19Z",
     "total_runs": 26,
     "total_successes": 26,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-02T08:05:53Z"
+    "last_dispatch": "2026-05-03T08:15:02Z"
   },
   "hyperstitions-ideas": {
     "last_dispatch": "2026-05-02T10:07:46Z",
