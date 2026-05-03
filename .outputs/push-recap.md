@@ -1,18 +1,15 @@
-*Push Recap — 2026-05-02*
-10 substantive commits across the three watched repos (1 merged, 9 open PRs); 1 external contributor; +1342 / -100 lines / 31 files
+*Push Recap — 2026-05-03*
+14 substantive commits across aeon / aeon-agent / minitor, all merged in a single 16-min train at ~13:20 UTC. Yesterday's open-PR pile from the per-repo factory's first sweep cleared in one go.
 
-The factory turned on: yesterday's `feat(feature-skill): build for every watched repo per run` (#23) merged to aeon-agent main at 17:43 UTC May 1. The very next `feature` cron produced six PRs today (one per watched repo, one extra triplet on aeon-agent itself) instead of one. ~⅔ of today's content is downstream of that single 60-line skill rewrite.
+Three new aeon skills (all enabled: false): show-hn-draft (Show HN launch post pre-writer, workflow_dispatch), operator-scorecard (weekly "was this week worth it?" synthesis), fork-cohort (weekly fork activation-stage tracker). Closes 3 multi-cycle highest-priority ideas.
 
-aeon (3 PRs, all open): show-hn-draft skill (190-line workflow_dispatch — pre-writes Show HN body + r/MachineLearning + r/selfhosted variants from live repo state, never posts) #151 · fork-cohort skill (290-line weekly Sunday tracker — buckets all 39 forks into POWER/ACTIVE/STALE/COLD using GitHub Actions run history; closes the "X of N running in production" gap, carried 2 cycles) #152 · external 6-line shell-injection fix from tomscaria — POST/DELETE /api/secrets switched from execSync template-string to execFileSync(argv) #150
+Two follow-up housekeeping commits caught skills.json metadata drift the merge wave surfaced — 97 → 108 total + 5 orphan skills mapped out of "other".
 
-aeon-agent (4 commits, 1 merged + 3 open PRs): feature-skill rewrite #23 (the headline merge — every step renumbered to per-repo, isolated working dirs, per-repo PRs/notifs, +minitor to watched list) · bankr-prefetch error marker #24 (last script that lacked the .error pattern from PRs #16/#17 — 3 reason codes BANKR_API_KEY_MISSING / _INVALID / LOOKUPS_FAILED, AUTH_ERROR_DETECTED == LOOKUPS gate prevents transient 401 from poisoning batch) · skill-runs --skill + --duration #25 (single-skill filter applied early so all output modes reflect it; per-skill wall-clock mean/p95/max/last from updated_at-run_started_at — closes the slow-rot gap where every run still passes but runtime drifts 30s → 4min) · self-improve PR-filter sleeper-bug fix #26 (full-text "improve:" search was matching unrelated PR bodies — silently killed self-improve once 3-PR cap accumulated noise; now `title | startswith("improve:") or test("^improve\\(")` validated against all 15 historical self-improve PRs)
+aeon-agent ships scripts/cron-state (local viewer for the scheduler's per-skill state, --unhealthy/--stale exit codes for health checks), scripts/skill-runs gains --skill filter + --duration mode (closes the slow-rot anomaly bucket the existing flags miss), self-improve PR-filter sleeper bug fixed, prefetch-bankr gets the .error marker pattern (last script without one).
 
-minitor (3 PRs, all open — first day of autonomous feature work since added to watched list yesterday): github-releases plugin #23 (eighth GitHub-cluster column — README already said `(8)` but listed only 7; integration layer's `fetchReleases` had been unused since shipped) · bluesky plugin #25 (sixth social column, keyless via `public.api.bsky.app/xrpc`, two modes search + author, handles three Bluesky quirks at:// URI conversion + handle normalization + repost filter on author feeds; +400 lines) · ensure_deps launcher fix #24 (bash precedence bug `A || B && C` made yarn/bun users force-reinstall on every `./minitor` invocation; now trusts `node_modules/` existence + picks lockfile by detected $PKG)
+minitor ships three column types in the same wave: github-releases (8th GitHub plugin, fills count claim that's been wrong since launch), bluesky (keyless via public AppView), mastodon (keyless hashtag + federated author). Decentralized-social trifecta complete (Farcaster + Bluesky + Mastodon). Column count 30 → 32.
 
-Key changes:
-- e486f0b feature-skill rewrite: 60-line SKILL.md change is the upstream cause of 6 downstream PRs (PRs #150–#152 on aeon, #24–#26 on aeon-agent, #23–#25 on minitor are all from today's first multi-repo `feature` run)
-- show-hn-draft + fork-cohort both shipped enabled: false — the aeon.yml `enabled: false` queue is now 5 skills deep (pr-triage, thread-formatter, smithery-manifest, show-hn-draft, fork-cohort), the structural backlog item that's growing fastest
-- self-improve filter fix #26 is the most operationally significant of the three small ones — sleeper bug since Apr-25 PR #4 silently suppressing self-improve runs
+External: tomscaria PR #150 closes shell-injection in dashboard secrets API (execFileSync swap, +3/-3).
 
-Stats: 31 files changed, +1342/-100 lines across 10 substantive commits + ~30 routine bot auto-commits on aeon-agent main
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-02.md
+Stats: 38 files, +2,657/-279 lines.
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-03.md
