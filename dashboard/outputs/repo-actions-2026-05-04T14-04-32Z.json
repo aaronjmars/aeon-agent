@@ -1,0 +1,303 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-05-04"
+      },
+      "children": [
+        "subtitle",
+        "actions",
+        "separator",
+        "link"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (270★, 41 forks), aaronjmars/aeon-agent (7★), aaronjmars/minitor (5★, 34 column types).",
+        "variant": "muted"
+      }
+    },
+    "actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1",
+        "action2",
+        "action3",
+        "action4",
+        "action5"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_title",
+        "action1_tags",
+        "action1_desc"
+      ]
+    },
+    "action1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Star Momentum Alert",
+        "level": "h3"
+      }
+    },
+    "action1_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_cat",
+        "action1_size"
+      ]
+    },
+    "action1_cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth",
+        "variant": "default"
+      }
+    },
+    "action1_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fires one targeted notification when the 300★ projection window lands 7–14 days out on a Tue–Thu — bridging show-hn-draft ready and operator-knows-when-to-dispatch."
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_title",
+        "action2_tags",
+        "action2_desc"
+      ]
+    },
+    "action2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "RSS/Atom Feed Column for minitor",
+        "level": "h3"
+      }
+    },
+    "action2_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_cat",
+        "action2_size"
+      ]
+    },
+    "action2_cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "default"
+      }
+    },
+    "action2_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Adds keyless RSS 2.0 / Atom 1.0 / JSON Feed support — covers every blog, newsletter, status page, and package changelog, the last universal monitoring primitive not yet in minitor's 34 column types."
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_title",
+        "action3_tags",
+        "action3_desc"
+      ]
+    },
+    "action3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-freshness Backport to aeon-agent",
+        "level": "h3"
+      }
+    },
+    "action3_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_cat",
+        "action3_size"
+      ]
+    },
+    "action3_cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "default"
+      }
+    },
+    "action3_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Ships today's skill-freshness (aeon PR #157) to this fork — closes the silent-staleness gap where tweet-allocator could run successfully on week-old token-report data with no error signal."
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_title",
+        "action4_tags",
+        "action4_desc"
+      ]
+    },
+    "action4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "pr-triage Backport to aeon-agent",
+        "level": "h3"
+      }
+    },
+    "action4_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_cat",
+        "action4_size"
+      ]
+    },
+    "action4_cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX/Community",
+        "variant": "default"
+      }
+    },
+    "action4_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Backports the Apr-29 first-touch PR triage skill (aeon PR #147) — aeon-agent has no PR triage path at all; pure SKILL.md + state JSON, no workflows-scope PAT needed."
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_title",
+        "action5_tags",
+        "action5_desc"
+      ]
+    },
+    "action5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "v4 Readiness Checker",
+        "level": "h3"
+      }
+    },
+    "action5_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_cat",
+        "action5_size"
+      ]
+    },
+    "action5_cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX/Community",
+        "variant": "default"
+      }
+    },
+    "action5_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "workflow_dispatch skill that reads the fork's aeon.yml + skills.json + MEMORY.md and generates a personalized upgrade checklist; v4 ~2 weeks out, 41 forks running on current architecture."
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-04.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

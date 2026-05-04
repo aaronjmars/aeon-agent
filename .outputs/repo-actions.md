@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-05-02*
-Generated from analysis of aaronjmars/aeon (260★, 39 forks), aeon-agent (3 open PRs), and minitor (5★, 31 column types). v4 redesign ~2 weeks out, 300-star milestone ~10 days away, 9 open unreviewed PRs across all repos.
+*Repo Action Ideas — 2026-05-04*
+Generated from analysis of aaronjmars/aeon (270★, 41 forks), aaronjmars/aeon-agent (7★), aaronjmars/minitor (5★, 34 column types).
 
-1. Operator Value Scorecard (DX, Small)
-   Weekly Monday skill synthesizing skill-analytics + heartbeat + tweet-allocator + token-report + repo-pulse into a 3-paragraph plain-language answer to 'was this worth it?' — carried 2 cycles
+1. Star Momentum Alert (Growth, Small)
+   Fires one targeted notification when the 300★ projection window lands 7–14 days out on a Tue–Thu — bridging show-hn-draft ready and operator-knows-when-to-dispatch.
 
-2. Skill Dependency Freshness Validator (Feature, Small)
-   Scans every SKILL.md and aeon.yml consume: edges, checks mtime of each upstream file, and alerts when a chained skill is reading stale data — carried 2 cycles
+2. RSS/Atom Feed Column for minitor (Integration, Small)
+   Adds keyless RSS 2.0 / Atom 1.0 / JSON Feed support — covers every blog, newsletter, status page, and package changelog, the last universal monitoring primitive not yet in minitor's 34 column types.
 
-3. Star Momentum Alert (Growth, Small)
-   Reads 14 days of repo-pulse deltas, projects 300-star milestone date, fires a one-time notification when the launch window aligns with Tue–Thu morning — coordinates show-hn-draft dispatch timing
+3. skill-freshness Backport to aeon-agent (Feature, Small)
+   Ships today's skill-freshness (aeon PR #157) to this fork — closes the silent-staleness gap where tweet-allocator could run successfully on week-old token-report data with no error signal.
 
-4. Mastodon Column for minitor (Integration, Small)
-   Public API, no key required; completes decentralized social trifecta alongside Bluesky (shipped today) + Farcaster — standard 3-file plugin, same pattern as Bluesky column
+4. pr-triage Backport to aeon-agent (DX/Community, Small)
+   Backports the Apr-29 first-touch PR triage skill (aeon PR #147) — aeon-agent has no PR triage path at all; pure SKILL.md + state JSON, no workflows-scope PAT needed.
 
-5. v4 Readiness Checker (DX, Small)
-   workflow_dispatch skill that reads current aeon.yml + skills.json and generates a personalized upgrade checklist for 39 forks before v4 ships in ~2 weeks
+5. v4 Readiness Checker (DX/Community, Small)
+   workflow_dispatch skill that reads the fork's aeon.yml + skills.json + MEMORY.md and generates a personalized upgrade checklist; v4 ~2 weeks out, 41 forks running on current architecture.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-02.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-04.md
