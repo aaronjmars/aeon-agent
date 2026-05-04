@@ -1,0 +1,146 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-05-04"
+      },
+      "children": [
+        "summary_text",
+        "sep1",
+        "shipped_heading",
+        "shipped_items",
+        "sep2",
+        "stats_section",
+        "sep3",
+        "full_update_link"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "The skill backlog cleared in a single merge train and minitor became a real product.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "shipped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      }
+    },
+    "shipped_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped_1",
+        "shipped_2",
+        "shipped_3",
+        "shipped_4"
+      ]
+    },
+    "shipped_1": {
+      "type": "Text",
+      "props": {
+        "text": "Six aeon skills closed three brainstorm cycles of carry: pr-triage, thread-formatter, smithery-manifest, show-hn-draft, fork-cohort, operator-scorecard (all enabled: false)"
+      }
+    },
+    "shipped_2": {
+      "type": "Text",
+      "props": {
+        "text": "minitor went 0 → 32 column types in 9 days, including the decentralized social trifecta (Farcaster + Bluesky + Mastodon)"
+      }
+    },
+    "shipped_3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent quiet hardening: skill-runs --duration mode, cron-state viewer, bankr error marker, self-improve PR-filter precision fix"
+      }
+    },
+    "shipped_4": {
+      "type": "Text",
+      "props": {
+        "text": "First external community PR of the month merged (tomscaria shell-injection fix on dashboard secrets)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_prs",
+        "stat_stars",
+        "stat_forks",
+        "stat_aeon_7d",
+        "stat_aeon_30d"
+      ]
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs merged",
+        "value": "24"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "270",
+        "delta": "+26",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "+5",
+        "trend": "up"
+      }
+    },
+    "stat_aeon_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON 7d",
+        "value": "-17.8%",
+        "trend": "down"
+      }
+    },
+    "stat_aeon_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON 30d",
+        "value": "+483%",
+        "trend": "up"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full_update_link": {
+      "type": "Link",
+      "props": {
+        "label": "Full update",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-04.md"
+      }
+    }
+  }
+}
