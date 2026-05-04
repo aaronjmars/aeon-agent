@@ -1,0 +1,171 @@
+{
+  "root": "root_card",
+  "state": {},
+  "elements": {
+    "root_card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-05-04"
+      },
+      "children": [
+        "repo_link",
+        "separator_1",
+        "stats_grid",
+        "separator_2",
+        "heading_stargazers",
+        "stargazers_stack",
+        "separator_3",
+        "heading_forks",
+        "forks_stack"
+      ]
+    },
+    "repo_link": {
+      "type": "Link",
+      "props": {
+        "label": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "270",
+        "delta": "+4",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "41",
+        "delta": "+2",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_stargazer_1",
+        "link_stargazer_2",
+        "link_stargazer_3",
+        "link_stargazer_4"
+      ]
+    },
+    "link_stargazer_1": {
+      "type": "Link",
+      "props": {
+        "label": "intothemoonlite",
+        "href": "https://github.com/intothemoonlite"
+      },
+      "children": []
+    },
+    "link_stargazer_2": {
+      "type": "Link",
+      "props": {
+        "label": "craig-halliday",
+        "href": "https://github.com/craig-halliday"
+      },
+      "children": []
+    },
+    "link_stargazer_3": {
+      "type": "Link",
+      "props": {
+        "label": "infrareactive",
+        "href": "https://github.com/infrareactive"
+      },
+      "children": []
+    },
+    "link_stargazer_4": {
+      "type": "Link",
+      "props": {
+        "label": "JotaSXBR",
+        "href": "https://github.com/JotaSXBR"
+      },
+      "children": []
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "forks_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_1",
+        "link_fork_2"
+      ]
+    },
+    "link_fork_1": {
+      "type": "Link",
+      "props": {
+        "label": "infrareactive/aeon",
+        "href": "https://github.com/infrareactive/aeon"
+      },
+      "children": []
+    },
+    "link_fork_2": {
+      "type": "Link",
+      "props": {
+        "label": "KingKaonix/aeon",
+        "href": "https://github.com/KingKaonix/aeon"
+      },
+      "children": []
+    }
+  }
+}
