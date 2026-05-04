@@ -1,14 +1,12 @@
-*Agent Self-Improvement — 2026-05-02*
+*Agent Self-Improvement — 2026-05-04*
 
-Tightens the open-improvement-PR awareness check in skills/self-improve/SKILL.md from `gh pr list --search "improve:"` (matches title OR body) to a `--jq` post-filter on `title | startswith("improve:") or test("^improve\\(")` (title prefix only). Fixes a sleeper bug in the 3-PR cap that has been silently misclassifying unrelated PRs since day one.
+Heartbeat-only fallback for the operator-scorecard agent-health verdict. The weekly scorecard backport that merged earlier today (PR #28) would have permanently reported WATCH on every Monday in this fork, because it depends on a skill that isn't enabled here. This patches the verdict logic before the first natural run on May 11.
 
-Why: today's PR #25 `feat(skill-runs)` showed up in the existing open-improvement-PR query — not because it's an improve PR, but because GitHub's `--search` is full-text and PR #25's body mentions self-improve as a downstream consumer. This run was correctly under cap (1 < 3) but the query was fragile — once a few more `feat:`/`fix:` PRs whose bodies mention "improve" pile up, self-improve would silently stop running.
+Why: operator-scorecard reads `articles/skill-analytics-*.md` for paragraph 1, but skill-analytics is not enabled in aeon-agent (0 such articles on disk). Under the original spec, `agent_health_source=missing` fired every run, paragraph 1 emitted INSUFFICIENT_DATA, and the worst-of-three rollup demoted the overall weekly verdict to WATCH — even on weeks where every heartbeat ran clean (the steady state on this fork). That defeats the "was this week worth it?" answer the skill is supposed to deliver.
 
 What changed:
-- `skills/self-improve/SKILL.md`: replace `--search "improve:"` with title-prefix jq filter; add one-line rationale block so future maintainers don't revert
-- `memory/MEMORY.md`: Skills Built row
-- `memory/logs/2026-05-02.md`: self-improve log entry
+- skills/operator-scorecard/SKILL.md (+31/-10): step 2d split into three branches — A (skill-analytics present → original logic), B (skill-analytics missing, heartbeat present → verdict from heartbeat counts alone), C (both missing → preserved INSUFFICIENT_DATA). Article paragraph, notification line, and log line all resolve per-branch placeholders so paragraph 1 doesn't print null/null/null. Constraints adds an explicit "heartbeat-only is first-class, not a degraded mode" note so future maintainers don't revert it.
 
-Impact: self-improve's pile-up guard now counts only true `improve:` / `improve(scope):` PRs. Validated against every historical self-improve PR (#1 / #4 / #5 / #6 / #8 / #9 / #12 / #13 / #14 / #15 / #16 / #17 / #18 / #21 / #22) — all match; PR #25 correctly excluded.
+Impact: when operator-scorecard is enabled (still shipped enabled: false, first natural run May 11 if turned on), the weekly scorecard reports a real OK/WATCH/DEGRADED verdict computed from heartbeat history instead of permanent WATCH. Heartbeat itself audits every scheduled skill against logs + Actions runs each evening, so a week of clean HEARTBEAT_OK reports is a real OK signal — not insufficient data.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/26
+PR: https://github.com/aaronjmars/aeon-agent/pull/29
