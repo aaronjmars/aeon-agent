@@ -199,3 +199,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-04,tweet-allocator,claude-sonnet-4-6,18,4767,561972,27401
 2026-05-04,weekly-shiplog,claude-opus-4-7,39,21715,2376687,74782
 2026-05-04,repo-pulse,claude-sonnet-4-6,10,3790,307946,31845
+2026-05-04,feature,claude-opus-4-7,134,76714,16116455,217857
