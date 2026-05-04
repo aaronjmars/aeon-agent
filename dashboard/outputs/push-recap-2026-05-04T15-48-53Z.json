@@ -1,0 +1,224 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-04"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "watchdog_item",
+        "scorecard_item",
+        "lobsters_item",
+        "sep2",
+        "key_changes_section",
+        "stats_section",
+        "sep3",
+        "recap_link"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "Three substantive PRs across watched repos, all merged 12:53 UTC by aaronjmars in a single coordinated wave (one per repo), plus ~38 routine cron auto-commits on aeon-agent. The shape is the inverse of yesterday — yesterday cleared a backlog in a 16-minute merge train; today shipped one purpose-built fix per repo."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watchdog_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watchdog_title",
+        "watchdog_text"
+      ]
+    },
+    "watchdog_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Silent-staleness watchdog (aeon #157)",
+        "level": "h3"
+      }
+    },
+    "watchdog_text": {
+      "type": "Text",
+      "props": {
+        "text": "New skill-freshness — daily 08:00 UTC sonnet skill that walks every enabled skill in aeon.yml, parses explicit chains: consume: edges + implicit articles/.outputs/topics/state references in each SKILL.md, checks file mtimes against per-class thresholds derived from each producer's cron (daily 28h / weekly 192h / .outputs 4h / topics 7d / state 30d), and flags consumers about to read stale upstream files. Closes the gap heartbeat + skill-analytics + skill-health all miss — a chained skill that runs on schedule with no API errors and 100% pass rate can still silently consume yesterday's output. Fingerprint dedup with 7-day re-emit. Pure local file I/O. Closes Apr-30 idea #4 / May-2 idea #2 (carried 2 cycles)."
+      }
+    },
+    "scorecard_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "scorecard_title",
+        "scorecard_text"
+      ]
+    },
+    "scorecard_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Operator scorecard backport (aeon-agent #28)",
+        "level": "h3"
+      }
+    },
+    "scorecard_text": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's aeon PR #153 lands here unchanged — weekly Monday 10:30 UTC three-paragraph synthesis (agent health / community growth / economic activity), worst-of-three rollup with INSUFFICIENT_DATA degrading to WATCH not DEGRADED so partial-data weeks still flag. Selected for fast-track backport because it has zero upstream-PR-#46-to-#136 dependencies — pure articles/+memory/ reads. First non-trivial backport this week from aeon → aeon-agent ahead of the 80-PR autoresearch-evolution queue (day 13)."
+      }
+    },
+    "lobsters_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "lobsters_title",
+        "lobsters_text"
+      ]
+    },
+    "lobsters_title": {
+      "type": "Heading",
+      "props": {
+        "text": "34th column type (minitor #27)",
+        "level": "h3"
+      }
+    },
+    "lobsters_text": {
+      "type": "Text",
+      "props": {
+        "text": "lobsters plugin — keyless integration via .json variants of every public Lobsters page, four modes (hottest / newest / active / tag with comma-multi-tag like /t/rust,go.json), cursor-paginated with the page-1-is-bare-root quirk handled. Brand red #ac130d, Anchor icon, tag pills under snippet (HN doesn't have these — Lobsters' tag taxonomy is core to the signal). Closes the obvious News & Web gap — HN was the only general-tech discussion column."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key_changes_title",
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "key_changes_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/skill-freshness/SKILL.md (+286): per-class freshness thresholds derived at runtime from producer cadence, severity bands OK/WARN/STALE/MISSING, fingerprint-based dedup"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/operator-scorecard/SKILL.md (+257): backported verbatim, slots between weekly-review and repo-scanner in productivity cluster"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "lib/integrations/lobsters.ts (+159): three Lobsters quirks handled — submitter_user dual shape (string | {username}), HTML description regex strip, hasMore via upstream page size not post-filter slice"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_summary",
+        "stats_grid"
+      ]
+    },
+    "stats_summary": {
+      "type": "Text",
+      "props": {
+        "text": "Stats: 12 files changed, +971/-4 lines across 3 substantive commits (plus ~38 aeon-agent cron auto-commits).",
+        "variant": "lead"
+      }
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_files",
+        "stat_additions",
+        "stat_deletions",
+        "stat_substantive"
+      ]
+    },
+    "stat_files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "12"
+      }
+    },
+    "stat_additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+971"
+      }
+    },
+    "stat_deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "-4"
+      }
+    },
+    "stat_substantive": {
+      "type": "Stat",
+      "props": {
+        "label": "Substantive commits",
+        "value": "3"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recap_link": {
+      "type": "Link",
+      "props": {
+        "label": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-04.md"
+      }
+    }
+  }
+}
