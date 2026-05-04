@@ -120,6 +120,7 @@ skills:
   spawn-instance: { enabled: false, schedule: "workflow_dispatch", var: "" }
   fleet-control: { enabled: false, schedule: "0 9,15 * * *" }
   weekly-review: { enabled: false, schedule: "0 19 * * 1" }
+  operator-scorecard: { enabled: false, schedule: "30 10 * * 1", model: "claude-sonnet-4-6", var: "" }
   repo-scanner: { enabled: false, schedule: "0 15 * * 0", model: "claude-sonnet-4-6", var: "" }
   workflow-security-audit: { enabled: false, schedule: "0 16 * * 0" }
   security: { enabled: false, schedule: "0 16 * * *" }

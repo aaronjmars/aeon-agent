@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-04-04T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 55,
+  "total": 56,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -460,6 +460,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon weekly-review"
+    },
+    {
+      "slug": "operator-scorecard",
+      "name": "operator-scorecard",
+      "description": "Weekly plain-language synthesis of agent health + community growth + economic activity — answers \"was this week worth it?\" in one notification",
+      "category": "productivity",
+      "schedule": "30 10 * * 1",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon operator-scorecard"
     },
     {
       "slug": "self-review",
