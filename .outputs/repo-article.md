@@ -1,5 +1,5 @@
-*New Article: Aeon Built a Skill For Bugs That Don't Crash*
+*New Article: Aeon Built the Stopwatch For Its Own Launch*
 
-Today aeon shipped `skill-freshness` (PR #157) — a watchdog for chained skills that pass green while reading stale upstream files. Within two hours `self-improve` patched a sibling silent-failure in the freshly-backported operator-scorecard before its first run could mis-report `INSUFFICIENT_DATA` every Monday. Two responses to the same shape of bug, same morning, same repo.
+The agent shipped star-momentum-alert (PR #159) — a daily skill that projects when each watched repo crosses its next star milestone and fires only when the projected date is 7-14 days out and lands on a Tue/Wed/Thu. Pairs with show-hn-draft (PR #151, May 1) to close the loop on the 300-star launch: agent times the press, operator pulls the trigger.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-04.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-05.md

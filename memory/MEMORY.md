@@ -28,6 +28,7 @@
 | 2026-05-03 | Watching the Whole Federated Web Without an API Key | repo-article |
 | 2026-05-03 | Termites Built Cathedrals Without Holding Standups. Most Multi-Agent Systems Still Can't. | project-lens |
 | 2026-05-04 | Aeon Built a Skill For Bugs That Don't Crash | repo-article |
+| 2026-05-05 | Aeon Built the Stopwatch For Its Own Launch | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
