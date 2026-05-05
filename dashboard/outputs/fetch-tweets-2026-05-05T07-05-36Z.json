@@ -1,0 +1,276 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-05)"
+      },
+      "children": [
+        "tweets_stack"
+      ]
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4",
+        "tweet_5",
+        "tweet_6",
+        "tweet_7",
+        "tweet_8",
+        "tweet_9"
+      ]
+    },
+    "tweet_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1_card",
+        "tweet_1_link"
+      ]
+    },
+    "tweet_1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "text": "we might change how people work and it will be so wonderful @aeonframework",
+        "likes": 13,
+        "retweets": 2
+      }
+    },
+    "tweet_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2051377282925609093"
+      }
+    },
+    "tweet_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2_card",
+        "tweet_2_link"
+      ]
+    },
+    "tweet_2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Mnosh06",
+        "text": "Aeon v3 running 1 month fully autonomously; ships PRs for Aeon + MiroShark; v4 redesign ETA 2 weeks from early May",
+        "likes": 9,
+        "retweets": 3
+      }
+    },
+    "tweet_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Mnosh06/status/2051205925059645734"
+      }
+    },
+    "tweet_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3_card",
+        "tweet_3_link"
+      ]
+    },
+    "tweet_3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "russian_acai",
+        "text": "most of miroshark is built and maintained by @aeonframework autonomously — something great is being tested here",
+        "likes": 7,
+        "retweets": 1
+      }
+    },
+    "tweet_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/russian_acai/status/2051294718001111394"
+      }
+    },
+    "tweet_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4_card",
+        "tweet_4_link"
+      ]
+    },
+    "tweet_4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "text": "$AEON Framework Built It. $MIROSHARK AI Hunts With It.",
+        "likes": 6,
+        "retweets": 2
+      }
+    },
+    "tweet_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2051363944124551340"
+      }
+    },
+    "tweet_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_5_card",
+        "tweet_5_link"
+      ]
+    },
+    "tweet_5_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Karma_Nfa",
+        "text": "GM market update including $AEON in tracked token list",
+        "likes": 5,
+        "retweets": 1
+      }
+    },
+    "tweet_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2051298003416215634"
+      }
+    },
+    "tweet_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_6_card",
+        "tweet_6_link"
+      ]
+    },
+    "tweet_6_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "russian_acai",
+        "text": "vibecoding will soon be a thing of the past... tell @aeonframework, let it build and maintain for you, autonomously",
+        "likes": 4,
+        "retweets": 0
+      }
+    },
+    "tweet_6_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/russian_acai/status/2051388823980892614"
+      }
+    },
+    "tweet_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_7_card",
+        "tweet_7_link"
+      ]
+    },
+    "tweet_7_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "text": "\"gamechanger is $AEON $AEON is gamechanger\" (quoting aaronjmars)",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet_7_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2051377551340134579"
+      }
+    },
+    "tweet_8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_8_card",
+        "tweet_8_link"
+      ]
+    },
+    "tweet_8_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "NicolasSims_",
+        "text": "$AEON listed at #11 in top losers summary",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "tweet_8_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/NicolasSims_/status/2051257067789557841"
+      }
+    },
+    "tweet_9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_9_card",
+        "tweet_9_link"
+      ]
+    },
+    "tweet_9_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BaseWhaleAlert",
+        "text": "DRB whale bought $2.34K of $AEON at $272.23K MC",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet_9_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BaseWhaleAlert/status/2051377619543654864"
+      }
+    }
+  }
+}
