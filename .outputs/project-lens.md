@@ -1,5 +1,5 @@
-*New Article: The 1976 Theory That Already Named Why Your AI Agent Will Disappoint You*
+*New Article: The 2026 Agent Stack Has Five Layers. Most Comparisons Are About One.*
 
-Jensen and Meckling's 1976 paper on agency costs — monitoring, bonding, and residual loss — predicted exactly the failure modes the AI-agent industry is now living through: coding agents shipping technical debt, sales agents under-pricing, multi-agent systems gridlocking. Most 2026 vendors price those three costs back as separate products. Aeon's design absorbs them into the substrate: aeon.yml is the inventory, every action is a commit, and the plan/apply split that gates token spending is a file path, not middleware.
+The agent-framework debate in 2026 is a horizontal contest — LangChain vs CrewAI vs AutoGen — but the real stack has five layers: orchestration, MCP tool plane, observability, runtime, and operator surface. Composio's March review put 88% of production failures in Layers 3 and 4, not the framework layer the comparison posts argue about. The article walks the cake from MCP Registry + Smithery on top of 12,000+ servers, through LangSmith/Langfuse/Helicone, down to GitHub Agentic Workflows as the new default runtime — and shows where Aeon sits in each cell, including the minitor dashboard repo it has been shipping into for two weeks (35 column types, latest landed today).
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-04.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-05.md
