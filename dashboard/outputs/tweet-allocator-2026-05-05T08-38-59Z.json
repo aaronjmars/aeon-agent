@@ -1,0 +1,390 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-05"
+      },
+      "children": [
+        "budget-text",
+        "sep-1",
+        "tweets-stack",
+        "sep-2",
+        "total-text"
+      ]
+    },
+    "budget-text": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "tweet-4"
+      ]
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1-header",
+        "tweet-1-card",
+        "tweet-1-meta"
+      ]
+    },
+    "tweet-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1-num",
+        "tweet-1-author"
+      ]
+    },
+    "tweet-1-num": {
+      "type": "Badge",
+      "props": {
+        "text": "1"
+      },
+      "children": []
+    },
+    "tweet-1-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/Mnosh06"
+      },
+      "children": []
+    },
+    "tweet-1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Mnosh06",
+        "handle": "Mnosh06",
+        "text": "Aeon v3 running 1 month fully autonomously; v4 redesign ETA 2 weeks from early May"
+      },
+      "children": []
+    },
+    "tweet-1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1-amount",
+        "tweet-1-score",
+        "tweet-1-link"
+      ]
+    },
+    "tweet-1-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocated",
+        "value": "$3.75 in $AEON"
+      },
+      "children": []
+    },
+    "tweet-1-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "18"
+      },
+      "children": []
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Mnosh06/status/2051205925059645734"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2-header",
+        "tweet-2-card",
+        "tweet-2-meta"
+      ]
+    },
+    "tweet-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-2-num",
+        "tweet-2-author"
+      ]
+    },
+    "tweet-2-num": {
+      "type": "Badge",
+      "props": {
+        "text": "2"
+      },
+      "children": []
+    },
+    "tweet-2-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/DaMikey23"
+      },
+      "children": []
+    },
+    "tweet-2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "handle": "DaMikey23",
+        "text": "$AEON Framework Built It. $MIROSHARK AI Hunts With It."
+      },
+      "children": []
+    },
+    "tweet-2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-2-amount",
+        "tweet-2-score",
+        "tweet-2-link"
+      ]
+    },
+    "tweet-2-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocated",
+        "value": "$2.50 in $AEON"
+      },
+      "children": []
+    },
+    "tweet-2-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "12"
+      },
+      "children": []
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2051363944124551340"
+      },
+      "children": []
+    },
+    "tweet-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3-header",
+        "tweet-3-card",
+        "tweet-3-meta"
+      ]
+    },
+    "tweet-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-3-num",
+        "tweet-3-author"
+      ]
+    },
+    "tweet-3-num": {
+      "type": "Badge",
+      "props": {
+        "text": "3"
+      },
+      "children": []
+    },
+    "tweet-3-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/russian_acai"
+      },
+      "children": []
+    },
+    "tweet-3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "russian_acai",
+        "handle": "russian_acai",
+        "text": "most of miroshark is built and maintained by @aeonframework autonomously"
+      },
+      "children": []
+    },
+    "tweet-3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-3-amount",
+        "tweet-3-score",
+        "tweet-3-link"
+      ]
+    },
+    "tweet-3-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocated",
+        "value": "$2.08 in $AEON"
+      },
+      "children": []
+    },
+    "tweet-3-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "10"
+      },
+      "children": []
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/russian_acai/status/2051294718001111394"
+      },
+      "children": []
+    },
+    "tweet-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4-header",
+        "tweet-4-card",
+        "tweet-4-meta"
+      ]
+    },
+    "tweet-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-4-num",
+        "tweet-4-author"
+      ]
+    },
+    "tweet-4-num": {
+      "type": "Badge",
+      "props": {
+        "text": "4"
+      },
+      "children": []
+    },
+    "tweet-4-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/Karma_Nfa"
+      },
+      "children": []
+    },
+    "tweet-4-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Karma_Nfa",
+        "handle": "Karma_Nfa",
+        "text": "GM market update listing $AEON among tracked tokens"
+      },
+      "children": []
+    },
+    "tweet-4-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-4-amount",
+        "tweet-4-score",
+        "tweet-4-link"
+      ]
+    },
+    "tweet-4-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocated",
+        "value": "$1.67 in $AEON"
+      },
+      "children": []
+    },
+    "tweet-4-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "8"
+      },
+      "children": []
+    },
+    "tweet-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2051298003416215634"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "total-text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 4 authors",
+        "variant": "lead"
+      },
+      "children": []
+    }
+  }
+}
