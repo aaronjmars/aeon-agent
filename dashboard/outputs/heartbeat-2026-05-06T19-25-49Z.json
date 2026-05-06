@@ -1,0 +1,94 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert-stalled",
+        "pr-section",
+        "separator",
+        "alert-success"
+      ]
+    },
+    "alert-stalled": {
+      "type": "Alert",
+      "props": {
+        "title": "PR stalled",
+        "message": "PR #156 has been open for ~73h with no review",
+        "type": "warning"
+      }
+    },
+    "pr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-link",
+        "pr-metadata"
+      ]
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fix(reply-maker): wire XAI prefetch case + cache-read path",
+        "href": "https://github.com/aaronjmars/aeon/pull/156",
+        "source": "aaronjmars/aeon"
+      }
+    },
+    "pr-metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "created-info",
+        "author-info"
+      ]
+    },
+    "created-info": {
+      "type": "Text",
+      "props": {
+        "text": "Created: May 3 17:31 UTC",
+        "variant": "caption"
+      }
+    },
+    "author-info": {
+      "type": "Text",
+      "props": {
+        "text": "Author: tomscaria",
+        "variant": "caption"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-success": {
+      "type": "Alert",
+      "props": {
+        "title": "Scheduled skills healthy",
+        "message": "All 11 scheduled skills for May 6 ran cleanly",
+        "type": "success"
+      }
+    }
+  }
+}

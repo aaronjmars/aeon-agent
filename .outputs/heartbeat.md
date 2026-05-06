@@ -1,1 +1,1 @@
-Heartbeat — PR stalled: aeon-agent #29 (improve/operator-scorecard: heartbeat-only fallback for forks without skill-analytics) has been open 30h with no reviews. Self-improve wrote this fix on May 4 to patch operator-scorecard before its first natural Monday run on May 11. Merge when ready: https://github.com/aaronjmars/aeon-agent/pull/29
+⚠️ PR stalled: aaronjmars/aeon PR #156 (fix(reply-maker): wire XAI prefetch case + cache-read path) has been open for ~73h with no review. Created May 3 17:31 UTC by tomscaria. All 11 scheduled skills for May 6 ran cleanly.
