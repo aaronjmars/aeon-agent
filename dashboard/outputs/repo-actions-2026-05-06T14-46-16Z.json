@@ -1,0 +1,302 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-05-06"
+      },
+      "children": [
+        "action1",
+        "sep1",
+        "action2",
+        "sep2",
+        "action3",
+        "sep3",
+        "action4",
+        "sep4",
+        "action5",
+        "sep_final",
+        "details_link"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_title",
+        "action1_tags",
+        "action1_desc"
+      ]
+    },
+    "action1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. star-milestone skill",
+        "level": "h3"
+      }
+    },
+    "action1_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_badge1",
+        "action1_badge2"
+      ]
+    },
+    "action1_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "action1_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "action1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Notifies when watched repos cross milestones (300, 500, 1000⭐); the referenced-but-missing companion to star-momentum-alert, needed before the 300-star crossing ~4 days away."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_title",
+        "action2_tags",
+        "action2_desc"
+      ]
+    },
+    "action2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Reddit column for minitor",
+        "level": "h3"
+      }
+    },
+    "action2_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_badge1",
+        "action2_badge2"
+      ]
+    },
+    "action2_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration"
+      }
+    },
+    "action2_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium"
+      }
+    },
+    "action2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Keyless public JSON API, four modes (hot/new/rising/top), fills the last major social/news gap in minitor's column cluster."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_title",
+        "action3_tags",
+        "action3_desc"
+      ]
+    },
+    "action3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. fork-cohort backport to aeon-agent",
+        "level": "h3"
+      }
+    },
+    "action3_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_badge1",
+        "action3_badge2"
+      ]
+    },
+    "action3_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "action3_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "action3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Brings weekly POWER/ACTIVE/STALE/COLD fork activation view to the running agent; natural next backport after skill-freshness (May 5) in the same-day-after pattern."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_title",
+        "action4_tags",
+        "action4_desc"
+      ]
+    },
+    "action4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. v4-readiness backport to aeon-agent",
+        "level": "h3"
+      }
+    },
+    "action4_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_badge1",
+        "action4_badge2"
+      ]
+    },
+    "action4_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "action4_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "action4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Backports today's aeon PR #160 same-day so the running agent has the v4 preflight checker ready before v4 drops in ~2 weeks."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_title",
+        "action5_tags",
+        "action5_desc"
+      ]
+    },
+    "action5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. thread-formatter backport to aeon-agent",
+        "level": "h3"
+      }
+    },
+    "action5_tags": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_badge1",
+        "action5_badge2"
+      ]
+    },
+    "action5_badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "action5_badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small"
+      }
+    },
+    "action5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Brings the 5-tweet auto-formatter (aeon PR #148, Apr 30) to this fork's daily content pipeline — pairs with star-momentum-alert to time the 300-star launch thread."
+      }
+    },
+    "sep_final": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details: repo-actions-2026-05-06.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-06.md"
+      }
+    }
+  }
+}
