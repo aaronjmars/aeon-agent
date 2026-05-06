@@ -64,11 +64,16 @@ xai_search() {
   local response
   local http_code
   local body
+  # max_output_tokens lifted from the API default to fit reasoning + a list of
+  # results. grok-4-1-fast is a thinking model and can spend 5-7k tokens on
+  # reasoning alone (May 6 fetch-tweets: 6,486 reasoning of 7,354 total → cache
+  # truncated at 2 tweets out of 10+ requested). 16384 leaves ~9k for output
+  # text after typical reasoning, enough for a 10-15 tweet numbered list.
   body=$(jq -n \
     --arg model "grok-4-1-fast" \
     --arg prompt "$prompt" \
     --argjson tools "$tools" \
-    '{model: $model, input: [{role: "user", content: $prompt}], tools: $tools}')
+    '{model: $model, input: [{role: "user", content: $prompt}], tools: $tools, max_output_tokens: 16384}')
   # Allow up to 3 attempts (1 initial + 2 retries). XAI api occasionally has
   # transient 60s-ish timeouts that recover on retry — retry budget is per-call.
   local attempt=1
