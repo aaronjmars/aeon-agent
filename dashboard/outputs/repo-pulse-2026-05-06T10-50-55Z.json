@@ -1,0 +1,280 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "date-text",
+        "sep1",
+        "repo1-section",
+        "sep2",
+        "repo2-section"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-06",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "repo1-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo1-heading",
+        "repo1-stats",
+        "repo1-stargazers-heading",
+        "repo1-stargazers-list",
+        "repo1-forks-heading",
+        "repo1-forks-list"
+      ]
+    },
+    "repo1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "repo1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo1-stars-stat",
+        "repo1-forks-stat"
+      ]
+    },
+    "repo1-stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "276",
+        "delta": "+6",
+        "trend": "up"
+      }
+    },
+    "repo1-forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "43",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "repo1-stargazers-heading": {
+      "type": "Text",
+      "props": {
+        "text": "New stargazers:",
+        "variant": "body"
+      }
+    },
+    "repo1-stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "user-chipoto69",
+        "user-lyknice23",
+        "user-MightyJax",
+        "user-FreyjasWrath",
+        "user-gitpushnico",
+        "user-hexsprite"
+      ]
+    },
+    "user-chipoto69": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/chipoto69",
+        "href": "https://github.com/chipoto69"
+      }
+    },
+    "user-lyknice23": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/lyknice23",
+        "href": "https://github.com/lyknice23"
+      }
+    },
+    "user-MightyJax": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/MightyJax",
+        "href": "https://github.com/MightyJax"
+      }
+    },
+    "user-FreyjasWrath": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/FreyjasWrath",
+        "href": "https://github.com/FreyjasWrath"
+      }
+    },
+    "user-gitpushnico": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/gitpushnico",
+        "href": "https://github.com/gitpushnico"
+      }
+    },
+    "user-hexsprite": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/hexsprite",
+        "href": "https://github.com/hexsprite"
+      }
+    },
+    "repo1-forks-heading": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "body"
+      }
+    },
+    "repo1-forks-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-FreyjasWrath-aeon",
+        "fork-ether-btc-aeon"
+      ]
+    },
+    "fork-FreyjasWrath-aeon": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/FreyjasWrath/aeon",
+        "href": "https://github.com/FreyjasWrath/aeon"
+      }
+    },
+    "fork-ether-btc-aeon": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/ether-btc/aeon",
+        "href": "https://github.com/ether-btc/aeon"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "repo2-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo2-heading",
+        "repo2-stats",
+        "repo2-stargazers-heading",
+        "repo2-stargazers-list",
+        "repo2-forks-heading",
+        "repo2-forks-list"
+      ]
+    },
+    "repo2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/minitor",
+        "level": "h2"
+      }
+    },
+    "repo2-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo2-stars-stat",
+        "repo2-forks-stat"
+      ]
+    },
+    "repo2-stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "7",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "repo2-forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "1",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "repo2-stargazers-heading": {
+      "type": "Text",
+      "props": {
+        "text": "New stargazers:",
+        "variant": "body"
+      }
+    },
+    "repo2-stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "user-strotski"
+      ]
+    },
+    "user-strotski": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/strotski",
+        "href": "https://github.com/strotski"
+      }
+    },
+    "repo2-forks-heading": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "body"
+      }
+    },
+    "repo2-forks-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-strotski-minitor"
+      ]
+    },
+    "fork-strotski-minitor": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/strotski/minitor",
+        "href": "https://github.com/strotski/minitor"
+      }
+    }
+  }
+}
