@@ -1,12 +1,12 @@
-*Agent Self-Improvement — 2026-05-04*
+*Agent Self-Improvement — 2026-05-06*
 
-Heartbeat-only fallback for the operator-scorecard agent-health verdict. The weekly scorecard backport that merged earlier today (PR #28) would have permanently reported WATCH on every Monday in this fork, because it depends on a skill that isn't enabled here. This patches the verdict logic before the first natural run on May 11.
+Raised `max_output_tokens` to 16384 in the shared `xai_search` helper in `scripts/prefetch-xai.sh`. `grok-4-1-fast` is a thinking model — on some days its reasoning trace can swallow the default output token budget before the actual answer is written. Today's `fetch-tweets` run hit exactly that: 6,486 of 7,354 tokens spent on reasoning, leaving room for only 2 tweets in the cache when the prompt asked for 10+.
 
-Why: operator-scorecard reads `articles/skill-analytics-*.md` for paragraph 1, but skill-analytics is not enabled in aeon-agent (0 such articles on disk). Under the original spec, `agent_health_source=missing` fired every run, paragraph 1 emitted INSUFFICIENT_DATA, and the worst-of-three rollup demoted the overall weekly verdict to WATCH — even on weeks where every heartbeat ran clean (the steady state on this fork). That defeats the "was this week worth it?" answer the skill is supposed to deliver.
+Why: today's fetch-tweets cache (07:19 UTC) logged `Extracted 2 tweets — cache output was truncated at token limit (7,354 total tokens, 6,486 used for reasoning)`. The same helper backs refresh-x, remix-tweets, tweet-roundup, narrative-tracker, and article — all five were one bad-reasoning-day away from the same failure.
 
 What changed:
-- skills/operator-scorecard/SKILL.md (+31/-10): step 2d split into three branches — A (skill-analytics present → original logic), B (skill-analytics missing, heartbeat present → verdict from heartbeat counts alone), C (both missing → preserved INSUFFICIENT_DATA). Article paragraph, notification line, and log line all resolve per-branch placeholders so paragraph 1 doesn't print null/null/null. Constraints adds an explicit "heartbeat-only is first-class, not a degraded mode" note so future maintainers don't revert it.
+- `scripts/prefetch-xai.sh`: add `max_output_tokens: 16384` to the request body in the `xai_search` helper. Comment cites the May 6 trigger so future maintainers don't tune it back down without context.
 
-Impact: when operator-scorecard is enabled (still shipped enabled: false, first natural run May 11 if turned on), the weekly scorecard reports a real OK/WATCH/DEGRADED verdict computed from heartbeat history instead of permanent WATCH. Heartbeat itself audits every scheduled skill against logs + Actions runs each evening, so a week of clean HEARTBEAT_OK reports is a real OK signal — not insufficient data.
+Impact: prevents reasoning-induced truncation across every XAI prefetch consumer. Downstream tweet-allocator gets the full candidate pool back (today's $10 budget split across 2 wallets instead of the typical 4–7), and narrative-tracker / refresh-x stop being exposed to silent list cutoffs.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/29
+PR: https://github.com/aaronjmars/aeon-agent/pull/32

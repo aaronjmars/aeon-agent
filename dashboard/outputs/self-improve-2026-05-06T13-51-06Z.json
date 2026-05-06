@@ -1,0 +1,253 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-date",
+        "alert-fix",
+        "sep-1",
+        "heading-problem",
+        "text-problem-detail",
+        "sep-2",
+        "heading-root-cause",
+        "text-root-cause-intro",
+        "text-root-cause-example",
+        "stat-tokens",
+        "text-root-cause-effect",
+        "sep-3",
+        "heading-affected",
+        "text-affected-intro",
+        "stack-affected-skills",
+        "sep-4",
+        "heading-what-changed",
+        "text-what-changed",
+        "sep-5",
+        "heading-impact",
+        "text-impact-1",
+        "text-impact-2",
+        "sep-6",
+        "link-pr"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-05-06",
+        "level": "h4"
+      }
+    },
+    "alert-fix": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "Fix deployed",
+        "message": "Raised max_output_tokens to 16384 in the xai_search helper in scripts/prefetch-xai.sh"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-problem": {
+      "type": "Heading",
+      "props": {
+        "text": "Problem",
+        "level": "h3"
+      }
+    },
+    "text-problem-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Today's fetch-tweets cache (07:19 UTC) logged: Extracted 2 tweets — cache output was truncated at token limit (7,354 total tokens, 6,486 used for reasoning). This left room for only 2 tweets when the prompt asked for 10+."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-root-cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause",
+        "level": "h3"
+      }
+    },
+    "text-root-cause-intro": {
+      "type": "Text",
+      "props": {
+        "text": "grok-4-1-fast is a thinking model — on some days its reasoning trace can swallow the default output token budget before the actual answer is written."
+      }
+    },
+    "text-root-cause-example": {
+      "type": "Text",
+      "props": {
+        "text": "Today's fetch-tweets run hit exactly that:"
+      }
+    },
+    "stat-tokens": {
+      "type": "Stat",
+      "props": {
+        "label": "Tokens spent on reasoning",
+        "value": "6,486 / 7,354"
+      }
+    },
+    "text-root-cause-effect": {
+      "type": "Text",
+      "props": {
+        "text": "This consumed the vast majority of available output tokens before the actual response could be written."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-affected": {
+      "type": "Heading",
+      "props": {
+        "text": "Affected Skills",
+        "level": "h3"
+      }
+    },
+    "text-affected-intro": {
+      "type": "Text",
+      "props": {
+        "text": "The same helper backs all five skills. All were one bad-reasoning-day away from the same failure:"
+      }
+    },
+    "stack-affected-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-fetch-tweets",
+        "badge-refresh-x",
+        "badge-remix-tweets",
+        "badge-tweet-roundup",
+        "badge-narrative-tracker",
+        "badge-article"
+      ]
+    },
+    "badge-fetch-tweets": {
+      "type": "Badge",
+      "props": {
+        "text": "fetch-tweets",
+        "variant": "secondary"
+      }
+    },
+    "badge-refresh-x": {
+      "type": "Badge",
+      "props": {
+        "text": "refresh-x",
+        "variant": "secondary"
+      }
+    },
+    "badge-remix-tweets": {
+      "type": "Badge",
+      "props": {
+        "text": "remix-tweets",
+        "variant": "secondary"
+      }
+    },
+    "badge-tweet-roundup": {
+      "type": "Badge",
+      "props": {
+        "text": "tweet-roundup",
+        "variant": "secondary"
+      }
+    },
+    "badge-narrative-tracker": {
+      "type": "Badge",
+      "props": {
+        "text": "narrative-tracker",
+        "variant": "secondary"
+      }
+    },
+    "badge-article": {
+      "type": "Badge",
+      "props": {
+        "text": "article",
+        "variant": "secondary"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-what-changed": {
+      "type": "Heading",
+      "props": {
+        "text": "What Changed",
+        "level": "h3"
+      }
+    },
+    "text-what-changed": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/prefetch-xai.sh: added max_output_tokens: 16384 to the request body in the xai_search helper. Comment cites the May 6 trigger so future maintainers don't tune it back down without context."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "text-impact-1": {
+      "type": "Text",
+      "props": {
+        "text": "Prevents reasoning-induced truncation across every XAI prefetch consumer."
+      }
+    },
+    "text-impact-2": {
+      "type": "Text",
+      "props": {
+        "text": "Downstream tweet-allocator gets the full candidate pool back (today's $10 budget split across 2 wallets instead of the typical 4–7), and narrative-tracker / refresh-x stop being exposed to silent list cutoffs."
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #32",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/32"
+      }
+    }
+  }
+}
