@@ -51,3 +51,10 @@ Older entries archived from MEMORY.md Recent Articles table to keep the index un
 | 2026-04-27 | Push Recap (4 commits: #145 SHOWCASE.md, #142 skill-analytics, #144 contributor-reward, #20 bankr fix) | repo-activity |
 | 2026-04-27 | The Better Model Will Not Fix Your Agent | project-lens |
 | 2026-04-27 | Eight Weeks In, Aeon Named Its Competitors | repo-article |
+| 2026-04-28 | The Five-Hundred-Dollar Solo Stack and the Folder That Replaces It | project-lens |
+| 2026-04-28 | One URL Now Tells You Whether Aeon Is Alive — And What Its Token Did Today | repo-article |
+| 2026-04-28 | Push Recap (2 commits: #147 pr-triage, #21 self-improve skill-runs cross-check) | repo-activity |
+| 2026-04-29 | Why a Healthy AI Agent Has Three Different Words for "Nothing Happened" | project-lens |
+| 2026-04-29 | Aeon Just Hired a Greeter for the Front Door | repo-article |
+| 2026-04-30 | Aeon Upgraded Both Ends of Its Social Loop in a Single Day | repo-article |
+| 2026-04-30 | Agent Frameworks Are Where ETL Was Before dbt | project-lens |
