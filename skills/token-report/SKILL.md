@@ -20,7 +20,7 @@ This skill reads the token to track from the "Tracked Token" section in `memory/
 ---
 
 Read memory/MEMORY.md for the tracked token.
-Read the last 7 days of memory/logs/ for previous price data to show trends.
+Read the last 7 days of memory/logs/ for previous price and volume data to show trends.
 
 ## Steps
 
@@ -75,15 +75,22 @@ Read the last 7 days of memory/logs/ for previous price data to show trends.
    |--------|-------|------------|
    | Price | $X.XXXX | +/-Y.Y% |
    | Liquidity | $X.XK | — |
-   | 24h Volume | $X.XK | — |
+   | 24h Volume | $X.XK | +/-Y.Y% |
    | 24h Buys/Sells | X / Y | — |
    | 24h High/Low | $X.XX / $X.XX | — |
    | FDV | $X.XM | — |
 
    ## Trend
+
+   **Price**
    - **24h:** [price action summary from hourly candles]
    - **7-day:** +/-X.X% ([rallying, consolidating, pulling back, etc.])
    - **30-day:** +/-X.X% ([context])
+
+   **Volume (daily)**
+   - **24h:** $X.XK ([+/-Y.Y% vs prior day])
+   - **7-day avg:** $X.XK ([+/-Y.Y% vs prior 7d])
+   - **30-day avg:** $X.XK ([context — sustained, spiking, drying up, etc.])
 
    ## Volume & Liquidity
    [Is volume increasing/decreasing? Any notable large trades? Buy/sell ratio?]
@@ -106,15 +113,15 @@ Read the last 7 days of memory/logs/ for previous price data to show trends.
    *$TOKEN Daily — ${today}*
 
    Price: $X.XXXX (Y.Y% 24h)
-   Liquidity: $X.XK | 24h Vol: $X.XK
+   Liquidity: $X.XK | 24h Vol: $X.XK (Y.Y% 24h)
    Buys/Sells: X/Y
-   7d: +/-X.X% | 30d: +/-X.X%
+   7d: +/-X.X% price, +/-X.X% vol | 30d: +/-X.X% price
 
    [1-sentence summary]
 
    Chart: https://www.geckoterminal.com/base/pools/POOL_ADDRESS
    ```
 
-9. **Log** to `memory/logs/${today}.md` including the current price (for trend comparison in future runs).
+9. **Log** to `memory/logs/${today}.md` including the current price and 24h volume (for price/volume trend comparison in future runs).
 
 **Important:** If the GeckoTerminal API returns no data (token not found, API error, empty response), log "TOKEN_REPORT_NO_DATA" to memory and **do NOT send any notification**. Do not notify about failures or empty results.
