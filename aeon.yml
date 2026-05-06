@@ -105,6 +105,7 @@ skills:
   update-gallery: { enabled: false, schedule: "0 18 * * 0" }
   goal-tracker: { enabled: false, schedule: "0 18 * * *" }
   skill-health: { enabled: false, schedule: "0 18 * * *" }
+  skill-freshness: { enabled: false, schedule: "0 8 * * *", model: "claude-sonnet-4-6", var: "" } # daily 08:00 UTC — audit enabled skills' upstream file dependencies for staleness; pass dry-run to skip notify; per-class thresholds (articles 28h / .outputs 4h / topics 7d / state 30d); fingerprint-based dedup, 7d re-emit window
   self-review: { enabled: false, schedule: "0 18 * * *" }
   reflect: { enabled: false, schedule: "0 18 * * *" }
   action-converter: { enabled: false, schedule: "0 18 * * *" }
