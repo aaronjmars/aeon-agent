@@ -4,39 +4,39 @@
 
 | Metric | Value | 24h Change |
 |--------|-------|------------|
-| Price | $0.00000261 | +8.18% |
-| Liquidity | $199.8K | — |
-| 24h Volume | $46.6K | +11.2% vs prior session |
-| 24h Buys/Sells | 71 / 79 | — |
-| 24h Buyers/Sellers | 41 / 67 | — |
-| 24h High/Low | $0.00000272 / $0.00000218 | — |
-| FDV | $261.4K | — |
+| Price | $0.000003032 | +16.48% |
+| Liquidity | $219.1K | — |
+| 24h Volume | $53.7K | +28.1% vs prior session |
+| 24h Buys/Sells | 72 / 80 | — |
+| 24h Buyers/Sellers | 43 / 68 | — |
+| 24h High/Low | $0.000003090 / $0.000002180 | — |
+| FDV | $303.2K | — |
 
 ## Trend
 
 **Price**
-- **24h:** Recovery session. May 5 session low $0.00000218 (multi-week low) triggered a bounce — price lifted through the open at $0.00000240, pushed to intraday high $0.00000272, and is currently holding $0.00000261. First session where price trades above the prior day's close after eight consecutive lower closes from the Apr 26 peak ($0.00000438).
-- **7-day:** +4.8% (from Apr 29 close $0.00000249 → $0.00000261) — first positive 7d reading after a week of negative readings, though this reflects comparison against an already-distressed Apr 29 close rather than a structural recovery.
-- **30-day:** +235% (from Apr 6 area close ~$0.00000078) — significantly compressed from the +441% reading on May 5 as the rolling window advances past the token's early low prices.
+- **24h:** Breakout session. After touching a multi-week low of $0.00000218 at 16:00 UTC yesterday, price based for 11 hours in the $2.32–$2.65 range. At 03:00 UTC today, a $9,139 burst of buying drove a single-hour candle from $0.00000257 to $0.00000297, with the spike reaching $0.00000309 intraday. Price has since settled at $0.000003032 — the $0.000003 level reclaimed after two consecutive sessions below it. First meaningful breakout candle after ten days of grinding lower from the Apr 26 high.
+- **7-day:** +21.8% (from Apr 29 close $0.00000249 → $0.000003032) — a week ago was already in a downtrend; today's move clears the 7d comparison back into positive territory with conviction.
+- **30-day:** +275.6% (from Apr 6 close ~$0.00000081) — 30d window now captures higher base prices as the look-back advances; compressed from +441% on May 5 but still structural.
 
 **Volume (daily)**
-- **24h:** $46.6K (+11.2% vs May 5 OHLCV close volume of $41.9K)
-- **7-day avg:** ~$45.5K/day (Apr 30–May 5: $53.4K / $47.2K / $52.4K / $25.1K / $53.3K / $41.9K)
-- **30-day avg:** ~$40.8K/day (estimated from 10-session OHLCV window)
+- **24h:** $53.7K (+28.1% vs May 5 session of $41.9K)
+- **7-day avg:** ~$47.0K/day (Apr 30–May 5: $53.4K / $47.2K / $52.4K / $25.1K / $53.3K / $41.9K)
+- **30-day avg:** ~$78.2K/day (includes the high-volume late-April and mid-April sessions; current run-rate is tracking near half the 30d mean)
 
 ## Volume & Liquidity
 
-Volume is back near the 7-day average ($46.6K vs $45.5K avg) after the anomalously low May 3 session ($25.1K). Sell count marginally outnumbers buys by transaction (79 vs 71) and by unique wallet (67 sellers vs 41 buyers), though buyers are executing more trades per wallet (~1.73 buys/buyer vs 1.18 sells/seller). Recent trades (early UTC May 6) are small — $46–$411 range — contrasting with May 5's five largest trades being $2.5K–$4.2K sells. No dominant large-block selling visible in today's session so far.
+The 03:00 UTC hour was the largest in the 24h window at $9,139, followed by the 20:00 UTC sell-off at $4,640 and the 16:00 UTC low-touch at $8,544. The driving trade: a $4,971 buy at 05:34 UTC from a single wallet (0x102820...) which directly preceded the hourly breakout candle. Two follow-on buys of ~$236 each from 0xef46e6 at 05:43 and 05:49 UTC added confirmation. Transaction count still skews sell-side (80 sells vs 72 buys, 68 sellers vs 43 buyers), consistent with the prior week's distribution pattern — but buyers are executing significantly larger lot sizes, which is what drove the price.
 
-Liquidity: $199.8K, fourth consecutive session of decline from $219.0K on May 1. LP attrition is gradual; pool depth remains serviceable for the current volume level but the trend warrants watching if price fails to hold above $0.00000250.
+Liquidity recovered to $219.1K (from $199.8K at the earlier snapshot this morning) as the buying push added depth to the pool. Pool remains healthy relative to current volume ($53.7K 24h volume / $219.1K liquidity = 0.24× turnover ratio).
 
 ## Social Pulse
 
-XAI_API_KEY not set — social data unavailable. Based on yesterday's fetch-tweets: community sentiment mixed but constructive. Top mentions yesterday included the operator's "we might change how people work" post (13 likes), a community member noting v3 has run fully autonomously for one month (9 likes, 3 RTs), and multiple ecosystem attributions connecting $AEON to MiroShark's autonomous build pipeline. v4 redesign remains ~2 weeks out per May 5 community posts.
+XAI_API_KEY not set — social data unavailable.
 
 ## Context
 
-Today marks a tentative inflection off the May 5 multi-week low. Eight sessions of consecutive lower closes from the Apr 26 spike ($0.00000438) appear to have exhausted near-term sell pressure — the +8.18% recovery on moderate volume and the absence of large-block selling (compared to May 5's $4.2K top sell) are constructive. That said, the macro structure remains a downtrend from the Apr 26 peak: price needs to reclaim $0.00000300+ to shift the pattern, and liquidity continues to drain. The 30d gain, while still substantial at +235%, has compressed significantly from +550% a week ago, reflecting both the price decline and the advancing time window.
+$AEON reclaimed $0.000003 today after ten consecutive lower closes from the Apr 26 peak ($0.00000438 intraday high). The recovery is driven by a single large buy ($4,971) that sparked a breakout candle rather than broad participation — sellers still outnumber buyers by wallet count. The $0.000003–$0.000003160 zone (the May 1–3 consolidation range that broke down on May 4) is now the key level: sustained trade above it would shift the short-term structure from lower-lows to recovery. Below $0.000003 the pattern resets to the prior downtrend.
 
 ---
 *Data: GeckoTerminal | Chain: Base*
