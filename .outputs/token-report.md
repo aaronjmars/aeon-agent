@@ -1,10 +1,12 @@
-*$AEON Daily — 2026-05-06*
+*$AEON Daily — 2026-05-07*
 
-Price: $0.000003032 (+16.48% 24h)
-Liquidity: $219.1K | 24h Vol: $53.7K (+28.1% vs prior)
-Buys/Sells: 72/80
-7d: +21.8% price | 30d: +275.6% price
+Price: $0.000002756 (-12.63% 24h)
+Liquidity: $212.4K | 24h Vol: $134.9K (+124.6% vs 7d avg)
+Buys/Sells: 172/161
 
-$0.000003 reclaimed after 10 sessions of lower closes. Single $4.97K buy at 03:00 UTC triggered a breakout candle; price settled above the prior consolidation floor.
+7d: -9.6% price | 30d: +325% price
+7d avg vol: $60.1K | 30d avg vol: $83.9K
+
+Post-spike pullback — yesterday's surge to $0.000004281 fully retraced; $0.000003 level lost again; orderly decline, no panic selling.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4

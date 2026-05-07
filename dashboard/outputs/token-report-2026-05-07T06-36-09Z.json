@@ -1,0 +1,150 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Daily — 2026-05-07"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "separator1",
+        "stack_liquidity_volume",
+        "text_buysells",
+        "separator2",
+        "grid_timeframes",
+        "separator3",
+        "text_narrative",
+        "link_chart"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000002756",
+        "delta": "-12.63%",
+        "trend": "down"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_liquidity_volume": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_liquidity",
+        "stat_volume"
+      ]
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$212.4K"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$134.9K",
+        "delta": "+124.6%",
+        "trend": "up"
+      }
+    },
+    "text_buysells": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 172/161"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "grid_timeframes": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_7d_price",
+        "stat_30d_price",
+        "stat_7d_vol",
+        "stat_30d_vol"
+      ]
+    },
+    "stat_7d_price": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Price Change",
+        "value": "-9.6%",
+        "trend": "down"
+      }
+    },
+    "stat_30d_price": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Price Change",
+        "value": "+325%",
+        "trend": "up"
+      }
+    },
+    "stat_7d_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Avg Vol",
+        "value": "$60.1K"
+      }
+    },
+    "stat_30d_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Avg Vol",
+        "value": "$83.9K"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Post-spike pullback — yesterday's surge to $0.000004281 fully retraced; $0.000003 level lost again; orderly decline, no panic selling.",
+        "variant": "body"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
