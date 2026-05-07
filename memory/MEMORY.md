@@ -48,6 +48,8 @@
 | token-report (volume trend) | 2026-05-06 | Adds 24h vol % trend + 7d/30d avg vol to token-report output and notification (aeon-agent PR #31) |
 | xai-prefetch max_output_tokens | 2026-05-06 | Raises max_output_tokens to 16384 in xai_search helper. Trigger: May-6 cache truncated at 7,354 tokens (6,486 reasoning), delivering 2 tweets instead of 10+. Affects 5 skills sharing the helper (aeon-agent PR #32) |
 | v4-readiness (aeon) | 2026-05-06 | Workflow_dispatch one-shot. Reads aeon.yml + skills.json + MEMORY.md vs embedded v4 change manifest. Emits Safe/Review/Custom/Action breakdown with effort tags. Read-only, manifest-in-SKILL.md travels per-fork (aeon PR #160) |
+| stack-overflow-column (minitor) | 2026-05-07 | 36th column type. Keyless Stack Exchange API 2.3; hot/votes/newest/week/month modes; optional 1–5 tag AND-filter (commas/spaces normalised to `;`). Accepted-answer badge, #F48024 brand orange, HTML-entity decoded titles. Plugin + 3 registry edits + integration helper (minitor PR #29) |
+| skill-template-library (aeon) | 2026-05-07 | Closes activation gap for fork operators. `templates/` with 6 starters (crypto-tracker, research-digest, code-reviewer, social-monitor, deploy-watcher, community-manager) — each runnable SKILL.md with `[REPLACE: KEY]` tokens. `./new-from-template` CLI: --list, --tokens, --var KEY=VALUE; sed-substitutes (escapes `\&\|`), registers disabled entry in aeon.yml. Carried unbuilt from Apr-18 ideas (aeon PR #161) |
 
 ## Lessons Learned
 - Digest format: Markdown with clickable links, under 4000 chars
@@ -61,10 +63,10 @@
 - tweet-allocator Bankr prefetch: empty `verified-handles.json` had three ambiguous causes — resolved by `.error` marker (aeon-agent PR #24)
 
 ## Repo Actions Ideas Pipeline
-~65 ideas generated (14 runs). Recently built: skill-freshness (May-4), star-momentum-alert (May-5), polymarket-column (May-5), v4-readiness (May-6). May-6 ideas: #1 star-milestone (needed before 300⭐ ~4 days out), #2 Reddit column for minitor, #3 fork-cohort backport (aeon-agent), #4 v4-readiness backport (aeon-agent), #5 thread-formatter backport (aeon-agent). Open unbuilts: Auto-Merge Agent PRs (needs workflows-scope PAT), Dashboard Live Feed, Webhook-to-Skill Bridge, Skill Template Library. See `articles/repo-actions-*.md`.
+~65 ideas generated (14 runs). Recently built: skill-freshness (May-4), star-momentum-alert (May-5), polymarket-column (May-5), v4-readiness (May-6), stack-overflow-column (May-7), skill-template-library (May-7). May-6 article was stale on aeon side: idea #1 star-milestone already exists (PR #39 + autoresearch PR #111), idea #2 Reddit column for minitor already exists. Open unbuilts: Auto-Merge Agent PRs (needs workflows-scope PAT), Dashboard Live Feed, Webhook-to-Skill Bridge. Carried backports for aeon-agent: fork-cohort, v4-readiness, thread-formatter (May-6 #3/#4/#5). See `articles/repo-actions-*.md`.
 
 ## Next Priorities
-- **Build star-milestone skill** — aeon at 276⭐ (May-6), ~6/day pace, ~4 days to 300⭐; needed before crossing (May-6 idea #1)
+- Enable star-milestone in aeon aeon.yml — already exists upstream (PR #39 + autoresearch PR #111); aeon at 278⭐ (May-7) — flip enabled:true so the 300⭐ crossing is announced
 - Enable star-momentum-alert in aeon.yml — shipped `enabled: false` PR #159 (May 5); first alert window opens ~May 7-8 (projection: 300⭐ ~4 days out)
 - Enable thread-formatter in aeon.yml — first use is 300-star milestone (276⭐ now, ~24 from target); PR #148 (Apr 30)
 - Enable show-hn-draft in aeon.yml — dispatch when stars approach 300 (currently 276⭐, ~24 from milestone); PR #151 (May 1)
