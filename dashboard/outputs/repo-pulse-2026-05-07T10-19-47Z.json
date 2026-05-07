@@ -1,0 +1,122 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "repo_name",
+        "stats_section",
+        "sep1",
+        "stargazers_heading",
+        "stargazers_list",
+        "sep2",
+        "forks_heading",
+        "forks_list"
+      ]
+    },
+    "repo_name": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "lead"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "278",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "44",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_jacquelinegiale",
+        "link_lukeanthony007"
+      ]
+    },
+    "link_jacquelinegiale": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/jacquelinegiale",
+        "href": "https://github.com/jacquelinegiale"
+      }
+    },
+    "link_lukeanthony007": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/lukeanthony007",
+        "href": "https://github.com/lukeanthony007"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_aldine_fork"
+      ]
+    },
+    "link_aldine_fork": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Aldine/aeon",
+        "href": "https://github.com/Aldine/aeon"
+      }
+    }
+  }
+}
