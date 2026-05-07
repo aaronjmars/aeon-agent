@@ -1,0 +1,383 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-07"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "budget-info",
+        "sep-1",
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "tweet-4",
+        "tweet-5",
+        "sep-2",
+        "total-info"
+      ]
+    },
+    "budget-info": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1-header",
+        "tweet-1-desc",
+        "tweet-1-link"
+      ]
+    },
+    "tweet-1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1-author",
+        "tweet-1-stat",
+        "tweet-1-score"
+      ]
+    },
+    "tweet-1-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/PremierBase",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet-1-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$7.90",
+        "label": "in $AEON"
+      },
+      "children": []
+    },
+    "tweet-1-score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 53",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "tweet-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "PREMIER BASE AI WATCHLIST featuring @aeonframework among top AI agents",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/PremierBase/status/2052076994184327433"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2-header",
+        "tweet-2-desc",
+        "tweet-2-link"
+      ]
+    },
+    "tweet-2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-2-author",
+        "tweet-2-stat",
+        "tweet-2-score"
+      ]
+    },
+    "tweet-2-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/nate_build",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet-2-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.60",
+        "label": "in $AEON"
+      },
+      "children": []
+    },
+    "tweet-2-score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 4",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "tweet-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Calling out $aeon and asking for GitLawb integration",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/nate_build/status/2051900083617378520"
+      },
+      "children": []
+    },
+    "tweet-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3-header",
+        "tweet-3-desc",
+        "tweet-3-link"
+      ]
+    },
+    "tweet-3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-3-author",
+        "tweet-3-stat",
+        "tweet-3-score"
+      ]
+    },
+    "tweet-3-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/penguinxbt_",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet-3-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.50",
+        "label": "in $AEON"
+      },
+      "children": []
+    },
+    "tweet-3-score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 3",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "tweet-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "$aeon and $miroshark are next",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/penguinxbt_/status/2052117454298529978"
+      },
+      "children": []
+    },
+    "tweet-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4-header",
+        "tweet-4-desc",
+        "tweet-4-link"
+      ]
+    },
+    "tweet-4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-4-author",
+        "tweet-4-stat",
+        "tweet-4-score"
+      ]
+    },
+    "tweet-4-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/zkMoira",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet-4-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.50",
+        "label": "in $AEON"
+      },
+      "children": []
+    },
+    "tweet-4-score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 1",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "tweet-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Recommending @aeonframework — OAuth tokens go brrrrr",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/zkMoira/status/2052102522337194345"
+      },
+      "children": []
+    },
+    "tweet-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5-header",
+        "tweet-5-desc",
+        "tweet-5-link"
+      ]
+    },
+    "tweet-5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-5-author",
+        "tweet-5-stat",
+        "tweet-5-score"
+      ]
+    },
+    "tweet-5-author": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/Mnosh06",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweet-5-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$0.50",
+        "label": "in $AEON"
+      },
+      "children": []
+    },
+    "tweet-5-score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 1",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "tweet-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Deep dive on the 2026 agent framework layer cake and Aeon's full-stack focus",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet-5-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Mnosh06/status/2051932154549145755"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "total-info": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 5 authors",
+        "variant": "lead"
+      },
+      "children": []
+    }
+  }
+}
