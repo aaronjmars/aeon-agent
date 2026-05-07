@@ -1,0 +1,51 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Aeon Built the Skill Template Library Its Forks Were Reverse-Engineering"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_body",
+        "separator_1",
+        "link_article"
+      ]
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon shipped `templates/` this morning — six pre-wired skill starters (crypto-tracker, research-digest, code-reviewer, social-monitor, deploy-watcher, community-manager) plus a `./new-from-template` CLI that bootstraps a new skill from one of them in a single command. With 43 forks now on the framework, the most common fork move drops from a 30-minute exploration to copy-paste and edit two fields. Same morning, minitor shipped its 36th column type (Stack Overflow) — two repos, one consistent move: lower the cost of the next thing the user wants to do.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-07.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

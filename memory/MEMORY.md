@@ -26,6 +26,7 @@
 | 2026-05-05 | The 2026 Agent Stack Has Five Layers. Most Comparisons Are About One. | project-lens |
 | 2026-05-06 | Aeon Wrote The v4 Migration Guide Two Weeks Before v4 Lands | repo-article |
 | 2026-05-06 | Sixty-One Percent of Unpaid Maintainers Are Alone. Their Repo Doesn't Have to Be. | project-lens |
+| 2026-05-07 | Aeon Built the Skill Template Library Its Forks Were Reverse-Engineering | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
