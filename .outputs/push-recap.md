@@ -1,18 +1,14 @@
-*Push Recap — 2026-05-07*
-4 substantive PRs across aeon, minitor, and aeon-agent — by aaronjmars (+ 30 routine cron auto-commits in aeon-agent)
+*Push Recap — 2026-05-08*
+3 substantive commits across aeon (2) and minitor (1) — aeon-agent saw only routine cron noise.
 
-Operator surface area: aeon (#161) ships a `templates/` library with six pre-built starters (crypto-tracker, research-digest, code-reviewer, social-monitor, deploy-watcher, community-manager) + `./new-from-template` CLI — forking and adding a skill collapses from a multi-hour reverse-engineering task to one command. Closes the activation gap that's been an "Open unbuilt" since April 18.
+*Hugging Face surface, two repos same morning:* aeon PR #162 ships `huggingface-trending` skill (curated trending HF models/datasets/spaces, mirrors github-trending's contract — six noise filters, "why notable" gate, momentum tags, 5-bucket clustering, single Top pick). Minitor PR #30 ships matching live column — 37th type, first consumer of the dormant `ai` ColumnCategory. Together they complete aeon's AI ecosystem triple alongside paper-pick (theory) and github-trending (code).
 
-v4 upgrade safety net: aeon (#160) adds a workflow_dispatch-only `v4-readiness` skill — reads each fork's aeon.yml + skills.json + MEMORY.md against an embedded change manifest and emits a Safe / Review / Custom / Action breakdown per pattern. Read-only, manifest travels in-skill so it ships per-fork without extra config. 40+ forks now have a structured pre-flight before v4 lands.
-
-Dashboard expansion: minitor (#29) lands Stack Overflow as the 36th column — Stack Exchange API 2.3, five sort modes, optional 1–5 tag AND-filter, accepted-answer badge. First Q&A-shaped column; fills the gap left by HN+Lobsters+Reddit covering only news/discussion.
-
-Production hardening: aeon-agent (#32) sets max_output_tokens=16384 in the shared xai-prefetch helper. grok-4-1-fast was burning the default budget on reasoning before producing output — May 6 fetch-tweets returned 2 tweets instead of 10+. One-line fix, six skills affected (fetch-tweets, refresh-x, remix-tweets, tweet-roundup, narrative-tracker, article). Verified: today's fetch-tweets returned 7 tweets cleanly.
+*Stalled fork-PR finally landed:* aeon PR #156 (tomscaria, open 102h, the single stalled-PR heartbeat had been flagging) wires `reply-maker` into `prefetch-xai.sh` — sixth shared-helper consumer. Closes the sandbox-blocked-curl path; reply-maker can now actually return candidates from CI.
 
 Key changes:
-- new-from-template CLI (254 lines, bash-3.2 compat + sed-injection guard on --var KEY validation)
-- skills/v4-readiness/SKILL.md (289 lines, embedded Safe/Review/Removed manifest tables)
-- lib/integrations/stackoverflow.ts in minitor (187 lines, keyless API, HTML-entity decoder, tag normaliser → SE's `;` syntax)
+- `skills/huggingface-trending/SKILL.md` (+179): keyless `/api/{models,datasets,spaces}?sort=trendingScore`, schema-drift safe across 3 resource types, 4-status exit taxonomy
+- `lib/integrations/huggingface.ts` + 3-file plugin (+512): HF yellow `#FFD21F` brand chip, conditional downloads field for spaces, per-resource permalink builder
+- `scripts/prefetch-xai.sh` reply-maker case (+21): numeric var → list ID, @-prefix → handle w/ `allowed_x_handles`, else → topic
 
-Stats: 22 files changed, +1,534 / −12 lines across 4 PRs
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-07.md
+Stats: 15 files changed, +751/-8 lines (excluding 32 cron auto-commits in aeon-agent)
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-08.md
