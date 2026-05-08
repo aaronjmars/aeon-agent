@@ -1,26 +1,21 @@
-*Feature Built — 2026-05-07 — aaronjmars/aeon*
+*Feature Built — 2026-05-08 — aaronjmars/aeon*
 
-Skill Template Library
-Aeon now ships with six pre-built skill starters under templates/ — crypto-tracker, research-digest, code-reviewer, social-monitor, deploy-watcher, community-manager — and a one-command CLI (./new-from-template) that copies a starter into skills/, fills in the operator's values, and registers a disabled entry in aeon.yml. Forking aeon and asking "now I want a skill that monitors X" used to be a 30-minute exploration of an existing SKILL.md; it's now `./new-from-template <template> <skill-name> --var KEY=VALUE`.
+Hugging Face Trending skill
+aeon just got a daily curated digest of the AI artifact layer — what's trending on Hugging Face today across models, datasets, and spaces. The skill mirrors the existing `github-trending` contract: instead of dumping the top 10 unfiltered, it filters noise, requires a one-line "why notable" per pick, tags momentum, clusters into five buckets, and surfaces a single Top pick — but it does this for HF artifacts rather than GitHub repos.
 
 Why this matters:
-With 43+ active forks, the most common drop-off point for new operators has been the gap between "I forked aeon" and "I have my first custom skill running." Existing skills are great references but reading one to copy its structure plus the prefetch/postprocess sandbox patterns is the kind of activation friction that loses operators. This idea has been carried in the repo-actions pipeline since April 18 (idea #4), surviving as an "open unbuilt" through every cycle since. With the 300-star milestone four days out, fixing the activation funnel before a Show HN bump arrives is the right order of operations.
+aeon already has paper-pick + paper-digest (research/theory layer) and github-trending (repo/code layer) but had no skill for the AI artifact layer that lives between them. The Hub is where models land first (DeepSeek-R1, Llama, Qwen releases all surface there before mainstream coverage), datasets get attention before papers cite them, and Spaces are often the first runnable form of a fresh technique. Without this, aeon's daily AI-coverage was missing the floor of the stack that operators actually deploy from. Now papers (theory) → repos (code, github-trending) → HF Hub (artifacts, this skill) gives a complete daily picture of where the AI ecosystem's attention moved across all three layers.
 
 What was built:
-- templates/TEMPLATE.md: Index file documenting the contract — what each token means, how to add a new template, and how the `--list` discovery works (find templates/*/SKILL.md, no registry update needed).
-- templates/crypto-tracker/SKILL.md: Daily token price + volume tracker with anomaly alerts above a configurable threshold. CoinGecko keyless + WebFetch fallback.
-- templates/research-digest/SKILL.md: Daily digest of new posts on a topic from RSS feeds and the open web. Built-in WebSearch/WebFetch (sandbox-safe), seen-URL state file to avoid repeats.
-- templates/code-reviewer/SKILL.md: First-touch review of newly-opened PRs on a watched repo with a four-verdict rubric (ACCEPT / NEEDS-CHANGES / DEFER / OUT-OF-SCOPE), welcoming comment, and label.
-- templates/social-monitor/SKILL.md: Daily X + Reddit mention sweep with sentiment tagging and volume-spike detection.
-- templates/deploy-watcher/SKILL.md: Vercel deploy alerts with last-green baseline comparison and per-UID dedup.
-- templates/community-manager/SKILL.md: Daily Discord/Telegram/Slack channel digest including an open-question detector (parent-level question with no reply > 6h gets surfaced).
-- new-from-template (executable): bash CLI portable across BSD + GNU sed/awk. Modes: --list, --tokens, default replace mode with --var KEY=VALUE.
-- README.md: Quick start picks up a one-line pointer to templates/ directly under the onboarding flow.
+- skills/huggingface-trending/SKILL.md: Full 9-step skill spec — six noise filters (test/debug ids, low-signal gated repos, trivial fine-tunes, 3-day re-features, quantization-only forks under 500 likes, broken or scaffold spaces), required ≤18-word "why notable" line per survivor, momentum tags (DEBUT 7d / ACCELERATING / RETURNING 90d+ / HOLDOVER), five-bucket cluster cap (LLMs, Multimodal, Agents, Datasets, Spaces), single Top pick discipline, four-status exit taxonomy (HF_TRENDING_OK / QUIET / ERROR / BAD_VAR).
+- aeon.yml: Registered enabled:false, schedule:"30 9 * * *", model:claude-sonnet-4-6 immediately after github-releases — the morning AI/dev intelligence block now closes with HF artifacts at 09:30 right after github-trending fires at 09:00.
+- skills.json + generate-skills-json: Bumped total 111 → 112; mapped huggingface-trending to research category in the bash case so future regenerations stay in lockstep.
+- README.md: Added to the Research & Content cluster row, count 17 → 18.
 
 How it works:
-Each template SKILL.md has [REPLACE: KEY] tokens for the operator-specific parts (TOPIC, KEYWORDS, WATCHED_REPO, etc.). The CLI reads the chosen template, runs sed substitutions for every --var the operator passed (escaping `\` `&` `|` so URL-shaped values pass through cleanly), writes the result to skills/<skill-name>/SKILL.md, then awk-inserts a disabled aeon.yml entry immediately before the fallback marker — the same insertion point ./add-skill uses, so the dashboard treats template-bootstrapped skills identically to imported ones. Any [REPLACE: ...] tokens left unreplaced get listed back to the operator so they know what to edit before flipping enabled:true. The script refuses to overwrite an existing skills/<name>/ directory, which makes re-runs safe.
+Pure prompt / Markdown — no helper scripts, no new env vars, no new state files. The model walks the 9 steps, calling curl (or WebFetch on sandbox failure) against three keyless endpoints (`/api/{models,datasets,spaces}?sort=trendingScore&direction=-1`). The "why notable" gate is the load-bearing line of the prompt — it forces justification rather than description paraphrase. When the line can't be written concretely, the pick gets dropped. The filter is the feature, same discipline that makes github-trending land cleanly. Sandbox-safe via the documented curl-then-WebFetch fallback per CLAUDE.md guidance; single-source failures don't fail the run, only all-three exits HF_TRENDING_ERROR.
 
 What's next:
-The template list is intentionally narrow (six covering the most-asked-for use cases). Adding a seventh is a no-registry-change drop-in: new templates/<name>/SKILL.md and a row in TEMPLATE.md. Natural follow-ups would be a workflow-watcher template (any GitHub Actions workflow status), an oncall-rotation template (Slack reminders), and a feed-to-thread template (RSS to scheduled tweet thread).
+Pairs with same-day minitor PR #30 — the running aeon agent gets the curated daily digest, a minitor dashboard gets the live feed. Once enabled in aeon.yml the skill ships its first article tomorrow morning. Natural follow-up after that is a `huggingface-papers` skill that taps `/api/daily_papers` for the paper-side equivalent.
 
-PR: https://github.com/aaronjmars/aeon/pull/161
+PR: https://github.com/aaronjmars/aeon/pull/162
