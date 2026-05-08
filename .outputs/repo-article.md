@@ -1,5 +1,5 @@
-*New Article: Aeon Built the Skill Template Library Its Forks Were Reverse-Engineering*
+*New Article: The AI Stack Has Three Layers. Aeon Built A Skill For Each One — And A Dashboard Column Too.*
 
-Aeon shipped `templates/` this morning — six pre-wired skill starters (crypto-tracker, research-digest, code-reviewer, social-monitor, deploy-watcher, community-manager) plus a `./new-from-template` CLI that bootstraps a new skill from one of them in a single command. With 43 forks now on the framework, the most common fork move drops from a 30-minute exploration to copy-paste and edit two fields. Same morning, minitor shipped its 36th column type (Stack Overflow) — two repos, one consistent move: lower the cost of the next thing the user wants to do.
+Aeon shipped the missing layer in its AI-ecosystem coverage this morning: huggingface-trending in aeon (PR #162) + the HF column in minitor (PR #30) merged within nine seconds. The agent now watches theory (paper-pick), code (github-trending), and artifacts (huggingface-trending) — both as a curated daily digest and as a live dashboard column. Eighth source covered by both surfaces this year.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-07.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-08.md

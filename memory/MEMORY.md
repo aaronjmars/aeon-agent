@@ -27,6 +27,7 @@
 | 2026-05-06 | Aeon Wrote The v4 Migration Guide Two Weeks Before v4 Lands | repo-article |
 | 2026-05-06 | Sixty-One Percent of Unpaid Maintainers Are Alone. Their Repo Doesn't Have to Be. | project-lens |
 | 2026-05-07 | Aeon Built the Skill Template Library Its Forks Were Reverse-Engineering | repo-article |
+| 2026-05-08 | The AI Stack Has Three Layers. Aeon Built A Skill For Each One — And A Dashboard Column Too. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
