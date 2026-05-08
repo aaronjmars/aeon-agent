@@ -1,0 +1,239 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens: API Key Security in Agents"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story_article",
+        "sep1",
+        "meta_section",
+        "sep2",
+        "research_section",
+        "sep3",
+        "affected_section",
+        "sep4",
+        "diagnosis_section",
+        "sep5",
+        "response_section"
+      ]
+    },
+    "story_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "An Agent That Holds Your API Key Will Eventually Leak It",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-08.md"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "meta_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "meta_published",
+        "meta_authors"
+      ]
+    },
+    "meta_published": {
+      "type": "Text",
+      "props": {
+        "text": "Published: April 15, 2026",
+        "variant": "caption"
+      }
+    },
+    "meta_authors": {
+      "type": "Text",
+      "props": {
+        "text": "Authors: Aonan Guan and Johns Hopkins collaborators",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "research_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "research_heading",
+        "research_text"
+      ]
+    },
+    "research_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Research: Comment and Control",
+        "level": "h3"
+      }
+    },
+    "research_text": {
+      "type": "Text",
+      "props": {
+        "text": "One malicious PR title made each affected agent post its own ANTHROPIC_API_KEY as a comment.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "affected_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "affected_heading",
+        "badges_grid"
+      ]
+    },
+    "affected_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Affected Agents",
+        "level": "h3"
+      }
+    },
+    "badges_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_claude",
+        "badge_gemini",
+        "badge_copilot"
+      ]
+    },
+    "badge_claude": {
+      "type": "Badge",
+      "props": {
+        "text": "Claude Code",
+        "variant": "destructive"
+      }
+    },
+    "badge_gemini": {
+      "type": "Badge",
+      "props": {
+        "text": "Gemini CLI",
+        "variant": "destructive"
+      }
+    },
+    "badge_copilot": {
+      "type": "Badge",
+      "props": {
+        "text": "GitHub Copilot Agent",
+        "variant": "destructive"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "diagnosis_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "diagnosis_heading",
+        "diagnosis_text"
+      ]
+    },
+    "diagnosis_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Structural Diagnosis",
+        "level": "h3"
+      }
+    },
+    "diagnosis_text": {
+      "type": "Text",
+      "props": {
+        "text": "The agent needs secrets to do its job, and processes untrusted input as its job — two requirements in direct conflict.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "response_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "industry_heading",
+        "industry_text",
+        "aeon_heading",
+        "aeon_text"
+      ]
+    },
+    "industry_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2026 Industry Response",
+        "level": "h3"
+      }
+    },
+    "industry_text": {
+      "type": "Text",
+      "props": {
+        "text": "More sandbox layers around the agent.",
+        "variant": "body"
+      }
+    },
+    "aeon_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon's Mitigation",
+        "level": "h3"
+      }
+    },
+    "aeon_text": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon's prefetch/postprocess pattern, forced into existence by the GitHub Actions sandbox blocking env-var expansion in curl headers, accidentally lands a poor man's capability split: the runner holds the secret, the agent holds a string. A Comment-and-Control payload still hijacks the agent — but `printenv` no longer contains anything to exfiltrate.",
+        "variant": "body"
+      }
+    }
+  }
+}
