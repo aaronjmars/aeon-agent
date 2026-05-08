@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-05-06*
-Generated from analysis of the current project — these are ideas that could be autonomously built by the feature skill tomorrow.
+*Repo Action Ideas — 2026-05-08*
+Generated from analysis of aeon (280⭐, 43 forks), aeon-agent (7⭐), and minitor (8⭐, 37 columns).
 
-1. star-milestone skill (Feature, Small)
-   Notifies when watched repos cross milestones (300, 500, 1000⭐); the referenced-but-missing companion to star-momentum-alert, needed before the 300-star crossing ~4 days away.
+1. arxiv Column (minitor) — Integration, Small
+   Keyless Atom RSS for cs.AI/cs.CL/cs.LG papers; completes the AI content stack alongside the new HuggingFace column — theory layer to match the artifact layer.
 
-2. Reddit column for minitor (Integration, Medium)
-   Keyless public JSON API, four modes (hot/new/rising/top), fills the last major social/news gap in minitor's column cluster.
+2. DEV.to Column (minitor) — Integration, Medium
+   Public REST API, no auth; tag-filtered long-form developer articles; fills the practitioner-tutorial gap between HN link aggregation and full article reading.
 
-3. fork-cohort backport to aeon-agent (Feature, Small)
-   Brings weekly POWER/ACTIVE/STALE/COLD fork activation view to the running agent; natural next backport after skill-freshness (May 5) in the same-day-after pattern.
+3. ai-framework-watch (aeon) — Content, Medium
+   Weekly digest of star trends, releases, and breaking changes across LangGraph, CrewAI, AutoGPT, LlamaIndex, Mastra, and peers — competitive intelligence for fork operators.
 
-4. v4-readiness backport to aeon-agent (Feature, Small)
-   Backports today's aeon PR #160 same-day so the running agent has the v4 preflight checker ready before v4 drops in ~2 weeks.
+4. contributor-spotlight (aeon) — Community, Small
+   Weekly recognition post for the top POWER fork operator; converts fork-cohort data into a named callout with stats and a shareable write-up.
 
-5. thread-formatter backport to aeon-agent (Feature, Small)
-   Brings the 5-tweet auto-formatter (aeon PR #148, Apr 30) to this fork's daily content pipeline — pairs with star-momentum-alert to time the 300-star launch thread.
+5. skill-update-check Backport (aeon-agent) — DX, Small
+   skill-update-check exists upstream in aeon but not here; backporting it surfaces the 80+ skill versions that have drifted since the autoresearch evolution (PRs #46–#136).
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-06.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-08.md
