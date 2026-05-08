@@ -20,8 +20,8 @@
     "success_rate": 1
   },
   "token-report": {
-    "last_dispatch": "2026-05-07T06:31:31Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-08T06:05:08Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-07T06:36:38Z",
     "total_runs": 23,
     "total_successes": 23,
