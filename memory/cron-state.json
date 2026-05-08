@@ -61,8 +61,8 @@
     "last_quality_score": 5
   },
   "self-improve": {
-    "last_dispatch": "2026-05-06T13:44:16Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-08T13:23:01Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-06T13:51:46Z",
     "total_runs": 12,
     "total_successes": 12,
