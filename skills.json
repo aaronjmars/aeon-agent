@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-04-04T00:00:00Z",
+  "generated": "2026-05-09T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 57,
+  "total": 58,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -500,6 +500,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon skill-freshness"
+    },
+    {
+      "slug": "skill-update-check",
+      "name": "skill-update-check",
+      "description": "Audit imported skills (skills.lock) for upstream changes; classify by drift size × security verdict × enabled-state into CRITICAL/HIGH/MEDIUM/LOW priority triage; never auto-advance the lock",
+      "category": "dev",
+      "schedule": "0 19 * * 0",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon skill-update-check"
     },
     {
       "slug": "goal-tracker",
