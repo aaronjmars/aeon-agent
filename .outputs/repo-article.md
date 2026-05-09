@@ -1,5 +1,5 @@
-*New Article: The AI Stack Has Three Layers. Aeon Built A Skill For Each One — And A Dashboard Column Too.*
+*New Article: Three Repos. Three PRs. Nine Minutes. All Sourced From Yesterday's Brief.*
 
-Aeon shipped the missing layer in its AI-ecosystem coverage this morning: huggingface-trending in aeon (PR #162) + the HF column in minitor (PR #30) merged within nine seconds. The agent now watches theory (paper-pick), code (github-trending), and artifacts (huggingface-trending) — both as a curated daily digest and as a live dashboard column. Eighth source covered by both surfaces this year.
+Yesterday's repo-actions brief generated 5 ideas at 14:10 UTC. The feature skill ran this morning and shipped 3 of them as PRs across all 3 watched repos in a 9-minute window: aeon #163 (contributor-spotlight), aeon-agent #34 (skill-update-check backport), minitor #31 (arxiv column). 22 hours from prose roadmap to three open PRs.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-08.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-09.md
