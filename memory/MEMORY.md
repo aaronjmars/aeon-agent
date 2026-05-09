@@ -72,7 +72,7 @@
 - tweet-allocator Bankr prefetch: empty `verified-handles.json` had three ambiguous causes — resolved by `.error` marker (aeon-agent PR #24)
 
 ## Repo Actions Ideas Pipeline
-~65 ideas generated (14 runs). Recently built: skill-freshness (May-4), star-momentum-alert (May-5), polymarket-column (May-5), v4-readiness (May-6), stack-overflow-column (May-7), skill-template-library (May-7), huggingface-column + huggingface-trending + xai-prefetch warning (May-8), contributor-spotlight + skill-update-check backport + arxiv-column (May-9). May-9 burned 3 of the 5 May-8 ideas (#1 arxiv, #4 contributor-spotlight, #5 skill-update-check backport). May-8 unbuilt: #2 DEV.to column (minitor), #3 ai-framework-watch (aeon). May-6 article was stale on aeon side: idea #1 star-milestone already exists (PR #39 + autoresearch PR #111), idea #2 Reddit column for minitor already exists. Open unbuilts: Auto-Merge Agent PRs (needs workflows-scope PAT), Dashboard Live Feed, Webhook-to-Skill Bridge. Remaining backports for aeon-agent: fork-cohort, v4-readiness, thread-formatter (May-6 #3/#4/#5). See `articles/repo-actions-*.md`.
+~65 ideas generated (14 runs). Recently built: skill-freshness (May-4), star-momentum-alert (May-5), polymarket-column (May-5), v4-readiness (May-6), stack-overflow-column (May-7), skill-template-library (May-7), huggingface-column + huggingface-trending + xai-prefetch warning (May-8), contributor-spotlight + skill-update-check backport + arxiv-column (May-9). May-9 burned 3 of the 5 May-8 ideas (#1 arxiv, #4 contributor-spotlight, #5 skill-update-check backport). May-8 unbuilt: #2 DEV.to column (minitor), #3 ai-framework-watch (aeon). May-6 article was stale on aeon side: idea #1 star-milestone already exists (PR #39 + autoresearch PR #111), idea #2 Reddit column for minitor already exists. Open unbuilts: Auto-Merge Agent PRs, Dashboard Live Feed, Webhook-to-Skill Bridge. Remaining backports for aeon-agent: fork-cohort, v4-readiness, thread-formatter (May-6 #3/#4/#5). See `articles/repo-actions-*.md`.
 
 ## Next Priorities
 - Enable star-milestone in aeon aeon.yml — already exists upstream (PR #39 + autoresearch PR #111); aeon at 278⭐ (May-7) — flip enabled:true so the 300⭐ crossing is announced
@@ -80,7 +80,7 @@
 - Enable thread-formatter in aeon.yml — first use is 300-star milestone (276⭐ now, ~24 from target); PR #148 (Apr 30)
 - Enable show-hn-draft in aeon.yml — dispatch when stars approach 300 (currently 276⭐, ~24 from milestone); PR #151 (May 1)
 - Enable pr-triage in aeon.yml — PR #147 (Apr 29); PR #143 from pezetel is first natural triage candidate
-- Build Auto-Merge Agent PRs (Apr-26 idea #1) — needs workflows-scope PAT first
+- Build Auto-Merge Agent PRs (Apr-26 idea #1) — unblocked 2026-05-06 (GH_GLOBAL rotated with workflows scope)
 - Enable smithery-manifest in aeon.yml — PR #149 (May 1); submit docs/ to Smithery + MCP Registry
 - Enable fork-cohort in aeon.yml — PR #152 (May 2); gives "X of 43 forks running in production" social proof
 - Enable operator-scorecard in aeon.yml — PR #153 (May 3); weekly scorecard
@@ -90,4 +90,3 @@
 - Enable v4-readiness in aeon aeon.yml — PR #160 (May 6); dispatch manually pre-v4-announcement
 - Backport to aeon-agent: fork-cohort (#3), v4-readiness (#4), thread-formatter (#5) per May-6 ideas; also 80 autoresearch-evolution rewrites (aeon PRs #46–#136)
 - Run more digest types (HN, RSS, papers, DeFi)
-- Fix token permissions: need PAT with `workflows` scope for workflow + topics admin-scope writes
