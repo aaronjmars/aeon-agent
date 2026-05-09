@@ -1,0 +1,320 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-09"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-budget",
+        "sep-1",
+        "stack-tweets",
+        "sep-2",
+        "stat-total"
+      ]
+    },
+    "stat-budget": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "tweet-4",
+        "tweet-5"
+      ]
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-1",
+        "stack-meta-1"
+      ]
+    },
+    "tweetcard-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "MrDegenWolf",
+        "text": "i keep stacking just by talking about banger projects like $AEON & $MIROSHARK — life's beautiful, isn't it?"
+      }
+    },
+    "stack-meta-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-reward-1",
+        "badge-score-1",
+        "link-tweet-1"
+      ]
+    },
+    "stat-reward-1": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$3.04 in $AEON"
+      }
+    },
+    "badge-score-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 14"
+      }
+    },
+    "link-tweet-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2052745766985187450"
+      }
+    },
+    "tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-2",
+        "stack-meta-2"
+      ]
+    },
+    "tweetcard-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Salpha_bot",
+        "handle": "Salpha_bot",
+        "text": "$aeon Heads up: this ticker is shared by other tokens — verify the CA. Detailed alpha on AEON framework, GitHub, @aaronjmars"
+      }
+    },
+    "stack-meta-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-reward-2",
+        "badge-score-2",
+        "link-tweet-2"
+      ]
+    },
+    "stat-reward-2": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$2.17 in $AEON"
+      }
+    },
+    "badge-score-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 10"
+      }
+    },
+    "link-tweet-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Salpha_bot/status/2052722745549492534"
+      }
+    },
+    "tweet-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-3",
+        "stack-meta-3"
+      ]
+    },
+    "tweetcard-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "gumterver100",
+        "handle": "gumterver100",
+        "text": "Early tier list featuring $aeon @aeonframework"
+      }
+    },
+    "stack-meta-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-reward-3",
+        "badge-score-3",
+        "link-tweet-3"
+      ]
+    },
+    "stat-reward-3": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$1.74 in $AEON"
+      }
+    },
+    "badge-score-3": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 8"
+      }
+    },
+    "link-tweet-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/gumterver100/status/2052796154677522701"
+      }
+    },
+    "tweet-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-4",
+        "stack-meta-4"
+      ]
+    },
+    "tweetcard-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "handle": "DaMikey23",
+        "text": "$AEON The most autonomous agent framework. No approval loops. No babysitting. Configure once, forget forever."
+      }
+    },
+    "stack-meta-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-reward-4",
+        "badge-score-4",
+        "link-tweet-4"
+      ]
+    },
+    "stat-reward-4": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$1.74 in $AEON"
+      }
+    },
+    "badge-score-4": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 8"
+      }
+    },
+    "link-tweet-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2052722329650675913"
+      }
+    },
+    "tweet-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-5",
+        "stack-meta-5"
+      ]
+    },
+    "tweetcard-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "russian_acai",
+        "handle": "russian_acai",
+        "text": "precisely why i'm aeon pilled — aeon is the digitalized aaron, and $aeon is the builder coin of $aaron"
+      }
+    },
+    "stack-meta-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-reward-5",
+        "badge-score-5",
+        "link-tweet-5"
+      ]
+    },
+    "stat-reward-5": {
+      "type": "Stat",
+      "props": {
+        "label": "Reward",
+        "value": "$1.30 in $AEON"
+      }
+    },
+    "badge-score-5": {
+      "type": "Badge",
+      "props": {
+        "text": "Score: 6"
+      }
+    },
+    "link-tweet-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/russian_acai/status/2052741914617688075"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total allocated",
+        "value": "$9.99 in $AEON to 5 authors"
+      }
+    }
+  }
+}
