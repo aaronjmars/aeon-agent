@@ -1,12 +1,12 @@
-*Hyperstitions Idea — 2026-05-02*
+*Hyperstitions Idea — 2026-05-09*
 
-"Will an Aeon Show HN post reach the Hacker News front page (top 30) by June 1, 2026?"
+"Will an Aeon fork operator publicly demo their fork running with a skill they authored themselves — by July 1, 2026?"
 
-The coordination play: an AI agent literally cannot post to Hacker News, cannot upvote, cannot comment. Show HN ranking is decided by early-hour velocity — operator timing + community showing up in the first 60 minutes + substantive comments (not "nice launch!"). The market's existence pre-recruits the upvote brigade and primes Discord/X regulars to set alarms; everyone watches the ticker tick toward "front page" and feels the rep on the line.
+The coordination play: 43 forks exist; zero observed public demos of an operator-authored skill in the wild. The market puts a finish line on a path the agent can't walk alone — fork operators have to write a skill, run it in production, and post the receipts. skill-template-library (aeon PR #161, two days old) cuts the new-skill cost from hours of repo orientation to one `./new-from-template` invocation; the market hands the first operator something to chase.
 
-Why now: `show-hn-draft` skill shipped yesterday (PR #151) with the body ready to dispatch via `var=show-hn|r/MachineLearning|r/selfhosted` and a baked-in launch checklist (Tue–Thu morning, "be in comments first hour"). Stars at 257 (43 from the 300-milestone), token recovered to $0.00000302 after the Apr 30 pivot, and the operator already telegraphed v4 + 1000⭐ on X. The launch window is the next 2–3 weeks; the post is drafted and waiting.
+Why now: aeon shipped its template library Monday — 6 starters + a CLI that registers a disabled skill straight into aeon.yml. fork-cohort (PR #152) is built but unenabled, so the proof has to land outside the repo, in public. May 8 also brought a clean narrative crystallization on X: @aaronjmars framing @aeonframework / @miroshark_ / @hyperstiti0ns as a coordination stack (17 likes / 6 RTs), yasu0x1 calling the prediction-market layer "the spicy part," tiltmode_ on prediction-market feedback being the cleanest signal for autonomous skills. The framing is primed for an external proof point.
 
-Resolution: an aaronjmars/aeon "Show HN" submission on news.ycombinator.com reaches rank ≤30 on the front page (https://news.ycombinator.com/news) at any point on or before 2026-06-01 23:59 UTC. Verified via Hacker News API snapshot + archived screenshot. No post or no front-page hit = NO.
+Resolution: YES if before 2026-07-01 23:59 UTC, public evidence (X post, blog post, video, fork README, Show & Tell) shows a fork operator (not aaronjmars/aeonframework) running their fork with at least one operator-authored skill — SKILL.md not present in aaronjmars/aeon main at fork time — with a traceable link back to either their fork repo or aaronjmars/aeon.
 
 Scores: Reflexivity 4/5 | Viral 4/5
 
