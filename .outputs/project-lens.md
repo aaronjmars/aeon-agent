@@ -1,5 +1,5 @@
-*New Article: An Agent That Holds Your API Key Will Eventually Leak It*
+*New Article: A Day Without Twelve Tabs*
 
-On April 15, researcher Aonan Guan and Johns Hopkins collaborators published 'Comment and Control' — one malicious PR title made Claude Code, Gemini CLI, and GitHub Copilot Agent each post their own ANTHROPIC_API_KEY as a comment. Their structural diagnosis: the agent needs secrets to do its job, and processes untrusted input as its job — two requirements in direct conflict. The 2026 industry response is more sandbox layers around the agent. Aeon's prefetch/postprocess pattern, forced into existence by the GitHub Actions sandbox blocking env-var expansion in curl headers, accidentally lands a poor man's capability split: the runner holds the secret, the agent holds a string. A Comment-and-Control payload still hijacks the agent — but `printenv` no longer contains anything to exfiltrate.
+Solo founder lens on Aeon: the 2026 one-person-unicorn discourse fixates on AI doing more work, but the actual ceiling for a solo operator isn't the work — it's the watching. Twelve tabs every morning to find out if anything moved. Aeon's skills (repo-pulse, fetch-tweets, token-report, push-recap, tweet-allocator) map almost exactly onto those tabs and turn the founder's inbox into the agent itself: receipts arrive first, the tabs read themselves. Skill-template-library (May 7) makes the thirteenth watch a one-line CLI invocation; 43 forks now run their own twelve-tab digest.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-08.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-09.md
