@@ -1,0 +1,123 @@
+{
+  "root": "card-pulse",
+  "state": {},
+  "elements": {
+    "card-pulse": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "text-date",
+        "text-repo",
+        "separator-1",
+        "stats-stack",
+        "separator-2",
+        "stargazers-section"
+      ]
+    },
+    "text-date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-09",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "text-repo": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "281",
+        "delta": "+2",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "43",
+        "delta": "+0",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-stargazers",
+        "stargazers-list"
+      ]
+    },
+    "heading-stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-fifield",
+        "link-matthew6688"
+      ]
+    },
+    "link-fifield": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/fifield",
+        "href": "https://github.com/fifield"
+      },
+      "children": []
+    },
+    "link-matthew6688": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/matthew6688",
+        "href": "https://github.com/matthew6688"
+      },
+      "children": []
+    }
+  }
+}
