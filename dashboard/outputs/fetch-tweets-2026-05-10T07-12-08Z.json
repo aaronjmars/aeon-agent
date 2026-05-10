@@ -1,0 +1,285 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-10)"
+      },
+      "children": [
+        "stack-tweets"
+      ]
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "group-1",
+        "group-2",
+        "group-3",
+        "group-4",
+        "group-5",
+        "group-6",
+        "group-7",
+        "group-8",
+        "group-9"
+      ]
+    },
+    "group-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "For people who are hungry, this is a golden age @aeonframework.",
+        "likes": 18,
+        "retweets": 4
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2053223166021902422"
+      }
+    },
+    "group-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Karma_Nfa",
+        "handle": "Karma_Nfa",
+        "text": "GM ☕ morning market update request for $AEON + other tokens via bankrbot",
+        "likes": 10,
+        "retweets": 2
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Karma_Nfa/status/2053103650076021064"
+      }
+    },
+    "group-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "JMania402",
+        "handle": "JMania402",
+        "text": "$AEON retweeted by Grok, built with GPT-5.5; tokens still showing strength despite low overall volume",
+        "likes": 6,
+        "retweets": 1
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/JMania402/status/2053105650025320932"
+      }
+    },
+    "group-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "link-4"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "handle": "DaMikey23",
+        "text": "$MIROSHARK is a beast. And don't forget about $AEON also 🤙",
+        "likes": 4,
+        "retweets": 0
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2053107481174311230"
+      }
+    },
+    "group-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5",
+        "link-5"
+      ]
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "handle": "DaMikey23",
+        "text": "$AEON This guy isn't just in the lab with a pen and tab, He's actually cooking up sh!t never seen before.",
+        "likes": 4,
+        "retweets": 0
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2053242635582640434"
+      }
+    },
+    "group-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-6",
+        "link-6"
+      ]
+    },
+    "tweet-6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "DaMikey23",
+        "handle": "DaMikey23",
+        "text": "$AEON contract address post",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link-6": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/DaMikey23/status/2053270056805519438"
+      }
+    },
+    "group-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-7",
+        "link-7"
+      ]
+    },
+    "tweet-7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "7. Download aeon & run it https://github.com/aaronjmars/aeon (thread step)",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link-7": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2052910564179939527"
+      }
+    },
+    "group-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-8",
+        "link-8"
+      ]
+    },
+    "tweet-8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "tansirokira88",
+        "handle": "tansirokira88",
+        "text": "AI Economy needs this. AEON delivering the payment layer for agents on BNB Chain and with Coinbase. The #AgenticEconomy is loading ⚡ $AEON",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-8": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/tansirokira88/status/2052995851061273012"
+      }
+    },
+    "group-9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-9",
+        "link-9"
+      ]
+    },
+    "tweet-9": {
+      "type": "TweetCard",
+      "props": {
+        "author": "RTownd30716",
+        "handle": "RTownd30716",
+        "text": "$TNDM $AEON Here we go. (stock blog link, low signal)",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-9": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/RTownd30716/status/2053130308011348348"
+      }
+    }
+  }
+}
