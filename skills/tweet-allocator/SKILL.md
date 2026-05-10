@@ -34,11 +34,18 @@ Project-owned accounts. Valuable signal, but self-dealing:
 
 3. **Exclude already-paid tweets and authors.** Scan the last 30 days of `memory/logs/` for previous `## Tweet Allocator` entries. Drop any tweet URL that's already been rewarded. Drop any author who already got paid today.
 
-4. **Check Bankr.** Read `.bankr-cache/verified-handles.json` — a `{ "handle": "0xwallet" | null }` map. For each remaining candidate, look up the handle:
+4. **Check Bankr.**
+
+   **First — check the prefetch error marker.** If `.bankr-cache/verified-handles.json.error` exists, the prefetch script failed and recorded a specific reason. Read the file's full content (one line, prefixed with `BANKR_API_KEY_MISSING:` / `BANKR_API_KEY_INVALID:` / `BANKR_LOOKUPS_FAILED:`). Then:
+   - Log `TWEET_ALLOCATOR_ERROR — <verbatim marker content>` to `memory/logs/${today}.md`.
+   - Send a notification via `./notify` that **quotes the marker's failure code AND the operator action it specifies** — e.g. `Tweet Allocator — ${today}: ERROR — BANKR_API_KEY_INVALID. Rotate BANKR_API_KEY at https://bankr.bot/api and re-add the secret.` Do NOT paraphrase the cause; the marker text is the operator-facing source of truth and changes per failure mode.
+   - Stop. Do not proceed to scoring/allocation.
+
+   **Second — read the cache.** If no marker exists, read `.bankr-cache/verified-handles.json` — a `{ "handle": "0xwallet" | null }` map. For each remaining candidate, look up the handle:
    - Value is a `0x...` address → **eligible**, keep for allocation.
    - Value is `null`, or handle missing from the cache → **not eligible**, drop silently.
 
-   **Hard stop if the cache is missing or empty.** Log `TWEET_ALLOCATOR_ERROR — .bankr-cache/verified-handles.json missing; check BANKR_API_KEY secret and prefetch-bankr.sh workflow output`, send an alert notification via `./notify` (e.g. `Tweet Allocator — ${today}: ERROR — Bankr cache missing, check BANKR_API_KEY secret.`), and stop. No "unverified" fallback — no wallet, no payment.
+   **Hard stop if the cache file itself is missing** (no marker AND no `.json` — means the prefetch never ran). Log `TWEET_ALLOCATOR_ERROR — .bankr-cache/verified-handles.json missing AND no .error marker; prefetch-bankr.sh did not run for this skill, check workflow config`, send an alert notification, and stop. No "unverified" fallback — no wallet, no payment.
 
    If zero candidates remain after this step, log `TWEET_ALLOCATOR_EMPTY — no eligible tweets (nobody in today's log has a Bankr wallet)`, send a one-line notification via `./notify` (e.g. `Tweet Allocator — ${today}: no eligible tweeters (none had a verified Bankr wallet today).`), and stop.
 
@@ -109,7 +116,13 @@ Project-owned accounts. Valuable signal, but self-dealing:
 
 ## Sandbox note
 
-The Bankr Agent API requires `BANKR_API_KEY` in the header — **the sandbox blocks env var expansion in curl**, so direct calls from this skill fail. All wallet verification happens in `scripts/prefetch-bankr.sh` before Claude starts. That script is the authoritative source. If the cache is missing, the skill stops — it does not try to call Bankr from inside the sandbox.
+The Bankr Agent API requires `BANKR_API_KEY` in the header — **the sandbox blocks env var expansion in curl**, so direct calls from this skill fail. All wallet verification happens in `scripts/prefetch-bankr.sh` before Claude starts. That script is the authoritative source.
+
+The prefetch's failure surface is two files in `.bankr-cache/`:
+- `verified-handles.json` — the success cache (always written, even on no-op).
+- `verified-handles.json.error` — written ONLY when the current run failed. Cleared at the start of every prefetch, so its presence means *this* run failed. First line is the failure code (`BANKR_API_KEY_MISSING` / `BANKR_API_KEY_INVALID` / `BANKR_LOOKUPS_FAILED`) followed by the operator-facing fix instructions.
+
+The skill reads the `.error` marker first (step 4) and surfaces its content verbatim — do not paraphrase, the marker text is calibrated to the specific failure mode.
 
 ## Environment Variables Required
 
@@ -119,5 +132,5 @@ The Bankr Agent API requires `BANKR_API_KEY` in the header — **the sandbox blo
 ## Status flags
 
 - `TWEET_ALLOCATOR_OK` — allocation plan produced (or auto-send completed).
-- `TWEET_ALLOCATOR_EMPTY` — no tweets in today's log, OR no candidates have a Bankr wallet.
-- `TWEET_ALLOCATOR_ERROR` — Bankr cache missing (prefetch didn't run or `BANKR_API_KEY` not set).
+- `TWEET_ALLOCATOR_EMPTY` — no tweets in today's log, OR no candidates have a Bankr wallet (cache returned only `null` values).
+- `TWEET_ALLOCATOR_ERROR` — prefetch wrote a `.error` marker (`BANKR_API_KEY_MISSING` / `BANKR_API_KEY_INVALID` / `BANKR_LOOKUPS_FAILED`), or the cache file is missing entirely (prefetch didn't run). The marker's text is appended verbatim to the log line.
