@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-05-06*
+*Last consolidated: 2026-05-10*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -27,9 +27,13 @@
 | 2026-05-06 | Aeon Wrote The v4 Migration Guide Two Weeks Before v4 Lands | repo-article |
 | 2026-05-06 | Sixty-One Percent of Unpaid Maintainers Are Alone. Their Repo Doesn't Have to Be. | project-lens |
 | 2026-05-07 | Aeon Built the Skill Template Library Its Forks Were Reverse-Engineering | repo-article |
+| 2026-05-07 | Frameworks Don't Win. Generators Do. | project-lens |
 | 2026-05-08 | The AI Stack Has Three Layers. Aeon Built A Skill For Each One — And A Dashboard Column Too. | repo-article |
+| 2026-05-08 | An Agent That Holds Your API Key Will Eventually Leak It | project-lens |
 | 2026-05-09 | Three Repos. Three PRs. Nine Minutes. All Sourced From Yesterday's Brief. | repo-article |
+| 2026-05-09 | A Day Without Twelve Tabs | project-lens |
 | 2026-05-10 | Aeon Built the Scoreboard for the Eight Frameworks It's Compared To. Itself Is the Anchor Row. | repo-article |
+| 2026-05-10 | Files Won the AI Memory War. Almost Nobody Announced It. | project-lens |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -37,21 +41,9 @@
 | 2026-03-25 | Polymarket | Geopolitics dominates; US-Iran escalation at 58.5% YES |
 
 ## Skills Built
-*(Rows before 2026-05-03 archived to `memory/topics/skills-history.md`)*
+*(Rows before 2026-05-07 archived to `memory/topics/skills-history.md`)*
 | Skill | Date | Notes |
 |-------|------|-------|
-| operator-scorecard | 2026-05-03 | Weekly Monday 10:30 UTC sonnet — three-paragraph synthesis (agent health / community growth / economic activity), worst-of-three verdict 🟢/🟡/🔴 mirroring heartbeat P-flags. Every number from a file another skill wrote (aeon PR #153) |
-| cron-state (script) | 2026-05-03 | Local viewer for memory/cron-state.json; --skill, --unhealthy (exits 1), --stale [hours] (exits 1), --json modes. Useful when gh api rate-limited or sandbox-blocked (aeon-agent PR #27) |
-| mastodon-column (minitor) | 2026-05-03 | 32nd column type. Keyless Mastodon REST API; hashtag + author modes. HTML strip, federated handle parsing, reblog filter, CW prefix. #6364ff accent (minitor PR #26) |
-| skill-freshness (aeon) | 2026-05-04 | Daily 08:00 UTC. Walks enabled skills' file deps, checks freshness per class (articles 28h/192h · .outputs 4h · topics 7d · state 30d). OK/WARN/STALE/MISSING bands. Fingerprint dedup 7d re-emit. Closes silent-staleness gap (aeon PR #157) |
-| operator-scorecard (aeon-agent) | 2026-05-04 | Backport of aeon PR #153 + heartbeat-only fallback so forks without skill-analytics don't permanently report WATCH (branch B: OK if p0==0 AND p1==0 AND ok≥5). Merged PRs #28 + #29 |
-| lobsters-column (minitor) | 2026-05-04 | 34th column type. Keyless lobste.rs JSON API; Hottest/Newest/Active/Tag modes. Tag pills, anchor icon, #ac130d accent (minitor PR #27) |
-| star-momentum-alert (aeon) | 2026-05-05 | Daily 10:10 UTC. Projects next milestone via 7d rolling star average. Alert gates: 7-14d out AND Tue/Wed/Thu. Per-(repo,milestone) dedup 7d re-emit. Pairs with show-hn-draft (aeon PR #159) |
-| skill-freshness (aeon-agent) | 2026-05-05 | Verbatim backport of aeon PR #157 (aeon-agent PR #30) |
-| polymarket-column (minitor) | 2026-05-05 | 35th column type. Gamma API keyless; trending/newest/ending-soon/tag modes. 5 integration quirks (JSON-string outcomes parse, binary leading-outcome sort, price clamp 0..1, past-dated drop, event-slug permalink). #2D9CDB accent (minitor PR #28) |
-| token-report (volume trend) | 2026-05-06 | Adds 24h vol % trend + 7d/30d avg vol to token-report output and notification (aeon-agent PR #31) |
-| xai-prefetch max_output_tokens | 2026-05-06 | Raises max_output_tokens to 16384 in xai_search helper. Trigger: May-6 cache truncated at 7,354 tokens (6,486 reasoning), delivering 2 tweets instead of 10+. Affects 5 skills sharing the helper (aeon-agent PR #32) |
-| v4-readiness (aeon) | 2026-05-06 | Workflow_dispatch one-shot. Reads aeon.yml + skills.json + MEMORY.md vs embedded v4 change manifest. Emits Safe/Review/Custom/Action breakdown with effort tags. Read-only, manifest-in-SKILL.md travels per-fork (aeon PR #160) |
 | stack-overflow-column (minitor) | 2026-05-07 | 36th column type. Keyless Stack Exchange API 2.3; hot/votes/newest/week/month modes; optional 1–5 tag AND-filter (commas/spaces normalised to `;`). Accepted-answer badge, #F48024 brand orange, HTML-entity decoded titles. Plugin + 3 registry edits + integration helper (minitor PR #29) |
 | skill-template-library (aeon) | 2026-05-07 | Closes activation gap for fork operators. `templates/` with 6 starters (crypto-tracker, research-digest, code-reviewer, social-monitor, deploy-watcher, community-manager) — each runnable SKILL.md with `[REPLACE: KEY]` tokens. `./new-from-template` CLI: --list, --tokens, --var KEY=VALUE; sed-substitutes (escapes `\&\|`), registers disabled entry in aeon.yml. Carried unbuilt from Apr-18 ideas (aeon PR #161) |
 | huggingface-column (minitor) | 2026-05-08 | 37th column type. Keyless HF Hub REST API; 3 resources (models/datasets/spaces) × 3 sorts (trending/most-likes/newest) + search. First plugin to use the `ai` ColumnCategory (declared in types.ts since plugin-system shipped, no consumer until now). Schema-drift safe across the 3 resource types (models lack `author`+`lastModified`, datasets have both, spaces have no `downloads`). Plugin + 3 registry edits + integration helper. README adds AI/ML cluster row, count 36 → 37 (minitor PR #30) |
@@ -77,13 +69,13 @@
 - tweet-allocator Bankr prefetch: empty `verified-handles.json` had three ambiguous causes — resolved by `.error` marker (aeon-agent PR #24)
 
 ## Repo Actions Ideas Pipeline
-~65 ideas generated (14 runs). Recently built: skill-freshness (May-4), star-momentum-alert (May-5), polymarket-column (May-5), v4-readiness (May-6), stack-overflow-column (May-7), skill-template-library (May-7), huggingface-column + huggingface-trending + xai-prefetch warning (May-8), contributor-spotlight + skill-update-check backport + arxiv-column (May-9), ai-framework-watch + fork-cohort backport + devto-column (May-10). May-10 burned the last 2 unbuilt May-8 ideas (#2 devto, #3 ai-framework-watch) and the May-6 #3 fork-cohort backport. May-8 fully consumed (5/5 ideas built across May-9 and May-10). Open unbuilts: Auto-Merge Agent PRs, Dashboard Live Feed, Webhook-to-Skill Bridge. Remaining backports for aeon-agent: v4-readiness, thread-formatter (May-6 #4/#5). See `articles/repo-actions-*.md`.
+~70 ideas generated (15 runs). Recently built: huggingface-column + huggingface-trending + xai-prefetch warning (May-8), contributor-spotlight + skill-update-check backport + arxiv-column (May-9), ai-framework-watch + fork-cohort backport + devto-column (May-10). May-10 burned last 2 unbuilt May-8 ideas + May-6 #3 backport; May-8 fully consumed (5/5). May-10 ideas (5 new): Price Threshold Alert (aeon), GitHub Actions Status Column (minitor), Auto-Merge Agent PRs (aeon-agent), Fork Release Tracker (aeon), npm Trends Column (minitor). Open unbuilts: Auto-Merge Agent PRs, Price Threshold Alert, GitHub Actions Status Column, Fork Release Tracker, npm Trends Column, Dashboard Live Feed, Webhook-to-Skill Bridge. Remaining backports for aeon-agent: v4-readiness, thread-formatter (May-6 #4/#5). See `articles/repo-actions-*.md`.
 
 ## Next Priorities
-- Enable star-milestone in aeon aeon.yml — already exists upstream (PR #39 + autoresearch PR #111); aeon at 278⭐ (May-7) — flip enabled:true so the 300⭐ crossing is announced
-- Enable star-momentum-alert in aeon.yml — shipped `enabled: false` PR #159 (May 5); first alert window opens ~May 7-8 (projection: 300⭐ ~4 days out)
-- Enable thread-formatter in aeon.yml — first use is 300-star milestone (276⭐ now, ~24 from target); PR #148 (Apr 30)
-- Enable show-hn-draft in aeon.yml — dispatch when stars approach 300 (currently 276⭐, ~24 from milestone); PR #151 (May 1)
+- Enable star-milestone in aeon aeon.yml — already exists upstream (PR #39 + autoresearch PR #111); aeon at 284⭐ (May-10) — flip enabled:true so the 300⭐ crossing is announced
+- Enable star-momentum-alert in aeon.yml — shipped `enabled: false` PR #159 (May 5); 284⭐ now, ~16 from 300⭐ target (~1-2 weeks at current pace)
+- Enable thread-formatter in aeon.yml — first use is 300-star milestone (284⭐ now, ~16 from target); PR #148 (Apr 30)
+- Enable show-hn-draft in aeon.yml — dispatch when stars approach 300 (284⭐ now, ~16 from milestone); PR #151 (May 1)
 - Enable pr-triage in aeon.yml — PR #147 (Apr 29); PR #143 from pezetel is first natural triage candidate
 - Build Auto-Merge Agent PRs (Apr-26 idea #1) — unblocked 2026-05-06 (GH_GLOBAL rotated with workflows scope)
 - Enable smithery-manifest in aeon.yml — PR #149 (May 1); submit docs/ to Smithery + MCP Registry

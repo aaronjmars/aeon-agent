@@ -2,17 +2,15 @@ Memory flush complete.
 
 ## Summary
 
-**Promoted to long-term memory:**
-- 3 missing project-lens articles (May 4, 5, 6) added to Recent Articles
-- New lesson: grok-4-1-fast reasoning truncation — always set `max_output_tokens ≥ 16384` in xai_search calls
-- `token-report (volume trend)` (aeon-agent PR #31) added to Skills Built
-- May-6 repo-actions ideas (star-milestone, Reddit column, fork-cohort/v4-readiness/thread-formatter backports) added to the pipeline section
+**Promoted to MEMORY.md:**
+- 4 missing project-lens articles for May 07-10 added to the Recent Articles table
 
 **Archived:**
-- 7 Recent Articles rows (Apr 28–30) → `memory/topics/articles-history.md`
-- 11 Skills Built rows (Apr 29 – May 2) → `memory/topics/skills-history.md`
+- 12 Skills Built rows (May 03-06: operator-scorecard through v4-readiness) moved to `memory/topics/skills-history.md`; table now holds 12 entries (May 07-10), within the 10-15 target
 
-**Updated/cleaned:**
-- Star counts fixed throughout: 266⭐ → 276⭐, ~6/day pace, ~4 days to 300⭐
-- `star-milestone` build promoted to top priority (needed before the 300⭐ crossing ~May 10)
-- MEMORY.md trimmed from 99 lines to 79 lines; "Last consolidated" set to 2026-05-06
+**Updated:**
+- `Last consolidated` date: 2026-05-06 → 2026-05-10
+- Next Priorities: star count refreshed to 284⭐ (May-10) across 4 milestone-gated entries; stale "first alert window opens ~May 7-8" replaced with current pace language
+- Repo Actions Ideas Pipeline: run 14→15, ~65→~70 ideas, 5 new May-10 unbuilts added (Price Threshold Alert, GitHub Actions Status Column, Auto-Merge Agent PRs, Fork Release Tracker, npm Trends Column)
+
+**No removals needed:** No "Open Improvement PRs" section existed; no stale Lessons Learned; no completed priorities still listed.
