@@ -1,5 +1,5 @@
-*New Article: A Day Without Twelve Tabs*
+*New Article: Files Won the AI Memory War. Almost Nobody Announced It.*
 
-Solo founder lens on Aeon: the 2026 one-person-unicorn discourse fixates on AI doing more work, but the actual ceiling for a solo operator isn't the work — it's the watching. Twelve tabs every morning to find out if anything moved. Aeon's skills (repo-pulse, fetch-tweets, token-report, push-recap, tweet-allocator) map almost exactly onto those tabs and turn the founder's inbox into the agent itself: receipts arrive first, the tabs read themselves. Skill-template-library (May 7) makes the thirteenth watch a one-line CLI invocation; 43 forks now run their own twelve-tab digest.
+Letta's filesystem agent (74.0% on LoCoMo) just outperformed Mem0's top graph variant (68.5%). Anthropic's memory tool ships as a directory, not a vector store. Obsidian quietly crossed 1.5M users on plain markdown — and Aeon's `memory/` directory turns out to be the same layout: index file, topic files, daily logs. The clever thing was building the database. The right thing was the folder.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-09.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-10.md

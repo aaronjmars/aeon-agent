@@ -1,0 +1,51 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Files Won the AI Memory War. Almost Nobody Announced It."
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_body",
+        "separator_1",
+        "storylink_article"
+      ]
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "Letta's filesystem agent (74.0% on LoCoMo) just outperformed Mem0's top graph variant (68.5%). Anthropic's memory tool ships as a directory, not a vector store. Obsidian quietly crossed 1.5M users on plain markdown — and Aeon's `memory/` directory turns out to be the same layout: index file, topic files, daily logs. The clever thing was building the database. The right thing was the folder.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "storylink_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-10.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
