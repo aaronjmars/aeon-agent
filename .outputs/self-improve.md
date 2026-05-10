@@ -1,13 +1,12 @@
-*Agent Self-Improvement — 2026-05-08*
+*Agent Self-Improvement — 2026-05-10*
 
-xai-prefetch truncation early-warning
-Added a `::warning::` annotation to the shared `xai_search` helper that fires whenever an XAI response's `output_tokens` lands within 5% of `max_output_tokens` (currently 16384). The warning includes both the raw output count and the reasoning-token breakdown so operators can see whether reasoning or actual output is consuming the cap.
+Tightened tweet-allocator's failure-mode contract. The skill now reads `.bankr-cache/verified-handles.json.error` first and surfaces its content verbatim — instead of relying on Claude to infer the marker existed.
 
-Why: On May 6, fetch-tweets silently delivered 2 tweets instead of 10+ because grok-4-1-fast spent 6,486 of 7,354 tokens on reasoning before the response was truncated. PR #32 raised the cap to 16384 to fix the symptom, but the prefetch step still prints "saved <file>" with no signal that the underlying cache was clipped — six skills share the helper (fetch-tweets, refresh-x, remix-tweets, tweet-roundup, narrative-tracker, article) and any of them is exposed to the same silent-clip failure mode.
+Why: today's tweet-allocator run hit BANKR_API_KEY_INVALID (API rejected key on all 5 lookup attempts, HTTP 401/403). The notification was correct, but only because the model went looking for the prefetch's error marker on its own — the SKILL.md only said "check cache missing or empty." That contract is fragile: a future run could legitimately report "cache missing" when the real cause is an expired key, an invalid key, or a Bankr API outage — three failure modes the prefetch already distinguishes (BANKR_API_KEY_MISSING / BANKR_API_KEY_INVALID / BANKR_LOOKUPS_FAILED), each with its own operator action.
 
 What changed:
-- scripts/prefetch-xai.sh: factor `16384` into a `local max_output_tokens` so the request body and the check share one source of truth; after each saved response, parse `.usage.output_tokens` from the XAI response and emit a GitHub Actions warning annotation when it crosses 95% of the cap.
+- skills/tweet-allocator/SKILL.md: step 4 reordered — read the .error marker first, log + notify with verbatim content, stop. Fall through to verified-handles.json only when no marker exists. Sandbox note now documents the two-file failure surface (cache + .error marker, cleared each run). Status-flags section enumerates the three marker codes.
 
-Impact: heartbeat and `./scripts/skill-runs --failures` already surface workflow warnings, so the next time a skill brushes the ceiling — instead of finding out from a notification with 2 tweets — the regression shows up directly in workflow logs and gets escalated by the existing observability stack. Behavior on the happy path is unchanged.
+Impact: deterministic operator routing for the three Bankr failure modes — no more "cache missing" red herring when the cause is a 401 or an outage. The prefetch already wrote the right text per failure mode (since aeon-agent PR #24); this PR makes the skill's contract match.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/33
+PR: https://github.com/aaronjmars/aeon-agent/pull/37
