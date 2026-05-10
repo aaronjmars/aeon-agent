@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-05-09T00:00:00Z",
+  "generated": "2026-05-10T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 58,
+  "total": 59,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -580,6 +580,16 @@
       "var": "",
       "files": 1,
       "install": "./add-skill aaronjmars/aeon fork-fleet"
+    },
+    {
+      "slug": "fork-cohort",
+      "name": "fork-cohort",
+      "description": "Weekly fork-activation cohort tracker — buckets every fork by recent run activity (COLD / STALE / ACTIVE / POWER) with week-over-week deltas",
+      "category": "dev",
+      "schedule": "0 19 * * 0",
+      "var": "",
+      "files": 1,
+      "install": "./add-skill aaronjmars/aeon-agent fork-cohort"
     },
     {
       "slug": "tweet-allocator",

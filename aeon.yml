@@ -116,6 +116,7 @@ skills:
   vercel-projects: { enabled: false, schedule: "0 18 * * 0", model: "claude-sonnet-4-6", var: "" }
   cost-report: { enabled: false, schedule: "0 7 * * 1", model: "claude-sonnet-4-6" }
   fork-fleet: { enabled: false, schedule: "0 10 * * 1" }
+  fork-cohort: { enabled: false, schedule: "0 19 * * 0", model: "claude-sonnet-4-6" } # Sunday 19:00 UTC — bucket every fork by activation stage (COLD/STALE/ACTIVE/POWER) using GitHub Actions run history; week-over-week deltas in memory/topics/fork-cohort-state.json; gated notify (skip on STEADY + no transitions). Read-only across the fleet.
   skill-evals: { enabled: false, schedule: "0 6 * * 0", model: "claude-sonnet-4-6" }
   skill-update-check: { enabled: false, schedule: "0 19 * * 0", model: "claude-sonnet-4-6", var: "" } # Sunday 19:00 UTC — audit imported skills (skills.lock) for upstream changes; CRITICAL/HIGH/MEDIUM/LOW priority triage with enabled-state cross-reference; ACCEPT mode (var=accept:{skill_name}) for explicit lock advancement
   spawn-instance: { enabled: false, schedule: "workflow_dispatch", var: "" }
