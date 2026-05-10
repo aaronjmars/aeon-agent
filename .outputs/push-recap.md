@@ -1,16 +1,15 @@
-## Summary
+*Push Recap — 2026-05-10*
+3 watched repos — 6 substantive commits / 4 merged PRs in the 24h window. All authored by @aaronjmars, all from agent-opened PRs.
 
-**Status:** `PUSH_RECAP_QUIET` — no article written, no notification sent.
+*Closing the contributor flywheel (aeon)*: PR #163 lands `contributor-spotlight` — Sunday 20:00 UTC, exactly one hour after fork-cohort. Picks one POWER fork per week (ACTIVE fallback), reads its diverged work, writes a recognition paragraph. 4-week dedup so the spotlight rotates across the fleet. Operator-authored skills get a ★ marker. Closes the social loop yesterday's hyperstitions market opened.
 
-**Window:** 2026-05-08T15:08:56Z → 2026-05-09T15:08:56Z (24h)
+*Drift detection becomes legible (aeon-agent)*: PR #34 backports skill-update-check from upstream. v1 was a flat catalog of SHAs; v2 is CRITICAL/HIGH/MEDIUM/LOW priority triage based on drift size × security verdict × enabled state, plus an ACCEPT mode for one-off lock advancement. Most-leveraged backport because every other drift on aeon-agent (80+ pre-autoresearch versions) becomes a triaged line item once this runs.
 
-**Findings:**
-- **aeon:** 0 commits in window. The two yesterday-recapped pushes (`9c36154` huggingface-trending, `795a5a1` reply-maker prefetch fix) landed at 2026-05-08T13:26Z / 01:18Z — outside the window.
-- **minitor:** 0 commits in window. `a48938b` (huggingface column) landed at 2026-05-08T13:26:57Z — outside the window.
-- **aeon-agent:** 30 commits, all routine cron auto-commits (scheduler state updates + per-skill auto-commits + cron success markers from today's token-report, fetch-tweets, tweet-allocator, repo-pulse, hyperstitions-ideas, feature, and yesterday's push-recap/repo-article/project-lens/heartbeat). Zero code commits.
+*Observability for the silent xAI clip (aeon-agent)*: PR #33 closes the May-6 fetch-tweets regression — emits a `::warning::` GitHub annotation when `output_tokens` lands within 5% of `max_output_tokens=16384`, breaking out reasoning vs visible tokens. Heartbeat picks up annotations. Five downstream skills (fetch-tweets, refresh-x, remix-tweets, tweet-roundup, narrative-tracker, article) protected.
 
-Today's `feature` skill output (aeon #163 contributor-spotlight, aeon-agent #34 skill-update-check backport, minitor #31 arxiv column) opened as PRs but has not merged into any watched main branch yet. Plus aeon-agent #33 (xai-prefetch truncation warning) still open at 26h.
+*arXiv column lands and goes deeper (minitor)*: PR #31 ships the 38th plugin — keyless Atom-XML, 12 cs/stat/math.OC categories, revision badge for v2+. PR #32 is a 50-minute follow-up: `<arxiv:comment>` (~56% populated, contains "Accepted to ICML 2026" / code links / page count) is now extracted and rendered as a small italic line below the abstract.
 
-**Files modified:** `memory/logs/2026-05-09.md` (appended Push Recap entry).
+Plus aeon-agent PR #35 closed the 22-day PAT-workflows-scope escalation thread — heartbeat will stop re-emitting weekly. Auto-Merge Agent PRs is genuinely unblocked.
 
-**Follow-ups:** None — quiet day; the three open `feature` PRs will surface in tomorrow's recap if merged.
+Stats: 20 files changed, +1,195 / -110 lines.
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-10.md

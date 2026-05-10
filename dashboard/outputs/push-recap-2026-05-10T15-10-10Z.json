@@ -1,0 +1,297 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap"
+      },
+      "children": [
+        "date_text",
+        "summary_stack",
+        "sep1",
+        "pr1_section",
+        "sep2",
+        "pr2_section",
+        "sep3",
+        "pr3_section",
+        "sep4",
+        "pr4_section",
+        "sep5",
+        "pr5_text",
+        "sep6",
+        "stats_section",
+        "sep7",
+        "recap_link"
+      ]
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-10",
+        "variant": "muted"
+      }
+    },
+    "summary_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "summary1",
+        "summary2"
+      ]
+    },
+    "summary1": {
+      "type": "Text",
+      "props": {
+        "text": "3 watched repos — 6 substantive commits / 4 merged PRs in the 24h window"
+      }
+    },
+    "summary2": {
+      "type": "Text",
+      "props": {
+        "text": "All authored by @aaronjmars, all from agent-opened PRs"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr1_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr1_heading",
+        "pr1_line1",
+        "pr1_line2",
+        "pr1_line3",
+        "pr1_line4",
+        "pr1_line5"
+      ]
+    },
+    "pr1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Closing the contributor flywheel (aeon)",
+        "level": "h3"
+      }
+    },
+    "pr1_line1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #163 lands `contributor-spotlight` — Sunday 20:00 UTC, exactly one hour after fork-cohort."
+      }
+    },
+    "pr1_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Picks one POWER fork per week (ACTIVE fallback), reads its diverged work, writes a recognition paragraph."
+      }
+    },
+    "pr1_line3": {
+      "type": "Text",
+      "props": {
+        "text": "4-week dedup so the spotlight rotates across the fleet."
+      }
+    },
+    "pr1_line4": {
+      "type": "Text",
+      "props": {
+        "text": "Operator-authored skills get a ★ marker."
+      }
+    },
+    "pr1_line5": {
+      "type": "Text",
+      "props": {
+        "text": "Closes the social loop yesterday's hyperstitions market opened."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr2_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr2_heading",
+        "pr2_line1",
+        "pr2_line2"
+      ]
+    },
+    "pr2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Drift detection becomes legible (aeon-agent)",
+        "level": "h3"
+      }
+    },
+    "pr2_line1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #34 backports `skill-update-check` from upstream. v1 was a flat catalog of SHAs; v2 is CRITICAL/HIGH/MEDIUM/LOW priority triage based on drift size × security verdict × enabled state, plus an ACCEPT mode for one-off lock advancement."
+      }
+    },
+    "pr2_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Most-leveraged backport because every other drift on aeon-agent (80+ pre-autoresearch versions) becomes a triaged line item once this runs."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr3_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr3_heading",
+        "pr3_line1",
+        "pr3_line2"
+      ]
+    },
+    "pr3_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Observability for the silent xAI clip (aeon-agent)",
+        "level": "h3"
+      }
+    },
+    "pr3_line1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #33 closes the May-6 fetch-tweets regression — emits a `::warning::` GitHub annotation when `output_tokens` lands within 5% of `max_output_tokens=16384`, breaking out reasoning vs visible tokens."
+      }
+    },
+    "pr3_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat picks up annotations. Five downstream skills (fetch-tweets, refresh-x, remix-tweets, tweet-roundup, narrative-tracker, article) protected."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr4_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr4_heading",
+        "pr4_line1",
+        "pr4_line2"
+      ]
+    },
+    "pr4_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "arXiv column lands and goes deeper (minitor)",
+        "level": "h3"
+      }
+    },
+    "pr4_line1": {
+      "type": "Text",
+      "props": {
+        "text": "PR #31 ships the 38th plugin — keyless Atom-XML, 12 cs/stat/math.OC categories, revision badge for v2+."
+      }
+    },
+    "pr4_line2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #32 is a 50-minute follow-up: `<arxiv:comment>` (~56% populated, contains \"Accepted to ICML 2026\" / code links / page count) is now extracted and rendered as a small italic line below the abstract."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr5_text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #35 closed the 22-day PAT-workflows-scope escalation thread — heartbeat will stop re-emitting weekly. Auto-Merge Agent PRs is genuinely unblocked."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_grid"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h4"
+      }
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat1",
+        "stat2",
+        "stat3"
+      ]
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Files Changed",
+        "value": "20"
+      }
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines Added",
+        "value": "+1,195"
+      }
+    },
+    "stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines Removed",
+        "value": "-110"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-10.md"
+      }
+    }
+  }
+}
