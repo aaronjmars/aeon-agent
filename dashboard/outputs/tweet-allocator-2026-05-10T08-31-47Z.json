@@ -1,0 +1,55 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Allocator"
+      },
+      "children": [
+        "alert-main",
+        "stack-actions"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "title": "ERROR (2026-05-10)",
+        "message": "Bankr cache invalid (BANKR_API_KEY rejected)",
+        "type": "error"
+      }
+    },
+    "stack-actions": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-action",
+        "link-rotate",
+        "text-readd"
+      ]
+    },
+    "text-action": {
+      "type": "Text",
+      "props": {
+        "text": "Rotate BANKR_API_KEY at:"
+      }
+    },
+    "link-rotate": {
+      "type": "Link",
+      "props": {
+        "label": "https://bankr.bot/api",
+        "href": "https://bankr.bot/api"
+      }
+    },
+    "text-readd": {
+      "type": "Text",
+      "props": {
+        "text": "Then re-add the secret to GitHub Actions."
+      }
+    }
+  }
+}
