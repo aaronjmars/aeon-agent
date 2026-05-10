@@ -29,6 +29,7 @@
 | 2026-05-07 | Aeon Built the Skill Template Library Its Forks Were Reverse-Engineering | repo-article |
 | 2026-05-08 | The AI Stack Has Three Layers. Aeon Built A Skill For Each One — And A Dashboard Column Too. | repo-article |
 | 2026-05-09 | Three Repos. Three PRs. Nine Minutes. All Sourced From Yesterday's Brief. | repo-article |
+| 2026-05-10 | Aeon Built the Scoreboard for the Eight Frameworks It's Compared To. Itself Is the Anchor Row. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
