@@ -47,3 +47,9 @@ node_modules/
 # Stale artifacts
 .external-work
 .vuln-scan/
+
+# Per-skill scratch clones (e.g. feature skill builds external repo PRs in .work/build-*)
+.work/
+
+# Hash dedup file used by ./notify within a workflow run
+.notify-sent-hashes
