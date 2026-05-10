@@ -1,1 +1,9 @@
-PR stalled >24h — aeon-agent #33 (improve/xai-prefetch-truncation-warning, opened May-8 13:27Z, now ~30h open). Adds a ::warning:: annotation to prefetch-xai.sh when output_tokens approaches the 16384 cap — a low-risk observability fix. No review activity yet. Link: https://github.com/aaronjmars/aeon-agent/pull/33
+**HEARTBEAT_OK** — clean Sunday. All 12 scheduled skills ran successfully (token-report through memory-flush), no PRs are stalled past 24h (PRs #36 and #37 are both under 8h old), no urgent GitHub issues, and all prior escalations (PR #33 stall, PAT workflows scope) are resolved. No notification needed.
+
+## Summary
+
+- Checked all 12 enabled skills scheduled for Sunday May 10 — all ran and completed successfully
+- Verified both open PRs (#36 fork-cohort-backport, #37 tweet-allocator-error-marker) are recent (< 8h), not stalled
+- No urgent GitHub issues found
+- All prior persistent issues resolved
+- Logged `HEARTBEAT_OK` to `memory/logs/2026-05-10.md`
