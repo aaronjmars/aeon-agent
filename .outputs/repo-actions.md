@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-05-08*
-Generated from analysis of aeon (280⭐, 43 forks), aeon-agent (7⭐), and minitor (8⭐, 37 columns).
+*Repo Action Ideas — 2026-05-10*
+Generated from analysis of aaronjmars/aeon (284⭐, 45 forks), aaronjmars/minitor (39 columns), and aeon-agent — these are ideas the feature skill can autonomously build tomorrow.
 
-1. arxiv Column (minitor) — Integration, Small
-   Keyless Atom RSS for cs.AI/cs.CL/cs.LG papers; completes the AI content stack alongside the new HuggingFace column — theory layer to match the artifact layer.
+1. Price Threshold Alert (Feature, Small)
+   Fires when $AEON crosses a new ATH, drops >20% in one candle, or hits an operator-set target — closes the gap between token-report's daily snapshot and time-sensitive price events.
 
-2. DEV.to Column (minitor) — Integration, Medium
-   Public REST API, no auth; tag-filtered long-form developer articles; fills the practitioner-tutorial gap between HN link aggregation and full article reading.
+2. GitHub Actions Status Column (Integration, Medium)
+   40th minitor column type — shows CI run history for any public repo without an API key; turns minitor from a community-health dashboard into a full repo-health dashboard.
 
-3. ai-framework-watch (aeon) — Content, Medium
-   Weekly digest of star trends, releases, and breaking changes across LangGraph, CrewAI, AutoGPT, LlamaIndex, Mastra, and peers — competitive intelligence for fork operators.
+3. Auto-Merge Agent PRs (Feature, Medium)
+   Automatically merges agent-opened PRs when all checks pass and no hold label is set; closes the manual-merge bottleneck now that the workflows-scope PAT is in place.
 
-4. contributor-spotlight (aeon) — Community, Small
-   Weekly recognition post for the top POWER fork operator; converts fork-cohort data into a named callout with stats and a shareable write-up.
+4. Fork Release Tracker (Community, Small)
+   Weekly scan across all 45 forks for newly-published GitHub releases — announces the first fork to ship a versioned artifact, the clearest signal that Aeon is being used as infrastructure.
 
-5. skill-update-check Backport (aeon-agent) — DX, Small
-   skill-update-check exists upstream in aeon but not here; backporting it surfaces the 80+ skill versions that have drifted since the autoresearch evolution (PRs #46–#136).
+5. npm Trends Column (Integration, Small)
+   41st minitor column type — keyless npm registry search and download-stats API; surfaces trending TypeScript packages in a dashboard column, natural fit for the developer audience.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-08.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-10.md
