@@ -1,0 +1,105 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework (2026-05-11)"
+      },
+      "children": [
+        "repo-link",
+        "separator-1",
+        "tweets-stack"
+      ]
+    },
+    "repo-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon",
+        "source": "GitHub"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-1-link",
+        "separator-2",
+        "tweet-2",
+        "tweet-2-link",
+        "separator-3",
+        "tweet-3",
+        "tweet-3-link"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MrDegenWolf",
+        "handle": "@MrDegenWolf",
+        "text": "There's some damn great projects on @base right now... $AEON the most autonomous agent framework, understand openclaw but 100x better. Is this the new trifecta?",
+        "likes": 44,
+        "retweets": 13
+      }
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2053389861407609178"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "btcbabycow",
+        "handle": "@btcbabycow",
+        "text": "同样也是我的三驾马车！$AEON 最自主的代理框架，理解 OpenClaw 但强 100 倍 (Chinese: $AEON the most autonomous agent framework, 100x better than OpenClaw)",
+        "likes": 34,
+        "retweets": 8
+      }
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/btcbabycow/status/2053399424219640229"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "Secured a new repo using @aeonframework ⭐🙏",
+        "likes": 16,
+        "retweets": 0
+      }
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2053500638298816789"
+      }
+    }
+  }
+}
