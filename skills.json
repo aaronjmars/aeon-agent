@@ -1,8 +1,8 @@
 {
   "version": "1.0",
-  "generated": "2026-05-10T00:00:00Z",
+  "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 59,
+  "total": 60,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -590,6 +590,16 @@
       "var": "",
       "files": 1,
       "install": "./add-skill aaronjmars/aeon-agent fork-cohort"
+    },
+    {
+      "slug": "auto-merge-agent-prs",
+      "name": "auto-merge-agent-prs",
+      "description": "Close the loop on agent-authored PRs — auto-merge green, unblocked PRs in the aeon-agent repo so feature shipping doesn't stall waiting for a human click",
+      "category": "dev",
+      "schedule": "0 18 * * *",
+      "var": "",
+      "files": 1,
+      "install": "./add-skill aaronjmars/aeon-agent auto-merge-agent-prs"
     },
     {
       "slug": "tweet-allocator",
