@@ -80,6 +80,7 @@ declare -A CATEGORIES=(
   [idea-capture]="productivity"
   [startup-idea]="productivity"
   [auto-workflow]="productivity"
+  [auto-merge-agent-prs]="dev"
   # Fleet & Instances
   [spawn-instance]="dev"
   [fleet-control]="dev"
