@@ -1,12 +1,11 @@
-*Weekly Shiplog — 2026-05-04*
+*Weekly Shiplog — 2026-05-11*
 
-The skill backlog cleared in a single merge train and minitor became a real product.
+minitor built the AI/ML cluster it was missing (6 columns added, 33→39), aeon stacked the 300⭐ launch apparatus, and aeon-agent's backport queue finally moved on its three most-leveraged items.
 
 Shipped:
-- Six aeon skills closed three brainstorm cycles of carry: pr-triage, thread-formatter, smithery-manifest, show-hn-draft, fork-cohort, operator-scorecard (all enabled: false)
-- minitor went 0 → 32 column types in 9 days, including the decentralized social trifecta (Farcaster + Bluesky + Mastodon)
-- aeon-agent quiet hardening: skill-runs --duration mode, cron-state viewer, bankr error marker, self-improve PR-filter precision fix
-- First external community PR of the month merged (tomscaria shell-injection fix on dashboard secrets)
+- minitor: lobsters, polymarket, stack-overflow, huggingface, arxiv, dev.to — AI/ML cluster now 3-wide
+- aeon: 7 new skills (star-momentum-alert, v4-readiness, skill-template-library, huggingface-trending, contributor-spotlight, ai-framework-watch, skill-freshness) — all enabled:false
+- aeon-agent: skill-update-check + fork-cohort + skill-freshness backports; 22-day PAT block closed; tomscaria's stalled #156 merged
 
-Stats: 24 PRs merged, +26 stars (244 → 270), +5 forks. AEON -17.8% 7d / +483% 30d.
-Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-04.md
+Stats: 23 PRs across 3 repos, aeon 270→289⭐ (+19), $AEON +29% 7d / +208% 30d
+Full: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-11.md

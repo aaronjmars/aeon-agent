@@ -1,0 +1,211 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-05-11"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "shipped_section",
+        "sep2",
+        "stats_section",
+        "sep3",
+        "full_link"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "minitor built the AI/ML cluster it was missing (6 columns added, 33→39), aeon stacked the 300⭐ launch apparatus, and aeon-agent's backport queue finally moved on its three most-leveraged items.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "shipped_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped_heading",
+        "minitor_section",
+        "aeon_section",
+        "aeonagent_section"
+      ]
+    },
+    "shipped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "minitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor_badge",
+        "minitor_text"
+      ]
+    },
+    "minitor_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "minitor",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "minitor_text": {
+      "type": "Text",
+      "props": {
+        "text": "lobsters, polymarket, stack-overflow, huggingface, arxiv, dev.to — AI/ML cluster now 3-wide"
+      },
+      "children": []
+    },
+    "aeon_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_badge",
+        "aeon_text"
+      ]
+    },
+    "aeon_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aeon_text": {
+      "type": "Text",
+      "props": {
+        "text": "7 new skills (star-momentum-alert, v4-readiness, skill-template-library, huggingface-trending, contributor-spotlight, ai-framework-watch, skill-freshness) — all enabled:false"
+      },
+      "children": []
+    },
+    "aeonagent_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeonagent_badge",
+        "aeonagent_text"
+      ]
+    },
+    "aeonagent_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon-agent",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "aeonagent_text": {
+      "type": "Text",
+      "props": {
+        "text": "skill-update-check + fork-cohort + skill-freshness backports; 22-day PAT block closed; tomscaria's stalled #156 merged"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_grid"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_prs",
+        "stat_stars",
+        "stat_aeon_price"
+      ]
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs across 3 repos",
+        "value": "23"
+      },
+      "children": []
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon ⭐",
+        "value": "289",
+        "delta": "+19",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_aeon_price": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON",
+        "value": "+29% 7d",
+        "delta": "+208% 30d",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "full_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Weekly Shiplog",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-11.md",
+        "source": "aeon-agent"
+      },
+      "children": []
+    }
+  }
+}
