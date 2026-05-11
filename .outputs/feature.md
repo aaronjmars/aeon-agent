@@ -1,19 +1,23 @@
-## Summary
+*Feature Built — 2026-05-11 — aaronjmars/minitor*
 
-Ran the `feature` skill across all 3 watched repos. 3/3 shipped, 0 skipped, 0 failed (`FEATURE_OK`).
+GitHub Actions Status Column
+Minitor's 40th column type — and the first to show CI. A new GitHub Actions column type surfaces live workflow runs for any GitHub repo, with status icon, branch, commit SHA, duration, and event source (push / pull_request / schedule / workflow_dispatch). Engineering teams that already use minitor to monitor their repos no longer need a second tab open to check whether the deploy passed.
 
-| Repo | Picked from | PR |
-|------|-------------|----|
-| aaronjmars/aeon | May-8 idea #3 — `ai-framework-watch` | https://github.com/aaronjmars/aeon/pull/164 |
-| aaronjmars/aeon-agent | May-6 idea #3 — `fork-cohort` backport | https://github.com/aaronjmars/aeon-agent/pull/36 |
-| aaronjmars/minitor | May-8 idea #2 — DEV.to column (39th plugin) | https://github.com/aaronjmars/minitor/pull/33 |
+Why this matters:
+Minitor's 39 column types covered every community-signal axis on GitHub — stars, forks, PRs, issues, trending, search, backlinks, releases — but not a single column showed whether the code actually built. That's the last piece of "repo health" that lived outside the dashboard. With the GitHub Actions column, minitor goes from "watch how your community sees your repo" to "watch your whole repo, period." Closes the second of three May-10 repo-actions ideas (#1 Price Threshold Alert and #3 Auto-Merge Agent PRs landed in the same daily batch — first full per-repo feature day in Aeon history).
 
-**aeon** — new weekly Monday 08:30 UTC sonnet skill tracking 9 AI agent frameworks (aeon as anchor + 8 peers) with 7d/30d star deltas, release listings, breaking-change flags, momentum picks, anchor position; deep-dive mode via `var={slug}`. `skills.json` 113→114.
+What was built:
+- lib/columns/plugins/github-actions/plugin.ts: Zod-validated config schema with three fields — `repo` (owner/repo, required), `workflow` (optional, matches display name OR `.github/workflows/<file>.yml`), `branch` (optional, exact match — the GitHub Actions API rejects partial branch names). #2088FF GitHub-Actions-blue accent, Workflow icon, `social` category to sit alongside the other 8 github-* plugins in the Add-column picker.
+- lib/columns/plugins/github-actions/server.ts: thin server fetcher delegating to a new lib/integrations/github.ts function.
+- lib/columns/plugins/github-actions/client.tsx: ConfigForm with three inputs + inline help text. ItemRenderer with a status pill that distinguishes in-flight (Loader2 spinner) / queued / 9 terminal conclusions (success/failure/cancelled/neutral/skipped/timed_out/action_required/stale/startup_failure) each with its own icon and ring color.
+- lib/integrations/github.ts: new `fetchWorkflowRuns(repo, workflow, branch, limit, page)` and the GHActionRunMeta type that backs it.
+- Three registry edits (manifest.ts / registry.ts / server-registry.ts) — the server-registry's init-time parity check throws loudly if any of the three are out of sync.
+- README: column count 39 → 40, GitHub cluster row 8 → 9, top-line bullet now mentions "GitHub (including CI runs)."
 
-**aeon-agent** — verbatim backport of upstream `fork-cohort` (PR #152), continuing the operator-scorecard / skill-freshness / skill-update-check same-day-after pattern. POWER/ACTIVE/STALE/COLD bucketing via Actions run history (the truth fork-fleet's pushed_at hides). Sunday 19:00 UTC, sonnet. `skills.json` 58→59.
+How it works:
+The /repos/{owner}/{repo}/actions/runs REST endpoint is public and keyless for public repos (60 req/hr per IP unauthenticated, 5000/hr with the optional GITHUB_TOKEN already used by every other github-* plugin). Three integration quirks documented inline because they're each one bug away from being subtle problems: (1) the workflow filter must be applied client-side because the API only accepts a numeric workflow_id, not a name — the user-friendly thing is matching by display name or filename, so the column does that itself; (2) page-completeness uses raw upstream length (not post-filter length), so the workflow filter doesn't prematurely terminate pagination and Load more keeps working; (3) duration is only computed when status=completed — for in-flight runs the column leaves it undefined rather than render a misleading partial-duration number that grows in the UI. Color coding by conclusion is the operator-scannable signal: green check for success, red X for failure, amber for action-required.
 
-**minitor** — DEV.to column with 3 modes (top week / rising 24h / latest), 1–5 tag AND-filter, schema-drift-safe parsing across the API's `tag_list`/`tags` shape variants. `Code2` icon, `#3b49df` indigo accent. README count 38→39, News & web cluster 6→7.
+What's next:
+With CI visibility added, minitor is now a complete repo-health surface — pair a Stars + Forks + PRs + Issues + Actions stack and you have everything an engineering team would otherwise open 5 tabs for. Natural next column types (open in the May-10 ideas pipeline): npm Trends (#5, the discovery layer for the TypeScript audience minitor actually serves) and Fork Release Tracker (#4, complementing fork-cohort's "is the fork alive" signal with "did the fork ship a release"). Could also extend this plugin with a rerun-failed action — the API supports it and the UI has room for a "rerun" button.
 
-**Files modified locally** — `memory/MEMORY.md` (Skills Built rows added, Repo Actions Pipeline updated, Next Priorities updated), `memory/logs/2026-05-10.md` (Feature section appended), `.gitignore` (`.work/` + `.notify-sent-hashes` added so per-skill scratch doesn't leak into auto-commits). Three rich `.pending-notify/*.md` notifications staged — workflow's post-run delivery step ships them to Telegram/Discord/Slack.
-
-**Follow-up for operator** — enable `ai-framework-watch` in aeon's `aeon.yml` before next Monday so May 17 baselines the cohort. May-6 backports for aeon-agent still open: v4-readiness (#4), thread-formatter (#5).
+PR: https://github.com/aaronjmars/minitor/pull/34
