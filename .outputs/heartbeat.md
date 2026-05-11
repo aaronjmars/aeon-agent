@@ -1,9 +1,1 @@
-**HEARTBEAT_OK** — clean Sunday. All 12 scheduled skills ran successfully (token-report through memory-flush), no PRs are stalled past 24h (PRs #36 and #37 are both under 8h old), no urgent GitHub issues, and all prior escalations (PR #33 stall, PAT workflows scope) are resolved. No notification needed.
-
-## Summary
-
-- Checked all 12 enabled skills scheduled for Sunday May 10 — all ran and completed successfully
-- Verified both open PRs (#36 fork-cohort-backport, #37 tweet-allocator-error-marker) are recent (< 8h), not stalled
-- No urgent GitHub issues found
-- All prior persistent issues resolved
-- Logged `HEARTBEAT_OK` to `memory/logs/2026-05-10.md`
+⚠️ 300⭐ milestone is 5 stars away — aeon at 295⭐ now (+11 in the last 24h). At this pace it crosses tonight. Four skills sitting disabled on aeon's aeon.yml need to be flipped before the moment lands: star-milestone (upstream PR #39 + autoresearch PR #111), star-momentum-alert (PR #159), thread-formatter (PR #148), show-hn-draft (PR #151). None require new code — just enabled:true on each. The 300⭐ Show HN window opens when those are live.
