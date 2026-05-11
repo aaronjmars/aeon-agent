@@ -1,0 +1,156 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards",
+        "description": "2026-05-11"
+      },
+      "children": [
+        "budget_stat",
+        "sep1",
+        "tweet1_stack",
+        "sep2",
+        "tweet2_stack",
+        "sep3",
+        "total_text"
+      ]
+    },
+    "budget_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_stats_stack",
+        "tweet1_card",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_allocation",
+        "tweet1_score"
+      ]
+    },
+    "tweet1_allocation": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation",
+        "value": "$5.89 in $AEON"
+      }
+    },
+    "tweet1_score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "83"
+      }
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "x.com/MrDegenWolf",
+        "text": "$AEON the most autonomous agent framework, understand openclaw but 100x better"
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/MrDegenWolf/status/2053389861407609178"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_stats_stack",
+        "tweet2_card",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_allocation",
+        "tweet2_score"
+      ]
+    },
+    "tweet2_allocation": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocation",
+        "value": "$4.11 in $AEON"
+      }
+    },
+    "tweet2_score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "58"
+      }
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "x.com/btcbabycow",
+        "text": "$AEON 最自主的代理框架，理解 OpenClaw 但强 100 倍"
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/btcbabycow/status/2053399424219640229"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "total_text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 2 authors",
+        "variant": "body"
+      }
+    }
+  }
+}
