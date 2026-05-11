@@ -1,0 +1,311 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap"
+      },
+      "children": [
+        "subtitle",
+        "sep1",
+        "summary_stat",
+        "sep2",
+        "section1",
+        "sep3",
+        "section2",
+        "sep4",
+        "section3",
+        "sep5",
+        "section4",
+        "sep6",
+        "key_changes_heading",
+        "key_changes_list",
+        "sep7",
+        "stats_section",
+        "sep8",
+        "full_recap_link"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-11",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "summary_stat": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_commits",
+        "stat_author"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos",
+        "value": "3"
+      }
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits / PRs",
+        "value": "4 / 4"
+      }
+    },
+    "stat_author": {
+      "type": "Text",
+      "props": {
+        "text": "by @aaronjmars (all four queued in yesterday's recap landed at ~22:39 UTC, four minutes apart)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "section1_title",
+        "section1_link",
+        "section1_text"
+      ]
+    },
+    "section1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly-cadence framework layer joins the watch triple",
+        "level": "h3"
+      }
+    },
+    "section1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon #164 ai-framework-watch",
+        "href": "https://github.com/aaronjmars/aeon/pull/164",
+        "source": "GitHub"
+      }
+    },
+    "section1_text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon's competitive-intel stack now spans code (github-trending), artifacts (huggingface-trending), and frameworks themselves — a 9-framework hardcoded watchlist (aeon anchor + langgraph/crewai/autogen/llamaindex/mastra/smolagents/dspy/pydantic-ai) with 7d/30d star deltas, release listings, breaking-change flags, and a verdict priority order that never stacks signals."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "section2_title",
+        "section2_link",
+        "section2_text"
+      ]
+    },
+    "section2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork-cohort backport lands on the agent fleet",
+        "level": "h3"
+      }
+    },
+    "section2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon-agent #36",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/36",
+        "source": "GitHub"
+      }
+    },
+    "section2_text": {
+      "type": "Text",
+      "props": {
+        "text": "same-day-after backport pattern caught up to four most-leveraged skills (operator-scorecard, skill-freshness, skill-update-check, fork-cohort). Buckets every fork by activation stage using GitHub Actions run history — not pushed_at — so the distinction is \"actually executing skills\" vs. \"had an auto-commit yesterday.\""
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "section3_title",
+        "section3_link",
+        "section3_text"
+      ]
+    },
+    "section3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Error-marker contract made explicit",
+        "level": "h3"
+      }
+    },
+    "section3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon-agent #37",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/37",
+        "source": "GitHub"
+      }
+    },
+    "section3_text": {
+      "type": "Text",
+      "props": {
+        "text": "yesterday's BANKR auth failure exposed an implicit contract — Claude inferred to read the .error marker file. Step 4 now reads the marker first and surfaces its content verbatim across all three failure codes (BANKR_API_KEY_MISSING / _INVALID / BANKR_LOOKUPS_FAILED)."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "section4_title",
+        "section4_link",
+        "section4_text"
+      ]
+    },
+    "section4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "DEV.to column closes long-form-developer surface",
+        "level": "h3"
+      }
+    },
+    "section4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "minitor #33",
+        "href": "https://github.com/aaronjmars/minitor/pull/33",
+        "source": "GitHub"
+      }
+    },
+    "section4_text": {
+      "type": "Text",
+      "props": {
+        "text": "39th column type, news-and-web cluster 6 → 7. Keyless REST API, three modes (top week / latest / rising 24h), 1–5 tag AND-filter, dual-shape parsing for both tag_list (array) and tags (CSV)."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key_changes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "key_changes_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change1",
+        "change2",
+        "change3",
+        "change4"
+      ]
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/ai-framework-watch/SKILL.md — new 307-line weekly competitive-intel skill on aeon with 9-framework anchor-vs-peers digest, precise-over-permissive breaking-change detection"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/fork-cohort/SKILL.md — verbatim backport from aeon May-2 PR #152, run-history-driven activation bucketing, 7-day delta tagging"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "skills/tweet-allocator/SKILL.md — two-branch step 4 (marker first, cache second), three deterministic failure-mode routings"
+      }
+    },
+    "change4": {
+      "type": "Text",
+      "props": {
+        "text": "minitor lib/integrations/devto.ts + 3-file plugin + 3 registry edits — keyless DEV.to integration with three modes and 5-tag AND-filter"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_files",
+        "stat_lines"
+      ]
+    },
+    "stat_files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "15"
+      }
+    },
+    "stat_lines": {
+      "type": "Text",
+      "props": {
+        "text": "+1131 / -13 lines"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full_recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-11.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

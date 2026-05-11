@@ -1,15 +1,19 @@
-*Push Recap — 2026-05-10*
-3 watched repos — 6 substantive commits / 4 merged PRs in the 24h window. All authored by @aaronjmars, all from agent-opened PRs.
+*Push Recap — 2026-05-11*
+3 repos — 4 commits / 4 PRs by @aaronjmars (all four queued in yesterday's recap landed at ~22:39 UTC, four minutes apart)
 
-*Closing the contributor flywheel (aeon)*: PR #163 lands `contributor-spotlight` — Sunday 20:00 UTC, exactly one hour after fork-cohort. Picks one POWER fork per week (ACTIVE fallback), reads its diverged work, writes a recognition paragraph. 4-week dedup so the spotlight rotates across the fleet. Operator-authored skills get a ★ marker. Closes the social loop yesterday's hyperstitions market opened.
+*Weekly-cadence framework layer joins the watch triple* (aeon #164 ai-framework-watch): aeon's competitive-intel stack now spans code (github-trending), artifacts (huggingface-trending), and frameworks themselves — a 9-framework hardcoded watchlist (aeon anchor + langgraph/crewai/autogen/llamaindex/mastra/smolagents/dspy/pydantic-ai) with 7d/30d star deltas, release listings, breaking-change flags, and a verdict priority order that never stacks signals.
 
-*Drift detection becomes legible (aeon-agent)*: PR #34 backports skill-update-check from upstream. v1 was a flat catalog of SHAs; v2 is CRITICAL/HIGH/MEDIUM/LOW priority triage based on drift size × security verdict × enabled state, plus an ACCEPT mode for one-off lock advancement. Most-leveraged backport because every other drift on aeon-agent (80+ pre-autoresearch versions) becomes a triaged line item once this runs.
+*Fork-cohort backport lands on the agent fleet* (aeon-agent #36): same-day-after backport pattern caught up to four most-leveraged skills (operator-scorecard, skill-freshness, skill-update-check, fork-cohort). Buckets every fork by activation stage using GitHub Actions run history — not pushed_at — so the distinction is "actually executing skills" vs. "had an auto-commit yesterday."
 
-*Observability for the silent xAI clip (aeon-agent)*: PR #33 closes the May-6 fetch-tweets regression — emits a `::warning::` GitHub annotation when `output_tokens` lands within 5% of `max_output_tokens=16384`, breaking out reasoning vs visible tokens. Heartbeat picks up annotations. Five downstream skills (fetch-tweets, refresh-x, remix-tweets, tweet-roundup, narrative-tracker, article) protected.
+*Error-marker contract made explicit* (aeon-agent #37): yesterday's BANKR auth failure exposed an implicit contract — Claude inferred to read the .error marker file. Step 4 now reads the marker first and surfaces its content verbatim across all three failure codes (BANKR_API_KEY_MISSING / _INVALID / BANKR_LOOKUPS_FAILED).
 
-*arXiv column lands and goes deeper (minitor)*: PR #31 ships the 38th plugin — keyless Atom-XML, 12 cs/stat/math.OC categories, revision badge for v2+. PR #32 is a 50-minute follow-up: `<arxiv:comment>` (~56% populated, contains "Accepted to ICML 2026" / code links / page count) is now extracted and rendered as a small italic line below the abstract.
+*DEV.to column closes long-form-developer surface* (minitor #33): 39th column type, news-and-web cluster 6 → 7. Keyless REST API, three modes (top week / latest / rising 24h), 1–5 tag AND-filter, dual-shape parsing for both tag_list (array) and tags (CSV).
 
-Plus aeon-agent PR #35 closed the 22-day PAT-workflows-scope escalation thread — heartbeat will stop re-emitting weekly. Auto-Merge Agent PRs is genuinely unblocked.
+Key changes:
+- skills/ai-framework-watch/SKILL.md — new 307-line weekly competitive-intel skill on aeon with 9-framework anchor-vs-peers digest, precise-over-permissive breaking-change detection
+- skills/fork-cohort/SKILL.md — verbatim backport from aeon May-2 PR #152, run-history-driven activation bucketing, 7-day delta tagging
+- skills/tweet-allocator/SKILL.md — two-branch step 4 (marker first, cache second), three deterministic failure-mode routings
+- minitor lib/integrations/devto.ts + 3-file plugin + 3 registry edits — keyless DEV.to integration with three modes and 5-tag AND-filter
 
-Stats: 20 files changed, +1,195 / -110 lines.
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-10.md
+Stats: 15 files changed, +1131/-13 lines.
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-11.md
