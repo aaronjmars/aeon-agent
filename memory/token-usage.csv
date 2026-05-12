@@ -270,3 +270,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-11,project-lens,claude-opus-4-7,3859,21005,1280634,88197
 2026-05-11,heartbeat,claude-sonnet-4-6,11,8665,402577,39580
 2026-05-12,fetch-tweets,claude-sonnet-4-6,26,11991,852780,40381
+2026-05-12,tweet-allocator,claude-sonnet-4-6,13,3652,371887,23998

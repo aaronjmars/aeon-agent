@@ -1,0 +1,121 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-12"
+      },
+      "children": [
+        "budget-info",
+        "sep1",
+        "tweets-header",
+        "tweet-1",
+        "sep2",
+        "total-info"
+      ]
+    },
+    "budget-info": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets-header": {
+      "type": "Text",
+      "props": {
+        "text": "Allocations",
+        "variant": "muted"
+      }
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1-link",
+        "tweet1-stats",
+        "tweet1-desc"
+      ]
+    },
+    "tweet1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "x.com/runn3rrr",
+        "href": "https://x.com/runn3rrr/status/2053984286324511078",
+        "source": "X"
+      }
+    },
+    "tweet1-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1-alloc",
+        "tweet1-score"
+      ]
+    },
+    "tweet1-alloc": {
+      "type": "Stat",
+      "props": {
+        "label": "Allocated",
+        "value": "$10.00"
+      }
+    },
+    "tweet1-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "57"
+      }
+    },
+    "tweet1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "@pmarca (a16z GP) just followed the $AEON X account; token mention + CA; builder background on Monad/@hyperstiti0ns"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "total-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "total-text",
+        "total-stat"
+      ]
+    },
+    "total-text": {
+      "type": "Text",
+      "props": {
+        "text": "Total",
+        "variant": "muted"
+      }
+    },
+    "total-stat": {
+      "type": "Stat",
+      "props": {
+        "value": "$10.00 in $AEON allocated to 1 author"
+      }
+    }
+  }
+}
