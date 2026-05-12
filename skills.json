@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 60,
+  "total": 61,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -400,6 +400,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon refresh-x"
+    },
+    {
+      "slug": "thread-formatter",
+      "name": "Thread Formatter",
+      "description": "Score the day's events from memory/logs and format the top one as a 5-tweet thread ready to paste",
+      "category": "social",
+      "schedule": "30 17 * * *",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon thread-formatter"
     },
     {
       "slug": "morning-brief",
