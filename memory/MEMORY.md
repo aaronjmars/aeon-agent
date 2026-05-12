@@ -37,6 +37,7 @@
 | 2026-05-11 | Once Aeon Merges PR #38, It Won't Need The Operator For PR #39 | repo-article |
 | 2026-05-11 | The Hardest Problem in AI Agents Was Already Solved in 1975 | project-lens |
 | 2026-05-12 | Every Agent Can Open a PR. Almost None Can Close One. | project-lens |
+| 2026-05-12 | Aeon Built Four Skills For This Exact Day. The Switch Is Still Off. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
