@@ -1,0 +1,213 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-05-12",
+        "description": "aaronjmars/aeon"
+      },
+      "children": [
+        "stats-section",
+        "milestone-note",
+        "stargazers-section",
+        "forks-section"
+      ]
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stars-stat",
+        "forks-stat"
+      ]
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "299",
+        "delta": "+10",
+        "trend": "up"
+      }
+    },
+    "forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "48",
+        "delta": "+3",
+        "trend": "up"
+      }
+    },
+    "milestone-note": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "One away from 300⭐"
+      }
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers-heading",
+        "stargazers-stack"
+      ]
+    },
+    "stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg-1",
+        "sg-2",
+        "sg-3",
+        "sg-4",
+        "sg-5",
+        "sg-6",
+        "sg-7",
+        "sg-8",
+        "sg-9",
+        "sg-10"
+      ]
+    },
+    "sg-1": {
+      "type": "Link",
+      "props": {
+        "label": "nesjett",
+        "href": "https://github.com/nesjett"
+      }
+    },
+    "sg-2": {
+      "type": "Link",
+      "props": {
+        "label": "fsgaleti-create",
+        "href": "https://github.com/fsgaleti-create"
+      }
+    },
+    "sg-3": {
+      "type": "Link",
+      "props": {
+        "label": "l0hde",
+        "href": "https://github.com/l0hde"
+      }
+    },
+    "sg-4": {
+      "type": "Link",
+      "props": {
+        "label": "mscook",
+        "href": "https://github.com/mscook"
+      }
+    },
+    "sg-5": {
+      "type": "Link",
+      "props": {
+        "label": "hsn9999",
+        "href": "https://github.com/hsn9999"
+      }
+    },
+    "sg-6": {
+      "type": "Link",
+      "props": {
+        "label": "gklein",
+        "href": "https://github.com/gklein"
+      }
+    },
+    "sg-7": {
+      "type": "Link",
+      "props": {
+        "label": "dlwjiang",
+        "href": "https://github.com/dlwjiang"
+      }
+    },
+    "sg-8": {
+      "type": "Link",
+      "props": {
+        "label": "GforVendetta",
+        "href": "https://github.com/GforVendetta"
+      }
+    },
+    "sg-9": {
+      "type": "Link",
+      "props": {
+        "label": "traewang",
+        "href": "https://github.com/traewang"
+      }
+    },
+    "sg-10": {
+      "type": "Link",
+      "props": {
+        "label": "mazza-code",
+        "href": "https://github.com/mazza-code"
+      }
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks-heading",
+        "forks-stack"
+      ]
+    },
+    "forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-1",
+        "fork-2",
+        "fork-3"
+      ]
+    },
+    "fork-1": {
+      "type": "Link",
+      "props": {
+        "label": "fsgaleti-create/aeon",
+        "href": "https://github.com/fsgaleti-create/aeon"
+      }
+    },
+    "fork-2": {
+      "type": "Link",
+      "props": {
+        "label": "varun86/aeon",
+        "href": "https://github.com/varun86/aeon"
+      }
+    },
+    "fork-3": {
+      "type": "Link",
+      "props": {
+        "label": "itr010038/aeon",
+        "href": "https://github.com/itr010038/aeon"
+      }
+    }
+  }
+}
