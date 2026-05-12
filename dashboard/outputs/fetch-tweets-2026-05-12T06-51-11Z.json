@@ -1,0 +1,55 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "fetch-tweets",
+        "description": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-12)"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "source",
+        "tweet1",
+        "view_link"
+      ]
+    },
+    "source": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/runn3rrr",
+        "href": "https://x.com/runn3rrr"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Marc Andreessen, a16z GP",
+        "handle": "@pmarca",
+        "text": "just followed the $AEON X account; scout pipeline intel on the token and builder background — @aaronjmars, previously of @hyperstiti0ns on Monad",
+        "likes": 36,
+        "retweets": 7
+      },
+      "children": []
+    },
+    "view_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/runn3rrr/status/2053984286324511078"
+      },
+      "children": []
+    }
+  }
+}
