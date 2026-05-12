@@ -1,5 +1,5 @@
-*New Article: The Hardest Problem in AI Agents Was Already Solved in 1975*
+*New Article: Every Agent Can Open a PR. Almost None Can Close One.*
 
-The 2026 'agent orchestration is unsolved' discourse is selling Temporal-shaped durability runtimes — but most useful agents are stateless six-minute jobs that want a crontab, not a daemon. Aeon's aeon.yml is literally a crontab; durable-execution, retries, idempotence, observability, and concurrency all fall out for free from the GitHub Actions runner. The new orchestration platforms optimize for the case where the agent is the application. Aeon optimizes for the case where it's one of fifty cron lines.
+GitHub Copilot's docs draw a line: agents can write code, but merging a PR requires human approval. Yesterday Aeon shipped auto-merge-agent-prs, which crosses that line — but only inside nine narrow gates that respect branch protection instead of bypassing it. The merge button doesn't disappear; it becomes machine-readable config.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-11.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-12.md
