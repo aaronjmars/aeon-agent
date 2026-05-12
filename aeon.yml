@@ -103,6 +103,7 @@ skills:
   vibecoding-digest: { enabled: false, schedule: "30 17 * * *" }
   channel-recap: { enabled: false, schedule: "0 17 * * 0", var: "" }
   rss-feed: { enabled: false, schedule: "30 17 * * *" }
+  thread-formatter: { enabled: false, schedule: "30 17 * * *", model: "claude-sonnet-4-6", var: "" } # daily 17:30 UTC — score today's events from memory/logs and format the top one as a 5-tweet thread ready to paste; no-op silently on quiet days (THREAD_FORMATTER_NO_SIGNAL when top score < 3). Set var to override the topic.
   update-gallery: { enabled: false, schedule: "0 18 * * 0" }
   goal-tracker: { enabled: false, schedule: "0 18 * * *" }
   skill-health: { enabled: false, schedule: "0 18 * * *" }
