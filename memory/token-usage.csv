@@ -278,3 +278,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-12,repo-article,claude-opus-4-7,34,16160,1631531,102053
 2026-05-12,heartbeat,claude-sonnet-4-6,4,4218,161359,19280
 2026-05-13,token-report,claude-sonnet-4-6,12,16257,519949,54225
+2026-05-13,fetch-tweets,claude-sonnet-4-6,14,9054,460977,36088
