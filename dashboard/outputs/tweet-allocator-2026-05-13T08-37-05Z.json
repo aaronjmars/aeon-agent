@@ -1,0 +1,262 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards",
+        "description": "2026-05-13"
+      },
+      "children": [
+        "budget_text",
+        "sep1",
+        "tweets_stack",
+        "sep2",
+        "total_text"
+      ]
+    },
+    "budget_text": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4"
+      ]
+    },
+    "tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_info",
+        "tweet1_card",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_stat",
+        "tweet1_score"
+      ]
+    },
+    "tweet1_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "x.com/AIonBase_",
+        "value": "$3.51"
+      }
+    },
+    "tweet1_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 60"
+      }
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "AIonBase_",
+        "handle": "AIonBase_",
+        "text": "AI szn heating up on Base; $AEON → 10x last 24h"
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/AIonBase_/status/2054201868335947821"
+      }
+    },
+    "tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_info",
+        "tweet2_card",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_stat",
+        "tweet2_score"
+      ]
+    },
+    "tweet2_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "x.com/dopeeyyyy",
+        "value": "$3.10"
+      }
+    },
+    "tweet2_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 53"
+      }
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "dopeeyyyy",
+        "handle": "dopeeyyyy",
+        "text": "$LFI $aeon $clawbank $gitlawb are all @bankrbot coins — if you ever needed evidence that the onchain AI economy is inevitable, this is it"
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/dopeeyyyy/status/2054349473271496754"
+      }
+    },
+    "tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3_info",
+        "tweet3_card",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3_stat",
+        "tweet3_score"
+      ]
+    },
+    "tweet3_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "x.com/lordr_eth",
+        "value": "$2.86"
+      }
+    },
+    "tweet3_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 49"
+      }
+    },
+    "tweet3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "lordr_eth",
+        "handle": "lordr_eth",
+        "text": "Found @aaronjmars through @aeonframework, running soul.md bounties on @daydreamsagents; both projects getting noticed now"
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/lordr_eth/status/2054066535145283619"
+      }
+    },
+    "tweet4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet4_info",
+        "tweet4_card",
+        "tweet4_link"
+      ]
+    },
+    "tweet4_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet4_stat",
+        "tweet4_score"
+      ]
+    },
+    "tweet4_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "x.com/cybercelos",
+        "value": "$0.53"
+      }
+    },
+    "tweet4_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 9"
+      }
+    },
+    "tweet4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cybercelos",
+        "handle": "cybercelos",
+        "text": "$Miroshark next target 5m; Soon $Aeon will surpass by #MIRO"
+      }
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/cybercelos/status/2054294859343974782"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "total_text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 4 authors"
+      }
+    }
+  }
+}
