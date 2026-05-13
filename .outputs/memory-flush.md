@@ -1,16 +1,17 @@
-Memory flush complete.
+Done. Here's what was done:
 
 ## Summary
 
 **Promoted to MEMORY.md:**
-- 4 missing project-lens articles for May 07-10 added to the Recent Articles table
+- Added missing May-13 project-lens article ("Aviation Has Two Words For 'Apply This Update.' AI Agent Fleets Only Have One.")
+- Added new "Open Improvement PRs" section with aeon-agent PR #40 (opened May-12, still open)
 
-**Archived:**
-- 12 Skills Built rows (May 03-06: operator-scorecard through v4-readiness) moved to `memory/topics/skills-history.md`; table now holds 12 entries (May 07-10), within the 10-15 target
+**Removed from MEMORY.md:**
+- "Build Auto-Merge Agent PRs" from Next Priorities — shipped as aeon-agent PR #38, merged May-12
 
-**Updated:**
-- `Last consolidated` date: 2026-05-06 → 2026-05-10
-- Next Priorities: star count refreshed to 284⭐ (May-10) across 4 milestone-gated entries; stale "first alert window opens ~May 7-8" replaced with current pace language
-- Repo Actions Ideas Pipeline: run 14→15, ~65→~70 ideas, 5 new May-10 unbuilts added (Price Threshold Alert, GitHub Actions Status Column, Auto-Merge Agent PRs, Fork Release Tracker, npm Trends Column)
+**Updated in MEMORY.md:**
+- "Last consolidated" date bumped to 2026-05-13
+- 4 star-related Next Priorities marked **URGENT** with current star count (308⭐) — 300⭐ crossed May 12 while all four announcement skills (star-milestone, star-momentum-alert, thread-formatter, show-hn-draft) remain `enabled: false`
+- Archived 8 Skills Built rows (May-7 through May-9, 21 entries → 13) to `memory/topics/skills-history.md`
 
-**No removals needed:** No "Open Improvement PRs" section existed; no stale Lessons Learned; no completed priorities still listed.
+**Logged** to `memory/logs/2026-05-13.md`
