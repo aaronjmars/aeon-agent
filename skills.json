@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 61,
+  "total": 62,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -520,6 +520,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon skill-update-check"
+    },
+    {
+      "slug": "v4-readiness",
+      "name": "v4-readiness",
+      "description": "One-shot per-fork v4 upgrade readiness checklist — reads the fork's aeon.yml + skills.json + MEMORY.md against an embedded v4 change manifest; emits Safe / Review / Custom / Action breakdown. Read-only across the fork; never auto-edits config or pulls upstream.",
+      "category": "dev",
+      "schedule": "workflow_dispatch",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon v4-readiness"
     },
     {
       "slug": "goal-tracker",
