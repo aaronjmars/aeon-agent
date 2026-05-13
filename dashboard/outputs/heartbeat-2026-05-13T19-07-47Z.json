@@ -1,0 +1,293 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "header",
+        "escalation_container",
+        "separator",
+        "pr_container"
+      ]
+    },
+    "header": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-13 — 2 items",
+        "variant": "lead"
+      }
+    },
+    "escalation_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "esc_heading",
+        "esc_alert",
+        "esc_content"
+      ]
+    },
+    "esc_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ESCALATION",
+        "level": "h3"
+      }
+    },
+    "esc_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "3 days unresolved",
+        "message": "4 aeon announcement skills still disabled",
+        "type": "warning"
+      }
+    },
+    "esc_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skills_section",
+        "stats_section",
+        "context_section",
+        "action_section"
+      ]
+    },
+    "skills_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill1_row",
+        "skill2_row",
+        "skill3_row",
+        "skill4_row"
+      ]
+    },
+    "skill1_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill1_name",
+        "skill1_pr"
+      ]
+    },
+    "skill1_name": {
+      "type": "Badge",
+      "props": {
+        "text": "star-milestone"
+      }
+    },
+    "skill1_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #39",
+        "href": "https://github.com/aaronjmars/aeon/pull/39"
+      }
+    },
+    "skill2_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill2_name",
+        "skill2_pr"
+      ]
+    },
+    "skill2_name": {
+      "type": "Badge",
+      "props": {
+        "text": "star-momentum-alert"
+      }
+    },
+    "skill2_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #159",
+        "href": "https://github.com/aaronjmars/aeon/pull/159"
+      }
+    },
+    "skill3_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill3_name",
+        "skill3_pr"
+      ]
+    },
+    "skill3_name": {
+      "type": "Badge",
+      "props": {
+        "text": "thread-formatter"
+      }
+    },
+    "skill3_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #148",
+        "href": "https://github.com/aaronjmars/aeon/pull/148"
+      }
+    },
+    "skill4_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "skill4_name",
+        "skill4_pr"
+      ]
+    },
+    "skill4_name": {
+      "type": "Badge",
+      "props": {
+        "text": "show-hn-draft"
+      }
+    },
+    "skill4_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #151",
+        "href": "https://github.com/aaronjmars/aeon/pull/151"
+      }
+    },
+    "stats_section": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars (crossed 300⭐ on 2026-05-12)",
+        "value": "308⭐",
+        "delta": "+8"
+      }
+    },
+    "context_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context1",
+        "context2",
+        "context3"
+      ]
+    },
+    "context1": {
+      "type": "Text",
+      "props": {
+        "text": "thread-formatter scored 16+ on ATH day"
+      }
+    },
+    "context2": {
+      "type": "Text",
+      "props": {
+        "text": "show-hn-draft immediately applicable"
+      }
+    },
+    "context3": {
+      "type": "Text",
+      "props": {
+        "text": "Flip enabled:true in aaronjmars/aeon aeon.yml"
+      }
+    },
+    "action_section": {
+      "type": "Alert",
+      "props": {
+        "title": "Action Required",
+        "message": "Update aaronjmars/aeon aeon.yml to enable disabled skills",
+        "type": "warning"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_heading",
+        "pr_alert",
+        "pr_details_section"
+      ]
+    },
+    "pr_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Stalled",
+        "level": "h3"
+      }
+    },
+    "pr_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "30 hours unmerged",
+        "message": "aeon-agent #40 — no merge yet",
+        "type": "warning"
+      }
+    },
+    "pr_details_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr_link",
+        "pr_description",
+        "pr_opened"
+      ]
+    },
+    "pr_link": {
+      "type": "Link",
+      "props": {
+        "label": "aeon-agent #40",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/40"
+      }
+    },
+    "pr_description": {
+      "type": "Text",
+      "props": {
+        "text": "improve: surface XAI cache truncation via .truncated marker"
+      }
+    },
+    "pr_opened": {
+      "type": "Text",
+      "props": {
+        "text": "Opened 2026-05-12T13:08Z",
+        "variant": "caption"
+      }
+    }
+  }
+}
