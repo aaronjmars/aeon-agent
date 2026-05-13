@@ -1,0 +1,37 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "article-heading",
+        "article-body",
+        "article-link"
+      ]
+    },
+    "article-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Article: Aeon Just Built a Skill That Reads Other Skills. None of Them Run Yet.",
+        "level": "h2"
+      }
+    },
+    "article-body": {
+      "type": "Text",
+      "props": {
+        "text": "`fleet-state` (aeon PR #168) is the first Aeon skill whose source of truth isn't the outside world — its inputs are three JSON files written by three other Aeon skills. The composition layer the architecture has been moving toward is now drafted in. There is exactly one problem: all three skills it reads are `enabled: false` in aeon's `aeon.yml`."
+      }
+    },
+    "article-link": {
+      "type": "Link",
+      "props": {
+        "label": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-13.md"
+      }
+    }
+  }
+}

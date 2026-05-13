@@ -38,6 +38,7 @@
 | 2026-05-11 | The Hardest Problem in AI Agents Was Already Solved in 1975 | project-lens |
 | 2026-05-12 | Every Agent Can Open a PR. Almost None Can Close One. | project-lens |
 | 2026-05-12 | Aeon Built Four Skills For This Exact Day. The Switch Is Still Off. | repo-article |
+| 2026-05-13 | Aeon Just Built a Skill That Reads Other Skills. None of Them Run Yet. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
