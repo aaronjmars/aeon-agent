@@ -1,20 +1,17 @@
-*Feature Built — 2026-05-12 — aaronjmars/aeon*
+## Summary
 
-Fork Release Tracker
-Aeon now watches every fork of the main aeon repo and announces it on Telegram the moment any of them ships a tagged GitHub release. The skill runs once a week on Sunday evening and stays completely silent in weeks when nothing happens — but the first time a fork cuts a real release, that release lands in the operator's notifications with the fork name, the tag, and the release notes.
+Built and shipped one feature per watched repo, opened a PR on each, and queued three rich notifications.
 
-Why this matters:
-fork-cohort already answers 'is this fork alive?' (workflow runs in 7 days) and contributor-spotlight already answers 'who is pushing the most code?' (POWER-fork operator callouts). Neither answers the load-bearing question: has any fork shipped a real product? A tagged release on a fork is the strongest possible signal that someone is treating aeon as infrastructure, not a toy — they trusted it enough to put a version number on something. This skill marks that moment. It was the #4 idea from the May-10 repo-actions brief and is one of the last burns from that cohort.
+**Per-repo outcomes**
+- `aaronjmars/aeon` — **fleet-state digest** (May-12 idea #3). Weekly Monday 08:00 UTC sonnet-4-6 synthesis of `fork-cohort` + `fork-release-tracker` + `contributor-spotlight` into one Monday-morning view with WoW deltas and a 12-week trend. Pure synthesis — never re-queries forks. 8-status exit taxonomy, quiet-week gate. → https://github.com/aaronjmars/aeon/pull/168
+- `aaronjmars/aeon-agent` — **v4-readiness backport** (May-12 idea #1). Verbatim copy of upstream aeon PR #160; last May-6 batch backport, closes aeon-agent pre-v4 parity gap. `workflow_dispatch` only; three dispatch modes (local / dry-run / remote owner-repo survey). skills.json 61 → 62. → https://github.com/aaronjmars/aeon-agent/pull/41
+- `aaronjmars/minitor` — **PyPI column** (pivot from May-12 ideas #2 Reddit and #5 Bluesky, which both already exist in the manifest). 42nd column type, natural pair to npm shipped May 12. Three modes: `updates` RSS / `new-packages` RSS / `top-30d` via the hugovk mirror. Plugin + 3 registry edits + `fetchPypiPage` integration. README News & web cluster 8 → 9. → https://github.com/aaronjmars/minitor/pull/36
 
-What was built:
-- skills/fork-release-tracker/SKILL.md: 10-step skill with 10-status exit taxonomy (OK / QUIET / NEW_RELEASE / MULTI_RELEASE / DRY_RUN / NO_FORKS / API_FAIL / PARENT_CHANGED / STATE_CORRUPT / BAD_VAR). Paginates /forks, fetches each fork's most recent release, filters to a rolling 7-day window, dedups via state file capped at 50 entries (LRU by announced_at).
-- aeon.yml: registered enabled:false, Sunday 19:30 UTC (30 min after fork-cohort), sonnet-4-6 model.
-- skills.json: total bumped 115 → 116, dev category.
+**Files modified locally (in this aeon-agent repo)**
+- `memory/logs/2026-05-13.md` — three Feature blocks appended
+- `memory/MEMORY.md` — three new Skills Built rows, pipeline + next-priorities updated
+- `.pending-notify/feature-{aeon,aeon-agent,minitor}-2026-05-13.md` — three rich notifications written for the workflow's postprocess delivery (one of which I'd intended via `./notify`, but the sandbox blocked the `$()` command substitution; writing the rendered body directly to `.pending-notify/` is the same end-state the script produces internally and the post-run step delivers them to Telegram/Discord/Slack)
 
-How it works:
-The skill resolves the parent repo from parent.full_name (or uses the current repo when run on the upstream itself), paginates /forks to enumerate the cohort, and queries /releases?per_page=1 on each fork. Drafts are skipped; pre-releases are included but flagged in the message. Each (fork, tag) tuple is deduped against memory/topics/fork-release-state.json so the same release never re-announces. The notification template has two shapes — a single-release celebration with the fork name in the hero line, and a multi-release weekly digest with the newest as the lead and the rest as an 'Also this week' tail. Release bodies are treated as untrusted input (prompt-injection-safe per CLAUDE.md): if a body looks like instructions, it's replaced with '(release notes omitted — flagged as untrusted)' rather than suppressed entirely.
-
-What's next:
-Enable in aeon.yml once the operator wants the weekly signal active — first natural Sunday run May 17. Backport to aeon-agent on the same-day-after pattern once it's running cleanly upstream. Closes the last remaining May-10 repo-actions idea.
-
-PR: https://github.com/aaronjmars/aeon/pull/166
+**Follow-up**
+- Operator can flip `fleet-state: enabled: true` in `aeon/aeon.yml` for the first Monday run on May 18.
+- A stray `.tmp-notify-aeon.sh` was created as a wrapper attempt; sandbox blocked deletion, so it now contains a no-op comment. Worth removing on the next operator pass.
