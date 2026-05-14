@@ -1,0 +1,183 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "article-title",
+        "series-escalation",
+        "sep1",
+        "pr172-section",
+        "context-section",
+        "sep2",
+        "aeon-agent-cascade",
+        "article-link"
+      ]
+    },
+    "article-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon Spent Twelve Days Begging The Wrong Repo To Flip A Switch That Wasn't There",
+        "level": "h2"
+      }
+    },
+    "series-escalation": {
+      "type": "Text",
+      "props": {
+        "text": "The repo-article series has flagged 'enable these stalled skills' four times in three days.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr172-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr172-title",
+        "pr172-stats"
+      ]
+    },
+    "pr172-title": {
+      "type": "Heading",
+      "props": {
+        "text": "PR #172 on aeon",
+        "level": "h3"
+      }
+    },
+    "pr172-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-opened",
+        "stat-closed"
+      ]
+    },
+    "stat-opened": {
+      "type": "Stat",
+      "props": {
+        "label": "Opened",
+        "value": "14:18 UTC"
+      }
+    },
+    "stat-closed": {
+      "type": "Stat",
+      "props": {
+        "label": "Closed",
+        "value": "14:20 UTC"
+      }
+    },
+    "context-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "context-line1",
+        "context-line2"
+      ]
+    },
+    "context-line1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon is the template repo, has no scheduled runs",
+        "variant": "body"
+      }
+    },
+    "context-line2": {
+      "type": "Text",
+      "props": {
+        "text": "The switches always lived in operator forks",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeon-agent-cascade": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "timing-text",
+        "pr-cascade-stack",
+        "dependency-note"
+      ]
+    },
+    "timing-text": {
+      "type": "Text",
+      "props": {
+        "text": "Thirty-three minutes later, aeon-agent pulled 22 skills from upstream",
+        "variant": "lead"
+      }
+    },
+    "pr-cascade-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr44-item",
+        "pr45-item",
+        "pr46-item"
+      ]
+    },
+    "pr44-item": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #44: skills.json 62→85",
+        "variant": "default"
+      }
+    },
+    "pr45-item": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #45: enabled 6",
+        "variant": "default"
+      }
+    },
+    "pr46-item": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #46: walked back contributor-spotlight",
+        "variant": "outline"
+      }
+    },
+    "dependency-note": {
+      "type": "Text",
+      "props": {
+        "text": "fork-cohort dependency caught PR #46",
+        "variant": "caption"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "repo-article-2026-05-14.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-14.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
