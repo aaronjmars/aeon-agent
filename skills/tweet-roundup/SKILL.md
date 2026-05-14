@@ -27,6 +27,8 @@ Read the last 2 days of memory/logs/ to avoid repeating items.
 
    **Prefetch error short-circuit:** if the expected cache file (e.g. `.xai-cache/roundup-var.json`) is missing AND its `.error` companion (e.g. `.xai-cache/roundup-var.json.error`) exists, the prefetch failed (XAI api timeout, HTTP error, etc.). The direct API call below requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, so skip it. Read the one-line reason from the `.error` file, note `XAI prefetch failed (<reason>); roundup compiled via WebSearch only` at the top of the log entry, and proceed with the **WebSearch fallback only** (no curl call). Notification should still go out if WebSearch yields useful gists.
 
+   **Prefetch truncation marker:** if the expected cache file's `.truncated` companion exists (e.g. `.xai-cache/roundup-var.json.truncated`), the cache was written but the XAI response hit the `max_output_tokens` ceiling — the cache is real but **incomplete** (fewer than the requested 3–5 tweets per topic). Continue processing whatever the cache contains, but: (a) set the log status to `TWEET_ROUNDUP_OK_TRUNCATED` (not plain `OK`); (b) append a single line to the notification: `⚠️ XAI cache truncated (output_tokens=N/max=M); roundup may miss tweets.` — read the values from the marker file (format `output_tokens=N reasoning_tokens=R max_output_tokens=M`). When multiple topic caches are read, any one truncated marker is enough to trigger the warning; list the affected topics in the log entry.
+
    **If no cache files exist** (and no `.error` marker), try the direct API call:
    ```bash
    FROM_DATE=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)

@@ -29,6 +29,8 @@ Pull 10 tweets from your account that are at least 30 days old. Default window i
 
 **Prefetch error short-circuit:** if `.xai-cache/remix-tweets.json` is missing AND `.xai-cache/remix-tweets.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). The direct API call below also requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, so it would fail too. Read the one-line reason from `.xai-cache/remix-tweets.json.error`, log `REMIX_TWEETS_PREFETCH_FAILED: <reason>` to `memory/logs/${today}.md`, send a one-line `./notify` (`Remix Tweets — ${today}: prefetch failed (<reason>); no remixes generated.`), and stop. Do NOT attempt the direct curl below.
 
+**Prefetch truncation marker:** if `.xai-cache/remix-tweets.json.truncated` exists, the cache was written but the XAI response hit the `max_output_tokens` ceiling — the cache is real but **incomplete** (fewer than the requested 10 source tweets). Continue with whatever tweets the cache contains, but: (a) set the log status to `REMIX_TWEETS_OK_TRUNCATED` (not plain `OK`) and note the source-tweet count actually used; (b) append a single line to the notification: `⚠️ XAI cache truncated (output_tokens=N/max=M); fewer than 10 source tweets remixed.` — read the values from the marker file (format `output_tokens=N reasoning_tokens=R max_output_tokens=M`). Do not pad the output to 10 by generating multiple remixes from one source tweet — only remix the source tweets that were actually fetched.
+
 **If no cache file exists** (and no `.error` marker), try the direct API call:
 ```bash
 # Parse time window

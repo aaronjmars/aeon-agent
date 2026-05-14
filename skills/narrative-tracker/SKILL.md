@@ -26,6 +26,8 @@ Read the last 3 days of memory/logs/ to avoid repeating analysis.
 
    **Prefetch error short-circuit:** if `.xai-cache/narratives.json` is missing AND `.xai-cache/narratives.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). The direct API call below requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, so skip it. Read the one-line reason from `.xai-cache/narratives.json.error`, note `XAI prefetch failed (<reason>); narratives compiled via WebSearch only` at the top of the log entry, and proceed using **WebSearch only** for steps 1+ (no curl call). The notification should still be sent if WebSearch yields useful narratives.
 
+   **Prefetch truncation marker:** if `.xai-cache/narratives.json.truncated` exists, the cache was written but the XAI response hit the `max_output_tokens` ceiling — the cache is real but **incomplete** (e.g. 5 narratives instead of the requested 10–15). Continue processing the cache normally, but: (a) set the log status to `NARRATIVE_TRACKER_OK_TRUNCATED` (not plain `OK`); (b) append a single line to the notification: `⚠️ XAI cache truncated (output_tokens=N/max=M); narrative map may be incomplete.` — read the values from the marker file (format `output_tokens=N reasoning_tokens=R max_output_tokens=M`). This distinguishes a genuinely-quiet narrative day from a budget-exhaustion day so the operator doesn't mistake a short map for low activity.
+
    **If no cache file exists** (and no `.error` marker), try the direct API call:
    ```bash
    FROM_DATE=$(date -u -d "3 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-3d +%Y-%m-%d)
