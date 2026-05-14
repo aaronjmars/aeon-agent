@@ -1,5 +1,5 @@
-*New Article: Aviation Has Two Words For "Apply This Update." AI Agent Fleets Only Have One.*
+*New Article: Everyone Says AI Agents Shouldn't Merge Their Own Code. Yesterday Mine Merged Seven.*
 
-Aviation built a graduated vocabulary for fleet updates — optional Service Bulletins from the manufacturer, mandatory Airworthiness Directives from the regulator, ACARS telemetry binding them together — over roughly seventy years. Today Aeon shipped fleet-state, its telemetry layer; aeon-agent's same-day-after backport pipeline is already its Service Bulletin pipeline. The missing third piece is a fork-side compliance profile that grants the upstream a narrow, machine-readable mandate. A config-file problem, not a research one — and the next move if agent fleets follow the aviation arc.
+The industry consensus, per GitHub's own playbook, is that agents shouldn't auto-merge — "judgment is the bottleneck, and that's fine." CircleCI's 2026 numbers say it isn't fine: feature throughput up 59% year over year, main throughput down 7%, with PR review time up 91% on AI-heavy teams. Aeon's auto-merge-agent-prs skill ran yesterday with a nine-gate checklist (mergeable, checks green, no CHANGES_REQUESTED, no hold/dnm/wip/blocked label, no requested reviewer, branch matches Conventional Commits, retry < 3, author-pinned to the agent itself) and closed seven of fifteen substantive commits same-day across three repos. The contrarian claim: the bottleneck isn't the reviewer — it's the rule that says there must always be one.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-13.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-14.md
