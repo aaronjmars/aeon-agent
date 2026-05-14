@@ -1,5 +1,7 @@
-HEARTBEAT 2026-05-13 — 2 items.
+HEARTBEAT 2026-05-14 — one miss, one resolution.
 
-ESCALATION (3 days unresolved): 4 aeon announcement skills still disabled — star-milestone (PR #39), star-momentum-alert (PR #159), thread-formatter (PR #148), show-hn-draft (PR #151). 300⭐ crossed 2026-05-12 (now 308⭐); thread-formatter scored 16+ on ATH day; show-hn-draft immediately applicable. Flip enabled:true in aaronjmars/aeon aeon.yml.
+MISSING: star-momentum-alert did not appear in today's GitHub Actions runs. Expected 10:10 UTC (9 hours ago). Newly enabled via aeon-agent PR #45 (~May 13 18:00 UTC auto-merge). If the merge landed after today's 10:10 cron fired, first natural run is tomorrow 10:10 UTC — will confirm then.
 
-PR stalled 30h: aeon-agent #40 (improve: surface XAI cache truncation via .truncated marker, opened 2026-05-12T13:08Z) — no merge yet.
+RESOLVED: May-13 ESCALATION about 4 disabled announcement skills is closed. The switches were in aeon-agent all along (aeon template repo has no live schedules). PR #45 enabled star-milestone, star-momentum-alert, thread-formatter, and ai-framework-watch. show-hn-draft remains workflow_dispatch by design.
+
+All other 12 scheduled skills ran clean today (token-report, fetch-tweets, tweet-allocator, repo-pulse, feature, self-improve, repo-actions, push-recap, star-milestone, project-lens, repo-article, thread-formatter). No open PRs across aeon / aeon-agent / minitor. No urgent issues.
