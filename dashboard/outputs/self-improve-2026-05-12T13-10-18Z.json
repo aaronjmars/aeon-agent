@@ -1,0 +1,169 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement — 2026-05-12"
+      },
+      "children": [
+        "text_intro",
+        "sep_1",
+        "heading_overview",
+        "text_overview_p1",
+        "text_overview_p2",
+        "sep_2",
+        "heading_why",
+        "text_why_p1",
+        "text_why_p2",
+        "text_why_p3",
+        "sep_3",
+        "heading_changes",
+        "text_change_1",
+        "text_change_2",
+        "text_change_3",
+        "sep_4",
+        "heading_impact",
+        "text_impact",
+        "sep_5",
+        "link_pr"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "XAI prefetch truncation marker — surface XAI cache truncation to consumer skills.",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_overview": {
+      "type": "Heading",
+      "props": {
+        "text": "Overview",
+        "level": "h3"
+      }
+    },
+    "text_overview_p1": {
+      "type": "Text",
+      "props": {
+        "text": "When scripts/prefetch-xai.sh detects the XAI response hit the max_output_tokens ceiling (output_tokens within 5% of cap, the existing 16384 ceiling), it now writes a .xai-cache/<file>.truncated marker alongside the existing ::warning:: GH annotation. Consumer skills can read the marker inline.",
+        "variant": "body"
+      }
+    },
+    "text_overview_p2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/fetch-tweets/SKILL.md gains a Path A truncation paragraph mirroring the existing .error short-circuit: status becomes FETCH_TWEETS_OK_TRUNCATED and the notification appends ⚠️ XAI cache truncated (output_tokens=N/max=M); results may be incomplete.",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "text_why_p1": {
+      "type": "Text",
+      "props": {
+        "text": "Today's fetch-tweets run logged: output truncated after tweet #2 ... 4 thread_fetch calls also present — Grok burned its 16384-token budget on thread_fetch calls and the cache shipped with only 1 usable tweet.",
+        "variant": "body"
+      }
+    },
+    "text_why_p2": {
+      "type": "Text",
+      "props": {
+        "text": "Second recurrence of the May-6 symptom; the May-8 ::warning:: annotation (PR #33) fires but only skill-runs --failures + heartbeat see it.",
+        "variant": "body"
+      }
+    },
+    "text_why_p3": {
+      "type": "Text",
+      "props": {
+        "text": "The consumer skill couldn't distinguish \"quiet tweet day\" from \"cache cut in half.\"",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "What Changed",
+        "level": "h3"
+      }
+    },
+    "text_change_1": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/prefetch-xai.sh: write .xai-cache/<outfile>.truncated (content: output_tokens=N reasoning_tokens=R max_output_tokens=M) when the existing 95%-threshold fires; clear stale marker at start of each call alongside .error.",
+        "variant": "body"
+      }
+    },
+    "text_change_2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/fetch-tweets/SKILL.md: add Path A truncation paragraph defining FETCH_TWEETS_OK_TRUNCATED and the operator-visible warning line.",
+        "variant": "body"
+      }
+    },
+    "text_change_3": {
+      "type": "Text",
+      "props": {
+        "text": "Marker is generic so refresh-x / remix-tweets / tweet-roundup / narrative-tracker / article can adopt the same short-circuit on first truncation.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Budget-exhaustion days are now legible at the skill level — operator sees an explicit \"cache truncated\" warning in the notification, not a silent short result. Marker is generic so refresh-x / remix-tweets / tweet-roundup / narrative-tracker / article can adopt the same short-circuit on first truncation.",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #40",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/40"
+      }
+    }
+  }
+}

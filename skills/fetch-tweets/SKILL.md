@@ -27,6 +27,8 @@ Today is ${today}. Search X for tweets matching **${var}**.
 
    **Path A error short-circuit:** if `.xai-cache/fetch-tweets.json` is missing AND `.xai-cache/fetch-tweets.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). In that case **skip Paths B and C entirely** — Path B's curl call requires `$XAI_API_KEY` env-var expansion which the sandbox blocks, and Path C's WebSearch path consistently returns 0 fresh tweets when XAI is the actual source of truth. Read the one-line reason from `.xai-cache/fetch-tweets.json.error`, jump straight to step 4 with status `FETCH_TWEETS_PREFETCH_FAILED`, and include the prefetch error reason in the notification so operators can spot persistent XAI outages.
 
+   **Path A truncation marker:** if `.xai-cache/fetch-tweets.json.truncated` exists, the cache was written but the XAI response hit the `max_output_tokens` ceiling — the cache is real but **incomplete** (e.g. May-12: cut mid-tweet-#2 with 4 thread_fetch calls consuming budget). Continue processing the cache normally, but: (a) set status to `FETCH_TWEETS_OK_TRUNCATED` (not plain `OK`) when logging; (b) append a single line to the notification: `⚠️ XAI cache truncated (output_tokens=N/max=M); results may be incomplete.` — read the values from the marker file (format `output_tokens=N reasoning_tokens=R max_output_tokens=M`). This distinguishes a genuinely-quiet tweet day from a budget-exhaustion day, so the operator doesn't mistake a short notification for low activity.
+
    **Path B — X.AI API** (fallback, use when `XAI_API_KEY` is set and cache is empty):
    ```bash
    FROM_DATE=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)

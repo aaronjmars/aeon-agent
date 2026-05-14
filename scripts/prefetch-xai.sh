@@ -49,9 +49,10 @@ xai_search() {
   local from_date="${3:-$YESTERDAY}" to_date="${4:-$TODAY}"
   local extra_tools="${5:-}"
   local errfile=".xai-cache/${outfile}.error"
+  local truncfile=".xai-cache/${outfile}.truncated"
 
-  # Clear any stale error marker from a previous failed run
-  rm -f "$errfile"
+  # Clear any stale error/truncation markers from a previous run
+  rm -f "$errfile" "$truncfile"
 
   local tools
   if [ -n "$extra_tools" ]; then
@@ -124,10 +125,13 @@ xai_search() {
   # at 2 tweets of 10+) was invisible in workflow logs — the prefetch step
   # reported "saved" while the cache itself was clipped. PR #32 raised the cap
   # to 16384, but if reasoning+output ever climbs back into that ceiling the
-  # same silent-clip happens. Emit a ::warning:: when output_tokens is within
-  # 5% of the cap so heartbeat and skill-runs --failures can pick it up before
-  # downstream skills (fetch-tweets, refresh-x, remix-tweets, tweet-roundup,
-  # narrative-tracker, article) ship short results to the operator.
+  # same silent-clip happens (May 12: cache cut mid-tweet-#2, 4 thread_fetch
+  # calls consumed budget). Emit a ::warning:: when output_tokens is within
+  # 5% of the cap so heartbeat and skill-runs --failures can pick it up.
+  # ALSO write a `.truncated` marker file alongside the cache so the consumer
+  # skill (fetch-tweets, refresh-x, remix-tweets, tweet-roundup,
+  # narrative-tracker, article) can detect the condition inline and log the
+  # short output as truncation rather than silently shipping it as a small day.
   local out_tok reasoning_tok threshold
   out_tok=$(echo "$response" | jq -r '.usage.output_tokens // empty' 2>/dev/null)
   if [ -n "$out_tok" ] && [ "$out_tok" -gt 0 ] 2>/dev/null; then
@@ -135,6 +139,7 @@ xai_search() {
     if [ "$out_tok" -ge "$threshold" ]; then
       reasoning_tok=$(echo "$response" | jq -r '.usage.output_tokens_details.reasoning_tokens // 0' 2>/dev/null)
       echo "::warning::xai-prefetch: $outfile output_tokens=$out_tok (reasoning=$reasoning_tok) within 5% of max_output_tokens=$max_output_tokens — response may be truncated; consider raising the cap or shortening the prompt"
+      echo "output_tokens=$out_tok reasoning_tokens=$reasoning_tok max_output_tokens=$max_output_tokens" > ".xai-cache/${outfile}.truncated"
     fi
   fi
 }

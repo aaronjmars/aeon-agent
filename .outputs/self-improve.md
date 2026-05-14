@@ -1,12 +1,17 @@
-*Agent Self-Improvement — 2026-05-10*
+*Agent Self-Improvement — 2026-05-12*
 
-Tightened tweet-allocator's failure-mode contract. The skill now reads `.bankr-cache/verified-handles.json.error` first and surfaces its content verbatim — instead of relying on Claude to infer the marker existed.
+xai-prefetch truncation marker — surface XAI cache truncation to consumer skills.
 
-Why: today's tweet-allocator run hit BANKR_API_KEY_INVALID (API rejected key on all 5 lookup attempts, HTTP 401/403). The notification was correct, but only because the model went looking for the prefetch's error marker on its own — the SKILL.md only said "check cache missing or empty." That contract is fragile: a future run could legitimately report "cache missing" when the real cause is an expired key, an invalid key, or a Bankr API outage — three failure modes the prefetch already distinguishes (BANKR_API_KEY_MISSING / BANKR_API_KEY_INVALID / BANKR_LOOKUPS_FAILED), each with its own operator action.
+When `scripts/prefetch-xai.sh` detects the XAI response hit the `max_output_tokens` ceiling (output_tokens within 5% of cap, the existing 16384 ceiling), it now writes a `.xai-cache/<file>.truncated` marker alongside the existing `::warning::` GH annotation. Consumer skills can read the marker inline.
+
+`skills/fetch-tweets/SKILL.md` gains a Path A truncation paragraph mirroring the existing `.error` short-circuit: status becomes `FETCH_TWEETS_OK_TRUNCATED` and the notification appends `⚠️ XAI cache truncated (output_tokens=N/max=M); results may be incomplete.`
+
+Why: today's fetch-tweets run logged `output truncated after tweet #2 ... 4 thread_fetch calls also present` — Grok burned its 16384-token budget on thread_fetch calls and the cache shipped with only 1 usable tweet. Second recurrence of the May-6 symptom; the May-8 `::warning::` annotation (PR #33) fires but only `skill-runs --failures` + heartbeat see it. The consumer skill couldn't distinguish "quiet tweet day" from "cache cut in half."
 
 What changed:
-- skills/tweet-allocator/SKILL.md: step 4 reordered — read the .error marker first, log + notify with verbatim content, stop. Fall through to verified-handles.json only when no marker exists. Sandbox note now documents the two-file failure surface (cache + .error marker, cleared each run). Status-flags section enumerates the three marker codes.
+- `scripts/prefetch-xai.sh`: write `.xai-cache/<outfile>.truncated` (content: `output_tokens=N reasoning_tokens=R max_output_tokens=M`) when the existing 95%-threshold fires; clear stale marker at start of each call alongside `.error`.
+- `skills/fetch-tweets/SKILL.md`: add Path A truncation paragraph defining `FETCH_TWEETS_OK_TRUNCATED` and the operator-visible warning line.
 
-Impact: deterministic operator routing for the three Bankr failure modes — no more "cache missing" red herring when the cause is a 401 or an outage. The prefetch already wrote the right text per failure mode (since aeon-agent PR #24); this PR makes the skill's contract match.
+Impact: budget-exhaustion days are now legible at the skill level — operator sees an explicit "cache truncated" warning in the notification, not a silent short result. Marker is generic so refresh-x / remix-tweets / tweet-roundup / narrative-tracker / article can adopt the same short-circuit on first truncation.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/37
+PR: https://github.com/aaronjmars/aeon-agent/pull/40
