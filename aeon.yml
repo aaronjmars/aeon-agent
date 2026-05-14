@@ -121,6 +121,7 @@ skills:
   fork-cohort: { enabled: false, schedule: "0 19 * * 0", model: "claude-sonnet-4-6" } # Sunday 19:00 UTC — bucket every fork by activation stage (COLD/STALE/ACTIVE/POWER) using GitHub Actions run history; week-over-week deltas in memory/topics/fork-cohort-state.json; gated notify (skip on STEADY + no transitions). Read-only across the fleet.
   skill-evals: { enabled: false, schedule: "0 6 * * 0", model: "claude-sonnet-4-6" }
   skill-update-check: { enabled: false, schedule: "0 19 * * 0", model: "claude-sonnet-4-6", var: "" } # Sunday 19:00 UTC — audit imported skills (skills.lock) for upstream changes; CRITICAL/HIGH/MEDIUM/LOW priority triage with enabled-state cross-reference; ACCEPT mode (var=accept:{skill_name}) for explicit lock advancement
+  v4-readiness: { enabled: false, schedule: "workflow_dispatch", model: "claude-sonnet-4-6", var: "" } # one-shot — per-fork v4 upgrade readiness checklist. Reads aeon.yml + skills.json + MEMORY.md against an embedded v4 change manifest; emits Safe / Review / Custom / Action breakdown. Pass dry-run to skip notify, or owner/repo to audit a fork remotely.
   spawn-instance: { enabled: false, schedule: "workflow_dispatch", var: "" }
   fleet-control: { enabled: false, schedule: "0 9,15 * * *" }
   weekly-review: { enabled: false, schedule: "0 19 * * 1" }
