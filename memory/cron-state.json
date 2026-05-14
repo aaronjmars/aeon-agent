@@ -72,10 +72,10 @@
   },
   "repo-actions": {
     "last_dispatch": "2026-05-14T14:39:46Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-12T14:52:39Z",
-    "total_runs": 16,
-    "total_successes": 16,
+    "last_status": "success",
+    "last_success": "2026-05-14T14:45:00Z",
+    "total_runs": 17,
+    "total_successes": 17,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
