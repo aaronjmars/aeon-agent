@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 61,
+  "total": 62,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -620,6 +620,16 @@
       "var": "",
       "files": 1,
       "install": "./add-skill aaronjmars/aeon tweet-allocator"
+    },
+    {
+      "slug": "webhook-bridge",
+      "name": "Webhook Bridge",
+      "description": "Fire any Aeon skill from outside GitHub Actions via repository_dispatch event_type=aeon-skill — bridges Zapier, n8n, IFTTT, vendor webhooks into the skill catalog",
+      "category": "productivity",
+      "schedule": "workflow_dispatch",
+      "var": "",
+      "files": 1,
+      "install": "./add-skill aaronjmars/aeon-agent webhook-bridge"
     }
   ],
   "install_all": "./add-skill aaronjmars/aeon --all",
