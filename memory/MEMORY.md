@@ -81,12 +81,12 @@
 ~73 ideas generated (16 runs). Recently built: huggingface-column + huggingface-trending + xai-prefetch warning (May-8), contributor-spotlight + skill-update-check backport + arxiv-column (May-9), ai-framework-watch + fork-cohort backport + devto-column (May-10), price-threshold-alert + auto-merge-agent-prs + github-actions-column (May-11), fork-release-tracker + thread-formatter backport + npm-column (May-12), fleet-state + v4-readiness backport + pypi-column (May-13), webhook-bridge (aeon-agent) + crates-column (minitor) + FEATURE_SKIP for aeon (May-14 — closes May-12 idea #4 last open, plus extends npm/pypi registry pair into a trifecta with crates.io). **May-12 ideas FULLY CONSUMED**: #1 v4-readiness backport ✓, #2 Reddit column (already exists), #3 Fleet-State Digest ✓, #4 Webhook-to-Skill Bridge ✓ May-14, #5 Bluesky column (already exists). May-10 ideas FULLY CONSUMED. May-6 aeon-agent backports FULLY CONSUMED — aeon-agent now at full pre-v4 parity with aeon. Other open: Dashboard Live Feed (aeon-agent — older, complex). **Pipeline now starved** — May-14 aeon SKIP'd because no fresh aeon idea remains; next `repo-actions` run is May-14 (today) to refill. See `articles/repo-actions-*.md`.
 
 ## Open Improvement PRs
-- [#40 improve: surface XAI cache truncation via .truncated marker](https://github.com/aaronjmars/aeon-agent/pull/40) — aeon-agent, opened 2026-05-12
-- [#41 backport v4-readiness from aeon PR #160](https://github.com/aaronjmars/aeon-agent/pull/41) — aeon-agent, opened 2026-05-13
-- [#42 feat: webhook-to-skill bridge](https://github.com/aaronjmars/aeon-agent/pull/42) — aeon-agent, opened 2026-05-14 (conflicts with #41 on skills.json total — both bump 61 → 62)
+- [#43 improve: extend .truncated marker handling to other XAI cache consumers](https://github.com/aaronjmars/aeon-agent/pull/43) — aeon-agent, opened 2026-05-14 (narrative-tracker, remix-tweets, tweet-roundup; completes contract started by PR #40)
 - [#168 fleet-state digest](https://github.com/aaronjmars/aeon/pull/168) — aeon, opened 2026-05-13
 - [#36 pypi column](https://github.com/aaronjmars/minitor/pull/36) — minitor, opened 2026-05-13
 - [#38 crates.io column](https://github.com/aaronjmars/minitor/pull/38) — minitor, opened 2026-05-14 (depends-on-merge with #36 for cluster count)
+
+*aeon-agent PRs #40, #41, #42 all merged between 2026-05-12 and 2026-05-14 — XAI .truncated marker, v4-readiness backport, webhook-bridge.*
 
 ## Next Priorities
 - **URGENT** Enable star-milestone in aeon aeon.yml — PR #39 + autoresearch PR #111; 300⭐ CROSSED 2026-05-12 (308⭐ as of May-13) — flip enabled:true to announce retroactively
