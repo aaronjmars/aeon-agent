@@ -1,0 +1,261 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date-text",
+        "summary-text",
+        "sep1",
+        "why-section",
+        "sep2",
+        "what-section",
+        "sep3",
+        "impact-section",
+        "sep4",
+        "pr-link"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-14",
+        "variant": "muted"
+      }
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Extended `.truncated` marker handling to the three other modern XAI cache consumers (narrative-tracker, remix-tweets, tweet-roundup). The prefetch script writes the marker for every XAI skill, but only fetch-tweets read it — the other three silently shipped truncated caches as if they were full results, making budget-exhaustion days look like quiet days."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why-heading",
+        "why-text"
+      ]
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "why-text": {
+      "type": "Text",
+      "props": {
+        "text": "scripts/prefetch-xai.sh lines 130-134 explicitly name six target consumers as marker readers, but `grep -l truncated skills/` showed only fetch-tweets implementing it. PR #40 (merged yesterday) only closed one of those six. Same silent-clip bug as May-12 fetch-tweets could hit any of the others."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "what-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "what-heading",
+        "changes-stack"
+      ]
+    },
+    "what-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "changes-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "change1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change1-title",
+        "change1-desc",
+        "change1-badge"
+      ]
+    },
+    "change1-title": {
+      "type": "Text",
+      "props": {
+        "text": "skills/narrative-tracker/SKILL.md",
+        "variant": "lead"
+      }
+    },
+    "change1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "read narratives.json.truncated"
+      }
+    },
+    "change1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "NARRATIVE_TRACKER_OK_TRUNCATED",
+        "variant": "outline"
+      }
+    },
+    "change2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change2-title",
+        "change2-desc",
+        "change2-badge"
+      ]
+    },
+    "change2-title": {
+      "type": "Text",
+      "props": {
+        "text": "skills/remix-tweets/SKILL.md",
+        "variant": "lead"
+      }
+    },
+    "change2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "read remix-tweets.json.truncated, status REMIX_TWEETS_OK_TRUNCATED, don't pad to 10 from fewer source tweets"
+      }
+    },
+    "change2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "REMIX_TWEETS_OK_TRUNCATED",
+        "variant": "outline"
+      }
+    },
+    "change3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change3-title",
+        "change3-desc",
+        "change3-badge"
+      ]
+    },
+    "change3-title": {
+      "type": "Text",
+      "props": {
+        "text": "skills/tweet-roundup/SKILL.md",
+        "variant": "lead"
+      }
+    },
+    "change3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "read each topic cache's .truncated companion, status TWEET_ROUNDUP_OK_TRUNCATED, list affected topics"
+      }
+    },
+    "change3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "TWEET_ROUNDUP_OK_TRUNCATED",
+        "variant": "outline"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "impact-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "impact-heading",
+        "impact-text",
+        "impact-note"
+      ]
+    },
+    "impact-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impact-text": {
+      "type": "Text",
+      "props": {
+        "text": "Operator sees \"⚠️ XAI cache truncated (output_tokens=N/max=M)\" inline on any future budget-exhaustion day across these three skills, instead of mistaking a short notification for low activity."
+      }
+    },
+    "impact-note": {
+      "type": "Text",
+      "props": {
+        "text": "Older consumers (refresh-x, article) still need the same plus the .error pattern — left for separate cleanup.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #43: Extended .truncated marker handling",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/43",
+        "source": "GitHub"
+      }
+    }
+  }
+}

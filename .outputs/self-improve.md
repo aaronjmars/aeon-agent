@@ -1,17 +1,14 @@
-*Agent Self-Improvement — 2026-05-12*
+*Agent Self-Improvement — 2026-05-14*
 
-xai-prefetch truncation marker — surface XAI cache truncation to consumer skills.
+Extended `.truncated` marker handling to the three other modern XAI cache consumers (narrative-tracker, remix-tweets, tweet-roundup). The prefetch script writes the marker for every XAI skill, but only fetch-tweets read it — the other three silently shipped truncated caches as if they were full results, making budget-exhaustion days look like quiet days.
 
-When `scripts/prefetch-xai.sh` detects the XAI response hit the `max_output_tokens` ceiling (output_tokens within 5% of cap, the existing 16384 ceiling), it now writes a `.xai-cache/<file>.truncated` marker alongside the existing `::warning::` GH annotation. Consumer skills can read the marker inline.
-
-`skills/fetch-tweets/SKILL.md` gains a Path A truncation paragraph mirroring the existing `.error` short-circuit: status becomes `FETCH_TWEETS_OK_TRUNCATED` and the notification appends `⚠️ XAI cache truncated (output_tokens=N/max=M); results may be incomplete.`
-
-Why: today's fetch-tweets run logged `output truncated after tweet #2 ... 4 thread_fetch calls also present` — Grok burned its 16384-token budget on thread_fetch calls and the cache shipped with only 1 usable tweet. Second recurrence of the May-6 symptom; the May-8 `::warning::` annotation (PR #33) fires but only `skill-runs --failures` + heartbeat see it. The consumer skill couldn't distinguish "quiet tweet day" from "cache cut in half."
+Why: scripts/prefetch-xai.sh lines 130-134 explicitly name six target consumers as marker readers, but `grep -l truncated skills/` showed only fetch-tweets implementing it. PR #40 (merged yesterday) only closed one of those six. Same silent-clip bug as May-12 fetch-tweets could hit any of the others.
 
 What changed:
-- `scripts/prefetch-xai.sh`: write `.xai-cache/<outfile>.truncated` (content: `output_tokens=N reasoning_tokens=R max_output_tokens=M`) when the existing 95%-threshold fires; clear stale marker at start of each call alongside `.error`.
-- `skills/fetch-tweets/SKILL.md`: add Path A truncation paragraph defining `FETCH_TWEETS_OK_TRUNCATED` and the operator-visible warning line.
+- skills/narrative-tracker/SKILL.md: read narratives.json.truncated, status NARRATIVE_TRACKER_OK_TRUNCATED
+- skills/remix-tweets/SKILL.md: read remix-tweets.json.truncated, status REMIX_TWEETS_OK_TRUNCATED, don't pad to 10 from fewer source tweets
+- skills/tweet-roundup/SKILL.md: read each topic cache's .truncated companion, status TWEET_ROUNDUP_OK_TRUNCATED, list affected topics
 
-Impact: budget-exhaustion days are now legible at the skill level — operator sees an explicit "cache truncated" warning in the notification, not a silent short result. Marker is generic so refresh-x / remix-tweets / tweet-roundup / narrative-tracker / article can adopt the same short-circuit on first truncation.
+Impact: operator sees "⚠️ XAI cache truncated (output_tokens=N/max=M)" inline on any future budget-exhaustion day across these three skills, instead of mistaking a short notification for low activity. Older consumers (refresh-x, article) still need the same plus the .error pattern — left for separate cleanup.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/40
+PR: https://github.com/aaronjmars/aeon-agent/pull/43
