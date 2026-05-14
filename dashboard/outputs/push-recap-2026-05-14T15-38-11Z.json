@@ -1,0 +1,227 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-14",
+        "description": "3 repos — 15 substantive commits, single primary author"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2",
+        "sep2",
+        "section3",
+        "sep3",
+        "keychanges",
+        "sep4",
+        "stats",
+        "sep5",
+        "recap-link"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1",
+        "text1"
+      ]
+    },
+    "h1": {
+      "type": "Heading",
+      "props": {
+        "text": "The switches finally flipped",
+        "level": "h2"
+      }
+    },
+    "text1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent flipped 6 long-stuck announcement/visibility skills enabled:false → true (PR #45) — star-milestone (daily), star-momentum-alert (Tue/Wed/Thu HN window), thread-formatter (event-scored, silent on quiet days), operator-scorecard (weekly), ai-framework-watch (Mon competitive intel), contributor-spotlight. PR #46 walked the spotlight back 2 min later because fork-cohort is still off — operator reading their own dependency graph in real time. Closes the 3-day \"switch is still off\" thread MEMORY has been tracking since the 308⭐ ATH."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h2",
+        "text2"
+      ]
+    },
+    "h2": {
+      "type": "Heading",
+      "props": {
+        "text": "Bulk skill catchup + automation rail",
+        "level": "h2"
+      }
+    },
+    "text2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #44 bulk-syncs 22 SKILL.md files from upstream (skills.json 62 → 85, all enabled:false). Companion aeon PR #170 adds a Monday 09:00 UTC workflow to upstream itself — every fork inherits a recurring \"sync from upstream\" PR opener. Converts manual same-day-after backports into automated weekly rail. Co-authored by traewang."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h3",
+        "text3"
+      ]
+    },
+    "h3": {
+      "type": "Heading",
+      "props": {
+        "text": "Minitor registry trifecta completes",
+        "level": "h2"
+      }
+    },
+    "text3": {
+      "type": "Text",
+      "props": {
+        "text": "PyPI #36 (42nd column) + crates.io #38 (43rd column) land same day, finishing npm + pypi + crates triple from this week. News & web cluster 8 → 10. Bonus substack #37 fix accepts pluralistic.net / astralcodexten.com / noahpinion.blog custom domains — silently broken before."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "keychanges": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h4",
+        "kc-list"
+      ]
+    },
+    "h4": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "kc-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kc1",
+        "kc2",
+        "kc3"
+      ]
+    },
+    "kc1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent now has its first daily announcement channel (star-milestone @ 15:15 UTC) firing tomorrow on 312⭐",
+        "variant": "body"
+      }
+    },
+    "kc2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon dashboard auth + secrets routes (PR #169) work in multi-remote setups for the first time — README's two-repo strategy was bricking gh CLI since April",
+        "variant": "body"
+      }
+    },
+    "kc3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon dashboard TopBar wired up gateway prop (PR #171) — typecheck was silently failing since April Bankr Gateway commit",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h5",
+        "stat-text"
+      ]
+    },
+    "h5": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "stat-text": {
+      "type": "Text",
+      "props": {
+        "text": "~75 files, +7,500/-90 lines across 15 substantive commits (excluding cron/scheduler auto-commits)",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "recap-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-14.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
