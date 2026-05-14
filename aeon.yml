@@ -128,6 +128,7 @@ skills:
   repo-scanner: { enabled: false, schedule: "0 15 * * 0", model: "claude-sonnet-4-6", var: "" }
   workflow-security-audit: { enabled: false, schedule: "0 16 * * 0" }
   security: { enabled: false, schedule: "0 16 * * *" }
+  webhook-bridge: { enabled: false, schedule: "workflow_dispatch", var: "" } # external-event-to-skill bridge; the real wiring lives in .github/workflows/webhook.yml — operators don't dispatch this skill, they POST repository_dispatch with event_type=aeon-skill
 
 # Reactive triggers — event-driven skill dispatch based on cron-state.json conditions.
 reactive:
