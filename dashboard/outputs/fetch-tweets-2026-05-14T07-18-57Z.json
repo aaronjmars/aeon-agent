@@ -1,0 +1,58 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-14)"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "bankrbot",
+        "handle": "@bankrbot",
+        "text": "you can now create, pay and manage your ads directly from @aeonframework, using bankr. cook.",
+        "likes": 78,
+        "retweets": 16
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "btcbabycow",
+        "handle": "@btcbabycow",
+        "text": "相信更多应用实例即将到来 $aeon $miroshark (believes more app instances incoming; quotes aeon framework post)",
+        "likes": 12,
+        "retweets": 3
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xbasemafia",
+        "handle": "@0xbasemafia",
+        "text": "$AEON = 1.2M $AXIOM = 230K some $TIBBIR whales are apeing hard 👀",
+        "likes": 11,
+        "retweets": 2
+      }
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Youborg",
+        "handle": "@Youborg",
+        "text": "$aeon Great! (quotes bankrbot post about @aeonframework)",
+        "likes": 2,
+        "retweets": 0
+      }
+    }
+  }
+}
