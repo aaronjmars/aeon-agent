@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-05-12*
-Generated from analysis of the current project — these are ideas that could be autonomously built by the feature skill tomorrow.
+*Repo Action Ideas — 2026-05-14*
+Generated from analysis of aaronjmars/aeon (313⭐, 50 forks), aaronjmars/aeon-agent (62 skills), and aaronjmars/minitor (43 column types). Pipeline was starved — this run seeds tomorrow's feature.
 
-1. v4-readiness Backport (DX, Small)
-   Last remaining May-6 backport — closes aeon-agent's pre-v4 skill gap so all 48 fork operators can run the upgrade readiness checklist on demand.
+1. Product Hunt Launch Skill (Content, Small)
+   Drafts the full PH asset package (tagline, description, comments, bullets) from internal repo state — no external API. Writes a ready-to-submit launch doc and sends it for operator review.
 
-2. Reddit Column (Integration, Small)
-   42nd minitor column type — keyless Reddit JSON API covering r/MachineLearning, r/LocalLLaMA, r/programming; community discussion signal entirely absent from the current lineup.
+2. Skill Enabler (Feature, Small)
+   Takes a comma-separated slug list via var, validates each against aeon.yml, patches enabled: false → true, and opens a PR — directly closes the 'switch is still off' gap flagged in three consecutive repo-articles.
 
-3. Fleet-State Digest (Community, Medium)
-   Weekly Monday synthesis of fork-cohort + contributor-spotlight + fork-release-tracker into one "state of the fleet" read — POWER/ACTIVE counts, transitions, releases, spotlight pick in a single notify.
+3. Fork Skill Gap (Community, Medium)
+   Weekly Sunday skill that diffs each POWER/ACTIVE fork's skills.json against upstream, surfaces the top 3 forks by missing-skill count, and links to a full gap table — pulls fork operators toward upstream adoption without requiring action on their side.
 
-4. Webhook-to-Skill Bridge (Feature, Medium)
-   Lets external events (Zapier, n8n, GitHub webhooks) trigger any skill via repository_dispatch — the first real consumer of aeon.yml's reactive: section.
+4. Column Keyword Alerts (Feature, Medium)
+   Adds an optional alertKeywords field to any Minitor column; matched items get a yellow highlight ring and the column header shows a badge count. Purely client-side — works with all 43 existing column types on day one.
 
-5. Bluesky Column (Integration, Small)
-   43rd minitor column type — fully keyless AT Protocol API; search, profile, and trending modes; covers the developer social layer X's paid API wall left uncovered.
+5. Deck Export / Import (DX, Small)
+   Serializes a Minitor deck's column list to JSON (copy to clipboard via ⌘K) and re-creates it from a pasted blob — zero infrastructure change, enables community deck sharing.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-12.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-14.md
