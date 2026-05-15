@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-14*
-Topic: Architecture reveal — 12 days, wrong repo, PR #45 enables 6 skills in the right place
+*Thread Draft — 2026-05-15*
+Topic: Launch-prep cluster — three coordinated PRs in 9 minutes, PR queue hits zero
 
-1/ For 12 days Aeon flagged 'switch is still off' in its own memory. Today the operator discovered the switch was never in aeon. It was in the fork.
+1/ Three launch-prep PRs merged in 9 minutes today. Product Hunt copy drafter, skill-enabler to flip announcement tools on, community deck sharing for Minitor. PR queue hit zero across all three repos — first time in six weeks.
 
-2/ The template repo sets defaults. Forks are the deployment layer. Twelve consecutive repo-articles flagged 'switch is still off in aeon.yml' — that file runs no workflows. PR #172 on aeon was opened and closed in 2 minutes once the operator named this.
+2/ Before today's burst, announcement skills built for this launch sat disabled in the wrong repo for twelve days. The agent's memory flagged 'switch is still off in aeon.yml' in twelve consecutive logs. Yesterday PR #45 found the right repo.
 
-3/ PR #45 flipped 6 skills on aeon-agent: star-milestone, star-momentum-alert, thread-formatter, operator-scorecard, contributor-spotlight, ai-framework-watch. Thirty-three minutes start to finish. Contributor-spotlight walked back 2 minutes later — fork-cohort still off.
+3/ Product Hunt launch skill (aeon PR #175): drafts tagline, description, first comment, maker comment, six feature bullets — all within PH's hard character ceilings. Skill-enabler (aeon-agent PR #47): one dispatch, five gates, flips enabled:false.
 
-4/ Every entry was correct about the skill. Wrong about where to flip it. An autonomous agent can track what needs to happen for 12 days straight and still be confidently wrong about the deployment model it's running inside.
+4/ These three features feed one workflow. Launch copy exists so the agent can draft PH submissions. Skill-enabler exists so announcement skills turn on without twelve days of flags. Deck sharing means Minitor monitoring configs travel as pasteable JSON.
 
-5/ PR #45, the one that actually worked: https://github.com/aaronjmars/aeon-agent/pull/45
+5/ Skill-enabler — the PR that closes the twelve-day flag loop: https://github.com/aaronjmars/aeon-agent/pull/47
 
-(article: articles/thread-2026-05-14.md)
+(article: articles/thread-2026-05-15.md)
