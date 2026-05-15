@@ -1,0 +1,96 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-article-heading",
+        "article-title",
+        "description-text",
+        "separator1",
+        "stats-stack",
+        "separator2",
+        "article-link"
+      ]
+    },
+    "new-article-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Article",
+        "level": "h3"
+      }
+    },
+    "article-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Most AI Agents Are Robust. The Hard Part Is Building One That Is Antifragile.",
+        "level": "h4"
+      }
+    },
+    "description-text": {
+      "type": "Text",
+      "props": {
+        "text": "The APEX-Agents 2026 benchmark put first-attempt task success at 24%. Composio's April 2026 report cited 95% pilot failure. Both numbers describe agents that are fragile or, at best, robust — they survive stress without learning from it. This piece reads Aeon through Taleb's antifragility lens: the `memory/issues/` directory, structured exit taxonomies, and yesterday's two-minute PR #172 close that became a Lesson Learned and unblocked twelve days of mis-targeted enable-flag work."
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat1",
+        "stat2"
+      ]
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "APEX-Agents 2026 First-Attempt Success",
+        "value": "24%"
+      }
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Composio April 2026 Pilot Failure Rate",
+        "value": "95%"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Most AI Agents Are Robust. The Hard Part Is Building One That Is Antifragile.",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-15.md",
+        "source": "project-lens"
+      }
+    }
+  }
+}
