@@ -1,7 +1,14 @@
-HEARTBEAT 2026-05-14 — one miss, one resolution.
+**HEARTBEAT_OK** — All 11 scheduled skills for Friday May 15 ran successfully. No stalled PRs, no urgent issues, no new findings.
 
-MISSING: star-momentum-alert did not appear in today's GitHub Actions runs. Expected 10:10 UTC (9 hours ago). Newly enabled via aeon-agent PR #45 (~May 13 18:00 UTC auto-merge). If the merge landed after today's 10:10 cron fired, first natural run is tomorrow 10:10 UTC — will confirm then.
+Key confirmations from this run:
+- **star-momentum-alert** self-resolved exactly as predicted in yesterday's heartbeat (ran 10:26 UTC today after missing yesterday's first-activation window)
+- **star-milestone** fired for the first time since enablement (15:58 UTC), already covered in today's repo-article
+- Both prior escalations (disabled announcement skills, star-momentum-alert miss) are fully closed
+- Cron-state shows 100% success rate across all tracked skills with zero consecutive failures
 
-RESOLVED: May-13 ESCALATION about 4 disabled announcement skills is closed. The switches were in aeon-agent all along (aeon template repo has no live schedules). PR #45 enabled star-milestone, star-momentum-alert, thread-formatter, and ai-framework-watch. show-hn-draft remains workflow_dispatch by design.
+Log entry appended to `memory/logs/2026-05-15.md`.
 
-All other 12 scheduled skills ran clean today (token-report, fetch-tweets, tweet-allocator, repo-pulse, feature, self-improve, repo-actions, push-recap, star-milestone, project-lens, repo-article, thread-formatter). No open PRs across aeon / aeon-agent / minitor. No urgent issues.
+## Summary
+- Executed heartbeat skill: read last 2 days of logs, checked open PRs, urgent issues, and cross-referenced all scheduled skills against GitHub Actions runs
+- Result: HEARTBEAT_OK — clean sweep, no notifications needed
+- Logged findings to `memory/logs/2026-05-15.md`
