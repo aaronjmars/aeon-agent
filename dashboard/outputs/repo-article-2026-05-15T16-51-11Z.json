@@ -1,0 +1,134 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Star-Milestone First Fire"
+      },
+      "children": [
+        "heading",
+        "context",
+        "sep1",
+        "heading2",
+        "events_stack",
+        "sep2",
+        "heading3",
+        "features_stack",
+        "sep3",
+        "stat",
+        "sep4",
+        "link"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Twenty-Four Hours After The Switch Was Flipped, Star-Milestone Fired For The First Time And The PR Queue Hit Zero",
+        "level": "h1"
+      }
+    },
+    "context": {
+      "type": "Text",
+      "props": {
+        "text": "At 15:58 UTC today the star-milestone skill on aeon-agent fired on its own clock — first scheduled cron of a previously-disabled launch skill since yesterday's PR #45 flipped six switches. At 13:14 UTC the PR queue across all three watched repos hit zero for the first time in six weeks, with three features merging in a five-minute window."
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Timeline",
+        "level": "h2"
+      }
+    },
+    "events_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "event1",
+        "event2"
+      ]
+    },
+    "event1": {
+      "type": "Text",
+      "props": {
+        "text": "15:58 UTC: star-milestone skill fired for the first time"
+      }
+    },
+    "event2": {
+      "type": "Text",
+      "props": {
+        "text": "13:14 UTC: PR queue hit zero (first time in 6 weeks)"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "heading3": {
+      "type": "Heading",
+      "props": {
+        "text": "Merged Features",
+        "level": "h2"
+      }
+    },
+    "features_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "feat1",
+        "feat2",
+        "feat3"
+      ]
+    },
+    "feat1": {
+      "type": "Badge",
+      "props": {
+        "text": "product-hunt-launch"
+      }
+    },
+    "feat2": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-enabler"
+      }
+    },
+    "feat3": {
+      "type": "Badge",
+      "props": {
+        "text": "deck export-import"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "stat": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON (24h)",
+        "value": "+50.44%",
+        "trend": "up"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read Full Article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-15.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

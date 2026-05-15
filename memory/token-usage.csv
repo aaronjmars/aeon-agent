@@ -303,4 +303,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-15,feature,claude-opus-4-7,171,85336,20906137,225864
 2026-05-15,push-recap,claude-opus-4-7,46,18790,2419927,119850
 2026-05-15,star-milestone,claude-opus-4-7,13,3411,376514,38066
-2026-05-15,project-lens,claude-opus-4-7,59,14378,2530706,102219
+2026-05-15,repo-article,claude-opus-4-7,66,19840,3834393,108040

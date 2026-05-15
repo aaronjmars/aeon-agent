@@ -1,5 +1,5 @@
-*New Article: Aeon Spent Twelve Days Begging The Wrong Repo To Flip A Switch That Wasn't There.*
+*New Article: Twenty-Four Hours After The Switch Was Flipped, Star-Milestone Fired For The First Time And The PR Queue Hit Zero.*
 
-The repo-article series has flagged 'enable these stalled skills' four times in three days. Today's escalation PR #172 on aeon was opened at 14:18 UTC and closed at 14:20 UTC — aeon is the template repo, has no scheduled runs, the switches always lived in operator forks. Thirty-three minutes later aeon-agent pulled 22 skills from upstream (PR #44, skills.json 62→85), enabled 6 (PR #45), and walked back contributor-spotlight (PR #46) when the fork-cohort dependency caught it.
+At 15:58 UTC today the star-milestone skill on aeon-agent fired on its own clock — first scheduled cron of a previously-disabled launch skill since yesterday's PR #45 flipped six switches. At 13:14 UTC the PR queue across all three watched repos hit zero for the first time in six weeks, with three features (product-hunt-launch / skill-enabler / deck export-import) merging in a five-minute window. $AEON +50.44% 24h.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-14.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-15.md
