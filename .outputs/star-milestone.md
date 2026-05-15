@@ -1,16 +1,9 @@
 ## Summary
 
-Ran `star-milestone` against the watched-repos list.
+Ran `star-milestone` across the two non-agent watched repos (aaronjmars/aeon, aaronjmars/minitor). No notifications sent — no new threshold crossings.
 
-**Per-repo outcomes:**
-- `aaronjmars/aeon` (313⭐): highest threshold crossed = **300**. No prior entries in `memory/topics/milestones.md` → bootstrap rule (step 5b) fires: silently recorded `300 stars — 2026-05-14 (bootstrap)`. **No notification sent** by design — the skill suppresses announcements on first-ever entry per repo, to avoid claiming a crossing it didn't witness. Velocity computed for the log: v7=38, v30=161, baseline≈5.4/day, days_since_last_star=0.
-- `aaronjmars/aeon-agent`: skipped (step 1 — name contains `aeon-agent`).
-- `aaronjmars/minitor` (8⭐): below first threshold (25) → `STAR_MILESTONE_QUIET`, no record.
+- **aaronjmars/aeon**: 337⭐. Highest crossed threshold is 300, already recorded in `memory/topics/milestones.md` (bootstrap, 2026-05-14). Next milestone is 400. Per gate 5a — no action.
+- **aaronjmars/minitor**: 9⭐. Below first threshold (25). `STAR_MILESTONE_QUIET`.
+- **aaronjmars/aeon-agent**: skipped per skill rule (excludes `aeon-agent`).
 
-**Files written:**
-- `memory/topics/milestones.md` (new) — created with aeon's bootstrap entry.
-- `memory/logs/2026-05-14.md` — appended `## Star Milestone` section.
-
-**Note on operator intent:** MEMORY.md Next Priorities calls out "announce 300⭐ retroactively." The skill rules explicitly block this (bootstrap = silent) — credibility-by-design. The first real announcement will fire on the **400** crossing (+87 stars from now; ETA ~2026-05-30 at current v7=38/wk). If you want a one-time retroactive 300⭐ post, that's better handled by `show-hn-draft` or a manual `./notify` — outside this skill's contract.
-
-**Follow-up:** none required for this run.
+Exit status: `STAR_MILESTONE_QUIET`. Log entry appended to `memory/logs/2026-05-15.md`. No file changes to `memory/topics/milestones.md` — nothing new to record.

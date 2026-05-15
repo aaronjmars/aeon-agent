@@ -1,0 +1,216 @@
+{
+  "root": "mainCard",
+  "state": {},
+  "elements": {
+    "mainCard": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap",
+        "description": "2026-05-15"
+      },
+      "children": [
+        "mainStack"
+      ]
+    },
+    "mainStack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summaryText",
+        "sep1",
+        "aeonSection",
+        "sep2",
+        "launchSection",
+        "sep3",
+        "minitorSection",
+        "sep4",
+        "keyChangesSection",
+        "sep5",
+        "statsText",
+        "recapLink"
+      ]
+    },
+    "summaryText": {
+      "type": "Text",
+      "props": {
+        "text": "aeon + aeon-agent + minitor — 5 substantive commits by 1 author (Claude Opus 4.7 co-authored 3 of them)",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeonSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeonHeading",
+        "aeonText"
+      ]
+    },
+    "aeonHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon catalog hygiene",
+        "level": "h3"
+      }
+    },
+    "aeonText": {
+      "type": "Text",
+      "props": {
+        "text": "PRs #173 + #174 (Wed evening) closed the drift between skills/, skills.json, aeon.yml, README, and the hero image. Three skills (aixbt-pulse, schedule-ads, create-campaign) had directory + JSON entries but no aeon.yml schedule line — now they can actually run. README \"+90 / 92 skills\" → 117 in three places. skill.jpg refreshed to match."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "launchSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "launchHeading",
+        "phText",
+        "seText"
+      ]
+    },
+    "launchHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Launch-asset prep pair (Thu midday, shipped within 5 min of each other)",
+        "level": "h3"
+      }
+    },
+    "phText": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #175 product-hunt-launch — 232-line skill drafting full PH asset pack (60ch tagline / 260ch description / 500ch first comment / 500ch maker comment / 6×80ch bullets) from live repo state, char-limited and counted in notification footer. Counterpart to show-hn-draft."
+      }
+    },
+    "seText": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #47 skill-enabler — 205-line skill that flips enabled:false→true for a slug list, validates 5 gates (format/dir/in-yml/not-in-chains/currently-disabled), opens a PR. Closes the 12-day \"switch is still off\" pain that PR #45 (May 14) resolved by hand."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "minitorSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitorHeading",
+        "minitorText"
+      ]
+    },
+    "minitorHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Minitor sharing primitive",
+        "level": "h3"
+      }
+    },
+    "minitorText": {
+      "type": "Text",
+      "props": {
+        "text": "PR #40 deck export / import — two ⌘K commands + Zod-validated server actions + transaction-wrapped import. JSON v1 schema (version, deckName, columns: typeId+title+config). First user-to-user share surface in Minitor — someone posts a deck JSON in Discord, anyone pastes it into ⌘K and starts monitoring the same config in 10 seconds."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "keyChangesSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "keyChangesHeading",
+        "keyChangesList"
+      ]
+    },
+    "keyChangesHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "keyChangesList": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kc1",
+        "kc2",
+        "kc3"
+      ]
+    },
+    "kc1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-enabler removes the 12-day-old bottleneck — \"open file, edit, push, PR\" collapsed to one `var=slug1,slug2` dispatch (aeon-agent PR #47)"
+      }
+    },
+    "kc2": {
+      "type": "Text",
+      "props": {
+        "text": "product-hunt-launch fills the second of two big launch surfaces — Aeon now has pre-drafted assets for both HN and PH on demand (aeon PR #175)"
+      }
+    },
+    "kc3": {
+      "type": "Text",
+      "props": {
+        "text": "Minitor went from zero share surface to JSON-v1 export/import in one PR — community gallery is a future-PR-friendly path now (minitor PR #40)"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "statsText": {
+      "type": "Text",
+      "props": {
+        "text": "Stats: ~14 files changed, +822/-12 lines across 5 substantive commits (31 cron auto-commits in aeon-agent omitted — scheduler work, not author work)",
+        "variant": "muted"
+      }
+    },
+    "recapLink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-15.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
