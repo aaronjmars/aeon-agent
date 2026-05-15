@@ -1,0 +1,286 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets",
+        "description": "$AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-15)"
+      },
+      "children": [
+        "stack_tweets"
+      ]
+    },
+    "stack_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4",
+        "tweet_5",
+        "tweet_6",
+        "tweet_7",
+        "tweet_8",
+        "tweet_9"
+      ]
+    },
+    "tweet_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1_card",
+        "tweet_1_link"
+      ]
+    },
+    "tweet_1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "Just used it with aeon skills, feel like I have superpowers",
+        "likes": 51,
+        "retweets": 7
+      }
+    },
+    "tweet_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2054997537589723221"
+      }
+    },
+    "tweet_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2_card",
+        "tweet_2_link"
+      ]
+    },
+    "tweet_2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "PremierBase",
+        "handle": "@PremierBase",
+        "text": "BASE AGENT OF THE DAY: bankrbot integration, soul.md going viral, 90+ tools, self-healing skills on @base",
+        "likes": 33,
+        "retweets": 10
+      }
+    },
+    "tweet_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/PremierBase/status/2054947675846668697"
+      }
+    },
+    "tweet_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3_card",
+        "tweet_3_link"
+      ]
+    },
+    "tweet_3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Concept_felipe",
+        "handle": "@Concept_felipe",
+        "text": "$AEON massively underpriced; infrastructure for autonomous AI agent fleets (telemetry, self-improving skills, wallet+X integrations). ~1M MC, aviation analogy, asymmetric risk/reward.",
+        "likes": 18,
+        "retweets": 9
+      }
+    },
+    "tweet_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Concept_felipe/status/2054736650404557105"
+      }
+    },
+    "tweet_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4_card",
+        "tweet_4_link"
+      ]
+    },
+    "tweet_4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "techy0x",
+        "handle": "@techy0x",
+        "text": "$AEON undervalued, big deployments incoming, potential beast on @base",
+        "likes": 17,
+        "retweets": 10
+      }
+    },
+    "tweet_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/techy0x/status/2054941371962732932"
+      }
+    },
+    "tweet_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_5_card",
+        "tweet_5_link"
+      ]
+    },
+    "tweet_5_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "@aaronjmars",
+        "text": "We're at the point where AI creates AI.",
+        "likes": 11,
+        "retweets": 1
+      }
+    },
+    "tweet_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2054988985282298183"
+      }
+    },
+    "tweet_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_6_card",
+        "tweet_6_link"
+      ]
+    },
+    "tweet_6_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ggdotxyz",
+        "handle": "@ggdotxyz",
+        "text": "$aeon",
+        "likes": 9,
+        "retweets": 1
+      }
+    },
+    "tweet_6_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ggdotxyz/status/2055029586715394485"
+      }
+    },
+    "tweet_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_7_card",
+        "tweet_7_link"
+      ]
+    },
+    "tweet_7_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "soboltoshi",
+        "handle": "@soboltoshi",
+        "text": "ships at light speed; could build autonomous research+trading with @aeonframework + @miroshark_",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "tweet_7_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/soboltoshi/status/2055067112557699459"
+      }
+    },
+    "tweet_8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_8_card",
+        "tweet_8_link"
+      ]
+    },
+    "tweet_8_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "bankrsynth",
+        "handle": "@bankrsynth",
+        "text": "Powered by @aeonframework Skills: autoresearch, token-pick, token-movers, narrative-tracker",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet_8_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/bankrsynth/status/2055009738979717451"
+      }
+    },
+    "tweet_9": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_9_card",
+        "tweet_9_link"
+      ]
+    },
+    "tweet_9_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "russian_acai",
+        "handle": "@russian_acai",
+        "text": "he should've just used @aeonframework, for not only daily briefings, but autonomously building everything, directly on github",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet_9_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/russian_acai/status/2054821875914596597"
+      }
+    }
+  }
+}
