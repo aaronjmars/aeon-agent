@@ -1,0 +1,80 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-15"
+      },
+      "children": [
+        "budget_stat",
+        "separator1",
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4",
+        "separator2",
+        "total_stat"
+      ]
+    },
+    "budget_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "BASE AGENT OF THE DAY — bankrbot integration, soul.md going viral, 90+ tools, self-healing skills",
+        "href": "https://x.com/PremierBase/status/2054947675846668697",
+        "source": "x.com/PremierBase",
+        "score": "$3.77 in $AEON (score: 63)"
+      }
+    },
+    "tweet2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "$AEON @aeonframework undervalued, potential beast on @base, big deployments incoming",
+        "href": "https://x.com/techy0x/status/2054941371962732932",
+        "source": "x.com/techy0x",
+        "score": "$2.81 in $AEON (score: 47)"
+      }
+    },
+    "tweet3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "$AEON massively underpriced; infrastructure for autonomous AI agent fleets, aviation analogy, ~1M MC asymmetric",
+        "href": "https://x.com/Concept_felipe/status/2054736650404557105",
+        "source": "x.com/Concept_felipe",
+        "score": "$2.69 in $AEON (score: 45)"
+      }
+    },
+    "tweet4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "$aeon",
+        "href": "https://x.com/ggdotxyz/status/2055029586715394485",
+        "source": "x.com/ggdotxyz",
+        "score": "$0.72 in $AEON (score: 12)"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "total_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total allocated",
+        "value": "$9.99 in $AEON to 4 authors"
+      }
+    }
+  }
+}

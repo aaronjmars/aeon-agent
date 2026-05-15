@@ -1,17 +1,21 @@
-*Tweet Rewards — 2026-05-14*
+*Tweet Rewards — 2026-05-15*
 
 Budget: $10.00 in $AEON on Base
 
-1. x.com/bankrbot — $7.68 in $AEON (score: 126)
-   you can now create, pay and manage your ads directly from @aeonframework, using bankr. cook.
-   [View tweet](https://x.com/bankrbot/status/2054703257768108543)
+1. x.com/PremierBase — $3.77 in $AEON (score: 63)
+   BASE AGENT OF THE DAY — bankrbot integration, soul.md going viral, 90+ tools, self-healing skills
+   [View tweet](https://x.com/PremierBase/status/2054947675846668697)
 
-2. x.com/btcbabycow — $1.28 in $AEON (score: 21)
-   believes more app instances incoming; quotes aeon framework post
-   [View tweet](https://x.com/btcbabycow/status/2054576505347567898)
+2. x.com/techy0x — $2.81 in $AEON (score: 47)
+   $AEON @aeonframework undervalued, potential beast on @base, big deployments incoming
+   [View tweet](https://x.com/techy0x/status/2054941371962732932)
 
-3. x.com/0xbasemafia — $1.04 in $AEON (score: 17)
-   $AEON = 1.2M $AXIOM = 230K some $TIBBIR whales are apeing hard
-   [View tweet](https://x.com/0xbasemafia/status/2054586602937266538)
+3. x.com/Concept_felipe — $2.69 in $AEON (score: 45)
+   $AEON massively underpriced; infrastructure for autonomous AI agent fleets, aviation analogy, ~1M MC asymmetric
+   [View tweet](https://x.com/Concept_felipe/status/2054736650404557105)
 
-Total: $10.00 in $AEON allocated to 3 authors
+4. x.com/ggdotxyz — $0.72 in $AEON (score: 12)
+   $aeon
+   [View tweet](https://x.com/ggdotxyz/status/2055029586715394485)
+
+Total: $9.99 in $AEON allocated to 4 authors
