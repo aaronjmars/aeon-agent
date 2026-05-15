@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 85,
+  "total": 86,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -520,6 +520,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon skill-update-check"
+    },
+    {
+      "slug": "skill-enabler",
+      "name": "skill-enabler",
+      "description": "Flip enabled:false → enabled:true for a comma-separated list of skill slugs in aeon.yml — validate against skills/, fail loudly on already-enabled or missing slugs, commit, open a PR with per-skill rationale",
+      "category": "dev",
+      "schedule": "workflow_dispatch",
+      "var": "",
+      "files": 1,
+      "install": "./add-skill aaronjmars/aeon-agent skill-enabler"
     },
     {
       "slug": "v4-readiness",
