@@ -296,3 +296,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-14,project-lens,claude-opus-4-7,1427,14828,1000106,106337
 2026-05-14,thread-formatter,claude-sonnet-4-6,9,23234,339966,53853
 2026-05-14,heartbeat,claude-sonnet-4-6,12,15266,574084,56411
+2026-05-15,token-report,claude-sonnet-4-6,15,17837,850004,72205
