@@ -1,0 +1,272 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-16"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "budget-text",
+        "sep1",
+        "tweet1-stack",
+        "sep2",
+        "tweet2-stack",
+        "sep3",
+        "tweet3-stack",
+        "sep4",
+        "tweet4-stack",
+        "sep5",
+        "total-text"
+      ]
+    },
+    "budget-text": {
+      "type": "Text",
+      "props": {
+        "text": "Budget: $10.00 in $AEON on Base",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "tweet1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1-header",
+        "tweet1-card",
+        "tweet1-link"
+      ]
+    },
+    "tweet1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1-amount",
+        "tweet1-score"
+      ]
+    },
+    "tweet1-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Amount",
+        "value": "$4.00 in $AEON"
+      }
+    },
+    "tweet1-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "12"
+      }
+    },
+    "tweet1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cybercelos",
+        "handle": "@cybercelos",
+        "text": "$AEON top holder loading $EDGE (Bankr dev project), Bankr ecosystem thriving"
+      }
+    },
+    "tweet1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/cybercelos/status/2055421685596373134"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "tweet2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2-header",
+        "tweet2-card",
+        "tweet2-link"
+      ]
+    },
+    "tweet2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2-amount",
+        "tweet2-score"
+      ]
+    },
+    "tweet2-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Amount",
+        "value": "$3.00 in $AEON"
+      }
+    },
+    "tweet2-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "9"
+      }
+    },
+    "tweet2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "PoodleFi_",
+        "handle": "@PoodleFi_",
+        "text": "Smart Money Buys on Base (15 May): $BNKR, $AEON, $VVV + more"
+      }
+    },
+    "tweet2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/PoodleFi_/status/2055423915267354953"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "tweet3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3-header",
+        "tweet3-card",
+        "tweet3-link"
+      ]
+    },
+    "tweet3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3-amount",
+        "tweet3-score"
+      ]
+    },
+    "tweet3-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Amount",
+        "value": "$1.67 in $AEON"
+      }
+    },
+    "tweet3-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "5"
+      }
+    },
+    "tweet3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "altayturanbtc",
+        "handle": "@altayturanbtc",
+        "text": "Turkish: built position on $AEON on Base, likes the project, following it"
+      }
+    },
+    "tweet3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/altayturanbtc/status/2055417366213763477"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "tweet4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4-header",
+        "tweet4-card",
+        "tweet4-link"
+      ]
+    },
+    "tweet4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet4-amount",
+        "tweet4-score"
+      ]
+    },
+    "tweet4-amount": {
+      "type": "Stat",
+      "props": {
+        "label": "Amount",
+        "value": "$1.33 in $AEON"
+      }
+    },
+    "tweet4-score": {
+      "type": "Stat",
+      "props": {
+        "label": "Score",
+        "value": "4"
+      }
+    },
+    "tweet4-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "seviolete",
+        "handle": "@seviolete",
+        "text": "$AEON looks strong"
+      }
+    },
+    "tweet4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View tweet",
+        "href": "https://x.com/seviolete/status/2055429904850927728"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "total-text": {
+      "type": "Text",
+      "props": {
+        "text": "Total: $10.00 in $AEON allocated to 4 authors",
+        "variant": "lead"
+      }
+    }
+  }
+}

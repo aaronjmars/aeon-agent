@@ -308,3 +308,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-15,heartbeat,claude-sonnet-4-6,11,10289,425264,42992
 2026-05-16,token-report,claude-sonnet-4-6,12,16157,552696,60352
 2026-05-16,fetch-tweets,claude-sonnet-4-6,18,13233,754099,46532
+2026-05-16,tweet-allocator,claude-sonnet-4-6,13,7996,482133,38769
