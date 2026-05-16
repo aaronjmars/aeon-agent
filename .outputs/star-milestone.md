@@ -1,9 +1,12 @@
 ## Summary
 
-Ran `star-milestone` across the two non-agent watched repos (aaronjmars/aeon, aaronjmars/minitor). No notifications sent — no new threshold crossings.
+Ran `star-milestone` against the watched repo list (filtering out `aaronjmars/aeon-agent` per agent-repo exclusion).
 
-- **aaronjmars/aeon**: 337⭐. Highest crossed threshold is 300, already recorded in `memory/topics/milestones.md` (bootstrap, 2026-05-14). Next milestone is 400. Per gate 5a — no action.
-- **aaronjmars/minitor**: 9⭐. Below first threshold (25). `STAR_MILESTONE_QUIET`.
-- **aaronjmars/aeon-agent**: skipped per skill rule (excludes `aeon-agent`).
+**Results — no notifications sent:**
+- **aaronjmars/aeon** — 344⭐. Highest threshold ≤ count = 300, already recorded as `(bootstrap)` on 2026-05-14. Next threshold (400) not yet crossed. Status: `STAR_MILESTONE_OK`, no-action.
+- **aaronjmars/minitor** — 9⭐. Below first threshold (25). Status: `STAR_MILESTONE_QUIET`.
 
-Exit status: `STAR_MILESTONE_QUIET`. Log entry appended to `memory/logs/2026-05-15.md`. No file changes to `memory/topics/milestones.md` — nothing new to record.
+**Files modified:**
+- `memory/logs/2026-05-16.md` — appended `## Star Milestone` section with both repo verdicts.
+
+**No follow-ups.** `memory/topics/milestones.md` unchanged (nothing to record). The next milestone fire will be aeon → 400⭐, projected by star-momentum-alert for ~2026-05-23.
