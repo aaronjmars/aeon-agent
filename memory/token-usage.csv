@@ -313,3 +313,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-16,star-momentum-alert,claude-sonnet-4-6,11,12142,370341,39564
 2026-05-16,feature,claude-opus-4-7,496,64105,15623105,209299
 2026-05-16,repo-actions,claude-sonnet-4-6,1378,21535,1782063,85961
+2026-05-16,push-recap,claude-opus-4-7,30,17840,1472000,138999

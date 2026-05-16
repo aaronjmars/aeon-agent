@@ -1,16 +1,17 @@
-*Push Recap — 2026-05-15*
-aeon + aeon-agent + minitor — 5 substantive commits by 1 author (Claude Opus 4.7 co-authored 3 of them)
+*Push Recap — 2026-05-16*
+3 substantive commits, 1 per repo — all three close in-flight work rather than open new threads.
 
-*Aeon catalog hygiene*: PRs #173 + #174 (Wed evening) closed the drift between skills/, skills.json, aeon.yml, README, and the hero image. Three skills (aixbt-pulse, schedule-ads, create-campaign) had directory + JSON entries but no aeon.yml schedule line — now they can actually run. README "+90 / 92 skills" → 117 in three places. skill.jpg refreshed to match.
+*Fork-intel quartet completes* (aeon PR #176): fork-skill-gap shipped — Sunday 21:00 UTC per-fork digest of unenabled upstream skills. Composes with fork-cohort state when fresh, falls back to live API otherwise. Article body includes inverse view (top-10 universally unadopted upstream slugs by fork-count) so upstream sees which shipments launch into silence. Closes the layer started May 9–12 (cohort/release/spotlight).
 
-*Launch-asset prep pair (Thu midday, shipped within 5 min of each other)*: aeon PR #175 product-hunt-launch — 232-line skill drafting full PH asset pack (60ch tagline / 260ch description / 500ch first comment / 500ch maker comment / 6×80ch bullets) from live repo state, char-limited and counted in notification footer. Counterpart to show-hn-draft. aeon-agent PR #47 skill-enabler — 205-line skill that flips enabled:false→true for a slug list, validates 5 gates (format/dir/in-yml/not-in-chains/currently-disabled), opens a PR. Closes the 12-day "switch is still off" pain that PR #45 (May 14) resolved by hand.
+*Self-improve fixes a 5-day false-positive in its own daily report* (aeon-agent PR #48): token-report had been emitting "XAI_API_KEY not set" daily May 13–16 because curl can't expand $XAI_API_KEY in sandbox headers. Step 5 rewritten to read social signal from the most recent fetch-tweets log (today→yesterday fallback); section omitted entirely when no log exists. Third skill this week to convert silent sandbox failure into an explicit marker — pattern is congealing into a contract.
 
-*Minitor sharing primitive*: PR #40 deck export / import — two ⌘K commands + Zod-validated server actions + transaction-wrapped import. JSON v1 schema (version, deckName, columns: typeId+title+config). First user-to-user share surface in Minitor — someone posts a deck JSON in Discord, anyone pastes it into ⌘K and starts monitoring the same config in 10 seconds.
+*First user-customizable signal layer in minitor* (PR #41): optional alertKeywords on every column, yellow ring on matched rows + Bell badge in header. Lives as column property (sibling to title), never sent to server fetchers, so all 43 plugins get the feature with zero plugin code changes. Wide match scope (author/handle/content/url), 16-term cap, 64-char-per-term cap, 512-char input clamp. Deck export/import round-trips with backward compat.
 
 Key changes:
-- skill-enabler removes the 12-day-old bottleneck — "open file, edit, push, PR" collapsed to one `var=slug1,slug2` dispatch (aeon-agent PR #47)
-- product-hunt-launch fills the second of two big launch surfaces — Aeon now has pre-drafted assets for both HN and PH on demand (aeon PR #175)
-- Minitor went from zero share surface to JSON-v1 export/import in one PR — community gallery is a future-PR-friendly path now (minitor PR #40)
+- aeon: skills/fork-skill-gap/SKILL.md (+304 new), skills.json 118→119, aeon.yml registry slot
+- aeon-agent: skills/token-report/SKILL.md step 5+6 rewritten — no more "XAI_API_KEY not set" lie
+- minitor: 10 files, additive migration 0001_alert_keywords (nullable text column), keyword-match.ts core, Bell-badge UI
 
-Stats: ~14 files changed, +822/-12 lines across 5 substantive commits (31 cron auto-commits in aeon-agent omitted — scheduler work, not author work)
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-15.md
+Stats: ~15 files changed, +806/-21 lines across 3 author PRs
+May-14 ideas fully consumed (5/5 shipped May-15–16).
+Full recap: articles/push-recap-2026-05-16.md (in aeon-agent)
