@@ -1,0 +1,80 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-16)"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3",
+        "tweet_4",
+        "tweet_5",
+        "tweet_6"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "cybercelos",
+        "handle": "@cybercelos",
+        "text": "$AEON top holder already loading $EDGE (Bankr dev project); Bankr ecosystem thriving",
+        "likes": 9,
+        "retweets": 1
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "PoodleFi_",
+        "handle": "@PoodleFi_",
+        "text": "Smart Money Buys on Base (15 May): $BNKR, $AEON, $VVV, $MIROSHARK + more",
+        "likes": 6,
+        "retweets": 1
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "altayturanbtc",
+        "handle": "@altayturanbtc",
+        "text": "Turkish: built position on $AEON on Base, likes the project, still watching",
+        "likes": 5,
+        "retweets": 0
+      }
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "seviolete",
+        "handle": "@seviolete",
+        "text": "$AEON looks strong",
+        "likes": 4,
+        "retweets": 0
+      }
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "btcbabycow",
+        "handle": "@btcbabycow",
+        "text": "@aeonframework @aaronjmars 👀",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "tweet_6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "earl_y_future",
+        "handle": "@earl_y_future",
+        "text": "don't buy $AEON 🤣",
+        "likes": 0,
+        "retweets": 0
+      }
+    }
+  }
+}
