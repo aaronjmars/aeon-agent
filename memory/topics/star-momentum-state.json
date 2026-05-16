@@ -1,4 +1,13 @@
 {
-  "last_run_at": "2026-05-15T00:00:00Z",
-  "alerts": {}
+  "last_run_at": "2026-05-16T00:00:00Z",
+  "alerts": {
+    "aaronjmars/aeon": {
+      "400": {
+        "first_seen_in_window_at": "2026-05-16T00:00:00Z",
+        "alerted_at": null,
+        "projected_date_v7": "2026-05-23",
+        "v7_at_alert": 8.71
+      }
+    }
+  }
 }
