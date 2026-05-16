@@ -1,0 +1,386 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-05-16",
+        "description": "Pipeline starved after May-14 batch fully consumed. Fresh ideas seeded from analysis of aeon (344⭐, 56 forks), aeon-agent (86 skills), and minitor (43 columns)."
+      },
+      "children": [
+        "ideas_stack"
+      ]
+    },
+    "ideas_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "idea_1",
+        "sep_1",
+        "idea_2",
+        "sep_2",
+        "idea_3",
+        "sep_3",
+        "idea_4",
+        "sep_4",
+        "idea_5",
+        "sep_5",
+        "footer"
+      ]
+    },
+    "idea_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea_1_title",
+        "idea_1_meta",
+        "idea_1_desc"
+      ]
+    },
+    "idea_1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "1. Product Hunt column",
+        "level": "h3"
+      }
+    },
+    "idea_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_1_1",
+        "badge_1_2",
+        "badge_1_3"
+      ]
+    },
+    "badge_1_1": {
+      "type": "Badge",
+      "props": {
+        "text": "minitor",
+        "variant": "secondary"
+      }
+    },
+    "badge_1_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "secondary"
+      }
+    },
+    "badge_1_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Keyless PH RSS column — watch your own launch day rank + competitor launches in real time inside the dashboard. 44th column type.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea_2_title",
+        "idea_2_meta",
+        "idea_2_desc"
+      ]
+    },
+    "idea_2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "2. GitHub Discussions column",
+        "level": "h3"
+      }
+    },
+    "idea_2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_2_1",
+        "badge_2_2",
+        "badge_2_3"
+      ]
+    },
+    "badge_2_1": {
+      "type": "Badge",
+      "props": {
+        "text": "minitor",
+        "variant": "secondary"
+      }
+    },
+    "badge_2_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "secondary"
+      }
+    },
+    "badge_2_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "idea_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Completes the GitHub cluster (9 of 10 surfaces covered — discussions is the last gap). GraphQL-based, GITHUB_TOKEN auth, modes: recent/unanswered/top.",
+        "variant": "body"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea_3_title",
+        "idea_3_meta",
+        "idea_3_desc"
+      ]
+    },
+    "idea_3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "3. Skill Health Triad backport",
+        "level": "h3"
+      }
+    },
+    "idea_3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_3_1",
+        "badge_3_2",
+        "badge_3_3"
+      ]
+    },
+    "badge_3_1": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon-agent",
+        "variant": "secondary"
+      }
+    },
+    "badge_3_2": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge_3_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "idea_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Backports skill-health + skill-evals + skill-repair from upstream aeon. Gives the running agent autonomous self-healing: detect issues → classify → repair overnight. 86 → 89 skills.",
+        "variant": "body"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea_4_title",
+        "idea_4_meta",
+        "idea_4_desc"
+      ]
+    },
+    "idea_4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "4. Fork First-Run Alert",
+        "level": "h3"
+      }
+    },
+    "idea_4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_4_1",
+        "badge_4_2",
+        "badge_4_3"
+      ]
+    },
+    "badge_4_1": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon",
+        "variant": "secondary"
+      }
+    },
+    "badge_4_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Community",
+        "variant": "secondary"
+      }
+    },
+    "badge_4_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Daily check: when fork-cohort state shows a new ACTIVE fork not yet celebrated, sends a named alert the moment someone's first skill run completes. Closes the gap between weekly cohort cadence and the actual activation event.",
+        "variant": "body"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "idea_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "idea_5_title",
+        "idea_5_meta",
+        "idea_5_desc"
+      ]
+    },
+    "idea_5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Competitor Launch Radar",
+        "level": "h3"
+      }
+    },
+    "idea_5_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_5_1",
+        "badge_5_2",
+        "badge_5_3"
+      ]
+    },
+    "badge_5_1": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon",
+        "variant": "secondary"
+      }
+    },
+    "badge_5_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Intelligence",
+        "variant": "secondary"
+      }
+    },
+    "badge_5_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "idea_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly Monday skill scanning PH RSS + HN Show HN for autonomous agent / MCP / agentic keyword matches. Fills the blind spot between known frameworks (ai-framework-watch) and new challengers launching this week.",
+        "variant": "body"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "footer_label",
+        "footer_link"
+      ]
+    },
+    "footer_label": {
+      "type": "Text",
+      "props": {
+        "text": "Full details:",
+        "variant": "muted"
+      }
+    },
+    "footer_link": {
+      "type": "Link",
+      "props": {
+        "label": "repo-actions-2026-05-16.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-16.md"
+      }
+    }
+  }
+}
