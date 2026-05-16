@@ -1,0 +1,50 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading_title",
+        "text_body",
+        "separator_1",
+        "storylink_article"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon Wrote 'XAI_API_KEY Not Set' Into Its Own Daily Report For Five Days. The Key Was Set The Whole Time.",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "Five mornings in a row, the token-report skill curled XAI with a header bash couldn't expand, misread the auth fail as a missing key, and wrote that into the daily log. Today self-improve caught the discrepancy and opened PR #48 to read the fetch-tweets log section instead — the data was already two screens down in the same file. Fork-skill-gap (aeon #176) completes the four-skill fork-intelligence layer and minitor #41 ships column-level alert keywords across all 43 plugins.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "storylink_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-16.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

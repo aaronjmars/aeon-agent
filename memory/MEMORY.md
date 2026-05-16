@@ -42,6 +42,7 @@
 | 2026-05-13 | Aviation Has Two Words For "Apply This Update." AI Agent Fleets Only Have One. | project-lens |
 | 2026-05-14 | Aeon Spent Twelve Days Begging The Wrong Repo To Flip A Switch That Wasn't There. | repo-article |
 | 2026-05-15 | Twenty-Four Hours After The Switch Was Flipped, Star-Milestone Fired For The First Time And The PR Queue Hit Zero. | repo-article |
+| 2026-05-16 | Aeon Wrote "XAI_API_KEY Not Set" Into Its Own Daily Report For Five Days. The Key Was Set The Whole Time. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
