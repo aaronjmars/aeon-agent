@@ -1,13 +1,13 @@
-*Hyperstitions Idea — 2026-05-09*
+*Hyperstitions Idea — 2026-05-16*
 
-"Will an Aeon fork operator publicly demo their fork running with a skill they authored themselves — by July 1, 2026?"
+"Will aaronjmars/aeon cross 500 GitHub stars before June 16, 2026?"
 
-The coordination play: 43 forks exist; zero observed public demos of an operator-authored skill in the wild. The market puts a finish line on a path the agent can't walk alone — fork operators have to write a skill, run it in production, and post the receipts. skill-template-library (aeon PR #161, two days old) cuts the new-skill cost from hours of repo orientation to one `./new-from-template` invocation; the market hands the first operator something to chase.
+The coordination play: The repo sits at 337⭐ today after +24 stars in 24h, with $AEON at +817% on the week and `product-hunt-launch` shipped yesterday. A YES market gives every holder, fork operator, and dev-tools-roundup author a concrete reason to share the link, RT the launch post, and finally publish the "I tried Aeon" thread they've been sitting on. The framework can't star itself — humans clicking ⭐ is the unit of progress, and the market converts passive belief into the specific click.
 
-Why now: aeon shipped its template library Monday — 6 starters + a CLI that registers a disabled skill straight into aeon.yml. fork-cohort (PR #152) is built but unenabled, so the proof has to land outside the repo, in public. May 8 also brought a clean narrative crystallization on X: @aaronjmars framing @aeonframework / @miroshark_ / @hyperstiti0ns as a coordination stack (17 likes / 6 RTs), yasu0x1 calling the prediction-market layer "the spicy part," tiltmode_ on prediction-market feedback being the cleanest signal for autonomous skills. The framing is primed for an external proof point.
+Why now: star-momentum-alert already projects 400⭐ around 2026-06-03 on the current 5.3-stars/day trend. 500 by June 16 needs +163 in 31 days — inside the trend if the cadence holds, just out of reach if it slips. That's the gap a hyperstition is built to close.
 
-Resolution: YES if before 2026-07-01 23:59 UTC, public evidence (X post, blog post, video, fork README, Show & Tell) shows a fork operator (not aaronjmars/aeonframework) running their fork with at least one operator-authored skill — SKILL.md not present in aaronjmars/aeon main at fork time — with a traceable link back to either their fork repo or aaronjmars/aeon.
+Resolution: YES if the public `stargazers_count` on https://github.com/aaronjmars/aeon is ≥500 at any UTC timestamp on or before 2026-06-16 23:59 UTC, verified via the GitHub REST API. Otherwise NO.
 
-Scores: Reflexivity 4/5 | Viral 4/5
+Scores: Reflexivity 4/5 | Viral 3/5
 
 Soon on https://www.hyperstitions.com/ ?

@@ -1,0 +1,291 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Hyperstitions Idea — 2026-05-16"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-main",
+        "current-status-section",
+        "separator-1",
+        "coordination-section",
+        "separator-2",
+        "why-now-section",
+        "separator-3",
+        "resolution-section",
+        "separator-4",
+        "scores-section",
+        "separator-5",
+        "hyperstitions-link"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Will aaronjmars/aeon cross 500 GitHub stars before June 16, 2026?",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "current-status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status-heading",
+        "current-stats-stack"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Current Status",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "current-stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-stars",
+        "stat-growth",
+        "stat-token",
+        "text-product-hunt"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Current Stars",
+        "value": "337",
+        "delta": "+24 in 24h",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-growth": {
+      "type": "Stat",
+      "props": {
+        "label": "Daily Star Rate",
+        "value": "5.3 stars/day"
+      },
+      "children": []
+    },
+    "stat-token": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON (Week)",
+        "value": "+817%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "text-product-hunt": {
+      "type": "Text",
+      "props": {
+        "text": "product-hunt-launch shipped yesterday",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "coordination-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "coordination-heading",
+        "coordination-text"
+      ]
+    },
+    "coordination-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "The Coordination Play",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "coordination-text": {
+      "type": "Text",
+      "props": {
+        "text": "The repo sits at 337⭐ today after +24 stars in 24h, with $AEON at +817% on the week and product-hunt-launch shipped yesterday. A YES market gives every holder, fork operator, and dev-tools-roundup author a concrete reason to share the link, RT the launch post, and finally publish the \"I tried Aeon\" thread they've been sitting on. The framework can't star itself — humans clicking ⭐ is the unit of progress, and the market converts passive belief into the specific click.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "why-now-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why-now-heading",
+        "why-now-text"
+      ]
+    },
+    "why-now-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why Now",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "why-now-text": {
+      "type": "Text",
+      "props": {
+        "text": "star-momentum-alert already projects 400⭐ around 2026-06-03 on the current 5.3-stars/day trend. 500 by June 16 needs +163 in 31 days — inside the trend if the cadence holds, just out of reach if it slips. That's the gap a hyperstition is built to close.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "resolution-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "resolution-heading",
+        "resolution-text",
+        "resolution-link"
+      ]
+    },
+    "resolution-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Resolution",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "resolution-text": {
+      "type": "Text",
+      "props": {
+        "text": "YES if the public stargazers_count on GitHub is ≥500 at any UTC timestamp on or before 2026-06-16 23:59 UTC, verified via the GitHub REST API. Otherwise NO.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "resolution-link": {
+      "type": "Link",
+      "props": {
+        "label": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      },
+      "children": []
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "scores-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "scores-heading",
+        "scores-stack"
+      ]
+    },
+    "scores-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scores",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "scores-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-reflexivity",
+        "badge-viral"
+      ]
+    },
+    "badge-reflexivity": {
+      "type": "Badge",
+      "props": {
+        "text": "Reflexivity: 4/5",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-viral": {
+      "type": "Badge",
+      "props": {
+        "text": "Viral: 3/5",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "hyperstitions-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Soon on hyperstitions.com",
+        "href": "https://www.hyperstitions.com/",
+        "source": "hyperstitions"
+      },
+      "children": []
+    }
+  }
+}
