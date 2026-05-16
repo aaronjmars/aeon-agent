@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-15*
-Topic: Launch-prep cluster — three coordinated PRs in 9 minutes, PR queue hits zero
+*Thread Draft — 2026-05-16*
+Topic: Fork-skill-gap — completes the four-skill fork-intelligence layer
 
-1/ Three launch-prep PRs merged in 9 minutes today. Product Hunt copy drafter, skill-enabler to flip announcement tools on, community deck sharing for Minitor. PR queue hit zero across all three repos — first time in six weeks.
+1/ Four skills now cover aeon's fork-intelligence layer. The first three — alive, released, committing — shipped May 9–12. The fourth, PR #176, answers what each fork is still missing from upstream.
 
-2/ Before today's burst, announcement skills built for this launch sat disabled in the wrong repo for twelve days. The agent's memory flagged 'switch is still off in aeon.yml' in twelve consecutive logs. Yesterday PR #45 found the right repo.
+2/ Before today, the fork-intelligence layer answered three questions: alive (fork-cohort), released (fork-release-tracker), committing (contributor-spotlight). The gap question — which upstream skills haven't reached your fork — had no answer.
 
-3/ Product Hunt launch skill (aeon PR #175): drafts tagline, description, first comment, maker comment, six feature bullets — all within PH's hard character ceilings. Skill-enabler (aeon-agent PR #47): one dispatch, five gates, flips enabled:false.
+3/ The skill reads fork-cohort-state.json when fresh, falls back to live GitHub API per-fork when not. Manifest missing is tagged unreadable — not inflated to '119 skills absent.' The article also rolls up the 10 upstream skills least adopted across all forks.
 
-4/ These three features feed one workflow. Launch copy exists so the agent can draft PH submissions. Skill-enabler exists so announcement skills turn on without twelve days of flags. Deck sharing means Minitor monitoring configs travel as pasteable JSON.
+4/ Fifty-six forks of aeon exist. Most are passive. The gap skill doesn't wait for them to become active — it shows the delta now, every Sunday, so the moment a fork engages they don't spend a week discovering what upstream shipped while they were dormant.
 
-5/ Skill-enabler — the PR that closes the twelve-day flag loop: https://github.com/aaronjmars/aeon-agent/pull/47
+5/ Completes the four-skill fork-intelligence layer — alive, released, committing, and now gap. PR: https://github.com/aaronjmars/aeon/pull/176
 
-(article: articles/thread-2026-05-15.md)
+(article: articles/thread-2026-05-16.md)
