@@ -1,0 +1,264 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Rewards — 2026-05-17"
+      },
+      "children": [
+        "budget_stat",
+        "sep1",
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4",
+        "sep2",
+        "total_stat"
+      ]
+    },
+    "budget_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Budget",
+        "value": "$10.00 in $AEON on Base"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_header",
+        "tweet1_text",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_handle",
+        "tweet1_alloc",
+        "tweet1_score"
+      ]
+    },
+    "tweet1_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/100xDarren"
+      }
+    },
+    "tweet1_alloc": {
+      "type": "Badge",
+      "props": {
+        "text": "$4.21 in $AEON"
+      }
+    },
+    "tweet1_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 62"
+      }
+    },
+    "tweet1_text": {
+      "type": "Text",
+      "props": {
+        "text": "Both $Aeon and $Miroshark are looking strong today 👀"
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/100xDarren/status/2055797257652654291"
+      }
+    },
+    "tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_header",
+        "tweet2_text",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2_handle",
+        "tweet2_alloc",
+        "tweet2_score"
+      ]
+    },
+    "tweet2_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/ika_xbt"
+      }
+    },
+    "tweet2_alloc": {
+      "type": "Badge",
+      "props": {
+        "text": "$4.00 in $AEON"
+      }
+    },
+    "tweet2_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 59"
+      }
+    },
+    "tweet2_text": {
+      "type": "Text",
+      "props": {
+        "text": "what is $aeon? your own schizophrenic AI sweatshop — give it a goal it spawns infinite clones, learns your brain, and grinds 24/7"
+      }
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ika_xbt/status/2055797373700325762"
+      }
+    },
+    "tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3_header",
+        "tweet3_text",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3_handle",
+        "tweet3_alloc",
+        "tweet3_score"
+      ]
+    },
+    "tweet3_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/m000_crypto"
+      }
+    },
+    "tweet3_alloc": {
+      "type": "Badge",
+      "props": {
+        "text": "$1.29 in $AEON"
+      }
+    },
+    "tweet3_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 19"
+      }
+    },
+    "tweet3_text": {
+      "type": "Text",
+      "props": {
+        "text": "Japanese-language breakdown of $AEON vs $MIROSHARK via Grok — cross-market reach"
+      }
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/m000_crypto/status/2055798055832822151"
+      }
+    },
+    "tweet4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet4_header",
+        "tweet4_text",
+        "tweet4_link"
+      ]
+    },
+    "tweet4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "tweet4_handle",
+        "tweet4_alloc",
+        "tweet4_score"
+      ]
+    },
+    "tweet4_handle": {
+      "type": "Text",
+      "props": {
+        "text": "x.com/0xalwaysonchain"
+      }
+    },
+    "tweet4_alloc": {
+      "type": "Badge",
+      "props": {
+        "text": "$0.50 in $AEON"
+      }
+    },
+    "tweet4_score": {
+      "type": "Badge",
+      "props": {
+        "text": "score: 2 (minimum floor)"
+      }
+    },
+    "tweet4_text": {
+      "type": "Text",
+      "props": {
+        "text": "First self-launched agent on @aeonframework — $SYNTH"
+      }
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xalwaysonchain/status/2055797595188990164"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "total_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total allocated",
+        "value": "$10.00 in $AEON to 4 authors"
+      }
+    }
+  }
+}
