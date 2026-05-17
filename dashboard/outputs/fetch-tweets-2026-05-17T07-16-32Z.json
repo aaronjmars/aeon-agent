@@ -1,0 +1,224 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-17)"
+      },
+      "children": [
+        "stack_all_tweets"
+      ]
+    },
+    "stack_all_tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4",
+        "tweet5"
+      ]
+    },
+    "tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1_card",
+        "tweet1_engagement",
+        "tweet1_link"
+      ]
+    },
+    "tweet1_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "100xDarren",
+        "handle": "100xDarren",
+        "text": "Both $Aeon and $Miroshark are looking strong today. Gaps ahead.",
+        "likes": 56,
+        "retweets": 2
+      },
+      "children": []
+    },
+    "tweet1_engagement": {
+      "type": "Text",
+      "props": {
+        "text": "Replies: 11",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/100xDarren/status/2055797257652654291"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2_card",
+        "tweet2_engagement",
+        "tweet2_link"
+      ]
+    },
+    "tweet2_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "ika_xbt",
+        "handle": "ika_xbt",
+        "text": "Describes $aeon as \"your own schizophrenic AI sweatshop\" — spawns infinite clones, learns your brain, grinds 24/7 until the mission is done. Autonomous operator that never sleeps.",
+        "likes": 38,
+        "retweets": 7
+      },
+      "children": []
+    },
+    "tweet2_engagement": {
+      "type": "Text",
+      "props": {
+        "text": "Replies: 4",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/ika_xbt/status/2055797373700325762"
+      },
+      "children": []
+    },
+    "tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3_card",
+        "tweet3_engagement",
+        "tweet3_link"
+      ]
+    },
+    "tweet3_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aaronjmars",
+        "handle": "aaronjmars",
+        "text": "\"look what they need to mimic a fraction of our power\" (tagging aeonframework)",
+        "likes": 25,
+        "retweets": 5
+      },
+      "children": []
+    },
+    "tweet3_engagement": {
+      "type": "Text",
+      "props": {
+        "text": "Replies: 0",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet3_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aaronjmars/status/2055800443272413257"
+      },
+      "children": []
+    },
+    "tweet4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4_card",
+        "tweet4_engagement",
+        "tweet4_link"
+      ]
+    },
+    "tweet4_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "m000_crypto",
+        "handle": "m000_crypto",
+        "text": "Japanese thread comparing $AEON and $MIROSHARK via Grok deep-dive. Detailed summary for a Japanese-speaking audience.",
+        "likes": 16,
+        "retweets": 1
+      },
+      "children": []
+    },
+    "tweet4_engagement": {
+      "type": "Text",
+      "props": {
+        "text": "Replies: 8",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet4_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/m000_crypto/status/2055798055832822151"
+      },
+      "children": []
+    },
+    "tweet5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet5_card",
+        "tweet5_engagement",
+        "tweet5_link"
+      ]
+    },
+    "tweet5_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xalwaysonchain",
+        "handle": "0xalwaysonchain",
+        "text": "\"Next one is the first self launched agent on @aeonframework $SYNTH\"",
+        "likes": 2,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "tweet5_engagement": {
+      "type": "Text",
+      "props": {
+        "text": "Replies: 0",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "tweet5_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xalwaysonchain/status/2055797595188990164"
+      },
+      "children": []
+    }
+  }
+}

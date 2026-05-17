@@ -1,25 +1,21 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-16)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-17)*
 
-1. x.com/cybercelos — $AEON top holder already loading $EDGE (Bankr dev project); Bankr ecosystem thriving
-Likes: 9 | RTs: 1
-[View tweet](https://x.com/cybercelos/status/2055421685596373134)
+1. x.com/100xDarren — Both $Aeon and $Miroshark are looking strong today. Gaps ahead.
+Likes: 56 | RTs: 2 | Replies: 11
+[View tweet](https://x.com/100xDarren/status/2055797257652654291)
 
-2. x.com/PoodleFi_ — Smart Money Buys on Base (15 May): $BNKR, $AEON, $VVV, $MIROSHARK + more
-Likes: 6 | RTs: 1
-[View tweet](https://x.com/PoodleFi_/status/2055423915267354953)
+2. x.com/ika_xbt — Describes $aeon as "your own schizophrenic AI sweatshop" — spawns infinite clones, learns your brain, grinds 24/7 until the mission is done. Autonomous operator that never sleeps.
+Likes: 38 | RTs: 7 | Replies: 4
+[View tweet](https://x.com/ika_xbt/status/2055797373700325762)
 
-3. x.com/altayturanbtc — Turkish: built position on $AEON on Base, likes the project, still watching
-Likes: 5 | RTs: 0
-[View tweet](https://x.com/altayturanbtc/status/2055417366213763477)
+3. x.com/aaronjmars — "look what they need to mimic a fraction of our power" (tagging aeonframework)
+Likes: 25 | RTs: 5 | Replies: 0
+[View tweet](https://x.com/aaronjmars/status/2055800443272413257)
 
-4. x.com/seviolete — "$AEON looks strong"
-Likes: 4 | RTs: 0
-[View tweet](https://x.com/seviolete/status/2055429904850927728)
+4. x.com/m000_crypto — Japanese thread comparing $AEON and $MIROSHARK via Grok deep-dive. Detailed summary for a Japanese-speaking audience.
+Likes: 16 | RTs: 1 | Replies: 8
+[View tweet](https://x.com/m000_crypto/status/2055798055832822151)
 
-5. x.com/btcbabycow — "@aeonframework @aaronjmars 👀"
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/btcbabycow/status/2055422640559673799)
-
-6. x.com/earl_y_future — "don't buy $AEON 🤣"
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/earl_y_future/status/2055422478290219316)
+5. x.com/0xalwaysonchain — "Next one is the first self launched agent on @aeonframework $SYNTH"
+Likes: 2 | RTs: 0 | Replies: 0
+[View tweet](https://x.com/0xalwaysonchain/status/2055797595188990164)
