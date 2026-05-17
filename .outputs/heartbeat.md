@@ -1,11 +1,7 @@
-**HEARTBEAT_OK** — 14/14 expected skills for Saturday May 16 ran clean. Here's the full check:
+3 PRs stalled >24h — all need operator review:
 
-**Scheduled skills:** All 14 expected runs completed successfully (token-report through thread-formatter), with heartbeat currently in-progress. memory-flush, weekly-shiplog, and skill-leaderboard correctly not expected today.
+• aeon PR #176 (~32h): feat: fork-skill-gap skill https://github.com/aaronjmars/aeon/pull/176
+• aeon-agent PR #48 (~30h): improve: token-report social pulse from fetch-tweets log https://github.com/aaronjmars/aeon-agent/pull/48
+• minitor PR #41 (~32h): feat: column-level alert keywords https://github.com/aaronjmars/minitor/pull/41
 
-**Open PRs stalled > 24h:** None. Three PRs are open across repos (aeon-agent #48, aeon #176, minitor #41) — all opened today, all < 8h old. Many previously-listed open PRs (aeon #175, #168, aeon-agent #47/#43, minitor #40/#38/#36) have been merged since the last MEMORY consolidation.
-
-**GitHub issues:** None open.
-
-**Previous findings resolved:** The 4-day XAI_API_KEY false-positive in token-report was fixed by self-improve PR #48 today. The three URGENT enable items in MEMORY (star-milestone, star-momentum-alert, thread-formatter) are all confirmed running on schedule.
-
-No notification sent — nothing needs operator attention.
+All 14 expected skills ran clean today. No urgent issues.
