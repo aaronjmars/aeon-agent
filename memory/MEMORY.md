@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-05-13*
+*Last consolidated: 2026-05-17*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -42,8 +42,11 @@
 | 2026-05-13 | Aviation Has Two Words For "Apply This Update." AI Agent Fleets Only Have One. | project-lens |
 | 2026-05-14 | Aeon Spent Twelve Days Begging The Wrong Repo To Flip A Switch That Wasn't There. | repo-article |
 | 2026-05-15 | Twenty-Four Hours After The Switch Was Flipped, Star-Milestone Fired For The First Time And The PR Queue Hit Zero. | repo-article |
+| 2026-05-15 | Most AI Agents Are Robust. The Hard Part Is Building One That Is Antifragile. | project-lens |
 | 2026-05-16 | Aeon Wrote "XAI_API_KEY Not Set" Into Its Own Daily Report For Five Days. The Key Was Set The Whole Time. | repo-article |
+| 2026-05-16 | The AI Agent Industry Spent 2026 Reinventing `git log` | project-lens |
 | 2026-05-17 | Two Of Today's Three Skill Pushes Were Aimed At Product Hunt. The Launch Hasn't Been Called Yet. | repo-article |
+| 2026-05-17 | Most AI Agents Are A Process. Aeon Is A Cron Job. Here's What That Buys You. | project-lens |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -88,40 +91,31 @@
 - aeon-agent still at pre-autoresearch-evolution SKILL.md versions (aeon PRs #46–#136 not yet backported) — SKIP_UNCHANGED/NEW_INFO exits, significance gates not active here
 - grok-4-1-fast is a thinking model — reasoning trace eats output tokens before answer list; always set max_output_tokens ≥ 16384 in xai_search calls (triggered May-6: 2 tweets instead of 10+)
 - tweet-allocator Bankr prefetch: empty `verified-handles.json` had three ambiguous causes — resolved by `.error` marker (aeon-agent PR #24)
+- Sandbox blocks `$ENV_VAR` in curl headers → skill reads auth failure as "key not set" even when the key IS set. Fix: read from prefetch-written log files instead of curling authenticated APIs inside the skill (aeon-agent PR #48)
 
 ## Repo Actions Ideas Pipeline
 ~83 ideas generated (18 runs). Recently built: product-hunt-launch (aeon) + skill-enabler (aeon-agent) + deck-export-import (minitor) (May-15), fork-skill-gap (aeon) + FEATURE_SKIP for aeon-agent + column-alert-keywords (minitor) (May-16 — burned last two open May-14 ideas), fork-first-run-alert (aeon) + product-hunt-launch backport (aeon-agent, pivoted from May-16 #3 which was already done) + producthunt column (minitor) (May-17 — burned May-16 #1 + #4). **May-16 ideas REMAINING**: #2 GitHub Discussions column (minitor, Feature, Medium — GraphQL, completes GitHub cluster 10/10), #5 Competitor Launch Radar (aeon, Intelligence, Small — weekly PH+HN scan for new AI agent frameworks, 120→121 skills). May-16 #3 was a false signal (Skill Health Triad already complete in aeon-agent). **May-14 ideas FULLY CONSUMED**. **May-12 ideas FULLY CONSUMED**. May-10 ideas FULLY CONSUMED. May-6 aeon-agent backports FULLY CONSUMED. Other open: Dashboard Live Feed (aeon-agent — older, complex). See `articles/repo-actions-*.md`.
 
 ## Open Improvement PRs
 - [#179 feat: fork-first-run-alert skill](https://github.com/aaronjmars/aeon/pull/179) — aeon, opened 2026-05-17 (May-16 idea #4; daily 20:30 UTC same-day named alert when a new fork first activates, closes fork-cohort weekly-cadence gap)
-- [#49 feat: product-hunt-launch backport](https://github.com/aaronjmars/aeon-agent/pull/49) — aeon-agent, opened 2026-05-17 (verbatim backport of aeon PR #175; same-day-after pattern continues; pivot from May-16 #3 which was already done)
-- [#42 feat: producthunt column](https://github.com/aaronjmars/minitor/pull/42) — minitor, opened 2026-05-17 (May-16 idea #1; 44th column type, keyless PH RSS, two modes, OR-match keyword filter, Rocket icon #DA552F)
+- [#178 fix(dashboard): pass -R repo to gh run list/view](https://github.com/aaronjmars/aeon/pull/178) — aeon, opened 2026-05-17 (hand-written; execFileSync replaces shell-interpolated execSync across 3 dashboard API routes, fixes multi-remote setups)
+- [#177 docs: Add FAQ section](https://github.com/aaronjmars/aeon/pull/177) — aeon, opened 2026-05-16
 - [#176 feat: fork-skill-gap skill](https://github.com/aaronjmars/aeon/pull/176) — aeon, opened 2026-05-16 (May-14 idea #3; weekly Sunday 21:00 UTC per-fork upstream-skill-adoption gap)
+- [#49 feat: product-hunt-launch backport](https://github.com/aaronjmars/aeon-agent/pull/49) — aeon-agent, opened 2026-05-17 (verbatim backport of aeon PR #175; same-day-after pattern continues)
+- [#48 improve: token-report social pulse from fetch-tweets log](https://github.com/aaronjmars/aeon-agent/pull/48) — aeon-agent, opened 2026-05-16 (self-improve; fixes 5-day false-positive "XAI_API_KEY not set" — reads fetch-tweets log instead of curling XAI directly)
+- [#42 feat: producthunt column](https://github.com/aaronjmars/minitor/pull/42) — minitor, opened 2026-05-17 (May-16 idea #1; 44th column type, keyless PH RSS, two modes, OR-match keyword filter, Rocket icon #DA552F)
 - [#41 feat: column-level alert keywords](https://github.com/aaronjmars/minitor/pull/41) — minitor, opened 2026-05-16 (May-14 idea #4; yellow highlight + Bell badge, works with all 43 plugins, migration 0001 additive)
-- [#175 feat: product-hunt-launch skill](https://github.com/aaronjmars/aeon/pull/175) — aeon, opened 2026-05-15 (May-14 idea #1; PH launch asset pack, workflow_dispatch)
-- [#47 feat: skill-enabler skill](https://github.com/aaronjmars/aeon-agent/pull/47) — aeon-agent, opened 2026-05-15 (May-14 idea #2; closes the 12-day aeon.yml enable-pattern by collapsing it to one dispatch)
-- [#40 feat: deck export / import](https://github.com/aaronjmars/minitor/pull/40) — minitor, opened 2026-05-15 (May-14 idea #5; two ⌘K commands + Zod-validated server actions; enables community deck sharing)
-- [#43 improve: extend .truncated marker handling to other XAI cache consumers](https://github.com/aaronjmars/aeon-agent/pull/43) — aeon-agent, opened 2026-05-14 (narrative-tracker, remix-tweets, tweet-roundup; completes contract started by PR #40)
-- [#168 fleet-state digest](https://github.com/aaronjmars/aeon/pull/168) — aeon, opened 2026-05-13
-- [#36 pypi column](https://github.com/aaronjmars/minitor/pull/36) — minitor, opened 2026-05-13
-- [#38 crates.io column](https://github.com/aaronjmars/minitor/pull/38) — minitor, opened 2026-05-14 (depends-on-merge with #36 for cluster count)
-
-*aeon-agent PRs #40, #41, #42 all merged between 2026-05-12 and 2026-05-14 — XAI .truncated marker, v4-readiness backport, webhook-bridge.*
 
 ## Next Priorities
-- **URGENT** Enable star-milestone in aeon aeon.yml — PR #39 + autoresearch PR #111; 300⭐ CROSSED 2026-05-12 (308⭐ as of May-13) — flip enabled:true to announce retroactively
-- **URGENT** Enable star-momentum-alert in aeon.yml — PR #159 (May 5); 308⭐ now, still disabled
-- **URGENT** Enable thread-formatter in aeon.yml — PR #148 (Apr 30); 308⭐ now, threshold long met (scored 16+ on May 12 ATH+300⭐ day), still disabled
-- **URGENT** Enable show-hn-draft in aeon.yml — PR #151 (May 1); 300⭐ crossed, Show HN draft immediately applicable, dispatch now
+- **URGENT** Enable show-hn-draft in aeon.yml — PR #151 (May 1); 300⭐ long crossed, Show HN draft immediately applicable, dispatch now
 - Enable pr-triage in aeon.yml — PR #147 (Apr 29); PR #143 from pezetel is first natural triage candidate
 - Enable smithery-manifest in aeon.yml — PR #149 (May 1); submit docs/ to Smithery + MCP Registry
-- Enable fork-cohort in aeon.yml — PR #152 (May 2); gives "X of 43 forks running in production" social proof
+- Enable fork-cohort in aeon.yml — PR #152 (May 2); gives "X of 60+ forks running in production" social proof
 - Enable operator-scorecard in aeon.yml — PR #153 (May 3); weekly scorecard
 - Enable skill-freshness in aeon.yml — PR #157 (May 4)
-- Enable operator-scorecard in aeon-agent aeon.yml — PR #28 (May 4); first Monday run May 11
+- Enable operator-scorecard in aeon-agent aeon.yml — PR #28 (May 4)
 - Enable skill-freshness in aeon-agent aeon.yml — PR #30 (May 5)
 - Enable v4-readiness in aeon aeon.yml — PR #160 (May 6); dispatch manually pre-v4-announcement
-- Backport to aeon-agent: v4-readiness DONE May-13 (PR #41), thread-formatter DONE May-12 (PR #39), fork-cohort done May-10 (PR #36) — aeon-agent now at full pre-v4 parity; still 80 autoresearch-evolution rewrites pending (aeon PRs #46–#136)
-- Enable fleet-state in aeon aeon.yml — PR #168 (May 13); first natural Monday run May 18 if enabled; synthesises fork-cohort + fork-release-tracker + contributor-spotlight into one Monday digest
-- Enable ai-framework-watch in aeon aeon.yml — PR #164 (May 10); first natural Monday run May 11 if enabled
+- Enable fleet-state in aeon aeon.yml — first natural Monday run May 18; synthesises fork-cohort + fork-release-tracker + contributor-spotlight into one Monday digest
+- aeon-agent: still 80 autoresearch-evolution rewrites pending (aeon PRs #46–#136)
 - Run more digest types (HN, RSS, papers, DeFi)
