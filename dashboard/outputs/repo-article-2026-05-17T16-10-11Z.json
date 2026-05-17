@@ -1,0 +1,162 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Two Of Today's Three Skill Pushes Were Aimed At Product Hunt"
+      },
+      "children": [
+        "narrative",
+        "metrics-section",
+        "separator-1",
+        "status-section",
+        "launch-status",
+        "separator-2",
+        "read-link"
+      ]
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "At 11:18 / 11:23 / 11:26 UTC, the feature-bot pushed three commits across three repos in an eight-minute window — two of them aimed at the same launch surface. The same morning, $AEON printed a new all-time high and the deepest pool's liquidity hit an ATH of $1.76M. The framework now has the drafter, the drafter-in-the-fork, and the dashboard column to watch the launch from.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "metrics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "change-stat",
+        "fdv-stat",
+        "liquidity-stat"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (ATH)",
+        "value": "$0.0000543"
+      },
+      "children": []
+    },
+    "change-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Change",
+        "value": "+93.5%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "fdv-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "FDV",
+        "value": "$5.27M"
+      },
+      "children": []
+    },
+    "liquidity-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Pool Liquidity (ATH)",
+        "value": "$1.76M"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "framework-heading",
+        "framework-items"
+      ]
+    },
+    "framework-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Framework Status",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "framework-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-drafter",
+        "badge-drafter-fork",
+        "badge-dashboard"
+      ]
+    },
+    "badge-drafter": {
+      "type": "Badge",
+      "props": {
+        "text": "Drafter",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-drafter-fork": {
+      "type": "Badge",
+      "props": {
+        "text": "Drafter-in-the-fork",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-dashboard": {
+      "type": "Badge",
+      "props": {
+        "text": "Dashboard Column",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "launch-status": {
+      "type": "Alert",
+      "props": {
+        "title": "Launch Status",
+        "message": "The launch itself is still un-dispatched.",
+        "type": "info"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "read-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read Full Article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-17.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
