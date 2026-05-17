@@ -151,8 +151,8 @@
     "success_rate": 1
   },
   "star-milestone": {
-    "last_dispatch": "2026-05-16T15:30:02Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-17T15:40:10Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-16T15:31:29Z",
     "total_runs": 3,
     "total_successes": 3,
