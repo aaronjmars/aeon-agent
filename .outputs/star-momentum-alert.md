@@ -1,19 +1,16 @@
+Done. Here's the summary:
+
 ## Summary
 
-**star-momentum-alert** executed for 2026-05-16. Status: **STAR_MOMENTUM_NO_ALERTS**.
+**Status:** `STAR_MOMENTUM_NO_ALERTS` — article written, no notification sent.
 
-**aaronjmars/aeon** — Verdict: **OFF_DAY**
-- 342⭐ → 400⭐, gap 58 stars
-- v7 = 8.71/day, v3 = 11.67/day
-- Projected crossing (v7): 2026-05-23 — 7 days out and inside the 7–14d window, but **Saturday** misses the Tue/Wed/Thu gate
-- The faster v3 pace projects the crossing to **2026-05-21 (Thursday)** — inside the window. If pace holds into tomorrow, the alert may fire then
+**Repos audited:** 2 (aaronjmars/aeon, aaronjmars/minitor — aeon-agent filtered per skill rules)
 
-**aaronjmars/minitor** — Verdict: **OUT_OF_WINDOW**
-- 9⭐ → 50⭐, 287 days at current pace (0.14 stars/day)
+**Verdicts:**
+- **aaronjmars/aeon** — OUT_OF_WINDOW: 350⭐ → 400⭐, v7=9.43/day, projected **2026-05-23 (Saturday)** in ~6 days. Under the 7-day minimum — the milestone is arriving faster than the dispatch window allows. The 3-day velocity (v3=12.67/day) projects even sooner: 2026-05-21 (Thursday, only 4 days out). The window for a coordinated Show HN launch anchored to this milestone has closed; `star-milestone` will fire the celebration when 400 lands.
+- **aaronjmars/minitor** — OUT_OF_WINDOW: 9⭐ → 50⭐, v7=0.14/day, projected 2027-02-28 (~287 days, far too distant).
 
 **Files written:**
-- `articles/star-momentum-2026-05-16.md`
-- `memory/topics/star-momentum-state.json` (aeon/400 pair recorded with `first_seen_in_window_at`)
-- `memory/logs/2026-05-16.md` (log block appended)
-
-No notification sent.
+- `articles/star-momentum-2026-05-17.md` (new)
+- `memory/topics/star-momentum-state.json` (updated v7 to 9.43)
+- `memory/logs/2026-05-17.md` (appended Star Momentum block)
