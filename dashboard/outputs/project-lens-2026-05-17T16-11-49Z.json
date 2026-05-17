@@ -1,0 +1,50 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "heading_title",
+        "text_body",
+        "separator1",
+        "story_article"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Most AI Agents Are A Process. Aeon Is A Cron Job. Here's What That Buys You.",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "The agent-runtime industry — Addy Osmani's piece, Google ADK, Microsoft's durable workflows, LangChain's deep-agent runtime — has converged on one assumption: agents are long-running processes. Today's project-lens article works through what changes when you remove that assumption. Cost goes to zero idle, memory becomes the git repo, crash recovery is `git pull`, secrets die with the runner, the reasoning model collapses to one question. cron has been there for fifty years; the interesting decision is not having a process at all.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "story_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Most AI Agents Are A Process. Aeon Is A Cron Job. Here's What That Buys You.",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-17.md",
+        "source": "project-lens"
+      },
+      "children": []
+    }
+  }
+}

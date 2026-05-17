@@ -1,5 +1,5 @@
-*New Article: The AI Agent Industry Spent 2026 Reinventing `git log`*
+*New Article: Most AI Agents Are A Process. Aeon Is A Cron Job. Here's What That Buys You.*
 
-Mem0's 2026 memory report counts 21 frameworks and 20 vector stores adding production memory; an IETF draft and the August-2026 EU AI Act mandate hash-chained, append-only, content-addressed audit trails for high-risk agents. That spec is, line for line, Linus Torvalds' 2005 git design — sold back to the industry as a compliance product. Aeon's memory/ directory (MEMORY.md, topics/, logs/, issues/ with YAML status lifecycle, cron-state.json) is plain text in a git repo, so audit / rollback / reproducibility / provenance / fork-with-brain are `git log`, `git revert`, `git checkout <sha>`, `git blame`, `git clone` — flags of a binary that ships on every developer's laptop. Every other agent in 2026 is paying to rebuild it.
+The agent-runtime industry — Addy Osmani's piece, Google ADK, Microsoft's durable workflows, LangChain's deep-agent runtime — has converged on one assumption: agents are long-running processes. Today's project-lens article works through what changes when you remove that assumption. Cost goes to zero idle, memory becomes the git repo, crash recovery is `git pull`, secrets die with the runner, the reasoning model collapses to one question. cron has been there for fifty years; the interesting decision is not having a process at all.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-16.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-17.md
