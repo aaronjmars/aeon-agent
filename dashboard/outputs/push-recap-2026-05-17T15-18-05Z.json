@@ -1,0 +1,187 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-17"
+      },
+      "children": [
+        "stack_stats",
+        "sep1",
+        "heading_ph",
+        "text_ph",
+        "sep2",
+        "heading_fork",
+        "text_fork",
+        "sep3",
+        "heading_dashboard",
+        "text_dashboard",
+        "sep4",
+        "heading_changes",
+        "stack_changes",
+        "sep5",
+        "text_final_stats",
+        "link_recap"
+      ]
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_commits",
+        "stat_authors",
+        "stat_changes"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos",
+        "value": "3"
+      }
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "4"
+      }
+    },
+    "stat_authors": {
+      "type": "Stat",
+      "props": {
+        "label": "Authors",
+        "value": "2"
+      }
+    },
+    "stat_changes": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines",
+        "value": "+984/-18"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_ph": {
+      "type": "Heading",
+      "props": {
+        "text": "Product Hunt launch prep convergence",
+        "level": "h2"
+      }
+    },
+    "text_ph": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent backported the upstream product-hunt-launch asset drafter (PR #49, +244, verbatim from aeon May-15) and minitor shipped a Product Hunt column (PR #42, +374, 44th column type — keyless RSS, em-dash/en-dash title split, canonical producthunt:{slug} IDs). Both PRs landed within 4 minutes of each other (11:23 / 11:26 UTC) — clearly the same feature-dispatch wave picking PH from two angles. When the actual PH submission goes live, the operator can pin a PH · ai-agents column in minitor while the asset pack is generated on demand from aeon-agent.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_fork": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork-intel layer reaches 5 skills",
+        "level": "h2"
+      }
+    },
+    "text_fork": {
+      "type": "Text",
+      "props": {
+        "text": "aeon's fork-first-run-alert (PR #179, +299, 11-step skill, 7-status taxonomy) closes the weekly-cadence gap left by fork-cohort — a fork that activates Monday morning sits in the void up to 6 days before anyone notices. Daily 20:30 UTC cron diffs the cohort ACTIVE set against a persistent seen-list (LRU 500), 1-3 new activators get individual named alerts, 4+ collapse to a batch with … and N more footer. Bot allowlist + first-run backfill mode prevent day-one signal floods.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_dashboard": {
+      "type": "Heading",
+      "props": {
+        "text": "Dashboard hardening",
+        "level": "h2"
+      }
+    },
+    "text_dashboard": {
+      "type": "Text",
+      "props": {
+        "text": "The only hand-written push of the day — @aaronjmars swaps execSync('gh run …${id}') for execFileSync('gh', [args]) across the dashboard's 3 API routes (analytics, runs, runs/[id]/logs) and adds -R <repo> autodetection via gh repo set-default --view with a gh repo view --json nameWithOwner fallback. Fixes multi-remote setups where the default remote isn't the canonical upstream + eliminates the last shell-interpolated gh paths from the dashboard.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "stack_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "story_change1",
+        "story_change2",
+        "story_change3"
+      ]
+    },
+    "story_change1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #179 fork-first-run-alert (+285 SKILL.md): five-skill fork-intel stack now covers cohort/release/spotlight/gap/activation — same-day instead of weekly for mid-week activations",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/179"
+      }
+    },
+    "story_change2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "minitor PR #42 producthunt column (+164 integration, 4 plugin files): 44th column type, news & web cluster now 11/44 — largest single cluster by plugin count",
+        "href": "https://github.com/aaronjmars/minitor/pull/42"
+      }
+    },
+    "story_change3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #178 dashboard (3 routes, +67/-13): execFileSync + argv arrays kill the last shell-interpolation surface on gh calls + adds repo-detection fallback chain",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/178"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_final_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Stats: 17 files changed, +984/-18 lines, 4 author commits across 3 repos",
+        "variant": "caption"
+      }
+    },
+    "link_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-17.md"
+      }
+    }
+  }
+}
