@@ -1,0 +1,107 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-05-17"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "topic-text",
+        "separator-1",
+        "point-1",
+        "point-2",
+        "point-3",
+        "point-4",
+        "point-5",
+        "separator-2",
+        "article-ref"
+      ]
+    },
+    "topic-text": {
+      "type": "Text",
+      "props": {
+        "text": "Topic: producthunt column — 44th Minitor column type, keyless PH RSS, PR #42",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "point-1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ Minitor now has a Product Hunt column. 44th column type. Keyless — no OAuth, no API credentials required. The feed is producthunt.com/feed RSS. Two modes: today's full slate, or filtered by up to five keywords."
+      }
+    },
+    "point-2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ Product Hunt publishes 30–40 launches a day. Until today, Minitor — which already tracks GitHub stars, npm downloads, Hacker News, DEV.to, and 40 other feeds — had no window into the world's most-watched launch platform."
+      }
+    },
+    "point-3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ PH's GraphQL API needs OAuth and has rate caps that make keyless use impossible. The RSS feed doesn't. Keywords match against name, tagline, description, and URL — each product gets a canonical ID from its PH slug so the same launch never appears twice."
+      }
+    },
+    "point-4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ The same feature run that opened this column also opened a Product Hunt launch drafter for Aeon and a backport for the fork — all within an 8-minute window. This is launch-prep without the launch being called. The timing is deliberate."
+      }
+    },
+    "point-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "point-5-text",
+        "point-5-link"
+      ]
+    },
+    "point-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "5/ PR #42 — 44th column type for Minitor, no credentials required:"
+      }
+    },
+    "point-5-link": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/aaronjmars/minitor/pull/42",
+        "href": "https://github.com/aaronjmars/minitor/pull/42"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article-ref": {
+      "type": "Text",
+      "props": {
+        "text": "(article: articles/thread-2026-05-17.md)",
+        "variant": "caption"
+      }
+    }
+  }
+}

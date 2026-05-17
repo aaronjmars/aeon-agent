@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-16*
-Topic: Fork-skill-gap — completes the four-skill fork-intelligence layer
+*Thread Draft — 2026-05-17*
+Topic: producthunt column — 44th Minitor column type, keyless PH RSS, PR #42
 
-1/ Four skills now cover aeon's fork-intelligence layer. The first three — alive, released, committing — shipped May 9–12. The fourth, PR #176, answers what each fork is still missing from upstream.
+1/ Minitor now has a Product Hunt column. 44th column type. Keyless — no OAuth, no API credentials required. The feed is producthunt.com/feed RSS. Two modes: today's full slate, or filtered by up to five keywords.
 
-2/ Before today, the fork-intelligence layer answered three questions: alive (fork-cohort), released (fork-release-tracker), committing (contributor-spotlight). The gap question — which upstream skills haven't reached your fork — had no answer.
+2/ Product Hunt publishes 30–40 launches a day. Until today, Minitor — which already tracks GitHub stars, npm downloads, Hacker News, DEV.to, and 40 other feeds — had no window into the world's most-watched launch platform.
 
-3/ The skill reads fork-cohort-state.json when fresh, falls back to live GitHub API per-fork when not. Manifest missing is tagged unreadable — not inflated to '119 skills absent.' The article also rolls up the 10 upstream skills least adopted across all forks.
+3/ PH's GraphQL API needs OAuth and has rate caps that make keyless use impossible. The RSS feed doesn't. Keywords match against name, tagline, description, and URL — each product gets a canonical ID from its PH slug so the same launch never appears twice.
 
-4/ Fifty-six forks of aeon exist. Most are passive. The gap skill doesn't wait for them to become active — it shows the delta now, every Sunday, so the moment a fork engages they don't spend a week discovering what upstream shipped while they were dormant.
+4/ The same feature run that opened this column also opened a Product Hunt launch drafter for Aeon and a backport for the fork — all within an 8-minute window. This is launch-prep without the launch being called. The timing is deliberate.
 
-5/ Completes the four-skill fork-intelligence layer — alive, released, committing, and now gap. PR: https://github.com/aaronjmars/aeon/pull/176
+5/ PR #42 — 44th column type for Minitor, no credentials required: https://github.com/aaronjmars/minitor/pull/42
 
-(article: articles/thread-2026-05-16.md)
+(article: articles/thread-2026-05-17.md)
