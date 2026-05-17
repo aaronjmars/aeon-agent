@@ -1,0 +1,194 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Skill Leaderboard",
+        "description": "2026-05-17"
+      },
+      "children": [
+        "heading_top_skills",
+        "table_ranking",
+        "sep1",
+        "heading_consensus",
+        "text_consensus",
+        "sep2",
+        "heading_gaps",
+        "stack_gaps",
+        "sep3",
+        "link_full"
+      ]
+    },
+    "heading_top_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Top skills across 47 active forks",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "table_ranking": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Rank",
+          "Skill",
+          "Forks",
+          "Adoption %"
+        ],
+        "rows": [
+          [
+            "1",
+            "heartbeat",
+            "47",
+            "100%"
+          ],
+          [
+            "2",
+            "token-movers",
+            "7",
+            "14.9%"
+          ],
+          [
+            "3",
+            "narrative-tracker",
+            "5",
+            "10.6%"
+          ],
+          [
+            "3",
+            "token-pick",
+            "5",
+            "10.6%"
+          ],
+          [
+            "3",
+            "market-context-refresh",
+            "5",
+            "10.6%"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_consensus": {
+      "type": "Heading",
+      "props": {
+        "text": "Consensus",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_consensus": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat only (no other skill above 15%)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_gaps": {
+      "type": "Heading",
+      "props": {
+        "text": "Adoption Gaps",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_gaps": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_fork_cohort",
+        "badge_star_milestone",
+        "badge_star_momentum",
+        "badge_show_hn",
+        "badge_product_hunt",
+        "text_newer_skills"
+      ]
+    },
+    "badge_fork_cohort": {
+      "type": "Badge",
+      "props": {
+        "text": "fork-cohort",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_star_milestone": {
+      "type": "Badge",
+      "props": {
+        "text": "star-milestone",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_star_momentum": {
+      "type": "Badge",
+      "props": {
+        "text": "star-momentum-alert",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_show_hn": {
+      "type": "Badge",
+      "props": {
+        "text": "show-hn-draft",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge_product_hunt": {
+      "type": "Badge",
+      "props": {
+        "text": "product-hunt-launch",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text_newer_skills": {
+      "type": "Text",
+      "props": {
+        "text": "10+ newer skills with zero fork enables",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full leaderboard",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-05-17.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

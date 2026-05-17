@@ -1,16 +1,13 @@
-*Skill Leaderboard — 2026-05-10*
+*Skill Leaderboard — 2026-05-17*
 
-Top skills across 32 active forks:
-1. heartbeat — 32 forks (100%)
-2. token-alert — 3 forks (9.4%)
-2. token-movers — 3 forks (9.4%)
-2. token-report — 3 forks (9.4%)
-2. market-context-refresh — 3 forks (9.4%)
-2. skill-health — 3 forks (9.4%)
+Top skills across 47 active forks:
+1. heartbeat — 47 forks (100%)
+2. token-movers — 7 forks (14.9%)
+3. narrative-tracker — 5 forks (10.6%)
+3. token-pick — 5 forks (10.6%)
+3. market-context-refresh — 5 forks (10.6%)
 
-Consensus: heartbeat only (100%)
-Adoption gaps: ~18 skills (skill-freshness, star-momentum-alert, operator-scorecard, contributor-spotlight, skill-update-check, ai-framework-watch, fork-cohort + 11 prior gaps incl. syndicate-article, pr-triage, repo-scanner)
+Consensus: heartbeat only (no other skill above 15%)
+Adoption gaps: fork-cohort, star-milestone, star-momentum-alert, show-hn-draft, product-hunt-launch, and 10+ newer skills with zero fork enables
 
-Notable: Boodszw joined with 13 skills (DeFi/prediction market suite); tomscaria trimmed 94→52 skills.
-
-Full leaderboard: https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-05-10.md
+Full leaderboard: https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-05-17.md
