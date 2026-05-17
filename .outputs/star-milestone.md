@@ -1,12 +1,13 @@
 ## Summary
 
-Ran `star-milestone` against the watched repo list (filtering out `aaronjmars/aeon-agent` per agent-repo exclusion).
+Ran `star-milestone` against the watched-repos list. No notifications sent.
 
-**Results — no notifications sent:**
-- **aaronjmars/aeon** — 344⭐. Highest threshold ≤ count = 300, already recorded as `(bootstrap)` on 2026-05-14. Next threshold (400) not yet crossed. Status: `STAR_MILESTONE_OK`, no-action.
-- **aaronjmars/minitor** — 9⭐. Below first threshold (25). Status: `STAR_MILESTONE_QUIET`.
+**Per-repo verdicts:**
+- **aaronjmars/aeon** (353⭐): Highest threshold ≤353 is **300**, already recorded 2026-05-14 as `(bootstrap)` → no action (gate 5a — already recorded).
+- **aaronjmars/minitor** (9⭐): Below the first threshold (25) → `STAR_MILESTONE_QUIET`.
+- **aaronjmars/aeon-agent**: Skipped per skill rules (slug contains `aeon-agent`).
 
 **Files modified:**
-- `memory/logs/2026-05-16.md` — appended `## Star Milestone` section with both repo verdicts.
+- `memory/logs/2026-05-17.md` — appended `## Star Milestone` section with verdicts and `STAR_MILESTONE_QUIET` status.
 
-**No follow-ups.** `memory/topics/milestones.md` unchanged (nothing to record). The next milestone fire will be aeon → 400⭐, projected by star-momentum-alert for ~2026-05-23.
+**No follow-up needed.** The next milestone in line for aeon is **400⭐** — star-momentum-alert today projects that around 2026-05-23. The first milestone for minitor (25⭐) is far out (~287d at current pace).
