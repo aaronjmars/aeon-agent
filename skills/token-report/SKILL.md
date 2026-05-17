@@ -51,19 +51,15 @@ Read the last 7 days of memory/logs/ for previous price and volume data to show 
    curl -s "https://api.geckoterminal.com/api/v2/networks/base/pools/POOL_ADDRESS/trades"
    ```
 
-5. **Search for social sentiment** (optional — requires XAI_API_KEY):
-   If `XAI_API_KEY` is set, search X for mentions of $TOKEN in the last 24h:
-   ```bash
-   curl -s -X POST "https://api.x.ai/v1/responses" \
-     -H "Content-Type: application/json" \
-     -H "Authorization: Bearer $XAI_API_KEY" \
-     -d '{
-       "model": "grok-4-1-fast",
-       "input": [{"role": "user", "content": "Search X for $TOKEN_SYMBOL in the last 24 hours. Return the 5 most notable tweets with @handle and summary."}],
-       "tools": [{"type": "x_search"}]
-     }'
-   ```
-   If `XAI_API_KEY` is not set, skip social sentiment and note it in the report.
+5. **Source social signal from the most recent fetch-tweets log** (sandbox-safe — no live curl):
+   The direct `curl` to XAI used to live here, but it relied on `$XAI_API_KEY` expanding inside the bash header — which the sandbox blocks. The result was a daily false "XAI_API_KEY not set" line in the report even when the key was set and used by other skills' prefetch.
+
+   Instead, locate the most recent `## fetch-tweets` (or `## Fetch Tweets`) section in `memory/logs/`:
+   - Check today's log first — only useful on dispatches where token-report runs *after* fetch-tweets (default order is the reverse: token-report at 06:00 UTC, fetch-tweets at 06:30 UTC).
+   - Fall back to yesterday's log. Yesterday's fetch-tweets run is the typical source — its data is ~24h old, which is the same window as the rest of the report.
+   - If no `fetch-tweets` section exists in the last 2 days of logs, **omit the Social Pulse section entirely** from step 6's report. Do NOT mention `XAI_API_KEY` — the data source here is logs, not a live key.
+
+   When you do find a section, extract 2-3 representative themes or notable accounts tied to the tracked token (give weight to higher-engagement tweets — those with the most likes / RTs / replies in the logged list). Note the source date inline at the end of the section (e.g. `via fetch-tweets log YYYY-MM-DD`) so a reader can tell how fresh the social read is.
 
 6. **Compile the daily report**:
    ```markdown
@@ -96,7 +92,7 @@ Read the last 7 days of memory/logs/ for previous price and volume data to show 
    [Is volume increasing/decreasing? Any notable large trades? Buy/sell ratio?]
 
    ## Social Pulse
-   [Key mentions, sentiment, notable tweets — or "XAI_API_KEY not set, social data unavailable"]
+   [Key mentions, sentiment, notable tweets from the most recent fetch-tweets log, with the source date inline (e.g. "via fetch-tweets log YYYY-MM-DD"). If no fetch-tweets log within the last 2 days, omit this entire section.]
 
    ## Context
    [1-2 sentences connecting price action to any known events — repo updates, market conditions]

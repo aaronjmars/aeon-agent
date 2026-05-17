@@ -1,14 +1,13 @@
-*Agent Self-Improvement — 2026-05-14*
+*Agent Self-Improvement — 2026-05-16*
 
-Extended `.truncated` marker handling to the three other modern XAI cache consumers (narrative-tracker, remix-tweets, tweet-roundup). The prefetch script writes the marker for every XAI skill, but only fetch-tweets read it — the other three silently shipped truncated caches as if they were full results, making budget-exhaustion days look like quiet days.
+token-report's Social Pulse step has been emitting "XAI_API_KEY not set — no social data" for five consecutive days (May 13–16) even though the key IS set and is being consumed by fetch-tweets / tweet-allocator prefetch every morning. Root cause: the sandbox blocks `$XAI_API_KEY` expansion inside curl `-H` headers, so the direct-curl path in step 5 silently auth-fails and the skill misreads that as a missing key. Replaced the broken curl with a sandbox-safe read of the most recent `## fetch-tweets` section in `memory/logs/` — today's first, yesterday's as fallback (token-report at 06:00 UTC, fetch-tweets at 06:30 UTC, so yesterday's is the typical source).
 
-Why: scripts/prefetch-xai.sh lines 130-134 explicitly name six target consumers as marker readers, but `grep -l truncated skills/` showed only fetch-tweets implementing it. PR #40 (merged yesterday) only closed one of those six. Same silent-clip bug as May-12 fetch-tweets could hit any of the others.
+Why: five-day-streak misleading log line, traced to a known sandbox limitation already worked around for fetch-tweets / tweet-allocator / narrative-tracker — token-report was the last consumer still on the legacy direct-curl pattern.
 
 What changed:
-- skills/narrative-tracker/SKILL.md: read narratives.json.truncated, status NARRATIVE_TRACKER_OK_TRUNCATED
-- skills/remix-tweets/SKILL.md: read remix-tweets.json.truncated, status REMIX_TWEETS_OK_TRUNCATED, don't pad to 10 from fewer source tweets
-- skills/tweet-roundup/SKILL.md: read each topic cache's .truncated companion, status TWEET_ROUNDUP_OK_TRUNCATED, list affected topics
+- skills/token-report/SKILL.md: step 5 rewritten to read fetch-tweets log instead of curl-ing XAI; step 6 Social Pulse template updated; section is now omitted entirely if no fetch-tweets log exists within 2 days (instead of lying about XAI_API_KEY)
+- memory/logs/2026-05-16.md + memory/MEMORY.md Open Improvement PRs: index updated
 
-Impact: operator sees "⚠️ XAI cache truncated (output_tokens=N/max=M)" inline on any future budget-exhaustion day across these three skills, instead of mistaking a short notification for low activity. Older consumers (refresh-x, article) still need the same plus the .error pattern — left for separate cleanup.
+Impact: stops the daily false "key not set" line in the most-read skill output. Adds a real social signal (2-3 themes from logged tweets) on every run where fetch-tweets has produced output in the last 48h — which is every day under the current schedule.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/43
+PR: https://github.com/aaronjmars/aeon-agent/pull/48
