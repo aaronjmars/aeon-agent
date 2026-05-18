@@ -1,19 +1,21 @@
-## Summary
+*Feature Built — 2026-05-18 — aaronjmars/minitor*
 
-Built one feature per watched repo from the May-16 repo-actions ideas, all open for review.
+GitHub Discussions Column
+Shipped the 45th column type: live GitHub Discussions for any repo, fetched via the GraphQL API since REST doesn't expose them. Three modes (recent / unanswered / top by upvotes) and a row UI with category pill, answered indicator on Q&A discussions, author, upvote count, comment count, and relative timestamp.
 
-**Per-repo outcomes:**
+Why this matters:
+Repos transitioning from Issues-only to Discussions-first were invisible in minitor — the column rounds out the GitHub cluster (10 of 45 total columns now) so a single dashboard can track stars, forks, PRs, issues, releases, search, actions, backlinks, trending, and the async Q&A layer GitHub is pushing as a default. Discussions are increasingly where maintainer-community signal lives.
 
-| Repo | Feature | PR | Status |
-|------|---------|----|--------|
-| `aaronjmars/aeon` | `fork-first-run-alert` — daily 20:30 UTC same-day named alert when a fork first runs a workflow (May-16 idea #4) | https://github.com/aaronjmars/aeon/pull/179 | OK |
-| `aaronjmars/aeon-agent` | `product-hunt-launch` verbatim backport from aeon PR #175 (pivot from May-16 #3, which was already done in aeon-agent) | https://github.com/aaronjmars/aeon-agent/pull/49 | OK |
-| `aaronjmars/minitor` | `producthunt` column — 44th column type, keyless PH RSS, two modes, 5-keyword OR-match filter (May-16 idea #1) | https://github.com/aaronjmars/minitor/pull/42 | OK |
+What was built:
+- lib/integrations/github-discussions.ts: GraphQL client to api.github.com/graphql, optional GITHUB_TOKEN auth (5000 vs 60 req/hr), parseRepo helper, DiscussionsDisabledError sentinel for the "Discussions feature off" case, mode-aware filter/sort.
+- lib/columns/plugins/github-discussions/{plugin.ts, server.ts, client.tsx}: zod schema (repo + mode enum), defaultTitle reading "{repo} Discussions" when configured, MessageSquare icon, accent #7C3AED purple (distinct from every other GitHub cluster colour), category pill, AnsweredIndicator only on Q&A categories, formatCompactCount for upvote/comment counts.
+- 3 registry edits: manifest.ts, registry.ts, server-registry.ts — matches exact pattern PR #42 used for Product Hunt.
+- README.md: count 44 → 45, GitHub cluster 9 → 10, added GITHUB_TOKEN note to the Keys paragraph.
 
-**Files modified locally:** `memory/logs/2026-05-17.md` (three per-repo feature blocks appended), `memory/MEMORY.md` (Skills Built table +3 rows, Open Improvement PRs +3 entries, Repo Actions Ideas Pipeline updated — May-16 #1+#4 burned, #2+#5 remaining, #3 was a false signal).
+How it works:
+Server fetcher pulls a generous batch (first: 50) once via GraphQL, then routes through the same sliceForPage helper github-actions and producthunt use — PAGE_SIZE per page, cursor-based "Load more". Auth header is only sent when GITHUB_TOKEN is set; absence drops to 60 req/hr unauthenticated quota rather than erroring out. The three modes do their filtering/sorting in memory after the fetch since GraphQL's orderBy only supports CREATED_AT/UPDATED_AT, not upvotes. Item id format `github-discussions:{owner}/{repo}#{number}` dedups identical discussions across refresh/load-more calls. Repos with Discussions disabled raise a typed DiscussionsDisabledError so the renderer can show a friendly empty state.
 
-**Notifications:** Three detailed per-repo notifications written to `.pending-notify/` for the post-run delivery step (the workflow's "Re-deliver pending notifications" step picks these up after Claude exits).
+What's next:
+Pinned discussions could surface separately as a sticky row at the top of the column, and emoji reactions on each discussion (currently we only show upvotes) would round out the social signal — both are one extra GraphQL field away.
 
-**May-16 idea #3 note:** "Skill Health Triad backport" was a false signal — `skill-health`, `skill-evals`, and `skill-repair` were all already present in aeon-agent. Pivoted to `product-hunt-launch` as the natural same-day-after backport candidate from aeon's May-15 PR #175, continuing the established backport pattern.
-
-**Follow-ups:** May-16 ideas #2 (GitHub Discussions column for minitor) and #5 (Competitor Launch Radar for aeon) remain unbuilt; both are good candidates for tomorrow's feature run.
+PR: https://github.com/aaronjmars/minitor/pull/43
