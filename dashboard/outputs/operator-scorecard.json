@@ -1,0 +1,44 @@
+{
+  "version": "1",
+  "generated_at": "2026-05-18T00:00:00Z",
+  "skill": "operator-scorecard",
+  "title": "Operator Scorecard — 2026-05-18",
+  "spec": {
+    "type": "Stack",
+    "props": {"direction": "vertical", "gap": "md"},
+    "children": [
+      {"type": "Heading", "props": {"level": 2, "children": "Operator Scorecard — 2026-05-18"}},
+      {"type": "Alert", "props": {"variant": "secondary", "children": "WATCH — Fleet ran clean 4 of 7 days; +69 stars and 19 skills shipped; token printed consecutive ATHs (+1,565% 7d)."}},
+      {"type": "Grid", "props": {"columns": 3, "gap": "sm"}, "children": [
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Agent health"}},
+          {"type": "Heading", "props": {"level": 3, "children": "4/7 clean"}},
+          {"type": "Text", "props": {"children": "heartbeat-only · 0 P0/P1 flags · skill-analytics not enabled"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Stars added"}},
+          {"type": "Heading", "props": {"level": 3, "children": "+69"}},
+          {"type": "Text", "props": {"children": "18 forks · leaderboard not run"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "$AEON distributed"}},
+          {"type": "Heading", "props": {"level": 3, "children": "$79.99"}},
+          {"type": "Text", "props": {"children": "22 recipients · token +1,565% 7d"}}
+        ]}}
+      ]},
+      {"type": "Heading", "props": {"level": 3, "children": "Verdicts by lane"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "lane", "header": "Lane"},
+          {"key": "verdict", "header": "Verdict"},
+          {"key": "headline", "header": "Headline"}
+        ],
+        "rows": [
+          {"lane": "Agent health", "verdict": "WATCH", "headline": "4 clean / 3 flagged heartbeats across 7 runs; skill-analytics not enabled"},
+          {"lane": "Community growth", "verdict": "OK", "headline": "+69 stars, 18 forks across 2 repos; 19 new skills shipped"},
+          {"lane": "Economic activity", "verdict": "OK", "headline": "$79.99 distributed to 22 recipients; token +1,565% 7d, consecutive ATHs"}
+        ]
+      }}
+    ]
+  }
+}

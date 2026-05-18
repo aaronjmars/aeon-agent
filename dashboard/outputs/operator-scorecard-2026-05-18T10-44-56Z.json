@@ -1,0 +1,274 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Operator Scorecard",
+        "description": "2026-05-18"
+      },
+      "children": [
+        "alert_status",
+        "sep1",
+        "section_metrics",
+        "sep2",
+        "section_details",
+        "sep3",
+        "section_footer"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "WATCH",
+        "message": "Fleet ran clean 4 of 7 days; +69 stars and 19 skills shipped; token printed consecutive ATHs (+1,565% 7d)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h_metrics",
+        "grid_metrics"
+      ]
+    },
+    "h_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "7-Day Summary",
+        "level": "h2"
+      }
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_fleet",
+        "stat_stars",
+        "stat_skills",
+        "stat_token"
+      ]
+    },
+    "stat_fleet": {
+      "type": "Stat",
+      "props": {
+        "label": "Fleet Health",
+        "value": "4 of 7 days clean"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Community Stars",
+        "value": "+69",
+        "trend": "up"
+      }
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Shipped",
+        "value": "19"
+      }
+    },
+    "stat_token": {
+      "type": "Stat",
+      "props": {
+        "label": "Token Growth (7d)",
+        "value": "+1,565%",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "subsec_health",
+        "subsec_growth",
+        "subsec_economic",
+        "subsec_notable"
+      ]
+    },
+    "subsec_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_health",
+        "text_health"
+      ]
+    },
+    "h_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Health",
+        "level": "h3"
+      }
+    },
+    "text_health": {
+      "type": "Text",
+      "props": {
+        "text": "4 clean / 3 flagged heartbeats across 7 runs (skill-analytics not enabled)",
+        "variant": "body"
+      }
+    },
+    "subsec_growth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_growth",
+        "grid_growth",
+        "text_growth_repos"
+      ]
+    },
+    "h_growth": {
+      "type": "Heading",
+      "props": {
+        "text": "Community Growth",
+        "level": "h3"
+      }
+    },
+    "grid_growth": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_growth_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_growth_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "+69",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "+18"
+      }
+    },
+    "text_growth_repos": {
+      "type": "Text",
+      "props": {
+        "text": "across 2 repos",
+        "variant": "caption"
+      }
+    },
+    "subsec_economic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_economic",
+        "text_economic"
+      ]
+    },
+    "h_economic": {
+      "type": "Heading",
+      "props": {
+        "text": "Economic Activity",
+        "level": "h3"
+      }
+    },
+    "text_economic": {
+      "type": "Text",
+      "props": {
+        "text": "$79.99 in $AEON to 22 recipients · token +1,565% 7d (BREAKING OUT)",
+        "variant": "body"
+      }
+    },
+    "subsec_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h_notable",
+        "text_notable"
+      ]
+    },
+    "h_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      }
+    },
+    "text_notable": {
+      "type": "Text",
+      "props": {
+        "text": "\"Twenty-Four Hours After The Switch Was Flipped, Star-Milestone Fired For The First Time And The PR Queue Hit Zero.\" (May 15)",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_window",
+        "link_full"
+      ]
+    },
+    "text_window": {
+      "type": "Text",
+      "props": {
+        "text": "Window: last 7d",
+        "variant": "caption"
+      }
+    },
+    "link_full": {
+      "type": "Link",
+      "props": {
+        "label": "Full Report",
+        "href": "articles/operator-scorecard-2026-05-18.md"
+      }
+    }
+  }
+}
