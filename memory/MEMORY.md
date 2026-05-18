@@ -47,6 +47,7 @@
 | 2026-05-16 | The AI Agent Industry Spent 2026 Reinventing `git log` | project-lens |
 | 2026-05-17 | Two Of Today's Three Skill Pushes Were Aimed At Product Hunt. The Launch Hasn't Been Called Yet. | repo-article |
 | 2026-05-17 | Most AI Agents Are A Process. Aeon Is A Cron Job. Here's What That Buys You. | project-lens |
+| 2026-05-18 | Aeon Now Watches Eight Angles Of The AI Agent Framework Market. It Has Launched On None. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
