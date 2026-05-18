@@ -1,7 +1,18 @@
-3 PRs stalled >24h — all need operator review:
+**HEARTBEAT_OK**
 
-• aeon PR #176 (~32h): feat: fork-skill-gap skill https://github.com/aaronjmars/aeon/pull/176
-• aeon-agent PR #48 (~30h): improve: token-report social pulse from fetch-tweets log https://github.com/aaronjmars/aeon-agent/pull/48
-• minitor PR #41 (~32h): feat: column-level alert keywords https://github.com/aaronjmars/minitor/pull/41
+All checks passed for Monday May 18:
 
-All 14 expected skills ran clean today. No urgent issues.
+- **16/16 expected skills ran** — token-report through thread-formatter all completed successfully. Both Monday-only skills (ai-framework-watch at 08:30, weekly-shiplog + operator-scorecard) fired on schedule.
+- **No stalled PRs** — All 4 open PRs (aeon #183, aeon-agent #50/#51, minitor #43) were opened today and are well within 24h. The 3 PRs flagged by yesterday's heartbeat (aeon #176, aeon-agent #48, minitor #41) were all merged.
+- **No urgent GitHub issues** across any of the three repos.
+- **Memory issues directory is empty** — no tracked incidents.
+
+No notification sent.
+
+## Summary
+- Read `memory/MEMORY.md` and last 2 days of logs for context
+- Verified all 16 enabled scheduled skills ran today (Monday) against GitHub Actions run history
+- Checked open PRs across aeon, aeon-agent, and minitor — none stalled beyond 24h
+- Confirmed 3 previously-stalled PRs from yesterday's heartbeat were merged
+- Checked for urgent GitHub issues — none found
+- Logged `HEARTBEAT_OK` to `memory/logs/2026-05-18.md`
