@@ -1,16 +1,16 @@
-*Push Recap — 2026-05-17*
-3 repos — 4 substantive commits by 2 authors (1 hand-written, 3 feature-bot), +984/-18 across 17 files
+*Push Recap — 2026-05-18*
+aeon + aeon-agent + minitor — 8 substantive PRs + ~50 cron auto-commits
 
-*Product Hunt launch prep convergence:* aeon-agent backported the upstream `product-hunt-launch` asset drafter (PR #49, +244, verbatim from aeon May-15) and minitor shipped a Product Hunt column (PR #42, +374, 44th column type — keyless RSS, em-dash/en-dash title split, canonical `producthunt:{slug}` IDs). Both PRs landed within 4 minutes of each other (11:23 / 11:26 UTC) — clearly the same feature-dispatch wave picking PH from two angles. When the actual PH submission goes live, the operator can pin a `PH · ai-agents` column in minitor while the asset pack is generated on demand from aeon-agent.
+Fork-intelligence layer (aeon): two new skills shipped — `fork-skill-gap` (weekly per-fork upstream-skill-adoption report) and `fork-first-run-alert` (daily named alert the day a fork runs its first workflow). Together with fork-cohort + fork-release-tracker + contributor-spotlight that's a 5-skill cluster with composable state-file chaining; both new skills include live `gh api` fallback so they work before the cohort cache is populated.
 
-*Fork-intel layer reaches 5 skills:* aeon's `fork-first-run-alert` (PR #179, +299, 11-step skill, 7-status taxonomy) closes the weekly-cadence gap left by `fork-cohort` — a fork that activates Monday morning sits in the void up to 6 days before anyone notices. Daily 20:30 UTC cron diffs the cohort ACTIVE set against a persistent seen-list (LRU 500), 1-3 new activators get individual named alerts, 4+ collapse to a batch with `… and N more` footer. Bot allowlist + first-run backfill mode prevent day-one signal floods.
+Sandbox-fix completion (aeon-agent): PR #48 rewrote `token-report` step 5 to read the most recent fetch-tweets log instead of curling XAI directly — closes the four-patch "explicit-marker contract" sequence that started May-10 with PR #37. `token-report` was the last enabled-eligible XAI consumer still on direct-curl. Today's self-improve run opened PR #51 to apply the same fix to `refresh-x` (latent — still enabled:false).
 
-*Dashboard hardening:* the only hand-written push of the day — `@aaronjmars` swaps `execSync('gh run …${id}')` for `execFileSync('gh', [args])` across the dashboard's 3 API routes (analytics, runs, runs/[id]/logs) and adds `-R <repo>` autodetection via `gh repo set-default --view` with a `gh repo view --json nameWithOwner` fallback. Fixes multi-remote setups where the default remote isn't the canonical upstream + eliminates the last shell-interpolated `gh` paths from the dashboard.
+Minitor 43 → 44 columns + first cross-plugin retrofit: Product Hunt added as the 44th column (keyless RSS, `Rocket` icon, #DA552F brand orange) and column-level `alertKeywords` retrofitted across all 43 existing plugins (yellow inset ring + Bell badge with live match count). The alert-keywords migration is additive nullable — existing decks export-import cleanly.
 
 Key changes:
-- aeon PR #179 fork-first-run-alert (+285 SKILL.md): five-skill fork-intel stack now covers cohort/release/spotlight/gap/activation — same-day instead of weekly for mid-week activations
-- minitor PR #42 producthunt column (+164 integration, 4 plugin files): 44th column type, news & web cluster now 11/44 — largest single cluster by plugin count
-- aeon PR #178 dashboard (3 routes, +67/-13): `execFileSync` + argv arrays kill the last shell-interpolation surface on `gh` calls + adds repo-detection fallback chain
+- aeon: dashboard API routes now pass `-R {repo}` to `gh run list/view` — multi-remote operators no longer silently see wrong runs (PR #178 — also closes a latent shell-interpolation surface on `${id}`).
+- aeon-agent: full autonomous cron loop ran end-to-end (7 articles produced, repo-actions seeded next-day pipeline, self-improve opened PR #51) with zero human intervention outside the two 21:58 UTC PR merges.
+- minitor: alert-keywords is the first feature in the project that touches every plugin without per-plugin work — a true column-axis primitive (sibling to `title`, never sent to server fetchers, sidesteps every plugin's strict Zod schema).
 
-Stats: 17 files changed, +984/-18 lines, 4 author commits across 3 repos
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-17.md
+Stats: 33 files changed, +2,917 / −47 lines across 8 substantive commits
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-18.md

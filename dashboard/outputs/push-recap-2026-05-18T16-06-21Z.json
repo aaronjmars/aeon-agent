@@ -1,0 +1,200 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-18"
+      },
+      "children": [
+        "summary",
+        "sep1",
+        "aeon_section",
+        "sep2",
+        "aeon_agent_section",
+        "sep3",
+        "minitor_section",
+        "sep4",
+        "key_changes_section",
+        "sep5",
+        "stats_section",
+        "sep6",
+        "recap_link"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "aeon + aeon-agent + minitor — 8 substantive PRs + ~50 cron auto-commits",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "aeon_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_heading",
+        "aeon_text"
+      ]
+    },
+    "aeon_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fork-intelligence layer (aeon)",
+        "level": "h2"
+      }
+    },
+    "aeon_text": {
+      "type": "Text",
+      "props": {
+        "text": "Two new skills shipped — fork-skill-gap (weekly per-fork upstream-skill-adoption report) and fork-first-run-alert (daily named alert the day a fork runs its first workflow). Together with fork-cohort + fork-release-tracker + contributor-spotlight that's a 5-skill cluster with composable state-file chaining; both new skills include live gh api fallback so they work before the cohort cache is populated."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "aeon_agent_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_agent_heading",
+        "aeon_agent_text"
+      ]
+    },
+    "aeon_agent_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Sandbox-fix completion (aeon-agent)",
+        "level": "h2"
+      }
+    },
+    "aeon_agent_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #48 rewrote token-report step 5 to read the most recent fetch-tweets log instead of curling XAI directly — closes the four-patch \"explicit-marker contract\" sequence that started May-10 with PR #37. token-report was the last enabled-eligible XAI consumer still on direct-curl. Today's self-improve run opened PR #51 to apply the same fix to refresh-x (latent — still enabled:false)."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "minitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor_heading",
+        "minitor_text"
+      ]
+    },
+    "minitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Minitor 43 → 44 columns + first cross-plugin retrofit",
+        "level": "h2"
+      }
+    },
+    "minitor_text": {
+      "type": "Text",
+      "props": {
+        "text": "Product Hunt added as the 44th column (keyless RSS, Rocket icon, #DA552F brand orange) and column-level alertKeywords retrofitted across all 43 existing plugins (yellow inset ring + Bell badge with live match count). The alert-keywords migration is additive nullable — existing decks export-import cleanly."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key_changes_heading",
+        "kc_aeon",
+        "kc_aeon_agent",
+        "kc_minitor"
+      ]
+    },
+    "key_changes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "kc_aeon": {
+      "type": "Text",
+      "props": {
+        "text": "aeon: dashboard API routes now pass -R {repo} to gh run list/view — multi-remote operators no longer silently see wrong runs (PR #178 — also closes a latent shell-interpolation surface on ${id})."
+      }
+    },
+    "kc_aeon_agent": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent: full autonomous cron loop ran end-to-end (7 articles produced, repo-actions seeded next-day pipeline, self-improve opened PR #51) with zero human intervention outside the two 21:58 UTC PR merges."
+      }
+    },
+    "kc_minitor": {
+      "type": "Text",
+      "props": {
+        "text": "minitor: alert-keywords is the first feature in the project that touches every plugin without per-plugin work — a true column-axis primitive (sibling to title, never sent to server fetchers, sidesteps every plugin's strict Zod schema)."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_text"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stats_text": {
+      "type": "Text",
+      "props": {
+        "text": "33 files changed, +2,917 / −47 lines across 8 substantive commits"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-18.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
