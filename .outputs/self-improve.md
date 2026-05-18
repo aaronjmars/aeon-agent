@@ -1,13 +1,13 @@
-*Agent Self-Improvement — 2026-05-16*
+*Agent Self-Improvement — 2026-05-18*
 
-token-report's Social Pulse step has been emitting "XAI_API_KEY not set — no social data" for five consecutive days (May 13–16) even though the key IS set and is being consumed by fetch-tweets / tweet-allocator prefetch every morning. Root cause: the sandbox blocks `$XAI_API_KEY` expansion inside curl `-H` headers, so the direct-curl path in step 5 silently auth-fails and the skill misreads that as a missing key. Replaced the broken curl with a sandbox-safe read of the most recent `## fetch-tweets` section in `memory/logs/` — today's first, yesterday's as fallback (token-report at 06:00 UTC, fetch-tweets at 06:30 UTC, so yesterday's is the typical source).
+refresh-x prefetch-cache rewrite
+The refresh-x skill was the last enabled-eligible XAI consumer still doing a direct `curl -H "Authorization: Bearer $XAI_API_KEY"` as its primary path — the same pattern PR #48 fixed for token-report two days ago. Rewrote step 1 to read from `.xai-cache/refresh-x.json` (which `scripts/prefetch-xai.sh` already produces) with the same four-path ladder fetch-tweets uses: A (cache) / A-error short-circuit / A-truncated marker / B (direct curl, local-mode only) / C (WebSearch).
 
-Why: five-day-streak misleading log line, traced to a known sandbox limitation already worked around for fetch-tweets / tweet-allocator / narrative-tracker — token-report was the last consumer still on the legacy direct-curl pattern.
+Why: Latent-bug audit. Inside the GitHub Actions sandbox, env-var expansion in curl headers is blocked, so the original step-1 curl always fails and the "If XAI_API_KEY is not set, skip and log that the skill requires it" line gets written as a false-positive — exactly the noise that wrote "XAI_API_KEY not set" into token-report's daily log for five straight days (May 13–16) before PR #48 fixed it. refresh-x is currently `enabled: false`, so this is a pre-emptive fix rather than a live incident — if enabled today it would have started producing the same daily noise.
 
 What changed:
-- skills/token-report/SKILL.md: step 5 rewritten to read fetch-tweets log instead of curl-ing XAI; step 6 Social Pulse template updated; section is now omitted entirely if no fetch-tweets log exists within 2 days (instead of lying about XAI_API_KEY)
-- memory/logs/2026-05-16.md + memory/MEMORY.md Open Improvement PRs: index updated
+- skills/refresh-x/SKILL.md: step 1 rewritten with the four-path ladder; step 3 log template extended with Source / Status fields so the four states (cache / truncated / prefetch-failed / no-prefetch) are distinguishable downstream; step 5 notification adapts to status; misleading "If XAI_API_KEY is not set" line removed; Sandbox note appended pointing at the prefetch script case + line numbers.
 
-Impact: stops the daily false "key not set" line in the most-read skill output. Adds a real social signal (2-3 themes from logged tweets) on every run where fetch-tweets has produced output in the last 48h — which is every day under the current schedule.
+Impact: Fourth explicit-marker / cache-read contract since May 10 (after PR #37 `.error`, PR #43 `.truncated`, PR #48 fetch-tweets-log fallback). All four eliminate misleading "key not set" / "cache empty" lines that conflate sandbox limitations with real config gaps. refresh-x is now ready to be enabled without immediately producing the same false-positive log noise.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/48
+PR: https://github.com/aaronjmars/aeon-agent/pull/51

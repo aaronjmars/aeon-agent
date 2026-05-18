@@ -1,0 +1,126 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement",
+        "description": "2026-05-18"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-section",
+        "text-intro",
+        "separator-1",
+        "heading-why",
+        "text-why",
+        "separator-2",
+        "heading-changed",
+        "text-changed",
+        "separator-3",
+        "heading-impact",
+        "text-impact",
+        "separator-4",
+        "link-pr"
+      ]
+    },
+    "heading-section": {
+      "type": "Heading",
+      "props": {
+        "text": "refresh-x prefetch-cache rewrite",
+        "level": "h2"
+      }
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "The refresh-x skill was the last enabled-eligible XAI consumer still doing a direct `curl -H \"Authorization: Bearer $XAI_API_KEY\"` as its primary path — the same pattern PR #48 fixed for token-report two days ago. Rewrote step 1 to read from `.xai-cache/refresh-x.json` (which `scripts/prefetch-xai.sh` already produces) with the same four-path ladder fetch-tweets uses: A (cache) / A-error short-circuit / A-truncated marker / B (direct curl, local-mode only) / C (WebSearch).",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "text-why": {
+      "type": "Text",
+      "props": {
+        "text": "Latent-bug audit. Inside the GitHub Actions sandbox, env-var expansion in curl headers is blocked, so the original step-1 curl always fails and the \"If XAI_API_KEY is not set, skip and log that the skill requires it\" line gets written as a false-positive — exactly the noise that wrote \"XAI_API_KEY not set\" into token-report's daily log for five straight days (May 13–16) before PR #48 fixed it. refresh-x is currently `enabled: false`, so this is a pre-emptive fix rather than a live incident — if enabled today it would have started producing the same daily noise.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-changed": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "text-changed": {
+      "type": "Text",
+      "props": {
+        "text": "skills/refresh-x/SKILL.md: step 1 rewritten with the four-path ladder; step 3 log template extended with Source / Status fields so the four states (cache / truncated / prefetch-failed / no-prefetch) are distinguishable downstream; step 5 notification adapts to status; misleading \"If XAI_API_KEY is not set\" line removed; Sandbox note appended pointing at the prefetch script case + line numbers.",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "text-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Fourth explicit-marker / cache-read contract since May 10 (after PR #37 `.error`, PR #43 `.truncated`, PR #48 fetch-tweets-log fallback). All four eliminate misleading \"key not set\" / \"cache empty\" lines that conflate sandbox limitations with real config gaps. refresh-x is now ready to be enabled without immediately producing the same false-positive log noise.",
+        "variant": "body"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #51: refresh-x prefetch-cache rewrite",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/51",
+        "source": "GitHub"
+      }
+    }
+  }
+}
