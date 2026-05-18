@@ -1,0 +1,250 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-05-18"
+      },
+      "children": [
+        "intro",
+        "shipped-heading",
+        "shipped-list",
+        "separator1",
+        "stats-heading",
+        "stats-content",
+        "separator2",
+        "link"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "The switches flipped, the token went vertical, the launch apparatus stopped being hypothetical.",
+        "variant": "lead"
+      }
+    },
+    "shipped-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      }
+    },
+    "shipped-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped-aeon-agent",
+        "shipped-aeon",
+        "shipped-minitor"
+      ]
+    },
+    "shipped-aeon-agent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-agent-title",
+        "aeon-agent-details"
+      ]
+    },
+    "aeon-agent-title": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon-agent",
+        "variant": "outline"
+      }
+    },
+    "aeon-agent-details": {
+      "type": "Text",
+      "props": {
+        "text": "22-skill bulk catchup + 6 switches flipped + skill-enabler meta-fix (one workflow_dispatch replaces 12 days of hand-typing)",
+        "variant": "body"
+      }
+    },
+    "shipped-aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-title",
+        "aeon-details"
+      ]
+    },
+    "aeon-title": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon",
+        "variant": "outline"
+      }
+    },
+    "aeon-details": {
+      "type": "Text",
+      "props": {
+        "text": "fork-intel layer reached 5 skills (added fork-skill-gap, fork-first-run-alert) + product-hunt-launch drafter + weekly upstream-sync rail",
+        "variant": "body"
+      }
+    },
+    "shipped-minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor-title",
+        "minitor-details",
+        "minitor-metric"
+      ]
+    },
+    "minitor-title": {
+      "type": "Badge",
+      "props": {
+        "text": "minitor",
+        "variant": "outline"
+      }
+    },
+    "minitor-details": {
+      "type": "Text",
+      "props": {
+        "text": "5 new column types (github-actions/npm/pypi/crates.io/producthunt) + deck export/import + column-alert-keywords",
+        "variant": "body"
+      }
+    },
+    "minitor-metric": {
+      "type": "Stat",
+      "props": {
+        "label": "Columns",
+        "value": "44",
+        "delta": "+3",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "stats-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-grid",
+        "stats-notes"
+      ]
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-prs",
+        "stat-stars",
+        "stat-forks",
+        "stat-token",
+        "stat-fdv"
+      ]
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs Merged",
+        "value": "~34"
+      }
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon Stars",
+        "value": "366",
+        "delta": "+77",
+        "trend": "up"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon Forks",
+        "value": "74",
+        "delta": "+29",
+        "trend": "up"
+      }
+    },
+    "stat-token": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON Token (7d)",
+        "value": "+1,565%",
+        "trend": "up"
+      }
+    },
+    "stat-fdv": {
+      "type": "Stat",
+      "props": {
+        "label": "FDV",
+        "value": "$7.48M"
+      }
+    },
+    "stats-notes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "note-weekly-gain",
+        "note-ath"
+      ]
+    },
+    "note-weekly-gain": {
+      "type": "Badge",
+      "props": {
+        "text": "Biggest weekly gain in repo history",
+        "variant": "secondary"
+      }
+    },
+    "note-ath": {
+      "type": "Badge",
+      "props": {
+        "text": "Two ATH days back-to-back",
+        "variant": "secondary"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full update",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-18.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

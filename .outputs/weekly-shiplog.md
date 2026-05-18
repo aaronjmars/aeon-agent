@@ -1,11 +1,12 @@
-*Weekly Shiplog — 2026-05-11*
+*Weekly Shiplog — 2026-05-18*
 
-minitor built the AI/ML cluster it was missing (6 columns added, 33→39), aeon stacked the 300⭐ launch apparatus, and aeon-agent's backport queue finally moved on its three most-leveraged items.
+The switches flipped, the token went vertical, the launch apparatus stopped being hypothetical.
 
 Shipped:
-- minitor: lobsters, polymarket, stack-overflow, huggingface, arxiv, dev.to — AI/ML cluster now 3-wide
-- aeon: 7 new skills (star-momentum-alert, v4-readiness, skill-template-library, huggingface-trending, contributor-spotlight, ai-framework-watch, skill-freshness) — all enabled:false
-- aeon-agent: skill-update-check + fork-cohort + skill-freshness backports; 22-day PAT block closed; tomscaria's stalled #156 merged
+- aeon-agent: 22-skill bulk catchup + 6 switches flipped + skill-enabler meta-fix (one workflow_dispatch replaces 12 days of hand-typing)
+- aeon: fork-intel layer reached 5 skills (added fork-skill-gap, fork-first-run-alert) + product-hunt-launch drafter + weekly upstream-sync rail
+- minitor: 5 new column types (github-actions/npm/pypi/crates.io/producthunt) + deck export/import + column-alert-keywords. 41 → 44 columns
 
-Stats: 23 PRs across 3 repos, aeon 270→289⭐ (+19), $AEON +29% 7d / +208% 30d
-Full: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-11.md
+Stats: ~34 PRs merged. aeon 289⭐ → 366⭐ (+77, biggest weekly gain in repo history), 45 → 74 forks (+29). AEON token +1,565% 7d, two ATH days back-to-back, FDV $7.48M.
+
+Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-18.md
