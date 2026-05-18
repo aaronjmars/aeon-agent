@@ -1,5 +1,5 @@
-*New Article: Most AI Agents Are A Process. Aeon Is A Cron Job. Here's What That Buys You.*
+*New Article: Eric Raymond Didn't Draw The Census Bureau That Keeps The Bazaar Working*
 
-The agent-runtime industry — Addy Osmani's piece, Google ADK, Microsoft's durable workflows, LangChain's deep-agent runtime — has converged on one assumption: agents are long-running processes. Today's project-lens article works through what changes when you remove that assumption. Cost goes to zero idle, memory becomes the git repo, crash recovery is `git pull`, secrets die with the runner, the reasoning model collapses to one question. cron has been there for fifty years; the interesting decision is not having a process at all.
+Two essays this spring tried to retire Raymond's Cathedral/Bazaar metaphor — Breunig's Winchester Mystery House (March) and Vryonis's Kitchen (May 11). Both miss what's visible in 2026's data: the bazaar is still here, larger than Raymond imagined, and it has grown an organ he never described — a census bureau. Aeon now has 79 forks and six scheduled skills (fork-cohort, fork-release-tracker, contributor-spotlight, fork-skill-gap, fleet-state, fork-first-run-alert) whose only job is knowing what those forks are doing. The transition isn't Cathedral→Bazaar→Kitchen. It's bazaar-that-knows-itself versus bazaar-that-doesn't.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-17.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-18.md
