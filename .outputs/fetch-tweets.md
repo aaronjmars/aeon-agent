@@ -1,21 +1,17 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-17)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-18)*
 
-1. x.com/100xDarren — Both $Aeon and $Miroshark are looking strong today. Gaps ahead.
-Likes: 56 | RTs: 2 | Replies: 11
-[View tweet](https://x.com/100xDarren/status/2055797257652654291)
+1. x.com/0xalwaysonchain — $AEON as settlement layer for the agentic economy; BankrSynth (first self-launched agent on @aeonframework) built on top; draws comparison to $VIRTUAL/$AIXBT; $GITLAWB angle: AI agents claiming bounties + getting paid onchain via smart contract
+Likes: 74 | RTs: 17
+[View tweet](https://x.com/0xalwaysonchain/status/2056161958663962755)
 
-2. x.com/ika_xbt — Describes $aeon as "your own schizophrenic AI sweatshop" — spawns infinite clones, learns your brain, grinds 24/7 until the mission is done. Autonomous operator that never sleeps.
-Likes: 38 | RTs: 7 | Replies: 4
-[View tweet](https://x.com/ika_xbt/status/2055797373700325762)
+2. x.com/aaronjmars — Message to new Solana users on Base: "just ask chatgpt / claude / grok to explain miroshark & aeon repo to you" — links to both repos directly
+Likes: 48 | RTs: 7
+[View tweet](https://x.com/aaronjmars/status/2056159484808921203)
 
-3. x.com/aaronjmars — "look what they need to mimic a fraction of our power" (tagging aeonframework)
-Likes: 25 | RTs: 5 | Replies: 0
-[View tweet](https://x.com/aaronjmars/status/2055800443272413257)
+3. x.com/0xdopesick — "Thanks for playing $aeon"
+Likes: 6 | RTs: 0
+[View tweet](https://x.com/0xdopesick/status/2056158411989918128)
 
-4. x.com/m000_crypto — Japanese thread comparing $AEON and $MIROSHARK via Grok deep-dive. Detailed summary for a Japanese-speaking audience.
-Likes: 16 | RTs: 1 | Replies: 8
-[View tweet](https://x.com/m000_crypto/status/2055798055832822151)
-
-5. x.com/0xalwaysonchain — "Next one is the first self launched agent on @aeonframework $SYNTH"
-Likes: 2 | RTs: 0 | Replies: 0
-[View tweet](https://x.com/0xalwaysonchain/status/2055797595188990164)
+4. x.com/ittyBittySha — "Wild to watch $AEON cook 🧑‍🍳"
+Likes: 0 | RTs: 0
+[View tweet](https://x.com/ittyBittySha/status/2056157179569168542)
