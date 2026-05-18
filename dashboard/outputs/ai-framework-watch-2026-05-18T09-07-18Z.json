@@ -1,0 +1,302 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AI Framework Watch"
+      },
+      "children": [
+        "release-week-section",
+        "separator-1",
+        "top-releases-section",
+        "separator-2",
+        "worth-watching-section",
+        "separator-3",
+        "anchor-section",
+        "separator-4",
+        "digest-link"
+      ]
+    },
+    "release-week-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-frameworks",
+        "overview-text"
+      ]
+    },
+    "stat-frameworks": {
+      "type": "Stat",
+      "props": {
+        "label": "Frameworks shipped this week",
+        "value": "6"
+      }
+    },
+    "overview-text": {
+      "type": "Text",
+      "props": {
+        "text": "Tracked 9/9 frameworks · 16 releases (7d) · 0 breaking flags · COLD START baseline",
+        "variant": "muted"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "top-releases-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "releases-heading",
+        "releases-stack"
+      ]
+    },
+    "releases-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Top releases this week",
+        "level": "h3"
+      }
+    },
+    "releases-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "release-1-group",
+        "release-2-group",
+        "release-3-group",
+        "release-4-group"
+      ]
+    },
+    "release-1-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "release-1-link",
+        "release-1-desc"
+      ]
+    },
+    "release-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "langchain-ai/langgraph 1.2.0",
+        "href": "https://github.com/langchain-ai/langgraph",
+        "source": "GitHub"
+      }
+    },
+    "release-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "stable from alpha; durable error-handler resume across host crashes, set_node_defaults() for StateGraph. 5-package coordinated batch (May 12).",
+        "variant": "caption"
+      }
+    },
+    "release-2-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "release-2-link",
+        "release-2-desc"
+      ]
+    },
+    "release-2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pydantic/pydantic-ai v1.97.0",
+        "href": "https://github.com/pydantic/pydantic-ai",
+        "source": "GitHub"
+      }
+    },
+    "release-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "MCPToolset replaces MCPServer*; Google provider split (GoogleProvider + GoogleCloudProvider); deprecated names still work but migration signaled. 5 releases in 7 days.",
+        "variant": "caption"
+      }
+    },
+    "release-3-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "release-3-link",
+        "release-3-desc"
+      ]
+    },
+    "release-3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mastra-ai/mastra 1.34.0",
+        "href": "https://github.com/mastra-ai/mastra",
+        "source": "GitHub"
+      }
+    },
+    "release-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "ACP coding agents as tools/subagents (@mastra/acp@0.1.0); xAI realtime voice provider; agent metadata. Push-capable PubSub workflow events in 1.33.0.",
+        "variant": "caption"
+      }
+    },
+    "release-4-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "release-4-link",
+        "release-4-desc"
+      ]
+    },
+    "release-4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "huggingface/smolagents v1.25.0",
+        "href": "https://github.com/huggingface/smolagents",
+        "source": "GitHub"
+      }
+    },
+    "release-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "security patch on remote executors (high-impact vuln); deserialization refactor (importlib → registry).",
+        "variant": "caption"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "worth-watching-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "watching-heading",
+        "watching-stack"
+      ]
+    },
+    "watching-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Worth watching",
+        "level": "h3"
+      }
+    },
+    "watching-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watching-1",
+        "watching-2"
+      ]
+    },
+    "watching-1": {
+      "type": "Alert",
+      "props": {
+        "title": "autogen (58k★)",
+        "message": "has no tagged release since Sep 2025 — still active on main branch but no release signal from GitHub.",
+        "type": "info"
+      }
+    },
+    "watching-2": {
+      "type": "Alert",
+      "props": {
+        "title": "smolagents security fix",
+        "message": "Mandatory upgrade if running remote executors.",
+        "type": "warning"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "anchor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "anchor-heading",
+        "anchor-grid"
+      ]
+    },
+    "anchor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Anchor (aeon)",
+        "level": "h3"
+      }
+    },
+    "anchor-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "anchor-stat-1",
+        "anchor-stat-2",
+        "anchor-meta"
+      ]
+    },
+    "anchor-stat-1": {
+      "type": "Stat",
+      "props": {
+        "label": "Baseline",
+        "value": "★ 366 (baseline set)"
+      }
+    },
+    "anchor-stat-2": {
+      "type": "Stat",
+      "props": {
+        "label": "Releases",
+        "value": "0 (7d)"
+      }
+    },
+    "anchor-meta": {
+      "type": "Text",
+      "props": {
+        "text": "9/9 by cohort size · last push 2026-05-17",
+        "variant": "caption"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "digest-link": {
+      "type": "Link",
+      "props": {
+        "label": "Full digest: articles/ai-framework-watch-2026-05-18.md",
+        "href": "articles/ai-framework-watch-2026-05-18.md"
+      }
+    }
+  }
+}
