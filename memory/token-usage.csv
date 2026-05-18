@@ -340,3 +340,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-18,operator-scorecard,claude-sonnet-4-6,9,17213,502335,125242
 2026-05-18,feature,claude-opus-4-7,18,14585,1281429,18453
 2026-05-18,self-improve,claude-opus-4-7,272,25197,5525209,186012
+2026-05-18,repo-actions,claude-sonnet-4-6,1378,17638,1276942,59961

@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-05-16*
-Pipeline starved after May-14 batch fully consumed. Fresh ideas seeded from analysis of aeon (344⭐, 56 forks), aeon-agent (86 skills), and minitor (43 columns).
+*Repo Action Ideas — 2026-05-18*
+Generated from analysis of aeon (370⭐, 78 forks), aeon-agent, and minitor. Fresh pipeline — May-16 ideas fully consumed.
 
-1. Product Hunt column (minitor, Integration, Small)
-   Keyless PH RSS column — watch your own launch day rank + competitor launches in real time inside the dashboard. 44th column type.
+1. Backport fork-skill-gap to aeon-agent (Feature, Small)
+   Verbatim backport of aeon PR #176 — per-fork upstream-skill-adoption gap report; continues daily same-day-after cadence.
 
-2. GitHub Discussions column (minitor, Feature, Medium)
-   Completes the GitHub cluster (9 of 10 surfaces covered — discussions is the last gap). GraphQL-based, GITHUB_TOKEN auth, modes: recent/unanswered/top.
+2. Fix scan.sh empty-array crash on macOS Bash 3.2 (Bug, Small)
+   Issue #182: add ${#warnings[@]} length guard so clean scans don't false-block skill installs; unblocks macOS add-skill for 78+ fork operators.
 
-3. Skill Health Triad backport (aeon-agent, DX, Medium)
-   Backports skill-health + skill-evals + skill-repair from upstream aeon. Gives the running agent autonomous self-healing: detect issues → classify → repair overnight. 86 → 89 skills.
+3. Extend gateway.provider for custom API base URLs (Feature, Medium)
+   Issue #181: add optional baseUrl + authHeader fields to gateway.provider — unlocks MiniMax (APAC), Together.ai, and other Anthropic-compatible providers blocked by local model-name validation.
 
-4. Fork First-Run Alert (aeon, Community, Small)
-   Daily check: when fork-cohort state shows a new ACTIVE fork not yet celebrated, sends a named alert the moment someone's first skill run completes. Closes the gap between weekly cohort cadence and the actual activation event.
+4. CoinGecko trending + price column for minitor (Integration, Small)
+   46th column type; keyless /search/trending + /coins/markets; crypto-native operator base has no price signal today — fills the obvious gap.
 
-5. Competitor Launch Radar (aeon, Intelligence, Small)
-   Weekly Monday skill scanning PH RSS + HN Show HN for autonomous agent / MCP / agentic keyword matches. Fills the blind spot between known frameworks (ai-framework-watch) and new challengers launching this week.
+5. IndieHackers RSS column for minitor (Integration, Small)
+   47th column type; keyless RSS feed; completes the startup-launch trifecta (ProductHunt + HN + IH) for operators monitoring product launches.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-16.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-18.md
