@@ -112,14 +112,14 @@
     "success_rate": 1
   },
   "tweet-allocator": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-17T08:05:33Z",
     "total_runs": 41,
     "total_successes": 41,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-17T08:01:38Z"
+    "last_dispatch": "2026-05-18T09:01:04Z"
   },
   "hyperstitions-ideas": {
     "last_dispatch": "2026-05-16T10:02:46Z",
@@ -132,14 +132,14 @@
     "success_rate": 1
   },
   "weekly-shiplog": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-05-11T10:07:38Z",
     "total_runs": 5,
     "total_successes": 5,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1,
-    "last_dispatch": "2026-05-11T10:02:34Z"
+    "last_dispatch": "2026-05-18T09:01:04Z"
   },
   "skill-leaderboard": {
     "last_dispatch": "2026-05-17T17:27:32Z",
@@ -180,5 +180,9 @@
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
+  },
+  "ai-framework-watch": {
+    "last_dispatch": "2026-05-18T09:01:04Z",
+    "last_status": "dispatched"
   }
 }
