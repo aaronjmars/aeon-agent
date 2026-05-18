@@ -1,10 +1,10 @@
-*$AEON Daily — 2026-05-17*
+*$AEON Daily — 2026-05-18*
 
-Price: $0.00005275 (+93.5% 24h) 🆕 NEW ATH $0.0000543
-Liquidity: $1.76M | 24h Vol: $1.09M (+77.2%)
-Buys/Sells: 962 / 644 (1.49:1 buy-dominant)
-7d: +1,536% | 30d: +2,456%
+Price: $0.00007475 (+41.7% 24h)
+Liquidity: $2.35M | 24h Vol: $3.29M (+202% 24h)
+Buys/Sells: 2,663/1,820
+7d: +1,565% price | 30d: +2,670% price
 
-New all-time high of $0.0000543 set today, breaking May 12 ATH by +63.8%, on $1.09M volume and expanding liquidity to $1.76M — the highest recorded in the tracking window.
+New session ATH at $0.0000984 — nearly double yesterday's ATH. FDV crossed $7.48M. Volume tripled vs yesterday.
 
-Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
+Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd445

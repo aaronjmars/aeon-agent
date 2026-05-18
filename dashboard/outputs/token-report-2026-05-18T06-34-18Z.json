@@ -1,0 +1,207 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Daily — 2026-05-18"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "sep-1",
+        "heading-liquidity",
+        "grid-liquidity",
+        "sep-2",
+        "heading-activity",
+        "grid-activity",
+        "sep-3",
+        "heading-performance",
+        "grid-performance",
+        "sep-4",
+        "text-note",
+        "sep-5",
+        "link-chart"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00007475",
+        "delta": "+41.7%",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-liquidity": {
+      "type": "Heading",
+      "props": {
+        "text": "Liquidity & Volume",
+        "level": "h3"
+      }
+    },
+    "grid-liquidity": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-liquidity",
+        "stat-volume"
+      ]
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$2.35M"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$3.29M",
+        "delta": "+202%",
+        "trend": "up"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-activity": {
+      "type": "Heading",
+      "props": {
+        "text": "Trading Activity",
+        "level": "h3"
+      }
+    },
+    "grid-activity": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-buys",
+        "stat-sells"
+      ]
+    },
+    "stat-buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "2,663"
+      }
+    },
+    "stat-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "1,820"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-performance": {
+      "type": "Heading",
+      "props": {
+        "text": "Performance & Milestones",
+        "level": "h3"
+      }
+    },
+    "grid-performance": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-7d",
+        "stat-30d",
+        "stat-ath",
+        "stat-fdv"
+      ]
+    },
+    "stat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Price",
+        "value": "+1,565%",
+        "trend": "up"
+      }
+    },
+    "stat-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Price",
+        "value": "+2,670%",
+        "trend": "up"
+      }
+    },
+    "stat-ath": {
+      "type": "Stat",
+      "props": {
+        "label": "Session ATH",
+        "value": "$0.0000984"
+      }
+    },
+    "stat-fdv": {
+      "type": "Stat",
+      "props": {
+        "label": "FDV",
+        "value": "$7.48M"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-note": {
+      "type": "Text",
+      "props": {
+        "text": "New session ATH at $0.0000984 — nearly double yesterday's ATH. FDV crossed $7.48M. Volume tripled vs yesterday.",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd445"
+      }
+    }
+  }
+}
