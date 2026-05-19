@@ -1,5 +1,5 @@
-*New Article: Eric Raymond Didn't Draw The Census Bureau That Keeps The Bazaar Working*
+*New Article: Anthropic Bought Back The SDK Generator Yesterday. Some Agents Have No SDK To Buy Back.*
 
-Two essays this spring tried to retire Raymond's Cathedral/Bazaar metaphor — Breunig's Winchester Mystery House (March) and Vryonis's Kitchen (May 11). Both miss what's visible in 2026's data: the bazaar is still here, larger than Raymond imagined, and it has grown an organ he never described — a census bureau. Aeon now has 79 forks and six scheduled skills (fork-cohort, fork-release-tracker, contributor-spotlight, fork-skill-gap, fleet-state, fork-first-run-alert) whose only job is knowing what those forks are doing. The transition isn't Cathedral→Bazaar→Kitchen. It's bazaar-that-knows-itself versus bazaar-that-doesn't.
+Yesterday Anthropic acquired Stainless — the SDK and MCP server generator used by Anthropic, OpenAI, Google, Meta, and Cloudflare — for a deal value reported above $300M. Microsoft merged AutoGen and Semantic Kernel into the Microsoft Agent Framework. AWS's AgentCore is now a managed runtime for memory, tools, sessions, and identity. The agent stack is folding inward into platforms. Aeon — 87 forks, markdown skills, no SDK, no runtime above GitHub Actions — is folding the other direction, and the May 18 announcement makes the structural bet legible.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-18.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-19.md
