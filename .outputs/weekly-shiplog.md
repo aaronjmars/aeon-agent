@@ -1,12 +1,13 @@
-*Weekly Shiplog — 2026-05-18*
+*Weekly Shiplog — 2026-05-19*
 
-The switches flipped, the token went vertical, the launch apparatus stopped being hypothetical.
+The surveillance stack closed; the outside started pointing cameras back. Fork-intelligence layer at 5 skills with full parity; XAI sandbox-marker contract sealed across 4 PRs; two external orgs filed their own watchers against aeon within 26h of the 8th watcher merging.
 
 Shipped:
-- aeon-agent: 22-skill bulk catchup + 6 switches flipped + skill-enabler meta-fix (one workflow_dispatch replaces 12 days of hand-typing)
-- aeon: fork-intel layer reached 5 skills (added fork-skill-gap, fork-first-run-alert) + product-hunt-launch drafter + weekly upstream-sync rail
-- minitor: 5 new column types (github-actions/npm/pypi/crates.io/producthunt) + deck export/import + column-alert-keywords. 41 → 44 columns
+- Fork-intelligence layer reached 5 skills on both sides of upstream (fork-skill-gap + fork-first-run-alert + backports)
+- XAI direct-curl pattern fully retired across 4 consumers (token-report, refresh-x, narrative-tracker, remix-tweets, tweet-roundup)
+- Two launches got asset-pack coverage + a column to watch them with (product-hunt-launch aeon+agent, minitor PH column)
+- Minitor crossed 44 column types with deck export/import + alert-keywords retrofit across all 43 plugins
+- New surveillance angle: competitor-launch-radar (8th read-only ecosystem watcher)
 
-Stats: ~34 PRs merged. aeon 289⭐ → 366⭐ (+77, biggest weekly gain in repo history), 45 → 74 forks (+29). AEON token +1,565% 7d, two ATH days back-to-back, FDV $7.48M.
-
-Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-18.md
+Stats: ~31 substantive PRs, +87 stars, +461% 7d token move, genuine ATH $0.000142
+Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-19.md
