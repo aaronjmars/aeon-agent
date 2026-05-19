@@ -752,6 +752,16 @@
       "install": "./add-skill aaronjmars/aeon fork-skill-digest"
     },
     {
+      "slug": "fork-skill-gap",
+      "name": "fork-skill-gap",
+      "description": "Weekly cross-fork skill adoption digest — per-fork table of upstream skills the fork hasn't enabled, top forks by gap size called out, silent on small-gap weeks",
+      "category": "productivity",
+      "schedule": "0 21 * * 0",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon fork-skill-gap"
+    },
+    {
       "slug": "huggingface-trending",
       "name": "Hugging Face Trending",
       "description": "Curated trending Hugging Face models, datasets, and spaces — filtered, clustered, and labeled with a \"why notable\" line per pick",
