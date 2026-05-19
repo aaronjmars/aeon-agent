@@ -1,14 +1,20 @@
 ## Summary
 
-Ran `star-milestone` skill against all watched repos.
+Executed `skills/star-milestone/SKILL.md` against `memory/watched-repos.md`.
 
-- **aaronjmars/aeon**: 372 stars. Highest threshold ≤372 is 300, already recorded as `(bootstrap)` on 2026-05-14 → no action. Next threshold (400) is 28 stars away.
-- **aaronjmars/minitor**: 9 stars, below the first threshold (25) → `STAR_MILESTONE_QUIET`.
-- **aaronjmars/aeon-agent**: skipped per skill rules (name contains `aeon-agent`).
+**Repos audited**: 2 (aeon-agent filtered out by name rule)
 
-No notification sent, no changes to `memory/topics/milestones.md`. Log entry appended to `memory/logs/2026-05-18.md`.
+| Repo | Stars | Highest threshold | Outcome |
+|------|-------|---|---|
+| aaronjmars/aeon | 395 | 300 (already recorded as bootstrap 2026-05-14) | no action — gate 5a |
+| aaronjmars/minitor | 9 | none (<25) | STAR_MILESTONE_QUIET |
 
-Files modified:
-- `memory/logs/2026-05-18.md`
+**Notifications sent**: 0. Next eligible crossing is aeon → 400⭐, projected around 2026-05-22 per star-momentum.
 
-Follow-up: none. Skill will fire again on next dispatch; aeon's next interesting cross is 400.
+**Files modified**:
+- `memory/logs/2026-05-19.md` — appended `## Star Milestone` section
+
+**Files not modified**:
+- `memory/topics/milestones.md` — no new milestones to record (300 is already recorded; aeon hasn't crossed 400 yet; minitor is pre-bootstrap)
+
+**Follow-up**: rerun this skill once aeon's count clears 400 — the bootstrap rule (5b) won't fire again since the repo already has a recorded entry, so the next crossing will produce a real announcement with shape/velocity/highlights.
