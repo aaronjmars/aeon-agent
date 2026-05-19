@@ -1,11 +1,11 @@
-*Repo Pulse — 2026-05-18*
+*Repo Pulse — 2026-05-19*
 [aaronjmars/aeon]
 
-Stars: 370 total (+19 new)
-Forks: 76 total (+14 new)
+Stars: 387 total (+18 new)
+Forks: 87 total (+12 new)
 
 New stargazers:
-github.com/avalidurl | github.com/shineyu1 | github.com/youpsla | github.com/teledamage | github.com/nknganda | github.com/mesutgulecen | github.com/JohnMntl | github.com/vskrus | github.com/oxkaiba | github.com/Sword-zgz | github.com/hhfcvmars | github.com/raonigabriel | github.com/BXSWSSMBDX | github.com/Ahmadalhabeb | github.com/lairulan | github.com/nosalt99 | github.com/littlepxyek-crypto | github.com/larry1994 | github.com/sambubu11
+github.com/johnnybittencourt | github.com/bluesinsoul | github.com/tojibaceo | github.com/thisiszinger | github.com/masterputra169 | github.com/mfrager | github.com/dakouan18 | github.com/kfa-ai | github.com/ericivxx | github.com/wujon37cc | github.com/zuozuolovegit | github.com/hutch111 | github.com/ValerianzZ | github.com/musicmfer | github.com/Anthonypham92 | github.com/DABAGElover | github.com/Chipagosfinest | github.com/Damoncrypto
 
 New forks:
-github.com/anomit/aeon | github.com/DL991203/aeon | github.com/sinan33644061-lab/aeon | github.com/wuyu663/aeon | github.com/DevZenPro/aeon | github.com/AntFleet/aeon-bench | github.com/foreverxdord/aeon | github.com/fenghaitao/aeon | github.com/oxkaiba/aeon | github.com/baseddevoloper/vvvkernel-skills | github.com/Azh1er/aeon | github.com/takanafur/aeon | github.com/KevinFreistroffer/aeon | github.com/0xMortimer/aeon
+github.com/forge-executive/forge-executive | github.com/DABAGElover/aeon | github.com/levi-oss-code/aeon | github.com/damo-nu11/aeon-minebean | github.com/We3In/vvvkerrnel | github.com/We3In/vvvkernel-skills-up | github.com/We3In/aeon | github.com/abhirajprasad/aeon | github.com/coinhome190-spec/aeon | github.com/VibeSan7/aeon | github.com/youpsla/aeon | github.com/anomit/aeon

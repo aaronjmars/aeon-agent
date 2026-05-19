@@ -1,0 +1,376 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "aaronjmars/aeon — 2026-05-19"
+      },
+      "children": [
+        "repo-link",
+        "stats-section",
+        "separator-1",
+        "stargazers-section",
+        "separator-2",
+        "forks-section"
+      ]
+    },
+    "repo-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon",
+        "source": "GitHub"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "387",
+        "delta": "+18",
+        "trend": "up"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "87",
+        "delta": "+12",
+        "trend": "up"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazers-heading",
+        "stargazers-list"
+      ]
+    },
+    "stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers (+18)",
+        "level": "h3"
+      }
+    },
+    "stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazer-1",
+        "stargazer-2",
+        "stargazer-3",
+        "stargazer-4",
+        "stargazer-5",
+        "stargazer-6",
+        "stargazer-7",
+        "stargazer-8",
+        "stargazer-9",
+        "stargazer-10",
+        "stargazer-11",
+        "stargazer-12",
+        "stargazer-13",
+        "stargazer-14",
+        "stargazer-15",
+        "stargazer-16",
+        "stargazer-17",
+        "stargazer-18"
+      ]
+    },
+    "stargazer-1": {
+      "type": "Link",
+      "props": {
+        "label": "johnnybittencourt",
+        "href": "https://github.com/johnnybittencourt"
+      }
+    },
+    "stargazer-2": {
+      "type": "Link",
+      "props": {
+        "label": "bluesinsoul",
+        "href": "https://github.com/bluesinsoul"
+      }
+    },
+    "stargazer-3": {
+      "type": "Link",
+      "props": {
+        "label": "tojibaceo",
+        "href": "https://github.com/tojibaceo"
+      }
+    },
+    "stargazer-4": {
+      "type": "Link",
+      "props": {
+        "label": "thisiszinger",
+        "href": "https://github.com/thisiszinger"
+      }
+    },
+    "stargazer-5": {
+      "type": "Link",
+      "props": {
+        "label": "masterputra169",
+        "href": "https://github.com/masterputra169"
+      }
+    },
+    "stargazer-6": {
+      "type": "Link",
+      "props": {
+        "label": "mfrager",
+        "href": "https://github.com/mfrager"
+      }
+    },
+    "stargazer-7": {
+      "type": "Link",
+      "props": {
+        "label": "dakouan18",
+        "href": "https://github.com/dakouan18"
+      }
+    },
+    "stargazer-8": {
+      "type": "Link",
+      "props": {
+        "label": "kfa-ai",
+        "href": "https://github.com/kfa-ai"
+      }
+    },
+    "stargazer-9": {
+      "type": "Link",
+      "props": {
+        "label": "ericivxx",
+        "href": "https://github.com/ericivxx"
+      }
+    },
+    "stargazer-10": {
+      "type": "Link",
+      "props": {
+        "label": "wujon37cc",
+        "href": "https://github.com/wujon37cc"
+      }
+    },
+    "stargazer-11": {
+      "type": "Link",
+      "props": {
+        "label": "zuozuolovegit",
+        "href": "https://github.com/zuozuolovegit"
+      }
+    },
+    "stargazer-12": {
+      "type": "Link",
+      "props": {
+        "label": "hutch111",
+        "href": "https://github.com/hutch111"
+      }
+    },
+    "stargazer-13": {
+      "type": "Link",
+      "props": {
+        "label": "ValerianzZ",
+        "href": "https://github.com/ValerianzZ"
+      }
+    },
+    "stargazer-14": {
+      "type": "Link",
+      "props": {
+        "label": "musicmfer",
+        "href": "https://github.com/musicmfer"
+      }
+    },
+    "stargazer-15": {
+      "type": "Link",
+      "props": {
+        "label": "Anthonypham92",
+        "href": "https://github.com/Anthonypham92"
+      }
+    },
+    "stargazer-16": {
+      "type": "Link",
+      "props": {
+        "label": "DABAGElover",
+        "href": "https://github.com/DABAGElover"
+      }
+    },
+    "stargazer-17": {
+      "type": "Link",
+      "props": {
+        "label": "Chipagosfinest",
+        "href": "https://github.com/Chipagosfinest"
+      }
+    },
+    "stargazer-18": {
+      "type": "Link",
+      "props": {
+        "label": "Damoncrypto",
+        "href": "https://github.com/Damoncrypto"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forks-heading",
+        "forks-list"
+      ]
+    },
+    "forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks (+12)",
+        "level": "h3"
+      }
+    },
+    "forks-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-1",
+        "fork-2",
+        "fork-3",
+        "fork-4",
+        "fork-5",
+        "fork-6",
+        "fork-7",
+        "fork-8",
+        "fork-9",
+        "fork-10",
+        "fork-11",
+        "fork-12"
+      ]
+    },
+    "fork-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "forge-executive/forge-executive",
+        "href": "https://github.com/forge-executive/forge-executive",
+        "source": "GitHub"
+      }
+    },
+    "fork-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DABAGElover/aeon",
+        "href": "https://github.com/DABAGElover/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "levi-oss-code/aeon",
+        "href": "https://github.com/levi-oss-code/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "damo-nu11/aeon-minebean",
+        "href": "https://github.com/damo-nu11/aeon-minebean",
+        "source": "GitHub"
+      }
+    },
+    "fork-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "We3In/vvvkerrnel",
+        "href": "https://github.com/We3In/vvvkerrnel",
+        "source": "GitHub"
+      }
+    },
+    "fork-6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "We3In/vvvkernel-skills-up",
+        "href": "https://github.com/We3In/vvvkernel-skills-up",
+        "source": "GitHub"
+      }
+    },
+    "fork-7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "We3In/aeon",
+        "href": "https://github.com/We3In/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork-8": {
+      "type": "StoryLink",
+      "props": {
+        "title": "abhirajprasad/aeon",
+        "href": "https://github.com/abhirajprasad/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork-9": {
+      "type": "StoryLink",
+      "props": {
+        "title": "coinhome190-spec/aeon",
+        "href": "https://github.com/coinhome190-spec/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork-10": {
+      "type": "StoryLink",
+      "props": {
+        "title": "VibeSan7/aeon",
+        "href": "https://github.com/VibeSan7/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork-11": {
+      "type": "StoryLink",
+      "props": {
+        "title": "youpsla/aeon",
+        "href": "https://github.com/youpsla/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork-12": {
+      "type": "StoryLink",
+      "props": {
+        "title": "anomit/aeon",
+        "href": "https://github.com/anomit/aeon",
+        "source": "GitHub"
+      }
+    }
+  }
+}
