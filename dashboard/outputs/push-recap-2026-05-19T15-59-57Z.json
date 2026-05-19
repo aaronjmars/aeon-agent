@@ -1,0 +1,237 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-19"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "backports_section",
+        "sep2",
+        "xai_section",
+        "sep3",
+        "surveillance_section",
+        "sep4",
+        "scan_section",
+        "sep5",
+        "key_changes_section",
+        "stats_section",
+        "sep6",
+        "full_recap"
+      ]
+    },
+    "intro": {
+      "type": "Text",
+      "props": {
+        "text": "5 substantive merges (2 aeon, 3 aeon-agent, 0 minitor) — fork-intelligence parity + cron-path hygiene week."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "backports_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "backports_heading",
+        "backports_text"
+      ]
+    },
+    "backports_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Same-day-after backports continue (8th + 9th in row)",
+        "level": "h3"
+      }
+    },
+    "backports_text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent absorbed fork-skill-gap (#52, upstream PR #176) and fork-first-run-alert (#50, upstream PR #179) — fork-intelligence layer now at full parity with upstream (5 skills: alive? shipped? who pushed? what's missing? when activated?)."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "xai_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "xai_heading",
+        "xai_text1",
+        "xai_text2"
+      ]
+    },
+    "xai_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "XAI direct-curl primary path retired",
+        "level": "h3"
+      }
+    },
+    "xai_text1": {
+      "type": "Text",
+      "props": {
+        "text": "refresh-x (#51) rewired off curl -H \"Authorization: Bearer $XAI_API_KEY\" — last enabled-eligible XAI consumer migrated to the prefetch-cache contract."
+      }
+    },
+    "xai_text2": {
+      "type": "Text",
+      "props": {
+        "text": "4th explicit-marker fix after PR #37 (.error), PR #43 (.truncated), PR #48 (fetch-tweets-log fallback in token-report)."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "surveillance_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "surveillance_heading",
+        "surveillance_text1",
+        "surveillance_text2"
+      ]
+    },
+    "surveillance_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New surveillance angle",
+        "level": "h3"
+      }
+    },
+    "surveillance_text1": {
+      "type": "Text",
+      "props": {
+        "text": "competitor-launch-radar (aeon PR #183) — 8th read-only ecosystem watcher in aeon, first one pointed at NEW entrants outside the 9-framework cohort."
+      }
+    },
+    "surveillance_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly Mon 10:00 UTC, keyless PH RSS + HN Algolia, 9 framework keywords, count-driven notify."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "scan_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "scan_heading",
+        "scan_text"
+      ]
+    },
+    "scan_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "scan.sh empty-array crash squashed",
+        "level": "h3"
+      }
+    },
+    "scan_text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #186 wraps highs/mediums/lows print loops in length guards (closes #182). Fixes the [PASS] → ✗ BLOCKED false-positive that hit every macOS operator running ./add-skill on Bash 3.2."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "changes_heading",
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "changes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent skills.json 86 → 88 (two new fork-intelligence skills)"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon skills.json 119 → 120 (competitor-launch-radar)"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "skills/skill-security-scan/scan.sh +17/-9 — three length guards mirror existing JSON-path pattern"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_text"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stats_text": {
+      "type": "Text",
+      "props": {
+        "text": "10 files changed, +1,114/-15 lines across 5 PR merges"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-19.md"
+      }
+    }
+  }
+}
