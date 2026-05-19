@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 87,
+  "total": 88,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -740,6 +740,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon fork-skill-digest"
+    },
+    {
+      "slug": "fork-skill-gap",
+      "name": "fork-skill-gap",
+      "description": "Weekly cross-fork skill adoption digest — per-fork table of upstream skills the fork hasn't enabled, top forks by gap size called out, silent on small-gap weeks",
+      "category": "productivity",
+      "schedule": "0 21 * * 0",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon fork-skill-gap"
     },
     {
       "slug": "huggingface-trending",
