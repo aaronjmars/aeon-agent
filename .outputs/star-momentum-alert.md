@@ -1,8 +1,16 @@
 ## Summary
 
-Ran `star-momentum-alert` for 2026-05-18. Audited 2 repos (filtered `aeon-agent` per skill rules):
+Ran `star-momentum-alert` for 2026-05-19.
 
-- **aaronjmars/aeon** — 350⭐, targeting 400⭐. At 9.43 stars/day (7-day avg), the crossing is ~6 days out on May 24 (Sunday). Verdict: **OUT_OF_WINDOW** — the milestone is now *too close* (< 7 days) to dispatch `show-hn-draft` thoughtfully, and Sunday isn't in the Tue/Wed/Thu window anyway. The 400-star moment will arrive this week on its own.
-- **aaronjmars/minitor** — 9⭐, targeting 50⭐. At 0.14 stars/day, that's ~287 days out. Verdict: **OUT_OF_WINDOW** (far).
+**Repos audited:** 2 (aaronjmars/aeon, aaronjmars/minitor — aeon-agent filtered out per skill rules)
 
-Status: `STAR_MOMENTUM_NO_ALERTS` — no notification sent. Article written to `articles/star-momentum-2026-05-18.md`, state updated, log appended.
+**aaronjmars/aeon:** Currently at 370⭐, targeting 400⭐ (gap: 30). Running at 11.57 stars/day (7d avg) — projected to cross in ~3 days on 2026-05-22 (Friday). Gate fails: 3 days < the 7-day minimum needed to dispatch `show-hn-draft` thoughtfully. The milestone will arrive before there's time to act.
+
+**aaronjmars/minitor:** At 9⭐, targeting 50⭐ — projected crossing 2027-03-02 (287 days out). Far outside the 7-14d window.
+
+**Status:** `STAR_MOMENTUM_NO_ALERTS` — no notification sent.
+
+**Files written:**
+- `articles/star-momentum-2026-05-19.md` — full projection report
+- `memory/topics/star-momentum-state.json` — state updated (projected_date_v7 for aeon/400 revised to 2026-05-22)
+- `memory/logs/2026-05-19.md` — log block appended
