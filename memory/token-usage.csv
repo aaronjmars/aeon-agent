@@ -346,3 +346,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-18,thread-formatter,claude-sonnet-4-6,11,21795,569136,70216
 2026-05-18,heartbeat,claude-sonnet-4-6,13,11858,595360,53969
 2026-05-19,token-report,claude-sonnet-4-6,11,17580,560476,75499
+2026-05-19,fetch-tweets,claude-sonnet-4-6,13,7452,477180,36619

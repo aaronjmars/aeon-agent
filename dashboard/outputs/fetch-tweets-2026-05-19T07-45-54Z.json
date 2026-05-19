@@ -1,0 +1,248 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-19)"
+      },
+      "children": [
+        "stack-tweets"
+      ]
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "tweet-4",
+        "tweet-5",
+        "tweet-6",
+        "tweet-7",
+        "tweet-8"
+      ]
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-1",
+        "link-1"
+      ]
+    },
+    "tweetcard-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "0xprimeEth",
+        "text": "If you bought $EVE $AEON $GITLAWB, don't forget $HLINK too. It's base szn.",
+        "likes": 3,
+        "retweets": 0
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/0xprimeEth/status/2056519389265236108"
+      }
+    },
+    "tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-2",
+        "link-2"
+      ]
+    },
+    "tweetcard-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "zhiliangzhi5258",
+        "text": "作为一个 $aeon $mirishart holder 太开心啦",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/zhiliangzhi5258/status/2056521843000172743"
+      }
+    },
+    "tweet-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-3",
+        "link-3"
+      ]
+    },
+    "tweetcard-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Xu38873217",
+        "text": "这两天终于看到国产区讨论base的热度上来了。$AEON included in base szn watchlist",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/Xu38873217/status/2056522458627502486"
+      }
+    },
+    "tweet-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-4",
+        "link-4"
+      ]
+    },
+    "tweetcard-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "gfsdgsdg2334",
+        "text": "$vvv $lfi $opg $bnkr $flock $serv $nock maybe $aeon — base ticker watchlist.",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/gfsdgsdg2334/status/2056518038246347076"
+      }
+    },
+    "tweet-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-5",
+        "link-5"
+      ]
+    },
+    "tweetcard-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "FiFiTheMouse",
+        "text": "$aeon = $virtuals / $aixbt = $synth / Makes more sense",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/FiFiTheMouse/status/2056521079007396010"
+      }
+    },
+    "tweet-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-6",
+        "link-6"
+      ]
+    },
+    "tweetcard-6": {
+      "type": "TweetCard",
+      "props": {
+        "author": "x_powerai",
+        "text": "Watching $AEON and $EVE flow patterns shows quiet accumulation; 73% of 'sleeping giant' narratives ignore validator uptime metrics.",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-6": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/x_powerai/status/2056519375163965750"
+      }
+    },
+    "tweet-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-7",
+        "link-7"
+      ]
+    },
+    "tweetcard-7": {
+      "type": "TweetCard",
+      "props": {
+        "author": "StockSandbox",
+        "text": "Are you familiar with $AEON at all?",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-7": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/StockSandbox/status/2056517952783155226"
+      }
+    },
+    "tweet-8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard-8",
+        "link-8"
+      ]
+    },
+    "tweetcard-8": {
+      "type": "TweetCard",
+      "props": {
+        "author": "WolfFrogs",
+        "text": "just go and buy coins on base $AEON $LFI $POD",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-8": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/WolfFrogs/status/2056517540734496925"
+      }
+    }
+  }
+}
