@@ -1,18 +1,20 @@
-*Push Recap — 2026-05-19*
-5 substantive merges (2 aeon, 3 aeon-agent, 0 minitor) — fork-intelligence parity + cron-path hygiene week.
+*Push Recap — 2026-05-20*
+aeon (9), aeon-agent (1+cron), minitor (3) — 14 substantive commits, +2,213/-167 lines.
 
-*Same-day-after backports continue (8th + 9th in row):* aeon-agent absorbed `fork-skill-gap` (#52, upstream PR #176) and `fork-first-run-alert` (#50, upstream PR #179) — fork-intelligence layer now at full parity with upstream (5 skills: alive? shipped? who pushed? what's missing? when activated?).
+Dashboard hardening: new loopback /api/* gate + middleware (#188, +433), next 16.2.6 bump + postcss override (#189), gh CLI preflight in ./aeon launcher (#190), stricter OAuth token reassembly (#194).
 
-*XAI direct-curl primary path retired:* `refresh-x` (#51) rewired off `curl -H "Authorization: Bearer $XAI_API_KEY"` — last enabled-eligible XAI consumer migrated to the prefetch-cache contract. 4th explicit-marker fix after PR #37 (.error), PR #43 (.truncated), PR #48 (fetch-tweets-log fallback in token-report).
+Silent-failure fixes (AntFleet H6/H2/H8): scan.sh PCRE→POSIX-ERE across all 28 patterns so BSD/macOS grep stops silently no-op'ing (#197), Slack bot-message filter from string "null" to empty-string check (#196), admanage spend-cap fails closed on non-numeric TODAY_SPEND (#195).
 
-*New surveillance angle:* `competitor-launch-radar` (aeon PR #183) — 8th read-only ecosystem watcher in aeon, first one pointed at NEW entrants outside the 9-framework cohort. Weekly Mon 10:00 UTC, keyless PH RSS + HN Algolia, 9 framework keywords, count-driven notify.
+Catalog & community: Community Skill Packs README section (#187, first listed pack: vvvkernel), catalog 120→121 + skill.jpg refresh (#191), asset rename to bust CDN cache (#192).
 
-*scan.sh empty-array crash squashed:* aeon PR #186 wraps highs/mediums/lows print loops in length guards (closes #182). Fixes the `[PASS]` → `✗ BLOCKED` false-positive that hit every macOS operator running `./add-skill` on Bash 3.2.
+minitor +3 columns 44→47: GitHub Discussions GraphQL (#43, 45th, MessageSquare/purple), CoinGecko trending+top+watchlist (#44, 46th, TrendingUp/green), DeFiLlama TVL top/gainers/chains (#45, 47th, Layers/blue — pivot from dead IndieHackers RSS).
+
+aeon-agent: 10th consecutive same-day-after backport — competitor-launch-radar from upstream PR #183 (#53). skills.json 88→89.
 
 Key changes:
-- aeon-agent skills.json 86 → 88 (two new fork-intelligence skills)
-- aeon skills.json 119 → 120 (competitor-launch-radar)
-- skills/skill-security-scan/scan.sh +17/-9 — three length guards mirror existing JSON-path pattern
+- dashboard middleware.ts + lib/security/api-gate.ts: first dedicated security module in the dashboard tree (+387 lines incl. unit tests)
+- scan.sh 28 POSIX-ERE rewrites: closes the silent macOS-operator scanning gap that no test caught for weeks
+- minitor on-chain cluster 4→6 columns: zero-overlap pair (price+cap from CoinGecko, TVL+protocol from DeFiLlama)
 
-Stats: 10 files changed, +1,114/-15 lines across 5 PR merges
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-19.md
+Stats: 28 files, +2,213/-167 lines, 4 AntFleet Highs closed, 5 remaining (H1/H3/H4/H7/H9)
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-20.md
