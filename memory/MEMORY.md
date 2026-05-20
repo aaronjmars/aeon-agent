@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-05-17*
+*Last consolidated: 2026-05-20*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -48,8 +48,11 @@
 | 2026-05-17 | Two Of Today's Three Skill Pushes Were Aimed At Product Hunt. The Launch Hasn't Been Called Yet. | repo-article |
 | 2026-05-17 | Most AI Agents Are A Process. Aeon Is A Cron Job. Here's What That Buys You. | project-lens |
 | 2026-05-18 | Aeon Now Watches Eight Angles Of The AI Agent Framework Market. It Has Launched On None. | repo-article |
+| 2026-05-18 | Eric Raymond Didn't Draw The Census Bureau That Keeps The Bazaar Working | project-lens |
 | 2026-05-19 | Aeon Built The Surveillance Stack For The AI Agent Ecosystem. The Ecosystem Just Built Its First One For Aeon. | repo-article |
+| 2026-05-19 | Anthropic Bought Back The SDK Generator Yesterday. Some Agents Have No SDK To Buy Back. | project-lens |
 | 2026-05-20 | Yesterday The Audit Bot Filed Twenty-Seven Findings On Aeon. Today It Authored Three Of The Patches That Closed Them. | repo-article |
+| 2026-05-20 | Every 2026 AI Agent Map Has The Same Blind Spot | project-lens |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -106,27 +109,18 @@
 - Sandbox blocks `$ENV_VAR` in curl headers → skill reads auth failure as "key not set" even when the key IS set. Fix: read from prefetch-written log files instead of curling authenticated APIs inside the skill (aeon-agent PR #48)
 
 ## Repo Actions Ideas Pipeline
-~83 ideas generated (18 runs). Recently built: product-hunt-launch (aeon) + skill-enabler (aeon-agent) + deck-export-import (minitor) (May-15), fork-skill-gap (aeon) + FEATURE_SKIP for aeon-agent + column-alert-keywords (minitor) (May-16 — burned last two open May-14 ideas), fork-first-run-alert (aeon) + product-hunt-launch backport (aeon-agent, pivoted from May-16 #3 which was already done) + producthunt column (minitor) (May-17 — burned May-16 #1 + #4), competitor-launch-radar (aeon) + fork-first-run-alert backport (aeon-agent) + github-discussions column (minitor) (May-18 — burned last two open May-16 ideas #2 + #5), scan.sh Bash 3.2 fix (aeon Issue #182) + fork-skill-gap backport (aeon-agent) + CoinGecko column (minitor) (May-19 — burned May-18 ideas #1, #2, #4), scan.sh POSIX-ERE fix (aeon — AntFleet H6 from Issue #184) + competitor-launch-radar backport (aeon-agent) + DeFiLlama column (minitor — pivoted from May-18 #5 IndieHackers, IH RSS dead) (May-20). **May-18 ideas FULLY CONSUMED** (#3 closed upstream-blocked May-19, #5 pivoted today). **May-16 / May-14 / May-12 / May-10 ideas FULLY CONSUMED**. **May-6 aeon-agent backports FULLY CONSUMED**. AntFleet Issue #184 still has 5 open Highs after H6: H1 (v4-readiness manifest gaps), H3 (undefined `FORK_DEFAULT_BRANCH` in contributor-spotlight), H4 (`.bak` rollback in fleet-state), H7 (`branch` field in skills.lock ignored by skill-update-check), H9 (admanage-create skips `campaignId`-only ad sets) + 13 Mediums + 2 Lows. Other open: Dashboard Live Feed (aeon-agent — older, complex). See `articles/repo-actions-*.md`.
+~88 ideas generated (19 runs). Recently built: scan.sh Bash 3.2 fix (aeon Issue #182) + fork-skill-gap backport (aeon-agent) + CoinGecko column (minitor) (May-19 — burned May-18 ideas #1, #2, #4), scan.sh POSIX-ERE fix (aeon — AntFleet H6 from Issue #184) + competitor-launch-radar backport (aeon-agent) + DeFiLlama column (minitor — pivoted from May-18 #5 IndieHackers, IH RSS dead) (May-20). **May-18 ideas FULLY CONSUMED**. **May-16 / May-14 / May-12 / May-10 ideas FULLY CONSUMED**. **May-6 aeon-agent backports FULLY CONSUMED**. **May-20 ideas (5 fresh):** aeon H3 (FORK_DEFAULT_BRANCH undefined in contributor-spotlight), Community Skill Pack install CLI, aeon-agent H7 (branch field in skills.lock ignored by skill-update-check), minitor Deck share link via URL fragment, minitor Starter deck templates gallery. AntFleet Issue #184: H2/H5/H6/H8 closed (PRs #194–#197 + AntFleet PRs merged May-20). Open: H1 (v4-readiness manifest gaps), H3 (FORK_DEFAULT_BRANCH — May-20 idea #1), H4 (.bak rollback in fleet-state), H7 (branch in skills.lock — May-20 idea #3), H9 (admanage-create skips campaignId-only ad sets) + ~13 Mediums + 2 Lows. Other open: Dashboard Live Feed (aeon-agent — older, complex). See `articles/repo-actions-*.md`.
 
 ## Open Improvement PRs
 - [#54 improve: project-lens — make 14d rotation rule mathematically feasible](https://github.com/aaronjmars/aeon-agent/pull/54) — aeon-agent, opened 2026-05-20 (self-improve; 8 angle categories vs daily runs made the stated 14d no-repeat rule unachievable by pigeonhole — reduced to 7d window + formalized sub-angle hygiene the agent was already practicing informally)
-- [#197 fix(scan): use POSIX-ERE patterns in scan.sh (closes AntFleet H6)](https://github.com/aaronjmars/aeon/pull/197) — aeon, opened 2026-05-20 (Issue #184 H6; all 28 patterns rewritten from PCRE `\s`/`\b` to POSIX `[[:space:]]` + explicit word-boundary char class — fixes silent BSD/macOS grep false-negatives)
-- [#196 fix(messages): correct Slack bot-message filter from string "null"](https://github.com/aaronjmars/aeon/pull/196) — aeon, opened 2026-05-20 (AntFleet H2 from antfleet-ops; replaces `BOT_ID = "null"` string check with empty-string check)
-- [#195 fix(admanage): validate TODAY_SPEND is numeric before awk spend-cap](https://github.com/aaronjmars/aeon/pull/195) — aeon, opened 2026-05-20 (AntFleet H8 from antfleet-ops; closes daily-spend circuit-breaker bypass on non-numeric input)
-- [#194 fix(auth): extract only token characters per line during claude setup-token reassembly](https://github.com/aaronjmars/aeon/pull/194) — aeon, opened 2026-05-20 (AntFleet H5 from antfleet-ops; prevents splicing non-token continuation lines into `CLAUDE_CODE_OAUTH_TOKEN`)
-- [#53 feat: backport competitor-launch-radar from upstream aeon PR #183](https://github.com/aaronjmars/aeon-agent/pull/53) — aeon-agent, opened 2026-05-20 (verbatim backport; 10th consecutive same-day-after, Mon 10:00 UTC enabled:false sonnet-4-6, slots between aixbt-pulse and contributor-reward; skills.json 88 → 89)
-- [#51 improve: refresh-x — read prefetch cache instead of broken direct curl](https://github.com/aaronjmars/aeon-agent/pull/51) — aeon-agent, opened 2026-05-18 (self-improve; mirrors PR #48 token-report fix — last enabled-eligible XAI consumer still on direct-curl primary path; latent until refresh-x is enabled)
-- [#48 improve: token-report social pulse from fetch-tweets log](https://github.com/aaronjmars/aeon-agent/pull/48) — aeon-agent, opened 2026-05-16 (self-improve; fixes 5-day false-positive "XAI_API_KEY not set" — reads fetch-tweets log instead of curling XAI directly)
-- [#45 feat: DeFiLlama TVL column (47th column type)](https://github.com/aaronjmars/minitor/pull/45) — minitor, opened 2026-05-20 (pivot from May-18 idea #5; IH RSS dead, replaced with DeFiLlama TVL — keyless api.llama.fi, three modes top/gainers/chains, optional category filter, Apps & on-chain cluster 5 → 6, #445ed0 blue Layers icon)
 
 ## Next Priorities
-- **URGENT** Enable show-hn-draft in aeon.yml — PR #151 (May 1); 300⭐ long crossed, Show HN draft immediately applicable, dispatch now
+- **URGENT** Enable show-hn-draft in aeon.yml — PR #151 (May 1); 400⭐ ORGANIC crossed 2026-05-20, Show HN dispatch overdue
 - Enable pr-triage in aeon.yml — PR #147 (Apr 29); PR #143 from pezetel is first natural triage candidate
 - Enable smithery-manifest in aeon.yml — PR #149 (May 1); submit docs/ to Smithery + MCP Registry
 - Enable fork-cohort in aeon.yml — PR #152 (May 2); gives "X of 60+ forks running in production" social proof
 - Enable operator-scorecard in aeon.yml — PR #153 (May 3); weekly scorecard
 - Enable skill-freshness in aeon.yml — PR #157 (May 4)
-- Enable operator-scorecard in aeon-agent aeon.yml — PR #28 (May 4)
 - Enable skill-freshness in aeon-agent aeon.yml — PR #30 (May 5)
 - Enable v4-readiness in aeon aeon.yml — PR #160 (May 6); dispatch manually pre-v4-announcement
 - Enable fleet-state in aeon aeon.yml — first natural Monday run May 18; synthesises fork-cohort + fork-release-tracker + contributor-spotlight into one Monday digest
