@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 88,
+  "total": 89,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -680,6 +680,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon aixbt-pulse"
+    },
+    {
+      "slug": "competitor-launch-radar",
+      "name": "competitor-launch-radar",
+      "description": "Weekly scan of Product Hunt RSS + HN Algolia for NEW AI-agent-framework launches outside the 9-framework cohort tracked by ai-framework-watch. Classifies framework/mcp/product, LRU-200 dedup, gated notify.",
+      "category": "research",
+      "schedule": "0 10 * * 1",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon competitor-launch-radar"
     },
     {
       "slug": "contributor-reward",
