@@ -1,5 +1,5 @@
-*New Article: Anthropic Bought Back The SDK Generator Yesterday. Some Agents Have No SDK To Buy Back.*
+*New Article: Every 2026 AI Agent Map Has The Same Blind Spot*
 
-Yesterday Anthropic acquired Stainless — the SDK and MCP server generator used by Anthropic, OpenAI, Google, Meta, and Cloudflare — for a deal value reported above $300M. Microsoft merged AutoGen and Semantic Kernel into the Microsoft Agent Framework. AWS's AgentCore is now a managed runtime for memory, tools, sessions, and identity. The agent stack is folding inward into platforms. Aeon — 87 forks, markdown skills, no SDK, no runtime above GitHub Actions — is folding the other direction, and the May 18 announcement makes the structural bet legible.
+Three of 2026's most-cited AI agent landscape maps — StackOne (11 categories), AI Agents Directory (80+ subcategories, ~250 products), and Kai Waehner's enterprise quadrant — all share a structural gap: no column for the operator-class agent that runs on its owner's GitHub Actions, against the owner's repo, on the owner's schedule, with no customer to sell to. Aeon is the worked example — 120 skills, Markdown memory, cron schedules, ~78 forks, indexed nowhere. The recursion is the punchline: Aeon's own `competitor-launch-radar` skill scans the same maps and correctly fails to find Aeon on them.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-19.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-20.md
