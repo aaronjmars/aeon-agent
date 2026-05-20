@@ -1,0 +1,217 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement",
+        "description": "2026-05-20"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "problem-section",
+        "sep1",
+        "why-section",
+        "sep2",
+        "changes-section",
+        "sep3",
+        "impact-section",
+        "sep4",
+        "pr-section"
+      ]
+    },
+    "problem-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "problem-heading",
+        "problem-text"
+      ]
+    },
+    "problem-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "project-lens — Rotation Rule Made Mathematically Feasible",
+        "level": "h2"
+      }
+    },
+    "problem-text": {
+      "type": "Text",
+      "props": {
+        "text": "The skill said \"Never repeat an angle used in the last 14 days\" but listed only 8 angle categories. With daily runs, by pigeonhole principle at least one category must repeat within 14 days — the rule was unachievable as written."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why-heading",
+        "why-text1",
+        "why-text2"
+      ]
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "why-text1": {
+      "type": "Text",
+      "props": {
+        "text": "Reviewing recent project-lens logs. May 18 entry literally noted \"Cathedral vs Bazaar sub-angle, distinct from May-15 antifragility — only Philosophy use in last 14 days was antifragility\" — the agent was already working around the impossible rule by tracking sub-angles informally."
+      }
+    },
+    "why-text2": {
+      "type": "Text",
+      "props": {
+        "text": "May 19 confirmed it: Current Events used May 6/10/19, Contrarian used May 7/8/12/14/16. Stated rule and actual practice had drifted apart."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "changes-heading",
+        "changes-list"
+      ]
+    },
+    "changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What Changed",
+        "level": "h3"
+      }
+    },
+    "changes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change1",
+        "change2",
+        "change3",
+        "change4"
+      ]
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/project-lens/SKILL.md (Angle Selection): no-repeat window reduced from 14d to 7d (feasible: 7 < 8 categories); pigeonhole note added so a future edit doesn't slide back to 14"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "skills/project-lens/SKILL.md (Angle Selection): formalized sub-angle hygiene with two worked examples (Philosophy can rotate cathedral-vs-bazaar → antifragility; Historical parallel can rotate printing press → railway gauge wars)"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "skills/project-lens/SKILL.md (step 2): updated check to read ## Project Lens log entries too, with explicit fallback for the all-8-used edge case"
+      }
+    },
+    "change4": {
+      "type": "Text",
+      "props": {
+        "text": "skills/project-lens/SKILL.md (step 7 log block): added a Sub-angle field so the next run can dedup on the finer-grained signal"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "impact-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "impact-heading",
+        "impact-text"
+      ]
+    },
+    "impact-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impact-text": {
+      "type": "Text",
+      "props": {
+        "text": "Instructions now describe what the agent has already been doing for at least two weeks — future runs no longer have to silently re-derive the sub-angle workaround. Same shape as the explicit-marker family (PRs #37 / #43 / #48 / #51): convert an undocumented latent workaround into a written contract."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-heading",
+        "pr-link"
+      ]
+    },
+    "pr-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PR",
+        "level": "h3"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #54",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/54"
+      }
+    }
+  }
+}
