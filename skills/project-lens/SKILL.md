@@ -15,7 +15,9 @@ This is NOT a repo progress update. `repo-article` and `push-recap` already cove
 
 ## Angle Selection
 
-If `${var}` is empty, pick from the angle categories below. **Never repeat an angle used in the last 14 days** — check recent `articles/project-lens-*.md` files and memory logs to see what's been done.
+If `${var}` is empty, pick from the 8 angle categories below. **Don't reuse the same angle category within the last 7 days** — check recent `articles/project-lens-*.md` files and memory logs to see what's been done. Prefer the category least-recently used. (A 14-day "no repeat" rule is impossible with 8 categories and daily runs — by pigeonhole at least one category must repeat within 14 days.)
+
+**Sub-angle hygiene:** within a category, pick a *specific lens* you haven't used in the last 14 days. For example, Philosophy can be cathedral-vs-bazaar one week and antifragility the next; Historical parallel can be the printing press one week and the railway gauge wars the next. Note the chosen sub-angle in the log so the next run can avoid it.
 
 ### Angle categories (rotate through these):
 
@@ -36,7 +38,7 @@ If `${var}` is empty, pick from the angle categories below. **Never repeat an an
    ```
    Also read 2-3 recent `articles/repo-article-*.md` and `articles/push-recap-*.md` to know what's been shipped lately.
 
-2. **Check what angles have been used recently** — read any `articles/project-lens-*.md` from the last 14 days. Pick a different angle category.
+2. **Check what angles have been used recently** — read any `articles/project-lens-*.md` from the last 14 days and any matching `## Project Lens` entries in `memory/logs/`. Pick a category that hasn't been used in the last 7 days; if forced to repeat (e.g. all 8 categories used in the window), pick the one used longest ago AND switch to a fresh sub-angle from step 1.
 
 3. **Research the external connection**:
    - Use WebSearch to find 3-5 current articles, discussions, or events related to the chosen angle
@@ -87,6 +89,7 @@ If `${var}` is empty, pick from the angle categories below. **Never repeat an an
    ```
    ## Project Lens
    - **Angle category:** [which of the 8 categories]
+   - **Sub-angle:** [the specific lens within the category — e.g. "Cathedral vs Bazaar" inside Philosophy, "printing press" inside Historical parallel]
    - **Title:** [article title]
    - **External hook:** [what trend/event/idea was used]
    - **Notification sent:** yes
