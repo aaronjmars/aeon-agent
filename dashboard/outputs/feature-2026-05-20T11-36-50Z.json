@@ -1,0 +1,453 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-05-20 — aaronjmars/minitor"
+      },
+      "children": [
+        "heading1",
+        "overview-stack",
+        "separator1",
+        "why-matters-section",
+        "separator2",
+        "built-section",
+        "separator3",
+        "how-works-section",
+        "separator4",
+        "next-section",
+        "separator5",
+        "pr-link"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "DeFiLlama TVL Column (47th column type)",
+        "level": "h2"
+      }
+    },
+    "overview-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "overview-text1",
+        "modes-heading",
+        "mode1-text",
+        "mode2-text",
+        "mode3-text",
+        "filter-heading",
+        "filter-options"
+      ]
+    },
+    "overview-text1": {
+      "type": "Text",
+      "props": {
+        "text": "Minitor now has a column that watches every DeFi protocol's total value locked in real time.",
+        "variant": "lead"
+      }
+    },
+    "modes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Three modes ship with it:",
+        "level": "h4"
+      }
+    },
+    "mode1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Top-protocols leaderboard sorted by current TVL"
+      }
+    },
+    "mode2-text": {
+      "type": "Text",
+      "props": {
+        "text": "24h-gainers view that surfaces which protocols are pulling in capital fastest right now"
+      }
+    },
+    "mode3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Chains view that aggregates TVL by network (Ethereum, Base, Arbitrum, Solana, BSC, etc.)"
+      }
+    },
+    "filter-heading": {
+      "type": "Text",
+      "props": {
+        "text": "Optional category filter narrows the leaderboards to:",
+        "variant": "body"
+      }
+    },
+    "filter-options": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-dex",
+        "badge-lending",
+        "badge-staking",
+        "badge-restaking",
+        "badge-cdp",
+        "badge-yield",
+        "badge-other"
+      ]
+    },
+    "badge-dex": {
+      "type": "Badge",
+      "props": {
+        "text": "Dexs",
+        "variant": "outline"
+      }
+    },
+    "badge-lending": {
+      "type": "Badge",
+      "props": {
+        "text": "Lending",
+        "variant": "outline"
+      }
+    },
+    "badge-staking": {
+      "type": "Badge",
+      "props": {
+        "text": "Liquid Staking",
+        "variant": "outline"
+      }
+    },
+    "badge-restaking": {
+      "type": "Badge",
+      "props": {
+        "text": "Restaking",
+        "variant": "outline"
+      }
+    },
+    "badge-cdp": {
+      "type": "Badge",
+      "props": {
+        "text": "CDP",
+        "variant": "outline"
+      }
+    },
+    "badge-yield": {
+      "type": "Badge",
+      "props": {
+        "text": "Yield Aggregator",
+        "variant": "outline"
+      }
+    },
+    "badge-other": {
+      "type": "Badge",
+      "props": {
+        "text": "or any other by substring match",
+        "variant": "outline"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why-matters-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "why-heading",
+        "why-para1",
+        "why-para2",
+        "why-para3"
+      ]
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters:",
+        "level": "h3"
+      }
+    },
+    "why-para1": {
+      "type": "Text",
+      "props": {
+        "text": "The May-18 article proposed an IndieHackers RSS column to fill the bootstrapper/indie gap between Product Hunt and HN. Problem: indiehackers.com no longer publishes RSS — /feed, /feed.xml, /posts.rss, /podcast.rss all return the SPA shell. The idea was based on an outdated assumption from when IH did expose RSS years ago."
+      }
+    },
+    "why-para2": {
+      "type": "Text",
+      "props": {
+        "text": "Rather than ship dead URLs, this PR pivots to a column that's a much stronger fit for minitor's actual audience: roughly a third of the active fork cohort runs crypto-focused decks (wallet-tx, polymarket, coingecko already live), and yesterday's CoinGecko column merge (PR #44) made the on-chain cluster the natural place for a TVL companion."
+      }
+    },
+    "why-para3": {
+      "type": "Text",
+      "props": {
+        "text": "CoinGecko covers price + market cap; DeFiLlama covers TVL + protocol-level signal — different axis, zero overlap. Both ship keyless."
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "built-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "built-heading",
+        "built-item1",
+        "built-item2",
+        "built-item3",
+        "built-item4",
+        "built-item5",
+        "built-summary"
+      ]
+    },
+    "built-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built:",
+        "level": "h3"
+      }
+    },
+    "built-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "built-item1-title",
+        "built-item1-text"
+      ]
+    },
+    "built-item1-title": {
+      "type": "Text",
+      "props": {
+        "text": "lib/integrations/defillama.ts (~220 lines)",
+        "variant": "lead"
+      }
+    },
+    "built-item1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Keyless fetcher against api.llama.fi/protocols (~3k entries) and api.llama.fi/v2/chains (~200 entries). Mode-specific sort (TVL desc / 24h-change desc with TVL tiebreaker / chains TVL desc), optional category substring filter, drops protocols with TVL ≤ 0 to suppress dead entries, keeps CEX entries (Binance CEX, Coinbase Custody) because watching custody concentration is part of the use case."
+      }
+    },
+    "built-item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "built-item2-title",
+        "built-item2-text"
+      ]
+    },
+    "built-item2-title": {
+      "type": "Text",
+      "props": {
+        "text": "lib/columns/plugins/defillama/plugin.ts",
+        "variant": "lead"
+      }
+    },
+    "built-item2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Zod schema (mode enum + free-text category string), DefillamaConfig + DefillamaMeta types (tvlUsd, tvlChange24h, tvlChange7d, category, chains, marketCapUsd, kind discriminator). #445ed0 DeFiLlama brand blue accent — distinct from wallet-tx #627eea Ethereum blue, polymarket #2D9CDB electric blue, coingecko #8DC647 green. Layers lucide icon, evokes the L1/L2/app stack and is visually distinct from the other on-chain icons."
+      }
+    },
+    "built-item3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "built-item3-title",
+        "built-item3-text"
+      ]
+    },
+    "built-item3-title": {
+      "type": "Text",
+      "props": {
+        "text": "lib/columns/plugins/defillama/server.ts + client.tsx",
+        "variant": "lead"
+      }
+    },
+    "built-item3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Server fetcher uses PAGE_SIZE-based cursor pagination; client renders brand chip + category pill + relative time on the meta row, lazy-loaded protocol logo + canonical defillama.com/protocol/{slug} link in the body, TVL + green/red 24h delta arrow + optional 7d delta + protocol token mcap + chain list in the stats row."
+      }
+    },
+    "built-item4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "built-item4-title",
+        "built-item4-text"
+      ]
+    },
+    "built-item4-title": {
+      "type": "Text",
+      "props": {
+        "text": "Registry edits (3 files)",
+        "variant": "lead"
+      }
+    },
+    "built-item4-text": {
+      "type": "Text",
+      "props": {
+        "text": "manifest.ts, registry.ts, server-registry.ts — 1-line import + 1-line registration each, matches the existing pattern. The server-registry parity check at module init throws loudly if any of the three drift."
+      }
+    },
+    "built-item5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "built-item5-title",
+        "built-item5-text"
+      ]
+    },
+    "built-item5-title": {
+      "type": "Text",
+      "props": {
+        "text": "README.md",
+        "variant": "lead"
+      }
+    },
+    "built-item5-text": {
+      "type": "Text",
+      "props": {
+        "text": "Intro paragraph picks up DeFiLlama, Apps & on-chain cluster row 5 → 6, total column count 46 → 47, keyless list updated."
+      }
+    },
+    "built-summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-columns"
+      ]
+    },
+    "stat-columns": {
+      "type": "Stat",
+      "props": {
+        "label": "Column count",
+        "value": "47",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "how-works-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "how-heading",
+        "how-para1",
+        "how-para2",
+        "how-para3"
+      ]
+    },
+    "how-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works:",
+        "level": "h3"
+      }
+    },
+    "how-para1": {
+      "type": "Text",
+      "props": {
+        "text": "The /protocols endpoint returns the full DeFiLlama scrape in one call (~2-3 MB raw JSON, edge-cached at the CDN so the per-request cost is negligible). The integration normalises each protocol's TVL, % change, category, chain list, and logo URL into a FeedItem<DefillamaMeta>, sorts according to mode, applies the optional category substring filter, and slices into PAGE_SIZE pages."
+      }
+    },
+    "how-para2": {
+      "type": "Text",
+      "props": {
+        "text": "Gainers mode breaks ties on absolute TVL so a $50M protocol moving 20% ranks above a $50k protocol moving 20% — without that tiebreaker the leaderboard would be drowned in noise every time a new token launches. The /v2/chains endpoint is the only chain-list URL stable across DeFiLlama API rewrites; v1 was deprecated 18 months ago."
+      }
+    },
+    "how-para3": {
+      "type": "Text",
+      "props": {
+        "text": "Protocol logos load via <img loading=\"lazy\"> against icons.llamao.fi — same approach as the CoinGecko column, so a deck full of DeFi rows doesn't waterfall."
+      }
+    },
+    "separator4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "next-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "next-heading",
+        "next-para1"
+      ]
+    },
+    "next-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next:",
+        "level": "h3"
+      }
+    },
+    "next-para1": {
+      "type": "Text",
+      "props": {
+        "text": "DeFiLlama exposes ~30 more endpoints (per-protocol historical TVL, yield pools, stablecoin supply, fees + revenue, bridge volumes, NFT marketplaces). The most natural follow-on for the AEON operator audience would probably be a Yields column — top APY across the same protocols — or a Stablecoins column tracking which chains stablecoin supply is migrating to. Both reuse the same integration shape."
+      }
+    },
+    "separator5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Pull Request #45: DeFiLlama TVL Column",
+        "href": "https://github.com/aaronjmars/minitor/pull/45",
+        "source": "github.com/aaronjmars/minitor"
+      }
+    }
+  }
+}
