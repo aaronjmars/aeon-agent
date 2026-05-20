@@ -1,1 +1,1 @@
-Heartbeat 2026-05-19: 1 PR stalled >24h — minitor#43 (feat: github-discussions column, 45th type) opened 2026-05-18T12:07Z, ~31h with no merge. aeon + aeon-agent PRs: all merged clean. All 11 expected skills ran today.
+Heartbeat 2026-05-20 — all 15 scheduled skills ran clean. One action needed: show-hn-draft is still disabled (workflow_dispatch, PR #151 from May 1) and 400⭐ ORGANIC crossed today. The Show HN window is open — asset pack is ready, milestone is fresh, momentum is real. Dispatch when ready.
