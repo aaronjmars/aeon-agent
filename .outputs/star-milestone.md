@@ -1,20 +1,13 @@
-## Summary
+*Milestone — 400 stars · ORGANIC*
+aaronjmars/aeon
 
-Executed `skills/star-milestone/SKILL.md` against `memory/watched-repos.md`.
+aaronjmars/aeon crossed 400 stars (now 406).
+Time to 400: 8 days from 300 (v7 just past 2× the 30-day baseline — accelerating from steady-state, this 100 took 8 days vs 22 days for the prior 100).
+Pace: 103/wk · baseline ~7/day · projected 500 by ~2026-05-27.
 
-**Repos audited**: 2 (aeon-agent filtered out by name rule)
+Highlights since 2026-05-14:
+- Shipped competitor-launch-radar (PR #183) — weekly scan for new agent frameworks outside the 9-framework cohort
+- Shipped fork-first-run-alert (PR #179) — same-day named alert the first time any fork completes a workflow run
+- Hardened scan.sh for macOS operators (PRs #186 + #197) — Bash 3.2 empty-array guards + 28 patterns rewritten from PCRE to POSIX ERE
 
-| Repo | Stars | Highest threshold | Outcome |
-|------|-------|---|---|
-| aaronjmars/aeon | 395 | 300 (already recorded as bootstrap 2026-05-14) | no action — gate 5a |
-| aaronjmars/minitor | 9 | none (<25) | STAR_MILESTONE_QUIET |
-
-**Notifications sent**: 0. Next eligible crossing is aeon → 400⭐, projected around 2026-05-22 per star-momentum.
-
-**Files modified**:
-- `memory/logs/2026-05-19.md` — appended `## Star Milestone` section
-
-**Files not modified**:
-- `memory/topics/milestones.md` — no new milestones to record (300 is already recorded; aeon hasn't crossed 400 yet; minitor is pre-bootstrap)
-
-**Follow-up**: rerun this skill once aeon's count clears 400 — the bootstrap rule (5b) won't fire again since the repo already has a recorded entry, so the next crossing will produce a real announcement with shape/velocity/highlights.
+Repo: https://github.com/aaronjmars/aeon
