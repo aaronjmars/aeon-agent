@@ -364,3 +364,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-20,star-milestone,claude-opus-4-7,47,23447,2988303,73775
 2026-05-20,repo-article,claude-opus-4-7,29,15152,1487274,131015
 2026-05-20,project-lens,claude-opus-4-7,159,17253,2317922,116856
+2026-05-20,thread-formatter,claude-sonnet-4-6,11,13621,481538,52397

@@ -1,0 +1,201 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-05-20",
+        "description": "AntFleet audit loop"
+      },
+      "children": [
+        "heading_topic",
+        "sep_1",
+        "text_point_1",
+        "text_point_2",
+        "text_point_3",
+        "text_point_4",
+        "stack_point_5",
+        "sep_2",
+        "heading_metrics",
+        "grid_stats",
+        "sep_3",
+        "storylink_article"
+      ]
+    },
+    "heading_topic": {
+      "type": "Heading",
+      "props": {
+        "text": "27 findings filed, AntFleet authored 3 patches, 7/12 High-or-worse closed in 37h",
+        "level": "h2"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_point_1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ An audit bot filed 27 security findings against an autonomous agent yesterday. Today, it authored three of the patches to close them.",
+        "variant": "body"
+      }
+    },
+    "text_point_2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ antfleet-ops opened Issue #184 on May 18 with 27 findings across the Aeon codebase. 3 Criticals. 9 Highs. 13 Mediums. 2 Lows. Everything from a Next.js loopback API exposed to the public internet, to POSIX-ERE patterns silently failing on every macOS operator.",
+        "variant": "body"
+      }
+    },
+    "text_point_3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ Aaron closed all 3 Criticals within 21 hours. Then antfleet-ops submitted PRs #194, #195, and #196 — the audit account itself writing the patches for H5, H8, and H2. Aeon fixed H6 in PR #197. All four merged the same day.",
+        "variant": "body"
+      }
+    },
+    "text_point_4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ 7 of 12 High-or-worse findings are now closed, 37 hours after the report was filed. The bot that wrote the findings is now a contributor to the repo it audited. This is what a self-repairing codebase looks like at scale.",
+        "variant": "body"
+      }
+    },
+    "stack_point_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_point_5",
+        "link_pr_197"
+      ]
+    },
+    "text_point_5": {
+      "type": "Text",
+      "props": {
+        "text": "5/ PR #197 — scan.sh POSIX-ERE fix, one of four patches in the AntFleet audit close:",
+        "variant": "body"
+      }
+    },
+    "link_pr_197": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/aaronjmars/aeon/pull/197",
+        "href": "https://github.com/aaronjmars/aeon/pull/197"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Findings Breakdown",
+        "level": "h3"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_findings",
+        "stat_criticals",
+        "stat_highs",
+        "stat_mediums",
+        "stat_lows",
+        "stat_patches",
+        "stat_closed_count",
+        "stat_closed_time",
+        "stat_critical_time"
+      ]
+    },
+    "stat_findings": {
+      "type": "Stat",
+      "props": {
+        "label": "Total findings filed",
+        "value": "27"
+      }
+    },
+    "stat_criticals": {
+      "type": "Stat",
+      "props": {
+        "label": "Critical severity",
+        "value": "3"
+      }
+    },
+    "stat_highs": {
+      "type": "Stat",
+      "props": {
+        "label": "High severity",
+        "value": "9"
+      }
+    },
+    "stat_mediums": {
+      "type": "Stat",
+      "props": {
+        "label": "Medium severity",
+        "value": "13"
+      }
+    },
+    "stat_lows": {
+      "type": "Stat",
+      "props": {
+        "label": "Low severity",
+        "value": "2"
+      }
+    },
+    "stat_patches": {
+      "type": "Stat",
+      "props": {
+        "label": "Patches authored by AntFleet",
+        "value": "3"
+      }
+    },
+    "stat_closed_count": {
+      "type": "Stat",
+      "props": {
+        "label": "High-or-worse closed",
+        "value": "7 of 12"
+      }
+    },
+    "stat_closed_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Time to close High-or-worse",
+        "value": "37h"
+      }
+    },
+    "stat_critical_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Time to close all Criticals",
+        "value": "21h"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "storylink_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full thread article",
+        "href": "articles/thread-2026-05-20.md",
+        "source": "local"
+      }
+    }
+  }
+}

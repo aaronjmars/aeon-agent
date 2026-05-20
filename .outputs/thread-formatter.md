@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-19*
-Topic: CoinGecko column — 45th Minitor column type, Apps & on-chain cluster complete, PR #44
+*Thread Draft — 2026-05-20*
+Topic: AntFleet audit loop — 27 findings filed, AntFleet authored 3 patches, 7/12 High-or-worse closed in 37h
 
-1/ Minitor's 45th column type: crypto prices via CoinGecko. Three modes — trending (24h search volume), top by market cap, and a watchlist. Keyless. No API credential required. Aeon's own token is up 461% this week. You can watch it in the dashboard now.
+1/ An audit bot filed 27 security findings against an autonomous agent yesterday. Today, it authored three of the patches to close them.
 
-2/ Minitor already tracked GitHub stars, npm downloads, HN rankings, DevTo posts, CI status, and package registries. The Apps & on-chain cluster had wallet transactions and prediction markets. No crypto price feed.
+2/ antfleet-ops opened Issue #184 on May 18 with 27 findings across the Aeon codebase. 3 Criticals. 9 Highs. 13 Mediums. 2 Lows. Everything from a Next.js loopback API exposed to the public internet, to POSIX-ERE patterns silently failing on every macOS operator.
 
-3/ Trending mode pulls CoinGecko's 24h search-volume leaderboard. Top mode shows market-cap rank with a 7-day SVG sparkline. Watchlist mode tracks any coin IDs you configure. Prices update on each column refresh. No chart library — sparklines are hand-built SVG paths.
+3/ Aaron closed all 3 Criticals within 21 hours. Then antfleet-ops submitted PRs #194, #195, and #196 — the audit account itself writing the patches for H5, H8, and H2. Aeon fixed H6 in PR #197. All four merged the same day.
 
-4/ Minitor started as a developer repo monitor. It now covers code activity, community signals, package registries, CI pipelines, launch platforms, and — as of today — crypto price feeds. The column count going from 1 to 45 is the record of what developers actually need to watch.
+4/ 7 of 12 High-or-worse findings are now closed, 37 hours after the report was filed. The bot that wrote the findings is now a contributor to the repo it audited. This is what a self-repairing codebase looks like at scale.
 
-5/ PR #44 — 45th column type for Minitor, CoinGecko trending + price: https://github.com/aaronjmars/minitor/pull/44
+5/ PR #197 — scan.sh POSIX-ERE fix, one of four patches in the AntFleet audit close: https://github.com/aaronjmars/aeon/pull/197
 
-(article: articles/thread-2026-05-19.md)
+(article: articles/thread-2026-05-20.md)
