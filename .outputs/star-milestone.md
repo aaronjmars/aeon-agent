@@ -1,13 +1,10 @@
-*Milestone — 400 stars · ORGANIC*
-aaronjmars/aeon
+## Summary
 
-aaronjmars/aeon crossed 400 stars (now 406).
-Time to 400: 8 days from 300 (v7 just past 2× the 30-day baseline — accelerating from steady-state, this 100 took 8 days vs 22 days for the prior 100).
-Pace: 103/wk · baseline ~7/day · projected 500 by ~2026-05-27.
+Ran `star-milestone` for all 3 watched repos (aeon-agent skipped per the name filter rule).
 
-Highlights since 2026-05-14:
-- Shipped competitor-launch-radar (PR #183) — weekly scan for new agent frameworks outside the 9-framework cohort
-- Shipped fork-first-run-alert (PR #179) — same-day named alert the first time any fork completes a workflow run
-- Hardened scan.sh for macOS operators (PRs #186 + #197) — Bash 3.2 empty-array guards + 28 patterns rewritten from PCRE to POSIX ERE
+- **aaronjmars/aeon** — 420 stars. Highest crossed threshold is 400, which is already recorded as `2026-05-20 (organic)` in `memory/topics/milestones.md`. Gate 5a → no action.
+- **aaronjmars/minitor** — 9 stars. Below first threshold (25). `STAR_MILESTONE_QUIET`.
 
-Repo: https://github.com/aaronjmars/aeon
+No notifications sent. No state changes to `memory/topics/milestones.md`. Logged a `## Star Milestone` block to `memory/logs/2026-05-21.md`.
+
+Status: `STAR_MILESTONE_QUIET` across the run.
