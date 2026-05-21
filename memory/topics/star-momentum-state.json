@@ -1,11 +1,11 @@
 {
-  "last_run_at": "2026-05-20T00:00:00Z",
+  "last_run_at": "2026-05-21T00:00:00Z",
   "alerts": {
     "aaronjmars/aeon": {
-      "400": {
-        "first_seen_in_window_at": "2026-05-16T00:00:00Z",
+      "500": {
+        "first_seen_in_window_at": "2026-05-21T00:00:00Z",
         "alerted_at": null,
-        "projected_date_v7": "2026-05-22",
+        "projected_date_v7": "2026-05-29",
         "v7_at_alert": null
       }
     },

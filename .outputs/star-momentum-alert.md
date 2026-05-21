@@ -1,8 +1,14 @@
 ## Summary
 
-Ran `star-momentum-alert` for 2026-05-20. Audited 2 repos (aeon-agent filtered out per skill rules):
+**star-momentum-alert** ran against 2 repos (aeon-agent and *-aeon repos filtered out).
 
-- **aaronjmars/aeon**: 387⭐, target 400⭐ — gap of 13 stars, v7=12.57/day, projects to cross on **2026-05-22 (Friday)** — only 2 days out. **OUT_OF_WINDOW** (< 7 days). The milestone is imminent but too close to dispatch `show-hn-draft` thoughtfully. `star-milestone` will fire the crossing alert when 400 lands.
-- **aaronjmars/minitor**: 9⭐, target 50⭐ — v7=0.14/day, projects ~287 days out. **OUT_OF_WINDOW** (> 14 days).
+**aaronjmars/aeon** — milestone 400 has been crossed (current: 402⭐). Retired that entry and moved to targeting 500⭐. At the 7-day pace of 13.57 stars/day, the crossing lands in ~8 days on **2026-05-29 (Friday)** — inside the 7-14d distance window but **off-day** (must be Tue/Wed/Thu). Verdict: `OFF_DAY`, no alert. Worth watching: the 3-day pace (17.33/day) projects the crossing to 2026-05-27 (Wednesday), which is in-window — if pace holds, tomorrow's run may flip to `ALERT`.
 
-**Status: STAR_MOMENTUM_NO_ALERTS** — no notification sent. Article written to `articles/star-momentum-2026-05-20.md`, state updated in `memory/topics/star-momentum-state.json`, log appended to `memory/logs/2026-05-20.md`.
+**aaronjmars/minitor** — barely any growth (9⭐, pace 0.14/day). Target 50⭐ is 287 days out. Verdict: `OUT_OF_WINDOW`.
+
+Status: `STAR_MOMENTUM_NO_ALERTS` — article written, no notification sent.
+
+**Files written:**
+- `articles/star-momentum-2026-05-21.md`
+- `memory/topics/star-momentum-state.json` (400 entry retired → 500 entry added)
+- `memory/logs/2026-05-21.md` (log block appended)
