@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-20*
-Topic: AntFleet audit loop — 27 findings filed, AntFleet authored 3 patches, 7/12 High-or-worse closed in 37h
+*Thread Draft — 2026-05-21*
+Topic: Seven PRs merged in two minutes — four closed AntFleet H-class audit findings, three from external contributors who forked the repo that morning; 100-fork milestone crossed
 
-1/ An audit bot filed 27 security findings against an autonomous agent yesterday. Today, it authored three of the patches to close them.
+1/ Seven PRs merged into Aeon in two minutes. Four closed security findings from a bot that filed them 72 hours earlier. Three came from contributors who had forked the repo that same morning.
 
-2/ antfleet-ops opened Issue #184 on May 18 with 27 findings across the Aeon codebase. 3 Criticals. 9 Highs. 13 Mediums. 2 Lows. Everything from a Next.js loopback API exposed to the public internet, to POSIX-ERE patterns silently failing on every macOS operator.
+2/ AntFleet filed Issue #184 on May 18 with 27 security findings: 3 Critical, 9 High, 13 Medium, 2 Low. By yesterday, it had authored three patches to close its own Highs. Today the batch closed eight of nine. One remains open.
 
-3/ Aaron closed all 3 Criticals within 21 hours. Then antfleet-ops submitted PRs #194, #195, and #196 — the audit account itself writing the patches for H5, H8, and H2. Aeon fixed H6 in PR #197. All four merged the same day.
+3/ The three stranger PRs each did something different: danbuildss added a community skill pack, wx888 wired up Resend for email delivery, fleet-watcher built an opt-in veto layer for incoming skills. All three had forked the repo less than 16 hours before they submitted.
 
-4/ 7 of 12 High-or-worse findings are now closed, 37 hours after the report was filed. The bot that wrote the findings is now a contributor to the repo it audited. This is what a self-repairing codebase looks like at scale.
+4/ Aeon crossed 100 forks today. The merge batch didn't separate the audit patches from the first-time contributions — both landed in the same two-minute window. The security audit narrowed the attack surface. The new contributors widened the project surface.
 
-5/ PR #197 — scan.sh POSIX-ERE fix, one of four patches in the AntFleet audit close: https://github.com/aaronjmars/aeon/pull/197
+5/ All seven PRs are public. The audit account, three strangers, and the maintainer — all in the merge queue the same afternoon: https://github.com/aaronjmars/aeon
 
-(article: articles/thread-2026-05-20.md)
+(article: articles/thread-2026-05-21.md)
