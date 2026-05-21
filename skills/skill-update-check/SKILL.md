@@ -34,11 +34,23 @@ Today is ${today}. Audit imported skills for upstream changes since installation
 
 ### 2. Per-skill drift detection
 
-For each entry, fetch the latest upstream commit SHA for the locked source path:
+For each entry, fetch the latest upstream commit SHA for the locked source path. Honour the lock's `branch` field — without it the `gh api .../commits` endpoint silently falls back to the repo's default branch (`main`), and any skill pinned to a non-default branch (`stable`, `develop`, vendor-custom) would compare against `main` instead, generating perpetual false "update available" alerts:
+
 ```bash
-gh api "repos/${source_repo}/commits" -f path="${source_path}" -f per_page=1 \
+# Build the args list — only pass -f sha=... when the lock pins a non-default
+# branch. If the lock omits `branch` or sets it to "main", the GitHub API's
+# implicit default-branch behaviour is correct and we want to keep the call
+# the same as before (don't hardcode `sha=main` — that breaks repos whose
+# default branch was renamed e.g. master).
+ref_args=()
+if [ -n "${branch}" ] && [ "${branch}" != "main" ]; then
+  ref_args=(-f sha="${branch}")
+fi
+gh api "repos/${source_repo}/commits" "${ref_args[@]}" -f path="${source_path}" -f per_page=1 \
   --jq '.[0] | if . == null then "MISSING" else {sha: .sha, message: .commit.message, date: .commit.author.date, author: .commit.author.name} end'
 ```
+
+Step 3's `compare/${locked_sha}...${current_sha}` call already addresses commits by SHA so no branch arg is needed there. Only the initial "fetch latest SHA" call needs the constraint.
 - If output is `"MISSING"`, classify status as `MISSING_UPSTREAM` (file deleted or path renamed upstream — treat as a security signal in step 5).
 - If the API call fails:
   - On `429` or `5xx`: wait 60 seconds and retry once. If still failing, mark `UNREACHABLE` for this run.
