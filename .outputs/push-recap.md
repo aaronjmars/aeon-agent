@@ -1,20 +1,17 @@
-*Push Recap — 2026-05-20*
-aeon (9), aeon-agent (1+cron), minitor (3) — 14 substantive commits, +2,213/-167 lines.
+*Push Recap — 2026-05-21*
 
-Dashboard hardening: new loopback /api/* gate + middleware (#188, +433), next 16.2.6 bump + postcss override (#189), gh CLI preflight in ./aeon launcher (#190), stricter OAuth token reassembly (#194).
+10 substantive PRs across aeon (7), aeon-agent (2), minitor (1). Quietest day of the week for @aaronjmars (4 PRs); the other 6 came from antfleet-ops (3), Fleet Watcher (1), wx888 (1), and danbuildss (1).
 
-Silent-failure fixes (AntFleet H6/H2/H8): scan.sh PCRE→POSIX-ERE across all 28 patterns so BSD/macOS grep stops silently no-op'ing (#197), Slack bot-message filter from string "null" to empty-string check (#196), admanage spend-cap fails closed on non-numeric TODAY_SPEND (#195).
+*Issue #184 silent-failure cleanup:* Four AntFleet Highs closed in one morning push — H3 contributor-spotlight extracts FORK_DEFAULT_BRANCH from /tmp/contrib-repo.json (PR #206, every non-`main` fork was getting wrong ENABLED_SKILLS/OPERATOR_AUTHORED counts); H4 fleet-state now creates the .bak BEFORE the write and validates the temp file BEFORE promoting it (PR #203, previous logic was overwriting the live file before validation with no recovery path); H7 skill-update-check passes `-f sha="${branch}"` so non-default-branch skills don't get compared against `main` (PR #201); H9 admanage builds an ID→name reverse map so ad sets with a direct campaignId still land in .admanage-state/campaigns.json (PR #204, previously they were created in AdManage but not in state, leading to duplicate provisioning on the next run). Open Highs queue: 5 → 1 (only H1 v4-readiness-manifest left).
 
-Catalog & community: Community Skill Packs README section (#187, first listed pack: vvvkernel), catalog 120→121 + skill.jpg refresh (#191), asset rename to bust CDN cache (#192).
+*Authorization layer:* Fleet Watcher PR #200 wraps every skill run in an opt-in preflight/postflight pair to a self-hosted control plane — first synchronous pre-skill veto in aeon's workflow file. Fail-closed on Fleet unreachability when secrets are set; no-op when secrets absent.
 
-minitor +3 columns 44→47: GitHub Discussions GraphQL (#43, 45th, MessageSquare/purple), CoinGecko trending+top+watchlist (#44, 46th, TrendingUp/green), DeFiLlama TVL top/gainers/chains (#45, 47th, Layers/blue — pivot from dead IndieHackers RSS).
-
-aeon-agent: 10th consecutive same-day-after backport — competitor-launch-radar from upstream PR #183 (#53). skills.json 88→89.
+*Email delivery:* wx888 PR #205 wires Resend into morning-brief and weekly-review — first non-IM notification channel (`./notify` was Telegram → Discord → Slack only until today).
 
 Key changes:
-- dashboard middleware.ts + lib/security/api-gate.ts: first dedicated security module in the dashboard tree (+387 lines incl. unit tests)
-- scan.sh 28 POSIX-ERE rewrites: closes the silent macOS-operator scanning gap that no test caught for weeks
-- minitor on-chain cluster 4→6 columns: zero-overlap pair (price+cap from CoinGecko, TVL+protocol from DeFiLlama)
+- aeon PR #200: aeon.yml +100 lines, two new GHA steps gating Run on Fleet Watcher allow/block + postflight chain detection
+- aeon-agent PR #55: same-day-after backport of H7 skill-update-check fix, with smarter omit-when-default heuristic (avoids hardcoding `sha=main` so source repos with `master` defaults still work)
+- minitor PR #46: third deck-portability primitive — share via `#deck=...` URL fragment (UTF-8-safe base64url, 32 KB cap, multi-param-tolerant); auto-imports on load via existing importDeck server action, no new schema
 
-Stats: 28 files, +2,213/-167 lines, 4 AntFleet Highs closed, 5 remaining (H1/H3/H4/H7/H9)
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-20.md
+Stats: 15 files changed, +430/-15 lines
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-21.md

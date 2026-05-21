@@ -1,0 +1,273 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-21"
+      },
+      "children": [
+        "summary-text",
+        "sep1",
+        "issue184-section",
+        "sep2",
+        "auth-section",
+        "sep3",
+        "email-section",
+        "sep4",
+        "changes-section",
+        "sep5",
+        "stats-section",
+        "full-link"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "10 substantive PRs across aeon (7), aeon-agent (2), minitor (1). Quietest day of the week for @aaronjmars (4 PRs); the other 6 came from antfleet-ops (3), Fleet Watcher (1), wx888 (1), and danbuildss (1)."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "issue184-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue184-heading",
+        "issue184-intro",
+        "pr206-item",
+        "pr203-item",
+        "pr201-item",
+        "pr204-item",
+        "queue-text"
+      ]
+    },
+    "issue184-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Issue #184 silent-failure cleanup",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "issue184-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Four AntFleet Highs closed in one morning push:"
+      },
+      "children": []
+    },
+    "pr206-item": {
+      "type": "Text",
+      "props": {
+        "text": "H3 contributor-spotlight extracts FORK_DEFAULT_BRANCH from /tmp/contrib-repo.json (PR #206, every non-main fork was getting wrong ENABLED_SKILLS/OPERATOR_AUTHORED counts)"
+      },
+      "children": []
+    },
+    "pr203-item": {
+      "type": "Text",
+      "props": {
+        "text": "H4 fleet-state now creates the .bak BEFORE the write and validates the temp file BEFORE promoting it (PR #203, previous logic was overwriting the live file before validation with no recovery path)"
+      },
+      "children": []
+    },
+    "pr201-item": {
+      "type": "Text",
+      "props": {
+        "text": "H7 skill-update-check passes -f sha=\"${branch}\" so non-default-branch skills don't get compared against main (PR #201)"
+      },
+      "children": []
+    },
+    "pr204-item": {
+      "type": "Text",
+      "props": {
+        "text": "H9 admanage builds an ID→name reverse map so ad sets with a direct campaignId still land in .admanage-state/campaigns.json (PR #204, previously they were created in AdManage but not in state, leading to duplicate provisioning on the next run)"
+      },
+      "children": []
+    },
+    "queue-text": {
+      "type": "Text",
+      "props": {
+        "text": "Open Highs queue: 5 → 1 (only H1 v4-readiness-manifest left)"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "auth-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "auth-heading",
+        "auth-text"
+      ]
+    },
+    "auth-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Authorization layer",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "auth-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet Watcher PR #200 wraps every skill run in an opt-in preflight/postflight pair to a self-hosted control plane — first synchronous pre-skill veto in aeon's workflow file. Fail-closed on Fleet unreachability when secrets are set; no-op when secrets absent."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "email-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "email-heading",
+        "email-text"
+      ]
+    },
+    "email-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Email delivery",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "email-text": {
+      "type": "Text",
+      "props": {
+        "text": "wx888 PR #205 wires Resend into morning-brief and weekly-review — first non-IM notification channel (./notify was Telegram → Discord → Slack only until today)."
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "changes-heading",
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #200: aeon.yml +100 lines, two new GHA steps gating Run on Fleet Watcher allow/block + postflight chain detection"
+      },
+      "children": []
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #55: same-day-after backport of H7 skill-update-check fix, with smarter omit-when-default heuristic (avoids hardcoding sha=main so source repos with master defaults still work)"
+      },
+      "children": []
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "minitor PR #46: third deck-portability primitive — share via #deck=... URL fragment (UTF-8-safe base64url, 32 KB cap, multi-param-tolerant); auto-imports on load via existing importDeck server action, no new schema"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stats-files",
+        "stats-additions",
+        "stats-deletions"
+      ]
+    },
+    "stats-files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "15"
+      },
+      "children": []
+    },
+    "stats-additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+430"
+      },
+      "children": []
+    },
+    "stats-deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "-15"
+      },
+      "children": []
+    },
+    "full-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-21.md",
+        "source": "aeon-agent"
+      },
+      "children": []
+    }
+  }
+}
