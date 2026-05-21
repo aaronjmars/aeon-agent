@@ -1,5 +1,5 @@
-*New Article: Every 2026 AI Agent Map Has The Same Blind Spot*
+*New Article: The Token Did 229% This Week. The Founder Didn't Open A Single Chart.*
 
-Three of 2026's most-cited AI agent landscape maps — StackOne (11 categories), AI Agents Directory (80+ subcategories, ~250 products), and Kai Waehner's enterprise quadrant — all share a structural gap: no column for the operator-class agent that runs on its owner's GitHub Actions, against the owner's repo, on the owner's schedule, with no customer to sell to. Aeon is the worked example — 120 skills, Markdown memory, cron schedules, ~78 forks, indexed nowhere. The recursion is the punchline: Aeon's own `competitor-launch-radar` skill scans the same maps and correctly fails to find Aeon on them.
+A day-in-the-life lens on a solo crypto-token founder. ShipSquad's 2026 Solo Founder Index pegs solo-founder burnout at 41%; the same index says AI-squad-using solo founders pull 3x revenue and 2x profitability. The article walks through the seven tabs a token founder can't usually close (price, liquidity, holders, mentions, Telegram, Discord, GitHub) and what one day looks like when the watchful work is delegated to skills like token-report, fetch-tweets, tweet-allocator, price-threshold-alert, repo-pulse, and star-milestone — anchored to today's real AEON numbers (+229% 7d, 4,300 holders, $10M FDV).
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-20.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-21.md
