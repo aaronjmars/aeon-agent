@@ -1,11 +1,11 @@
-*Repo Pulse — 2026-05-20*
+*Repo Pulse — 2026-05-21*
 [aaronjmars/aeon]
 
-Stars: 402 total (+14 new)
-Forks: 88 total (+1 new)
+Stars: 417 total (+16 new)
+Forks: 98 total (+12 new)
 
 New stargazers:
-github.com/Michael-Abril | github.com/drok74 | github.com/ivanzinho09 | github.com/nmarcetic | github.com/ericbrown99 | github.com/xSatori | github.com/qdriven | github.com/DevZenPro | github.com/neeko-zil | github.com/ponderingdemocritus | github.com/instafire | github.com/atmoon8823 | github.com/shauqiiskandar | github.com/zmeet-ai
+github.com/zmeet-ai | github.com/FlorentSarrot | github.com/olive-spec393 | github.com/tianchen-crypto | github.com/bitcoiner-lab | github.com/jasonCodeSpace | github.com/gskrovina | github.com/dolbabot | github.com/cesareuseche | github.com/mdnaimul22 | github.com/SerialLockedIn | github.com/samholmes | github.com/wwwcolorcolor | github.com/0xPanty | github.com/beauwilliams | github.com/cersei420
 
 New forks:
-github.com/antfleet-ops/aeon
+github.com/cersei420/aeon | github.com/wx888/aeon | github.com/jonathanjoseph20/aeon | github.com/fleet-watcher/aeon | github.com/nipmod/aeon | github.com/danbuildss/aeon | github.com/smolboon/aeon | github.com/0xMal0u/aeon | github.com/youpsla/aeon | github.com/PyroFire-Labs/larry | github.com/LiamVisionary/aeon | github.com/bitcoiner-lab/aeon
