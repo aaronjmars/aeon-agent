@@ -1,0 +1,41 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Allocator"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date",
+        "status"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-21",
+        "variant": "caption"
+      }
+    },
+    "status": {
+      "type": "Alert",
+      "props": {
+        "title": "No Eligible Tweeters",
+        "message": "None had a verified Bankr wallet today.",
+        "type": "info"
+      }
+    }
+  }
+}
