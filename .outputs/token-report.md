@@ -1,10 +1,10 @@
-*AEON Daily — 2026-05-21*
+*$AEON Daily — 2026-05-22*
 
-Price: $0.0001045 (+15.22% 24h)
-Liquidity: $3.21M | 24h Vol: $2.96M (-29.8% 24h)
-Buys/Sells: 1,466/1,305
-7d: +229.7% price | 30d: +2,771% price | 7d avg vol: ~$1.95M/day
+Price: $0.00008295 (-18.0% 24h)
+Liquidity: $2.68M | 24h Vol: $2.08M (-29.8% vs May 21)
+Buys/Sells: 2,459/2,205
+7d: +161.6% price | 30d: +2,178% price
 
-Post-ATH consolidation continues: price reclaimed $0.000100 with growing pool liquidity ($3.21M, up from $2.35M on May 18); volume cooling from peak is healthy given the +880% rally in May 13–17.
+Digesting after a 7d +162% rally — intraday spike to $0.000110 found no follow-through; holder count at 4,300+ with whale concentration still falling.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
