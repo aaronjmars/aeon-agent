@@ -1,17 +1,20 @@
-*Push Recap — 2026-05-21*
+*Push Recap — 2026-05-22*
+aeon (3) + aeon-agent (2) + minitor (1) — 6 commits by 2 authors (@aaronjmars 4, AntFleet 2)
 
-10 substantive PRs across aeon (7), aeon-agent (2), minitor (1). Quietest day of the week for @aaronjmars (4 PRs); the other 6 came from antfleet-ops (3), Fleet Watcher (1), wx888 (1), and danbuildss (1).
+Community Skill Pack install protocol: aeon shipped ./install-skill-pack CLI + skills-pack.json manifest schema (PR #213, +720 lines) closing Issue #185's implied install gap; AntFleet/aeon-skills added to trusted-sources 23 min later (PR #211) — first third-party pack to clear fast-path install, same-window operator validation.
 
-*Issue #184 silent-failure cleanup:* Four AntFleet Highs closed in one morning push — H3 contributor-spotlight extracts FORK_DEFAULT_BRANCH from /tmp/contrib-repo.json (PR #206, every non-`main` fork was getting wrong ENABLED_SKILLS/OPERATOR_AUTHORED counts); H4 fleet-state now creates the .bak BEFORE the write and validates the temp file BEFORE promoting it (PR #203, previous logic was overwriting the live file before validation with no recovery path); H7 skill-update-check passes `-f sha="${branch}"` so non-default-branch skills don't get compared against `main` (PR #201); H9 admanage builds an ID→name reverse map so ad sets with a direct campaignId still land in .admanage-state/campaigns.json (PR #204, previously they were created in AdManage but not in state, leading to duplicate provisioning on the next run). Open Highs queue: 5 → 1 (only H1 v4-readiness-manifest left).
+Fleet-state hardening: AntFleet bench review caught two latent bugs in skills/fleet-state (PR #207) — empty-history abort under set -euo pipefail when contributor-spotlight has never run, and a Sandbox note that claimed no gh api calls while Step 2 made two; both fixed in one commit with explicit PARENT_OVERRIDE escape hatch documented.
 
-*Authorization layer:* Fleet Watcher PR #200 wraps every skill run in an opt-in preflight/postflight pair to a self-hosted control plane — first synchronous pre-skill veto in aeon's workflow file. Fail-closed on Fleet unreachability when secrets are set; no-op when secrets absent.
+macOS scanner backport: aeon-agent PR #56 verbatim-backports upstream PRs #186 (Bash 3.2 array-emptiness) + #197 (POSIX-ERE \s/\b → [[:space:]] + ($|[^[:alnum:]_-])); 28 patterns rewritten across HIGH/MEDIUM/LOW arrays — closes silent-degradation hazard for every macOS operator (BSD grep was treating PCRE escapes as literals; eval\s, rm\s+-rf\s+/, prompt-injection patterns all no-op'd).
 
-*Email delivery:* wx888 PR #205 wires Resend into morning-brief and weekly-review — first non-IM notification channel (`./notify` was Telegram → Discord → Slack only until today).
+Self-improve word boundary: aeon-agent PR #57 fixes ./notify substring matcher in aeon.yml that silently swallowed real notifications containing test/trace/ping/debug inside another word ("Latest token-report", "Shipping 3 PRs", "Tracer code", "Pinging operator"); threshold lowered 120→60, two heredoc blocks patched.
+
+Minitor onboarding gap: PR #47 ships four pre-baked deck templates (AI Research, Base Ecosystem, Crypto DeFi, Startup Tracker — last fully keyless) via onboarding screen + ⌘K command, served through existing DeckExport v1 + importDeck path (no new schema/route). Two clicks from blank install to live dashboard.
 
 Key changes:
-- aeon PR #200: aeon.yml +100 lines, two new GHA steps gating Run on Fleet Watcher allow/block + postflight chain detection
-- aeon-agent PR #55: same-day-after backport of H7 skill-update-check fix, with smarter omit-when-default heuristic (avoids hardcoding `sha=main` so source repos with `master` defaults still work)
-- minitor PR #46: third deck-portability primitive — share via `#deck=...` URL fragment (UTF-8-safe base64url, 32 KB cap, multi-param-tolerant); auto-imports on load via existing importDeck server action, no new schema
+- install-skill-pack (+546 lines Bash, 5 flags including --list/--path/--branch/--yes/--force/--dry-run) — the first one-command install surface for community packs since the README section was added
+- aeon-agent .github/workflows/aeon.yml notify heredoc: glob substring → bash regex word-boundary (^[^a-z]*(test|trace|ping|debug)([^a-z]|$)) in both inline + post-run pending-notify replay blocks
+- minitor lib/deck-templates.ts (+273 lines, TS not JSON so brand color + lucide icon travel with payload) — DeckExport v1 schema unchanged, fifth template is a single-record PR
 
-Stats: 15 files changed, +430/-15 lines
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-21.md
+Stats: 13 files changed, +1582/-81 lines across 6 substantive commits
+Full recap: articles/push-recap-2026-05-22.md (in aaronjmars/aeon-agent)

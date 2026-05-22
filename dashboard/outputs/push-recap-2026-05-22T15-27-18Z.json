@@ -1,0 +1,272 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_title",
+        "text_summary",
+        "sep1",
+        "section_skill_pack",
+        "sep2",
+        "section_fleet",
+        "sep3",
+        "section_macos",
+        "sep4",
+        "section_word_boundary",
+        "sep5",
+        "section_minitor",
+        "sep6",
+        "section_key_changes",
+        "sep7",
+        "section_stats"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Push Recap — 2026-05-22",
+        "level": "h2"
+      }
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "aeon (3) + aeon-agent (2) + minitor (1) — 6 commits by 2 authors (@aaronjmars 4, AntFleet 2)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_skill_pack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_skill_pack",
+        "text_skill_pack"
+      ]
+    },
+    "heading_skill_pack": {
+      "type": "Heading",
+      "props": {
+        "text": "Community Skill Pack install protocol",
+        "level": "h3"
+      }
+    },
+    "text_skill_pack": {
+      "type": "Text",
+      "props": {
+        "text": "aeon shipped ./install-skill-pack CLI + skills-pack.json manifest schema (PR #213, +720 lines) closing Issue #185's implied install gap; AntFleet/aeon-skills added to trusted-sources 23 min later (PR #211) — first third-party pack to clear fast-path install, same-window operator validation."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fleet",
+        "text_fleet"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet-state hardening",
+        "level": "h3"
+      }
+    },
+    "text_fleet": {
+      "type": "Text",
+      "props": {
+        "text": "AntFleet bench review caught two latent bugs in skills/fleet-state (PR #207) — empty-history abort under set -euo pipefail when contributor-spotlight has never run, and a Sandbox note that claimed no gh api calls while Step 2 made two; both fixed in one commit with explicit PARENT_OVERRIDE escape hatch documented."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_macos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_macos",
+        "text_macos"
+      ]
+    },
+    "heading_macos": {
+      "type": "Heading",
+      "props": {
+        "text": "macOS scanner backport",
+        "level": "h3"
+      }
+    },
+    "text_macos": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #56 verbatim-backports upstream PRs #186 (Bash 3.2 array-emptiness) + #197 (POSIX-ERE \\s/\\b → [[:space:]] + ($|[^[:alnum:]_-])); 28 patterns rewritten across HIGH/MEDIUM/LOW arrays — closes silent-degradation hazard for every macOS operator (BSD grep was treating PCRE escapes as literals; eval\\s, rm\\s+-rf\\s+/, prompt-injection patterns all no-op'd)."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_word_boundary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_word_boundary",
+        "text_word_boundary"
+      ]
+    },
+    "heading_word_boundary": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-improve word boundary",
+        "level": "h3"
+      }
+    },
+    "text_word_boundary": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #57 fixes ./notify substring matcher in aeon.yml that silently swallowed real notifications containing test/trace/ping/debug inside another word (\"Latest token-report\", \"Shipping 3 PRs\", \"Tracer code\", \"Pinging operator\"); threshold lowered 120→60, two heredoc blocks patched."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_minitor",
+        "text_minitor"
+      ]
+    },
+    "heading_minitor": {
+      "type": "Heading",
+      "props": {
+        "text": "Minitor onboarding gap",
+        "level": "h3"
+      }
+    },
+    "text_minitor": {
+      "type": "Text",
+      "props": {
+        "text": "PR #47 ships four pre-baked deck templates (AI Research, Base Ecosystem, Crypto DeFi, Startup Tracker — last fully keyless) via onboarding screen + ⌘K command, served through existing DeckExport v1 + importDeck path (no new schema/route). Two clicks from blank install to live dashboard."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_key_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_key_changes",
+        "text_key_1",
+        "text_key_2",
+        "text_key_3"
+      ]
+    },
+    "heading_key_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "text_key_1": {
+      "type": "Text",
+      "props": {
+        "text": "install-skill-pack (+546 lines Bash, 5 flags including --list/--path/--branch/--yes/--force/--dry-run) — the first one-command install surface for community packs since the README section was added"
+      }
+    },
+    "text_key_2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent .github/workflows/aeon.yml notify heredoc: glob substring → bash regex word-boundary (^[^a-z]*(test|trace|ping|debug)([^a-z]|$)) in both inline + post-run pending-notify replay blocks"
+      }
+    },
+    "text_key_3": {
+      "type": "Text",
+      "props": {
+        "text": "minitor lib/deck-templates.ts (+273 lines, TS not JSON so brand color + lucide icon travel with payload) — DeckExport v1 schema unchanged, fifth template is a single-record PR"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_stats",
+        "text_stats",
+        "story_recap"
+      ]
+    },
+    "heading_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Statistics",
+        "level": "h3"
+      }
+    },
+    "text_stats": {
+      "type": "Text",
+      "props": {
+        "text": "13 files changed, +1582/-81 lines across 6 substantive commits"
+      }
+    },
+    "story_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "push-recap-2026-05-22",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-22.md",
+        "source": "aaronjmars/aeon-agent"
+      }
+    }
+  }
+}
