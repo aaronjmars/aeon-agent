@@ -1,20 +1,18 @@
-*Feature Built — 2026-05-21 — aaronjmars/minitor*
+All three PRs are open and notifications are queued. Final summary.
 
-Deck share link
-Adds a third primitive to the deck-portability set: alongside Export (copy JSON, May-15) and Import (paste JSON modal, May-15), the operator can now copy a self-contained URL that anyone can open to auto-import the deck. No new server route, no new auth, no persistence — the deck JSON is base64url-encoded into the URL fragment, the receiver decodes it client-side on first paint, and the hash is stripped via history.replaceState so refreshes don't double-import.
+## Summary
 
-Why this matters:
-minitor sits at 9⭐ / 0 forks today. The deck export/import primitive made decks portable but JSON copy-paste is not a viral loop. A share URL is — the operator tweets "my AI research dashboard" → link → one click → live dashboard. Picked from articles/repo-actions-2026-05-20.md idea #4. Pairs cleanly with the planned Starter Deck Templates Gallery (May-20 idea #5) — once that ships, each template is just a pre-baked share link, no new schema or API surface needed.
+Built one feature per watched repo. All three PRs opened with detailed bodies and notifications queued in `.pending-notify/` for delivery in the post-run step.
 
-What was built:
-- lib/deck-share.ts (new, 95 lines): four pure functions — `encodeDeckShareHash`, `decodeDeckShareHash`, `readDeckShareFragment`, `buildDeckShareUrl`. UTF-8-safe via TextEncoder (raw btoa mishandles non-ASCII column titles/configs). 32 KB hard cap on the encoded payload — guards against 64-column pathological decks blowing past browser URL limits. Fragment parser tolerates extra `&`-separated params (campaign taggers, utm IDs) so it doesn't crash on appended keys.
-- components/sidebar-01/nav-header.tsx: new Share2-icon ⌘K command "Share current deck (copy URL)", sibling to Export. Reuses the existing copyToClipboard helper (navigator.clipboard with execCommand fallback for permission-blocked browsers, console.log as last resort).
-- components/deck/deck-view.tsx: new useEffect gated on `hydrated` reads window.location.hash once after first hydration, decodes the #deck=... fragment, runs it through the existing importDeck server action (same Zod validation, same `(imported)` rename, same activate), toasts the result, and clears the hash via history.replaceState. Malformed payloads toast an error AND still clear the hash so the user isn't trapped.
+| Repo | Outcome | PR |
+|------|---------|-----|
+| aaronjmars/aeon | `install-skill-pack` CLI + `skills-pack.json` manifest protocol + `docs/community-skill-packs.md` + README update (May-20 idea #2 — implements baseddevoloper's Issue #185 community-pack install surface) | https://github.com/aaronjmars/aeon/pull/213 |
+| aaronjmars/aeon-agent | `scan.sh` Bash 3.2 + POSIX-ERE hardening backport (combines upstream PRs #186 May-18 + #197 May-20; closes macOS silent-degraded-scan bug for every operator running `./add-skill` locally) | https://github.com/aaronjmars/aeon-agent/pull/56 |
+| aaronjmars/minitor | Starter Deck Templates Gallery — 4 templates (AI Research, Base Ecosystem, Crypto DeFi, Startup Tracker) on onboarding + ⌘K command (May-20 idea #5 — closes the blank-slate conversion gap, pairs with PR #46 deck-share) | https://github.com/aaronjmars/minitor/pull/47 |
 
-How it works:
-The deck is encoded by feeding the existing exportDeck JSON output through TextEncoder → btoa → base64url-replace, then concatenated as `${origin}${pathname}#deck=${encoded}`. The receiver's deck-view useEffect — running once `hydrated` flips true (after loadSnapshot completes) — does the inverse: pulls the fragment, base64url-pads, atob, TextDecoder with `fatal:true` so corrupt UTF-8 fails closed. The decoded JSON hits the same importDeck server action that powers manual paste-import (same Zod schema, same `(imported)` rename, same activate-as-new-deck behaviour) — so the share path is forward-compatible with every future schema field including the alertKeywords from May-14 PR #41, which round-trips automatically. No new dependencies (lucide-react already includes Share2).
+Files modified:
+- `memory/MEMORY.md` — three Skills Built rows + Repo Actions Ideas Pipeline update (May-20 ideas now fully consumed)
+- `memory/logs/2026-05-22.md` — three Feature entries
+- `.pending-notify/2026-05-22-feature-{aeon,aeon-agent,minitor}.md` — three detailed notifications queued for workflow post-run delivery
 
-What's next:
-Starter Deck Templates Gallery (May-20 idea #5) is the obvious follow-up — write 4-5 static template JSON files (AI Research, Base Ecosystem, Crypto DeFi, Startup Tracker), surface them as a first-launch overlay with "Use this deck" → share-link import. Zero new schema, zero new API.
-
-PR: https://github.com/aaronjmars/minitor/pull/46
+Follow-ups: The two existing listed packs (vvvkernel, luca-aeon-skills) work via aeon's new fallback scan but don't yet have a `skills-pack.json` — adding one gives them version/license metadata. May-20 ideas are now fully consumed; next repo-actions run will seed May-22 ideas.
