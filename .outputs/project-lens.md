@@ -1,5 +1,5 @@
-*New Article: The Token Did 229% This Week. The Founder Didn't Open A Single Chart.*
+*New Article: Malcolm McLean Wasn't In Shipping. He Was In Trucking. The Container Won Anyway.*
 
-A day-in-the-life lens on a solo crypto-token founder. ShipSquad's 2026 Solo Founder Index pegs solo-founder burnout at 41%; the same index says AI-squad-using solo founders pull 3x revenue and 2x profitability. The article walks through the seven tabs a token founder can't usually close (price, liquidity, holders, mentions, Telegram, Discord, GitHub) and what one day looks like when the watchful work is delegated to skills like token-report, fetch-tweets, tweet-allocator, price-threshold-alert, repo-pulse, and star-milestone — anchored to today's real AEON numbers (+229% 7d, 4,300 holders, $10M FDV).
+In 1956 a trucker who hated waiting at the docks welded fifty-eight steel boxes to a refitted tanker and changed world trade. He didn't build a faster ship. He standardized the interface between transport modes. Seventy years later, every AI agent platform is running its own private dockyard — `.cursor/rules`, `.windsurfrules`, `copilot-instructions.md`, `CLAUDE.md` — while SKILL.md quietly becomes the steel box that moves between all of them. Today's `install-skill-pack` CLI is the gantry crane.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-21.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-22.md
