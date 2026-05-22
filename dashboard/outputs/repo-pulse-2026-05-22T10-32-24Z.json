@@ -1,0 +1,210 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "repo-link",
+        "stats-section",
+        "separator-1",
+        "stargazers-section",
+        "separator-2",
+        "forks-section"
+      ]
+    },
+    "repo-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "421",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "103",
+        "delta": "+7",
+        "trend": "up"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers-heading",
+        "stargazers-links"
+      ]
+    },
+    "stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-chrisjkale13",
+        "link-anajuliabit",
+        "link-saulsharma",
+        "link-i-am-henri"
+      ]
+    },
+    "link-chrisjkale13": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/chrisjkale13",
+        "href": "https://github.com/chrisjkale13"
+      }
+    },
+    "link-anajuliabit": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anajuliabit",
+        "href": "https://github.com/anajuliabit"
+      }
+    },
+    "link-saulsharma": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/saulsharma",
+        "href": "https://github.com/saulsharma"
+      }
+    },
+    "link-i-am-henri": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/i-am-henri",
+        "href": "https://github.com/i-am-henri"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks-heading",
+        "forks-links"
+      ]
+    },
+    "forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "forks-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ryjin111",
+        "link-happycamper-stix",
+        "link-svenakira",
+        "link-taekwonv89",
+        "link-0xshak",
+        "link-bweick",
+        "link-gitlawbounty"
+      ]
+    },
+    "link-ryjin111": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/ryjin111/aeon",
+        "href": "https://github.com/ryjin111/aeon"
+      }
+    },
+    "link-happycamper-stix": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/happycamper-stix/aeon",
+        "href": "https://github.com/happycamper-stix/aeon"
+      }
+    },
+    "link-svenakira": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/svenakira/aeon",
+        "href": "https://github.com/svenakira/aeon"
+      }
+    },
+    "link-taekwonv89": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/taekwonv89/aeon",
+        "href": "https://github.com/taekwonv89/aeon"
+      }
+    },
+    "link-0xshak": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/0xShak/aeon",
+        "href": "https://github.com/0xShak/aeon"
+      }
+    },
+    "link-bweick": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/bweick/aeon",
+        "href": "https://github.com/bweick/aeon"
+      }
+    },
+    "link-gitlawbounty": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/gitlawbounty/aeon",
+        "href": "https://github.com/gitlawbounty/aeon"
+      }
+    }
+  }
+}
