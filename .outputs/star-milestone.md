@@ -1,10 +1,16 @@
 ## Summary
 
-Ran `star-milestone` for all 3 watched repos (aeon-agent skipped per the name filter rule).
+Ran `star-milestone` across the three watched repos. No notifications sent — no new milestones crossed.
 
-- **aaronjmars/aeon** — 420 stars. Highest crossed threshold is 400, which is already recorded as `2026-05-20 (organic)` in `memory/topics/milestones.md`. Gate 5a → no action.
-- **aaronjmars/minitor** — 9 stars. Below first threshold (25). `STAR_MILESTONE_QUIET`.
+**Per-repo verdicts:**
+- **aaronjmars/aeon**: 423 stars. Highest threshold ≤ count is 400, already recorded on 2026-05-20 as `organic` → gate 5a (already recorded), no action.
+- **aaronjmars/aeon-agent**: skipped per step 1's agent-repo exclusion (name contains `aeon-agent`).
+- **aaronjmars/minitor**: 9 stars, below the first threshold (25) → `STAR_MILESTONE_QUIET`.
 
-No notifications sent. No state changes to `memory/topics/milestones.md`. Logged a `## Star Milestone` block to `memory/logs/2026-05-21.md`.
+**Files modified:**
+- `memory/logs/2026-05-22.md` — appended `## Star Milestone` log entry
 
-Status: `STAR_MILESTONE_QUIET` across the run.
+**Files unchanged:**
+- `memory/topics/milestones.md` — no new entries (no thresholds crossed)
+
+**Follow-up:** None. Next aeon milestone (500) is ~77 stars away; the star-momentum log from earlier today projected ~2026-05-28 ETA at current pace.
