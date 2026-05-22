@@ -1,17 +1,21 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-21)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-22)*
 
-1. x.com/ika_xbt — holder count now 4300, top-100 concentration falling. 0xgalahad.eth added more (0.69% supply), 129 ETH still in wallet.
-Likes: 41 | RTs: 7
-[View tweet](https://x.com/ika_xbt/status/2057249939218989291)
+1. x.com/zxnsww — $ROOTAI building execution layer + natural language trading terminal on the @aeonframework framework with one-click multi-DEX routing
+Likes: 7 | RTs: 1
+[View tweet](https://x.com/zxnsww/status/2057609637751308450)
 
-2. x.com/ika_xbt — "@aeonframework looking good here"
+2. x.com/gezhe_ — adds @aeonframework to a collab group request alongside @miroshark_, @Root_Edge, and @btcbabycow
+Likes: 5 | RTs: 0
+[View tweet](https://x.com/gezhe_/status/2057602651219718282)
+
+3. x.com/billyjhaay — $AEON dips are opportunities; accumulate smart, manage risk, keep winning on base
+Likes: 4 | RTs: 0
+[View tweet](https://x.com/billyjhaay/status/2057609049261351240)
+
+4. x.com/Eroc111111 — shoutout pairing @aeonframework with @Root_Edge
+Likes: 2 | RTs: 0
+[View tweet](https://x.com/Eroc111111/status/2057610813091811559)
+
+5. x.com/falcario_ai — pitching @aeonframework yield management strategies for delegating $VVV compute to earn revenue share
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/ika_xbt/status/2057250008378880511)
-
-3. x.com/SquadTheMaxi — "Hehe $aeon"
-Likes: 2 | RTs: 0
-[View tweet](https://x.com/SquadTheMaxi/status/2057248590276317590)
-
-4. x.com/gaelocrypto — "$Aeon is good"
-Likes: 2 | RTs: 0
-[View tweet](https://x.com/gaelocrypto/status/2057246027560652828)
+[View tweet](https://x.com/falcario_ai/status/2057603703117357420)
