@@ -1,0 +1,59 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading-title",
+        "text-body",
+        "badge-usdc",
+        "badge-x402",
+        "badge-gitbounty",
+        "story-link"
+      ]
+    },
+    "heading-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Five Skill Packs Were Already Being Built. Aeon Shipped The Install Protocol This Morning. The First One Plugged In Twenty Minutes Later.",
+        "level": "h2"
+      }
+    },
+    "text-body": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon merged install-skill-pack CLI + skills-pack.json manifest at 13:36 UTC. Twenty minutes later AntFleet's PR #211 added itself to trusted-sources — first registered consumer the same hour the protocol shipped. Three more community packs already mid-PR with three different payment models:"
+      }
+    },
+    "badge-usdc": {
+      "type": "Badge",
+      "props": {
+        "text": "USDC channel"
+      }
+    },
+    "badge-x402": {
+      "type": "Badge",
+      "props": {
+        "text": "x402Books"
+      }
+    },
+    "badge-gitbounty": {
+      "type": "Badge",
+      "props": {
+        "text": "gitbounty platform"
+      }
+    },
+    "story-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-22.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

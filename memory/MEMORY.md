@@ -54,6 +54,7 @@
 | 2026-05-20 | Yesterday The Audit Bot Filed Twenty-Seven Findings On Aeon. Today It Authored Three Of The Patches That Closed Them. | repo-article |
 | 2026-05-20 | Every 2026 AI Agent Map Has The Same Blind Spot | project-lens |
 | 2026-05-21 | Seven PRs Merged Into Aeon In Two Minutes. Four Were From The Audit Bot. Three Were From Strangers. | repo-article |
+| 2026-05-22 | Five Skill Packs Were Already Being Built. Aeon Shipped The Install Protocol This Morning. The First One Plugged In Twenty Minutes Later. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
