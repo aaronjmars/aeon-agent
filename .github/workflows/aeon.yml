@@ -262,17 +262,20 @@ jobs:
           set -euo pipefail
           MSG="$1"
 
-          # Suppress obvious diagnostic probes (short messages containing test/trace/ping/debug/hello).
-          # Claude sometimes issues these to verify the notify script works — they should not reach channels.
+          # Suppress obvious diagnostic probes — Claude sometimes issues short test messages
+          # like "test", "ping", "hello" to verify the notify path works. Detect by word
+          # boundary so real notifications containing "latest", "shipping", "tracer",
+          # "pinging" inside body text are not swallowed (the previous substring matcher
+          # silently dropped any short message with those fragments — e.g. "Latest
+          # token-report" was eaten because "test" appears inside "latest").
           MSG_LEN=${#MSG}
-          if [ "$MSG_LEN" -lt 120 ]; then
+          if [ "$MSG_LEN" -lt 60 ]; then
             MSG_LOWER=$(printf '%s' "$MSG" | tr '[:upper:]' '[:lower:]')
-            case "$MSG_LOWER" in
-              *test*|*trace*|*ping*|*debug*|hello|hi)
-                echo "notify: suppressing trace/test message ($MSG_LEN chars): $MSG" >&2
-                exit 0
-                ;;
-            esac
+            if [[ "$MSG_LOWER" =~ ^[^a-z]*(test|trace|ping|debug)([^a-z]|$) ]] || \
+               [[ "$MSG_LOWER" =~ ^[[:space:]]*(hello|hi)[[:space:]]*$ ]]; then
+              echo "notify: suppressing trace/test message ($MSG_LEN chars): $MSG" >&2
+              exit 0
+            fi
           fi
 
           # Dedup within this workflow run — same message never sent twice even if ./notify is called again
@@ -659,16 +662,16 @@ jobs:
             [ -f "$pending" ] || continue
             MSG=$(cat "$pending")
 
-            # Suppress trivial probes
+            # Suppress trivial probes — word-boundary match so real notifications containing
+            # "latest", "shipping", "tracer" inside body text are not swallowed.
             MSG_LEN=${#MSG}
-            if [ "$MSG_LEN" -lt 120 ]; then
+            if [ "$MSG_LEN" -lt 60 ]; then
               MSG_LOWER=$(printf '%s' "$MSG" | tr '[:upper:]' '[:lower:]')
-              case "$MSG_LOWER" in
-                *test*|*trace*|*ping*|*debug*|hello|hi)
-                  echo "Skipping pending trace/test message: $MSG"
-                  continue
-                  ;;
-              esac
+              if [[ "$MSG_LOWER" =~ ^[^a-z]*(test|trace|ping|debug)([^a-z]|$) ]] || \
+                 [[ "$MSG_LOWER" =~ ^[[:space:]]*(hello|hi)[[:space:]]*$ ]]; then
+                echo "Skipping pending trace/test message: $MSG"
+                continue
+              fi
             fi
 
             # Dedup against messages already sent by ./notify inline

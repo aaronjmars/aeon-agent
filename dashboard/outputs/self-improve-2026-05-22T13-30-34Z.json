@@ -1,0 +1,155 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement",
+        "description": "2026-05-22"
+      },
+      "children": [
+        "section-issue",
+        "separator-1",
+        "section-changes",
+        "separator-2",
+        "section-impact",
+        "separator-3",
+        "link-pr"
+      ]
+    },
+    "section-issue": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-issue",
+        "text-problem",
+        "text-why",
+        "text-examples"
+      ]
+    },
+    "heading-issue": {
+      "type": "Heading",
+      "props": {
+        "text": "Word-boundary diagnostic-probe suppression bug",
+        "level": "h2"
+      }
+    },
+    "text-problem": {
+      "type": "Text",
+      "props": {
+        "text": "The ./notify script's matcher was using glob substring (*test*|*trace*|*ping*|*debug*) to drop Claude's verification probes — and silently dropping any real notification under 120 chars that contained those fragments inside another word.",
+        "variant": "body"
+      }
+    },
+    "text-why": {
+      "type": "Text",
+      "props": {
+        "text": "Failure mode is silent — skills log notification: sent, but notify exits 0 having sent nothing. Several skills (star-milestone, star-momentum-alert, repo-pulse one-liners, heartbeat short verdicts) regularly fall under the 120-char threshold, and \"Latest\" / \"Shipping\" / \"Tracer\" are plausible first words in real notifications.",
+        "variant": "caption"
+      }
+    },
+    "text-examples": {
+      "type": "Text",
+      "props": {
+        "text": "Silently dropped notifications: \"Latest token-report ready\", \"Shipping 3 PRs to prod\", \"Tracer code lands\", \"Pinging the operator\"",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-changes",
+        "change-1",
+        "change-2",
+        "change-3"
+      ]
+    },
+    "heading-changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Changes",
+        "level": "h2"
+      }
+    },
+    "change-1": {
+      "type": "Text",
+      "props": {
+        "text": ".github/workflows/aeon.yml ./notify heredoc — substring case → bash regex [[ =~ ]] word-boundary match; threshold 120 → 60 (real probes are short); inline comment names the swallowed-notification failure mode",
+        "variant": "body"
+      }
+    },
+    "change-2": {
+      "type": "Text",
+      "props": {
+        "text": ".github/workflows/aeon.yml post-run pending-notify replay — identical fix to the second copy of the matcher",
+        "variant": "body"
+      }
+    },
+    "change-3": {
+      "type": "Text",
+      "props": {
+        "text": "memory/logs/2026-05-22.md + memory/MEMORY.md — log entry + open-improvement-PRs index",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-impact": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-impact",
+        "text-impact"
+      ]
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h2"
+      }
+    },
+    "text-impact": {
+      "type": "Text",
+      "props": {
+        "text": "Every skill that emits a short notification (star-milestone, momentum, pulse, heartbeat) now reliably reaches Telegram/Discord/Slack — no more silent suppression on \"Latest\" / \"Shipping\" / \"Tracer\" / \"Pinging\" body text. Diagnostic probes (\"test\", \"ping\", \"hello\") still suppressed as intended.",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #57: Fix word-boundary notification suppression",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/57",
+        "source": "GitHub"
+      }
+    }
+  }
+}
