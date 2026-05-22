@@ -120,6 +120,7 @@
 
 ## Open Improvement PRs
 - [#54 improve: project-lens — make 14d rotation rule mathematically feasible](https://github.com/aaronjmars/aeon-agent/pull/54) — aeon-agent, opened 2026-05-20 (self-improve; 8 angle categories vs daily runs made the stated 14d no-repeat rule unachievable by pigeonhole — reduced to 7d window + formalized sub-angle hygiene the agent was already practicing informally)
+- [#57 improve(notify): word-boundary suppression](https://github.com/aaronjmars/aeon-agent/pull/57) — aeon-agent, opened 2026-05-22 (self-improve; `./notify`'s substring matcher `*test*|*trace*|*ping*|*debug*` silently swallowed real notifications under 120 chars containing those fragments inside words — "Latest token-report", "Shipping 3 PRs", "Tracer code", "Pinging operator". Fixed both heredocs in aeon.yml — inline ./notify and post-run pending-notify replay — with bash regex word-boundary; threshold 120→60)
 
 ## Next Priorities
 - **URGENT** Enable show-hn-draft in aeon.yml — PR #151 (May 1); 400⭐ ORGANIC crossed 2026-05-20, Show HN dispatch overdue
