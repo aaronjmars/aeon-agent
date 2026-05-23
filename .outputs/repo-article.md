@@ -1,5 +1,5 @@
-*New Article: Five Skill Packs Were Already Being Built. Aeon Shipped The Install Protocol This Morning. The First One Plugged In Twenty Minutes Later.*
+*New Article: Yesterday Aeon Shipped The Install Protocol So Outsiders Wouldn't Need To Touch Upstream. Today A Three-Day-Old Account Touched Upstream Anyway.*
 
-Aeon merged `install-skill-pack` CLI + `skills-pack.json` manifest at 13:36 UTC. Twenty minutes later AntFleet's PR #211 added itself to trusted-sources — first registered consumer the same hour the protocol shipped. Three more community packs already mid-PR with three different payment models (USDC channel, x402Books, gitbounty platform).
+`lawbworld-tech` (GitHub account created 67 hours earlier) opened PR #214 against aaronjmars/aeon at 08:19 UTC: an hourly Base-mainnet cron with four hand-encoded selectors that replaces a "ssh in and run `npx hardhat run scripts/diag-fishing.js` 10+ times per day" workflow. The day after the install protocol shipped to keep external skills out of upstream, the first outside contract-reading skill went into upstream instead. Both paths are now in use by separate authors on the same day.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-22.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-23.md
