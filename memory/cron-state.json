@@ -163,10 +163,10 @@
   },
   "thread-formatter": {
     "last_dispatch": "2026-05-23T17:31:21Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-22T17:54:22Z",
-    "total_runs": 9,
-    "total_successes": 9,
+    "last_status": "success",
+    "last_success": "2026-05-23T17:36:07Z",
+    "total_runs": 10,
+    "total_successes": 10,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
