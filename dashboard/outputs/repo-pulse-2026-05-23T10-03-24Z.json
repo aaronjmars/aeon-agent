@@ -1,0 +1,216 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "repo-link",
+        "separator1",
+        "stats-heading",
+        "stats-stack",
+        "separator2",
+        "stargazers-heading",
+        "stargazers-stack",
+        "separator3",
+        "forks-heading",
+        "forks-stack"
+      ]
+    },
+    "repo-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon",
+        "source": "GitHub"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stars-stat",
+        "forks-stat"
+      ]
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "429",
+        "delta": "+8",
+        "trend": "up"
+      }
+    },
+    "forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "108",
+        "delta": "+5",
+        "trend": "up"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazer-1",
+        "stargazer-2",
+        "stargazer-3",
+        "stargazer-4",
+        "stargazer-5",
+        "stargazer-6",
+        "stargazer-7",
+        "stargazer-8"
+      ]
+    },
+    "stargazer-1": {
+      "type": "Link",
+      "props": {
+        "label": "AIEngineerX",
+        "href": "https://github.com/AIEngineerX"
+      }
+    },
+    "stargazer-2": {
+      "type": "Link",
+      "props": {
+        "label": "tory-equi",
+        "href": "https://github.com/tory-equi"
+      }
+    },
+    "stargazer-3": {
+      "type": "Link",
+      "props": {
+        "label": "normancomics",
+        "href": "https://github.com/normancomics"
+      }
+    },
+    "stargazer-4": {
+      "type": "Link",
+      "props": {
+        "label": "dillchen",
+        "href": "https://github.com/dillchen"
+      }
+    },
+    "stargazer-5": {
+      "type": "Link",
+      "props": {
+        "label": "trippyfish",
+        "href": "https://github.com/trippyfish"
+      }
+    },
+    "stargazer-6": {
+      "type": "Link",
+      "props": {
+        "label": "fooooo20",
+        "href": "https://github.com/fooooo20"
+      }
+    },
+    "stargazer-7": {
+      "type": "Link",
+      "props": {
+        "label": "Nuropunk",
+        "href": "https://github.com/Nuropunk"
+      }
+    },
+    "stargazer-8": {
+      "type": "Link",
+      "props": {
+        "label": "shiyankuan-crypto",
+        "href": "https://github.com/shiyankuan-crypto"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-1",
+        "fork-2",
+        "fork-3",
+        "fork-4",
+        "fork-5"
+      ]
+    },
+    "fork-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "sherwoodagent/aeon",
+        "href": "https://github.com/sherwoodagent/aeon"
+      }
+    },
+    "fork-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "imthefounder/aeon",
+        "href": "https://github.com/imthefounder/aeon"
+      }
+    },
+    "fork-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "luazhizhan/aeon",
+        "href": "https://github.com/luazhizhan/aeon"
+      }
+    },
+    "fork-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "lawbworld-tech/aeon",
+        "href": "https://github.com/lawbworld-tech/aeon"
+      }
+    },
+    "fork-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shiyankuan-crypto/aeon",
+        "href": "https://github.com/shiyankuan-crypto/aeon"
+      }
+    }
+  }
+}
