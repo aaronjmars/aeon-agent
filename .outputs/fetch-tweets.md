@@ -1,21 +1,21 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-22)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-23)*
 
-1. x.com/zxnsww — $ROOTAI building execution layer + natural language trading terminal on the @aeonframework framework with one-click multi-DEX routing
-Likes: 7 | RTs: 1
-[View tweet](https://x.com/zxnsww/status/2057609637751308450)
+1. x.com/gitblock\_ — GitBlock exploring future integration with aeonframework; "Free AI inference meets next-level infrastructure"
+Likes: 15 | RTs: 0 | Replies: 6
+[View tweet](https://x.com/gitblock_/status/2057834842361057781)
 
-2. x.com/gezhe_ — adds @aeonframework to a collab group request alongside @miroshark_, @Root_Edge, and @btcbabycow
-Likes: 5 | RTs: 0
-[View tweet](https://x.com/gezhe_/status/2057602651219718282)
+2. x.com/MrDegenWolf — $aeon mention
+Likes: 10 | RTs: 0 | Replies: 0
+[View tweet](https://x.com/MrDegenWolf/status/2057970545614852262)
 
-3. x.com/billyjhaay — $AEON dips are opportunities; accumulate smart, manage risk, keep winning on base
-Likes: 4 | RTs: 0
-[View tweet](https://x.com/billyjhaay/status/2057609049261351240)
+3. x.com/MacroBombastic — "give the intern $AEON"
+Likes: 2 | RTs: 0 | Replies: 0
+[View tweet](https://x.com/MacroBombastic/status/2057972944890990957)
 
-4. x.com/Eroc111111 — shoutout pairing @aeonframework with @Root_Edge
-Likes: 2 | RTs: 0
-[View tweet](https://x.com/Eroc111111/status/2057610813091811559)
+4. x.com/Mnosh06 — X Space recap: 2,000+ attendees, Miroshark token framework + x402 endpoint alpha, 500k stars on Aeon-secured projects, 30+ builders; self-healing + Instance Fleet experiments mentioned
+Likes: 1 | RTs: 0 | Replies: 0
+[View tweet](https://x.com/Mnosh06/status/2058057614374949297)
 
-5. x.com/falcario_ai — pitching @aeonframework yield management strategies for delegating $VVV compute to earn revenue share
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/falcario_ai/status/2057603703117357420)
+5. x.com/ochre\_hiss — Claims $AEON devs started a drop/claim for holders (link notfoundtoken.com — likely scam)
+Likes: 1 | RTs: 0 | Replies: 0
+[View tweet](https://x.com/ochre_hiss/status/2057970778180882819)

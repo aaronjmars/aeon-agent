@@ -386,3 +386,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-22,project-lens,claude-opus-4-7,2789,27403,2577096,139831
 2026-05-22,thread-formatter,claude-sonnet-4-6,9,28294,423386,68636
 2026-05-22,heartbeat,claude-sonnet-4-6,12,10424,539361,54964
+2026-05-23,fetch-tweets,claude-sonnet-4-6,15,8251,773106,56355
