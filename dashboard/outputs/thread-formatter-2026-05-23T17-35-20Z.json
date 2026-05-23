@@ -1,0 +1,106 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "thread-formatter"
+      },
+      "children": [
+        "heading-title",
+        "topic-text",
+        "sep-1",
+        "stack-points",
+        "link-pr",
+        "sep-2",
+        "article-text"
+      ]
+    },
+    "heading-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Thread Draft — 2026-05-23",
+        "level": "h2"
+      }
+    },
+    "topic-text": {
+      "type": "Text",
+      "props": {
+        "text": "Topic: Minitor /gallery public deck page — zero-login dashboard catalog",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-points": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "point-1",
+        "point-2",
+        "point-3",
+        "point-4",
+        "point-5"
+      ]
+    },
+    "point-1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ Four working Minitor dashboards are now public at /gallery. You can preview them, click one, and import it without logging in first."
+      }
+    },
+    "point-2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ The blank-slate problem was the top conversion killer for new installs. You'd open the app, see an empty sidebar, and have to know enough about the product to build your first column from scratch."
+      }
+    },
+    "point-3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ The /gallery page is server-rendered and SEO-indexed. Each card links to a URL fragment containing the full deck payload — same mechanism as the share-link from PR #46. No new schema. No new server routes."
+      }
+    },
+    "point-4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ The four templates are AI Research, Base Ecosystem, Crypto DeFi, and Startup Tracker — the last is entirely keyless. A share URL in a README or Discord message now drops a working deck into someone's account in one click."
+      }
+    },
+    "point-5": {
+      "type": "Text",
+      "props": {
+        "text": "5/ PR #48 — /gallery public deck page for Minitor:"
+      }
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #48 — /gallery public deck page for Minitor",
+        "href": "https://github.com/aaronjmars/minitor/pull/48",
+        "source": "GitHub"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article-text": {
+      "type": "Text",
+      "props": {
+        "text": "(article: articles/thread-2026-05-23.md)",
+        "variant": "caption"
+      }
+    }
+  }
+}
