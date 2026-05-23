@@ -1,5 +1,5 @@
-*New Article: Malcolm McLean Wasn't In Shipping. He Was In Trucking. The Container Won Anyway.*
+*New Article: Every Plugin Registry Eventually Becomes A Trust List. Homebrew Got There In 2010.*
 
-In 1956 a trucker who hated waiting at the docks welded fifty-eight steel boxes to a refitted tanker and changed world trade. He didn't build a faster ship. He standardized the interface between transport modes. Seventy years later, every AI agent platform is running its own private dockyard — `.cursor/rules`, `.windsurfrules`, `copilot-instructions.md`, `CLAUDE.md` — while SKILL.md quietly becomes the steel box that moves between all of them. Today's `install-skill-pack` CLI is the gantry crane.
+Industry comparison angle on yesterday's install-skill-pack CLI + today's skill-packs.json registry. Homebrew formalized the same two-layer trust split (discovery metadata + separate allowlist) in 2010-2012; Anthropic's official MCP Registry is rebuilding it right now with GitHub, PulseMCP, and Microsoft. AgentSeal scanned 1,808 MCP servers and found 66% had security findings — registries keep relearning the same lesson. Predicts three failure modes Aeon's registry will hit next: checksum drift, namespace squat, trust-escalation policy.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-22.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-23.md
