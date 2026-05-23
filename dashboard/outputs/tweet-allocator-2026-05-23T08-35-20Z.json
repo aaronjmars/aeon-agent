@@ -1,0 +1,24 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Allocator",
+        "description": "2026-05-23"
+      },
+      "children": [
+        "alert_status"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "no eligible tweeters (none had a verified Bankr wallet today)"
+      },
+      "children": []
+    }
+  }
+}
