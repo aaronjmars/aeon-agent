@@ -1,19 +1,16 @@
-Done. Here's the run summary:
+No notification is sent (STAR_MOMENTUM_NO_ALERTS). The skill is complete.
 
 ## Summary
 
-**Status: STAR_MOMENTUM_NO_ALERTS** — no notification sent.
+**star-momentum-alert — 2026-05-23 — STAR_MOMENTUM_NO_ALERTS**
 
-**Repos audited:** 2 (aaronjmars/aeon-agent filtered out as infrastructure mirror)
+Audited 2 repos (aeon, minitor — aeon-agent filtered as agent repo):
 
-| Repo | Current | Target | v7/day | ETA | Verdict |
-|------|---------|--------|--------|-----|---------|
-| aaronjmars/aeon | 417⭐ | 500⭐ | 15.0 | 6d (May 28, Thu) | OUT_OF_WINDOW — 6 < 7d minimum |
-| aaronjmars/minitor | 9⭐ | 50⭐ | 0.14 | 287d (2027-03-06) | OUT_OF_WINDOW — far out |
+- **aaronjmars/aeon**: 429⭐ → 500⭐ target. v7 = 12.43/day, v3 = 9.0/day. Projected crossing: **2026-05-29 (Friday) in ~6 days** — just below the 7-day minimum for the Show HN dispatch window. Verdict: **OUT_OF_WINDOW**. The milestone has been approaching sub-7-day territory for two consecutive runs. At current pace it will cross before the window opens; the day also lands on a Friday rather than Tue/Wed/Thu. The operator may want to dispatch `show-hn-draft` pre-emptively (already URGENT in MEMORY.md since 400⭐ organic crossed May 20).
 
-**Key finding:** `aaronjmars/aeon` is approaching the 500⭐ milestone fast — at 15 stars/day it will cross in ~6 days (May 28). That's one day inside the "too close" threshold. The window to dispatch `show-hn-draft` has essentially passed for this milestone; the crossing will happen organically within the week regardless.
+- **aaronjmars/minitor**: 9⭐, flat for 7 days (v7 = 0.0/day). Verdict: **STALLED**. No projection.
 
-**Files written:**
-- `articles/star-momentum-2026-05-22.md` — full projection report
-- `memory/topics/star-momentum-state.json` — updated projected_date_v7 to 2026-05-28 for aeon/500
-- `memory/logs/2026-05-22.md` — log block appended
+Files written/modified:
+- `articles/star-momentum-2026-05-23.md` (new)
+- `memory/topics/star-momentum-state.json` (updated projected_date_v7 to 2026-05-29, cleared minitor projection)
+- `memory/logs/2026-05-23.md` (appended Star Momentum block)
