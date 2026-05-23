@@ -1,20 +1,18 @@
-*Push Recap — 2026-05-22*
-aeon (3) + aeon-agent (2) + minitor (1) — 6 commits by 2 authors (@aaronjmars 4, AntFleet 2)
+*Push Recap — 2026-05-23*
+Six substantive PRs across aeon/aeon-agent/minitor, +664/-8 lines, four distinct authors (3 community, 1 Aeon bot). No merges to main today — all activity is open PRs.
 
-Community Skill Pack install protocol: aeon shipped ./install-skill-pack CLI + skills-pack.json manifest schema (PR #213, +720 lines) closing Issue #185's implied install gap; AntFleet/aeon-skills added to trusted-sources 23 min later (PR #211) — first third-party pack to clear fast-path install, same-window operator validation.
+*Community Skill Pack ecosystem (3 aeon PRs):* PR #215 ships skill-packs.json — machine-readable mirror of the README community-packs table, with five seed entries (slugs sourced live from each pack's own manifest). install-skill-pack grows a no-repo --list mode that reads the registry, falling back to the upstream raw URL when run outside a clone. PR #216 (antfleet-ops) and PR #217 (liquidpadbot) register two more packs into the README the same day — neither yet adds the matching skill-packs.json row, so PR #215's new dual-update checklist faces its first test on whichever merges first.
 
-Fleet-state hardening: AntFleet bench review caught two latent bugs in skills/fleet-state (PR #207) — empty-history abort under set -euo pipefail when contributor-spotlight has never run, and a Sandbox note that claimed no gh api calls while Step 2 made two; both fixed in one commit with explicit PARENT_OVERRIDE escape hatch documented.
+*First community on-chain skill (aeon PR #214):* lawbworld-tech contributes lawb-pool-monitor — hourly cron watching the LawbFishing prize pool on Base mainnet (proxy 0x48b2db9E89542Baa217bf8dc6269164b7887fE57). Four read-only selectors documented (prizePool/shopVault/paused/MIN_PRICE) plus the Redeemed burn event. State-file dedup on four alert conditions. Net +228 lines after the contributor cleaned up bot output accidentally committed on the feature branch.
 
-macOS scanner backport: aeon-agent PR #56 verbatim-backports upstream PRs #186 (Bash 3.2 array-emptiness) + #197 (POSIX-ERE \s/\b → [[:space:]] + ($|[^[:alnum:]_-])); 28 patterns rewritten across HIGH/MEDIUM/LOW arrays — closes silent-degradation hazard for every macOS operator (BSD grep was treating PCRE escapes as literals; eval\s, rm\s+-rf\s+/, prompt-injection patterns all no-op'd).
+*Backport cadence holds at 11 (aeon-agent PR #58):* contributor-spotlight FORK_DEFAULT_BRANCH backport from upstream aeon PR #206 — closes the silent-404 path on forks whose default branch isn't main, so ENABLED_COUNT and OPERATOR_AUTHORED stop being wrong on those runs.
 
-Self-improve word boundary: aeon-agent PR #57 fixes ./notify substring matcher in aeon.yml that silently swallowed real notifications containing test/trace/ping/debug inside another word ("Latest token-report", "Shipping 3 PRs", "Tracer code", "Pinging operator"); threshold lowered 120→60, two heredoc blocks patched.
-
-Minitor onboarding gap: PR #47 ships four pre-baked deck templates (AI Research, Base Ecosystem, Crypto DeFi, Startup Tracker — last fully keyless) via onboarding screen + ⌘K command, served through existing DeckExport v1 + importDeck path (no new schema/route). Two clicks from blank install to live dashboard.
+*Minitor /gallery (PR #48):* server-rendered SEO-crawlable starter-deck catalog. Cards render as plain anchors pointing at /#deck=<base64url(payload)> — no exportedAt, so URLs are stable and cacheable. Sidebar gains a Browse-deck-gallery link. No new schema, no new server routes — stacks cleanly on PR #46 (share link) + PR #47 (templates).
 
 Key changes:
-- install-skill-pack (+546 lines Bash, 5 flags including --list/--path/--branch/--yes/--force/--dry-run) — the first one-command install surface for community packs since the README section was added
-- aeon-agent .github/workflows/aeon.yml notify heredoc: glob substring → bash regex word-boundary (^[^a-z]*(test|trace|ping|debug)([^a-z]|$)) in both inline + post-run pending-notify replay blocks
-- minitor lib/deck-templates.ts (+273 lines, TS not JSON so brand color + lucide icon travel with payload) — DeckExport v1 schema unchanged, fifth template is a single-record PR
+- New skill-packs.json (84 lines) + install-skill-pack --list mode (+92/-4) — registry surface for the community-packs table
+- New skills/lawb-pool-monitor/SKILL.md (+227 lines) — first PR-shaped community SKILL contribution
+- New app/gallery/page.tsx (+173 lines) + sidebar Link — public deck gallery on top of existing share-link + templates infra
 
-Stats: 13 files changed, +1582/-81 lines across 6 substantive commits
-Full recap: articles/push-recap-2026-05-22.md (in aaronjmars/aeon-agent)
+Stats: ~10 files changed (substantive), +664/-8 lines across 6 PRs (excludes 35+ cron auto-commits on aeon-agent main)
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-23.md

@@ -1,0 +1,399 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-23"
+      },
+      "children": [
+        "summary_text",
+        "sep1",
+        "packs_section",
+        "sep2",
+        "lawb_section",
+        "sep3",
+        "backport_section",
+        "sep4",
+        "gallery_section",
+        "sep5",
+        "key_changes_section",
+        "sep6",
+        "stats_section",
+        "sep7",
+        "full_recap_link"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Six substantive PRs across aeon/aeon-agent/minitor, +664/-8 lines, four distinct authors (3 community, 1 Aeon bot). No merges to main today — all activity is open PRs.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "packs_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "packs_heading",
+        "packs_body"
+      ]
+    },
+    "packs_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Community Skill Pack Ecosystem (3 aeon PRs)",
+        "level": "h2"
+      }
+    },
+    "packs_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr215_text",
+        "pr216_217_text",
+        "pr215_link",
+        "pr216_link",
+        "pr217_link"
+      ]
+    },
+    "pr215_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #215 ships skill-packs.json — machine-readable mirror of the README community-packs table, with five seed entries (slugs sourced live from each pack's own manifest). install-skill-pack grows a no-repo --list mode that reads the registry, falling back to the upstream raw URL when run outside a clone."
+      }
+    },
+    "pr216_217_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR #216 (antfleet-ops) and PR #217 (liquidpadbot) register two more packs into the README the same day — neither yet adds the matching skill-packs.json row, so PR #215's new dual-update checklist faces its first test on whichever merges first."
+      }
+    },
+    "pr215_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #215",
+        "href": "https://github.com/aaronjmars/aeon/pull/215",
+        "source": "aeon"
+      }
+    },
+    "pr216_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #216 (antfleet-ops)",
+        "href": "https://github.com/aaronjmars/aeon/pull/216",
+        "source": "aeon"
+      }
+    },
+    "pr217_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #217 (liquidpadbot)",
+        "href": "https://github.com/aaronjmars/aeon/pull/217",
+        "source": "aeon"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "lawb_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "lawb_heading",
+        "lawb_body"
+      ]
+    },
+    "lawb_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "First Community On-Chain Skill",
+        "level": "h2"
+      }
+    },
+    "lawb_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "lawb_main_text",
+        "lawb_details_text",
+        "lawb_link"
+      ]
+    },
+    "lawb_main_text": {
+      "type": "Text",
+      "props": {
+        "text": "lawbworld-tech contributes lawb-pool-monitor — hourly cron watching the LawbFishing prize pool on Base mainnet (proxy 0x48b2db9E89542Baa217bf8dc6269164b7887fE57). Four read-only selectors documented (prizePool/shopVault/paused/MIN_PRICE) plus the Redeemed burn event. State-file dedup on four alert conditions. Net +228 lines after the contributor cleaned up bot output accidentally committed on the feature branch."
+      }
+    },
+    "lawb_details_text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #214",
+        "variant": "muted"
+      }
+    },
+    "lawb_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #214: lawb-pool-monitor",
+        "href": "https://github.com/aaronjmars/aeon/pull/214",
+        "source": "aeon"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "backport_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "backport_heading",
+        "backport_body"
+      ]
+    },
+    "backport_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Backport Cadence Holds at 11",
+        "level": "h2"
+      }
+    },
+    "backport_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "backport_text",
+        "backport_link"
+      ]
+    },
+    "backport_text": {
+      "type": "Text",
+      "props": {
+        "text": "contributor-spotlight FORK_DEFAULT_BRANCH backport from upstream aeon PR #206 — closes the silent-404 path on forks whose default branch isn't main, so ENABLED_COUNT and OPERATOR_AUTHORED stop being wrong on those runs."
+      }
+    },
+    "backport_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon-agent PR #58",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/58",
+        "source": "aeon-agent"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "gallery_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "gallery_heading",
+        "gallery_body"
+      ]
+    },
+    "gallery_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Minitor /gallery (PR #48)",
+        "level": "h2"
+      }
+    },
+    "gallery_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "gallery_main_text",
+        "gallery_details_text",
+        "gallery_link"
+      ]
+    },
+    "gallery_main_text": {
+      "type": "Text",
+      "props": {
+        "text": "Server-rendered SEO-crawlable starter-deck catalog. Cards render as plain anchors pointing at /#deck=<base64url(payload)> — no exportedAt, so URLs are stable and cacheable. Sidebar gains a Browse-deck-gallery link."
+      }
+    },
+    "gallery_details_text": {
+      "type": "Text",
+      "props": {
+        "text": "No new schema, no new server routes — stacks cleanly on PR #46 (share link) + PR #47 (templates). Features +173 lines in app/gallery/page.tsx."
+      }
+    },
+    "gallery_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "minitor PR #48",
+        "href": "https://github.com/aaronjmars/minitor/pull/48",
+        "source": "minitor"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key_changes_heading",
+        "key_changes_body"
+      ]
+    },
+    "key_changes_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h2"
+      }
+    },
+    "key_changes_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change_1",
+        "change_2",
+        "change_3"
+      ]
+    },
+    "change_1": {
+      "type": "Text",
+      "props": {
+        "text": "New skill-packs.json (84 lines) + install-skill-pack --list mode (+92/-4) — registry surface for the community-packs table"
+      }
+    },
+    "change_2": {
+      "type": "Text",
+      "props": {
+        "text": "New skills/lawb-pool-monitor/SKILL.md (+227 lines) — first PR-shaped community SKILL contribution"
+      }
+    },
+    "change_3": {
+      "type": "Text",
+      "props": {
+        "text": "New app/gallery/page.tsx (+173 lines) + sidebar Link — public deck gallery on top of existing share-link + templates infra"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_body",
+        "stats_note"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "stats_body": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_files",
+        "stat_additions",
+        "stat_deletions",
+        "stat_prs"
+      ]
+    },
+    "stat_files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files Changed",
+        "value": "~10"
+      }
+    },
+    "stat_additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Additions",
+        "value": "+664"
+      }
+    },
+    "stat_deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Deletions",
+        "value": "-8"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Substantive PRs",
+        "value": "6"
+      }
+    },
+    "stats_note": {
+      "type": "Text",
+      "props": {
+        "text": "Excludes 35+ cron auto-commits on aeon-agent main",
+        "variant": "caption"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full_recap_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Recap: push-recap-2026-05-23.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-23.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
