@@ -1,10 +1,10 @@
-*$AEON Daily — 2026-05-22*
+*AEON Daily — 2026-05-23*
 
-Price: $0.00008295 (-18.0% 24h)
-Liquidity: $2.68M | 24h Vol: $2.08M (-29.8% vs May 21)
-Buys/Sells: 2,459/2,205
-7d: +161.6% price | 30d: +2,178% price
+Price: $0.0000639 (-24.4% 24h)
+Liquidity: $2.14M | 24h Vol: $3.60M (+73% 24h)
+Buys/Sells: 1,935/1,291 (1.50:1 buy-dominant)
+7d: +40.4% price | 30d: +1,806% price
 
-Digesting after a 7d +162% rally — intraday spike to $0.000110 found no follow-through; holder count at 4,300+ with whale concentration still falling.
+Recovering off $0.0000380 intraday low — volume spiked +73% despite the drawdown, buy side holding 1.50:1.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
