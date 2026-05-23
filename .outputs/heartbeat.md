@@ -1,7 +1,9 @@
-All clear. **HEARTBEAT_OK**
+HEARTBEAT_OK — all 12 expected Saturday skills ran cleanly, no open PRs across any repo, no urgent issues, and the show-hn-draft escalation remains in 7-day extended-persistence backoff (next fire: May 27). Log appended to `memory/logs/2026-05-23.md`.
 
-- 14/14 scheduled skills ran successfully today
-- No PRs stalled >24h (aeon has two community-pack PRs from today, both <16h old)
-- No urgent GitHub issues
-- show-hn-draft flag remains active but is under 7-day extended-persistence backoff (last escalation May 20 — next window May 27)
-- No notification sent
+## Summary
+
+- **12/12 scheduled skills ran** successfully today (Saturday May 23)
+- **0 stalled PRs** across aeon, aeon-agent, and minitor (auto-merge cleared today's batch at 18:00 UTC)
+- **No urgent GitHub issues** and no memory issues directory entries
+- **show-hn-draft**: still flagged URGENT (22 days old, 400⭐ crossed May 20) — suppressed today under 7d extended-persistence backoff; next ESCALATION May 27
+- **No notification sent**
