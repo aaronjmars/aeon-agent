@@ -1,13 +1,15 @@
-*Skill Leaderboard — 2026-05-17*
+*Skill Leaderboard — 2026-05-24*
 
-Top skills across 47 active forks:
-1. heartbeat — 47 forks (100%)
-2. token-movers — 7 forks (14.9%)
-3. narrative-tracker — 5 forks (10.6%)
-3. token-pick — 5 forks (10.6%)
-3. market-context-refresh — 5 forks (10.6%)
+Top skills across 86 active forks:
+1. heartbeat — 85 forks (98.8%)
+2. token-movers — 9 forks (10.5%)
+3. morning-brief — 8 forks (9.3%)
+3. narrative-tracker — 8 forks (9.3%)
+5. market-context-refresh — 7 forks (8.1%)
 
-Consensus: heartbeat only (no other skill above 15%)
-Adoption gaps: fork-cohort, star-milestone, star-momentum-alert, show-hn-draft, product-hunt-launch, and 10+ newer skills with zero fork enables
+Consensus: heartbeat (only skill above 50%)
+Adoption gaps: fork-cohort, fleet-state, skill-update-check, repo-article, huggingface-trending (all at zero forks)
 
-Full leaderboard: https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-05-17.md
+Fleet: 86 active forks / 254 total skill slots / 95 unique skills / 19 multi-skill operators
+
+Full leaderboard: https://github.com/aaronjmars/aeon-agent/blob/main/articles/skill-leaderboard-2026-05-24.md
