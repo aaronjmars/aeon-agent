@@ -1,0 +1,23 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Allocator"
+      },
+      "children": [
+        "alert_status"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "2026-05-24: No tweets available",
+        "message": "no tweets in today's log to allocate from (fetch-tweets failed — XAI credits exhausted)"
+      }
+    }
+  }
+}
