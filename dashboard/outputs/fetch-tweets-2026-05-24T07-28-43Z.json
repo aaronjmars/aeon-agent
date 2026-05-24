@@ -1,0 +1,73 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Fetch Tweets",
+        "description": "2026-05-24"
+      },
+      "children": [
+        "alert",
+        "separator",
+        "details"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Prefetch Failed",
+        "message": "HTTP 403 — XAI team credits exhausted"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "search_label",
+        "search_value",
+        "result_label",
+        "result_value"
+      ]
+    },
+    "search_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Search Attempted",
+        "level": "h4"
+      }
+    },
+    "search_value": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON OR @aeonframework OR github.com/aaronjmars/aeon",
+        "variant": "caption"
+      }
+    },
+    "result_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Result",
+        "level": "h4"
+      }
+    },
+    "result_value": {
+      "type": "Text",
+      "props": {
+        "text": "No tweets fetched",
+        "variant": "body"
+      }
+    }
+  }
+}
