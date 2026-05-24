@@ -1,10 +1,10 @@
-*AEON Daily — 2026-05-23*
+*$AEON Daily — 2026-05-24*
 
-Price: $0.0000639 (-24.4% 24h)
-Liquidity: $2.14M | 24h Vol: $3.60M (+73% 24h)
-Buys/Sells: 1,935/1,291 (1.50:1 buy-dominant)
-7d: +40.4% price | 30d: +1,806% price
+Price: $0.0000767 (+27.6% 24h)
+Liquidity: $2.51M | 24h Vol: $1.57M (-56.4% 24h)
+Buys/Sells: 966/800 (main pool)
+7d: +10.0% | 30d: +2,374%
 
-Recovering off $0.0000380 intraday low — volume spiked +73% despite the drawdown, buy side holding 1.50:1.
+Recovering from yesterday's intraday dip. Volume decelerating from spike levels ($3.6M → $1.6M). Buy pressure persists at 1.21:1. @gitblock_ exploring @aeonframework integration.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
