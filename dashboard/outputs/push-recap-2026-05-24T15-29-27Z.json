@@ -1,0 +1,379 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-24"
+      },
+      "children": [
+        "summary_section",
+        "sep1",
+        "catalog_section",
+        "sep2",
+        "antfleet_section",
+        "sep3",
+        "autonomous_section",
+        "sep4",
+        "key_changes_section",
+        "sep5",
+        "link_section"
+      ]
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_summary",
+        "stats_prs",
+        "repos_breakdown",
+        "stats_commits",
+        "stats_lines",
+        "stats_authors"
+      ]
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Substantive PRs",
+        "value": "12"
+      },
+      "children": []
+    },
+    "repos_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "Distributed across: aeon (7), aeon-agent (3), minitor (1)"
+      },
+      "children": []
+    },
+    "stats_commits": {
+      "type": "Text",
+      "props": {
+        "text": "~22 cron auto-commits"
+      },
+      "children": []
+    },
+    "stats_lines": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines changed",
+        "value": "+8,260 / -108"
+      },
+      "children": []
+    },
+    "stats_authors": {
+      "type": "Stat",
+      "props": {
+        "label": "Distinct authors",
+        "value": "6"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "catalog_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_catalog",
+        "text_catalog_1",
+        "text_catalog_2",
+        "text_catalog_3",
+        "text_catalog_4",
+        "text_catalog_5"
+      ]
+    },
+    "heading_catalog": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Catalog Explosion",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_catalog_1": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon's evening of May 23 absorbed 34 derivative-instance skills back into upstream"
+      },
+      "children": []
+    },
+    "text_catalog_2": {
+      "type": "Text",
+      "props": {
+        "text": "Catalog now 155 skills"
+      },
+      "children": []
+    },
+    "text_catalog_3": {
+      "type": "Text",
+      "props": {
+        "text": "Added ECOSYSTEM.md (39-project table for products built on Aeon)"
+      },
+      "children": []
+    },
+    "text_catalog_4": {
+      "type": "Text",
+      "props": {
+        "text": "Bundled 4 community packs into the README"
+      },
+      "children": []
+    },
+    "text_catalog_5": {
+      "type": "Text",
+      "props": {
+        "text": "Merged the machine-readable skill-packs.json registry — three registries now formally separate forks (SHOWCASE), pack authors (skill-packs.json), and product builders (ECOSYSTEM.md)"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "antfleet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_antfleet",
+        "text_antfleet_intro",
+        "alert_issue_1",
+        "alert_issue_2",
+        "alert_issue_3",
+        "text_antfleet_review",
+        "text_antfleet_note"
+      ]
+    },
+    "heading_antfleet": {
+      "type": "Heading",
+      "props": {
+        "text": "AntFleet Two-Model Bench Sweep",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_antfleet_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Antfleet-ops opened 3 PRs in 60 seconds on aeon"
+      },
+      "children": []
+    },
+    "alert_issue_1": {
+      "type": "Alert",
+      "props": {
+        "title": "Workflow Dispatch Shell Injection",
+        "message": "High severity",
+        "type": "error"
+      },
+      "children": []
+    },
+    "alert_issue_2": {
+      "type": "Alert",
+      "props": {
+        "title": "GATEWAY tr-d Parse Error",
+        "message": "High severity",
+        "type": "error"
+      },
+      "children": []
+    },
+    "alert_issue_3": {
+      "type": "Alert",
+      "props": {
+        "title": "Notify-Dedup-Hash-Before-Delivery Silent Message Loss",
+        "message": "Medium severity",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "text_antfleet_review": {
+      "type": "Text",
+      "props": {
+        "text": "All from claude-opus-4-7 + gpt-5 unanimous review on aeon-bench PR #31"
+      },
+      "children": []
+    },
+    "text_antfleet_note": {
+      "type": "Text",
+      "props": {
+        "text": "None merged yet"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "autonomous_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_autonomous",
+        "text_auto_1",
+        "text_auto_2",
+        "text_auto_3",
+        "text_auto_4"
+      ]
+    },
+    "heading_autonomous": {
+      "type": "Heading",
+      "props": {
+        "text": "Bot's Autonomous Cycle",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_auto_1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #226 closes last open AntFleet High on v4-readiness (silent false-clean READY now structurally unreachable)"
+      },
+      "children": []
+    },
+    "text_auto_2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #59 combined backport of install-skill-pack CLI + skill-packs.json registry (12th same-day-after in a row)"
+      },
+      "children": []
+    },
+    "text_auto_3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent PR #60 self-corrective response to today's own XAI 403 outage (5-variant PREFETCH_FAILED notification routing)"
+      },
+      "children": []
+    },
+    "text_auto_4": {
+      "type": "Text",
+      "props": {
+        "text": "minitor PR #49 per-column refresh intervals (last open May-22 idea consumed)"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_changes",
+        "change_1",
+        "change_2",
+        "change_3",
+        "stats_final"
+      ]
+    },
+    "heading_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "change_1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #219 ported 34 skills (+6,162/-69, 36 files), dropped 3 duplicates, merged auto-merge-agent-prs retry-cap into auto-merge"
+      },
+      "children": []
+    },
+    "change_2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #220 ECOSYSTEM.md splits products-built-on-Aeon from forks + skill packs (39-project alphabetized table)"
+      },
+      "children": []
+    },
+    "change_3": {
+      "type": "Text",
+      "props": {
+        "text": "minitor PR #49 per-column refresh intervals (+513/-2, 10 files) — column-row level field, never reaches plugin fetchers, all 47 plugins keep working unchanged"
+      },
+      "children": []
+    },
+    "stats_final": {
+      "type": "Stat",
+      "props": {
+        "label": "Total across 12 substantive PRs",
+        "value": "~70 files changed, +8,262/-108 lines"
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_full",
+        "link_recap"
+      ]
+    },
+    "heading_full": {
+      "type": "Heading",
+      "props": {
+        "text": "Full Recap",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "link_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "push-recap-2026-05-24.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-24.md"
+      },
+      "children": []
+    }
+  }
+}
