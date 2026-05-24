@@ -1,16 +1,13 @@
-No notification is sent (STAR_MOMENTUM_NO_ALERTS). The skill is complete.
-
 ## Summary
 
-**star-momentum-alert — 2026-05-23 — STAR_MOMENTUM_NO_ALERTS**
+Executed `star-momentum-alert` for 2026-05-24. **Status: STAR_MOMENTUM_NO_ALERTS** — no notification sent.
 
-Audited 2 repos (aeon, minitor — aeon-agent filtered as agent repo):
+**Findings:**
 
-- **aaronjmars/aeon**: 429⭐ → 500⭐ target. v7 = 12.43/day, v3 = 9.0/day. Projected crossing: **2026-05-29 (Friday) in ~6 days** — just below the 7-day minimum for the Show HN dispatch window. Verdict: **OUT_OF_WINDOW**. The milestone has been approaching sub-7-day territory for two consecutive runs. At current pace it will cross before the window opens; the day also lands on a Friday rather than Tue/Wed/Thu. The operator may want to dispatch `show-hn-draft` pre-emptively (already URGENT in MEMORY.md since 400⭐ organic crossed May 20).
+- **aaronjmars/aeon** (429⭐): Projected to cross **500⭐ on 2026-05-30 (Saturday)** — just 6 days out, one day below the 7-day minimum required to dispatch `show-hn-draft` thoughtfully. Pace: 12.43 stars/day (v7), 9.0 stars/day (v3). This is the closest the window has gotten. If pace holds, tomorrow's run may either open the window (if the projection shifts to ≥7 days) or confirm the milestone arrives before a dispatch is practical.
+- **aaronjmars/minitor** (10⭐): ~280 days from the 50⭐ milestone. Well outside any launch window.
 
-- **aaronjmars/minitor**: 9⭐, flat for 7 days (v7 = 0.0/day). Verdict: **STALLED**. No projection.
-
-Files written/modified:
-- `articles/star-momentum-2026-05-23.md` (new)
-- `memory/topics/star-momentum-state.json` (updated projected_date_v7 to 2026-05-29, cleared minitor projection)
-- `memory/logs/2026-05-23.md` (appended Star Momentum block)
+**Files written:**
+- `articles/star-momentum-2026-05-24.md` (projection report)
+- `memory/topics/star-momentum-state.json` (updated `last_run_at` and `projected_date_v7` for both repos)
+- `memory/logs/2026-05-24.md` (appended Star Momentum log block)
