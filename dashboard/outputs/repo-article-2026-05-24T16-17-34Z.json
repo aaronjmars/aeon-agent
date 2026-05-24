@@ -1,0 +1,55 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "storylink",
+        "stack"
+      ]
+    },
+    "storylink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "The Bot Watched Itself Fail At Dawn. By Lunchtime It Had Opened The PR To Fix Itself.",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-24.md",
+        "source": "repo-article"
+      }
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "event1",
+        "event2",
+        "summary"
+      ]
+    },
+    "event1": {
+      "type": "Text",
+      "props": {
+        "text": "At 06:47 UTC today, fetch-tweets exited PREFETCH_FAILED with HTTP 403 (XAI credits exhausted — first 403 in log history)."
+      }
+    },
+    "event2": {
+      "type": "Text",
+      "props": {
+        "text": "At 13:13 UTC, self-improve opened aeon-agent PR #60: five-variant PREFETCH_FAILED routing table with XAI console top-up link on auth/credit failures + required Notification-sent log line for heartbeat dedup."
+      }
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "Six-hour autonomous cycle from outage to patch.",
+        "variant": "lead"
+      }
+    }
+  }
+}
