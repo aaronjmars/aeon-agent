@@ -1,0 +1,140 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "System health report"
+      },
+      "children": [
+        "alert_xai",
+        "sep1",
+        "details_stack",
+        "sep2",
+        "status_stack"
+      ]
+    },
+    "alert_xai": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "XAI Credits Exhausted",
+        "message": "fetch-tweets failed with HTTP 403 at 06:47 UTC today. Monthly team spend limit reached."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_impact",
+        "text_workaround",
+        "link_console",
+        "link_pr"
+      ]
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "Tweet monitoring is dark until credits are topped up at console.x.ai.",
+        "variant": "body"
+      }
+    },
+    "text_workaround": {
+      "type": "Text",
+      "props": {
+        "text": "Self-corrective PR #60 is open and improves the error routing for future outages, but won't restore fetching on its own.",
+        "variant": "body"
+      }
+    },
+    "link_console": {
+      "type": "Link",
+      "props": {
+        "label": "Top up credits at console.x.ai",
+        "href": "https://console.x.ai"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "PR #60 — Error routing improvements",
+        "href": "https://github.com/aeon-agent/aeon-agent/pull/60"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_clean",
+        "stats_grid",
+        "text_context"
+      ]
+    },
+    "heading_clean": {
+      "type": "Heading",
+      "props": {
+        "text": "Everything Else Ran Clean",
+        "level": "h3"
+      }
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_skills",
+        "stat_prs",
+        "stat_issues"
+      ]
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Scheduled Skills",
+        "value": "15/15"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Stalled PRs",
+        "value": "0"
+      }
+    },
+    "stat_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Urgent Issues",
+        "value": "0"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "No stalled PRs across all three repos.",
+        "variant": "caption"
+      }
+    }
+  }
+}
