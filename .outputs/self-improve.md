@@ -1,14 +1,15 @@
-*Agent Self-Improvement — 2026-05-22*
+*Agent Self-Improvement — 2026-05-24*
 
-Word-boundary diagnostic-probe suppression in `./notify`. The script's matcher was using glob substring (`*test*|*trace*|*ping*|*debug*`) to drop Claude's verification probes — and silently dropping any real notification under 120 chars that contained those fragments inside another word. "Latest token-report ready", "Shipping 3 PRs to prod", "Tracer code lands", "Pinging the operator" were all eaten without warning.
+fetch-tweets — operator-actionable PREFETCH_FAILED variants + Notification-sent log contract.
 
-Why: failure mode is silent — skills log `notification: sent`, but `notify` exits 0 having sent nothing. Several skills (star-milestone, star-momentum-alert, repo-pulse one-liners, heartbeat short verdicts) regularly fall under the 120-char threshold, and "Latest" / "Shipping" / "Tracer" are plausible first words in real notifications.
+When XAI prefetch fails, the skill now picks a notification template based on the HTTP code in the error file (401/403 = credits/auth, persistent, includes top-up link; 429 = rate limit; 5xx = service; curl error = network). Every exit path of the skill must now log "Notification sent: yes/no" so heartbeat dedup/escalation can actually track this skill.
+
+Why: today's run logged FETCH_TWEETS_PREFETCH_FAILED with reason "HTTP 403, team credits exhausted (monthly spend limit reached)" — the first 403 in the log history. The existing notification was generic ("prefetch failed; no tweets fetched") with no operator action, and the log entry omitted the Notification-sent line heartbeat dedup depends on. Downstream impact today: tweet-allocator empty, token-report social section degraded.
 
 What changed:
-- `.github/workflows/aeon.yml` ./notify heredoc — substring `case` → bash regex `[[ =~ ]]` word-boundary match; threshold 120 → 60 (real probes are short); inline comment names the swallowed-notification failure mode
-- `.github/workflows/aeon.yml` post-run pending-notify replay — identical fix to the second copy of the matcher
-- `memory/logs/2026-05-22.md` + `memory/MEMORY.md` — log entry + open-improvement-PRs index
+- skills/fetch-tweets/SKILL.md: step 4 expanded with five PREFETCH_FAILED variants keyed off the prefetch error-file's HTTP prefix; steps 4/5/7 all now require the same "Notification sent" log line.
+- memory/logs/2026-05-24.md + memory/MEMORY.md: log entry + Open Improvement PRs updated (PR #54 + #57 already merged).
 
-Impact: every skill that emits a short notification (star-milestone, momentum, pulse, heartbeat) now reliably reaches Telegram/Discord/Slack — no more silent suppression on "Latest" / "Shipping" / "Tracer" / "Pinging" body text. Diagnostic probes ("test", "ping", "hello") still suppressed as intended.
+Impact: when credits run out again, the operator gets a one-line actionable nudge (top up at console.x.ai) instead of a generic "prefetch failed" line, AND heartbeat can now escalate after 3 consecutive failed days.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/57
+PR: https://github.com/aaronjmars/aeon-agent/pull/60
