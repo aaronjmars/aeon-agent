@@ -1,5 +1,5 @@
-*New Article: Every Plugin Registry Eventually Becomes A Trust List. Homebrew Got There In 2010.*
+*New Article: AI Agents Don't Fail Loudly. They Pass When They Shouldn't.*
 
-Industry comparison angle on yesterday's install-skill-pack CLI + today's skill-packs.json registry. Homebrew formalized the same two-layer trust split (discovery metadata + separate allowlist) in 2010-2012; Anthropic's official MCP Registry is rebuilding it right now with GitHub, PulseMCP, and Microsoft. AgentSeal scanned 1,808 MCP servers and found 66% had security findings — registries keep relearning the same lesson. Predicts three failure modes Aeon's registry will hit next: checksum drift, namespace squat, trust-escalation policy.
+Every public AI-agent eval reports pass rate. The number that actually matters is silent-pass rate — and the 2026 data is brutal: 89% of orgs have observability, only 62% can inspect agent steps; MIT shows models are 34% more confident when wrong; DeepMind shows multi-agent systems amplify errors 17×. Today Aeon closed the last open High on a 27-finding external audit — a silent-pass bug in the `v4-readiness` skill itself, fixed structurally so the wrong-and-confident path no longer compiles. The discipline isn't more dashboards; it's making the bad outcome architecturally impossible.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-23.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-24.md
