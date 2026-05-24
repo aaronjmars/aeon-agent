@@ -52,9 +52,20 @@ Today is ${today}. Search X for tweets matching **${var}**.
    `site:x.com "${query_terms}" after:${FROM_DATE}`
    Note at the top of the log entry: "XAI_API_KEY not available; results compiled via WebSearch". WebSearch rankings favour high-engagement older tweets — **prioritise results that mention a date within the last 48 hours** when possible.
 
-4. **If no relevant tweets found** (no results, API error, or empty): log `FETCH_TWEETS_EMPTY` (or `FETCH_TWEETS_PREFETCH_FAILED` with the prefetch error reason if Path A short-circuited) to `memory/logs/${today}.md`, send a one-line notification via `./notify` (e.g. `Fetch Tweets — ${today}: no new tweets found for ${var}.` or `Fetch Tweets — ${today}: prefetch failed (${reason}); no tweets fetched.`), and stop.
+4. **If no relevant tweets found** (no results, API error, or empty): log `FETCH_TWEETS_EMPTY` (or `FETCH_TWEETS_PREFETCH_FAILED` with the prefetch error reason if Path A short-circuited) to `memory/logs/${today}.md`, send a one-line notification via `./notify`, and stop.
 
-5. **Deduplicate against `SEEN_TWEETS` from step 1.** Compare each candidate tweet URL against the collected set of already-reported URLs. Remove any tweet that was already reported in the last 3 days. If ALL tweets found are already in the recent logs: log "FETCH_TWEETS_NO_NEW: all results already reported" to `memory/logs/${today}.md`, send a one-line notification via `./notify` (e.g. `Fetch Tweets — ${today}: N results found, all already reported in last 3 days.`), and stop.
+   **Required log line:** every ending state in this step MUST log an explicit `- **Notification sent**: yes` (or `no (<reason>)`) line so heartbeat's 48h dedup / 3-day escalation logic can track this skill the same way it tracks every other one. Without this line heartbeat can't tell repeat failures apart and won't escalate when XAI is down for days.
+
+   **Operator-actionable PREFETCH_FAILED variants** — when `.xai-cache/fetch-tweets.json.error` exists, parse the `HTTP <code>` prefix from its first line and pick the matching template (transient codes are noisy on a single hit, persistent codes need operator action TODAY):
+   - **HTTP 401 / 403** (auth/credits): `🚨 Fetch Tweets — ${today}: XAI prefetch HTTP <code> (auth/credits exhausted). Operator action: rotate XAI_API_KEY or top up at https://console.x.ai. Downstream skills (tweet-allocator, token-report social section) will be empty until fixed.` — this is a **persistent** failure, log it explicitly so the next day's heartbeat can count consecutive-failure days.
+   - **HTTP 429** (rate limit): `Fetch Tweets — ${today}: XAI prefetch HTTP 429 rate-limited; should self-resolve. If persistent across 3+ days, lower the daily fetch frequency in aeon.yml.`
+   - **HTTP 5xx** (XAI service): `Fetch Tweets — ${today}: XAI prefetch HTTP <code> (XAI service issue); expect resolution within hours.`
+   - **curl error / timeout / unreachable** (no HTTP code in error file): `Fetch Tweets — ${today}: XAI prefetch network/timeout (${reason}); no tweets fetched.`
+   - **Generic fallback** (any other shape): `Fetch Tweets — ${today}: prefetch failed (${reason}); no tweets fetched.`
+
+   Pick the variant by checking the prefix of the error file's first line. Do NOT try to be clever about partial matches — the prefetch script writes `HTTP <code> from XAI api:` (success path: errfile written at scripts/prefetch-xai.sh:117) or `curl error <N> after <M> attempts` (curl path: scripts/prefetch-xai.sh:100). Anything else falls through to the generic fallback.
+
+5. **Deduplicate against `SEEN_TWEETS` from step 1.** Compare each candidate tweet URL against the collected set of already-reported URLs. Remove any tweet that was already reported in the last 3 days. If ALL tweets found are already in the recent logs: log "FETCH_TWEETS_NO_NEW: all results already reported" to `memory/logs/${today}.md`, send a one-line notification via `./notify` (e.g. `Fetch Tweets — ${today}: N results found, all already reported in last 3 days.`), include the same `- **Notification sent**: yes` line required in step 4, and stop.
 
 5b. **Quarantine stock-watchlist spam.** Mark a tweet as spam (`SPAM_FLAG`) when it matches **all** of these signals — this is a tight, conservative filter, not a general low-quality cull:
    - Engagement is 0 likes **AND** 0 retweets **AND** 0 replies.
@@ -85,6 +96,8 @@ Today is ${today}. Search X for tweets matching **${var}**.
    ```
 
    IMPORTANT: Do NOT use @handle format — it tags/pings users on Telegram. Use x.com/handle instead (shows the profile URL without tagging anyone). The `[View tweet](URL)` link is required so users can tap to open each tweet.
+
+   After sending the notification, append the same `- **Notification sent**: yes` line to the log entry required in step 4 — so heartbeat sees a uniform marker across every exit path of this skill.
 
 ## Environment Variables Required
 
