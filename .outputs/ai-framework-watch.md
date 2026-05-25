@@ -1,20 +1,22 @@
-*AI Framework Watch — 2026-05-18*
+*AI Framework Watch — 2026-05-25*
 
-RELEASE WEEK: 6 frameworks shipped — langgraph, crewai, llamaindex, mastra, smolagents, pydantic-ai
+RELEASE WEEK: 4 frameworks shipped — langgraph, crewai, mastra, pydantic-ai
 
-Tracked 9/9 frameworks · 16 releases (7d) · 0 breaking flags · COLD START baseline
+Tracked 9/9 frameworks · 12 releases (7d) · 0 breaking flag(s)
 
-*Top releases this week*
-• langchain-ai/langgraph 1.2.0 — stable from alpha; durable error-handler resume across host crashes, set_node_defaults() for StateGraph. 5-package coordinated batch (May 12).
-• pydantic/pydantic-ai v1.97.0 — MCPToolset replaces MCPServer*; Google provider split (GoogleProvider + GoogleCloudProvider); deprecated names still work but migration signaled. 5 releases in 7 days.
-• mastra-ai/mastra 1.34.0 — ACP coding agents as tools/subagents (@mastra/acp@0.1.0); xAI realtime voice provider; agent metadata. Push-capable PubSub workflow events in 1.33.0.
-• huggingface/smolagents v1.25.0 — security patch on remote executors (high-impact vuln); deserialization refactor (importlib → registry).
+*Top movers (7d stars)*
+• langchain-ai/langgraph — ★32.9k (+575 · +1.8%)
+• crewAIInc/crewAI — ★52.1k (+509 · +1.0%)
+• mastra-ai/mastra — ★24.3k (+297 · +1.2%)
+• microsoft/autogen — ★58.4k (+237 · +0.4%)
 
-*Worth watching*
-• autogen (58k★) has no tagged release since Sep 2025 — still active on main branch but no release signal from GitHub.
-• smolagents security fix is a mandatory upgrade if running remote executors.
+*Releases worth reading*
+• pydantic/pydantic-ai v2.0.0b1→b3 — V2 beta series launched; harness-first design, capabilities as core primitive (major bump — review changelog)
+• langchain-ai/langgraph 1.2.1 — Patch above 1.2.0 + SDK/checkpoint sub-packages
+• crewAIInc/crewAI 1.14.5 — Stable; next alpha (1.14.6a1) already open
+• mastra-ai/mastra @core@1.35.0 — FGA route policy coverage + agent favorites storage
 
 *Anchor (aeon)*
-★ 366 (baseline set) · 0 releases (7d) · 9/9 by cohort size · last push 2026-05-17
+★442 (+76 this week · +20.8% WoW) · 0 releases (7d) · highest % gain in cohort
 
-Full digest: articles/ai-framework-watch-2026-05-18.md
+Full digest: articles/ai-framework-watch-2026-05-25.md
