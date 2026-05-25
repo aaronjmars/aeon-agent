@@ -1,24 +1,21 @@
-*Feature Built — 2026-05-24 — aaronjmars/minitor*
+*Feature Built — 2026-05-25 — aaronjmars/minitor*
 
-Per-Column Refresh Intervals
-Minitor columns can now auto-refresh on a configurable cadence — Manual / 1 min / 5 min / 15 min / 60 min — chosen per column from the Configure dialog. Until today, every column refreshed only on mount and manual click, so operators had to pick between burning rate limits (over-poll everything) or staring at stale data (under-poll everything).
+Per-Column Alert Webhooks
+Minitor columns can now POST to a webhook when alert keywords match. Set keywords on a column, add an https URL, and every time a refresh pulls in new items matching those keywords, Minitor fires a JSON payload to that URL — Slack, Discord, Zapier, n8n, anything. It's the difference between "I'll see it if I'm looking at the dashboard" and "I get pinged the moment it happens."
 
 Why this matters:
-The 47-plugin column catalog is now a mix of fast-moving crypto/price feeds (CoinGecko, DeFiLlama, polymarket) and slow-moving repo signals (GitHub stars, releases, PyPI updates). One global cadence can't serve both — crypto rows go stale in 60 seconds, but hitting GitHub's API every minute on a 6-column dashboard burns through the 60 req/hr keyless budget in five minutes. The May-22 repo-actions brief flagged this as the highest-impact ergonomics gap that requires zero plugin changes — the interval lives at the column-row level, sibling to `alertKeywords` (PR #41) and `title`, never reaching the strict-Zod plugin fetchers.
+Alert keywords (added in PR #41) only gave a yellow ring and a badge count — passive signals that require someone watching the screen. For serious monitoring — infra alerts, competitor launches, token moves, security CVEs — visual-only isn't enough. This adds the missing layer between "I see it" and "I'm notified," and it works with every one of Minitor's column types because it sits at the column level, not inside any plugin. It was the May-24 repo-actions idea #5 (idea #4, a Bluesky column, was already merged on main).
 
 What was built:
-- drizzle/0002_refresh_interval.sql + meta/_journal.json + meta/0002_snapshot.json: Additive NULLABLE `refresh_interval_seconds` integer on the `columns` table.
-- lib/db/schema.ts + lib/columns/types.ts: Schema field + `Column.refreshIntervalSeconds?: number` type.
-- app/actions.ts (+52): `REFRESH_INTERVAL_OPTIONS` server-side allowlist (`{60, 300, 900, 3600}`), `isAllowedRefreshInterval` guard, new `updateColumnRefreshInterval` server action, plus export/import/`loadSnapshot` wiring and an optional Zod field on the import payload.
-- lib/store/use-deck-store.ts (+33): `updateRefreshInterval` store action mirroring `updateAlertKeywords` pattern from May-16.
-- components/column/configure-column-dialog.tsx (+71): "Refresh interval" Select with the five options, wired to the store action.
-- components/column/column-card.tsx (+84): `useEffect` reads `refreshIntervalSeconds`, drives a `setInterval`-based auto-refresh with an `inFlight` guard (no overlapping fetches), pauses when `document.visibilityState !== 'visible'` (background tabs don't burn rate limits), cleans up on unmount and on interval change. New Clock-icon badge in the column header showing "1m" / "5m" / "15m" / "60m" (hidden on manual-only).
-- lib/deck-templates.ts (+4): Template column type opted into the new field so future starter templates (PR #47) can pre-seed sensible cadences.
+- drizzle/0002_notify_webhook.sql (+ journal + snapshot): a nullable notify_webhook_url column.
+- lib/columns/webhook.ts: an SSRF-guarded URL validator (https-only; blocks localhost and private/internal IP ranges) plus a bounded, fire-and-forget sender that refuses redirects and logs only to the server console.
+- app/actions.ts: a server action to save the URL, and webhook firing wired into the fetch-persist path so it only triggers on genuinely new matching items.
+- Configure dialog: an "Alert webhook URL" field that appears once keywords are set, with live validation.
 
 How it works:
-The field is column-row-level, not plugin-config-level — so all 47 existing plugins keep working with zero changes and their strict Zod schemas remain untouched. Server-side, the allowlist refuses anything outside `{null, 60, 300, 900, 3600}` so a malformed client can't force 1-second polling against an upstream rate-limited API. Client-side, the `useEffect` rebuilds the interval whenever the configured value changes (clean teardown of stale timers); the in-flight guard prevents overlapping fetches if a slow API takes longer than the refresh window. Deck export/import and the share-link fragment encoder all round-trip the new field; decks created before this PR import cleanly as manual-only by default.
+The webhook fires server-side inside persistFetchedItems, keyed strictly on new arrivals — re-fetching items you've already seen never re-notifies. The payload carries the column id/title/type, the matched items (id, url, text, which keywords fired), and a timestamp. A deliberate security choice: the webhook URL is never included in deck exports or share links, because a webhook URL often embeds a secret token and the same export feeds the public share link — leaking it would hand that secret to anyone the deck is shared with. It stays in the database and is re-entered on import.
 
 What's next:
-Two natural follow-ups: per-plugin recommended-cadence defaults (so a fresh CoinGecko column auto-picks 1m instead of manual), and a global "low-power mode" toggle that bumps every column to the next-slower bucket when on metered connections.
+Could add a payload signing secret (HMAC header) so receivers can verify authenticity, and a per-column delivery-status indicator. Note: the Next 16 build/type-check couldn't run in the offline build sandbox, so the change was verified by manual review.
 
-PR: https://github.com/aaronjmars/minitor/pull/49
+PR: https://github.com/aaronjmars/minitor/pull/50
