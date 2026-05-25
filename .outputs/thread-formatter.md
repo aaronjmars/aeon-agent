@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-24*
-Topic: Per-column refresh intervals — Minitor PR #49
+*Thread Draft — 2026-05-25*
+Topic: Per-column webhook notifications (Minitor PR #50)
 
-1/ Minitor columns now auto-refresh on a per-column timer. CoinGecko can tick every minute. GitHub stars can wait an hour. None of the 47 plugins required a single line of code to change.
+1/ Minitor columns now POST to a webhook URL when a new item matches your keywords. The request fires server-side: 5-second hard timeout, no redirects followed, 11 IP ranges blocked before the payload leaves.
 
-2/ Until today, every column in Minitor refreshed once on load and whenever you clicked. One cadence for everything. If you set it fast, you burned rate limits on GitHub star counts. If you set it slow, your DeFiLlama TVL was always stale.
+2/ Until today, alert keywords in Minitor were passive. They'd highlight matching items in red when a fetch ran, but nothing happened automatically. The column sat there waiting for you to look at it.
 
-3/ The refreshIntervalSeconds field lives at column-row level — it never touches the plugin fetchers. The interval also pauses when the tab isn't visible, so background tabs don't run down rate limits while you're not watching.
+3/ Each column can now have a webhook URL. When a fetch brings in new matching items, the server fires a POST: {columnId, columnTitle, typeId, matches, timestamp}. Re-fetches don't re-notify — only genuinely new items trigger it.
 
-4/ Two fields now use this architecture in Minitor — alertKeywords from PR #41 and this one. Both sit at column-row level and never enter the plugin layer. That's how a 47-plugin system picks up new behavior without a single plugin needing to change.
+4/ The webhook URL is never included in deck exports or share links. It gets omitted deliberately — webhook URLs usually embed secrets, and the same JSON payload feeds the public /gallery share link. Security took the win over portability.
 
-5/ Per-column refresh intervals for Minitor — choose Manual, 1m, 5m, 15m, or 60m per column. PR #49: https://github.com/aaronjmars/minitor/pull/49
+5/ Per-column webhook notifications for Minitor — keyword match fires a POST. PR #50: https://github.com/aaronjmars/minitor/pull/50
 
-(article: articles/thread-2026-05-24.md)
+(article: articles/thread-2026-05-25.md)
