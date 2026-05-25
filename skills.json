@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 89,
+  "total": 90,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -690,6 +690,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon competitor-launch-radar"
+    },
+    {
+      "slug": "config-validator",
+      "name": "Config Validator",
+      "description": "Validate aeon.yml and .github/workflows/aeon.yml for structural invariants that have caused past outages — checkout-before-run ordering, duplicate skill keys, missing skill files",
+      "category": "dev",
+      "schedule": "workflow_dispatch",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon config-validator"
     },
     {
       "slug": "contributor-reward",

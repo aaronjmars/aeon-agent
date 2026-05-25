@@ -58,3 +58,29 @@ Older entries archived from MEMORY.md Recent Articles table to keep the index un
 | 2026-04-29 | Aeon Just Hired a Greeter for the Front Door | repo-article |
 | 2026-04-30 | Aeon Upgraded Both Ends of Its Social Loop in a Single Day | repo-article |
 | 2026-04-30 | Agent Frameworks Are Where ETL Was Before dbt | project-lens |
+| 2026-05-01 | Aeon Wrote Its Own Application to the Agent Registry | repo-article |
+| 2026-05-01 | Self-Hosting Used to Mean a Compiler. Now It Means an Agent. | project-lens |
+| 2026-05-02 | Aeon Just Started Shipping Features To A Product That Isn't Itself | repo-article |
+| 2026-05-02 | A Fortune 500 Just Found 347 AI Agents It Didn't Know It Had | project-lens |
+| 2026-05-03 | Watching the Whole Federated Web Without an API Key | repo-article |
+| 2026-05-03 | Termites Built Cathedrals Without Holding Standups. Most Multi-Agent Systems Still Can't. | project-lens |
+| 2026-05-04 | Aeon Built a Skill For Bugs That Don't Crash | repo-article |
+| 2026-05-04 | The 1976 Theory That Already Named Why Your AI Agent Will Disappoint You | project-lens |
+| 2026-05-05 | Aeon Built the Stopwatch For Its Own Launch | repo-article |
+| 2026-05-05 | The 2026 Agent Stack Has Five Layers. Most Comparisons Are About One. | project-lens |
+| 2026-05-06 | Aeon Wrote The v4 Migration Guide Two Weeks Before v4 Lands | repo-article |
+| 2026-05-06 | Sixty-One Percent of Unpaid Maintainers Are Alone. Their Repo Doesn't Have to Be. | project-lens |
+| 2026-05-07 | Aeon Built the Skill Template Library Its Forks Were Reverse-Engineering | repo-article |
+| 2026-05-07 | Frameworks Don't Win. Generators Do. | project-lens |
+| 2026-05-08 | The AI Stack Has Three Layers. Aeon Built A Skill For Each One — And A Dashboard Column Too. | repo-article |
+| 2026-05-08 | An Agent That Holds Your API Key Will Eventually Leak It | project-lens |
+| 2026-05-09 | Three Repos. Three PRs. Nine Minutes. All Sourced From Yesterday's Brief. | repo-article |
+| 2026-05-09 | A Day Without Twelve Tabs | project-lens |
+| 2026-05-10 | Aeon Built the Scoreboard for the Eight Frameworks It's Compared To. Itself Is the Anchor Row. | repo-article |
+| 2026-05-10 | Files Won the AI Memory War. Almost Nobody Announced It. | project-lens |
+| 2026-05-11 | Once Aeon Merges PR #38, It Won't Need The Operator For PR #39 | repo-article |
+| 2026-05-11 | The Hardest Problem in AI Agents Was Already Solved in 1975 | project-lens |
+| 2026-05-12 | Every Agent Can Open a PR. Almost None Can Close One. | project-lens |
+| 2026-05-12 | Aeon Built Four Skills For This Exact Day. The Switch Is Still Off. | repo-article |
+| 2026-05-13 | Aeon Just Built a Skill That Reads Other Skills. None of Them Run Yet. | repo-article |
+| 2026-05-13 | Aviation Has Two Words For "Apply This Update." AI Agent Fleets Only Have One. | project-lens |

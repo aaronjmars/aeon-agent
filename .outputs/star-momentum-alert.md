@@ -1,13 +1,9 @@
 ## Summary
 
-Executed `star-momentum-alert` for 2026-05-24. **Status: STAR_MOMENTUM_NO_ALERTS** — no notification sent.
+**star-momentum-alert ran for 2026-05-25 — STAR_MOMENTUM_NO_ALERTS.**
 
-**Findings:**
+**aaronjmars/aeon**: 433⭐ → 500⭐ target, gap 67 stars. v7 = 11.86/day, projects crossing on 2026-05-31 (Sunday) in ~6 days — just one day short of the 7-day launch-window minimum. Verdict: **OUT_OF_WINDOW**.
 
-- **aaronjmars/aeon** (429⭐): Projected to cross **500⭐ on 2026-05-30 (Saturday)** — just 6 days out, one day below the 7-day minimum required to dispatch `show-hn-draft` thoughtfully. Pace: 12.43 stars/day (v7), 9.0 stars/day (v3). This is the closest the window has gotten. If pace holds, tomorrow's run may either open the window (if the projection shifts to ≥7 days) or confirm the milestone arrives before a dispatch is practical.
-- **aaronjmars/minitor** (10⭐): ~280 days from the 50⭐ milestone. Well outside any launch window.
+**aaronjmars/minitor**: 10⭐ → 50⭐ target, gap 40 stars. v7 = 0.14/day, projects crossing in ~280 days on 2027-03-01. Verdict: **OUT_OF_WINDOW**.
 
-**Files written:**
-- `articles/star-momentum-2026-05-24.md` (projection report)
-- `memory/topics/star-momentum-state.json` (updated `last_run_at` and `projected_date_v7` for both repos)
-- `memory/logs/2026-05-24.md` (appended Star Momentum log block)
+No notification sent (zero repos cleared all gates). Article written to `articles/star-momentum-2026-05-25.md`, state updated in `memory/topics/star-momentum-state.json`, log appended to `memory/logs/2026-05-25.md`.

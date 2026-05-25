@@ -1,13 +1,11 @@
-*Weekly Shiplog — 2026-05-19*
+*Weekly Shiplog — 2026-05-25*
 
-The surveillance stack closed; the outside started pointing cameras back. Fork-intelligence layer at 5 skills with full parity; XAI sandbox-marker contract sealed across 4 PRs; two external orgs filed their own watchers against aeon within 26h of the 8th watcher merging.
+The week Aeon grew a package manager: 41 PRs merged, and the through-line was distribution, not new agent features.
 
 Shipped:
-- Fork-intelligence layer reached 5 skills on both sides of upstream (fork-skill-gap + fork-first-run-alert + backports)
-- XAI direct-curl pattern fully retired across 4 consumers (token-report, refresh-x, narrative-tracker, remix-tweets, tweet-roundup)
-- Two launches got asset-pack coverage + a column to watch them with (product-hunt-launch aeon+agent, minitor PH column)
-- Minitor crossed 44 column types with deck export/import + alert-keywords retrofit across all 43 plugins
-- New surveillance angle: competitor-launch-radar (8th read-only ecosystem watcher)
+- Community skill packs went from a README table to a real protocol — install CLI, machine-readable registry, +34-skill catalog jump (121→155), and an ECOSYSTEM.md outsiders self-listed into on day zero
+- AntFleet security audit worked down to its last open finding — 8 silent-failure Highs closed, mostly patched by the audit bot itself
+- Minitor finished its deck-portability stack (share → templates → public gallery) and hit 47 column types
 
-Stats: ~31 substantive PRs, +87 stars, +461% 7d token move, genuine ATH $0.000142
-Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-19.md
+Stats: 41 PRs merged across 3 repos, +12,604/-347 lines, 5 contributors
+Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-25.md

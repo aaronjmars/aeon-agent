@@ -1,18 +1,16 @@
-*Push Recap — 2026-05-23*
-Six substantive PRs across aeon/aeon-agent/minitor, +664/-8 lines, four distinct authors (3 community, 1 Aeon bot). No merges to main today — all activity is open PRs.
+*Push Recap — 2026-05-24*
+12 substantive PRs across aeon (7), aeon-agent (3), minitor (1) + ~22 cron auto-commits. ~8,260/-108 lines, 6 distinct authors.
 
-*Community Skill Pack ecosystem (3 aeon PRs):* PR #215 ships skill-packs.json — machine-readable mirror of the README community-packs table, with five seed entries (slugs sourced live from each pack's own manifest). install-skill-pack grows a no-repo --list mode that reads the registry, falling back to the upstream raw URL when run outside a clone. PR #216 (antfleet-ops) and PR #217 (liquidpadbot) register two more packs into the README the same day — neither yet adds the matching skill-packs.json row, so PR #215's new dual-update checklist faces its first test on whichever merges first.
+Skill catalog explosion: aeon's evening of May 23 absorbed 34 derivative-instance skills back into upstream (catalog now 155), added ECOSYSTEM.md (39-project table for products built on Aeon), bundled 4 community packs into the README, merged the machine-readable skill-packs.json registry. Three registries now formally separate forks (SHOWCASE), pack authors (skill-packs.json), and product builders (ECOSYSTEM.md).
 
-*First community on-chain skill (aeon PR #214):* lawbworld-tech contributes lawb-pool-monitor — hourly cron watching the LawbFishing prize pool on Base mainnet (proxy 0x48b2db9E89542Baa217bf8dc6269164b7887fE57). Four read-only selectors documented (prizePool/shopVault/paused/MIN_PRICE) plus the Redeemed burn event. State-file dedup on four alert conditions. Net +228 lines after the contributor cleaned up bot output accidentally committed on the feature branch.
+AntFleet two-model bench sweep: antfleet-ops opened 3 PRs in 60 seconds on aeon — workflow_dispatch shell injection (High), GATEWAY tr-d parse error (High), notify-dedup-hash-before-delivery silent message loss (Medium). All from claude-opus-4-7 + gpt-5 unanimous review on aeon-bench PR #31. None merged yet.
 
-*Backport cadence holds at 11 (aeon-agent PR #58):* contributor-spotlight FORK_DEFAULT_BRANCH backport from upstream aeon PR #206 — closes the silent-404 path on forks whose default branch isn't main, so ENABLED_COUNT and OPERATOR_AUTHORED stop being wrong on those runs.
-
-*Minitor /gallery (PR #48):* server-rendered SEO-crawlable starter-deck catalog. Cards render as plain anchors pointing at /#deck=<base64url(payload)> — no exportedAt, so URLs are stable and cacheable. Sidebar gains a Browse-deck-gallery link. No new schema, no new server routes — stacks cleanly on PR #46 (share link) + PR #47 (templates).
+Bot's autonomous cycle: aeon PR #226 closes last open AntFleet High on v4-readiness (silent false-clean READY now structurally unreachable); aeon-agent PR #59 combined backport of install-skill-pack CLI + skill-packs.json registry (12th same-day-after in a row); aeon-agent PR #60 self-corrective response to today's own XAI 403 outage (5-variant PREFETCH_FAILED notification routing); minitor PR #49 per-column refresh intervals (last open May-22 idea consumed).
 
 Key changes:
-- New skill-packs.json (84 lines) + install-skill-pack --list mode (+92/-4) — registry surface for the community-packs table
-- New skills/lawb-pool-monitor/SKILL.md (+227 lines) — first PR-shaped community SKILL contribution
-- New app/gallery/page.tsx (+173 lines) + sidebar Link — public deck gallery on top of existing share-link + templates infra
+- aeon PR #219 ported 34 skills (+6,162/-69, 36 files), dropped 3 duplicates, merged auto-merge-agent-prs retry-cap into auto-merge
+- aeon PR #220 ECOSYSTEM.md splits products-built-on-Aeon from forks + skill packs (39-project alphabetized table)
+- minitor PR #49 per-column refresh intervals (+513/-2, 10 files) — column-row level field, never reaches plugin fetchers, all 47 plugins keep working unchanged
 
-Stats: ~10 files changed (substantive), +664/-8 lines across 6 PRs (excludes 35+ cron auto-commits on aeon-agent main)
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-23.md
+Stats: ~70 files changed, +8,262/-108 lines across 12 substantive PRs
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-24.md

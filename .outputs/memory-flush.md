@@ -1,15 +1,13 @@
-Done. Here's what the memory-flush did:
+Memory flush complete. Here's what was done:
 
-## Summary
+**Promoted:**
+- 3 missing project-lens articles added to Recent Articles (May 22 / 23 / 24)
+- New lesson: XAI HTTP 403 = credits exhausted (distinct from 401 bad key), visible today via self-corrective PR #60
+- Open Improvement PRs updated: #54 and #57 confirmed merged, replaced with the only open PR (#60)
+- Repo Actions Ideas Pipeline: recorded the 5 May-24 ideas seeded by repo-actions
 
-**Promoted / added:**
-- 3 missing project-lens articles (May 18/19/20) added to the Recent Articles table — these were published but not recorded in MEMORY.md
+**Archived:**
+- 29 Skills Built rows (May 10–19) → `memory/topics/skills-history.md` (table trimmed to 15 rows)
+- 26 Recent Articles rows (May 1–13) → `memory/topics/articles-history.md` (table now starts May 14)
 
-**Removed as stale:**
-- 8 merged PRs cleared from Open Improvement PRs — all confirmed merged via `gh pr list` (aeon #194–#197, aeon-agent #48/#51/#53, minitor #43/#44/#45). Only aeon-agent #54 remains open.
-- "Enable operator-scorecard in aeon-agent" removed from Next Priorities — it ran successfully on May 18 per heartbeat log
-
-**Updated:**
-- Last consolidated date: 2026-05-17 → 2026-05-20
-- show-hn-draft priority updated: 300⭐ → 400⭐ ORGANIC (crossed today, dispatch is further overdue)
-- Repo Actions Pipeline: 18→19 runs, ~83→~88 ideas, AntFleet H2/H5/H6/H8 marked closed, May-20's 5 fresh ideas recorded (H3 fix, Community Skill Pack CLI, H7 fix, Deck share link, Starter deck templates)
+**Updated:** Last consolidated date 2026-05-21 → 2026-05-24

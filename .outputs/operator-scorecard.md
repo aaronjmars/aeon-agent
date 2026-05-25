@@ -1,13 +1,13 @@
-*Operator Scorecard — 2026-05-18*
-🟡 WATCH — Fleet ran clean 4 of 7 days; +69 stars and 19 skills shipped; token printed consecutive ATHs (+1,565% 7d).
+*Operator Scorecard — 2026-05-25*
+🔴 DEGRADED — Fleet ran clean all week and community added 92 stars — but the token pulled back 43% from the May 18 peak.
 
-Agent health: 4 clean / 3 flagged heartbeats across 7 runs (skill-analytics not enabled)
+Agent health: 7 clean / 0 flagged heartbeats across 7 runs (skill-analytics not enabled)
 
-Community growth: +69⭐ +18 forks across 2 repos
+Community growth: +92⭐ +59 forks across 1 repo · new contributors unknown this window
 
-Economic activity: $79.99 in $AEON to 22 recipients · token +1,565% 7d (BREAKING OUT)
+Economic activity: $30.00 in $AEON to 10 recipients · token -43.4% 7d (RETRACING)
 
-Notable: "Twenty-Four Hours After The Switch Was Flipped, Star-Milestone Fired For The First Time And The PR Queue Hit Zero." (May 15)
+Notable: install-skill-pack CLI shipped — first external pack plugged in within 20 minutes; 15 skills built this week
 
 Window: last 7d
-Full: articles/operator-scorecard-2026-05-18.md
+Full: articles/operator-scorecard-2026-05-25.md
