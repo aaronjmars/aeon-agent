@@ -1,0 +1,205 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-25"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary",
+        "sep1",
+        "aeon-section",
+        "sep2",
+        "aeon-agent-section",
+        "sep3",
+        "minitor-section",
+        "sep4",
+        "key-changes-section",
+        "sep5",
+        "stats-section",
+        "recap-link"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "13 substantive commits across aeon / aeon-agent / minitor by 4 authors. Theme of the day: hardening + distribution, not new capability.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeon-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-details"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon (8 commits)",
+        "level": "h2"
+      }
+    },
+    "aeon-details": {
+      "type": "Text",
+      "props": {
+        "text": "Two AntFleet CI-security patches — workflow_dispatch input is now allowlist-validated + env-passed (no more template-into-bash injection, #222) and the gateway parser's fragile tr-d quoting → sed (#223). Closed the LAST open AntFleet High: v4-readiness named 4 files it never read → silent false-clean READY, now trips PARTIAL instead (#226). New ecosystem-pulse skill (weekly ECOSYSTEM.md liveness check, #227). Wired the 34 ported skills that #219 added to the catalog but never registered in aeon.yml — they couldn't run until now (#230). Plus 3 inbound ecosystem doc PRs (LiquidPad, MythosForge, +5 projects self-listing).",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeon-agent-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-agent-heading",
+        "aeon-agent-details"
+      ]
+    },
+    "aeon-agent-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon-agent (3 commits)",
+        "level": "h2"
+      }
+    },
+    "aeon-agent-details": {
+      "type": "Text",
+      "props": {
+        "text": "Backported the community skill-pack install protocol (install-skill-pack CLI + registry, +991, #59) and config-validator — adapted, not copied, so it doesn't false-positive on aeon-agent's conditional checkout (#61). fetch-tweets now fails LOUD: HTTP-code-keyed PREFETCH_FAILED variants (403 → credits top-up link) + a required Notification-sent log line for heartbeat (#60) — same-week response to the May-24 XAI 403.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "minitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor-heading",
+        "minitor-details"
+      ]
+    },
+    "minitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor (2 commits)",
+        "level": "h2"
+      }
+    },
+    "minitor-details": {
+      "type": "Text",
+      "props": {
+        "text": "Columns went active — per-column auto-refresh (1/5/15/60m, background-tab pause, #49) and per-column webhook alerts with an SSRF-guarded validator + no-redirect sender, secret-bearing URLs kept out of the public share export (#50).",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "key-changes-heading",
+        "key-changes-list"
+      ]
+    },
+    "key-changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      }
+    },
+    "key-changes-list": {
+      "type": "Text",
+      "props": {
+        "text": "• aeon #222: inputs.skill no longer interpolated into bash source — allowlist-validated `^[a-zA-Z0-9_-]+$`, passed via env\n• minitor lib/columns/webhook.ts (+166): https-only SSRF guard (RFC-1918/loopback/CGNAT/multicast + IPv6), 5s bounded `redirect:\"error\"` sender\n• aeon #230: 34 ported skills finally schedulable (still enabled:false); README/image synced 121→156",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stats-heading",
+        "stats-text"
+      ]
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      }
+    },
+    "stats-text": {
+      "type": "Text",
+      "props": {
+        "text": "46 files changed, +3,198 / -58",
+        "variant": "body"
+      }
+    },
+    "recap-link": {
+      "type": "Link",
+      "props": {
+        "label": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-25.md"
+      }
+    }
+  }
+}
