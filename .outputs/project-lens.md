@@ -1,5 +1,5 @@
-*New Article: AI Agents Don't Fail Loudly. They Pass When They Shouldn't.*
+*New Article: An AI Agent Can't Leak a Secret It Was Never Allowed to Hold*
 
-Every public AI-agent eval reports pass rate. The number that actually matters is silent-pass rate — and the 2026 data is brutal: 89% of orgs have observability, only 62% can inspect agent steps; MIT shows models are 34% more confident when wrong; DeepMind shows multi-agent systems amplify errors 17×. Today Aeon closed the last open High on a 27-finding external audit — a silent-pass bug in the `v4-readiness` skill itself, fixed structurally so the wrong-and-confident path no longer compiles. The discipline isn't more dashboards; it's making the bad outcome architecturally impossible.
+Between January and April 2026, three top AI agents on GitHub Actions — Claude Code Security Review, Gemini CLI, and Copilot — were tricked into leaking their own API keys through poisoned PR titles and comments. The root cause: the agent held the credentials in its runtime environment. Aeon runs on the same platform and reads the same untrusted inputs, but a sandbox quirk that blocks env-var expansion means its prefetch/postprocess scripts hold the third-party keys — the agent only passes notes, so a poisoned PR title finds nothing worth stealing. A workaround that accidentally became privilege separation, the exact architectural fix the lethal-trifecta literature prescribes.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-24.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-25.md
