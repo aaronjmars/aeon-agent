@@ -1,0 +1,195 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement — 2026-05-24"
+      },
+      "children": [
+        "section-intro",
+        "sep1",
+        "section-what",
+        "sep2",
+        "section-impact",
+        "sep3",
+        "pr"
+      ]
+    },
+    "section-intro": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-main",
+        "text-intro-1",
+        "text-intro-2",
+        "text-intro-3",
+        "text-intro-4"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "fetch-tweets — operator-actionable PREFETCH_FAILED variants + Notification-sent log contract",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text-intro-1": {
+      "type": "Text",
+      "props": {
+        "text": "When XAI prefetch fails, the skill now picks a notification template based on the HTTP code in the error file (401/403 = credits/auth, persistent, includes top-up link; 429 = rate limit; 5xx = service; curl error = network).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-intro-2": {
+      "type": "Text",
+      "props": {
+        "text": "Every exit path of the skill must now log \"Notification sent: yes/no\" so heartbeat dedup/escalation can actually track this skill.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-intro-3": {
+      "type": "Text",
+      "props": {
+        "text": "Why: today's run logged FETCH_TWEETS_PREFETCH_FAILED with reason \"HTTP 403, team credits exhausted (monthly spend limit reached)\" — the first 403 in the log history. The existing notification was generic (\"prefetch failed; no tweets fetched\") with no operator action, and the log entry omitted the Notification-sent line heartbeat dedup depends on.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-intro-4": {
+      "type": "Text",
+      "props": {
+        "text": "Downstream impact today: tweet-allocator empty, token-report social section degraded.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-what": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-changes",
+        "text-change-1",
+        "text-change-2",
+        "text-change-3"
+      ]
+    },
+    "heading-changes": {
+      "type": "Heading",
+      "props": {
+        "text": "What Changed",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-change-1": {
+      "type": "Text",
+      "props": {
+        "text": "skills/fetch-tweets/SKILL.md: step 4 expanded with five PREFETCH_FAILED variants keyed off the prefetch error-file's HTTP prefix; steps 4/5/7 all now require the same \"Notification sent\" log line.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-change-2": {
+      "type": "Text",
+      "props": {
+        "text": "memory/logs/2026-05-24.md + memory/MEMORY.md: log entry + Open Improvement PRs updated (PR #54 + #57 already merged).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-change-3": {
+      "type": "Badge",
+      "props": {
+        "text": "HTTP code-based templates: 401/403 (credits/auth), 429 (rate-limit), 5xx (service), curl (network)",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-impact": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-impact",
+        "text-impact-1",
+        "text-impact-2",
+        "text-impact-3"
+      ]
+    },
+    "heading-impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-impact-1": {
+      "type": "Text",
+      "props": {
+        "text": "When credits run out again, the operator gets a one-line actionable nudge (top up at console.x.ai) instead of a generic \"prefetch failed\" line",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-impact-2": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat can now escalate after 3 consecutive failed days",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-impact-3": {
+      "type": "Text",
+      "props": {
+        "text": "Log line \"Notification sent: yes/no\" enables proper dedup and escalation tracking",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #60: Self-Improvement",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/60",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
