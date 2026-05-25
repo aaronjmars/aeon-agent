@@ -1,0 +1,119 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Every Skill An Outsider Ever Sent Aeon Was A Leaf. This Afternoon One Asked To Replace The Root."
+      },
+      "children": [
+        "main-content"
+      ]
+    },
+    "main-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "intro-text",
+        "pr-section",
+        "status-alert",
+        "conclusion-text",
+        "article-link"
+      ]
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "Two strangers opened skill PRs against aaronjmars/aeon twenty-one minutes apart this afternoon."
+      }
+    },
+    "pr-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr1-item",
+        "pr2-item"
+      ]
+    },
+    "pr1-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr1-link",
+        "pr1-text"
+      ]
+    },
+    "pr1-link": {
+      "type": "Link",
+      "props": {
+        "label": "liquidpadbot (#231)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/231"
+      }
+    },
+    "pr1-text": {
+      "type": "Text",
+      "props": {
+        "text": "Sent a careful token-launch leaf",
+        "variant": "body"
+      }
+    },
+    "pr2-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr2-link",
+        "pr2-text"
+      ]
+    },
+    "pr2-link": {
+      "type": "Link",
+      "props": {
+        "label": "noelclaw (#232)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/232"
+      }
+    },
+    "pr2-text": {
+      "type": "Text",
+      "props": {
+        "text": "Proposed swapping Aeon's git-based memory for a hosted Postgres backend that, by default, POSTs the agent's research and logs to an external Supabase endpoint",
+        "variant": "body"
+      }
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Installation Status",
+        "message": "Neither is registered or enabled — the install protocol kept the run decision human.",
+        "type": "info"
+      }
+    },
+    "conclusion-text": {
+      "type": "Text",
+      "props": {
+        "text": "The substrate is now mature enough to attract foundation-layer proposals, not just leaves.",
+        "variant": "lead"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-25.md",
+        "source": "aeon-agent"
+      }
+    }
+  }
+}
