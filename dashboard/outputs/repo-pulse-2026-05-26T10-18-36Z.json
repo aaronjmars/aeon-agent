@@ -1,0 +1,332 @@
+{
+  "root": "card_repo_pulse",
+  "state": {},
+  "elements": {
+    "card_repo_pulse": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-05-26"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo_heading",
+        "repo_link",
+        "sep1",
+        "stats_section",
+        "sep2",
+        "stargazers_section",
+        "sep3",
+        "forks_section"
+      ]
+    },
+    "repo_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "repo_link": {
+      "type": "Link",
+      "props": {
+        "label": "View Repository",
+        "href": "https://github.com/aaronjmars/aeon"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_grid"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "451",
+        "delta": "+9",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "124",
+        "delta": "+9",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazers_list"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers (9)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "star_1",
+        "star_2",
+        "star_3",
+        "star_4",
+        "star_5",
+        "star_6",
+        "star_7",
+        "star_8",
+        "star_9"
+      ]
+    },
+    "star_1": {
+      "type": "Link",
+      "props": {
+        "label": "dmndbrp-oss",
+        "href": "https://github.com/dmndbrp-oss"
+      },
+      "children": []
+    },
+    "star_2": {
+      "type": "Link",
+      "props": {
+        "label": "DoughBoiKush",
+        "href": "https://github.com/DoughBoiKush"
+      },
+      "children": []
+    },
+    "star_3": {
+      "type": "Link",
+      "props": {
+        "label": "Socrates404",
+        "href": "https://github.com/Socrates404"
+      },
+      "children": []
+    },
+    "star_4": {
+      "type": "Link",
+      "props": {
+        "label": "tuxiaobin-123",
+        "href": "https://github.com/tuxiaobin-123"
+      },
+      "children": []
+    },
+    "star_5": {
+      "type": "Link",
+      "props": {
+        "label": "sarapsushi444-sudo",
+        "href": "https://github.com/sarapsushi444-sudo"
+      },
+      "children": []
+    },
+    "star_6": {
+      "type": "Link",
+      "props": {
+        "label": "ALPHAlcl",
+        "href": "https://github.com/ALPHAlcl"
+      },
+      "children": []
+    },
+    "star_7": {
+      "type": "Link",
+      "props": {
+        "label": "Kailtis",
+        "href": "https://github.com/Kailtis"
+      },
+      "children": []
+    },
+    "star_8": {
+      "type": "Link",
+      "props": {
+        "label": "KingRwaz",
+        "href": "https://github.com/KingRwaz"
+      },
+      "children": []
+    },
+    "star_9": {
+      "type": "Link",
+      "props": {
+        "label": "CHik369",
+        "href": "https://github.com/CHik369"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forks_heading",
+        "forks_list"
+      ]
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks (9)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork_1",
+        "fork_2",
+        "fork_3",
+        "fork_4",
+        "fork_5",
+        "fork_6",
+        "fork_7",
+        "fork_8",
+        "fork_9"
+      ]
+    },
+    "fork_1": {
+      "type": "Link",
+      "props": {
+        "label": "DoughBoiKush/aeon",
+        "href": "https://github.com/DoughBoiKush/aeon"
+      },
+      "children": []
+    },
+    "fork_2": {
+      "type": "Link",
+      "props": {
+        "label": "ryjin111/aeon-pack-pr",
+        "href": "https://github.com/ryjin111/aeon-pack-pr"
+      },
+      "children": []
+    },
+    "fork_3": {
+      "type": "Link",
+      "props": {
+        "label": "dontlickfrogs/aeon",
+        "href": "https://github.com/dontlickfrogs/aeon"
+      },
+      "children": []
+    },
+    "fork_4": {
+      "type": "Link",
+      "props": {
+        "label": "apolloclaws-oss/aeon",
+        "href": "https://github.com/apolloclaws-oss/aeon"
+      },
+      "children": []
+    },
+    "fork_5": {
+      "type": "Link",
+      "props": {
+        "label": "sarapsushi444-sudo/aeon",
+        "href": "https://github.com/sarapsushi444-sudo/aeon"
+      },
+      "children": []
+    },
+    "fork_6": {
+      "type": "Link",
+      "props": {
+        "label": "noelclaw/aeon",
+        "href": "https://github.com/noelclaw/aeon"
+      },
+      "children": []
+    },
+    "fork_7": {
+      "type": "Link",
+      "props": {
+        "label": "rimurucook/aeon",
+        "href": "https://github.com/rimurucook/aeon"
+      },
+      "children": []
+    },
+    "fork_8": {
+      "type": "Link",
+      "props": {
+        "label": "KingRwaz/aeon",
+        "href": "https://github.com/KingRwaz/aeon"
+      },
+      "children": []
+    },
+    "fork_9": {
+      "type": "Link",
+      "props": {
+        "label": "codexvritra/aeon",
+        "href": "https://github.com/codexvritra/aeon"
+      },
+      "children": []
+    }
+  }
+}
