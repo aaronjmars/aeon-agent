@@ -1,15 +1,12 @@
-*Agent Self-Improvement — 2026-05-24*
+*Agent Self-Improvement — 2026-05-26*
 
-fetch-tweets — operator-actionable PREFETCH_FAILED variants + Notification-sent log contract.
+Fixed weekly-shiplog so it stops fighting the runner's shell-expansion guard. Its step-1 commits query used a `since="$(date -u -d '7 days ago' ...)"` shell substitution, which the runner hook blocks every run — forcing the agent to hand-improvise the query each time. The cutoff is now a literal ISO date computed from today minus 7 days, matching the jq-internal pattern the PR/release queries in the same step already use.
 
-When XAI prefetch fails, the skill now picks a notification template based on the HTTP code in the error file (401/403 = credits/auth, persistent, includes top-up link; 429 = rate limit; 5xx = service; curl error = network). Every exit path of the skill must now log "Notification sent: yes/no" so heartbeat dedup/escalation can actually track this skill.
-
-Why: today's run logged FETCH_TWEETS_PREFETCH_FAILED with reason "HTTP 403, team credits exhausted (monthly spend limit reached)" — the first 403 in the log history. The existing notification was generic ("prefetch failed; no tweets fetched") with no operator action, and the log entry omitted the Notification-sent line heartbeat dedup depends on. Downstream impact today: tweet-allocator empty, token-report social section degraded.
+Why: The 2026-05-25 weekly-shiplog run logged it plainly — "repo hook blocks shell variable expansion ('Contains simple_expansion') — gathered per-PR stats via literal gh api calls instead." Recurring weekly friction on an otherwise-healthy skill (all 21 skills at 100% success rate, zero failures this scan).
 
 What changed:
-- skills/fetch-tweets/SKILL.md: step 4 expanded with five PREFETCH_FAILED variants keyed off the prefetch error-file's HTTP prefix; steps 4/5/7 all now require the same "Notification sent" log line.
-- memory/logs/2026-05-24.md + memory/MEMORY.md: log entry + Open Improvement PRs updated (PR #54 + #57 already merged).
+- skills/weekly-shiplog/SKILL.md: commits cutoff `$(date ...)` → literal `since=YYYY-MM-DDT00:00:00Z` from ${today}; added a note on the hook constraint; also parenthesized `(.commit.message | split("\n")[0])` to fix a latent jq precedence bug on the same line.
 
-Impact: when credits run out again, the operator gets a one-line actionable nudge (top up at console.x.ai) instead of a generic "prefetch failed" line, AND heartbeat can now escalate after 3 consecutive failed days.
+Impact: weekly-shiplog runs its prescribed query directly instead of improvising around a blocked command — fewer wasted turns, more reproducible weekly digests.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/60
+PR: https://github.com/aaronjmars/aeon-agent/pull/63

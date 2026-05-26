@@ -1,0 +1,186 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement",
+        "description": "2026-05-26"
+      },
+      "children": [
+        "issue_heading",
+        "sep1",
+        "issue_label",
+        "issue_text1",
+        "issue_text2",
+        "sep2",
+        "solution_label",
+        "solution_text",
+        "sep3",
+        "context_label",
+        "context_text1",
+        "context_text2",
+        "metrics_stack",
+        "sep4",
+        "changes_label",
+        "changes_file",
+        "change1",
+        "change2",
+        "sep5",
+        "impact_label",
+        "impact_text",
+        "sep6",
+        "pr_link"
+      ]
+    },
+    "issue_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fixed weekly-shiplog Shell Expansion Blocking",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "issue_label": {
+      "type": "Heading",
+      "props": {
+        "text": "The Issue",
+        "level": "h3"
+      }
+    },
+    "issue_text1": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog was fighting the runner's shell-expansion guard. Its step-1 commits query used a `since=\"$(date -u -d '7 days ago' ...)\"` shell substitution, which the runner hook blocks every run."
+      }
+    },
+    "issue_text2": {
+      "type": "Text",
+      "props": {
+        "text": "This forced the agent to hand-improvise the query each time instead of running the command directly."
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "solution_label": {
+      "type": "Heading",
+      "props": {
+        "text": "The Solution",
+        "level": "h3"
+      }
+    },
+    "solution_text": {
+      "type": "Text",
+      "props": {
+        "text": "The cutoff is now a literal ISO date computed from today minus 7 days, matching the jq-internal pattern the PR/release queries in the same step already use."
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "context_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Why This Matters",
+        "level": "h3"
+      }
+    },
+    "context_text1": {
+      "type": "Text",
+      "props": {
+        "text": "The 2026-05-25 weekly-shiplog run logged it plainly — \"repo hook blocks shell variable expansion ('Contains simple_expansion') — gathered per-PR stats via literal gh api calls instead.\""
+      }
+    },
+    "context_text2": {
+      "type": "Text",
+      "props": {
+        "text": "Recurring weekly friction on an otherwise-healthy skill."
+      }
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "metric_skills",
+        "metric_failures"
+      ]
+    },
+    "metric_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "All Skills",
+        "value": "100%",
+        "delta": "21 skills"
+      }
+    },
+    "metric_failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Failures This Scan",
+        "value": "0"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "changes_label": {
+      "type": "Heading",
+      "props": {
+        "text": "What Changed",
+        "level": "h3"
+      }
+    },
+    "changes_file": {
+      "type": "Badge",
+      "props": {
+        "text": "skills/weekly-shiplog/SKILL.md"
+      }
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "Commits cutoff: `$(date ...)` → literal `since=YYYY-MM-DDT00:00:00Z` from ${today}"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "Added note on hook constraint; also parenthesized `(.commit.message | split(\"\\n\")[0])` on the same line to fix latent jq precedence bug"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "impact_label": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impact_text": {
+      "type": "Text",
+      "props": {
+        "text": "weekly-shiplog runs its prescribed query directly instead of improvising around a blocked command — fewer wasted turns, more reproducible weekly digests."
+      }
+    },
+    "sep6": {
+      "type": "Separator"
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon-agent PR #63",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/63",
+        "source": "GitHub"
+      }
+    }
+  }
+}
