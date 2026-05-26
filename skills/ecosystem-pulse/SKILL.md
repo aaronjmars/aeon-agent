@@ -401,4 +401,4 @@ If `gh` is entirely unavailable (no token, CLI missing), every repo lookup fails
 
 ## Why weekly, Monday 11:00 UTC
 
-Project shipping cadence is measured in days-to-weeks, not hours — a daily pulse would 7× the API load and the notification clock for almost no extra signal (most projects don't ship daily). Monday 11:00 UTC slots the ecosystem read just after the rest of the Monday-morning intelligence stack: `ai-framework-watch` (08:30) → `competitor-launch-radar` (10:00) → `ecosystem-pulse` (11:00). The operator reads known-cohort momentum, new entrants, and finally "are the projects built on us alive?" in one sitting.
+Project shipping cadence is measured in days-to-weeks, not hours — a daily pulse would 7× the API load and the notification clock for almost no extra signal (most projects don't ship daily). Monday 11:00 UTC slots the ecosystem read just after the rest of the Monday-morning intelligence stack: `fleet-state` (08:00) → `ai-framework-watch` (08:30) → `competitor-launch-radar` (10:00) → `ecosystem-pulse` (11:00). The operator reads known-cohort momentum, new entrants, and finally "are the projects built on us alive?" in one sitting.
