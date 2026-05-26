@@ -11,10 +11,12 @@ Read memory/watched-repos.md for repos to cover.
 
 ## Steps
 
-1. **Gather the full week of activity** for each watched repo:
+1. **Gather the full week of activity** for each watched repo.
+
+   The runner hook blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(date ...)` for the commits cutoff. Instead, pass `since` as a literal ISO timestamp that you compute from `${today}` minus 7 days (e.g. if today is `2026-05-26`, write `since=2026-05-19T00:00:00Z`). The PR and release cutoffs are computed inside the `--jq` filter (`now - 604800`), which is jq-internal, not shell expansion, so they need no substitution.
    ```bash
-   # Commits from the last 7 days
-   gh api repos/owner/repo/commits -X GET -f since="$(date -u -d '7 days ago' +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || date -u -v-7d +%Y-%m-%dT%H:%M:%SZ)" --jq '.[] | {sha: .sha[0:7], full_sha: .sha, message: .commit.message | split("\n")[0], author: .commit.author.name, date: .commit.author.date}' --paginate
+   # Commits since the literal date 7 days before ${today} (server-side filter bounds the fetch)
+   gh api repos/owner/repo/commits -X GET -f since=YYYY-MM-DDT00:00:00Z --jq '.[] | {sha: .sha[0:7], full_sha: .sha, message: (.commit.message | split("\n")[0]), author: .commit.author.name, date: .commit.author.date}' --paginate
 
    # PRs merged this week
    gh api repos/owner/repo/pulls -X GET -f state=closed -f sort=updated -f direction=desc --jq '[.[] | select(.merged_at != null) | select(.merged_at > (now - 604800 | strftime("%Y-%m-%dT%H:%M:%SZ"))) | {number, title, user: .user.login, merged_at, labels: [.labels[].name]}]'
