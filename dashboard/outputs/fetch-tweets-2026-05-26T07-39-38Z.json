@@ -1,0 +1,147 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-26)"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-card-1",
+        "link-1",
+        "sep-1",
+        "tweet-card-2",
+        "link-2",
+        "sep-2",
+        "tweet-card-3",
+        "link-3",
+        "sep-3",
+        "tweet-card-4",
+        "link-4",
+        "sep-4",
+        "tweet-card-5",
+        "link-5"
+      ]
+    },
+    "tweet-card-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BasedCult33",
+        "handle": "@BasedCult33",
+        "text": "$MYTHOS/$AEON/$MIROSHARK called out as Anthropic-connected tokens worth watching",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BasedCult33/status/2059061923572818222"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-card-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "BasedCult33",
+        "handle": "@BasedCult33",
+        "text": "Suggests $TACHI to a follower (thread context references $AEON)",
+        "likes": 2,
+        "retweets": 0
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/BasedCult33/status/2059058079644197322"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-card-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "kariakubra",
+        "handle": "@kariakubra",
+        "text": "Based ser $AEON",
+        "likes": 1,
+        "retweets": 0
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/kariakubra/status/2059057677704073681"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-card-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "SiliconSovi7ou",
+        "handle": "@SiliconSovi7ou",
+        "text": "⚠️ Phishing: contract address drop + fake holders event at taketkn.top",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/SiliconSovi7ou/status/2059057218360619271"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-card-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "rusted_tong",
+        "handle": "@rusted_tong",
+        "text": "⚠️ Phishing: contract address drop + fake holders event at taketkn.live",
+        "likes": 0,
+        "retweets": 0
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/rusted_tong/status/2059056992917049428"
+      }
+    }
+  }
+}

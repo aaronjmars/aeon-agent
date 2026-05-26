@@ -1,23 +1,21 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-25)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-26)*
 
-Only 5 tweets found today (2 organic, 3 vote-spam fallback included per low-volume rule).
+1. x.com/BasedCult33 — $MYTHOS/$AEON/$MIROSHARK called out as Anthropic-connected tokens worth watching
+Likes: 2 | RTs: 0
+[View tweet](https://x.com/BasedCult33/status/2059061923572818222)
 
-1. x.com/Grimashq — $AEON did well with token; also shills $BLINDCACHE as a comparable
-Likes: 6 | RTs: 1
-[View tweet](https://x.com/Grimashq/status/2058698166174695563)
+2. x.com/BasedCult33 — Suggests $TACHI to a follower (thread context references $AEON)
+Likes: 2 | RTs: 0
+[View tweet](https://x.com/BasedCult33/status/2059058079644197322)
 
-2. x.com/BangDG2 — "It seems like communication with $aeon is also necessary."
+3. x.com/kariakubra — "Based ser $AEON"
 Likes: 1 | RTs: 0
-[View tweet](https://x.com/BangDG2/status/2058694513976295557)
+[View tweet](https://x.com/kariakubra/status/2059057677704073681)
 
-3. x.com/Teknoj00 — $AEON is not getting visibility by itself — vote it up (colnmarketcap vote link) ⚠️ spam
+4. x.com/SiliconSovi7ou — ⚠️ Phishing: contract address drop + fake holders event at taketkn.top
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/Teknoj00/status/2058699080658719120)
+[View tweet](https://x.com/SiliconSovi7ou/status/2059057218360619271)
 
-4. x.com/CryptoflareETHm — $AEON needs voters, not spectators (colnmarketcap vote link) ⚠️ spam
+5. x.com/rusted_tong — ⚠️ Phishing: contract address drop + fake holders event at taketkn.live
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/CryptoflareETHm/status/2058694999353495558)
-
-5. x.com/FigenWeb3xsl — $AEON isn't loud yet — help make it loud (colnmarketcap vote link) ⚠️ spam
-Likes: 0 | RTs: 0
-[View tweet](https://x.com/FigenWeb3xsl/status/2058693524367786133)
+[View tweet](https://x.com/rusted_tong/status/2059056992917049428)
