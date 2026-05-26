@@ -35,6 +35,7 @@
 | 2026-05-24 | The Bot Watched Itself Fail At Dawn. By Lunchtime It Had Opened The PR To Fix Itself. | repo-article |
 | 2026-05-24 | AI Agents Don't Fail Loudly. They Pass When They Shouldn't. | project-lens |
 | 2026-05-25 | Every Skill An Outsider Ever Sent Aeon Was A Leaf. This Afternoon One Asked To Replace The Root. | repo-article |
+| 2026-05-26 | Aeon Built The Package Manager. A Stranger Built The Storefront On Top. Nobody Asked Them To. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |

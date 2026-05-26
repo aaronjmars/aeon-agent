@@ -1,0 +1,50 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading",
+        "text_body",
+        "separator",
+        "storylink"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Article: Aeon Built The Package Manager. A Stranger Built The Storefront On Top.",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_body": {
+      "type": "Text",
+      "props": {
+        "text": "Four days after Aeon shipped its skill package manager (install-skill-pack + skill-packs.json), an outside org called Sparkleware showed up with the next layer already built: a live discovery catalog (sparkleware.vercel.app) that crawls every aeon-skill-pack repo, plus PR #249 to nearly double the 7-pack registry. Nobody asked them to — the clearest sign Aeon has crossed from a repo people fork to a substrate people build on top of.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "storylink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-05-26.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
