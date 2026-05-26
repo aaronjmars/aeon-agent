@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 90,
+  "total": 92,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -690,6 +690,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon competitor-launch-radar"
+    },
+    {
+      "slug": "ecosystem-pulse",
+      "name": "ecosystem-pulse",
+      "description": "Weekly liveness check of the projects listed in ECOSYSTEM.md — stars/forks/last-commit recency + new releases for any project that can be matched to a GitHub repo",
+      "category": "research",
+      "schedule": "0 11 * * 1",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon ecosystem-pulse"
     },
     {
       "slug": "config-validator",
