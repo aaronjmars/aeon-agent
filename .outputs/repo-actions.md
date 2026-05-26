@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-05-24*
-Generated from analysis of aaronjmars/aeon (437⭐, 112 forks), aaronjmars/aeon-agent, and aaronjmars/minitor. Two big events shaped today: ECOSYSTEM.md merged listing 40 projects building on Aeon, and PR #219 pushed the skill catalog to 155 total.
+*Repo Action Ideas — 2026-05-26*
+Generated from analysis of aaronjmars/aeon (453⭐, 124 forks), aaronjmars/aeon-agent (9⭐), and aaronjmars/minitor (11⭐, 49 column types). Fleet-skill-adoption leaderboard merged today in aeon (PR #245), Sparkleware external discovery catalog issue filed, signa-skills 10-skill community pack PR opened.
 
-1. ecosystem-pulse skill (Feature, Small)
-   Weekly skill that monitors the 40 projects in ECOSYSTEM.md for activity — the first skill to ask "are the things built on Aeon actually shipping?"
+1. fleet-skill-adoption backport (DX, Small)
+   14th same-day-after backport — brings the Sunday fleet adoption leaderboard to aeon-agent operators.
 
-2. fleet-skill-adoption leaderboard (Feature, Medium)
-   Reads ACTIVE/POWER forks, counts per-slug enabled:true occurrences, surfaces top/bottom-15 by fleet adoption % — operators can see which of the 155 skills the community has actually validated
+2. sparkleware-catalog skill (Feature, Small)
+   Weekly exporter that enriches skill-packs.json with live GitHub signals into dashboard/outputs/skill-packs-catalog.json — machine-readable feed for Sparkleware and other discovery tools.
 
-3. config-validator backport from PR #219 (DX, Small)
-   Ports the config-validator skill from the 34-skill batch to aeon-agent — validates aeon.yml structure (cron syntax, slug paths, required frontmatter) before operators commit bad configs
+3. RSS/Atom feed column (Integration, Medium)
+   Generic keyless column accepting any feed URL — unlocks every blog, changelog, and paper-alert service in one shot. Minitor's 50th column type.
 
-4. Bluesky AT Protocol column (Integration, Medium)
-   48th column type for minitor — keyless bsky.social AppView API, user + search modes, completes the social trifecta (X + Reddit + Bluesky)
+4. Incoming skill PR triage skill (Feature/Community, Medium)
+   workflow_dispatch skill with var: PR_NUMBER that runs scan.sh, enumerates required secrets, checks cron conflicts, and posts a structured review comment — responds to PR #231 and #241 sitting open.
 
-5. Column-level webhook notifications (Feature, Medium)
-   When alertKeywords match incoming items, POST to a per-column HTTPS webhook — turns minitor from a passive dashboard into an active alerting system
+5. Deck version history (Feature, Medium)
+   Silent per-mutation snapshots (last 5) surfaced in Configure dialog — one-click restore for accidentally deleted columns.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-24.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-26.md
