@@ -1,0 +1,82 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-05-26"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_topic",
+        "para1",
+        "para2",
+        "para3",
+        "para4",
+        "sep1",
+        "story_pr",
+        "text_article"
+      ]
+    },
+    "heading_topic": {
+      "type": "Heading",
+      "props": {
+        "text": "Self-repair — weekly-shiplog since-date fix, aeon-agent PR #63",
+        "level": "h2"
+      }
+    },
+    "para1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ The weekly-shiplog skill has been improvising its own since-date on every run. The GitHub Actions runner blocks shell date expansion — so each run, the agent worked around it manually. Today it wrote the fix."
+      }
+    },
+    "para2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ weekly-shiplog generates a weekly commits and releases report. Step 1 built the 7-day window with a shell date substitution the GitHub Actions runner refuses to expand. The since-date parameter went out wrong on every run."
+      }
+    },
+    "para3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ PR #63 switches the since-date to a literal date string derived from today's date — the same pattern the PR and release queries in the same skill already used. A jq precedence bug in that step got caught and fixed in the same diff."
+      }
+    },
+    "para4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ An agent that silently adjusts for its own broken tooling is harder to audit than one that fails visibly or fixes itself. The self-improve skill chose the latter — scheduled health check found the pattern, PR followed."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "story_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "5/ PR #63 — weekly-shiplog since-date fix, aeon-agent",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/63",
+        "source": "GitHub"
+      }
+    },
+    "text_article": {
+      "type": "Text",
+      "props": {
+        "text": "(article: articles/thread-2026-05-26.md)",
+        "variant": "caption"
+      }
+    }
+  }
+}
