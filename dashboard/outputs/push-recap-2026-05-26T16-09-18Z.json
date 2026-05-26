@@ -1,0 +1,311 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-26"
+      },
+      "children": [
+        "summary-text",
+        "summary-stats",
+        "sep1",
+        "aeon-section",
+        "aeon-agent-section",
+        "minitor-section",
+        "sep2",
+        "key-changes-section",
+        "sep3",
+        "stats-section",
+        "sep4",
+        "link-section"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "3 repos · 11 substantive commits by 4 authors (+1,414/-41, ~30 files), plus 36 automated cron pushes in aeon-agent.",
+        "variant": "lead"
+      }
+    },
+    "summary-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "sm"
+      },
+      "children": [
+        "stat-repos",
+        "stat-commits",
+        "stat-authors",
+        "stat-cron"
+      ]
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos",
+        "value": "3"
+      }
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "11"
+      }
+    },
+    "stat-authors": {
+      "type": "Stat",
+      "props": {
+        "label": "Authors",
+        "value": "4"
+      }
+    },
+    "stat-cron": {
+      "type": "Stat",
+      "props": {
+        "label": "Cron Pushes",
+        "value": "36"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeon-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-item1",
+        "aeon-item2",
+        "aeon-item3"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon — new leaderboard + registry curation",
+        "level": "h2"
+      }
+    },
+    "aeon-item1": {
+      "type": "Text",
+      "props": {
+        "text": "Shipped fleet-skill-adoption (#245), a weekly skill ranking the 157-skill catalog by how many forks actually ENABLE each skill — the demand-side counterpart to fork-skill-gap (which shows what's missing)."
+      }
+    },
+    "aeon-item2": {
+      "type": "Text",
+      "props": {
+        "text": "3 ECOSYSTEM.md fixes: zer0, GitBounty handles; Signa website"
+      }
+    },
+    "aeon-item3": {
+      "type": "Text",
+      "props": {
+        "text": "MythosForge community pack growing 1→5 read-only monitoring skills"
+      }
+    },
+    "aeon-agent-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-agent-heading",
+        "aeon-agent-item1",
+        "aeon-agent-item2"
+      ]
+    },
+    "aeon-agent-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon-agent — backport + self-fix",
+        "level": "h2"
+      }
+    },
+    "aeon-agent-item1": {
+      "type": "Text",
+      "props": {
+        "text": "Backported ecosystem-pulse + ECOSYSTEM.md (#62), also fixed a latent skills.json off-by-one → 92"
+      }
+    },
+    "aeon-agent-item2": {
+      "type": "Text",
+      "props": {
+        "text": "Self-authored weekly-shiplog fix (#63) dropping a $(date) call the runner's shell-guard blocks every run"
+      }
+    },
+    "minitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor-heading",
+        "minitor-item1",
+        "minitor-item2",
+        "minitor-item3",
+        "minitor-item4"
+      ]
+    },
+    "minitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor — controllable feeds",
+        "level": "h2"
+      }
+    },
+    "minitor-item1": {
+      "type": "Text",
+      "props": {
+        "text": "Added per-column include/exclude filters (#51) — the active half of alert-keywords, which until now only highlighted"
+      }
+    },
+    "minitor-item2": {
+      "type": "Text",
+      "props": {
+        "text": "Exclude wins over include"
+      }
+    },
+    "minitor-item3": {
+      "type": "Text",
+      "props": {
+        "text": "Round-trips through export/share"
+      }
+    },
+    "minitor-item4": {
+      "type": "Text",
+      "props": {
+        "text": "50 column types unchanged"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key-changes-heading",
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "key-changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-skill-adoption SKILL.md (+345): measures ENABLED not PRESENT, 10-status taxonomy, Sunday 22:00 stack slot"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "minitor column-card.tsx (+80/-14): in-place client-side filtering + \"N/M\" badge + new migration 0004"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "Watch: a Symbiote bot's \"docstring scan\" (#235) net-REMOVED detail from a @function_tool — may degrade its tool schema"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-heading",
+        "stats-grid"
+      ]
+    },
+    "stats-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-files",
+        "stat-changes"
+      ]
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "~30"
+      }
+    },
+    "stat-changes": {
+      "type": "Stat",
+      "props": {
+        "label": "Changes",
+        "value": "+1,414/-41"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-full"
+      ]
+    },
+    "link-full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-26.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
