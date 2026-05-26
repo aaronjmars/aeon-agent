@@ -30,8 +30,8 @@
     "success_rate": 1
   },
   "fetch-tweets": {
-    "last_dispatch": "2026-05-25T07:14:52Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-26T07:36:26Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-25T07:18:30Z",
     "total_runs": 53,
     "total_successes": 53,
