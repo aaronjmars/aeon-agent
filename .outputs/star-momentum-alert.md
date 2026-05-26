@@ -1,9 +1,17 @@
 ## Summary
 
-**star-momentum-alert ran for 2026-05-25 — STAR_MOMENTUM_NO_ALERTS.**
+**star-momentum-alert** ran cleanly. No alerts fired.
 
-**aaronjmars/aeon**: 433⭐ → 500⭐ target, gap 67 stars. v7 = 11.86/day, projects crossing on 2026-05-31 (Sunday) in ~6 days — just one day short of the 7-day launch-window minimum. Verdict: **OUT_OF_WINDOW**.
+**Results:**
 
-**aaronjmars/minitor**: 10⭐ → 50⭐ target, gap 40 stars. v7 = 0.14/day, projects crossing in ~280 days on 2027-03-01. Verdict: **OUT_OF_WINDOW**.
+| Repo | Current | Target | Gap | v7/day | v3/day | Projected (v7) | Verdict |
+|------|---------|--------|-----|--------|--------|----------------|---------|
+| aaronjmars/aeon | 442⭐ | 500⭐ | 58 | 10.3 | 7.0 | 2026-06-01 (Mon) | OUT_OF_WINDOW |
+| aaronjmars/minitor | 11⭐ | 50⭐ | 39 | 0.29 | 0.67 | ~2026-10-08 | OUT_OF_WINDOW |
 
-No notification sent (zero repos cleared all gates). Article written to `articles/star-momentum-2026-05-25.md`, state updated in `memory/topics/star-momentum-state.json`, log appended to `memory/logs/2026-05-25.md`.
+**aeon is 6 days from 500⭐** at current pace — one day short of the 7-day minimum required to dispatch `show-hn-draft` thoughtfully. The v3 (faster 3-day avg) puts it at June 4 (Thursday), which would land inside the window. Check again tomorrow — if the projection holds at 7–9 days, that's the dispatch moment.
+
+**Files written:**
+- `articles/star-momentum-2026-05-26.md`
+- `memory/topics/star-momentum-state.json` (updated `last_run_at` and `projected_date_v7`)
+- `memory/logs/2026-05-26.md` (log block appended)
