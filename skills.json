@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 92,
+  "total": 93,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -740,6 +740,16 @@
       "var": "",
       "files": 1,
       "install": "./add-skill aaronjmars/aeon create-campaign"
+    },
+    {
+      "slug": "fleet-skill-adoption",
+      "name": "fleet-skill-adoption",
+      "description": "Weekly fleet skill-adoption leaderboard — per-slug count of how many POWER+ACTIVE forks have each upstream skill enabled, top-15 most-adopted and bottom-15 least-adopted by fleet penetration, silent when nothing moves",
+      "category": "dev",
+      "schedule": "0 22 * * 0",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon fleet-skill-adoption"
     },
     {
       "slug": "fleet-state",
