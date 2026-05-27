@@ -1,0 +1,144 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_escalation",
+        "sep1",
+        "heading_metrics",
+        "stack_metrics",
+        "sep2",
+        "heading_pr",
+        "text_pr_details",
+        "sep3",
+        "heading_action",
+        "text_draft_ready",
+        "text_command",
+        "sep4",
+        "text_feature_note"
+      ]
+    },
+    "alert_escalation": {
+      "type": "Alert",
+      "props": {
+        "title": "Escalation",
+        "message": "show-hn-draft dispatch overdue — 7 days",
+        "type": "error"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_organic",
+        "stat_current_projection",
+        "stat_velocity"
+      ]
+    },
+    "stat_organic": {
+      "type": "Stat",
+      "props": {
+        "label": "Organic stars crossed",
+        "value": "400⭐",
+        "delta": "May 20"
+      }
+    },
+    "stat_current_projection": {
+      "type": "Stat",
+      "props": {
+        "label": "Aeon current → projection",
+        "value": "455⭐ → 500⭐",
+        "delta": "~Jun 2"
+      }
+    },
+    "stat_velocity": {
+      "type": "Stat",
+      "props": {
+        "label": "Velocity",
+        "value": "~7/day"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_pr": {
+      "type": "Heading",
+      "props": {
+        "text": "PR #151 (show-hn-draft)",
+        "level": "h3"
+      }
+    },
+    "text_pr_details": {
+      "type": "Text",
+      "props": {
+        "text": "Open since May 1 (26 days)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Action",
+        "level": "h3"
+      }
+    },
+    "text_draft_ready": {
+      "type": "Text",
+      "props": {
+        "text": "Draft is ready to paste",
+        "variant": "lead"
+      }
+    },
+    "text_command": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatch via workflow_dispatch: gh workflow run aeon.yml -f skill=show-hn-draft",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_feature_note": {
+      "type": "Text",
+      "props": {
+        "text": "Feature skill also cancelled 2nd consecutive day — no separate notification, 48h dedup.",
+        "variant": "muted"
+      }
+    }
+  }
+}
