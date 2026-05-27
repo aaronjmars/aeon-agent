@@ -38,6 +38,7 @@
 | 2026-05-25 | An AI Agent Can't Leak a Secret It Was Never Allowed to Hold | project-lens |
 | 2026-05-26 | Aeon Built The Package Manager. A Stranger Built The Storefront On Top. Nobody Asked Them To. | repo-article |
 | 2026-05-26 | A Cell Doesn't Try to Get Better. It Tries to Stay a Cell. | project-lens |
+| 2026-05-27 | The Memory Skill That Tried To Live Inside Aeon Came Back Today As A Pointer To Somewhere Else | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
