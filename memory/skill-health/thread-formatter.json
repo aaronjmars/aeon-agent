@@ -1,0 +1,14 @@
+{
+  "skill": "thread-formatter",
+  "last_analyzed": "2026-05-27T18:18:26Z",
+  "quality_score": 4,
+  "assessment": "Completed thread-formatter skill with structured dedup check, topic selection, article generation, notification, and logging",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-05-27",
+      "score": 4
+    }
+  ]
+}

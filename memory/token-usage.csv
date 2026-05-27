@@ -431,3 +431,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-27,tweet-allocator,claude-sonnet-4-6,16,8351,608877,37808
 2026-05-27,star-momentum-alert,claude-sonnet-4-6,5366,12076,758557,167990
 2026-05-27,repo-article,claude-opus-4-7,43,22388,1589696,149330
+2026-05-27,thread-formatter,claude-sonnet-4-6,9,15301,347493,53099

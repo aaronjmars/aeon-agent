@@ -1,0 +1,93 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Deck version history — Minitor PR #52",
+        "description": "Thread Draft — 2026-05-27"
+      },
+      "children": [
+        "thread-points",
+        "separator-1",
+        "article-ref"
+      ]
+    },
+    "thread-points": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "point-1",
+        "point-2",
+        "point-3",
+        "point-4",
+        "point-5"
+      ]
+    },
+    "point-1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ Minitor now silently snapshots your deck before every structural change. Import a template, delete a column, rearrange your layout — a full JSON backup is captured before the mutation. One click to restore."
+      }
+    },
+    "point-2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ Minitor had no undo path. If you imported a template and it overwrote your layout, it was gone. If you deleted a column, the configuration was gone. Every change to a deck was permanent the moment it landed."
+      }
+    },
+    "point-3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ PR #52 adds a deck_snapshots table. Before each structural mutation — column adds, column deletes, imports, full replacements — the server captures the complete DeckExport JSON. Restore brings the snapshot back as a new deck, leaving the current state intact."
+      }
+    },
+    "point-4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ Version history removes the main friction point in Minitor's import and template system. You can now accept a community deck from the gallery or try a shared link without the risk that importing it destroys your current layout."
+      }
+    },
+    "point-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "point-5-text",
+        "pr-link"
+      ]
+    },
+    "point-5-text": {
+      "type": "Text",
+      "props": {
+        "text": "5/ Deck version history for Minitor — snapshot before every mutation, restore as new deck. PR #52:"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/minitor PR #52",
+        "href": "https://github.com/aaronjmars/minitor/pull/52"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article-ref": {
+      "type": "Text",
+      "props": {
+        "text": "(article: articles/thread-2026-05-27.md)",
+        "variant": "muted"
+      }
+    }
+  }
+}
