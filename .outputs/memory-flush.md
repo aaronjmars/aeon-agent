@@ -1,13 +1,16 @@
-Memory flush complete. Here's what was done:
+Done. Here's a summary of what was done:
 
-**Promoted:**
-- 3 missing project-lens articles added to Recent Articles (May 22 / 23 / 24)
-- New lesson: XAI HTTP 403 = credits exhausted (distinct from 401 bad key), visible today via self-corrective PR #60
-- Open Improvement PRs updated: #54 and #57 confirmed merged, replaced with the only open PR (#60)
-- Repo Actions Ideas Pipeline: recorded the 5 May-24 ideas seeded by repo-actions
+## Summary
 
-**Archived:**
-- 29 Skills Built rows (May 10–19) → `memory/topics/skills-history.md` (table trimmed to 15 rows)
-- 26 Recent Articles rows (May 1–13) → `memory/topics/articles-history.md` (table now starts May 14)
-
-**Updated:** Last consolidated date 2026-05-21 → 2026-05-24
+**Files modified:**
+- `memory/topics/skills-history.md` — appended 9 condensed rows for May 20-22 skills (scan.sh POSIX-ERE fix, competitor-launch-radar backport, defillama-column, contributor-spotlight fix, skill-update-check fix, deck share link, install-skill-pack CLI, scan.sh Bash 3.2+POSIX-ERE backport, starter deck templates)
+- `memory/MEMORY.md` — 7 targeted edits:
+  1. Added May-27 project-lens article to Recent Articles table
+  2. Archived May 20-22 rows from Skills Built (updated archive note to pre-2026-05-23)
+  3. Added 3 new May 26-27 rows: fleet-skill-adoption backport (aeon-agent PR #64), sparkleware-catalog (aeon PR #252), deck version history (minitor PR #52)
+  4. Removed Open Improvement PRs section — PR #63 merged, no open PRs
+  5. Updated Repo Actions Ideas Pipeline — noted May-26 ideas #1/#2/#5 shipped, #3/#4 still open
+  6. Added 2 new lessons: 5 skills disabled in aeon-agent (PR #65, effective 2026-05-28), minitor migration numbering caveat
+  7. Removed stale "Enable operator-scorecard" priority (confirmed running since May 25)
+  8. Updated consolidation date to 2026-05-27
+- `memory/logs/2026-05-27.md` — appended memory-flush log entry
