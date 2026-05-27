@@ -1,11 +1,11 @@
-*Repo Pulse — 2026-05-26*
+*Repo Pulse — 2026-05-27*
 [aaronjmars/aeon]
 
-Stars: 451 total (+9 new)
-Forks: 124 total (+9 new)
+Stars: 455 total (+5 new)
+Forks: 129 total (+5 new)
 
 New stargazers:
-github.com/dmndbrp-oss | github.com/DoughBoiKush | github.com/Socrates404 | github.com/tuxiaobin-123 | github.com/sarapsushi444-sudo | github.com/ALPHAlcl | github.com/Kailtis | github.com/KingRwaz | github.com/CHik369
+github.com/djizus | github.com/clawvivor | github.com/rafeefdev | github.com/dkapt | github.com/UIZorrot
 
 New forks:
-github.com/DoughBoiKush/aeon | github.com/ryjin111/aeon-pack-pr | github.com/dontlickfrogs/aeon | github.com/apolloclaws-oss/aeon | github.com/sarapsushi444-sudo/aeon | github.com/noelclaw/aeon | github.com/rimurucook/aeon | github.com/KingRwaz/aeon | github.com/codexvritra/aeon
+github.com/0xWCME/aeon | github.com/richard7463/aeon | github.com/janicegrech1-hash/aeon | github.com/Keeleran/aeon | github.com/sparkleware/aeon
