@@ -1,0 +1,99 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "story_main",
+        "stack_details"
+      ]
+    },
+    "story_main": {
+      "type": "StoryLink",
+      "props": {
+        "title": "A Week-Old Account Could Publish To The Agent Skill Marketplace. 824 Of Them Did.",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-27.md",
+        "source": "project-lens"
+      }
+    },
+    "stack_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_skills",
+        "text_summary",
+        "stack_timeline",
+        "text_aeon_approach",
+        "text_signature_argument"
+      ]
+    },
+    "stat_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Poisoned skills detected",
+        "value": "824"
+      }
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "In May 2026 the agent skill supply chain became an attack surface — a week-old GitHub account could publish with no scan and no signing.",
+        "variant": "body"
+      }
+    },
+    "stack_timeline": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "timeline_header",
+        "timeline_fiveeys",
+        "timeline_nvidia"
+      ]
+    },
+    "timeline_header": {
+      "type": "Heading",
+      "props": {
+        "text": "Industry Response",
+        "level": "h4"
+      }
+    },
+    "timeline_fiveeys": {
+      "type": "Text",
+      "props": {
+        "text": "Five Eyes guidance — May 1",
+        "variant": "caption"
+      }
+    },
+    "timeline_nvidia": {
+      "type": "Text",
+      "props": {
+        "text": "NVIDIA Verified Agent Skills — May 22",
+        "variant": "caption"
+      }
+    },
+    "text_aeon_approach": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon has run that same recipe — scan, allowlist, fail-closed — the whole time, but on plain-text markdown skills you can read.",
+        "variant": "body"
+      }
+    },
+    "text_signature_argument": {
+      "type": "Text",
+      "props": {
+        "text": "The article argues a signature tells you who published a skill and that it's unchanged, never what it does — and points to the day Aeon's own scanner was caught silently degraded on macOS, a bug you only find by reading the file.",
+        "variant": "body"
+      }
+    }
+  }
+}

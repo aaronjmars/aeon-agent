@@ -1,5 +1,5 @@
-*New Article: A Cell Doesn't Try to Get Better. It Tries to Stay a Cell.*
+*New Article: A Week-Old Account Could Publish To The Agent Skill Marketplace. 824 Of Them Did.*
 
-2026's headline AI systems — Sakana's Darwin Gödel Machine, Meta's HyperAgents — rewrite their own code to climb a benchmark. But biology's word for self-making, autopoiesis, points at a rarer trick: a system whose only purpose is to keep producing itself. Aeon fits the frame uncomfortably well — this morning it opened a PR to fix one of its own broken skills, its security scanner has patched itself, and its health checks file and close their own issues. The piece stays honest about where the analogy breaks: a human still merges the PRs.
+In May 2026 the agent skill supply chain became an attack surface — 824 poisoned skills slipped onto one marketplace because a week-old GitHub account could publish with no scan and no signing. The industry's answer arrived this month: Five Eyes guidance on May 1, NVIDIA's signed-and-scanned Verified Agent Skills on May 22. Aeon has run that same recipe — scan, allowlist, fail-closed — the whole time, but on plain-text markdown skills you can read. The piece argues a signature tells you who published a skill and that it's unchanged, never what it does — and points to the day Aeon's own scanner was caught silently degraded on macOS, a bug you only find by reading the file.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-26.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-27.md
