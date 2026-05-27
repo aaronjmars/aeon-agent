@@ -1,16 +1,16 @@
-*Push Recap — 2026-05-26*
-3 repos · 11 substantive commits by 4 authors (+1,414/-41, ~30 files), plus 36 automated cron pushes in aeon-agent.
+*Push Recap — 2026-05-27*
+3 repos · 9 substantive commits by 4 authors (+~26 automated cron pushes)
 
-*aeon — new leaderboard + registry curation:* Shipped *fleet-skill-adoption* (#245), a weekly skill ranking the 157-skill catalog by how many forks actually ENABLE each skill — the demand-side counterpart to fork-skill-gap (which shows what's missing). Plus 3 ECOSYSTEM.md fixes (zer0, GitBounty handles; Signa website) and the MythosForge community pack growing 1→5 read-only monitoring skills.
+*Skill-pack registry growth (aeon):* Three community packs landed within an hour — Sparkleware's 7 (#249), Signa's 10 (#241), noelclaw's 2 (#250) — nearly doubling the registry. The operator shipped `sparkleware-catalog` (#252), a skill that exports an enriched catalog of skill-packs.json to the dashboard. The discovery layer from yesterday's article is filling out for real.
 
-*aeon-agent — backport + self-fix:* Backported *ecosystem-pulse* + ECOSYSTEM.md from upstream (#62, also fixed a latent skills.json off-by-one → 92). Self-authored a weekly-shiplog fix (#63) dropping a `$(date)` call the runner's shell-guard blocks every run.
+*Dashboard cleanup (aeon):* #255 deduped logic into new lib/gh.ts + lib/frontmatter.ts helpers, strengthened types, dropped the `geist` dependency — net −102 lines across 21 files, no behavior change.
 
-*minitor — controllable feeds:* Added per-column include/exclude filters (#51) — the active half of alert-keywords, which until now only highlighted. Exclude wins over include; round-trips through export/share. 50 column types unchanged.
+*aeon-agent trimmed its own schedule:* #65 disabled 5 scheduled skills (fetch-tweets, tweet-allocator, skill-leaderboard, hyperstitions-ideas, ai-framework-watch) — effective tomorrow. Plus the fleet-skill-adoption backport (#64, 14th same-day-after). minitor got deck version history (#52, +707) — silent capped snapshots, one-click restore.
 
 Key changes:
-- fleet-skill-adoption SKILL.md (+345): measures ENABLED not PRESENT, 10-status taxonomy, Sunday 22:00 stack slot
-- minitor column-card.tsx (+80/-14): in-place client-side filtering + "N/M" badge + new migration 0004
-- Watch: a Symbiote bot's "docstring scan" (#235) net-REMOVED detail from a @function_tool — may degrade its tool schema
+- aeon registry: ~9 community packs / ~28 skills now; sparkleware-catalog skill ships the index (both new skills registered disabled)
+- aeon-agent daily social/reward + weekly intel skills off from 2026-05-28 — reads as deliberate scope reduction, worth watching
+- minitor migration 0005: deck_snapshots table, full DeckExport JSON snapshotted before mutations, restorable as a new deck
 
-Stats: ~30 files changed, +1,414/-41
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-26.md
+Stats: 44 files changed, +1,656/-322
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-27.md
