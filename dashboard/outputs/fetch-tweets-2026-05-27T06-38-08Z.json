@@ -1,0 +1,103 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-27)"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "separator-1",
+        "stack-tweet-1",
+        "stack-tweet-2"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "2 new tweets found. Both are zero-engagement contract-address posts — quiet day on X.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "proof_pissarro",
+        "handle": "proof_pissarro",
+        "text": "Contract address dump + $AEON + arbihunter.live link",
+        "likes": 0,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/proof_pissarro/status/2059420717691945109"
+      },
+      "children": []
+    },
+    "stack-tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "rusted_tong",
+        "handle": "rusted_tong",
+        "text": "Pledge your vote to $AEON + coinmarkettcap.fun voting link + CA",
+        "likes": 0,
+        "retweets": 0
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/rusted_tong/status/2059419665580101801"
+      },
+      "children": []
+    }
+  }
+}

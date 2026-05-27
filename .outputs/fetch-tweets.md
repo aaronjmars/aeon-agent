@@ -1,21 +1,11 @@
-*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-26)*
+*Top Tweets — $AEON OR @aeonframework OR github.com/aaronjmars/aeon (2026-05-27)*
 
-1. x.com/BasedCult33 — $MYTHOS/$AEON/$MIROSHARK called out as Anthropic-connected tokens worth watching
-Likes: 2 | RTs: 0
-[View tweet](https://x.com/BasedCult33/status/2059061923572818222)
+2 new tweets found. Both are zero-engagement contract-address posts — quiet day on X.
 
-2. x.com/BasedCult33 — Suggests $TACHI to a follower (thread context references $AEON)
-Likes: 2 | RTs: 0
-[View tweet](https://x.com/BasedCult33/status/2059058079644197322)
-
-3. x.com/kariakubra — "Based ser $AEON"
-Likes: 1 | RTs: 0
-[View tweet](https://x.com/kariakubra/status/2059057677704073681)
-
-4. x.com/SiliconSovi7ou — ⚠️ Phishing: contract address drop + fake holders event at taketkn.top
+1. x.com/proof_pissarro — Contract address dump + $AEON + arbihunter.live link
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/SiliconSovi7ou/status/2059057218360619271)
+[View tweet](https://x.com/proof_pissarro/status/2059420717691945109)
 
-5. x.com/rusted_tong — ⚠️ Phishing: contract address drop + fake holders event at taketkn.live
+2. x.com/rusted_tong — "Pledge your vote to $AEON" + coinmarkettcap.fun voting link + CA
 Likes: 0 | RTs: 0
-[View tweet](https://x.com/rusted_tong/status/2059056992917049428)
+[View tweet](https://x.com/rusted_tong/status/2059419665580101801)
