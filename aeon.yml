@@ -7,11 +7,11 @@
 skills:
   # --- Daily: Market & Social ---
   token-report: { enabled: true, schedule: "0 6 * * *", model: "claude-sonnet-4-6" }
-  fetch-tweets: { enabled: true, schedule: "30 6 * * *", var: "$AEON OR @aeonframework OR github.com/aaronjmars/aeon", model: "claude-sonnet-4-6" }
+  fetch-tweets: { enabled: false, schedule: "30 6 * * *", var: "$AEON OR @aeonframework OR github.com/aaronjmars/aeon", model: "claude-sonnet-4-6" }
   repo-pulse: { enabled: true, schedule: "0 10 * * *", model: "claude-sonnet-4-6" }
 
   # --- Daily: Rewards ---
-  tweet-allocator: { enabled: true, schedule: "0 8 * * *", model: "claude-sonnet-4-6" }
+  tweet-allocator: { enabled: false, schedule: "0 8 * * *", model: "claude-sonnet-4-6" }
 
   # --- Daily: Shipping & Content ---
   push-recap: { enabled: true, schedule: "0 15 * * *" }
@@ -24,8 +24,8 @@ skills:
 
   # --- Weekly ---
   weekly-shiplog: { enabled: true, schedule: "0 9 * * 1" }  # Monday morning
-  skill-leaderboard: { enabled: true, schedule: "0 17 * * 0", model: "claude-sonnet-4-6" }  # Sunday 17:00 UTC
-  hyperstitions-ideas: { enabled: true, schedule: "0 10 * * 6" }
+  skill-leaderboard: { enabled: false, schedule: "0 17 * * 0", model: "claude-sonnet-4-6" }  # Sunday 17:00 UTC
+  hyperstitions-ideas: { enabled: false, schedule: "0 10 * * 6" }
 
   # --- Build (Daily) ---
   feature: { enabled: true, schedule: "0 11 * * *" }
@@ -132,7 +132,7 @@ skills:
   webhook-bridge: { enabled: false, schedule: "workflow_dispatch", var: "" } # external-event-to-skill bridge; the real wiring lives in .github/workflows/webhook.yml — operators don't dispatch this skill, they POST repository_dispatch with event_type=aeon-skill
 
   # --- Upstream sync (2026-05-14) ---
-  ai-framework-watch: { enabled: true, schedule: "30 8 * * 1", model: "claude-sonnet-4-6", var: "" } # Monday 08:30 UTC — weekly competitive-intelligence digest across 9 AI agent frameworks (anchor + 8 peers). Momentum signals, 7d/30d star deltas, release listings, breaking-change flags. Set var to a watchlist slug (e.g. langgraph) for a single-framework deep dive.
+  ai-framework-watch: { enabled: false, schedule: "30 8 * * 1", model: "claude-sonnet-4-6", var: "" } # Monday 08:30 UTC — weekly competitive-intelligence digest across 9 AI agent frameworks (anchor + 8 peers). Momentum signals, 7d/30d star deltas, release listings, breaking-change flags. Set var to a watchlist slug (e.g. langgraph) for a single-framework deep dive.
   aixbt-pulse: { enabled: false, schedule: "0 9,21 * * *", model: "claude-sonnet-4-6" } # twice daily — cross-domain market pulse from AIXBT's free grounding endpoint
   competitor-launch-radar: { enabled: false, schedule: "0 10 * * 1", model: "claude-sonnet-4-6", var: "" } # Monday 10:00 UTC — weekly scan of Product Hunt RSS + HN Algolia for NEW AI-agent-framework launches outside the 9-framework cohort tracked by ai-framework-watch. Classifies framework/mcp/product, noise floor 10 upvotes/points, LRU-200 dedup, gated notify (QUIET on zero entrants). Pass dry-run to skip notify (state + article still write).
   ecosystem-pulse: { enabled: false, schedule: "0 11 * * 1", model: "claude-sonnet-4-6", var: "" } # Monday 11:00 UTC — weekly liveness check of ECOSYSTEM.md projects: resolves each to a GitHub repo (operator map memory/topics/ecosystem-pulse-map.json or strict search), buckets by last-push recency (ACTIVE/RECENT/COLD/X-only), surfaces 7d releases + WoW bucket transitions + star deltas. Gated notify (QUIET once baseline set + nothing moved). Pass dry-run to skip notify. Backport of upstream aeon PR #227; ships with ECOSYSTEM.md.
