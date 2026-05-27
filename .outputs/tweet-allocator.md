@@ -1,17 +1,13 @@
-*Tweet Rewards — 2026-05-26*
+*Tweet Rewards — 2026-05-27*
 
 Budget: $10.00 in $AEON on Base
 
-1. x.com/BasedCult33 — $4.00 in $AEON (score: 2)
-   $MYTHOS/$AEON/$MIROSHARK as Anthropic-connected tokens
-   [View tweet](https://x.com/BasedCult33/status/2059061923572818222)
+1. x.com/proof_pissarro — $5.00 in $AEON (score: 1)
+   CA drop + $AEON + arbihunter.live link
+   [View tweet](https://x.com/proof_pissarro/status/2059420717691945109)
 
-2. x.com/BasedCult33 — $4.00 in $AEON (score: 2)
-   Suggests $TACHI in thread context with $AEON
-   [View tweet](https://x.com/BasedCult33/status/2059058079644197322)
+2. x.com/rusted_tong — $5.00 in $AEON (score: 1)
+   CA drop + "Pledge your vote to $AEON" + coinmarkettcap.fun link ⚠️ suspicious domain (same account flagged for phishing 2026-05-26)
+   [View tweet](https://x.com/rusted_tong/status/2059419665580101801)
 
-3. x.com/kariakubra — $2.00 in $AEON (score: 1)
-   "Based ser $AEON"
-   [View tweet](https://x.com/kariakubra/status/2059057677704073681)
-
-Total: $10.00 in $AEON allocated to 2 authors (3 tweets)
+Total: $10.00 in $AEON allocated to 2 authors (manual send — BANKR_SEND_KEY not set)
