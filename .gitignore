@@ -48,8 +48,9 @@ node_modules/
 .external-work
 .vuln-scan/
 
-# Per-skill scratch clones (e.g. feature skill builds external repo PRs in .work/build-*)
+# Per-skill scratch clones (e.g. feature skill builds external repo PRs in .work/build-* or .build-targets/<repo-name>)
 .work/
+.build-targets/
 
 # Hash dedup file used by ./notify within a workflow run
 .notify-sent-hashes

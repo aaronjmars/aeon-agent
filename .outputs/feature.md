@@ -1,21 +1,21 @@
-*Feature Built — 2026-05-25 — aaronjmars/minitor*
+*Feature Built — 2026-05-28 — aaronjmars/aeon-agent*
 
-Per-Column Alert Webhooks
-Minitor columns can now POST to a webhook when alert keywords match. Set keywords on a column, add an https URL, and every time a refresh pulls in new items matching those keywords, Minitor fires a JSON payload to that URL — Slack, Discord, Zapier, n8n, anything. It's the difference between "I'll see it if I'm looking at the dashboard" and "I get pinged the moment it happens."
+sparkleware-catalog backport (15th same-day-after)
+
+Aeon-agent now has the same sparkleware-catalog skill that landed upstream in aeon yesterday — a weekly enriched export of the curated skill-packs.json registry. The skill reads the local skill-packs.json, calls GitHub for each pack's live stars / last-pushed / archived flag and its current skills-pack.json manifest, then writes a machine-readable skill-packs-catalog.json at the repo root that external community tools like Sparkleware can fetch without screen-scraping anyone's README. Default schedule is Tuesday 09:00 UTC, registered disabled — operators flip it on when they want the weekly enriched feed published.
 
 Why this matters:
-Alert keywords (added in PR #41) only gave a yellow ring and a badge count — passive signals that require someone watching the screen. For serious monitoring — infra alerts, competitor launches, token moves, security CVEs — visual-only isn't enough. This adds the missing layer between "I see it" and "I'm notified," and it works with every one of Minitor's column types because it sits at the column level, not inside any plugin. It was the May-24 repo-actions idea #5 (idea #4, a Bluesky column, was already merged on main).
+Sparkleware (sparkleware.vercel.app, aeon Issue #244) is the external community discovery catalog that crawls GitHub for topic:aeon-skill-pack repos and lists each pack with install commands. It complements skill-packs.json rather than replacing it — but it had no view into the curated registry's human-edited descriptions, trust_level signals, or declared skills arrays. This skill is the bridge: a stable raw URL that exposes the curated registry joined to live truth (current stars, last-push recency, live manifest skill count). Without it, aeon-agent's fork-local registry stays a static file with no freshness layer; with it, the registry has the same weekly health view the upstream now has. This is also the 15th consecutive same-day-after backport in the established cadence, which is now the longest unbroken chain in the project's history — every meaningful upstream skill ships into aeon-agent the following day.
 
 What was built:
-- drizzle/0002_notify_webhook.sql (+ journal + snapshot): a nullable notify_webhook_url column.
-- lib/columns/webhook.ts: an SSRF-guarded URL validator (https-only; blocks localhost and private/internal IP ranges) plus a bounded, fire-and-forget sender that refuses redirects and logs only to the server console.
-- app/actions.ts: a server action to save the URL, and webhook firing wired into the fetch-persist path so it only triggers on genuinely new matching items.
-- Configure dialog: an "Alert webhook URL" field that appears once keywords are set, with live validation.
+- skills/sparkleware-catalog/SKILL.md: New skill (verbatim backport, +289 lines). Reads skill-packs.json; for each pack, gh api repos/{owner}/{repo} for stars + pushed_at + archived + default_branch, then gh api contents/skills-pack.json?ref={default_branch} (base64 decode) for live skill count + slug array. Handles 404/403 as unreachable (carries registry fields forward, never drops the pack). Handles missing manifest as no_manifest (falls back to registry slug list — many packs ship without a root manifest). Detects registry/manifest drift (live ≠ registry slug set). Backport note at the top explicitly lists the three adaptation points that ran clean: notify arg style, output paths, gh-api pattern.
+- aeon.yml: Registered enabled:false, schedule "0 9 * * 2", model claude-sonnet-4-6 — Tuesday 09:00 UTC slot matches upstream.
+- skills.json: New entry, category dev, total 93 → 94.
 
 How it works:
-The webhook fires server-side inside persistFetchedItems, keyed strictly on new arrivals — re-fetching items you've already seen never re-notifies. The payload carries the column id/title/type, the matched items (id, url, text, which keywords fired), and a timestamp. A deliberate security choice: the webhook URL is never included in deck exports or share links, because a webhook URL often embeds a secret token and the same export feeds the public share link — leaking it would hand that secret to anyone the deck is shared with. It stays in the database and is re-entered on import.
+Step 0 bootstraps memory/topics/sparkleware-catalog-state.json (recovers from corruption silently). Steps 2-3 parse the registry and enrich each pack with live GitHub signals using gh api (no curl, no env-var-in-headers — matches CLAUDE.md sandbox guidance). Step 4 assembles per-pack objects (curated description WINS over live GitHub "About" field — registry editorial copy is authoritative). Step 5 writes the catalog at the repo root and a human-readable article at articles/sparkleware-catalog-{today}.md. Step 6 computes deltas vs prior state (new packs / removed packs / newly unreachable / recovered) — star and skill-count drift alone DO NOT notify (they change every week, would make this noisy). Step 7 picks one of seven exit states (OK/QUIET/DRY_RUN/PARTIAL/NO_REGISTRY/STATE_CORRUPT/BAD_VAR). Step 8 advances state and gates the notification on registry composition + reachability changes only.
 
 What's next:
-Could add a payload signing secret (HMAC header) so receivers can verify authenticity, and a per-column delivery-status indicator. Note: the Next 16 build/type-check couldn't run in the offline build sandbox, so the change was verified by manual review.
+Operator can dispatch this skill manually for a baseline run before flipping the cron on, then turn the cron on so the enriched feed refreshes weekly. The next same-day-after backport target is whatever lands in upstream aeon today (May-28) — the chain extends.
 
-PR: https://github.com/aaronjmars/minitor/pull/50
+PR: https://github.com/aaronjmars/aeon-agent/pull/66
