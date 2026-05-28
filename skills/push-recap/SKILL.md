@@ -19,14 +19,17 @@ Read memory/watched-repos.md for the list of repos to scan.
 
 ## Steps
 
-1. **Fetch push events** for each watched repo from the last 24 hours:
+1. **Fetch push events** for each watched repo from the last 24 hours. The events API often returns empty `commits[]` arrays for squash-merged pushes — guard with `(.payload.commits // [])` so the jq pipeline doesn't trip on null:
    ```bash
-   gh api repos/owner/repo/events --jq '[.[] | select(.type == "PushEvent") | {actor: .actor.login, created_at: .created_at, ref: .payload.ref, commits: [.payload.commits[] | {sha: .sha[0:7], message: .message, author: .author.name}]}]' --paginate
+   gh api repos/owner/repo/events --jq '[.[] | select(.type == "PushEvent") | {actor: .actor.login, created_at: .created_at, ref: .payload.ref, commits: [(.payload.commits // [])[] | {sha: .sha[0:7], message: .message, author: .author.name}]}]' --paginate
    ```
 
-2. **Fetch commits** directly as a supplement (catches force-pushes, rebases, etc.):
+2. **Fetch commits** directly as a supplement (catches force-pushes, rebases, squash-merges that the events API hides).
+
+   The runner hook blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(date ...)` for the commits cutoff. Instead, pass `since` as a literal ISO timestamp that you compute from `${today}` minus 24h (e.g. if today is `2026-05-28`, write `since=2026-05-27T00:00:00Z`). This matches the pattern weekly-shiplog uses for the same reason (PR #63).
    ```bash
-   gh api repos/owner/repo/commits -X GET -f since="$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || date -u -v-24H +%Y-%m-%dT%H:%M:%SZ)" --jq '.[] | {sha: .sha[0:7], full_sha: .sha, message: .commit.message, author: .commit.author.name, date: .commit.author.date}' --paginate
+   # Commits since the literal date 24h before ${today} (server-side filter bounds the fetch)
+   gh api repos/owner/repo/commits -X GET -f since=YYYY-MM-DDT00:00:00Z --jq '.[] | {sha: .sha[0:7], full_sha: .sha, message: .commit.message, author: .commit.author.name, date: .commit.author.date}' --paginate
    ```
 
 3. **If no commits found** across all watched repos: log "PUSH_RECAP_QUIET" to `memory/logs/${today}.md` and **stop here — do NOT send any notification**.
