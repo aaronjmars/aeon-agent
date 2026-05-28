@@ -1,16 +1,16 @@
-*Push Recap — 2026-05-27*
-3 repos · 9 substantive commits by 4 authors (+~26 automated cron pushes)
+*Push Recap — 2026-05-28*
+aaronjmars/aeon — 3 substantive commits / aaronjmars/aeon-agent — 2 substantive commits (excl. ~25 cron auto-commits) / aaronjmars/minitor — quiet
 
-*Skill-pack registry growth (aeon):* Three community packs landed within an hour — Sparkleware's 7 (#249), Signa's 10 (#241), noelclaw's 2 (#250) — nearly doubling the registry. The operator shipped `sparkleware-catalog` (#252), a skill that exports an enriched catalog of skill-packs.json to the dashboard. The discovery layer from yesterday's article is filling out for real.
+Closing the loop on inbound skill PRs: pr-skill-triage (aeon #259) posts a structured BLOCK/WARN/OK receipt on PRs that touch SKILL.md — reuses scan.sh verbatim, dedupes on (PR, head_sha), operator decides every merge. Liquidpad prefetch+postprocess shims (aeon #260) bridge the sandbox boundary that external contributors can't cross with secrets in scope, unblocking the stalled #231 rebase. Both ship enabled:false.
 
-*Dashboard cleanup (aeon):* #255 deduped logic into new lib/gh.ts + lib/frontmatter.ts helpers, strengthened types, dropped the `geist` dependency — net −102 lines across 21 files, no behavior change.
+Self-improve closes daily friction: aeon-agent #67 drops the $(date ...) shell-expansion from push-recap step 2 (runner hook blocks it; skill had been improvising the cutoff by hand on May 25/26/27) and pre-documents the events-API null-guard. Today's recap is the first run on the patched skill — the literal since=2026-05-27T00:00:00Z worked cleanly.
 
-*aeon-agent trimmed its own schedule:* #65 disabled 5 scheduled skills (fetch-tweets, tweet-allocator, skill-leaderboard, hyperstitions-ideas, ai-framework-watch) — effective tomorrow. Plus the fleet-skill-adoption backport (#64, 14th same-day-after). minitor got deck version history (#52, +707) — silent capped snapshots, one-click restore.
+15th consecutive same-day-after backport: aeon-agent #66 ports yesterday's sparkleware-catalog skill (Tue 09:00 UTC slot, registered disabled). README polish in aeon #257 lands four section illustrations under the four pillars.
 
 Key changes:
-- aeon registry: ~9 community packs / ~28 skills now; sparkleware-catalog skill ships the index (both new skills registered disabled)
-- aeon-agent daily social/reward + weekly intel skills off from 2026-05-28 — reads as deliberate scope reduction, worth watching
-- minitor migration 0005: deck_snapshots table, full DeckExport JSON snapshotted before mutations, restorable as a new deck
+- New skills/pr-skill-triage/SKILL.md (+296) — security scan + secrets enum + cron conflict + quality signals, ONE comment per (PR, head_sha)
+- New scripts/prefetch-liquidpad.sh (+113) + postprocess-liquidpad.sh (+112) — authed reads/writes, no-op without LIQUIDPAD_API_KEY, follows xai/replicate pattern
+- skills/push-recap/SKILL.md (+7/-4) — literal since= replaces $(date ...), PR #63 cited inline; null-guard documented
 
-Stats: 44 files changed, +1,656/-322
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-27.md
+Stats (substantive new): 19 files, +1,003/-12 lines across 5 commits
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-28.md
