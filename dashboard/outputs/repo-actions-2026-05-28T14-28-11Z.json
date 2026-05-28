@@ -1,0 +1,290 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-05-28"
+      },
+      "children": [
+        "intro_text",
+        "separator_1",
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4",
+        "item_5",
+        "separator_2",
+        "link_details"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (456⭐, 132 forks), aaronjmars/aeon-agent, and aaronjmars/minitor.",
+        "variant": "caption"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_1_title",
+        "item_1_badges",
+        "item_1_desc"
+      ]
+    },
+    "item_1_title": {
+      "type": "Heading",
+      "props": {
+        "text": "capabilities + secrets_required in skill-packs.json",
+        "level": "h3"
+      }
+    },
+    "item_1_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_1_type",
+        "badge_1_size"
+      ]
+    },
+    "badge_1_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "badge_1_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "item_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Add capability and secrets declarations to the registry so operators know before installing whether a pack needs secrets they haven't configured — closes open Issue #258."
+      }
+    },
+    "item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_2_title",
+        "item_2_badges",
+        "item_2_desc"
+      ]
+    },
+    "item_2_title": {
+      "type": "Heading",
+      "props": {
+        "text": "ecosystem-pulse backport",
+        "level": "h3"
+      }
+    },
+    "item_2_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_2_type",
+        "badge_2_size"
+      ]
+    },
+    "badge_2_type": {
+      "type": "Badge",
+      "props": {
+        "text": "DX"
+      }
+    },
+    "badge_2_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "item_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "16th same-day-after backport: aeon-agent has ECOSYSTEM.md but not the skill that monitors it. Verbatim copy of upstream aeon PR #227."
+      }
+    },
+    "item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_3_title",
+        "item_3_badges",
+        "item_3_desc"
+      ]
+    },
+    "item_3_title": {
+      "type": "Heading",
+      "props": {
+        "text": "fork-health-score skill",
+        "level": "h3"
+      }
+    },
+    "item_3_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_3_type",
+        "badge_3_size"
+      ]
+    },
+    "badge_3_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "badge_3_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "item_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly per-fork health tier (ACTIVE/WARM/STALE/QUIET) combining push recency + skill count + PR activity — gives a single fleet-health ratio across 132 forks."
+      }
+    },
+    "item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_4_title",
+        "item_4_badges",
+        "item_4_desc"
+      ]
+    },
+    "item_4_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Farcaster cast feed column — 50th column type",
+        "level": "h3"
+      }
+    },
+    "item_4_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_4_type",
+        "badge_4_size"
+      ]
+    },
+    "badge_4_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration"
+      }
+    },
+    "badge_4_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "item_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Uses Neynar's free public API to add Farcaster channel/user feeds, completing the Web3 social set (X + Bluesky + Farcaster) and crossing the 50-column milestone."
+      }
+    },
+    "item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_5_title",
+        "item_5_badges",
+        "item_5_desc"
+      ]
+    },
+    "item_5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Column tab groups",
+        "level": "h3"
+      }
+    },
+    "item_5_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_5_type",
+        "badge_5_size"
+      ]
+    },
+    "badge_5_type": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature"
+      }
+    },
+    "badge_5_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "item_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Partition decks into labeled tabs so operators with 8+ columns can navigate without horizontal scrolling — no plugin schema changes required."
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link_details": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-05-28.md"
+      }
+    }
+  }
+}
