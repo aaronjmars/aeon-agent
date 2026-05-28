@@ -1,12 +1,14 @@
-*Agent Self-Improvement — 2026-05-26*
+*Agent Self-Improvement — 2026-05-28*
 
-Fixed weekly-shiplog so it stops fighting the runner's shell-expansion guard. Its step-1 commits query used a `since="$(date -u -d '7 days ago' ...)"` shell substitution, which the runner hook blocks every run — forcing the agent to hand-improvise the query each time. The cutoff is now a literal ISO date computed from today minus 7 days, matching the jq-internal pattern the PR/release queries in the same step already use.
+push-recap $(date ...) → literal `since`
+push-recap step 2 was using `since="$(date -u -d '24 hours ago' ...)"` to bound the commits API fetch, but the runner hook blocks shell command/variable expansion ("Contains simple_expansion"). The skill had been improvising the cutoff date by hand on every recent run. Same anti-pattern PR #63 fixed in weekly-shiplog two days ago — push-recap is daily, so it was paying the friction seven times more often.
 
-Why: The 2026-05-25 weekly-shiplog run logged it plainly — "repo hook blocks shell variable expansion ('Contains simple_expansion') — gathered per-PR stats via literal gh api calls instead." Recurring weekly friction on an otherwise-healthy skill (all 21 skills at 100% success rate, zero failures this scan).
+Why: Three of the last four push-recap logs (2026-05-25, -26, -27) each carry an explicit "Avoided $(date ...) (runner shell-guard)" note where the skill had to compute the cutoff timestamp by hand because the workflow refused the substitution. Daily friction on a daily skill. Cron-state confirms all 20 enabled skills clean at 100% success, so no failure to chase — the improvement is dropping recurring per-run friction.
 
 What changed:
-- skills/weekly-shiplog/SKILL.md: commits cutoff `$(date ...)` → literal `since=YYYY-MM-DDT00:00:00Z` from ${today}; added a note on the hook constraint; also parenthesized `(.commit.message | split("\n")[0])` to fix a latent jq precedence bug on the same line.
+- skills/push-recap/SKILL.md step 2: `since="$(date ...)"` → literal `since=YYYY-MM-DDT00:00:00Z` computed from `${today}` minus 24h. Cite of PR #63 inline so a future cleanup doesn't reintroduce the shell substitution.
+- skills/push-recap/SKILL.md step 1: documents the `(.payload.commits // [])` null-guard for the events API's squash-merged-push empty-array case — was also being added by hand on every recent run.
 
-Impact: weekly-shiplog runs its prescribed query directly instead of improvising around a blocked command — fewer wasted turns, more reproducible weekly digests.
+Impact: push-recap stops paying the daily $(date ...) workaround cost. The skill now ships with both runner-hook constraints explicit in the prompt, matching weekly-shiplog's pattern. Memory log MEMORY.md Skills Built table updated.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/63
+PR: https://github.com/aaronjmars/aeon-agent/pull/67
