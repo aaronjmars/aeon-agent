@@ -174,10 +174,10 @@
   },
   "star-momentum-alert": {
     "last_dispatch": "2026-05-28T10:36:36Z",
-    "last_status": "dispatched",
-    "last_success": "2026-05-27T10:50:23Z",
-    "total_runs": 13,
-    "total_successes": 13,
+    "last_status": "success",
+    "last_success": "2026-05-28T10:40:43Z",
+    "total_runs": 14,
+    "total_successes": 14,
     "total_failures": 0,
     "consecutive_failures": 0,
     "success_rate": 1
