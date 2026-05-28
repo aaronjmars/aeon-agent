@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 93,
+  "total": 94,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -750,6 +750,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon fleet-skill-adoption"
+    },
+    {
+      "slug": "sparkleware-catalog",
+      "name": "sparkleware-catalog",
+      "description": "Weekly enriched export of skill-packs.json — joins the canonical community registry to live GitHub signals (stars, last-push, live manifest skill count) and writes a machine-readable skill-packs-catalog.json that external tools (e.g. Sparkleware) can consume without screen-scraping",
+      "category": "dev",
+      "schedule": "0 9 * * 2",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon sparkleware-catalog"
     },
     {
       "slug": "fleet-state",
