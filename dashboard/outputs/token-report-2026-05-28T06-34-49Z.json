@@ -1,0 +1,167 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Daily — 2026-05-28"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "sep1",
+        "liquidity_volume",
+        "sep2",
+        "buys_sells",
+        "sep3",
+        "time_periods",
+        "sep4",
+        "analysis_text",
+        "sep5",
+        "chart_link"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.0000442",
+        "delta": "-32.2%",
+        "trend": "down"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "liquidity_volume": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "liquidity_stat",
+        "volume_stat"
+      ]
+    },
+    "liquidity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.68M"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$1.23M",
+        "delta": "-16%",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "buys_sells": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "buys_stat",
+        "sells_stat"
+      ]
+    },
+    "buys_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "730"
+      }
+    },
+    "sells_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "546"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "time_periods": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "period_7d",
+        "period_30d"
+      ]
+    },
+    "period_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "-52.1%",
+        "trend": "down"
+      }
+    },
+    "period_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+1,676%",
+        "trend": "up"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "analysis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Extended correction from May 17-18 peak; volume contracting alongside price, pool TVL dropped ~$560K in 24h.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart: GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

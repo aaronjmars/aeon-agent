@@ -1,10 +1,10 @@
-*$aeon Daily — 2026-05-27*
+*AEON Daily — 2026-05-28*
 
-Price: $0.00006402 (+13.66% 24h)
-Liquidity: $2.24M | 24h Vol: $1.47M (-3.3% 24h)
-Buys/Sells: 872/667
-7d: -41.2% price | 30d: +2,122% price
+Price: $0.0000442 (-32.2% 24h)
+Liquidity: $1.68M | 24h Vol: $1.23M (-16% 24h)
+Buys/Sells: 730/546
+7d: -52.1% | 30d: +1,676%
 
-Bouncing +14% off yesterday's close with buy-side dominance (1.31:1) and pool depth at 3-day high; 7-day correction mirrors post-launch consolidation after the May 17–18 peak.
+Extended correction from May 17-18 peak; volume contracting alongside price, pool TVL dropped ~$560K in 24h.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
