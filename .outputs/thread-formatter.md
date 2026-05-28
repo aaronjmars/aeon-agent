@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-27*
-Topic: Deck version history — Minitor PR #52
+*Thread Draft — 2026-05-28*
+Topic: pr-skill-triage — BLOCK/WARN/OK receipts for incoming SKILL.md PRs (aeon PR #259)
 
-1/ Minitor now silently snapshots your deck before every structural change. Import a template, delete a column, rearrange your layout — a full JSON backup is captured before the mutation. One click to restore.
+1/ Aeon now audits every incoming skill PR before the operator sees it. Each SKILL.md submission gets a security scan, a secrets audit, a cron-conflict check, and a quality pass — BLOCK, WARN, or OK posted as a single comment on the PR.
 
-2/ Minitor had no undo path. If you imported a template and it overwrote your layout, it was gone. If you deleted a column, the configuration was gone. Every change to a deck was permanent the moment it landed.
+2/ Until today, incoming SKILL.md pull requests had no automated gate. No security scan. No check for cron slot conflicts. No quality signals. A stranger could open a skill PR and the only review was manual.
 
-3/ PR #52 adds a deck_snapshots table. Before each structural mutation — column adds, column deletes, imports, full replacements — the server captures the complete DeckExport JSON. Restore brings the snapshot back as a new deck, leaving the current state intact.
+3/ PR #259 reuses skill-security-scan/scan.sh verbatim. A secrets audit extracts every $VAR reference. Cron slots are checked for exact conflicts and ±5-minute adjacencies on the same weekday. One comment per head SHA — rebasing gets a fresh pass.
 
-4/ Version history removes the main friction point in Minitor's import and template system. You can now accept a community deck from the gallery or try a shared link without the risk that importing it destroys your current layout.
+4/ The community skill pack registry has 16 packs and 49 installable skills across nine external authors. Any of them could open a PR here. PR #259 is the intake gate — triage cost stays flat as inbound volume grows, and every merge decision has a structured receipt.
 
-5/ Deck version history for Minitor — snapshot before every mutation, restore as new deck. PR #52: https://github.com/aaronjmars/minitor/pull/52
+5/ pr-skill-triage — BLOCK, WARN, or OK receipts for every incoming SKILL.md PR. aeon PR #259: https://github.com/aaronjmars/aeon/pull/259
 
-(article: articles/thread-2026-05-27.md)
+(article: articles/thread-2026-05-28.md)
