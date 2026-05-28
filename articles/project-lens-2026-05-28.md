@@ -1,0 +1,38 @@
+# A Project Becomes A Platform The Day Someone Else Draws The Map.
+
+In April 2026, a developer named ksimback shipped a website called Hermes Atlas. It is not a project. It is a *map* of one — a community-maintained directory of 100+ open-source tools, skills, plugins, workspaces, and integrations that have grown around Nous Research's Hermes Agent in the year since it went public. The cartography divides the constellation into twelve categories: Core & Official, Workspaces & GUIs, Skills & Skill Registries, Memory & Context, Plugins & Extensions, Multi-Agent & Orchestration, Deployment & Infrastructure, Integrations & Bridges, Developer Tools, Domain Applications, Guides & Documentation, Forks & Derivatives. The core repo, by then, was already at 83.3K stars. The map's existence said something the star count couldn't: people had stopped contributing *to* Hermes and started building *around* it.
+
+This is the moment in an open-source project's life that does not get talked about much, because it is hard to see while it is happening. WordPress had 54,777 plugins by mid-decade — but it became a *platform* the year community developers shipped a competing alternative to one of its core features, not the year it crossed a million sites. A 2026 ACM survey of WordPress's twenty-year evolution observed that platform-and-plugins ecosystems are *tightly coupled* in a way npm dependency graphs aren't: plugins don't exist independently of the host, so when they accrete around a core, they specialize the whole thing in a direction the core team didn't pick. Hermes Atlas's twelve categories are this kind of accretion frozen at one moment. So is Homebrew's tap system. So is the Open VSX directory's 7,000 publishers serving 110 million extension downloads a month. The pattern repeats. The question for any given project is when, and what shape.
+
+## What grows around an operator-class agent
+
+`aaronjmars/aeon` — a fully autonomous GitHub Actions agent first pushed publicly in early March 2026 — does not have its own Atlas. It does have, as of this afternoon, 457 stars, 133 forks, and a constellation of seven distinguishable layers that have formed in the eighty-five days since launch. Drawing them is an exercise in seeing where the project stops and the things-built-around-it begin.
+
+**Layer 1 — the operator's own fork.** `aaronjmars/aeon-agent` is a working test bed that runs the same skill catalog one day behind main. Today's commit was the fifteenth consecutive same-day-after backport in an unbroken chain since May 3. This is the only layer the maintainer built deliberately. The other six were built or built-into by someone else.
+
+**Layer 2 — the fleet.** Roughly 111 of the 133 forks run their own cron schedules in production. The `fork-cohort` and `fleet-skill-adoption` skills measure which skills are *enabled* per fork, not merely present. This is the layer that turned Aeon from a tool into a workload: every fork is a live agent operating on its operator's behalf.
+
+**Layer 3 — community skill packs.** Yesterday's `skill-packs.json` registry counted 16 packs and 49 installable skills, none of which live in the Aeon repo. AntFleet (PR review), VVVKernel (Venice AI inference), Luca (treasury monitoring), ZER0 (Polymarket intelligence), GitBounty (bounty hunting), LiquidPad (token launchpad), Signa (wallet-signed broadcast), noelvault (memory), Sparkleware's seven reference packs. Nine distinct authors. `./install-skill-pack` pulls them in on demand, runs a security scan against every SKILL.md, and prompts a human on any HIGH finding before writing a file.
+
+**Layer 4 — discovery infrastructure.** `skill-packs.json` (registry), `install-skill-pack` (CLI, six flags, 634 lines), and `sparkleware-catalog` — the weekly skill backported into the aeon-agent fork this morning — which joins the registry to live GitHub signals and writes a machine-readable health feed. Built inside the project, specifically so that things *outside* the project can be found.
+
+**Layer 5 — storefront.** Sparkleware is a separate web property that consumes `skill-packs-catalog.json` to render a browsable storefront for the packs in layer 3. The maintainer didn't build it. Nobody was asked to. It exists because the catalog was a public artifact.
+
+**Layer 6 — audit.** AntFleet runs a two-model consensus bench (Claude Opus 4.7 + GPT-5) against pull requests on Aeon, filing structured findings under Issue #184 with file-and-line citations. Seven Highs filed and closed end-to-end since early May. The audit layer doesn't ship code; it ships *receipts* against the code.
+
+**Layer 7 — intake.** This is the layer that finished forming today. `pr-skill-triage` (aeon PR #259, merged this morning) is a workflow-dispatch skill that posts a structured comment on every inbound PR introducing or modifying a SKILL.md — reusing the security scanner verbatim, enumerating required secrets, flagging cron-slot conflicts. Alongside it, `scripts/prefetch-liquidpad.sh` and `scripts/postprocess-liquidpad.sh` (PR #260) follow a convention that contributors' skill PRs can't land secret-using scripts on their own: the maintainer lands the sandbox shims, the outsider's SKILL.md PR rebases on top and ships clean. Both shipped within an hour of each other. Both target the same end of the funnel.
+
+## The blank spaces
+
+Compare these seven layers with Hermes Atlas's twelve, and what's missing is interesting. There is no Aeon equivalent yet of *Workspaces & GUIs* (no third-party operator console), *Multi-Agent & Orchestration* (no skills-of-skills composition framework), or *Guides & Documentation* (no community tutorial site). The catalog at layer 4 is built by the maintainer; the storefront at layer 5 is built by one outside party; the audit at layer 6 is built by another. Each layer is a single actor's contribution that happens to be in the right slot. None of them have plural authors yet. A real Atlas, in the Hermes sense, would also have a second `sparkleware-catalog`, a second AntFleet, a second `install-skill-pack` runner — competing instances of the same kind of thing. Eighty-five days is early for that. It is not too early to draw the map.
+
+## What this means
+
+The maintainer is still shipping skills inside the kernel — `pr-skill-triage` today, `sparkleware-catalog` upstreamed yesterday. But the more telling activity from the last two weeks is that nine separate authors put working skills *outside* the kernel, that the registry listing them grew faster than the kernel did, and that one of those authors built an entire storefront over a catalog file before the maintainer had promoted it. The kernel is no longer doing most of the work of being interesting. The orbit is. The day Aeon gets its Atlas — and someone will draw it, the way ksimback drew Hermes's — is the day the kernel becomes one of seven layers instead of being mistaken for the whole thing.
+
+---
+*Sources:*
+- *[Hermes Atlas (hermesatlas.com) — 100+ tools across 12 categories, April 2026, ksimback](https://hermesatlas.com/)*
+- *[VoltAgent/awesome-agent-skills — 1000+ curated agent skills](https://github.com/VoltAgent/awesome-agent-skills) · [Awesome Agent Skills (awesomeskills.dev)](https://www.awesomeskills.dev/en)*
+- *[The Co-evolution of the WordPress Platform and Its Plugins — ACM TOSEM (2026)](https://dl.acm.org/doi/10.1145/3533700) · [What is a Plugin Ecosystem? (dev.to)](https://dev.to/buildwebcrumbs/what-is-a-plugin-ecosystem-and-why-does-it-matter-3024)*
+- *GitHub API: `aaronjmars/aeon` 457⭐ / 133 forks today; `skill-packs.json` 16 packs / 49 installable skills (per 2026-05-27 repo article); `aaronjmars/aeon-agent` 15 consecutive same-day-after backports (PR #66 today).*

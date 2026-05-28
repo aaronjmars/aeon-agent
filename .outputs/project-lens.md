@@ -1,5 +1,5 @@
-*New Article: A Week-Old Account Could Publish To The Agent Skill Marketplace. 824 Of Them Did.*
+*New Article: A Project Becomes A Platform The Day Someone Else Draws The Map.*
 
-In May 2026 the agent skill supply chain became an attack surface — 824 poisoned skills slipped onto one marketplace because a week-old GitHub account could publish with no scan and no signing. The industry's answer arrived this month: Five Eyes guidance on May 1, NVIDIA's signed-and-scanned Verified Agent Skills on May 22. Aeon has run that same recipe — scan, allowlist, fail-closed — the whole time, but on plain-text markdown skills you can read. The piece argues a signature tells you who published a skill and that it's unchanged, never what it does — and points to the day Aeon's own scanner was caught silently degraded on macOS, a bug you only find by reading the file.
+Hermes Agent got its Atlas in April — a community-drawn map of 100+ tools across 12 categories around the core. WordPress had 54,777 plugins before it was a platform. The pattern is recognizable: successful projects accrete layers, and someone eventually draws the diagram. Aeon doesn't have an Atlas yet, but seven layers are already drawable — operator's fork, the fleet, community skill packs, discovery infrastructure, storefront, audit, and (as of this morning's pr-skill-triage + liquidpad shims) intake.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-27.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-28.md
