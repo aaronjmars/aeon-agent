@@ -40,6 +40,7 @@
 | 2026-05-26 | A Cell Doesn't Try to Get Better. It Tries to Stay a Cell. | project-lens |
 | 2026-05-27 | The Memory Skill That Tried To Live Inside Aeon Came Back Today As A Pointer To Somewhere Else | repo-article |
 | 2026-05-27 | A Week-Old Account Could Publish To The Agent Skill Marketplace. 824 Of Them Did. | project-lens |
+| 2026-05-28 | The Files A Stranger Wasn't Allowed To Land On Aeon's Main Branch Are Now On It. Aeon Landed Them. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
