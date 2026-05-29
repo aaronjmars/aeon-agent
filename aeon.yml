@@ -46,6 +46,7 @@ skills:
   telegram-digest: { enabled: false, schedule: "30 7 * * *", model: "claude-sonnet-4-6" }
   issue-triage: { enabled: false, schedule: "0 9 * * *" }
   pr-review: { enabled: false, schedule: "0 9 * * *" }
+  pr-skill-triage: { enabled: false, schedule: "workflow_dispatch", model: "claude-sonnet-4-6", var: "" } # workflow_dispatch only — structured triage receipt for inbound PRs that introduce/modify SKILL.md files on aaronjmars/aeon-agent. Runs skill-security-scan against each SKILL.md, enumerates required secrets, checks cron slot conflicts vs existing aeon.yml, surfaces quality signals (description, step count, notify call, tags). Posts ONE structured comment per (PR, head_sha). var: PR_NUMBER on aaronjmars/aeon-agent. Gated notify (BLOCK or COMMENT_FAILED only). Backport of upstream aeon PR #259.
   auto-merge: { enabled: false, schedule: "0 14 * * *" }
   auto-merge-agent-prs: { enabled: false, schedule: "0 18 * * *", model: "claude-sonnet-4-6", var: "" } # daily 18:00 UTC — close the loop on agent-authored PRs by auto-merging green, unblocked ones (author=aeonframework, all checks SUCCESS, no blocking labels). Uses gh pr merge --squash --auto (queues mid-CI merges). 5-PR-per-run cap, 3-attempt retry cap, 24h re-notify dedup on ALL_BLOCKED. Pass dry-run to preview, or owner/repo to scope.
   github-monitor: { enabled: false, schedule: "0 9 * * *" }
