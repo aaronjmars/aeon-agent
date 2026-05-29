@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 94,
+  "total": 95,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -840,6 +840,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon onboard"
+    },
+    {
+      "slug": "pr-skill-triage",
+      "name": "pr-skill-triage",
+      "description": "Structured triage for inbound PRs that introduce or modify SKILL.md files on aaronjmars/aeon-agent — per-skill security scan, required-secrets enumeration, cron slot-conflict check, quality signals, posted as one PR comment per (PR, head_sha). Backport of upstream aeon PR #259.",
+      "category": "dev",
+      "schedule": "workflow_dispatch",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon pr-skill-triage"
     },
     {
       "slug": "pr-triage",
