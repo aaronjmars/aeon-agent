@@ -41,6 +41,7 @@
 | 2026-05-27 | The Memory Skill That Tried To Live Inside Aeon Came Back Today As A Pointer To Somewhere Else | repo-article |
 | 2026-05-27 | A Week-Old Account Could Publish To The Agent Skill Marketplace. 824 Of Them Did. | project-lens |
 | 2026-05-28 | The Files A Stranger Wasn't Allowed To Land On Aeon's Main Branch Are Now On It. Aeon Landed Them. | repo-article |
+| 2026-05-29 | The Maintainer Spent Friday Afternoon Pulling Skills Out Of His Own Private Fork. A Two-Day-Old Account Filled The Gaps He Wasn't Working On. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
