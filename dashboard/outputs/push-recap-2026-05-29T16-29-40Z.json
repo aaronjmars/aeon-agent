@@ -1,0 +1,372 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-05-29"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "overview_stats",
+        "sep1",
+        "section_dashboard",
+        "sep2",
+        "section_skills",
+        "sep3",
+        "section_manifest",
+        "sep4",
+        "section_aeon_agent",
+        "sep5",
+        "key_changes_section",
+        "sep6",
+        "final_stats_section"
+      ]
+    },
+    "overview_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_commits",
+        "stat_authors",
+        "stat_additions",
+        "stat_deletions"
+      ]
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Substantive Commits",
+        "value": "16"
+      }
+    },
+    "stat_authors": {
+      "type": "Stat",
+      "props": {
+        "label": "Authors",
+        "value": "5"
+      }
+    },
+    "stat_additions": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines Added",
+        "value": "+5,629"
+      }
+    },
+    "stat_deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines Deleted",
+        "value": "-444"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_dashboard": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_dashboard",
+        "text_dashboard_desc",
+        "text_dashboard_details",
+        "text_dashboard_topbar"
+      ]
+    },
+    "heading_dashboard": {
+      "type": "Heading",
+      "props": {
+        "text": "Dashboard Editorial Overhaul",
+        "level": "h2"
+      }
+    },
+    "text_dashboard_desc": {
+      "type": "Text",
+      "props": {
+        "text": "3 PRs across aeon: The dashboard is now visually aligned with the marketing site.",
+        "variant": "lead"
+      }
+    },
+    "text_dashboard_details": {
+      "type": "Text",
+      "props": {
+        "text": "Design system: dark canvas, coral #d24b40, Dela Gothic display font, Inter body font, Space Mono labels. Editorial heroes with dithered red halftone, numbered sections (\"01 / Departments\").",
+        "variant": "body"
+      }
+    },
+    "text_dashboard_topbar": {
+      "type": "Text",
+      "props": {
+        "text": "New Animated.tsx motion file porting Scramble / Flip odometer / VelocityMarquee from aeon.fun. TopBar buttons normalized to 32px uniform height; AUTH no longer towers over PULL / PUSH.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_skills",
+        "text_skills_count",
+        "text_skills_houndflow",
+        "text_skills_houndflow_list",
+        "text_skills_ops",
+        "text_skills_fork_health"
+      ]
+    },
+    "heading_skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Catalog +11 in One Day",
+        "level": "h2"
+      }
+    },
+    "text_skills_count": {
+      "type": "Text",
+      "props": {
+        "text": "aeon repository: 11 new skills landed in a single day.",
+        "variant": "lead"
+      }
+    },
+    "text_skills_houndflow": {
+      "type": "Text",
+      "props": {
+        "text": "HoundFlow contributed 6 keyless Base onchain investigators (Etherscan v2 chainid=8453, optional key only raises rate limit):",
+        "variant": "body"
+      }
+    },
+    "text_skills_houndflow_list": {
+      "type": "Badge",
+      "props": {
+        "text": "rug-scan • contract-audit • wallet-profile • deployer-trace • tx-explain • holder-concentration",
+        "variant": "secondary"
+      }
+    },
+    "text_skills_ops": {
+      "type": "Text",
+      "props": {
+        "text": "5 generic ops skills: spend-monitor (daily $200 watchdog), follow-up-patrol, narrative-convergence, mcp-pulse, generalized fleet-scorecard (no more hardcoded repos).",
+        "variant": "body"
+      }
+    },
+    "text_skills_fork_health": {
+      "type": "Text",
+      "props": {
+        "text": "fork-health-score: Monday-morning per-fork tier assignment (ACTIVE/WARM/STALE/QUIET) with hard \"≥2 enabled skills\" floor so placeholder forks can't claim ACTIVE.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_manifest": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_manifest",
+        "text_manifest_desc",
+        "text_manifest_fields",
+        "text_manifest_warnings"
+      ]
+    },
+    "heading_manifest": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill-Pack Manifest Matures",
+        "level": "h2"
+      }
+    },
+    "text_manifest_desc": {
+      "type": "Text",
+      "props": {
+        "text": "AntFleet PRs #267 + #268: Two additive fields close the trust and install-UX gap.",
+        "variant": "lead"
+      }
+    },
+    "text_manifest_fields": {
+      "type": "Text",
+      "props": {
+        "text": "capabilities[] with locked 6-value taxonomy: read_only, external_api, writes_external_host, onchain_writes, agent_messaging, sends_notifications. Also: secrets_required and secrets_optional.",
+        "variant": "body"
+      }
+    },
+    "text_manifest_warnings": {
+      "type": "Text",
+      "props": {
+        "text": "install-skill-pack now surfaces missing secrets as loud warnings (not gates). New flag: --list --no-secrets filters discovery.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_aeon_agent": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_aeon_agent",
+        "text_aeon_agent_chain",
+        "text_aeon_agent_pr68",
+        "text_aeon_agent_pr67"
+      ]
+    },
+    "heading_aeon_agent": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon-agent Backport Chain → 16 Consecutive Days",
+        "level": "h2"
+      }
+    },
+    "text_aeon_agent_chain": {
+      "type": "Text",
+      "props": {
+        "text": "Structured receipt system for inbound skill PRs now in place.",
+        "variant": "lead"
+      }
+    },
+    "text_aeon_agent_pr68": {
+      "type": "Text",
+      "props": {
+        "text": "PR #68 (pr-skill-triage backport): Security scan + secrets enumeration + cron slot check + quality signals → one PR comment, dedup on head SHA.",
+        "variant": "body"
+      }
+    },
+    "text_aeon_agent_pr67": {
+      "type": "Text",
+      "props": {
+        "text": "PR #67 (push-recap self-fix): Today's run no longer requires the operator to improvise the cutoff date by hand.",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_key_changes",
+        "table_key_changes"
+      ]
+    },
+    "heading_key_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h3"
+      }
+    },
+    "table_key_changes": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "File",
+          "Changes",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "skills/fork-health-score/SKILL.md",
+            "+366",
+            "Monday fleet synthesis with WoW deltas on percentage points, never raw counts"
+          ],
+          [
+            "dashboard/components/ui/Animated.tsx",
+            "+271 (new)",
+            "Scramble / Flip / VelocityMarquee, single shared cubic-bezier motion ease"
+          ],
+          [
+            "minitor PR #53",
+            "+649/-44 (10 files)",
+            "Per-column tab groups + tab bar above deck grid (migration 0006); untagged columns ride along with every named tab"
+          ]
+        ]
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "final_stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_final_stats",
+        "text_final_stats",
+        "link_full_recap"
+      ]
+    },
+    "heading_final_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Aggregate Stats",
+        "level": "h3"
+      }
+    },
+    "text_final_stats": {
+      "type": "Text",
+      "props": {
+        "text": "~64 files changed, +5,629 / -444 across 16 substantive commits (excluding ~40 cron auto-commits in aeon-agent marked as noise)",
+        "variant": "body"
+      }
+    },
+    "link_full_recap": {
+      "type": "Link",
+      "props": {
+        "label": "View full recap on GitHub",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-05-29.md"
+      }
+    }
+  }
+}
