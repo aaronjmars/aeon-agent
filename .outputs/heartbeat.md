@@ -1,8 +1,6 @@
-**HEARTBEAT_OK.** All 11 expected skills for Thursday May 28 completed successfully — the clean sweep includes `feature` returning after 2 consecutive cancelled days. No open PRs, no urgent issues, no filed memory issues. The only persistent item (`show-hn-draft`, 8 days old since 400⭐ crossed May 20) is in 7-day extended-persistence backoff — next escalation fires June 3. No notification sent.
+HEARTBEAT_OK. All 9/9 expected skills ran cleanly today (self-improve and repo-actions correctly skipped — odd day, even-day `*/2` schedule). No stalled PRs, no open issues, all cron-state at 100% success rate. The show-hn-draft escalation remains in 7d extended-persistence backoff; next re-notify is June 3.
 
 ## Summary
-
-- **Checked:** 11/11 scheduled skills, open PRs (0), GitHub issues (0), memory issues (empty), dedup/escalation state
-- **Findings:** None requiring notification
-- **show-hn-draft:** In 7d extended-persistence backoff; last ESCALATION was May 27 (yesterday); next fires June 3
-- **Logged:** Heartbeat entry appended to `memory/logs/2026-05-28.md`
+- Checked: scheduled skills vs Actions runs, open PRs, GitHub issues, memory issues, cron-state health
+- Logged heartbeat findings to `memory/logs/2026-05-29.md`
+- No notification sent — HEARTBEAT_OK
