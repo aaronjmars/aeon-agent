@@ -1,12 +1,9 @@
 ## Summary
 
-**star-momentum-alert** ran clean. Two repos audited, zero alerts fired.
+Ran `star-momentum-alert` for 2026-05-30. Audited 2 repos, 0 alerts.
 
-**aaronjmars/aeon** — `OFF_DAY`. At 456⭐ and 5.57 stars/day (7-day avg), the 500⭐ milestone projects to **June 6 (Saturday)** — 8 days out and inside the 7-14d window, but Saturday is outside Tue/Wed/Thu. If pace holds or ticks up, the crossing could shift to a weekday on a subsequent run.
+**aaronjmars/aeon**: 459⭐, targeting 500⭐ (gap: 41). v7 = 5.43/day → 8 days out → projected **2026-06-07 (Sunday)**. In the 7–14 day window but lands on a Sunday — **OFF_DAY**, no alert. If pace holds through tomorrow the projection shifts to Monday June 8 (9 days out, still in window) — one more day of data might surface a qualifying Tue/Wed/Thu landing.
 
-**aaronjmars/minitor** — `OUT_OF_WINDOW`. At 11⭐ with 0.29 stars/day, the 50⭐ milestone is ~137 days out (October).
+**aaronjmars/minitor**: 11⭐, v7 = 0.29/day → 137 days to 50⭐ — **OUT_OF_WINDOW**, far outside launch window.
 
-No notification sent. Files written:
-- `articles/star-momentum-2026-05-29.md` — full projection report
-- `memory/topics/star-momentum-state.json` — updated (aeon projected June 6, minitor projected Oct 13)
-- `memory/logs/2026-05-29.md` — log block appended
+No notifications sent. Article written to `articles/star-momentum-2026-05-30.md`, state updated, log appended.
