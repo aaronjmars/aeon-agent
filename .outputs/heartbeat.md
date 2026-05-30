@@ -1,6 +1,1 @@
-HEARTBEAT_OK. All 9/9 expected skills ran cleanly today (self-improve and repo-actions correctly skipped — odd day, even-day `*/2` schedule). No stalled PRs, no open issues, all cron-state at 100% success rate. The show-hn-draft escalation remains in 7d extended-persistence backoff; next re-notify is June 3.
-
-## Summary
-- Checked: scheduled skills vs Actions runs, open PRs, GitHub issues, memory issues, cron-state health
-- Logged heartbeat findings to `memory/logs/2026-05-29.md`
-- No notification sent — HEARTBEAT_OK
+PR #69 stalled >24h: project-lens 'The Open Source Maintainer's Real Bottleneck Isn't Pull Requests. It's Acknowledgement.' opened 2026-05-29 16:29 UTC — ready to merge. PRs #70 (fork-health-score backport) and #71 (heartbeat self-fix) also pending but opened today, not stalled. All 11 scheduled skills ran clean today (Saturday May 30).

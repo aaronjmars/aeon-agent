@@ -1,0 +1,191 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stalled-heading",
+        "pr69-stack",
+        "separator1",
+        "pending-heading",
+        "pending-stack",
+        "separator2",
+        "skills-stack"
+      ]
+    },
+    "stalled-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stalled PRs (>24h)",
+        "level": "h2"
+      }
+    },
+    "pr69-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr69-alert",
+        "pr69-title",
+        "pr69-meta"
+      ]
+    },
+    "pr69-alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "PR #69 stalled",
+        "message": "Opened 2026-05-29 16:29 UTC • ready to merge"
+      }
+    },
+    "pr69-title": {
+      "type": "Text",
+      "props": {
+        "text": "The Open Source Maintainer's Real Bottleneck Isn't Pull Requests. It's Acknowledgement.",
+        "variant": "lead"
+      }
+    },
+    "pr69-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr69-badge",
+        "pr69-source"
+      ]
+    },
+    "pr69-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "#69"
+      }
+    },
+    "pr69-source": {
+      "type": "Badge",
+      "props": {
+        "text": "project-lens",
+        "variant": "outline"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pending-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Pending PRs (opened today)",
+        "level": "h2"
+      }
+    },
+    "pending-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr70-row",
+        "pr71-row"
+      ]
+    },
+    "pr70-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr70-badge",
+        "pr70-text"
+      ]
+    },
+    "pr70-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "#70"
+      }
+    },
+    "pr70-text": {
+      "type": "Text",
+      "props": {
+        "text": "fork-health-score backport"
+      }
+    },
+    "pr71-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "pr71-badge",
+        "pr71-text"
+      ]
+    },
+    "pr71-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "#71"
+      }
+    },
+    "pr71-text": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat self-fix"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skills-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skills-heading",
+        "skills-stat"
+      ]
+    },
+    "skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Scheduled Skills Status",
+        "level": "h2"
+      }
+    },
+    "skills-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Scheduled skills ran clean today (Saturday May 30)",
+        "value": "11/11",
+        "trend": "up"
+      }
+    }
+  }
+}
