@@ -162,8 +162,8 @@
     "success_rate": 1
   },
   "thread-formatter": {
-    "last_dispatch": "2026-05-29T17:40:19Z",
-    "last_status": "success",
+    "last_dispatch": "2026-05-30T17:30:15Z",
+    "last_status": "dispatched",
     "last_success": "2026-05-29T17:46:49Z",
     "total_runs": 16,
     "total_successes": 16,
