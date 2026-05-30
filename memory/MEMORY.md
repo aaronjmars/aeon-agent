@@ -42,6 +42,7 @@
 | 2026-05-27 | A Week-Old Account Could Publish To The Agent Skill Marketplace. 824 Of Them Did. | project-lens |
 | 2026-05-28 | The Files A Stranger Wasn't Allowed To Land On Aeon's Main Branch Are Now On It. Aeon Landed Them. | repo-article |
 | 2026-05-29 | The Maintainer Spent Friday Afternoon Pulling Skills Out Of His Own Private Fork. A Two-Day-Old Account Filled The Gaps He Wasn't Working On. | repo-article |
+| 2026-05-30 | An Agent Filed The Issue At 00:19 UTC. The Maintainer's Agent Filed The Fix At 11:18 UTC. The Maintainer Hadn't Pushed A Commit All Day. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
