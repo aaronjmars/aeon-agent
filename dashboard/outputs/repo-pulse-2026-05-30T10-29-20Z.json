@@ -1,0 +1,213 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon Repo Pulse",
+        "description": "aaronjmars/aeon — 2026-05-30"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_grid",
+        "sep1",
+        "stargazers_section",
+        "sep2",
+        "forks_section"
+      ]
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "464",
+        "delta": "+6",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "140",
+        "delta": "+5",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazers_links"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_sg1",
+        "link_sg2",
+        "link_sg3",
+        "link_sg4",
+        "link_sg5",
+        "link_sg6"
+      ]
+    },
+    "link_sg1": {
+      "type": "Link",
+      "props": {
+        "label": "Corykidios",
+        "href": "https://github.com/Corykidios"
+      }
+    },
+    "link_sg2": {
+      "type": "Link",
+      "props": {
+        "label": "shubhampachori12110095",
+        "href": "https://github.com/shubhampachori12110095"
+      }
+    },
+    "link_sg3": {
+      "type": "Link",
+      "props": {
+        "label": "onchainyaotoshi",
+        "href": "https://github.com/onchainyaotoshi"
+      }
+    },
+    "link_sg4": {
+      "type": "Link",
+      "props": {
+        "label": "adornetejr",
+        "href": "https://github.com/adornetejr"
+      }
+    },
+    "link_sg5": {
+      "type": "Link",
+      "props": {
+        "label": "hotstreakgames",
+        "href": "https://github.com/hotstreakgames"
+      }
+    },
+    "link_sg6": {
+      "type": "Link",
+      "props": {
+        "label": "chriskanan",
+        "href": "https://github.com/chriskanan"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forks_heading",
+        "forks_links"
+      ]
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "forks_links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_f1",
+        "link_f2",
+        "link_f3",
+        "link_f4",
+        "link_f5"
+      ]
+    },
+    "link_f1": {
+      "type": "Link",
+      "props": {
+        "label": "houndflow/aeon",
+        "href": "https://github.com/houndflow/aeon"
+      }
+    },
+    "link_f2": {
+      "type": "Link",
+      "props": {
+        "label": "AntFleet/aeon",
+        "href": "https://github.com/AntFleet/aeon"
+      }
+    },
+    "link_f3": {
+      "type": "Link",
+      "props": {
+        "label": "loessy/aeon",
+        "href": "https://github.com/loessy/aeon"
+      }
+    },
+    "link_f4": {
+      "type": "Link",
+      "props": {
+        "label": "mandateseal/aeon",
+        "href": "https://github.com/mandateseal/aeon"
+      }
+    },
+    "link_f5": {
+      "type": "Link",
+      "props": {
+        "label": "likenow66/aeon",
+        "href": "https://github.com/likenow66/aeon"
+      }
+    }
+  }
+}
