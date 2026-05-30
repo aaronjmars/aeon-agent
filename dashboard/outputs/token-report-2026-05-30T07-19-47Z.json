@@ -1,0 +1,132 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon Daily — 2026-05-30"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stack_liquidity_volume",
+        "stack_buysell",
+        "stack_7d30d",
+        "text_description",
+        "link_chart"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00005156",
+        "delta": "-13.9%",
+        "trend": "down"
+      }
+    },
+    "stack_liquidity_volume": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_liquidity",
+        "stat_volume"
+      ]
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.90M"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$710.8K",
+        "delta": "-18.2%",
+        "trend": "down"
+      }
+    },
+    "stack_buysell": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_buysell",
+        "badge_buyheavy"
+      ]
+    },
+    "stat_buysell": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "856/364 (2.35:1)"
+      }
+    },
+    "badge_buyheavy": {
+      "type": "Badge",
+      "props": {
+        "text": "buy-heavy",
+        "variant": "default"
+      }
+    },
+    "stack_7d30d": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_7d",
+        "stat_30d"
+      ]
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "-37.3%",
+        "trend": "down"
+      }
+    },
+    "stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+1,649%",
+        "trend": "up"
+      }
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "Multi-day pullback continues from mid-May highs near $0.00014. Buy flow dominant but volume contracting to $700K–$1M range from prior $3–4M peak days.",
+        "variant": "body"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
