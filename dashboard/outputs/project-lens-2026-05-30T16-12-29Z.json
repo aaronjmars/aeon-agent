@@ -1,0 +1,104 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "On Saturdays, The Maintainer Opens Telegram Before The Repo. Most Saturdays, She Never Opens The Repo."
+      },
+      "children": [
+        "badge-new",
+        "text-lens-intro",
+        "separator-1",
+        "stack-details"
+      ]
+    },
+    "badge-new": {
+      "type": "Badge",
+      "props": {
+        "text": "New Article",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "text-lens-intro": {
+      "type": "Text",
+      "props": {
+        "text": "A user-story lens on the 2026 OSS maintainer-burnout numbers.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-burnout",
+        "text-ingress",
+        "text-maintainer-story",
+        "text-key-distinction",
+        "separator-2",
+        "storylink-read"
+      ]
+    },
+    "stat-burnout": {
+      "type": "Stat",
+      "props": {
+        "label": "Maintainers who quit or considered quitting (Tidelift)",
+        "value": "58%"
+      },
+      "children": []
+    },
+    "text-ingress": {
+      "type": "Text",
+      "props": {
+        "text": "Ingress NGINX retired in March under one-or-two-person stewardship despite running in ~50% of cloud-native environments.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-maintainer-story": {
+      "type": "Text",
+      "props": {
+        "text": "The piece follows a solo Rust-crate maintainer who installed aeon-agent in forty minutes and got her Saturdays back.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-key-distinction": {
+      "type": "Text",
+      "props": {
+        "text": "Then names the architectural distinction that matters: the agent surfaces the queue, but the merge button still belongs to the human.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "storylink-read": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-30.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
