@@ -1,0 +1,161 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Agent Self-Improvement"
+      },
+      "children": [
+        "date",
+        "mainStack"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-05-30",
+        "variant": "muted"
+      }
+    },
+    "mainStack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "description",
+        "sep1",
+        "whySection",
+        "sep2",
+        "whatSection",
+        "sep3",
+        "impactSection",
+        "prSection"
+      ]
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "Replaced a shell command substitution in `skills/heartbeat/SKILL.md` step 4 detection-method #2 with the `${today}` template variable that the workflow already injects. Same string, no behavioral change — just removes one more `$(...)` site the runner shell-guard would block."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "whySection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "whyHeading",
+        "whyText"
+      ]
+    },
+    "whyHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "whyText": {
+      "type": "Text",
+      "props": {
+        "text": "The runner hook blocks shell command/variable expansion with \"Contains simple_expansion\" — identical constraint PR #63 fixed in weekly-shiplog (May 26) and PR #67 fixed in push-recap (May 28). heartbeat runs daily at 19:00 UTC; on every run the agent had to improvise the cutoff. Picked over the four other enabled skills with the same anti-pattern (repo-pulse:27, repo-article:26, repo-actions:29, star-momentum-alert:69) because heartbeat's site is the smallest possible — a token-for-token substitution, not a 24h/7d/14d offset recomputation."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "whatSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "whatHeading",
+        "whatText"
+      ]
+    },
+    "whatHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "whatText": {
+      "type": "Text",
+      "props": {
+        "text": "skills/heartbeat/SKILL.md line 21: `$(date -u +%Y-%m-%d)` → `${today}`, with a parenthetical citing PR #63/#67 so a future cleanup doesn't drop the constraint."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "impactSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "impactHeading",
+        "impactText"
+      ]
+    },
+    "impactHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "impactText": {
+      "type": "Text",
+      "props": {
+        "text": "Daily skill no longer hits the shell-guard on its scheduled-run check. Four sibling sites remain, queued for future self-improve runs."
+      }
+    },
+    "prSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "prLabel",
+        "prLink"
+      ]
+    },
+    "prLabel": {
+      "type": "Heading",
+      "props": {
+        "text": "Pull Request",
+        "level": "h4"
+      }
+    },
+    "prLink": {
+      "type": "Link",
+      "props": {
+        "label": "PR #71",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/71"
+      }
+    }
+  }
+}
