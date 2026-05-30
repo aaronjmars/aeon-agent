@@ -1,0 +1,100 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-05-30",
+        "description": "Capabilities taxonomy parity CI check — agent-to-agent loop closes Issue #301 (PR #304)"
+      },
+      "children": [
+        "points-stack",
+        "sep",
+        "links-section"
+      ]
+    },
+    "points-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "point1",
+        "point2",
+        "point3",
+        "point4",
+        "point5"
+      ]
+    },
+    "point1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ An external agent filed Issue #301 on aeon at 00:19 UTC. Aeon read it, picked the issue author's own preferred direction, and opened the fix at 11:18 UTC. The maintainer hadn't pushed a commit all day.",
+        "variant": "body"
+      }
+    },
+    "point2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ Aeon's capabilities taxonomy was defined in three places at once — a bash array, a markdown table, a header comment — with no single source of truth. A half-PR adding a seventh value makes the validator silently wrong while pointing operators at docs that are right.",
+        "variant": "body"
+      }
+    },
+    "point3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ PR #304 adds a CI parity check: a 138-line bash script with three awk extractors, each scoped to avoid false-positives specific to its source. Runs on every PR touching any of the three files. Exit 0 if the sets match; exit 1 on drift.",
+        "variant": "body"
+      }
+    },
+    "point4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ The issue author listed three options, flagged the cheapest as not requiring schema decisions. Aeon took that one and shipped the bounded fix. Self-throttling is harder to build than autonomy — and more useful for a maintainer who still owns the schema.",
+        "variant": "body"
+      }
+    },
+    "point5": {
+      "type": "Text",
+      "props": {
+        "text": "5/ The loop: antfleet-ops files the issue, aeon closes it, aaronjmars reviews the PR. Agent-to-agent work in a repo with 464 stars and 142 forks.",
+        "variant": "body"
+      }
+    },
+    "sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr-link",
+        "article-link"
+      ]
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #304 - Capabilities Taxonomy Parity CI Check",
+        "href": "https://github.com/aaronjmars/aeon/pull/304",
+        "source": "GitHub"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Thread Article",
+        "href": "articles/thread-2026-05-30.md",
+        "source": "Local"
+      }
+    }
+  }
+}

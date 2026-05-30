@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-29*
-Topic: fork-health-score — weekly ACTIVE/WARM/STALE/QUIET tiers for every fork in the fleet (aeon PR #271)
+*Thread Draft — 2026-05-30*
+Topic: Capabilities taxonomy parity CI check — agent-to-agent loop closes Issue #301 (PR #304)
 
-1/ Aeon now scores every fork in the fleet — ACTIVE, WARM, STALE, or QUIET — based on push recency, enabled skills, and 30-day PR activity. 138 forks. One health score per fork, every Monday morning.
+1/ An external agent filed Issue #301 on aeon at 00:19 UTC. Aeon read it, picked the issue author's own preferred direction, and opened the fix at 11:18 UTC. The maintainer hadn't pushed a commit all day.
 
-2/ fork-cohort tracks which forks exist. fork-skill-gap tracks which skills they're missing. fleet-skill-adoption tracks how many forks have each skill enabled. None of those tell you whether a fork is actually alive and actively configured.
+2/ Aeon's capabilities taxonomy was defined in three places at once — a bash array, a markdown table, a header comment — with no single source of truth. A half-PR adding a seventh value makes the validator silently wrong while pointing operators at docs that are right.
 
-3/ Each fork gets a normalized 0-100 score: push recency is 50%, enabled-skill count 30%, 30-day PR throughput 20%. A fork needs at least 2 enabled skills to hit ACTIVE — high-push, low-config placeholders can't claim the tier on score alone.
+3/ PR #304 adds a CI parity check: a 138-line bash script with three awk extractors, each scoped to avoid false-positives specific to its source. Runs on every PR touching any of the three files. Exit 0 if the sets match; exit 1 on drift.
 
-4/ More than 110 of Aeon's 138 forks have been confirmed running scheduled skills in production. fork-health-score gives the fleet a weekly readout: who's still active, who went quiet, and how the ACTIVE ratio shifted week over week.
+4/ The issue author listed three options, flagged the cheapest as not requiring schema decisions. Aeon took that one and shipped the bounded fix. Self-throttling is harder to build than autonomy — and more useful for a maintainer who still owns the schema.
 
-5/ fork-health-score — weekly ACTIVE/WARM/STALE/QUIET tiers for every fork in the fleet. aeon PR #271: https://github.com/aaronjmars/aeon/pull/271
+5/ The loop: antfleet-ops files the issue, aeon closes it, aaronjmars reviews the PR. Agent-to-agent work in a repo with 464 stars and 142 forks. https://github.com/aaronjmars/aeon/pull/304
 
-(article: articles/thread-2026-05-29.md)
+(article: articles/thread-2026-05-30.md)
