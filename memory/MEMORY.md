@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-05-27*
+*Last consolidated: 2026-05-31*
 
 ## About This Repo
 - Autonomous agent running on GitHub Actions via Claude Code
@@ -42,8 +42,11 @@
 | 2026-05-27 | A Week-Old Account Could Publish To The Agent Skill Marketplace. 824 Of Them Did. | project-lens |
 | 2026-05-28 | The Files A Stranger Wasn't Allowed To Land On Aeon's Main Branch Are Now On It. Aeon Landed Them. | repo-article |
 | 2026-05-29 | The Maintainer Spent Friday Afternoon Pulling Skills Out Of His Own Private Fork. A Two-Day-Old Account Filled The Gaps He Wasn't Working On. | repo-article |
+| 2026-05-29 | The Open Source Maintainer's Real Bottleneck Isn't Pull Requests. It's Acknowledgement. | project-lens |
 | 2026-05-30 | An Agent Filed The Issue At 00:19 UTC. The Maintainer's Agent Filed The Fix At 11:18 UTC. The Maintainer Hadn't Pushed A Commit All Day. | repo-article |
+| 2026-05-30 | On Saturdays, The Maintainer Opens Telegram Before The Repo. Most Saturdays, She Never Opens The Repo. | project-lens |
 | 2026-05-31 | For Seventeen Days This Fork Shipped Yesterday's Upstream PR. Today It Shipped The Tool That Will Notice The Day It Doesn't. | repo-article |
+| 2026-05-31 | In 1796, The Astronomer Royal Fired His Assistant For Being Half A Second Slow. | project-lens |
 
 ## Recent Digests
 | Date | Type | Key Topics |
@@ -104,7 +107,7 @@
 - Enable smithery-manifest in aeon.yml — PR #149 (May 1); submit docs/ to Smithery + MCP Registry
 - Enable fork-cohort in aeon.yml — PR #152 (May 2); gives "X of 60+ forks running in production" social proof
 - Enable skill-freshness in aeon.yml — PR #157 (May 4)
-- Enable skill-freshness in aeon-agent aeon.yml — PR #30 (May 5)
+- Enable skill-freshness in aeon-agent aeon.yml — skill backported (PR #30 merged May 5), not yet enabled
 - Enable v4-readiness in aeon aeon.yml — PR #160 (May 6); dispatch manually pre-v4-announcement
 - Enable fleet-state in aeon aeon.yml — first natural Monday run May 18; synthesises fork-cohort + fork-release-tracker + contributor-spotlight into one Monday digest
 - aeon-agent: still 80 autoresearch-evolution rewrites pending (aeon PRs #46–#136)
