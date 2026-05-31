@@ -970,6 +970,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon syndicate-article"
+    },
+    {
+      "slug": "upstream-gap",
+      "name": "upstream-gap",
+      "description": "Weekly diff of local skills/ against upstream — sorted queue of pending backports by upstream merge date, alerts when any skill has been pending >48h",
+      "category": "dev",
+      "schedule": "0 12 * * 1",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon-agent upstream-gap"
     }
   ],
   "install_all": "./add-skill aaronjmars/aeon --all",

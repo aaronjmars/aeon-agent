@@ -165,6 +165,7 @@ skills:
   star-milestone: { enabled: true, schedule: "15 15 * * *" } # daily — announce when watched repos cross star-count milestones
   star-momentum-alert: { enabled: true, schedule: "10 10 * * *", model: "claude-sonnet-4-6", var: "" } # daily — project next milestone crossing date from 14-day repo-pulse history; alert only when projected date lands in 7-14d window on Tue/Wed/Thu (Show HN dispatch slot)
   syndicate-article: { enabled: false, schedule: "30 15 * * *", model: "claude-sonnet-4-6", var: "" } # cross-post latest article to Dev.to
+  upstream-gap: { enabled: false, schedule: "0 12 * * 1", model: "claude-sonnet-4-6", var: "" } # Monday 12:00 UTC — weekly diff of local skills/ against upstream aaronjmars/aeon. Sorted queue of pending backports by upstream merge date with Urgent (≥7d) / Stale (2–6d) / Fresh (<2d) tiers. Gated notify (silent on CLEAR + nothing-resolved, and on FRESH_ONLY with no new STALE transitions). Pass dry-run to skip notify, or owner/repo to override the parent. Pairs with the 17-day same-day-after backport chain by making the gap explicit.
 
 # Reactive triggers — event-driven skill dispatch based on cron-state.json conditions.
 reactive:
