@@ -54,3 +54,7 @@ node_modules/
 
 # Hash dedup file used by ./notify within a workflow run
 .notify-sent-hashes
+
+# Per-run scratch staging for PR-body drafts (feature skill writes here before
+# `gh pr create --body-file`; transient, never committed)
+.pr-bodies/
