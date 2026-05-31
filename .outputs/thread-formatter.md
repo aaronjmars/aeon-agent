@@ -1,14 +1,14 @@
-*Thread Draft — 2026-05-30*
-Topic: Capabilities taxonomy parity CI check — agent-to-agent loop closes Issue #301 (PR #304)
+*Thread Draft — 2026-05-31*
+Topic: upstream-gap — the fork's first original skill in the 17-day backport chain (aeon-agent PR #72)
 
-1/ An external agent filed Issue #301 on aeon at 00:19 UTC. Aeon read it, picked the issue author's own preferred direction, and opened the fix at 11:18 UTC. The maintainer hadn't pushed a commit all day.
+1/ For seventeen days the aeon-agent fork shipped the previous day's upstream PR without a miss. Today it shipped something upstream doesn't have: a weekly diff of the gap it still hasn't closed.
 
-2/ Aeon's capabilities taxonomy was defined in three places at once — a bash array, a markdown table, a header comment — with no single source of truth. A half-PR adding a seventh value makes the validator silently wrong while pointing operators at docs that are right.
+2/ The fork has 95 skills. Upstream has 160. The 65-skill gap is mostly spring autoresearch rewrites the fork has known about and deferred since launch. The backport chain was the only signal that the gap was still closing.
 
-3/ PR #304 adds a CI parity check: a 138-line bash script with three awk extractors, each scoped to avoid false-positives specific to its source. Runs on every PR touching any of the three files. Exit 0 if the sets match; exit 1 on drift.
+3/ upstream-gap diffs local skills/ against upstream aaronjmars/aeon weekly. Missing slugs get a merge date from upstream's commit history, sticky in state so the API cost is bounded. Days pending are computed from the upstream merge, not from when the fork first noticed.
 
-4/ The issue author listed three options, flagged the cheapest as not requiring schema decisions. Aeon took that one and shipped the bounded fix. Self-throttling is harder to build than autonomy — and more useful for a maintainer who still owns the schema.
+4/ The 80 deferred autoresearch rewrites from aeon PRs #46–#136 will surface as a 60-row URGENT block on first run. The fork has known they exist for months. Now there's a number on the terminal once a week until they're done.
 
-5/ The loop: antfleet-ops files the issue, aeon closes it, aaronjmars reviews the PR. Agent-to-agent work in a repo with 464 stars and 142 forks. https://github.com/aaronjmars/aeon/pull/304
+5/ The fork built one original feature in seventeen days. It picked the one that guarantees the next seventeen look the same. https://github.com/aaronjmars/aeon-agent/pull/72
 
-(article: articles/thread-2026-05-30.md)
+(article: articles/thread-2026-05-31.md)
