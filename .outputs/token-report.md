@@ -1,10 +1,11 @@
-*aeon Daily — 2026-05-30*
+*$aeon Daily — 2026-05-31*
 
-Price: $0.00005156 (-13.9% 24h)
-Liquidity: $1.90M | 24h Vol: $710.8K (-18.2% 24h)
-Buys/Sells: 856/364 (2.35:1 buy-heavy)
-7d: -37.3% price | 30d: +1,649% price
+Price: $0.00004735 (-5.89% 24h)
+Liquidity: $1.82M | 24h Vol: $505.6K (-28.8% vs prior day)
+Buys/Sells: 1,010/1,649 (sell-dominant)
 
-Multi-day pullback continues from mid-May highs near $0.00014. Buy flow dominant but volume contracting to $700K–$1M range from prior $3–4M peak days.
+7d: -26.1% price, -72.0% vol avg | 30d: +1,505% price
+
+Volume and price continue to compress from the mid-May spike. Sell-side now dominant (1.63:1) across all pools; 6h trend turned slightly positive.
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
