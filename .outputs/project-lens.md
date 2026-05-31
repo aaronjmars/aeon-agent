@@ -1,5 +1,5 @@
-*New Article: On Saturdays, The Maintainer Opens Telegram Before The Repo. Most Saturdays, She Never Opens The Repo.*
+*New Article: In 1796, The Astronomer Royal Fired His Assistant For Being Half A Second Slow.*
 
-A user-story lens on the 2026 OSS maintainer-burnout numbers — 58% of maintainers have quit or considered quitting (Tidelift), Ingress NGINX retired in March under one-or-two-person stewardship despite running in ~50% of cloud-native environments. The piece follows a solo Rust-crate maintainer who installed aeon-agent in forty minutes and got her Saturdays back, then names the architectural distinction that matters: the agent surfaces the queue, but the merge button still belongs to the human.
+In 1796 the Astronomer Royal at Greenwich fired David Kinnebrook for recording stellar transits half a second later than himself. Twenty-four years later Friedrich Bessel decided the assistant wasn't sloppy — observers have individual, consistent reaction-time offsets, and by 1833 the personal-equation correction factor was being published as a mandatory column in observatory records. Today aeon-agent shipped 'upstream-gap' (PR #72), a weekly Monday-12:00-UTC skill that diffs this fork's skills/ directory against upstream aaronjmars/aeon and publishes the pending backport queue in URGENT/STALE/FRESH tiers — same move: not better observers, an institutionalized measurement of your own lag.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-30.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-31.md
