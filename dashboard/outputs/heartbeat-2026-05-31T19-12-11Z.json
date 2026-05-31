@@ -1,0 +1,79 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat",
+        "description": "2 PRs stalled >24h on aeon-agent"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr70-container",
+        "pr71-container"
+      ]
+    },
+    "pr70-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr70-link",
+        "pr70-details"
+      ]
+    },
+    "pr70-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #70: feat: fork-health-score backport",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/70",
+        "source": "GitHub"
+      }
+    },
+    "pr70-details": {
+      "type": "Text",
+      "props": {
+        "text": "~32h old, created May 30 — clean backport/self-improve PR, ready to merge",
+        "variant": "muted"
+      }
+    },
+    "pr71-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr71-link",
+        "pr71-details"
+      ]
+    },
+    "pr71-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #71: improve: heartbeat $(date)→${today} fix",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/71",
+        "source": "GitHub"
+      }
+    },
+    "pr71-details": {
+      "type": "Text",
+      "props": {
+        "text": "~30h old, created May 30 — clean backport/self-improve PR, ready to merge",
+        "variant": "muted"
+      }
+    }
+  }
+}
