@@ -18,7 +18,7 @@ Check the following:
 - [ ] Scan aeon.yml for scheduled skills — cross-reference with **both** today's logs AND today's GitHub Actions runs to find any that haven't run when expected.
   **Detection method (use ALL three signals before flagging a skill as missing):**
   1. Check `memory/logs/${today}.md` for a `## ` header containing the skill name (case-insensitive, partial match — e.g. "Token Report" matches `token-report`)
-  2. Run `gh run list --workflow=aeon.yml --created=$(date -u +%Y-%m-%d) --json displayTitle,status` — if the skill appears in a completed/in-progress/queued run, it's NOT missing
+  2. Run `gh run list --workflow=aeon.yml --created=${today} --json displayTitle,status` — if the skill appears in a completed/in-progress/queued run, it's NOT missing. (The runner hook blocks `$(...)` shell substitution per PR #63/#67; `${today}` is already the UTC date the workflow injects, so it's a drop-in replacement for `$(date -u +%Y-%m-%d)`.)
   3. Only flag as missing if the skill was expected to run **more than 2 hours ago** AND neither logs nor Actions runs show it
   **Log header aliases:** Skills often log under a human-readable header, not their aeon.yml name. Match flexibly:
   - `token-report` → `## Token Report`
