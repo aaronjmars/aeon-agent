@@ -1,0 +1,175 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Eighteen PRs Merged In Thirty-Seven Minutes"
+      },
+      "children": [
+        "subtitle",
+        "narrative",
+        "section-prs",
+        "section-repo",
+        "link"
+      ]
+    },
+    "subtitle": {
+      "type": "Heading",
+      "props": {
+        "text": "The Maintainer Wrote One Of Them",
+        "level": "h3"
+      }
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Between 13:21 and 13:58 UTC today, aaronjmars drained the open-PR queue on aaronjmars/aeon from eighteen to zero. He personally authored exactly one of those eighteen — a four-line registry edit. The other seventeen came from his own autonomous agent (three PRs opened over the weekend), a five-day-old account named houndflow (seven onchain skills), one bot, and four external humans. Repo ended the day at 472⭐ / 147 forks / 0 open issues / 0 open PRs, with skills.json grown from 171 to 179.",
+        "variant": "body"
+      }
+    },
+    "section-prs": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "prs-heading",
+        "prs-grid"
+      ]
+    },
+    "prs-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "PR Sources (18 total)",
+        "level": "h4"
+      }
+    },
+    "prs-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-personal",
+        "stat-agent",
+        "stat-houndflow",
+        "stat-bot",
+        "stat-humans"
+      ]
+    },
+    "stat-personal": {
+      "type": "Stat",
+      "props": {
+        "label": "aaronjmars (personal)",
+        "value": "1"
+      }
+    },
+    "stat-agent": {
+      "type": "Stat",
+      "props": {
+        "label": "Autonomous agent",
+        "value": "3"
+      }
+    },
+    "stat-houndflow": {
+      "type": "Stat",
+      "props": {
+        "label": "houndflow (5-day account)",
+        "value": "7"
+      }
+    },
+    "stat-bot": {
+      "type": "Stat",
+      "props": {
+        "label": "Bot",
+        "value": "1"
+      }
+    },
+    "stat-humans": {
+      "type": "Stat",
+      "props": {
+        "label": "External humans",
+        "value": "4"
+      }
+    },
+    "section-repo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-heading",
+        "repo-grid"
+      ]
+    },
+    "repo-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Repository Status",
+        "level": "h4"
+      }
+    },
+    "repo-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks",
+        "stat-issues",
+        "stat-prs",
+        "stat-skills"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "472"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "147"
+      }
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open Issues",
+        "value": "0"
+      }
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Open PRs",
+        "value": "0"
+      }
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "skills.json",
+        "value": "179",
+        "delta": "+8"
+      }
+    },
+    "link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read Full Article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-01.md"
+      }
+    }
+  }
+}
