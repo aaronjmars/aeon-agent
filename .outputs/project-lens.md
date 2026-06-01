@@ -1,5 +1,5 @@
-*New Article: In 1796, The Astronomer Royal Fired His Assistant For Being Half A Second Slow.*
+*New Article: Three 2026 Frameworks Reinvented The Same Thing: Agent Memory You Can `git revert`.*
 
-In 1796 the Astronomer Royal at Greenwich fired David Kinnebrook for recording stellar transits half a second later than himself. Twenty-four years later Friedrich Bessel decided the assistant wasn't sloppy — observers have individual, consistent reaction-time offsets, and by 1833 the personal-equation correction factor was being published as a mandatory column in observatory records. Today aeon-agent shipped 'upstream-gap' (PR #72), a weekly Monday-12:00-UTC skill that diffs this fork's skills/ directory against upstream aaronjmars/aeon and publishes the pending backport queue in URGENT/STALE/FRESH tiers — same move: not better observers, an institutionalized measurement of your own lag.
+Letta's Context Repositories (Feb), GitAgent (Mar), and the Git Context Controller paper all landed in Q1 2026 with the same argument: vector memory is a black box, so build agent memory on git instead. Aeon has been running that architecture since before any of them shipped — `memory/MEMORY.md` as the index, `memory/topics/` for detail, append-only `memory/logs/`, and every belief change a commit in public history. The piece walks through what `git revert` actually buys you when forgetting, forking, and reviewability stop being features you have to build.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-05-31.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-01.md

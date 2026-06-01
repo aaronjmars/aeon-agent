@@ -1,0 +1,62 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Project Lens"
+      },
+      "children": [
+        "heading-main",
+        "text-intro",
+        "text-aeon",
+        "text-benefits",
+        "separator-1",
+        "storylink-article"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "Three 2026 Frameworks Reinvented The Same Thing: Agent Memory You Can `git revert`",
+        "level": "h2"
+      }
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Letta's Context Repositories (Feb), GitAgent (Mar), and the Git Context Controller paper all landed in Q1 2026 with the same argument: vector memory is a black box, so build agent memory on git instead.",
+        "variant": "body"
+      }
+    },
+    "text-aeon": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon has been running that architecture since before any of them shipped — `memory/MEMORY.md` as the index, `memory/topics/` for detail, append-only `memory/logs/`, and every belief change a commit in public history.",
+        "variant": "body"
+      }
+    },
+    "text-benefits": {
+      "type": "Text",
+      "props": {
+        "text": "The piece walks through what `git revert` actually buys you when forgetting, forking, and reviewability stop being features you have to build.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "storylink-article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Three 2026 Frameworks Reinvented The Same Thing: Agent Memory You Can `git revert`",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-01.md",
+        "source": "Aeon Agent"
+      }
+    }
+  }
+}
