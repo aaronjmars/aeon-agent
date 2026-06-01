@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 95,
+  "total": 96,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -780,6 +780,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon fork-contributor-leaderboard"
+    },
+    {
+      "slug": "fork-health-score",
+      "name": "fork-health-score",
+      "description": "Weekly per-fork health tier (ACTIVE/WARM/STALE/QUIET) blending push recency + enabled skill count + 30d PR throughput; top-10 ACTIVE leaderboard + fleet ACTIVE ratio with WoW deltas; silent when nothing moves",
+      "category": "dev",
+      "schedule": "45 10 * * 1",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon fork-health-score"
     },
     {
       "slug": "fork-release-tracker",
