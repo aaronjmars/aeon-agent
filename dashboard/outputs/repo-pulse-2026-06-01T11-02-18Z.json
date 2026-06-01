@@ -1,0 +1,177 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-01"
+      },
+      "children": [
+        "heading_repo",
+        "stack_main"
+      ]
+    },
+    "heading_repo": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_stats",
+        "separator_1",
+        "heading_stargazers",
+        "stack_stargazers",
+        "separator_2",
+        "heading_forks",
+        "stack_forks"
+      ]
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "471",
+        "delta": "+5",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "147",
+        "delta": "+3",
+        "trend": "up"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stack_stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_lappiesja",
+        "link_0xNN_stargazer",
+        "link_tunnckoCore",
+        "link_BeauMAnderson",
+        "link_commandlinetips"
+      ]
+    },
+    "link_lappiesja": {
+      "type": "Link",
+      "props": {
+        "label": "lappiesja",
+        "href": "https://github.com/lappiesja"
+      }
+    },
+    "link_0xNN_stargazer": {
+      "type": "Link",
+      "props": {
+        "label": "0xNN",
+        "href": "https://github.com/0xNN"
+      }
+    },
+    "link_tunnckoCore": {
+      "type": "Link",
+      "props": {
+        "label": "tunnckoCore",
+        "href": "https://github.com/tunnckoCore"
+      }
+    },
+    "link_BeauMAnderson": {
+      "type": "Link",
+      "props": {
+        "label": "BeauMAnderson",
+        "href": "https://github.com/BeauMAnderson"
+      }
+    },
+    "link_commandlinetips": {
+      "type": "Link",
+      "props": {
+        "label": "commandlinetips",
+        "href": "https://github.com/commandlinetips"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "stack_forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_z_korp_aeon",
+        "link_BBridgeers_aeon",
+        "link_0xNN_aeon"
+      ]
+    },
+    "link_z_korp_aeon": {
+      "type": "Link",
+      "props": {
+        "label": "z-korp/aeon",
+        "href": "https://github.com/z-korp/aeon"
+      }
+    },
+    "link_BBridgeers_aeon": {
+      "type": "Link",
+      "props": {
+        "label": "BBridgeers/aeon",
+        "href": "https://github.com/BBridgeers/aeon"
+      }
+    },
+    "link_0xNN_aeon": {
+      "type": "Link",
+      "props": {
+        "label": "0xNN/aeon",
+        "href": "https://github.com/0xNN/aeon"
+      }
+    }
+  }
+}
