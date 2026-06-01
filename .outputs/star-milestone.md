@@ -1,14 +1,17 @@
+Skill complete. Both watched non-agent repos checked, no milestones to announce.
+
 ## Summary
 
-Ran `skills/star-milestone/SKILL.md` against the 2 watched repos (aaronjmars/aeon-agent filtered out as agent repo per the skill's name-based exclusion).
+Ran `skills/star-milestone/SKILL.md` against `memory/watched-repos.md`.
 
-**Results — no notifications fired, no milestone crossings:**
+**Repos audited**: 2 (aaronjmars/aeon, aaronjmars/minitor). aaronjmars/aeon-agent skipped per step 1's name filter ("contains `aeon-agent`").
 
-- **aaronjmars/aeon** — 466 stars. Highest threshold ≤ 466 is **400**, which is already recorded in `memory/topics/milestones.md` (2026-05-20, organic). Gate 5a (already recorded) → no action. Next unrecorded threshold is 500 (+34 stars away; today's star-momentum-alert run projects ~8d ETA / 2026-06-08).
-- **aaronjmars/minitor** — 11 stars. Below the first threshold (25). `STAR_MILESTONE_QUIET`, skipped per step 4.
-- **aaronjmars/aeon-agent** — filtered (name contains `aeon-agent`).
+**Results**:
+- **aaronjmars/aeon**: 471⭐ → highest threshold ≤ STARS is 400, already recorded in `memory/topics/milestones.md` as `(organic)` on 2026-05-20. Step 5a → no action. Next threshold 500 already being tracked by today's star-momentum-alert run (ETA ~2026-06-09).
+- **aaronjmars/minitor**: 11⭐ → below first threshold (25). Step 4 → STAR_MILESTONE_QUIET.
 
-**Files modified:**
-- `memory/logs/2026-05-31.md` — appended `## Star Milestone` block with per-repo verdicts.
+**Files modified**: `memory/logs/2026-06-01.md` (appended `## Star Milestone` block).
 
-No follow-up needed. `milestones.md` is unchanged; no `./notify` call was made (skill's anti-spam contract: a milestone announced without a fresh crossing trains readers to mute).
+**No notifications sent**, **no state file changes**. Velocity fetch deliberately skipped since no announcement path was reachable for either repo.
+
+**Overall status**: STAR_MILESTONE_QUIET.
