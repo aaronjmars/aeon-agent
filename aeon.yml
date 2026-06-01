@@ -118,6 +118,7 @@ skills:
   evening-recap: { enabled: false, schedule: "0 21 * * *", model: "claude-sonnet-4-6" }
   vercel-projects: { enabled: false, schedule: "0 18 * * 0", model: "claude-sonnet-4-6", var: "" }
   cost-report: { enabled: false, schedule: "0 7 * * 1", model: "claude-sonnet-4-6" }
+  spend-monitor: { enabled: false, schedule: "0 12 * * *", model: "claude-sonnet-4-6", var: "" } # daily 12:00 UTC — API spend watchdog: running weekly cost vs WEEKLY_BUDGET_CAP (default $200), OK/WATCH/WARN/ALERT tiers, silent under 50%. Daily complement to cost-report. Pass var to override the cap.
   fork-fleet: { enabled: false, schedule: "0 10 * * 1" }
   fork-cohort: { enabled: false, schedule: "0 19 * * 0", model: "claude-sonnet-4-6" } # Sunday 19:00 UTC — bucket every fork by activation stage (COLD/STALE/ACTIVE/POWER) using GitHub Actions run history; week-over-week deltas in memory/topics/fork-cohort-state.json; gated notify (skip on STEADY + no transitions). Read-only across the fleet.
   skill-evals: { enabled: false, schedule: "0 6 * * 0", model: "claude-sonnet-4-6" }

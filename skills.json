@@ -980,6 +980,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon-agent upstream-gap"
+    },
+    {
+      "slug": "spend-monitor",
+      "name": "Spend Monitor",
+      "description": "Daily API spend watchdog — checks running weekly cost against a budget cap, alerts when approaching or exceeding it",
+      "category": "productivity",
+      "schedule": "0 12 * * *",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon spend-monitor"
     }
   ],
   "install_all": "./add-skill aaronjmars/aeon --all",
