@@ -1,11 +1,12 @@
-*Weekly Shiplog — 2026-05-25*
+*Weekly Shiplog — 2026-06-01*
 
-The week Aeon grew a package manager: 41 PRs merged, and the through-line was distribution, not new agent features.
+Eleven new framework skills in one Friday afternoon, a dashboard rebrand that ports the marketing site's motion vocabulary into the operator UI, and a weekend that went quiet with the open-PR queue stacked.
 
 Shipped:
-- Community skill packs went from a README table to a real protocol — install CLI, machine-readable registry, +34-skill catalog jump (121→155), and an ECOSYSTEM.md outsiders self-listed into on day zero
-- AntFleet security audit worked down to its last open finding — 8 silent-failure Highs closed, mostly patched by the audit bot itself
-- Minitor finished its deck-portability stack (share → templates → public gallery) and hit 47 column types
+- 11 new skills (5 ops + 6 keyless on-chain) + skill-pack manifest grew capabilities[] taxonomy and secrets_required/optional fields — biggest single-day catalog growth in the recap window
+- Dashboard editorial overhaul (PRs #263/#264/#265): Dela Gothic / Inter / Space Mono, halftone heroes, Scramble + Flip + VelocityMarquee motion components
+- 3 community packs (Sparkleware 7, Signa 10, noelclaw 2) + first-party sparkleware-catalog skill; 5 per-column features on minitor (refresh intervals, webhooks, filters, version history, tab groups); pr-skill-triage + liquidpad shims closed both ends of the inbound-PR pipeline
 
-Stats: 41 PRs merged across 3 repos, +12,604/-347 lines, 5 contributors
-Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-05-25.md
+Stats: ~64 PRs merged, ~+8,500/-1,200 lines, 12 distinct authors, 16th consecutive same-day backport on aeon-agent.
+
+Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-06-01.md

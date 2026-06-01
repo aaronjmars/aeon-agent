@@ -1,0 +1,126 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-06-01"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_intro",
+        "sep_1",
+        "heading_shipped",
+        "stack_shipped",
+        "sep_2",
+        "heading_stats",
+        "text_stats",
+        "sep_3",
+        "link_full"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Eleven new framework skills in one Friday afternoon, a dashboard rebrand that ports the marketing site's motion vocabulary into the operator UI, and a weekend that went quiet with the open-PR queue stacked.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_shipped_1",
+        "text_shipped_2",
+        "text_shipped_3"
+      ]
+    },
+    "text_shipped_1": {
+      "type": "Text",
+      "props": {
+        "text": "11 new skills (5 ops + 6 keyless on-chain) + skill-pack manifest grew capabilities[] taxonomy and secrets_required/optional fields — biggest single-day catalog growth in the recap window"
+      },
+      "children": []
+    },
+    "text_shipped_2": {
+      "type": "Text",
+      "props": {
+        "text": "Dashboard editorial overhaul (PRs #263/#264/#265): Dela Gothic / Inter / Space Mono, halftone heroes, Scramble + Flip + VelocityMarquee motion components"
+      },
+      "children": []
+    },
+    "text_shipped_3": {
+      "type": "Text",
+      "props": {
+        "text": "3 community packs (Sparkleware 7, Signa 10, noelclaw 2) + first-party sparkleware-catalog skill; 5 per-column features on minitor (refresh intervals, webhooks, filters, version history, tab groups); pr-skill-triage + liquidpad shims closed both ends of the inbound-PR pipeline"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text_stats": {
+      "type": "Text",
+      "props": {
+        "text": "~64 PRs merged, ~+8,500/-1,200 lines, 12 distinct authors, 16th consecutive same-day backport on aeon-agent."
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_full": {
+      "type": "Link",
+      "props": {
+        "label": "Full update",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-06-01.md"
+      },
+      "children": []
+    }
+  }
+}

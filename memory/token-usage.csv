@@ -468,3 +468,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-05-31,memory-flush,claude-sonnet-4-6,14,16196,792265,57532
 2026-05-31,heartbeat,claude-sonnet-4-6,10,7968,500419,53670
 2026-06-01,token-report,claude-sonnet-4-6,18,21433,1011188,69414
+2026-06-01,weekly-shiplog,claude-opus-4-7,42,29031,3758088,171115
