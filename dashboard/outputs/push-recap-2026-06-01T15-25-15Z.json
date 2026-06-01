@@ -1,0 +1,374 @@
+{
+  "root": "card_push_recap",
+  "state": {},
+  "elements": {
+    "card_push_recap": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-01"
+      },
+      "children": [
+        "text_intro",
+        "sep1",
+        "heading_summary",
+        "stack_summary",
+        "sep2",
+        "heading_houndflow",
+        "text_houndflow_intro",
+        "stack_houndflow_skills",
+        "sep3",
+        "heading_capabilities",
+        "text_capabilities_intro",
+        "stack_capabilities",
+        "sep4",
+        "heading_treasury",
+        "link_pr306",
+        "alert_gas_reserve",
+        "sep5",
+        "heading_highlights",
+        "stack_highlights",
+        "sep6",
+        "heading_keys",
+        "stack_key_changes",
+        "sep7",
+        "text_stats",
+        "link_full_recap"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Monday flood after weekend silence — ~25 PRs across aeon (18), aeon-agent (5), minitor (4) in a 70-minute window 12:47–13:58 UTC. ~3,500+ lines of new SKILL.md content alone.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_prs",
+        "stat_window",
+        "stat_lines"
+      ]
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Pull Requests",
+        "value": "~25"
+      }
+    },
+    "stat_window": {
+      "type": "Stat",
+      "props": {
+        "label": "Time window",
+        "value": "70 minutes (12:47–13:58 UTC)"
+      }
+    },
+    "stat_lines": {
+      "type": "Stat",
+      "props": {
+        "label": "New SKILL.md content",
+        "value": "~3,500+ lines"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_houndflow": {
+      "type": "Heading",
+      "props": {
+        "text": "HoundFlow onchain-investigation pack",
+        "level": "h3"
+      }
+    },
+    "text_houndflow_intro": {
+      "type": "Text",
+      "props": {
+        "text": "6 skills + composite, all keyless Base RPC — first security/forensics surface in aeon."
+      }
+    },
+    "stack_houndflow_skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_approval_audit",
+        "badge_honeypot_check",
+        "badge_lp_lock_check",
+        "badge_linked_wallets",
+        "badge_fund_flow",
+        "badge_investigation_report"
+      ]
+    },
+    "badge_approval_audit": {
+      "type": "Badge",
+      "props": {
+        "text": "approval-audit: live ERC-20 grants, flag unlimited"
+      }
+    },
+    "badge_honeypot_check": {
+      "type": "Badge",
+      "props": {
+        "text": "honeypot-check: eth_call-simulated sell from real holder"
+      }
+    },
+    "badge_lp_lock_check": {
+      "type": "Badge",
+      "props": {
+        "text": "lp-lock-check: V2 LP custody classification, rug-pullable y/n"
+      }
+    },
+    "badge_linked_wallets": {
+      "type": "Badge",
+      "props": {
+        "text": "linked-wallets: shared-funder + co-spend clustering"
+      }
+    },
+    "badge_fund_flow": {
+      "type": "Badge",
+      "props": {
+        "text": "fund-flow: Mermaid graph, 1–3 hops, direction operator-controlled"
+      }
+    },
+    "badge_investigation_report": {
+      "type": "Badge",
+      "props": {
+        "text": "investigation-report: composite orchestrator"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_capabilities": {
+      "type": "Heading",
+      "props": {
+        "text": "Capabilities taxonomy becomes load-bearing",
+        "level": "h3"
+      }
+    },
+    "text_capabilities_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Capabilities taxonomy graduates from documentation to enforced infrastructure. Multi-line aeon.yml entries fall back loudly via regex with PARSER_FALLBACK log, closing the v4-readiness H1 silent-undercount class structurally."
+      }
+    },
+    "stack_capabilities": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pr304",
+        "link_pr313"
+      ]
+    },
+    "link_pr304": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #304: CI parity check across 3 places (install-skill-pack array, docs/CAPABILITIES.md, header comment)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/304",
+        "source": "GitHub"
+      }
+    },
+    "link_pr313": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #313: capabilities-map skill (first skill using declarations to answer 'what does my stack cover?')",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/313",
+        "source": "GitHub"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_treasury": {
+      "type": "Heading",
+      "props": {
+        "text": "Treasury monitoring goes live",
+        "level": "h3"
+      }
+    },
+    "link_pr306": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #306: token-report now reads .x402books/wallets.json (zero consumers since landing May 29)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/306",
+        "source": "GitHub"
+      }
+    },
+    "alert_gas_reserve": {
+      "type": "Alert",
+      "props": {
+        "title": "Treasury gas reserve low",
+        "message": "Override fires below 0.01 ETH even on QUIET / CONSOLIDATING verdicts — going quiet on a day the agent can't afford gas is the exact regime that needs to be noisy.",
+        "type": "warning"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_highlights": {
+      "type": "Heading",
+      "props": {
+        "text": "Other highlights",
+        "level": "h3"
+      }
+    },
+    "stack_highlights": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_pr309",
+        "link_pr280",
+        "link_pr266",
+        "link_pr74",
+        "link_pr72",
+        "text_hl_minitor"
+      ]
+    },
+    "link_pr309": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #309: Dashboard now has real lib test coverage (633 lines, 71 tests)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/309",
+        "source": "GitHub"
+      }
+    },
+    "link_pr280": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #280: Anthropic-compatible API base URL routes through Settings UI",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/280",
+        "source": "GitHub"
+      }
+    },
+    "link_pr266": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #266: skill-update-check ACCEPT-mode now gated on security re-scan, closing AntFleet #258",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/266",
+        "source": "GitHub"
+      }
+    },
+    "link_pr74": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #74: aeon-agent 18th consecutive same-day-after backport (spend-monitor)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/74",
+        "source": "GitHub"
+      }
+    },
+    "link_pr72": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #72: First non-backport feature build (upstream-gap — Monday weekly diff that makes any future backport-chain gap explicit)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/72",
+        "source": "GitHub"
+      }
+    },
+    "text_hl_minitor": {
+      "type": "Text",
+      "props": {
+        "text": "minitor adds per-column collapse to 48px strip + JSON data export of cached items"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_keys": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "stack_key_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text_key1",
+        "text_key2",
+        "text_key3"
+      ]
+    },
+    "text_key1": {
+      "type": "Text",
+      "props": {
+        "text": "6 keyless HoundFlow onchain-investigation skills land (~600 lines of SKILL.md) — aeon's first dedicated security/forensics surface"
+      }
+    },
+    "text_key2": {
+      "type": "Text",
+      "props": {
+        "text": "Capabilities taxonomy graduates from documentation to enforced infrastructure (CI gate + first-consumer skill)"
+      }
+    },
+    "text_key3": {
+      "type": "Text",
+      "props": {
+        "text": "Treasury monitoring with structural gas-reserve-low override now folded into the daily token-report cycle"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_stats": {
+      "type": "Text",
+      "props": {
+        "text": "Stats: ~25 PRs · ~3,500+ lines of new SKILL.md · 12+ authors · 3 repos"
+      }
+    },
+    "link_full_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-01.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
