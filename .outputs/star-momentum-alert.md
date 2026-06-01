@@ -1,12 +1,14 @@
-## Summary
+*Star Momentum — 2026-06-01 — aaronjmars/aeon*
 
-Skill executed cleanly. No alerts fired.
+466⭐ projected to cross 500⭐ on 2026-06-09 (Tuesday) — 8 days from today.
 
-**aaronjmars/aeon** — 464⭐, targeting 500⭐ (gap: 36). 7-day pace 5.0/day, 3-day pace 3.0/day. Projected crossing: **June 8 (Monday)** — 8 days out, inside the 7–14d window, but Monday fails the Tue/Wed/Thu gate. Verdict: **OFF_DAY**. If pace holds through tomorrow, the projection shifts to Tuesday June 9 and the alert will fire.
+Pace:
+- 7-day avg: 4.71/day
+- 3-day avg: 3.33/day
+- Gap: 34 stars
 
-**aaronjmars/minitor** — 11⭐, targeting 50⭐ (gap: 39). 7-day pace 0.29/day. Projected crossing: October 15 (~137 days). Verdict: **OUT_OF_WINDOW**.
+2026-06-09 is a Tuesday — inside the Show HN dispatch window (Tue/Wed/Thu morning).
 
-Files written:
-- `articles/star-momentum-2026-05-31.md` — full projection report
-- `memory/topics/star-momentum-state.json` — projected_date_v7 updated to 2026-06-08 for aeon/500
-- `memory/logs/2026-05-31.md` — log block appended
+Suggested action: dispatch `show-hn-draft` 24-48 hours before 2026-06-09 so the post is ready when the milestone lands.
+
+Article: articles/star-momentum-2026-06-01.md
