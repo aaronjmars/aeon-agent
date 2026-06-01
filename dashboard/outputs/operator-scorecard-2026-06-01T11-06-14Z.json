@@ -1,0 +1,319 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Operator Scorecard — 2026-06-01"
+      },
+      "children": [
+        "alert_status",
+        "sep_1",
+        "section_health",
+        "sep_2",
+        "section_community",
+        "sep_3",
+        "section_economic",
+        "sep_4",
+        "section_notable",
+        "sep_5",
+        "section_footer"
+      ]
+    },
+    "alert_status": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 DEGRADED",
+        "message": "37 stars gained and $30 distributed, but the token shed 36% over 7 days and community rewards went quiet after May 27.",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_health",
+        "stack_health_content"
+      ]
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Health",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_health_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_clean",
+        "stat_flagged",
+        "stat_runs",
+        "badge_analytics"
+      ]
+    },
+    "stat_clean": {
+      "type": "Stat",
+      "props": {
+        "label": "Clean Heartbeats",
+        "value": "3"
+      },
+      "children": []
+    },
+    "stat_flagged": {
+      "type": "Stat",
+      "props": {
+        "label": "Flagged Heartbeats",
+        "value": "0"
+      },
+      "children": []
+    },
+    "stat_runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Runs",
+        "value": "7"
+      },
+      "children": []
+    },
+    "badge_analytics": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-analytics not enabled",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_community": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_community",
+        "stack_community_content"
+      ]
+    },
+    "heading_community": {
+      "type": "Heading",
+      "props": {
+        "text": "Community Growth",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_community_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks",
+        "text_repos"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars Gained",
+        "value": "+37"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "+40"
+      },
+      "children": []
+    },
+    "text_repos": {
+      "type": "Text",
+      "props": {
+        "text": "across 2 repos",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_economic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_economic",
+        "stack_economic_aeon",
+        "stack_economic_token"
+      ]
+    },
+    "heading_economic": {
+      "type": "Heading",
+      "props": {
+        "text": "Economic Activity",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_economic_aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_aeon",
+        "text_recipients"
+      ]
+    },
+    "stat_aeon": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON Distributed",
+        "value": "$30.00"
+      },
+      "children": []
+    },
+    "text_recipients": {
+      "type": "Text",
+      "props": {
+        "text": "to 6 recipients",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "stack_economic_token": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_token",
+        "badge_consolidating"
+      ]
+    },
+    "stat_token": {
+      "type": "Stat",
+      "props": {
+        "label": "Token 7d",
+        "value": "-36.2%",
+        "delta": "-36.2%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "badge_consolidating": {
+      "type": "Badge",
+      "props": {
+        "text": "CONSOLIDATING",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_notable",
+        "text_notable"
+      ]
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_notable": {
+      "type": "Text",
+      "props": {
+        "text": "upstream-gap skill — fork's first original feature after 17-day backport chain; now monitors its own drift vs upstream",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_footer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_window",
+        "link_full"
+      ]
+    },
+    "text_window": {
+      "type": "Text",
+      "props": {
+        "text": "Window: last 7d",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "link_full": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Report",
+        "href": "articles/operator-scorecard-2026-06-01.md",
+        "source": "Operator Scorecard"
+      },
+      "children": []
+    }
+  }
+}
