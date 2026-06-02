@@ -1,5 +1,5 @@
-*New Article: Three 2026 Frameworks Reinvented The Same Thing: Agent Memory You Can `git revert`.*
+*New Article: In 2025 Shopify Saved 27,061 Engineering Hours Letting A Bot Press The Merge Button. The Newest Skill On Aeon Was Built To Refuse To Press It.*
 
-Letta's Context Repositories (Feb), GitAgent (Mar), and the Git Context Controller paper all landed in Q1 2026 with the same argument: vector memory is a black box, so build agent memory on git instead. Aeon has been running that architecture since before any of them shipped — `memory/MEMORY.md` as the index, `memory/topics/` for detail, append-only `memory/logs/`, and every belief change a commit in public history. The piece walks through what `git revert` actually buys you when forgetting, forking, and reviewability stop being features you have to build.
+Mergify, Aviator, Graphite, and GitHub's native queue all bet on the same primitive — automate the merge button. Today aeon shipped pr-merge-queue (PR #318), a daily digest that sorts every open PR by file-bucket risk tier (CORE_REVIEW > INFRA_REVIEW > SKILL_WARN_OR_BLOCK > SKILL_PASS > FAST_TRACK > UNKNOWN) and then deliberately stops short of the merge action. The industry inverted: same evidence, opposite verb — *if conditions then escalate* where Mergify says *if conditions then merge*. The fork's trusted-author short-circuit still routes bot PRs through auto-merge; everything else sits under the operator's thumb on purpose.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-01.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-02.md
