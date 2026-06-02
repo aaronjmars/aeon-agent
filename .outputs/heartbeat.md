@@ -1,8 +1,10 @@
-HEARTBEAT_OK logged. All 10 expected Monday skills ran clean. No stalled PRs (the May 31 backlog fully merged today), no urgent issues, no memory flags. The show-hn-draft escalation remains in 7-day extended-persistence backoff — next ping due June 3.
+HEARTBEAT_OK. All 11 expected enabled skills ran clean today (token-report, repo-pulse, star-momentum-alert, feature, self-improve, repo-actions, push-recap, project-lens, repo-article, star-milestone, thread-formatter). Two open PRs (#77, #78) are both under 24h old — not stalled. No urgent issues. The show-hn-draft escalation remains in 7d extended-persistence backoff; next ping due June 3.
 
 ## Summary
-- **Checked:** 10 enabled Monday skills vs Actions runs — all 10 completed, heartbeat in progress now
-- **Open PRs:** None (all May 31 stalled PRs merged today)
-- **Issues/memory alerts:** None
-- **Persistent flag:** show-hn-draft still unresolved (31 days, 12 days past 400⭐ trigger), backoff continues through June 2, escalation due June 3
-- **Logged:** `memory/logs/2026-06-01.md` updated with heartbeat entry
+
+- **Checked**: 11 scheduled skills via GitHub Actions run list + today's logs
+- **Result**: All ran successfully — clean sweep
+- **Open PRs**: 2 (both created today, not stalled)
+- **Issues**: None
+- **Notification**: none sent (HEARTBEAT_OK)
+- **Log**: appended to `memory/logs/2026-06-02.md`
