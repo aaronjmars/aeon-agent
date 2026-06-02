@@ -1,0 +1,255 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap"
+      },
+      "children": [
+        "heading_date",
+        "separator_1",
+        "stats_section",
+        "separator_2",
+        "changes_section",
+        "separator_3",
+        "key_changes_section",
+        "separator_4",
+        "stats_final",
+        "separator_5",
+        "link_section"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-06-02",
+        "level": "h2"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_prs",
+        "stat_commits"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repositories",
+        "value": "3"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs Merged",
+        "value": "~12"
+      }
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Substantive Commits",
+        "value": "~30"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "change_1",
+        "change_2",
+        "change_3"
+      ]
+    },
+    "change_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_change_1",
+        "text_change_1"
+      ]
+    },
+    "heading_change_1": {
+      "type": "Heading",
+      "props": {
+        "text": "Capability declarations go live (aeon)",
+        "level": "h3"
+      }
+    },
+    "text_change_1": {
+      "type": "Text",
+      "props": {
+        "text": "19 high-blast-radius skills got `capabilities:` frontmatter (#322) — every onchain investigator, every key-spender. Same day, the audit skill (#313, merged 6/1) shipped a fix (#319) for the bootstrap state where nobody had declared anything yet — was crying 6 fake gaps; now goes QUIET until first real declaration lands."
+      }
+    },
+    "change_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_change_2",
+        "text_change_2"
+      ]
+    },
+    "heading_change_2": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill-marketplace registry entry (aeon)",
+        "level": "h3"
+      }
+    },
+    "text_change_2": {
+      "type": "Text",
+      "props": {
+        "text": "PR #316 adds Atrium-Hermes/aeon-atrium-skills — 3 onchain Base/USDC skills (atrium-publish/scout/earnings). 8th community pack in `skill-packs.json`."
+      }
+    },
+    "change_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_change_3",
+        "text_change_3"
+      ]
+    },
+    "heading_change_3": {
+      "type": "Heading",
+      "props": {
+        "text": "Daily PR-queue digest (aeon)",
+        "level": "h3"
+      }
+    },
+    "text_change_3": {
+      "type": "Text",
+      "props": {
+        "text": "PR #318 ships `pr-merge-queue` — buckets every open PR by touched-file risk tier (CORE_REVIEW > INFRA > SKILL > FAST_TRACK). Reuses scan.sh verbatim. Operator-facing only — no merge action."
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_key_changes",
+        "change_list_1",
+        "change_list_2",
+        "change_list_3",
+        "change_list_4"
+      ]
+    },
+    "heading_key_changes": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "change_list_1": {
+      "type": "Text",
+      "props": {
+        "text": "19 SKILL.md capability declarations (+19 lines, single line each, zero risk)"
+      }
+    },
+    "change_list_2": {
+      "type": "Text",
+      "props": {
+        "text": "`skills/pr-merge-queue/SKILL.md` new (+288)"
+      }
+    },
+    "change_list_3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent: 19th-consecutive backport — follow-up-patrol from upstream PR #272 (#76, +175)"
+      }
+    },
+    "change_list_4": {
+      "type": "Text",
+      "props": {
+        "text": "minitor: per-column quick-search (#58, +222/-6) + same-day TS fix on yesterday's collapsed strip (#57, -2)"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats_final": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stats_heading",
+        "stats_text"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h3"
+      }
+    },
+    "stats_text": {
+      "type": "Text",
+      "props": {
+        "text": "12+ PRs · ~900 net lines · 3 ECOSYSTEM.md entries (HivemindOS / Echo Oracle / SyntheticsAI link refresh)"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_full_recap"
+      ]
+    },
+    "link_full_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-02.md"
+      }
+    }
+  }
+}

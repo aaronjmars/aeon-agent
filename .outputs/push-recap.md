@@ -1,18 +1,17 @@
-*Push Recap — 2026-06-01*
-Monday flood after weekend silence — ~25 PRs across aeon (18), aeon-agent (5), minitor (4) in a 70-minute window 12:47–13:58 UTC. ~3,500+ lines of new SKILL.md content alone.
+*Push Recap — 2026-06-02*
+3 repos · ~12 PRs merged in 24h · ~30 substantive commits
 
-*HoundFlow onchain-investigation pack lands on aeon* (6 skills + composite): approval-audit (live ERC-20 grants, flag unlimited), honeypot-check (eth_call-simulated sell from real holder), lp-lock-check (V2 LP custody classification, rug-pullable y/n), linked-wallets (shared-funder + co-spend clustering), fund-flow (Mermaid graph, 1–3 hops, direction operator-controlled), investigation-report (composite orchestrator). All keyless Base RPC — first security/forensics surface in aeon.
+*Capability declarations go live (aeon):* 19 high-blast-radius skills got `capabilities:` frontmatter (#322) — every onchain investigator, every key-spender. Same day, the audit skill (#313, merged 6/1) shipped a fix (#319) for the bootstrap state where nobody had declared anything yet — was crying 6 fake gaps; now goes QUIET until first real declaration lands.
 
-*Capabilities taxonomy becomes load-bearing*: PR #304 ships a CI parity check across the 3 places the 6-value vocabulary lives (install-skill-pack array, docs/CAPABILITIES.md, header comment). PR #313 ships capabilities-map — the first skill that uses the declarations to answer 'what does my stack cover?' Multi-line aeon.yml entries fall back loudly via regex with PARSER_FALLBACK log, closing the v4-readiness H1 silent-undercount class structurally.
+*Skill-marketplace registry entry (aeon):* PR #316 adds Atrium-Hermes/aeon-atrium-skills — 3 onchain Base/USDC skills (atrium-publish/scout/earnings). 8th community pack in `skill-packs.json`.
 
-*Treasury monitoring goes live*: PR #306 makes token-report read .x402books/wallets.json (which had zero consumers since landing May 29). ⚠️ 'Treasury gas reserve low' override fires below 0.01 ETH even on QUIET / CONSOLIDATING verdicts — going quiet on a day the agent can't afford gas is the exact regime that needs to be noisy.
-
-*Other highlights*: dashboard now has real lib test coverage (633 lines, 71 tests, PR #309); Anthropic-compatible API base URL routes through Settings UI (PR #280); skill-update-check ACCEPT-mode now gated on security re-scan, closing AntFleet #258 (PR #266); aeon-agent ships 18th consecutive same-day-after backport (spend-monitor #74) plus first non-backport feature build (upstream-gap #72 — the Monday weekly diff that makes any future backport-chain gap explicit); minitor adds per-column collapse to 48px strip + JSON data export of cached items.
+*Daily PR-queue digest (aeon):* PR #318 ships `pr-merge-queue` — buckets every open PR by touched-file risk tier (CORE_REVIEW > INFRA > SKILL > FAST_TRACK). Reuses scan.sh verbatim. Operator-facing only — no merge action.
 
 Key changes:
-- 6 keyless HoundFlow onchain-investigation skills land (~600 lines of SKILL.md) — aeon's first dedicated security/forensics surface
-- capabilities taxonomy graduates from documentation to enforced infrastructure (CI gate + first-consumer skill)
-- Treasury monitoring with structural gas-reserve-low override now folded into the daily token-report cycle
+- 19 SKILL.md capability declarations (+19 lines, single line each, zero risk)
+- `skills/pr-merge-queue/SKILL.md` new (+288)
+- aeon-agent: 19th-consecutive backport — follow-up-patrol from upstream PR #272 (#76, +175)
+- minitor: per-column quick-search (#58, +222/-6) + same-day TS fix on yesterday's collapsed strip (#57, -2)
 
-Stats: ~25 PRs · ~3,500+ lines of new SKILL.md · 12+ authors · 3 repos
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-01.md
+Stats: 12+ PRs · ~900 net lines · 3 ECOSYSTEM.md entries (HivemindOS / Echo Oracle / SyntheticsAI link refresh)
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-02.md
