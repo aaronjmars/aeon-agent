@@ -22,11 +22,14 @@ Read memory/watched-repos.md for the list of repos to track. Skip any repo whose
    gh api repos/owner/repo --jq '{stargazers_count, forks_count, watchers_count, open_issues_count, subscribers_count}'
    ```
 
-2. **Compute the 24h cutoff timestamp** FIRST — this is critical:
+2. **Compute the cutoff timestamp** FIRST — this is critical.
+
+   The runner hook blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(date ...)` for the cutoff. Instead, pass `CUTOFF` as a literal ISO timestamp that you compute from `${today}` minus 1 day (e.g. if today is `2026-06-02`, write `CUTOFF=2026-06-01T00:00:00Z`). This matches the pattern weekly-shiplog (PR #63), push-recap (PR #67), and heartbeat (PR #71) use for the same reason.
    ```bash
-   CUTOFF=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || date -u -v-24H +%Y-%m-%dT%H:%M:%SZ)
+   # Cutoff = midnight UTC of yesterday, computed from ${today} (literal — not $(date ...))
+   CUTOFF=YYYY-MM-DDT00:00:00Z
    ```
-   Use this `$CUTOFF` for ALL time filtering below. Do NOT use "today's date" — use exactly 24 hours ago from now.
+   Use this `$CUTOFF` for ALL time filtering below. The window is slightly wider than 24h (10–34h on a 10:00 UTC run, depending on time-of-run), but the same-day dedup in step 5b absorbs the overlap.
 
 3. **Fetch the most recent stargazers** — use `--paginate` and filter by the 24h cutoff:
    ```bash
