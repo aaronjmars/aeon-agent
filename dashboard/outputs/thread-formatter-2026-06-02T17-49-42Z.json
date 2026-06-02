@@ -1,0 +1,124 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-06-02"
+      },
+      "children": [
+        "topic-text",
+        "separator1",
+        "points-stack",
+        "separator2",
+        "article-link"
+      ]
+    },
+    "topic-text": {
+      "type": "Text",
+      "props": {
+        "text": "Topic: pr-merge-queue — the decision-support layer before auto-merge (aeon PR #318)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "points-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "point1",
+        "point2",
+        "point3",
+        "point4",
+        "point5-container"
+      ]
+    },
+    "point1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ Yesterday 18 PRs merged into aeon in 37 minutes. The maintainer wrote one of them. Today aeon shipped a skill that knows exactly which category the other 17 belonged to.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "point2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ aeon already has auto-merge. It presses the button for small, trusted-author PRs automatically. What it couldn't do was rank the rest — the skill PRs, the core-file changes, the unknown submissions — so they sat without priority.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "point3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ pr-merge-queue sorts every open PR into six tiers: CORE_REVIEW (touches aeon.yml), INFRA_REVIEW (CI/config), SKILL_WARN (scan flagged), SKILL_PASS, FAST_TRACK (docs only), UNKNOWN. First-match-wins. A PR that touches aeon.yml and a skill lands in CORE_REVIEW.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "point4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ auto-merge handles the obvious queue. pr-merge-queue is what you read before you decide. The goal isn't automation for everything — it's precision about which decisions still need a person.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "point5-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "point5",
+        "pr-link"
+      ]
+    },
+    "point5": {
+      "type": "Text",
+      "props": {
+        "text": "5/ The decision-support layer before auto-merge, in 302 lines.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #318",
+        "href": "https://github.com/aaronjmars/aeon/pull/318",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "thread-2026-06-02",
+        "href": "articles/thread-2026-06-02.md",
+        "source": "article"
+      },
+      "children": []
+    }
+  }
+}

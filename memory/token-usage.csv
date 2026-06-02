@@ -481,3 +481,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-02,feature,claude-opus-4-7,127,74253,17118206,244802
 2026-06-02,repo-actions,claude-sonnet-4-6,1374,14241,1205097,62883
 2026-06-02,project-lens,claude-opus-4-7,31,19380,1835022,160230
+2026-06-02,thread-formatter,claude-sonnet-4-6,10,18895,520472,59396
