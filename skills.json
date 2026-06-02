@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 96,
+  "total": 97,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -770,6 +770,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon fleet-state"
+    },
+    {
+      "slug": "follow-up-patrol",
+      "name": "follow-up-patrol",
+      "description": "Weekly escalation audit (Tue 11:00 UTC) — parses memory/MEMORY.md follow-up section + memory/issues/INDEX.md, computes per-item ages, tiers CRITICAL (>21d operator) / HIGH (>14d operator) / MEDIUM (>7d) / WATCH (≤7d or auto-tracked). Notifies only when CRITICAL or HIGH non-zero. Catch-all complement to pr-tracker / disclosure-tracker.",
+      "category": "productivity",
+      "schedule": "0 11 * * 2",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon follow-up-patrol"
     },
     {
       "slug": "fork-contributor-leaderboard",
