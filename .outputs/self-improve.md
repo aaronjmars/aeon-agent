@@ -1,13 +1,12 @@
-*Agent Self-Improvement — 2026-05-30*
+*Agent Self-Improvement — 2026-06-02*
 
-Heartbeat $(date -u +%Y-%m-%d) → ${today} drop-in
-Replaced a shell command substitution in `skills/heartbeat/SKILL.md` step 4 detection-method #2 with the `${today}` template variable that the workflow already injects. Same string, no behavioral change — just removes one more `$(...)` site the runner shell-guard would block.
+Patched `skills/repo-pulse/SKILL.md` step 2 — `CUTOFF=$(date -u -d '24 hours ago' ...)` → literal `CUTOFF=YYYY-MM-DDT00:00:00Z` computed from `${today}` minus 1 day. Daily 10:00 UTC repo-state digest now stops improvising the cutoff on every run.
 
-Why: The runner hook blocks shell command/variable expansion with "Contains simple_expansion" — identical constraint PR #63 fixed in weekly-shiplog (May 26) and PR #67 fixed in push-recap (May 28). heartbeat runs daily at 19:00 UTC; on every run the agent had to improvise the cutoff. Picked over the four other enabled skills with the same anti-pattern (repo-pulse:27, repo-article:26, repo-actions:29, star-momentum-alert:69) because heartbeat's site is the smallest possible — a token-for-token substitution, not a 24h/7d/14d offset recomputation.
+Why: continues the runner-shell-guard fix class — PR #63 weekly-shiplog (May 26), PR #67 push-recap (May 28), PR #71 heartbeat (May 30 self-improve). The May-30 run explicitly listed `repo-pulse:27` among four other affected skills "left for future runs"; picked as smallest-effort next item — single-line direct substitution, no surrounding logic touched.
 
 What changed:
-- skills/heartbeat/SKILL.md line 21: `$(date -u +%Y-%m-%d)` → `${today}`, with a parenthetical citing PR #63/#67 so a future cleanup doesn't drop the constraint.
+- `skills/repo-pulse/SKILL.md` step 2 (+6/-3): swap `$(date ...)` for literal `YYYY-MM-DDT00:00:00Z`; rewrite paragraph to cite PRs #63/#67/#71 inline so a future cleanup doesn't drop the constraint; note the rolling-24h → midnight-of-yesterday semantic shift (10-34h window on a 10:00 UTC run) and that the step 5b same-day dedup absorbs the overlap. Mirrors push-recap PR #67's accepted trade verbatim.
 
-Impact: Daily skill no longer hits the shell-guard on its scheduled-run check. Four sibling sites remain, queued for future self-improve runs.
+Impact: zero shell-substitution improvisation on daily repo-pulse runs starting tomorrow. Three skills with the same anti-pattern still pending — repo-article:26 (7d window, daily), repo-actions:29 (14d window, even days), star-momentum-alert:69 (3 expansion sites in one loop — bigger fix).
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/71
+PR: https://github.com/aaronjmars/aeon-agent/pull/77
