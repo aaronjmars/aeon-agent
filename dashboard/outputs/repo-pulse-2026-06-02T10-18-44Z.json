@@ -1,0 +1,171 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-06-02"
+      },
+      "children": [
+        "repo-link",
+        "stats-stack",
+        "separator1",
+        "stargazers-section",
+        "separator2",
+        "forks-section"
+      ]
+    },
+    "repo-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon",
+        "source": "GitHub"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "473",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "151",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazers-heading",
+        "stargazers-list"
+      ]
+    },
+    "stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazer-1",
+        "stargazer-2"
+      ]
+    },
+    "stargazer-1": {
+      "type": "Link",
+      "props": {
+        "label": "Daisuke134",
+        "href": "https://github.com/Daisuke134"
+      }
+    },
+    "stargazer-2": {
+      "type": "Link",
+      "props": {
+        "label": "brittek",
+        "href": "https://github.com/brittek"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forks-heading",
+        "forks-list"
+      ]
+    },
+    "forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "forks-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-1",
+        "fork-2",
+        "fork-3",
+        "fork-4"
+      ]
+    },
+    "fork-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Atrium-Hermes/aeon",
+        "href": "https://github.com/Atrium-Hermes/aeon"
+      }
+    },
+    "fork-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "gdalabs/aeon",
+        "href": "https://github.com/gdalabs/aeon"
+      }
+    },
+    "fork-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "yindaqiu/aeon",
+        "href": "https://github.com/yindaqiu/aeon"
+      }
+    },
+    "fork-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "jianggaoyi/aeon",
+        "href": "https://github.com/jianggaoyi/aeon"
+      }
+    }
+  }
+}
