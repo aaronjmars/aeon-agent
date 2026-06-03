@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 97,
+  "total": 98,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -870,6 +870,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon pr-skill-triage"
+    },
+    {
+      "slug": "pr-merge-queue",
+      "name": "pr-merge-queue",
+      "description": "Daily 09:45 UTC operator-facing digest of every open PR on aaronjmars/aeon-agent — buckets each by touched-file risk tier (CORE_REVIEW > INFRA_REVIEW > SKILL_WARN_OR_BLOCK > SKILL_PASS > FAST_TRACK > UNKNOWN), runs skill-security-scan on every changed SKILL.md, sorts each bucket by age. Gated notify on new non-FAST_TRACK PR or fresh head SHA escalation. Backport of upstream aeon PR #318.",
+      "category": "dev",
+      "schedule": "45 9 * * *",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon pr-merge-queue"
     },
     {
       "slug": "pr-triage",
