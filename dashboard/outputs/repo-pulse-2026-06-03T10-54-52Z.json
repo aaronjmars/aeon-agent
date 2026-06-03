@@ -1,0 +1,220 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-03"
+      },
+      "children": [
+        "heading_repo",
+        "stats_container",
+        "separator_1",
+        "stargazers_section",
+        "separator_2",
+        "forks_section"
+      ]
+    },
+    "heading_repo": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "476",
+        "delta": "+3",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "157",
+        "delta": "+7",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stargazers",
+        "stargazers_list"
+      ]
+    },
+    "heading_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_anubisvic",
+        "link_byhub",
+        "link_theboss007"
+      ]
+    },
+    "link_anubisvic": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/anubisvic",
+        "href": "https://github.com/anubisvic"
+      },
+      "children": []
+    },
+    "link_byhub": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/byhub",
+        "href": "https://github.com/byhub"
+      },
+      "children": []
+    },
+    "link_theboss007": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Theboss007",
+        "href": "https://github.com/Theboss007"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_forks",
+        "forks_list"
+      ]
+    },
+    "heading_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_liam",
+        "link_builtin",
+        "link_vigil",
+        "link_ai",
+        "link_ikke",
+        "link_rsavitt",
+        "link_beijing"
+      ]
+    },
+    "link_liam": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/LiamVisionary/aeon",
+        "href": "https://github.com/LiamVisionary/aeon"
+      },
+      "children": []
+    },
+    "link_builtin": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/BuiltByEcho/aeon",
+        "href": "https://github.com/BuiltByEcho/aeon"
+      },
+      "children": []
+    },
+    "link_vigil": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/vigilcodes/aeon",
+        "href": "https://github.com/vigilcodes/aeon"
+      },
+      "children": []
+    },
+    "link_ai": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/AISynthetics/aeon",
+        "href": "https://github.com/AISynthetics/aeon"
+      },
+      "children": []
+    },
+    "link_ikke": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/ikkeflikkeri/aeon",
+        "href": "https://github.com/ikkeflikkeri/aeon"
+      },
+      "children": []
+    },
+    "link_rsavitt": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/rsavitt/aeon-upstream",
+        "href": "https://github.com/rsavitt/aeon-upstream"
+      },
+      "children": []
+    },
+    "link_beijing": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/beijiangqukuailian/aeon",
+        "href": "https://github.com/beijiangqukuailian/aeon"
+      },
+      "children": []
+    }
+  }
+}
