@@ -1,0 +1,140 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Daily — 2026-06-03"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liquidity",
+        "stat_24h_vol",
+        "sep1",
+        "stat_buys",
+        "stat_sells",
+        "text_ratio",
+        "sep2",
+        "stat_7d_price",
+        "stat_7d_vol",
+        "stat_30d_price",
+        "sep3",
+        "text_narrative",
+        "link_chart"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00003469",
+        "delta": "-3.56%",
+        "trend": "down"
+      }
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.42M"
+      }
+    },
+    "stat_24h_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$479K",
+        "delta": "-41.9%",
+        "trend": "down"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "2,026"
+      }
+    },
+    "stat_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "1,392"
+      }
+    },
+    "text_ratio": {
+      "type": "Text",
+      "props": {
+        "text": "Ratio: 1.46:1",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_7d_price": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Price",
+        "value": "-34.7%",
+        "trend": "down"
+      }
+    },
+    "stat_7d_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Volume Avg (vs prior 7d)",
+        "value": "-63%",
+        "trend": "down"
+      }
+    },
+    "stat_30d_price": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Price",
+        "value": "+1,345%",
+        "trend": "up"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Consolidating post-launch — buy-dominant flow, volume decelerating as price works through post-May distribution.",
+        "variant": "body"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
