@@ -1,20 +1,25 @@
-*Feature Built — 2026-06-02 — aaronjmars/minitor*
+*Feature Built — 2026-06-03 — aaronjmars/minitor*
 
-Per-Column Quick Search
-Every column in minitor now has a built-in search bar. Click the new search icon in the column header, an input row drops beneath the header, and typing instantly narrows the visible items to substring matches. Esc clears and closes the input; the small × button clears in place. Pairs with tab groups (May 29) and column collapse (May 30) on the same UX axis — those decide which columns you see and how big; this decides what you're looking at inside each one.
+Pin column to front
+Minitor columns now have a "Pin to front" toggle. When pinned, a column always renders at the left edge of the deck regardless of how the columns were dragged into order, regardless of the active tab group, and across page reloads — pinning is DB-backed, not view-state. The expanded column header shows a small brand-coloured Pin badge, and the collapsed strip keeps the pin marker so a folded pinned column doesn't lose its visual priority. Toggle is in the Configure dialog as a checkbox.
 
 Why this matters:
-Minitor now ships 47+ column types and operators frequently keep deep-scrolling columns open — Hacker News, github-issues, github-discussions, npm/pypi/crates, polymarket, DeFiLlama TVL, etc. The existing include / exclude keyword filters (PR #51) are persistent column config: they survive reloads, travel with deck exports, fire webhooks on new matches. They are the right answer for "always keep this column tuned to X." They are the wrong shape for "I have 200 items in this column and I'm looking for the one mentioning postgres." That second case wants an ephemeral, view-only narrowing — the operator doesn't want to reconfigure the column, just find something in the current items. Quick-search is that view; until today the only path was Ctrl-F in the browser, which scrolls the entire deck and doesn't isolate one column.
+Operators running 10–15 column decks frequently have 2–3 "always visible" priority columns — their main token price, primary GitHub repo, primary news feed — that need to stay at the left edge regardless of topic. The existing DnD reorder fixes column position only for that session: a page reload restores the DB-saved order. Pinning makes priority columns sticky. Combined with tab groups (PR #53) and column collapse (PR #55), it completes the deck-density axis: tabs decide "which columns am I looking at"; pin decides "always visible regardless of active tab"; collapse decides "how prominent within the visible set".
 
 What was built:
-- lib/store/use-deck-store.ts: new searchByColumn record (NOT persisted — same lifetime as autoFetchingIds, selectedTabByDeck, collapsedColumnIds), setColumnSearch action with trim + 256-char cap + empty-string-deletes, cleanup hooks on deleteColumn and deleteDeck.
-- lib/columns/keyword-match.ts: new itemMatchesSearchQuery helper, single literal substring (not a parsed keyword list — typing "rust foo" means the phrase, not OR-split terms), scans the same content + author + url haystack the alert-keyword highlighter uses.
-- components/column/column-card.tsx: renamed the visibleItems flow into two stages (filteredItems after include/exclude, visibleItems after search). Search button in the header, input row below, auto-focus on open, Esc handler, SearchEmptyState rendered when search active and zero matches with a one-click clear button. Collapsed strip gets a small emerald Search icon when a search is active on that column — prevents the silent-undercount surprise where the alert badge would shrink under a hidden filter.
+- drizzle/0007_column_pinned.sql + meta/_journal.json + meta/0007_snapshot.json: additive `pinned` boolean column on `columns` (DEFAULT false NOT NULL — existing rows backfill safely).
+- lib/db/schema.ts + lib/columns/types.ts: schema field + Column shape with inline doc on the sort-order interaction.
+- app/actions.ts: new `updateColumnPinned` server action; loadSnapshot mapping; Zod schema; importDeck coerces to a hard `=== true` so a hand-edited payload can't smuggle a truthy non-boolean; exportDeck emits the field only for pinned columns.
+- lib/store/use-deck-store.ts: `updatePinned` action mirroring server normalization; importedDeckPatch round-trip.
+- components/column/configure-column-dialog.tsx: Pin to front checkbox in a labeled card.
+- components/deck/deck-board.tsx: stable two-pass partition in `visibleColumnIds` so pinned columns render first while DnD order within each group is preserved.
+- components/column/column-card.tsx: Pin badge in expanded header and brand-coloured Pin icon in the collapsed-strip indicator stack.
+- lib/deck-templates.ts: DeckTemplateColumn carries the field too so starter templates can ship pre-pinned.
 
 How it works:
-Search runs AFTER include/exclude filters in the visible-items pipeline, so it narrows what's already filtered — never widens past what the persisted rules allow. An operator with `exclude: spam` set on a column who then searches for `discount` still won't see spam-with-the-word-discount; the persistent config wins. The implementation reuses the exact same haystack (content + author name + author handle + url) that itemMatchesAlertKeywords scans, so search rules are identical to the alert-highlight rules operators already know. The query lives entirely in zustand view-state — it doesn't survive a page reload, it doesn't export with the deck (the JSON export schema is unchanged), it doesn't fire webhooks. A useEffect auto-opens the search row when a column re-renders with a non-empty query already in store, so a cross-tab or cross-collapse round-trip preserves the search bar's visibility.
+The deck-board sort is a two-pass partition (`[...pinned, ...unpinned]`) — Array.prototype.sort would also work, but a two-pass partition reads exactly as intended and is obviously O(n). DnD across the pin/unpin boundary is intentionally a no-op: the Pin checkbox is the explicit affordance for crossing the boundary, and auto-flipping the pinned flag on a drag would be confusing (either too eager or silently relocating the column). Pinned status is independent of tab group — a pinned column in tab "DeFi" still appears on every tab because pinning trumps grouping. Round-trip through export / import / share-link / version-history-snapshot all preserve the field.
 
 What's next:
-Could add per-deck search (one query, all columns) if operators ask. CSV export was deliberately out of scope of PR #56 and remains so — could grow once a specific plugin has a concrete tabular use case. Next minitor PR slot is open.
+The deck-density axis (tabs / pin / collapse / search / JSON export) is the persistent UI work. Next-layer ideas in the backlog: pinning could later interact with a column-grouping or "primary deck" surface, but the persistence-and-sharing improvements are the natural follow-up.
 
-PR: https://github.com/aaronjmars/minitor/pull/58
+PR: https://github.com/aaronjmars/minitor/pull/59

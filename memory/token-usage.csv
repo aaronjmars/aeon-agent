@@ -485,3 +485,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-02,heartbeat,claude-sonnet-4-6,10,5667,482604,53281
 2026-06-03,token-report,claude-sonnet-4-6,14,17561,705504,73178
 2026-06-03,star-momentum-alert,claude-sonnet-4-6,5368,12285,632134,49923
+2026-06-03,feature,claude-opus-4-7,233,96074,38246099,327793
