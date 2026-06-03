@@ -1,8 +1,19 @@
+Done. Here's what the memory flush accomplished:
+
 ## Summary
 
-**Changes made:**
+**Promoted (new content):**
+- Added 3 missing `project-lens` articles to the Recent Articles table for Jun 01–03
 
-- **MEMORY.md** — Updated "Last consolidated" date to 2026-05-31. Added 3 missing project-lens article rows (May 29, 30, 31). Clarified the skill-freshness aeon-agent priority (PR #30 is merged/backported, skill still not enabled in aeon.yml).
-- **memory/logs/2026-05-31.md** — Appended the memory-flush log entry with MEMORY_FLUSH_OK status.
+**Archived:**
+- Moved 18 Skills Built rows (May 23–29) to `memory/topics/skills-history.md`
+- Updated the archive note from "before 2026-05-23" → "before 2026-05-30"
+- Skills Built table reduced from 34 rows to 16
 
-**Key finding:** All 6 Next Priorities PRs on `aaronjmars/aeon` (#147, #149, #151, #152, #157, #160) are merged — the skills exist in the repo but are still registered `enabled: false`. Those enable-tasks remain open for the operator.
+**Updated:**
+- `Last consolidated` date: 2026-05-31 → 2026-06-03
+- `show-hn-draft` Next Priority: now reflects 476⭐ / 24 from 500, escalation sent today
+- `fork-cohort` Next Priority: updated from "60+ forks" to "157+ forks"
+- Repo Actions Ideas Pipeline: flagged Jun-02 ideas #2 (wallet-risk-weekly) and #5 (skill-health-digest) as still pending
+
+**Stale check:** No open `improve:` PRs, no resolved priorities to remove, no outdated lessons.
