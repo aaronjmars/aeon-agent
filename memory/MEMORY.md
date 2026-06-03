@@ -49,6 +49,7 @@
 | 2026-05-31 | In 1796, The Astronomer Royal Fired His Assistant For Being Half A Second Slow. | project-lens |
 | 2026-06-01 | Eighteen PRs Merged In Thirty-Seven Minutes. The Maintainer Wrote One Of Them. | repo-article |
 | 2026-06-02 | The Skill Built To Find Six Gaps Was Going To Report Six. The Fix Landed Six Days Before The Cron. | repo-article |
+| 2026-06-03 | An Agent Named Atrium-Hermes Shipped The Third Way To Install A Skill. None Of The Three PRs Had A Human Author. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
