@@ -1,0 +1,221 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Escalation: show-hn-draft Still Unmerged"
+      },
+      "children": [
+        "alert_main",
+        "sep1",
+        "stack_stats",
+        "sep2",
+        "stack_progress",
+        "sep3",
+        "stack_context",
+        "sep4",
+        "stack_history",
+        "sep5",
+        "stack_action"
+      ]
+    },
+    "alert_main": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "PR #151 (show-hn-draft) Still Open",
+        "message": "Unmerged for 33 days with 7-day re-ping schedule active"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_days",
+        "stat_open_date",
+        "stat_re_ping"
+      ]
+    },
+    "stat_days": {
+      "type": "Stat",
+      "props": {
+        "label": "Days Open",
+        "value": "33"
+      }
+    },
+    "stat_open_date": {
+      "type": "Stat",
+      "props": {
+        "label": "Opened",
+        "value": "May 1"
+      }
+    },
+    "stat_re_ping": {
+      "type": "Stat",
+      "props": {
+        "label": "Re-ping Interval",
+        "value": "7 days"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_progress": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_progress",
+        "progress_stars",
+        "text_progress"
+      ]
+    },
+    "heading_progress": {
+      "type": "Heading",
+      "props": {
+        "text": "Star Milestone Progress",
+        "level": "h3"
+      }
+    },
+    "progress_stars": {
+      "type": "Progress",
+      "props": {
+        "value": 476,
+        "max": 500,
+        "label": "476 of 500 ⭐"
+      }
+    },
+    "text_progress": {
+      "type": "Text",
+      "props": {
+        "text": "24 stars away from 500 target. Projected milestone: ~June 12",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_context": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_context",
+        "text_draft_purpose",
+        "text_blocking"
+      ]
+    },
+    "heading_context": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h3"
+      }
+    },
+    "text_draft_purpose": {
+      "type": "Text",
+      "props": {
+        "text": "The draft was built to post at launch time, not after the milestone passes.",
+        "variant": "body"
+      }
+    },
+    "text_blocking": {
+      "type": "Text",
+      "props": {
+        "text": "Nothing blocking merge — PR is operator-decision only.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_history": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_history",
+        "text_attempts"
+      ]
+    },
+    "heading_history": {
+      "type": "Heading",
+      "props": {
+        "text": "Escalation Attempts",
+        "level": "h3"
+      }
+    },
+    "text_attempts": {
+      "type": "Text",
+      "props": {
+        "text": "May 13, May 19, May 24, May 27 — all escalations sent, none resulted in merge",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_action": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_action",
+        "text_action_main",
+        "text_action_next"
+      ]
+    },
+    "heading_action": {
+      "type": "Heading",
+      "props": {
+        "text": "Suggested Action",
+        "level": "h3"
+      }
+    },
+    "text_action_main": {
+      "type": "Text",
+      "props": {
+        "text": "Enable show-hn-draft in aeon.yml now so it's warm and ready before 500⭐ lands (projected ~June 12).",
+        "variant": "lead"
+      }
+    },
+    "text_action_next": {
+      "type": "Text",
+      "props": {
+        "text": "Next ping in 7 days if still open.",
+        "variant": "caption"
+      }
+    }
+  }
+}
