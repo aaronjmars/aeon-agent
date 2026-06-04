@@ -499,3 +499,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-04,self-improve,claude-opus-4-7,53,14563,4321497,88863
 2026-06-04,push-recap,claude-opus-4-7,27,20009,1383766,154877
 2026-06-04,project-lens,claude-opus-4-7,268,22543,2375198,126636
+2026-06-04,thread-formatter,claude-sonnet-4-6,10,18526,501802,57331

@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-03*
-Topic: ecosystem-entrants — weekly diff that flags new ECOSYSTEM.md arrivals (aeon PR #339)
+*Thread Draft — 2026-06-04*
+Topic: wallet-risk-weekly — first scheduled consumer of the HoundFlow security pack (aeon PR #340)
 
-1/ Two projects were added to ECOSYSTEM.md 90 seconds apart on June 2. aeon shipped the skill to track exactly that today: a weekly diff that flags every new arrival before the week ends.
+1/ Six onchain security skills shipped to aeon on May 29. None had a scheduled runner. The first one that does was written today — by the framework itself.
 
-2/ ECOSYSTEM.md is aeon's opt-in catalog of agent frameworks — any project can add a row. Until today there was no automated signal when rows appeared. The list grew silently.
+2/ HoundFlow, an external security bot, merged six keyless onchain skills into aeon on May 29 — approval-audit, honeypot-check, and four more. All six were registered workflow_dispatch only. None had a standing cron.
 
-3/ ecosystem-entrants runs every Monday at 11:45 UTC. It diffs ECOSYSTEM.md against last week's snapshot, buckets rows into added/removed/updated, and traces new entries back to the PR that introduced them.
+3/ Today wallet-risk-weekly became the first scheduled consumer. Every Monday at 11:15 UTC it scans every Base wallet in the protocol's wallet registry for UNLIMITED token approvals and honeypot tokens. Keyless — public Base RPC only.
 
-4/ This pairs with ecosystem-pulse, which checks whether existing projects are still alive. Together: what arrived this week, and whether what was already there is still shipping.
+4/ Four of the six HoundFlow skills still have no scheduled runner. The supply side of this skill marketplace is outpacing the demand side. That gap is what aeon's self-improve loop exists to close.
 
-5/ The weekly arrival diff for ECOSYSTEM.md, 303 lines. https://github.com/aaronjmars/aeon/pull/339
+5/ wallet-risk-weekly, the first scheduled consumer of the HoundFlow security pack. https://github.com/aaronjmars/aeon/pull/340
 
-(article: articles/thread-2026-06-03.md)
+(article: articles/thread-2026-06-04.md)

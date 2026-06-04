@@ -1,0 +1,94 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-06-04",
+        "description": "Topic: wallet-risk-weekly — first scheduled consumer of the HoundFlow security pack"
+      },
+      "children": [
+        "points-stack",
+        "separator",
+        "links-stack"
+      ]
+    },
+    "points-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "point-1",
+        "point-2",
+        "point-3",
+        "point-4",
+        "point-5"
+      ]
+    },
+    "point-1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ Six onchain security skills shipped to aeon on May 29. None had a scheduled runner. The first one that does was written today — by the framework itself."
+      }
+    },
+    "point-2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ HoundFlow, an external security bot, merged six keyless onchain skills into aeon on May 29 — approval-audit, honeypot-check, and four more. All six were registered workflow_dispatch only. None had a standing cron."
+      }
+    },
+    "point-3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ Today wallet-risk-weekly became the first scheduled consumer. Every Monday at 11:15 UTC it scans every Base wallet in the protocol's wallet registry for UNLIMITED token approvals and honeypot tokens. Keyless — public Base RPC only."
+      }
+    },
+    "point-4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ Four of the six HoundFlow skills still have no scheduled runner. The supply side of this skill marketplace is outpacing the demand side. That gap is what aeon's self-improve loop exists to close."
+      }
+    },
+    "point-5": {
+      "type": "Text",
+      "props": {
+        "text": "5/ wallet-risk-weekly, the first scheduled consumer of the HoundFlow security pack."
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr-link",
+        "article-link"
+      ]
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon PR #340",
+        "href": "https://github.com/aaronjmars/aeon/pull/340",
+        "source": "GitHub"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full article: articles/thread-2026-06-04.md",
+        "href": "articles/thread-2026-06-04.md"
+      }
+    }
+  }
+}
