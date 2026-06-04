@@ -1,7 +1,1 @@
-ESCALATION: show-hn-draft still unmerged — 33 days, 7d re-ping.
-
-PR #151 (show-hn-draft) has been open since May 1. Aeon is now at 476⭐ — 24 stars from the 500 target window. The draft was built to post at launch time, not after the milestone passes.
-
-Tried so far: escalations sent May 13, May 19, May 24, May 27. Nothing blocking merge — PR is operator-decision only.
-
-Suggested action: enable show-hn-draft in aeon.yml now so it's warm and ready before 500⭐ lands (projected ~June 12). Next ping in 7 days if still open.
+**HEARTBEAT_OK.** 11/11 expected skills ran clean today (all confirmed in both logs and GitHub Actions). No stalled PRs, no urgent issues. `show-hn-draft` (PR #151, 34 days open, ~18⭐ from 500) remains in 7d extended-persistence backoff — escalation fired June 3, next ping June 10. Log written to `memory/logs/2026-06-04.md`.
