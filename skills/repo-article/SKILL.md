@@ -19,14 +19,19 @@ Read memory/watched-repos.md for the repo to cover.
 
 1. **Gather repo context** — for each watched repo:
 
-   The runner hook blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(date ...)` for the `since` cutoff. Instead, pass `SINCE` as a literal ISO timestamp that you compute from `${today}` minus 7 days (e.g. if today is `2026-06-04`, write `SINCE=2026-05-28T00:00:00Z`). This matches the pattern weekly-shiplog (PR #63), push-recap (PR #67), heartbeat (PR #71), and repo-pulse (PR #77) use for the same reason. The window is slightly wider than 7×24h (7d–7d+16h on a 16:00 UTC run, depending on time-of-run), but the article narrative is a 7-day retrospective so the small overlap at the trailing edge is absorbed by the prose framing.
+   **Compute the cutoff (`SINCE`) FIRST — this is critical.** The runner hook blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(date ...)` for the `since` cutoff. Instead, set `SINCE` to a literal ISO timestamp you compute from `${today}` minus 7 days (e.g. if today is `2026-06-04`, write `SINCE=2026-05-28T00:00:00Z`). Substitute the real date into the placeholder below **before running anything else** — never leave `YYYY-MM-DD` literal, or the commit query silently returns nothing. This matches the pattern weekly-shiplog (PR #63), push-recap (PR #67), heartbeat (PR #71), and repo-pulse (PR #77) use for the same reason. The window is slightly wider than 7×24h (7d–7d+16h on a 16:00 UTC run, depending on time-of-run), but the article narrative is a 7-day retrospective so the small overlap at the trailing edge is absorbed by the prose framing.
+
+   ```bash
+   # Cutoff = midnight UTC of 7 days ago, computed from ${today} (literal — NOT $(date ...))
+   SINCE=YYYY-MM-DDT00:00:00Z
+   ```
+   Use this `$SINCE` for the commit query below.
 
    ```bash
    # Repo metadata
    gh api repos/owner/repo --jq '{name, description, language, stargazers_count, forks_count, open_issues_count, topics, created_at, updated_at}'
 
-   # Recent commits (last 7 days) — SINCE is a literal date computed from ${today} minus 7 days (NOT $(date ...))
-   SINCE=YYYY-MM-DDT00:00:00Z
+   # Recent commits since the cutoff (uses the literal $SINCE computed above)
    gh api repos/owner/repo/commits -X GET -f since="$SINCE" --jq '.[] | {sha: .sha[0:7], message: .commit.message | split("\n")[0], author: .commit.author.name, date: .commit.author.date}' --paginate
 
    # Open PRs
