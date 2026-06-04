@@ -53,6 +53,7 @@
 | 2026-06-02 | In 2025 Shopify Saved 27,061 Engineering Hours Letting A Bot Press The Merge Button. The Newest Skill On Aeon Was Built To Refuse To Press It. | project-lens |
 | 2026-06-03 | An Agent Named Atrium-Hermes Shipped The Third Way To Install A Skill. None Of The Three PRs Had A Human Author. | repo-article |
 | 2026-06-03 | GitHub Made Copilot Better By Cutting Twenty-Seven Of Its Tools. Most AI Agent Roadmaps Are Built To Do The Opposite. | project-lens |
+| 2026-06-04 | An External Bot Shipped Six Onchain Security Skills To Aeon On May 29. The First Cron That Calls Them Was Written Today, By The Framework Itself. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
