@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-06-02*
-Generated from analysis of aaronjmars/aeon (475⭐, 153 forks), aeon-agent, and minitor (49 column plugins).
+*Repo Action Ideas — 2026-06-04*
+Generated from analysis of aaronjmars/aeon (482⭐, 161 forks), aaronjmars/aeon-agent, and aaronjmars/minitor.
 
-1. ecosystem-entrants (Feature, Small)
-   Weekly diff of ECOSYSTEM.md git history to notify on newly-joined projects — two arrived today (HivemindOS, EchoOracle) with no automated signal.
+1. ecosystem-links skill (Feature, Medium)
+   Weekly ECOSYSTEM.md URL health auditor — checks GitHub repos for archive/disable status and project URLs for HTTP 404s; completes the ecosystem monitoring trio alongside ecosystem-entrants + ecosystem-pulse.
 
-2. wallet-risk-weekly (Integration, Medium)
-   First consumer of HoundFlow's 6 keyless onchain investigation skills — weekly approval-audit + honeypot-check scan of wallets in .x402books/wallets.json, 72h after the skills shipped with zero downstream use.
+2. Atrium catalog watcher (Integration, Small)
+   Diffs the Atrium skill catalog weekly and notifies on new or updated packs — closes the feedback loop on the install-from-atrium path so new upstream skills surface automatically.
 
-3. pr-merge-queue backport (DX, Small)
-   20th consecutive same-day-after backport of upstream aeon PR #318, adapting the daily open-PR risk-tier digest to aaronjmars/aeon-agent.
+3. mcp-pulse backport (DX, Small)
+   The natural 22nd consecutive same-day-after backport from upstream PR #272 — monitors the MCP server ecosystem (npm + GitHub) for new releases and adoption signals; last clean backport before fleet-scorecard which requires memory/instances.json.
 
-4. column-pinning-to-top (Feature, Small)
-   Per-column pin toggle in minitor — writes pinned boolean to DB so priority columns stay left-anchored across page reloads, complementing tab groups and collapse on the deck-density UX axis.
+4. $(date) batch self-fix — 3 remaining sites (DX, Small)
+   Eliminates the shell-substitution anti-pattern from repo-article, repo-actions, and star-momentum-alert — the 4 prior fixes (PRs #63/#67/#71/#77) explicitly left these for future runs.
 
-5. skill-health-digest (Feature, Medium)
-   Weekly RED/YELLOW/GREEN skill performance ranking from memory/cron-state.json — surfaces which specific skills are quietly degrading before they warrant filing an issue.
+5. Column color labels (Feature, Small)
+   DB-backed per-column hex color label shown as a dot in the expanded header and as the accent line on collapsed strips — the last missing at-a-glance layer on multi-column decks.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-02.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-04.md

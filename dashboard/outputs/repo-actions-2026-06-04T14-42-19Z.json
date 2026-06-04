@@ -1,0 +1,323 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas"
+      },
+      "children": [
+        "heading_date",
+        "text_meta",
+        "separator_1",
+        "stack_idea_1",
+        "separator_2",
+        "stack_idea_2",
+        "separator_3",
+        "stack_idea_3",
+        "separator_4",
+        "stack_idea_4",
+        "separator_5",
+        "stack_idea_5",
+        "separator_6",
+        "story_link_details"
+      ]
+    },
+    "heading_date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-06-04",
+        "level": "h3"
+      }
+    },
+    "text_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (482⭐, 161 forks), aaronjmars/aeon-agent, and aaronjmars/minitor.",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator"
+    },
+    "stack_idea_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_idea_1",
+        "stack_badges_1",
+        "text_idea_1"
+      ]
+    },
+    "heading_idea_1": {
+      "type": "Heading",
+      "props": {
+        "text": "1. ecosystem-links skill",
+        "level": "h4"
+      }
+    },
+    "stack_badges_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_cat_1",
+        "badge_pri_1"
+      ]
+    },
+    "badge_cat_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "secondary"
+      }
+    },
+    "badge_pri_1": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "outline"
+      }
+    },
+    "text_idea_1": {
+      "type": "Text",
+      "props": {
+        "text": "Weekly ECOSYSTEM.md URL health auditor — checks GitHub repos for archive/disable status and project URLs for HTTP 404s; completes the ecosystem monitoring trio alongside ecosystem-entrants + ecosystem-pulse.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator"
+    },
+    "stack_idea_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_idea_2",
+        "stack_badges_2",
+        "text_idea_2"
+      ]
+    },
+    "heading_idea_2": {
+      "type": "Heading",
+      "props": {
+        "text": "2. Atrium catalog watcher",
+        "level": "h4"
+      }
+    },
+    "stack_badges_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_cat_2",
+        "badge_pri_2"
+      ]
+    },
+    "badge_cat_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "secondary"
+      }
+    },
+    "badge_pri_2": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "text_idea_2": {
+      "type": "Text",
+      "props": {
+        "text": "Diffs the Atrium skill catalog weekly and notifies on new or updated packs — closes the feedback loop on the install-from-atrium path so new upstream skills surface automatically.",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator"
+    },
+    "stack_idea_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_idea_3",
+        "stack_badges_3",
+        "text_idea_3"
+      ]
+    },
+    "heading_idea_3": {
+      "type": "Heading",
+      "props": {
+        "text": "3. mcp-pulse backport",
+        "level": "h4"
+      }
+    },
+    "stack_badges_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_cat_3",
+        "badge_pri_3"
+      ]
+    },
+    "badge_cat_3": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge_pri_3": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "text_idea_3": {
+      "type": "Text",
+      "props": {
+        "text": "The natural 22nd consecutive same-day-after backport from upstream PR #272 — monitors the MCP server ecosystem (npm + GitHub) for new releases and adoption signals; last clean backport before fleet-scorecard which requires memory/instances.json.",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator"
+    },
+    "stack_idea_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_idea_4",
+        "stack_badges_4",
+        "text_idea_4"
+      ]
+    },
+    "heading_idea_4": {
+      "type": "Heading",
+      "props": {
+        "text": "4. $(date) batch self-fix — 3 remaining sites",
+        "level": "h4"
+      }
+    },
+    "stack_badges_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_cat_4",
+        "badge_pri_4"
+      ]
+    },
+    "badge_cat_4": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge_pri_4": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "text_idea_4": {
+      "type": "Text",
+      "props": {
+        "text": "Eliminates the shell-substitution anti-pattern from repo-article, repo-actions, and star-momentum-alert — the 4 prior fixes (PRs #63/#67/#71/#77) explicitly left these for future runs.",
+        "variant": "body"
+      }
+    },
+    "separator_5": {
+      "type": "Separator"
+    },
+    "stack_idea_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_idea_5",
+        "stack_badges_5",
+        "text_idea_5"
+      ]
+    },
+    "heading_idea_5": {
+      "type": "Heading",
+      "props": {
+        "text": "5. Column color labels",
+        "level": "h4"
+      }
+    },
+    "stack_badges_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge_cat_5",
+        "badge_pri_5"
+      ]
+    },
+    "badge_cat_5": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "secondary"
+      }
+    },
+    "badge_pri_5": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "text_idea_5": {
+      "type": "Text",
+      "props": {
+        "text": "DB-backed per-column hex color label shown as a dot in the expanded header and as the accent line on collapsed strips — the last missing at-a-glance layer on multi-column decks.",
+        "variant": "body"
+      }
+    },
+    "separator_6": {
+      "type": "Separator"
+    },
+    "story_link_details": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-04.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
