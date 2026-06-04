@@ -1,8 +1,12 @@
 ## Summary
 
-Ran `star-milestone` against `memory/watched-repos.md` (aeon-agent excluded by the skill's `aeon-agent`-name filter).
+Ran `star-milestone` for 2026-06-04. Both eligible repos quiet — no notifications sent, no state changes needed.
 
-- **aaronjmars/aeon** — 476⭐. Highest threshold crossed is 400, already recorded in `memory/topics/milestones.md` on 2026-05-20 (organic). Gate 5a → no announce. Next milestone: 500 (24 stars away).
-- **aaronjmars/minitor** — 11⭐. Below the first threshold (25). Step 4 skip — STAR_MILESTONE_QUIET.
+- **aaronjmars/aeon**: 482⭐. Highest threshold crossed is 400, already recorded in `memory/topics/milestones.md` (2026-05-20, organic). Next milestone at 500 (18 stars away — `star-momentum-alert` already projects ~2026-06-12).
+- **aaronjmars/minitor**: 11⭐. Below the first threshold (25). `STAR_MILESTONE_QUIET`.
+- **aaronjmars/aeon-agent**: filtered (skill skips repos containing `aeon-agent`).
 
-No notifications sent. No update to `memory/topics/milestones.md`. Logged both verdicts to `memory/logs/2026-06-03.md`.
+Files modified:
+- `memory/logs/2026-06-04.md` — appended `## Star Milestone` log block.
+
+No PRs opened, no notifications fired, `memory/topics/milestones.md` unchanged.
