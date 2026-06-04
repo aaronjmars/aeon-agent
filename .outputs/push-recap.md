@@ -1,18 +1,18 @@
-*Push Recap — 2026-06-03*
-aeon + aeon-agent + minitor — ~19 substantive PRs by 7+ authors
+*Push Recap — 2026-06-04*
+6 substantive PRs · 2 distinct human authors · aeon=3 / aeon-agent=2 / minitor=1
 
-*ECOSYSTEM.md overhaul*: Logo column landed (aeon #327) and seven batched PRs (#328–#333) backfilled 100% logo coverage for the table in a single evening. Five X-handle corrections (Clerk, Liq, RootAi, Gitlawb, Precog) and USIC→MANAGR rename rode along; Careful Finance row removed; docs updated for the new row format (#334). README ecosystem is now a visual catalog instead of a name list.
+*Wallet-Risk Weekly (aeon #340)*: First scheduled consumer of the HoundFlow security pack — six keyless onchain skills had been workflow_dispatch-only since 2026-05-28. Monday 11:15 UTC weekly audit of every Base wallet in .x402books/wallets.json: scans 24k blocks for Approval events, confirms each grant live via allowance eth_call, flags >=2^255 as UNLIMITED, simulates a sell via eth_call (no funds at risk) to detect honeypots.
 
-*Atrium onchain marketplace closes its loop* (aeon #335): new `install-from-atrium` Bash CLI fetches skills from atriumhermes.tech/.well-known/skills/, runs them through the same scan.sh as `./add-skill`, records onchain CID as commit_sha in skills.lock. Pairs with yesterday's PR #316 (Atrium-Hermes skill-pack). Aeon now has three skill-install paths (add-skill / install-skill-pack / install-from-atrium) all converging on the same scanner + lockfile schema.
+*Skill of the Day (aeon #341 by Nurstar)*: New external contributor's first PR — meta-content skill that picks one skill from a rotation queue each morning, drafts a paste-ready "Aeon skill of the day 🌟" tweet, then dispatches the picked skill so the live outcome arrives as the screenshot body. Two notifications per run, 30-day suppression window, operator-editable queue + blocklist.
 
-*ecosystem-entrants skill* (aeon #339, +289 lines, weekly Mon 11:45 UTC, disabled): diffs ECOSYSTEM.md against prior snapshot, surfaces added/removed entries as a discrete signal. Pairs with ecosystem-pulse (liveness, 11:00 UTC) — pulse watches the living projects, entrants watches the door. Deterministic primary_url resolution (GitHub → X → first link → name) prevents link-order swaps from faking add/remove churn.
+*aeon-agent backport chain → day 21 + anti-pattern cleanup site 5 (PRs #80 #81)*: narrative-convergence backported from upstream PR #272 (mcp-pulse and fleet-scorecard remain). repo-article $(date) → literal ${today}-derived SINCE — went through mid-review hardening that isolated the SINCE cutoff into its own step with an explicit "never leave YYYY-MM-DD literal" guard, structurally safer than the verbatim shape-match the previous 4 sites used.
+
+*minitor per-column UX axis hits rung 6 (#60)*: Per-column duplicate. Series: tab groups → collapse → JSON export → quick-search → pin-to-front → duplicate. Inherits notifyWebhookUrl (same-install copy stays inside the trust boundary); sets pinned: false. Mid-PR fix wrapped shift+insert in db.transaction() — a crash between the two writes would leave later columns shifted right with no duplicate filling the gap.
 
 Key changes:
-- aeon ecosystem table: 4 new entries (Reppo, VIGIL, Atrium, Sparkleware), 5 handle fixes, 1 rename, full logo backfill across 40+ rows
-- aeon-agent: 20th consecutive same-day-after backport — pr-merge-queue (PR #79, +315 skill, daily 09:45 UTC operator-facing PR-queue digest bucketed by touched-file risk tier, reuses scan.sh verbatim)
-- minitor #59: per-column pin-to-front toggle (+530, 11 files, DB migration 0007). 5th rung on the column-density UX ladder (tabs May-29 → collapse May-30 → JSON export May-31 → quick-search Jun-02 → pin today). DB-backed because pin is a persistence choice; DnD across pin/unpin is intentionally no-op
-- aeon-agent #77: repo-pulse self-fix — 4th `$(date ...)` anti-pattern site removed (after weekly-shiplog, push-recap, heartbeat). Three sites remain
-- aeon #336: test glob widened to include .test.ts via tsx loader (Raeli Savitt, devDep tsx 4.22.4)
+- aeon/skills/wallet-risk-weekly/SKILL.md +299 (12-state exit taxonomy, atomic state writes, 100% keyless Base RPC)
+- aeon/skills/skill-of-the-day/SKILL.md +146 + memory/topics/skill-of-the-day.md +136 (queue + covered + blocklist)
+- minitor/app/actions.ts +83 duplicateColumn server action (db.transaction wrap landed mid-review)
 
-Stats: ~19 substantive PRs · ~2,400 net lines · aeon (15) / aeon-agent (3) / minitor (1)
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-03.md
+Stats: ~13 files changed, +1,278/-9 lines
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-04.md
