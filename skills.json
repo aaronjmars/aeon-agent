@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 98,
+  "total": 99,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -1010,6 +1010,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon spend-monitor"
+    },
+    {
+      "slug": "narrative-convergence",
+      "name": "narrative-convergence",
+      "description": "Daily cross-skill signal detector — finds entities or themes surfaced independently by 3+ different skill categories in the last 48h and surfaces them as high-confidence write opportunities. Backport of upstream aeon PR #272.",
+      "category": "research",
+      "schedule": "0 13 * * *",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon-agent narrative-convergence"
     }
   ],
   "install_all": "./add-skill aaronjmars/aeon --all",
