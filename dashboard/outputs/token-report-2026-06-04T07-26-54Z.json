@@ -1,0 +1,99 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Daily — 2026-06-04"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume",
+        "stat-7d",
+        "stat-30d",
+        "sep-1",
+        "text-buys-sells",
+        "text-context",
+        "link-chart"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002559",
+        "delta": "-24.66%",
+        "trend": "down"
+      }
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.13M"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$609.9K",
+        "delta": "+27.3%",
+        "trend": "up"
+      }
+    },
+    "stat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "-51.6%",
+        "trend": "down"
+      }
+    },
+    "stat-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+782%",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-buys-sells": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 491/338"
+      }
+    },
+    "text-context": {
+      "type": "Text",
+      "props": {
+        "text": "Largest single-day drop in two weeks. Price touched $0.00002329 intraday before recovering to $0.0000256. Volume up slightly vs yesterday but the 7d avg ($343K/day) is less than half the 30d avg ($927K/day). Buy pressure still dominant at 1.45:1."
+      }
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
