@@ -1,1 +1,11 @@
-**HEARTBEAT_OK.** 11/11 expected skills ran clean today (all confirmed in both logs and GitHub Actions). No stalled PRs, no urgent issues. `show-hn-draft` (PR #151, 34 days open, ~18⭐ from 500) remains in 7d extended-persistence backoff — escalation fired June 3, next ping June 10. Log written to `memory/logs/2026-06-04.md`.
+HEARTBEAT_OK — 10/10 expected skills ran successfully on June 5 (confirmed via Actions run list), no stalled PRs, no urgent issues. The `show-hn-draft` escalation remains in its 7-day extended-persistence backoff (last escalation June 3, next due June 10). Log appended to `memory/logs/2026-06-05.md`.
+
+## Summary
+
+**Checks run:**
+- Open PRs stalled > 24h: none
+- Memory follow-ups: show-hn-draft PR #151 in 7d backoff (no notification)
+- GitHub issues labeled urgent: none
+- Skills cross-referenced (aeon.yml vs Actions runs vs today's log): all 10 expected daily skills completed
+
+**No notification sent.** Nothing requires attention today.
