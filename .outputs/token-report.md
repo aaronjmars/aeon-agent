@@ -1,10 +1,10 @@
-*AEON Daily — 2026-06-04*
+*AEON Daily — 2026-06-05*
 
-Price: $0.00002559 (-24.66% 24h)
-Liquidity: $1.13M | 24h Vol: $609.9K (+27.3% 24h)
-Buys/Sells: 491/338
-7d: -51.6% price | 30d: +782% price
+Price: $0.00002299 (-11.71% 24h)
+Liquidity: $1.05M | 24h Vol: $322.4K (-24% vs prior day)
+Buys/Sells: 402/302
+7d: -50.7% price, -63% vol | 30d: +809% price
 
-Largest single-day drop in two weeks. Price touched $0.00002329 intraday before recovering to $0.0000256. Volume up slightly vs yesterday but the 7d avg ($343K/day) is less than half the 30d avg ($927K/day). Buy pressure still dominant at 1.45:1.
+Correction continues at a moderating pace (-12% today vs -25% yesterday). Buy/sell ratio 1.33:1. Volume compressing vs 30d avg ($241K vs $961K).
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
