@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 99,
+  "total": 100,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -840,6 +840,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon huggingface-trending"
+    },
+    {
+      "slug": "mcp-pulse",
+      "name": "mcp-pulse",
+      "description": "Weekly Friday 10:00 UTC tracker for the Model Context Protocol ecosystem — new server implementations, npm/PyPI adoption velocity, modelcontextprotocol org repo signals, and protocol evolution. Momentum-scored signal log + thesis check. Backport of upstream aeon PR #272.",
+      "category": "research",
+      "schedule": "0 10 * * 5",
+      "var": "",
+      "files": 1,
+      "install": "./add-skill aaronjmars/aeon mcp-pulse"
     },
     {
       "slug": "monitor-kalshi",
