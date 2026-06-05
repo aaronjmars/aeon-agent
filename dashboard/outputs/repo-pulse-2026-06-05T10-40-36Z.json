@@ -1,0 +1,200 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-05"
+      },
+      "children": [
+        "heading-repo",
+        "stats-stack",
+        "sep1",
+        "heading-stargazers",
+        "stargazers-stack",
+        "sep2",
+        "heading-forks",
+        "forks-stack"
+      ]
+    },
+    "heading-repo": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "484",
+        "delta": "+6",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "161",
+        "delta": "+4",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-seuzht",
+        "link-RayMMond",
+        "link-aeoncity-hub",
+        "link-arronaspinall",
+        "link-robocode51",
+        "link-bgembalczyk"
+      ]
+    },
+    "link-seuzht": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/seuzht",
+        "href": "https://github.com/seuzht"
+      },
+      "children": []
+    },
+    "link-RayMMond": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/RayMMond",
+        "href": "https://github.com/RayMMond"
+      },
+      "children": []
+    },
+    "link-aeoncity-hub": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/aeoncity-hub",
+        "href": "https://github.com/aeoncity-hub"
+      },
+      "children": []
+    },
+    "link-arronaspinall": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/arronaspinall",
+        "href": "https://github.com/arronaspinall"
+      },
+      "children": []
+    },
+    "link-robocode51": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/robocode51",
+        "href": "https://github.com/robocode51"
+      },
+      "children": []
+    },
+    "link-bgembalczyk": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/bgembalczyk",
+        "href": "https://github.com/bgembalczyk"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-seuzht-fork",
+        "link-aeoncity-hub-fork",
+        "link-yyayourt-fork",
+        "link-NurstarK-fork"
+      ]
+    },
+    "link-seuzht-fork": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/seuzht/aeon",
+        "href": "https://github.com/seuzht/aeon"
+      },
+      "children": []
+    },
+    "link-aeoncity-hub-fork": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/aeoncity-hub/aeon",
+        "href": "https://github.com/aeoncity-hub/aeon"
+      },
+      "children": []
+    },
+    "link-yyayourt-fork": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/yyayourt/aeon",
+        "href": "https://github.com/yyayourt/aeon"
+      },
+      "children": []
+    },
+    "link-NurstarK-fork": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/NurstarK/aeon-upstream",
+        "href": "https://github.com/NurstarK/aeon-upstream"
+      },
+      "children": []
+    }
+  }
+}
