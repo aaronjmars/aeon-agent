@@ -1,0 +1,134 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "New Article: Vigil Security Scanner"
+      },
+      "children": [
+        "heading_main",
+        "sep_1",
+        "text_pr",
+        "text_cycles",
+        "text_fix_detail",
+        "heading_issues",
+        "stack_issues",
+        "sep_2",
+        "alert_security_model",
+        "sep_3",
+        "storylink_article"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Vigil Was Submitted To Aeon As A Security Scanner. The Maintainer Caught A Shell-Injection In Vigil On Review Round Four.",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_pr": {
+      "type": "Text",
+      "props": {
+        "text": "PR #323 — Vigil onchain security scanner MCP for Base needed five review cycles to merge on Tuesday."
+      },
+      "children": []
+    },
+    "text_cycles": {
+      "type": "Text",
+      "props": {
+        "text": "Two of the five review cycles were spent fixing input-handling defects in Vigil's own SKILL.md."
+      },
+      "children": []
+    },
+    "text_fix_detail": {
+      "type": "Text",
+      "props": {
+        "text": "Static scan.sh passed Vigil on round one. The critical bug was caught by a human reviewing the SKILL.md line-by-line."
+      },
+      "children": []
+    },
+    "heading_issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Input-Handling Defects Found",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack_issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "issue_shell",
+        "issue_jq",
+        "issue_batch"
+      ]
+    },
+    "issue_shell": {
+      "type": "Text",
+      "props": {
+        "text": "Shell-injection: weak 0x-prefix length check replaced with strict allowlist regex"
+      },
+      "children": []
+    },
+    "issue_jq": {
+      "type": "Text",
+      "props": {
+        "text": "jq-fed-bad-JSON error-handling gap"
+      },
+      "children": []
+    },
+    "issue_batch": {
+      "type": "Text",
+      "props": {
+        "text": "batch_scan hardcoded to USDC regardless of $TARGET"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "alert_security_model": {
+      "type": "Alert",
+      "props": {
+        "title": "Security Model",
+        "message": "Review is still the security model that's actually doing the work.",
+        "type": "info"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "storylink_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Vigil Onchain Security Scanner — Full Article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-05.md",
+        "source": "aeon-agent"
+      },
+      "children": []
+    }
+  }
+}
