@@ -1,18 +1,17 @@
 ## Summary
 
-Ran `star-momentum-alert` for 2026-06-04.
+**star-momentum-alert — 2026-06-05 — STAR_MOMENTUM_NO_ALERTS**
 
-**Repos audited**: aaronjmars/aeon and aaronjmars/minitor (aeon-agent filtered out per config).
+Audited 2 repos (aeon-agent filtered, per skill rules):
 
-**Results**:
-- **aaronjmars/aeon** — 476⭐, targeting 500⭐. Gap: 24. Pace: v7 = 3.0/day, v3 = 3.33/day. Projected crossing: 2026-06-12 (8 days out) — but that's a **Friday**, which falls outside the Tue/Wed/Thu Show HN window. Verdict: **OFF_DAY**. No alert fired.
-- **aaronjmars/minitor** — 11⭐, zero net growth over the last 7 days. Verdict: **STALLED**. No projection.
+| Repo | Stars | Target | Projection | Verdict |
+|------|-------|--------|------------|---------|
+| aaronjmars/aeon | 480⭐ | 500⭐ | Jun-11 (Thu) in ~6d | OUT_OF_WINDOW (6 < 7d minimum) |
+| aaronjmars/minitor | 11⭐ | 50⭐ | ∞ | STALLED (v7=0.0) |
 
-**Status**: `STAR_MOMENTUM_NO_ALERTS` — no notifications sent.
+**aeon** is 20 stars from 500 at a 3.43/day pace — the milestone is imminent (Jun-11), but that's only 6 days out, one day inside the 7-day dispatch floor. An alert already fired on Jun-01 when the window was properly open. No notification sent.
 
-**Files written**:
-- `articles/star-momentum-2026-06-04.md`
-- `memory/topics/star-momentum-state.json` (last_run_at updated)
-- `memory/logs/2026-06-04.md` (log block appended)
-
-The aeon 500-star crossing is tracking ~8 days out. If pace holds at 3.0/day, the Monday–Wednesday window (Jun 8–10) should see the projection shift to a qualifying weekday and an alert will fire then.
+Files written:
+- `articles/star-momentum-2026-06-05.md` — full projection report
+- `memory/topics/star-momentum-state.json` — updated `last_run_at` and `projected_date_v7 → 2026-06-11`
+- `memory/logs/2026-06-05.md` — log appended
