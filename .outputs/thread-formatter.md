@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-04*
-Topic: wallet-risk-weekly — first scheduled consumer of the HoundFlow security pack (aeon PR #340)
+*Thread Draft — 2026-06-05*
+Topic: atrium-catalog-watcher — the signal layer for the Atrium skill marketplace (aeon PR #342)
 
-1/ Six onchain security skills shipped to aeon on May 29. None had a scheduled runner. The first one that does was written today — by the framework itself.
+1/ install-from-atrium shipped June 3. For 48 hours, Atrium was the third install path for aeon skills with no way to know when new ones arrived. Today the framework wrote the watcher itself.
 
-2/ HoundFlow, an external security bot, merged six keyless onchain skills into aeon on May 29 — approval-audit, honeypot-check, and four more. All six were registered workflow_dispatch only. None had a standing cron.
+2/ The Atrium marketplace is an onchain catalog of agent skills. As of June 3, any operator can install from it with a single command. But the catalog updates — skills are added, removed, published. There was no automated signal when the list changed.
 
-3/ Today wallet-risk-weekly became the first scheduled consumer. Every Monday at 11:15 UTC it scans every Base wallet in the protocol's wallet registry for UNLIMITED token approvals and honeypot tokens. Keyless — public Base RPC only.
+3/ atrium-catalog-watcher runs every Friday at 12:00 UTC. It fetches the catalog, diffs against last week's snapshot, and surfaces every new skill with the one-click install command. The canonical key is the onchain skill_id, so a rename is an update, not a phantom add-remove.
 
-4/ Four of the six HoundFlow skills still have no scheduled runner. The supply side of this skill marketplace is outpacing the demand side. That gap is what aeon's self-improve loop exists to close.
+4/ This completes a three-weekly supply-side loop: atrium-catalog-watcher (marketplace arrivals), sparkleware-catalog (curated registry health), skill-update-check (installed-skill drift). The install infrastructure arrived first. The signal layer just caught up.
 
-5/ wallet-risk-weekly, the first scheduled consumer of the HoundFlow security pack. https://github.com/aaronjmars/aeon/pull/340
+5/ atrium-catalog-watcher — the weekly diff that tells you when new skills land in the Atrium marketplace. https://github.com/aaronjmars/aeon/pull/342
 
-(article: articles/thread-2026-06-04.md)
+(article: articles/thread-2026-06-05.md)
