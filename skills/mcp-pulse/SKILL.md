@@ -31,11 +31,13 @@ tags: [AI, MCP, agent-infra]
         contents, same gating, same body, single argv.
 
     (2) `$(date ...)` shell-substitution at step 3 (upstream line ~86)
-        is replaced with literal `${today_minus_7}` derived from the
-        skill-template `${today}` injection. The runner hook blocks `$(...)`
-        ("Contains simple_expansion") on aeon-agent — same fix applied in
-        weekly-shiplog (PR #63), push-recap (PR #67), heartbeat (PR #71),
-        repo-pulse (PR #77), and repo-article (PR #81). The semantic trade
+        is replaced with a literal ISO cutoff the run computes from the
+        injected `${today}` (write `${today}` minus 7 days as a literal
+        date — there is no `${today_minus_7}` template var). The runner hook
+        blocks `$(...)`/`$VAR` ("Contains simple_expansion") on aeon-agent —
+        same fix applied in weekly-shiplog (PR #63), push-recap (PR #67),
+        heartbeat (PR #71), repo-pulse (PR #77), and repo-article (PR #81).
+        The semantic trade
         (exact 7×24h ago → midnight UTC of 7 days ago) is fine: this is a
         7-day momentum window for ecosystem signals, not a precision filter.
 
@@ -122,16 +124,17 @@ https://api.github.com/orgs/modelcontextprotocol/repos?sort=updated&per_page=50
 
 ### 3. Search GitHub for new MCP server repos
 
-The runner hook on aeon-agent blocks `$(...)` shell substitution, so compute the 7-day cutoff from the injected `${today}` template variable rather than calling `date -u -d '7 days ago'` inline. The skill template populates `${today}` (UTC `YYYY-MM-DD`); derive `today_minus_7` by subtracting 7 days from it as a literal string before the gh api call:
+**Compute the cutoff (`CUTOFF`) FIRST — this is critical.** The runner hook on aeon-agent blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(date ...)`, and do **not** rely on an injected `${today_minus_7}` (no such variable exists). Instead, set `CUTOFF` to a literal ISO timestamp you compute from the injected `${today}` (UTC `YYYY-MM-DD`) minus 7 days — e.g. if today is `2026-06-04`, write `CUTOFF=2026-05-28T00:00:00Z`. Substitute the real date into the `YYYY-MM-DD` placeholder below **before running anything else** — never leave `YYYY-MM-DD` literal, or the search silently returns zero repos. This matches the pattern weekly-shiplog (PR #63), push-recap (PR #67), heartbeat (PR #71), repo-pulse (PR #77), and repo-article (PR #81) use for the same reason:
 
 ```bash
-# ${today} is injected by the skill runner as the UTC YYYY-MM-DD date.
-# ${today_minus_7} is the same date minus 7 days, used as the GitHub search
-# updated cutoff. The semantic window is "updated since midnight UTC of 7
+# Cutoff = midnight UTC of 7 days ago, computed from ${today} as a LITERAL
+# (NOT $(date ...), NOT an injected var). Substitute the real date into
+# YYYY-MM-DD before running — never leave it literal, or the jq filter below
+# returns nothing. The semantic window is "updated since midnight UTC of 7
 # days ago" (10-34h slightly wider than a strict 7×24h on a 10:00 UTC run);
 # the same trade weekly-shiplog/push-recap/heartbeat/repo-pulse/repo-article
 # accepted. The momentum scoring in step 6 is unaffected by the small overlap.
-CUTOFF="${today_minus_7}T00:00:00Z"
+CUTOFF=YYYY-MM-DDT00:00:00Z
 
 gh api "search/repositories?q=mcp-server+in:topics+OR+mcp-server+in:description&sort=updated&per_page=30" \
   --jq ".items[] | select(.updated_at > \"${CUTOFF}\") | {full_name, description, stargazers_count, updated_at, topics}"
@@ -143,10 +146,10 @@ gh api "search/repositories?q=model-context-protocol+in:topics+OR+modelcontextpr
   --jq '.items[] | {full_name, description, stargazers_count, updated_at}'
 ```
 
-If `gh api` fails, fall back to WebSearch: `"mcp-server" site:github.com after:${today_minus_7}`
+If `gh api` fails, fall back to WebSearch: `"mcp-server" site:github.com after:YYYY-MM-DD` (use the same literal date as `CUTOFF` above — `${today}` minus 7 days)
 
 From results:
-- Filter to repos updated since `${today_minus_7}` (in-jq filter above)
+- Filter to repos updated since the cutoff date — 7 days before `${today}` (in-jq filter above)
 - Cross-check against `known_servers` — flag NEW implementations
 - Note the service being wrapped (Stripe, Notion, Linear, Jira, etc.)
 - Rank by stars descending
@@ -301,7 +304,7 @@ None. Uses `gh` CLI (GITHUB_TOKEN via workflow), WebFetch, WebSearch. No additio
 - `gh api` and `gh search` use gh CLI — handles auth internally, no env-var expansion in headers (CLAUDE.md sandbox pattern 2c).
 - npm API (`api.npmjs.org`), PyPI stats (`pypistats.org`), and GitHub API fallbacks: use **WebFetch**, not curl. The sandbox may block outbound HTTPS from bash; WebFetch bypasses the sandbox per CLAUDE.md pattern 1.
 - WebSearch: built-in tool, always available.
-- `$(date ...)` shell substitution is blocked by the runner hook — every date computation in this skill is derived from the injected `${today}` / `${today_minus_7}` template variables.
+- `$(date ...)` shell substitution is blocked by the runner hook — every date computation in this skill is a literal the run derives from the injected `${today}` template variable (the 7-day cutoff = `${today}` minus 7 days, written as a literal ISO timestamp; there is no `${today_minus_7}` injected var).
 - `./notify` reads its message as a single positional `$1` — pass the full body via `./notify "$(cat .pending-notify-temp/mcp-pulse-${today}.md)"`, not `-f file`.
 
 ## What to watch for (recurring signal classes)
