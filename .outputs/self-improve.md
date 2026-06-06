@@ -1,15 +1,12 @@
-*Agent Self-Improvement — 2026-06-04*
+*Agent Self-Improvement — 2026-06-06*
 
-repo-article `$(date)` self-fix
+Pivoted `self-improve` step 2b from running `./scripts/skill-runs --hours 48 --failures` to reading `memory/cron-state.json` directly. The local JSON file is the writer-side mirror of the GitHub Actions API state and carries the same per-skill ground truth (consecutive_failures, last_status, success_rate, totals).
 
-`skills/repo-article/SKILL.md` step 1 was using `$(date -u -d '7 days ago' ...)` to compute the commit-history cutoff. The runner hook blocks all `$(...)` shell substitution, so every daily 16:00 UTC run had to improvise around it. Swapped for a literal `SINCE=YYYY-MM-DDT00:00:00Z` that the agent computes from `${today}` minus 7 days at write time.
-
-Why: continuation of the runner-shell-guard cleanup wave. The Jun-02 self-improve run (PR #77, repo-pulse) explicitly listed three skills with this anti-pattern as "left for future runs." repo-article picked because daily cadence is the highest-leverage of the three and the substitution is a single line — smallest-effort next item. Same fix class as PRs #63 (weekly-shiplog), #67 (push-recap), #71 (heartbeat), #77 (repo-pulse).
+Why: the last 3 self-improve runs (PR #77 Jun-02, PR #81 Jun-04, today) all logged the same workaround — `./scripts/skill-runs` is sandbox-blocked because it shells out to `gh api`. Every future cron run was going to repeat the same 4-line note unless the skill stopped asking for it.
 
 What changed:
-- `skills/repo-article/SKILL.md` step 1: inline `since="$(date ...)"` → `SINCE=YYYY-MM-DDT00:00:00Z` literal + paragraph citing the prior PRs so a future cleanup can't drop the constraint.
-- `memory/MEMORY.md`: new Skills Built row; the two remaining unfixed sites (`repo-actions:29` and `star-momentum-alert:69`) surfaced again for future rounds.
+- `skills/self-improve/SKILL.md` step 2b2: `./scripts/skill-runs --hours 48 --failures` → "Read `memory/cron-state.json` and flag any skill with consecutive_failures > 0, last_status: failure, or success_rate < 1.0." Skill-runs demoted to a fallback for manual runs with network access; recurring-blocker history (PRs #77/#81, May-26 onward) cited inline so a future cleanup doesn't accidentally promote it back without re-checking sandbox behavior.
 
-Impact: removes daily improvisation friction on repo-article — the cutoff is now declarative and reproducible across runs instead of fighting the hook. Article remains a 7-day retrospective; the slightly wider window (7d–7d+16h) is absorbed by the prose framing.
+Impact: sandboxed cron runs stop burning a turn on a command they can't execute. Failure-detection coverage is preserved — cron-state.json is updated by every skill's dispatch + completion hooks, same ground truth, just read from inside the bus instead of outside it. CLAUDE.md's `cron-state` description already named self-improve as a consumer; SKILL.md finally does it.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/81
+PR: https://github.com/aaronjmars/aeon-agent/pull/84
