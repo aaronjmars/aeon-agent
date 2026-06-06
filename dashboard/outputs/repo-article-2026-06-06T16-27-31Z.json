@@ -1,0 +1,87 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading",
+        "event_meta",
+        "stats_grid",
+        "narrative_para",
+        "link"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon Has 193 Skills. Fifteen Of Them Are The Machine. Yesterday The Framework Labelled Them.",
+        "level": "h2"
+      }
+    },
+    "event_meta": {
+      "type": "Text",
+      "props": {
+        "text": "Friday 18:10–19:01 UTC, aaronjmars/aeon",
+        "variant": "caption"
+      }
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total_skills",
+        "stat_core_skills",
+        "stat_prs",
+        "stat_time"
+      ]
+    },
+    "stat_total_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Skills",
+        "value": "193"
+      }
+    },
+    "stat_core_skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Core Skills",
+        "value": "15"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs Merged",
+        "value": "8"
+      }
+    },
+    "stat_time": {
+      "type": "Stat",
+      "props": {
+        "label": "Time Window",
+        "value": "51 min"
+      }
+    },
+    "narrative_para": {
+      "type": "Text",
+      "props": {
+        "text": "What looks like a docs refresh is actually the framework classifying itself for the first time. A new docs/CORE.md names 15 load-bearing skills—self-evolution, fleet-replication, real-world action—and pulls them out of the catalog as a separate category. Everything else is the workload."
+      }
+    },
+    "link": {
+      "type": "Link",
+      "props": {
+        "label": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-06.md"
+      }
+    }
+  }
+}

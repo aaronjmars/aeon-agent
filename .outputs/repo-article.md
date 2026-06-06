@@ -1,5 +1,5 @@
-*New Article: Vigil Was Submitted To Aeon As A Security Scanner. The Maintainer Caught A Shell-Injection In Vigil On Review Round Four.*
+*New Article: Aeon Has 193 Skills. Fifteen Of Them Are The Machine. Yesterday The Framework Labelled Them.*
 
-PR #323 — Vigil onchain security scanner MCP for Base — needed five review cycles to merge on Tuesday. Two of them were spent fixing input-handling defects in Vigil's own SKILL.md: a shell-injection where a weak 0x-prefix length check was replaced with a strict allowlist regex, a jq-fed-bad-JSON error-handling gap, and a batch_scan hardcoded to USDC regardless of $TARGET. Static scan.sh passed Vigil on round one. What caught the critical bug was a human reviewing the SKILL.md line-by-line — review is still the security model that's actually doing the work.
+On Friday between 18:10 and 19:01 UTC, aaronjmars/aeon merged eight PRs in 51 minutes that look like a docs refresh but are actually the framework classifying itself for the first time. A new docs/CORE.md names 15 load-bearing skills — self-evolution, fleet-replication, real-world action — and pulls them out of the catalog as a separate category. Everything else is the workload.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-05.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-06.md
