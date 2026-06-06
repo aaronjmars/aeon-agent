@@ -1,0 +1,151 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-06-06",
+        "description": "aaronjmars/aeon"
+      },
+      "children": [
+        "grid-stats",
+        "sep1",
+        "heading-stargazers",
+        "stack-stargazers",
+        "sep2",
+        "heading-forks",
+        "stack-forks"
+      ]
+    },
+    "grid-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "487",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "164",
+        "delta": "+3",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stack-stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-bg",
+        "link-jp",
+        "link-ht",
+        "link-ca"
+      ]
+    },
+    "link-bg": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/bgembalczyk",
+        "href": "https://github.com/bgembalczyk"
+      }
+    },
+    "link-jp": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/jpoll962",
+        "href": "https://github.com/jpoll962"
+      }
+    },
+    "link-ht": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/HT-Moh",
+        "href": "https://github.com/HT-Moh"
+      }
+    },
+    "link-ca": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/CharonAI-code",
+        "href": "https://github.com/CharonAI-code"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "stack-forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-fork1",
+        "link-fork2",
+        "link-fork3"
+      ]
+    },
+    "link-fork1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/daxaur/aeon",
+        "href": "https://github.com/daxaur/aeon"
+      }
+    },
+    "link-fork2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/chxoky/aeon",
+        "href": "https://github.com/chxoky/aeon"
+      }
+    },
+    "link-fork3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/dannysrod/aeon",
+        "href": "https://github.com/dannysrod/aeon"
+      }
+    }
+  }
+}

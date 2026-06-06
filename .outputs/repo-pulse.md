@@ -1,11 +1,11 @@
-*Repo Pulse — 2026-06-05*
-aaronjmars/aeon
+*Repo Pulse — 2026-06-06*
+[aaronjmars/aeon]
 
-Stars: 484 total (+6 new)
-Forks: 161 total (+4 new)
+Stars: 487 total (+4 new)
+Forks: 164 total (+3 new)
 
 New stargazers:
-github.com/seuzht | github.com/RayMMond | github.com/aeoncity-hub | github.com/arronaspinall | github.com/robocode51 | github.com/bgembalczyk
+github.com/bgembalczyk | github.com/jpoll962 | github.com/HT-Moh | github.com/CharonAI-code
 
 New forks:
-github.com/seuzht/aeon | github.com/aeoncity-hub/aeon | github.com/yyayourt/aeon | github.com/NurstarK/aeon-upstream
+github.com/daxaur/aeon | github.com/chxoky/aeon | github.com/dannysrod/aeon
