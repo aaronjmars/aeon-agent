@@ -82,8 +82,8 @@
     "success_rate": 1
   },
   "push-recap": {
-    "last_dispatch": "2026-06-05T15:59:14Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-06T15:22:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-05T16:07:34Z",
     "total_runs": 53,
     "total_successes": 53,
@@ -153,8 +153,8 @@
     "success_rate": 1
   },
   "star-milestone": {
-    "last_dispatch": "2026-06-05T15:59:14Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-06T15:22:23Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-05T16:00:32Z",
     "total_runs": 23,
     "total_successes": 23,
