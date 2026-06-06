@@ -61,13 +61,19 @@ If `REPOS` is empty, log `STAR_MOMENTUM_NO_REPOS` and exit cleanly without notif
 
 ### 3. Per-repo: build the 14-day stargazer series
 
+**Compute the 14-day date array FIRST — this is critical.** The runner hook blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(seq ...)` for the loop bound or `$(date ...)` for each offset. Instead, pre-build a 14-element bash array of literal `YYYY-MM-DD` dates running from `${today} - 13 days` (oldest) through `${today}` (newest), computed from the injected `${today}` template variable. Substitute the real dates into the placeholders below **before running anything else** — never leave `YYYY-MM-DD` literal, or every per-day log lookup silently misses. This matches the pattern weekly-shiplog (PR #63), push-recap (PR #67), heartbeat (PR #71), repo-pulse (PR #77), and repo-article (PR #81) use for the same reason. The bash array iteration with `"${DATES[@]}"` is a parameter expansion, not a command substitution — the runner hook permits it.
+
 For each repo in `REPOS`:
 
 ```bash
+# Pre-built 14-day date array (oldest → newest), computed from ${today}
+# (NOT $(date ...), NOT $(seq ...) — runner hook blocks shell substitution
+# per PR #63/#67/#71/#77/#81). Substitute the 14 real dates into the
+# placeholders BEFORE running anything else.
+DATES=(YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD YYYY-MM-DD)
+
 SERIES=""
-for D in $(seq 13 -1 0); do
-  DATE=$(date -u -d "${today} - ${D} days" +%Y-%m-%d 2>/dev/null \
-      || date -u -j -v-${D}d -f %Y-%m-%d "${today}" +%Y-%m-%d)
+for DATE in "${DATES[@]}"; do
   LOG=memory/logs/${DATE}.md
   [ -f "$LOG" ] || continue
   # Extract: - **owner/repo**: stargazers_count=N, forks_count=M

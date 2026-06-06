@@ -18,6 +18,14 @@ Read memory/watched-repos.md for the repo to analyze.
 ## Steps
 
 1. **Assess current repo state**:
+
+   **Compute the cutoff (`SINCE`) FIRST — this is critical.** The runner hook blocks shell command/variable expansion (`$(...)`, `$VAR`) — do **not** use `$(date ...)` for the `since` cutoff. Instead, set `SINCE` to a literal ISO timestamp you compute from `${today}` minus 14 days (e.g. if today is `2026-06-06`, write `SINCE=2026-05-23T00:00:00Z`). Substitute the real date into the placeholder below **before running anything else** — never leave `YYYY-MM-DD` literal, or the commit query silently returns nothing. This matches the pattern weekly-shiplog (PR #63), push-recap (PR #67), heartbeat (PR #71), repo-pulse (PR #77), and repo-article (PR #81) use for the same reason. The window is slightly wider than 14×24h (14d–14d+14h on a 14:00 UTC run), but repo-actions runs every other day so the small overlap at the trailing edge is harmless — re-surfacing one extra commit is preferable to silently missing one.
+
+   ```bash
+   # Cutoff = midnight UTC of 14 days ago, computed from ${today} (literal — NOT $(date ...))
+   SINCE=YYYY-MM-DDT00:00:00Z
+   ```
+
    ```bash
    # Repo info
    gh api repos/owner/repo --jq '{name, description, language, stargazers_count, forks_count, open_issues_count, topics}'
@@ -25,8 +33,8 @@ Read memory/watched-repos.md for the repo to analyze.
    # Open issues (potential feature requests, bugs)
    gh api repos/owner/repo/issues --jq '[.[] | select(.pull_request == null) | {number, title, labels: [.labels[].name], created_at, comments}] | .[0:20]'
 
-   # Recent commits (what's the current development direction?)
-   gh api repos/owner/repo/commits -X GET -f since="$(date -u -d '14 days ago' +%Y-%m-%dT%H:%M:%SZ 2>/dev/null || date -u -v-14d +%Y-%m-%dT%H:%M:%SZ)" --jq '.[] | {sha: .sha[0:7], message: .commit.message | split("\n")[0]}' --paginate
+   # Recent commits (what's the current development direction? Uses the literal $SINCE computed above.)
+   gh api repos/owner/repo/commits -X GET -f since="$SINCE" --jq '.[] | {sha: .sha[0:7], message: .commit.message | split("\n")[0]}' --paginate
 
    # Contributors
    gh api repos/owner/repo/contributors --jq '.[0:10] | .[] | {login, contributions}'
