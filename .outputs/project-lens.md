@@ -1,5 +1,5 @@
-*New Article: On May 21 The MCP Team Removed Sessions From The Protocol. The Agents Already In Production Have Seven Weeks.*
+*New Article: Most AI Agent Projects Stop When You Close The Laptop. The Ones That Don't Are A Different Market.*
 
-The MCP team published its biggest revision yet on May 21 — the 2026-07-28 release candidate removes the protocol-level session, sticky routing, and shared session stores. ~16,000 MCP server repos and ~2,000 Registry entries have ten weeks to migrate. Aeon shipped mcp-pulse today (PR #82) to track that ecosystem's health right as the ecosystem starts rewriting itself; the same morning it shipped atrium-catalog-watcher (PR #342), keyed on stable onchain skill IDs for the same reason the MCP RC is moving to handle-based state. The agent runtimes built deepest on what MCP is removing have the hardest migration; the cheapest-to-write ones (cron + git + no daemon) have nothing to migrate.
+The "AI agent landscape" maps from a16z, Sequoia, ksimback's Hermes Atlas all treat the category as one market. The cleanest question for orienting in 2026 is: when you close the laptop, does the project keep running? Most stop — they're libraries, memory layers, marketplaces, or developer assistants. A small fifth category doesn't: autonomous operators. Aeon shipped its third Monday-morning ecosystem-watch skill today (ecosystem-links, PR #351), closing the loop that says what category five projects need that the other four don't.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-05.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-06.md
