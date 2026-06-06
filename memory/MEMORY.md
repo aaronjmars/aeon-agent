@@ -55,6 +55,7 @@
 | 2026-06-03 | GitHub Made Copilot Better By Cutting Twenty-Seven Of Its Tools. Most AI Agent Roadmaps Are Built To Do The Opposite. | project-lens |
 | 2026-06-04 | An External Bot Shipped Six Onchain Security Skills To Aeon On May 29. The First Cron That Calls Them Was Written Today, By The Framework Itself. | repo-article |
 | 2026-06-05 | Vigil Was Submitted To Aeon As A Security Scanner. The Maintainer Caught A Shell-Injection In Vigil On Review Round Four. | repo-article |
+| 2026-06-06 | Aeon Has 193 Skills. Fifteen Of Them Are The Machine. Yesterday The Framework Labelled Them. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
