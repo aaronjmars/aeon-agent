@@ -1,0 +1,95 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-06-06",
+        "description": "per-deck color labels — visual organization at the deck level (minitor PR #62)"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-point-1",
+        "text-point-2",
+        "text-point-3",
+        "text-point-4",
+        "text-point-5",
+        "separator",
+        "stack-links"
+      ]
+    },
+    "text-point-1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ Minitor shipped per-column color labels yesterday. Today it shipped per-deck color labels. Same 8 swatches, same hex normalizer, same server-side format enforcement. Visual organization is now a coherent system across both levels."
+      }
+    },
+    "text-point-2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ A minitor deck running 15 columns has a visual scan problem. Operators mentally group columns — DeFi vs dev vs news vs social — but the UI had no in-app marker for it. You knew what your columns were; the UI just showed them all the same way."
+      }
+    },
+    "text-point-3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ Per-deck color labels give each deck a 6-hex dot that appears in the sidebar and in the deck header. When a deck is active, the dot holds its operator-assigned color — not the brand accent. Inactive tagged decks drop to 65% opacity so the active deck still reads as primary."
+      }
+    },
+    "text-point-4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ Eight consecutive UX features on minitor in nine days — tab groups, collapse, JSON export, quick-search, pin, duplicate, column colors, deck colors. Each is independent of the others. Each composes with the others. None required a DB schema rewrite."
+      }
+    },
+    "text-point-5": {
+      "type": "Text",
+      "props": {
+        "text": "5/ Per-deck color labels — the deck-level visual system that keeps columns, decks, and exports coherent."
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "storylink-pr",
+        "storylink-article"
+      ]
+    },
+    "storylink-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Per-deck color labels",
+        "href": "https://github.com/aaronjmars/minitor/pull/62",
+        "source": "GitHub PR #62"
+      }
+    },
+    "storylink-article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Thread Draft Article",
+        "href": "articles/thread-2026-06-06.md",
+        "source": "Local Article"
+      }
+    }
+  }
+}

@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-05*
-Topic: atrium-catalog-watcher — the signal layer for the Atrium skill marketplace (aeon PR #342)
+*Thread Draft — 2026-06-06*
+Topic: per-deck color labels — visual organization at the deck level (minitor PR #62)
 
-1/ install-from-atrium shipped June 3. For 48 hours, Atrium was the third install path for aeon skills with no way to know when new ones arrived. Today the framework wrote the watcher itself.
+1/ Minitor shipped per-column color labels yesterday. Today it shipped per-deck color labels. Same 8 swatches, same hex normalizer, same server-side format enforcement. Visual organization is now a coherent system across both levels.
 
-2/ The Atrium marketplace is an onchain catalog of agent skills. As of June 3, any operator can install from it with a single command. But the catalog updates — skills are added, removed, published. There was no automated signal when the list changed.
+2/ A minitor deck running 15 columns has a visual scan problem. Operators mentally group columns — DeFi vs dev vs news vs social — but the UI had no in-app marker for it. You knew what your columns were; the UI just showed them all the same way.
 
-3/ atrium-catalog-watcher runs every Friday at 12:00 UTC. It fetches the catalog, diffs against last week's snapshot, and surfaces every new skill with the one-click install command. The canonical key is the onchain skill_id, so a rename is an update, not a phantom add-remove.
+3/ Per-deck color labels give each deck a 6-hex dot that appears in the sidebar and in the deck header. When a deck is active, the dot holds its operator-assigned color — not the brand accent. Inactive tagged decks drop to 65% opacity so the active deck still reads as primary.
 
-4/ This completes a three-weekly supply-side loop: atrium-catalog-watcher (marketplace arrivals), sparkleware-catalog (curated registry health), skill-update-check (installed-skill drift). The install infrastructure arrived first. The signal layer just caught up.
+4/ Eight consecutive UX features on minitor in nine days — tab groups, collapse, JSON export, quick-search, pin, duplicate, column colors, deck colors. Each is independent of the others. Each composes with the others. None required a DB schema rewrite.
 
-5/ atrium-catalog-watcher — the weekly diff that tells you when new skills land in the Atrium marketplace. https://github.com/aaronjmars/aeon/pull/342
+5/ Per-deck color labels — the deck-level visual system that keeps columns, decks, and exports coherent. https://github.com/aaronjmars/minitor/pull/62
 
-(article: articles/thread-2026-06-05.md)
+(article: articles/thread-2026-06-06.md)
