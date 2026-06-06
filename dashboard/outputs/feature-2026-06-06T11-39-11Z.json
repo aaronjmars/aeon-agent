@@ -1,0 +1,274 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-06-06 — aaronjmars/minitor",
+        "description": "Per-deck color labels"
+      },
+      "children": [
+        "feature-intro",
+        "sep-1",
+        "why-section",
+        "sep-2",
+        "built-section",
+        "sep-3",
+        "how-section",
+        "sep-4",
+        "next-section",
+        "sep-5",
+        "pr-link"
+      ]
+    },
+    "feature-intro": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "intro-1",
+        "intro-2",
+        "intro-3"
+      ]
+    },
+    "intro-1": {
+      "type": "Text",
+      "props": {
+        "text": "Decks in minitor can now be tagged with a color. The chosen color renders as the identity dot in the sidebar header (replacing the brand active/inactive dot) and as a small circular dot next to the deck name in the top bar of whichever deck is open."
+      }
+    },
+    "intro-2": {
+      "type": "Text",
+      "props": {
+        "text": "Operators can pick from 8 preset swatches (orange, green, blue, purple, pink, yellow, cyan, slate) or paste in any 6-digit hex."
+      }
+    },
+    "intro-3": {
+      "type": "Text",
+      "props": {
+        "text": "Same palette and same normalization as the per-column color labels shipped yesterday, so an operator who learned \"DeFi = orange\" from column tagging can apply the convention at the deck level and the two surfaces stay coherent."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "why-heading",
+        "why-1",
+        "why-2",
+        "why-3"
+      ]
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters",
+        "level": "h3"
+      }
+    },
+    "why-1": {
+      "type": "Text",
+      "props": {
+        "text": "The per-column UX axis is now well-covered (tab groups → collapse → JSON export → quick-search → pin → duplicate → column color labels — seven rungs over the last two weeks)."
+      }
+    },
+    "why-2": {
+      "type": "Text",
+      "props": {
+        "text": "The next bottleneck — flagged in the Jun-04 repo-actions article — is visual organization at the deck level."
+      }
+    },
+    "why-3": {
+      "type": "Text",
+      "props": {
+        "text": "At five or more decks per operator, the sidebar's identical-looking deck headers become a scan-time bottleneck; a Markets deck and a Dev deck should look different at a glance, not just by name. Color is the deck-level analog of the per-column work — the same affordance, one level up."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "built-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "built-heading",
+        "built-1",
+        "built-2",
+        "built-3",
+        "built-4",
+        "built-5",
+        "built-6",
+        "built-7"
+      ]
+    },
+    "built-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built",
+        "level": "h3"
+      }
+    },
+    "built-1": {
+      "type": "Text",
+      "props": {
+        "text": "drizzle/0009_deck_color.sql + journal + 0009_snapshot.json: additive nullable text column on decks (no churn on existing rows, no migration risk)."
+      }
+    },
+    "built-2": {
+      "type": "Text",
+      "props": {
+        "text": "lib/db/schema.ts + lib/columns/types.ts: Deck.color?: string field with inline doc on sidebar and top-bar rendering."
+      }
+    },
+    "built-3": {
+      "type": "Text",
+      "props": {
+        "text": "app/actions.ts: new updateDeckColor server action that reuses the column-level normalizeColumnColor (so case-folding and shorthand rejection can never drift between deck and column surfaces); exportDeck emits an optional deckColor field; importDeck re-validates through the same normalizer and propagates the persisted color back to the optimistic client store via ImportedDeckResult.deckColor."
+      }
+    },
+    "built-4": {
+      "type": "Text",
+      "props": {
+        "text": "lib/store/use-deck-store.ts: updateDeckColor zustand action mirroring renameDeck's optimistic-then-server pattern; importedDeckPatch carries the color through deck imports."
+      }
+    },
+    "built-5": {
+      "type": "Text",
+      "props": {
+        "text": "components/dialogs/deck-color-dialog.tsx: new dialog with the same 8 preset swatches + Clear button + freeform hex input + live invalid-hex error as the column picker. Save only enables when the value would actually change — opening and closing without touching anything is a no-op."
+      }
+    },
+    "built-6": {
+      "type": "Text",
+      "props": {
+        "text": "components/sidebar-01/nav-decks.tsx: \"Set color\" / \"Change color\" menu item between Rename and Version history; tagged-deck dot renders in the operator's color (full opacity active, 65% inactive)."
+      }
+    },
+    "built-7": {
+      "type": "Text",
+      "props": {
+        "text": "components/deck/deck-view.tsx: 10px circular dot next to the deck name in the top bar when the active deck has a color."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "how-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "how-heading",
+        "how-1",
+        "how-2",
+        "how-3",
+        "how-4"
+      ]
+    },
+    "how-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works",
+        "level": "h3"
+      }
+    },
+    "how-1": {
+      "type": "Text",
+      "props": {
+        "text": "The 6-hex color is server-validated against the same /^#[0-9a-f]{6}$/i regex columns use, lowercased on persist."
+      }
+    },
+    "how-2": {
+      "type": "Text",
+      "props": {
+        "text": "Old deck exports created before this feature simply omit the deckColor field and import as a deck with color=null — the Zod schema is additive, not a v2 bump."
+      }
+    },
+    "how-3": {
+      "type": "Text",
+      "props": {
+        "text": "Operator color overrides the active-deck brand color on the sidebar dot: when a deck is tagged, the dot stays in its color even when active, because swapping to the brand color would erase the operator's intent."
+      }
+    },
+    "how-4": {
+      "type": "Text",
+      "props": {
+        "text": "Inactive tagged decks dip to 65% opacity so the active deck still reads as primary. Renames and color changes deliberately don't snapshot the deck — they're metadata, not structural — version history continues to cover add/remove/reorder/duplicate/import/restore only."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "next-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "next-heading",
+        "next-1",
+        "next-2"
+      ]
+    },
+    "next-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next",
+        "level": "h3"
+      }
+    },
+    "next-1": {
+      "type": "Text",
+      "props": {
+        "text": "Could extend to deck icons (lucide names + emoji) for one more visual axis at the deck level — color and icon together make 5+ decks instantly distinguishable."
+      }
+    },
+    "next-2": {
+      "type": "Text",
+      "props": {
+        "text": "Could also let starter templates ship pre-colored (the deckColor field is already in DeckTemplatePayload, just no templates use it yet)."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #62",
+        "href": "https://github.com/aaronjmars/minitor/pull/62",
+        "source": "GitHub"
+      }
+    }
+  }
+}
