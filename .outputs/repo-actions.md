@@ -1,19 +1,19 @@
-*Repo Action Ideas — 2026-06-04*
-Generated from analysis of aaronjmars/aeon (482⭐, 161 forks), aaronjmars/aeon-agent, and aaronjmars/minitor.
+*Repo Action Ideas — 2026-06-06*
+Generated from analysis of aaronjmars/aeon (487 stars, 165 forks, approaching 500 stars around June 11) and the aeon-agent + minitor codebases.
 
-1. ecosystem-links skill (Feature, Medium)
-   Weekly ECOSYSTEM.md URL health auditor — checks GitHub repos for archive/disable status and project URLs for HTTP 404s; completes the ecosystem monitoring trio alongside ecosystem-entrants + ecosystem-pulse.
+1. OAuth credential write-back in aeon.yml (DX, Small)
+   Fixes the 401 auth loop from issue #352 — refresh tokens are single-use, the runner discards updated credentials on exit. A guarded write-back step after every claude run breaks the cycle.
 
-2. Atrium catalog watcher (Integration, Small)
-   Diffs the Atrium skill catalog weekly and notifies on new or updated packs — closes the feedback loop on the install-from-atrium path so new upstream skills surface automatically.
+2. vigil-revoke skill (Security, Medium)
+   VIGIL review explicitly deferred the Approval Revoker. wallet-risk-weekly now identifies HIGH-bucket approvals weekly. vigil-revoke closes the detection to remediation loop via Bankr.
 
-3. mcp-pulse backport (DX, Small)
-   The natural 22nd consecutive same-day-after backport from upstream PR #272 — monitors the MCP server ecosystem (npm + GitHub) for new releases and adoption signals; last clean backport before fleet-scorecard which requires memory/instances.json.
+3. skill-of-the-day backport (Community, Small)
+   Nurstar PR #341 — daily rotation-queue pick + paste-ready tweet + live dispatch. 23rd consecutive same-day-after backport. No complex dependencies.
 
-4. $(date) batch self-fix — 3 remaining sites (DX, Small)
-   Eliminates the shell-substitution anti-pattern from repo-article, repo-actions, and star-momentum-alert — the 4 prior fixes (PRs #63/#67/#71/#77) explicitly left these for future runs.
+4. Minitor: column width control (Feature, Small)
+   8th rung on the per-column UX axis: narrow/normal/wide toggle (240/360/480px). News feeds need wide; price columns run dense. View-state, no migration needed.
 
-5. Column color labels (Feature, Small)
-   DB-backed per-column hex color label shown as a dot in the expanded header and as the accent line on collapsed strips — the last missing at-a-glance layer on multi-column decks.
+5. show-hn-draft auto-fire at 500 stars (Growth, Small)
+   PR #151 open 35 days. 500 stars arrives around June 11 at current pace. Wire star-milestone to auto-dispatch show-hn-draft on threshold crossing — removes the last manual gate.
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-04.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-06.md

@@ -1,0 +1,337 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-06-06"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-source",
+        "sep-1",
+        "item-1",
+        "sep-2",
+        "item-2",
+        "sep-3",
+        "item-3",
+        "sep-4",
+        "item-4",
+        "sep-5",
+        "item-5",
+        "sep-final",
+        "link-details"
+      ]
+    },
+    "text-source": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (487 stars, 165 forks, approaching 500 stars around June 11) and the aeon-agent + minitor codebases.",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-1",
+        "badges-1",
+        "text-1"
+      ]
+    },
+    "h1-1": {
+      "type": "Heading",
+      "props": {
+        "text": "OAuth credential write-back in aeon.yml",
+        "level": "h3"
+      }
+    },
+    "badges-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1-cat",
+        "badge-1-size"
+      ]
+    },
+    "badge-1-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      }
+    },
+    "badge-1-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "text-1": {
+      "type": "Text",
+      "props": {
+        "text": "Fixes the 401 auth loop from issue #352 — refresh tokens are single-use, the runner discards updated credentials on exit. A guarded write-back step after every claude run breaks the cycle."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-2",
+        "badges-2",
+        "text-2"
+      ]
+    },
+    "h1-2": {
+      "type": "Heading",
+      "props": {
+        "text": "vigil-revoke skill",
+        "level": "h3"
+      }
+    },
+    "badges-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-2-cat",
+        "badge-2-size"
+      ]
+    },
+    "badge-2-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Security",
+        "variant": "destructive"
+      }
+    },
+    "badge-2-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "text-2": {
+      "type": "Text",
+      "props": {
+        "text": "VIGIL review explicitly deferred the Approval Revoker. wallet-risk-weekly now identifies HIGH-bucket approvals weekly. vigil-revoke closes the detection to remediation loop via Bankr."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-3",
+        "badges-3",
+        "text-3"
+      ]
+    },
+    "h1-3": {
+      "type": "Heading",
+      "props": {
+        "text": "skill-of-the-day backport",
+        "level": "h3"
+      }
+    },
+    "badges-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-3-cat",
+        "badge-3-size"
+      ]
+    },
+    "badge-3-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Community",
+        "variant": "outline"
+      }
+    },
+    "badge-3-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "text-3": {
+      "type": "Text",
+      "props": {
+        "text": "Nurstar PR #341 — daily rotation-queue pick + paste-ready tweet + live dispatch. 23rd consecutive same-day-after backport. No complex dependencies."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-4",
+        "badges-4",
+        "text-4"
+      ]
+    },
+    "h1-4": {
+      "type": "Heading",
+      "props": {
+        "text": "Minitor: column width control",
+        "level": "h3"
+      }
+    },
+    "badges-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-4-cat",
+        "badge-4-size"
+      ]
+    },
+    "badge-4-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "default"
+      }
+    },
+    "badge-4-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "text-4": {
+      "type": "Text",
+      "props": {
+        "text": "8th rung on the per-column UX axis: narrow/normal/wide toggle (240/360/480px). News feeds need wide; price columns run dense. View-state, no migration needed."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "h1-5",
+        "badges-5",
+        "text-5"
+      ]
+    },
+    "h1-5": {
+      "type": "Heading",
+      "props": {
+        "text": "show-hn-draft auto-fire at 500 stars",
+        "level": "h3"
+      }
+    },
+    "badges-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-5-cat",
+        "badge-5-size"
+      ]
+    },
+    "badge-5-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth",
+        "variant": "default"
+      }
+    },
+    "badge-5-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "text-5": {
+      "type": "Text",
+      "props": {
+        "text": "PR #151 open 35 days. 500 stars arrives around June 11 at current pace. Wire star-milestone to auto-dispatch show-hn-draft on threshold crossing — removes the last manual gate."
+      }
+    },
+    "sep-final": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-details": {
+      "type": "Link",
+      "props": {
+        "label": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-06.md"
+      }
+    }
+  }
+}
