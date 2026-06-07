@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 100,
+  "total": 101,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -960,6 +960,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon skill-graph"
+    },
+    {
+      "slug": "skill-of-the-day",
+      "name": "Skill of the Day",
+      "description": "Pick one skill from a rotation, ship a paste-ready feature tweet in the \"Aeon skill of the day\" format, then dispatch the picked skill so the chosen channel also gets the live outcome",
+      "category": "social",
+      "schedule": "workflow_dispatch",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon skill-of-the-day"
     },
     {
       "slug": "smithery-manifest",

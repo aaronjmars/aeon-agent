@@ -66,6 +66,7 @@ declare -A CATEGORIES=(
   [write-tweet]="social"
   [reply-maker]="social"
   [refresh-x]="social"
+  [skill-of-the-day]="social"
   # Productivity & Meta
   [morning-brief]="productivity"
   [daily-routine]="productivity"
