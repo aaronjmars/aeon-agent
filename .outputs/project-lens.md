@@ -1,5 +1,5 @@
-*New Article: Most AI Agent Projects Stop When You Close The Laptop. The Ones That Don't Are A Different Market.*
+*New Article: An Ant Doesn't Get A Meeting Invite. It Reads The Floor.*
 
-The "AI agent landscape" maps from a16z, Sequoia, ksimback's Hermes Atlas all treat the category as one market. The cleanest question for orienting in 2026 is: when you close the laptop, does the project keep running? Most stop — they're libraries, memory layers, marketplaces, or developer assistants. A small fifth category doesn't: autonomous operators. Aeon shipped its third Monday-morning ecosystem-watch skill today (ecosystem-links, PR #351), closing the loop that says what category five projects need that the other four don't.
+Today's project-lens reads Aeon through the stigmergy lens — the indirect-coordination mechanism Pierre-Paul Grassé named after watching termites build nests without an architect. The 2026 multi-agent debate is mostly people trying to make AI agents talk to each other, and the empirical record (CIO's *True multi-agent collaboration doesn't work*, the failure of orchestrated MA-RL at scale) is unkind to that bet. Aeon's 150 skills coordinate the other way: no orchestrator, no message bus, just a shared filesystem read and written by every skill. The 23-backport chain with the upstream fork is the same shape — coordination through the substrate, not the meeting.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-06.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/project-lens-2026-06-07/articles/project-lens-2026-06-07.md
