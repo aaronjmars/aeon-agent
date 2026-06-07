@@ -1,0 +1,120 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon Daily — 2026-06-07"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics_grid",
+        "separator_1",
+        "narrative_text",
+        "chart_link"
+      ]
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_24h_vol",
+        "stat_liquidity",
+        "stat_buys_sells",
+        "stat_7d",
+        "stat_30d"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002924",
+        "delta": "+19.52%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_24h_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$215.0K",
+        "delta": "-21.0%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.21M"
+      },
+      "children": []
+    },
+    "stat_buys_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "356/204 (1.74:1 buy-dominant)"
+      },
+      "children": []
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "-13.5%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+880%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "narrative_text": {
+      "type": "Text",
+      "props": {
+        "text": "Recovery bounce on lower volume — price rallied to $0.0000316 intraday before settling at $0.0000292; LP liquidity expanded to $1.21M (highest recent reading).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}
