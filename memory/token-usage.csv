@@ -520,4 +520,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-07,token-report,claude-sonnet-4-6,13,13009,822694,77197
 2026-06-07,star-momentum-alert,claude-sonnet-4-6,14,12431,741425,54986
 2026-06-07,feature,claude-opus-4-7,152,87343,25751264,317448
-2026-06-07,star-milestone,claude-opus-4-7,11,5159,319412,31728
+2026-06-07,push-recap,claude-opus-4-7,124,24080,2690113,178838
