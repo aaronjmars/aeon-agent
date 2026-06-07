@@ -1,0 +1,197 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-07 | aaronjmars/aeon"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_section",
+        "sep1",
+        "stargazers_section",
+        "sep2",
+        "forks_section"
+      ]
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "490",
+        "delta": "+6",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "166",
+        "delta": "+3",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stargazers",
+        "stack_stargazers"
+      ]
+    },
+    "heading_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers (6)",
+        "level": "h3"
+      }
+    },
+    "stack_stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_sg1",
+        "link_sg2",
+        "link_sg3",
+        "link_sg4",
+        "link_sg5",
+        "link_sg6"
+      ]
+    },
+    "link_sg1": {
+      "type": "Link",
+      "props": {
+        "label": "jpoll962",
+        "href": "https://github.com/jpoll962"
+      }
+    },
+    "link_sg2": {
+      "type": "Link",
+      "props": {
+        "label": "HT-Moh",
+        "href": "https://github.com/HT-Moh"
+      }
+    },
+    "link_sg3": {
+      "type": "Link",
+      "props": {
+        "label": "CharonAI-code",
+        "href": "https://github.com/CharonAI-code"
+      }
+    },
+    "link_sg4": {
+      "type": "Link",
+      "props": {
+        "label": "mertdemir0",
+        "href": "https://github.com/mertdemir0"
+      }
+    },
+    "link_sg5": {
+      "type": "Link",
+      "props": {
+        "label": "asorourx",
+        "href": "https://github.com/asorourx"
+      }
+    },
+    "link_sg6": {
+      "type": "Link",
+      "props": {
+        "label": "ynk7",
+        "href": "https://github.com/ynk7"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_forks",
+        "stack_forks"
+      ]
+    },
+    "heading_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks (3)",
+        "level": "h3"
+      }
+    },
+    "stack_forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork1",
+        "link_fork2",
+        "link_fork3"
+      ]
+    },
+    "link_fork1": {
+      "type": "Link",
+      "props": {
+        "label": "alfahadgm/aeon",
+        "href": "https://github.com/alfahadgm/aeon"
+      }
+    },
+    "link_fork2": {
+      "type": "Link",
+      "props": {
+        "label": "dannysrod/aeon",
+        "href": "https://github.com/dannysrod/aeon"
+      }
+    },
+    "link_fork3": {
+      "type": "Link",
+      "props": {
+        "label": "NASTYZUNI/aeon",
+        "href": "https://github.com/NASTYZUNI/aeon"
+      }
+    }
+  }
+}
