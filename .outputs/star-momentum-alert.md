@@ -1,18 +1,19 @@
-Done. Here's the summary:
-
 ## Summary
 
-**Skill**: `star-momentum-alert` — 2026-06-06 run
+**Skill executed: `star-momentum-alert`** — 2026-06-07
 
-**Repos audited**: 2 (aaronjmars/aeon, aaronjmars/minitor; aeon-agent filtered)
+**Repos audited:** 2 (aaronjmars/aeon-agent filtered as infrastructure mirror)
 
-**Results**:
-- **aaronjmars/aeon**: `OUT_OF_WINDOW` — at 484⭐, pace is 3.57⭐/day (v7) projecting the 500⭐ milestone on 2026-06-11 (Thursday) — only 5 days out, below the 7-day minimum dispatch window. The milestone is very close; if pace holds, the window closes before an alert can meaningfully fire.
-- **aaronjmars/minitor**: `STALLED` — stuck at 11⭐ with v7=0.0/day for the past week.
+| Repo | Stars | Target | Days Out | Verdict |
+|------|-------|--------|----------|---------|
+| aaronjmars/aeon | 487 | 500 | 4d | OUT_OF_WINDOW |
+| aaronjmars/minitor | 11 | 50 | — | STALLED |
 
-**Alerts sent**: 0 — `STAR_MOMENTUM_NO_ALERTS`
+**Key finding:** `aaronjmars/aeon` is 13 stars from 500⭐, projected to cross on **2026-06-11 (Thursday)** at 3.29 stars/day. That's only 4 days out — below the 7-day minimum needed to dispatch `show-hn-draft` thoughtfully. The launch window has passed; `star-milestone` will handle the celebration when 500 lands.
 
-**Files written**:
-- `articles/star-momentum-2026-06-06.md` — full projection report
-- `memory/topics/star-momentum-state.json` — updated `last_run_at`
-- `memory/logs/2026-06-06.md` — log block appended
+**Status: `STAR_MOMENTUM_NO_ALERTS`** — no notification sent.
+
+**Files written:**
+- `articles/star-momentum-2026-06-07.md`
+- `memory/topics/star-momentum-state.json` (updated `last_run_at`)
+- `memory/logs/2026-06-07.md` (log block appended)
