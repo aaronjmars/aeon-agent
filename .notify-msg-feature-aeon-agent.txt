@@ -1,0 +1,21 @@
+*Feature Built — 2026-06-07 — aaronjmars/aeon-agent*
+
+Skill of the Day (backport)
+A daily meta-content skill that turns the 100-skill aeon-agent catalog into a paste-ready content cadence. Each dispatch produces two notifications: a long-form "Aeon skill of the day" tweet draft the operator copies to X, and the picked skill's own live `./notify` output a few minutes later — that second message becomes the "Result ⤵️" screenshot inside the tweet. The skill is `workflow_dispatch` only; the operator decides when the day's beat goes out.
+
+Why this matters:
+This is the 23rd consecutive same-day-after backport from upstream `aaronjmars/aeon` — the chain ran zero gap days. Upstream PR #341 from contributor Nurstar shipped on Jun-04 and `articles/repo-actions-2026-06-06.md` named it as "the cleanest unbackported skill in the current queue." aeon-agent has been growing the catalog faster than it surfaces what's in it: 100 skills shipped, but no daily content beat that points at any specific one. This skill closes that gap — the operator gets a fresh angle every day with no copy-writing work, while the dispatched skill's own live notify becomes the unfaked screenshot.
+
+What was built:
+- `skills/skill-of-the-day/SKILL.md`: New skill, 7 steps. Queue precedence: `${var}` override → `memory/topics/skill-of-the-day.md` Queue → `ls skills/` catalog fallback. 30-day Covered window in the queue file prevents the same skill from re-appearing within a month. Blocklist suppresses meta/internal skills that don't read as features. Step 6 lazily creates the queue file's canonical three-section layout the first time the skill writes to it — so a fresh aeon-agent install needs zero manual queue priming.
+- `aeon.yml`: Registered disabled at `workflow_dispatch` between `skill-graph` and `smithery-manifest` (alphabetical Upstream sync section).
+- `generate-skills-json`: Added `[skill-of-the-day]="social"` to the CATEGORIES associative array, alongside the existing `social` entries.
+- `skills.json`: Total 100 → 101, entry inserted alphabetically between `skill-graph` and `smithery-manifest`.
+
+How it works:
+Step 4 sends the drafted tweet with `./notify "$(cat .outputs/skill-of-the-day.md)"`. This is the **first backport in 23 rounds where the upstream `./notify` call style needed no translation** — spend-monitor (PR #74), follow-up-patrol (PR #76), narrative-convergence (PR #80), and mcp-pulse (PR #82) all rewrote upstream's `./notify -f file` style into aeon-agent's positional `$(cat <temp>)` argv style (CLAUDE.md says aeon-agent's notify reads `MSG="$1"`). PR #341 used the positional style from the start, so the backport translates by leaving the line alone. Step 5 fires `gh workflow run aeon.yml -f skill="${PICK}"` verbatim — confirmed against aeon-agent's `.github/workflows/aeon.yml` that the same `workflow_dispatch` `skill` input exists upstream and here.
+
+What's next:
+PR #272's backport queue (spend-monitor + follow-up-patrol + narrative-convergence + mcp-pulse) is now fully consumed except for fleet-scorecard, which depends on `memory/instances.json` + `scripts/prefetch-fleet-scorecard.sh` that aeon-agent doesn't currently maintain. The next backport round is wide-open: any upstream skill that lands by Jun-07 is fair game.
+
+PR: https://github.com/aaronjmars/aeon-agent/pull/85

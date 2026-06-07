@@ -1,24 +1,18 @@
-*Feature Built — 2026-06-06 — aaronjmars/minitor*
+All three features built, PRs opened, and detailed notifications queued for delivery via the workflow's post-run step.
 
-Per-deck color labels
-Decks in minitor can now be tagged with a color. The chosen color renders as the identity dot in the sidebar header (replacing the brand active/inactive dot) and as a small circular dot next to the deck name in the top bar of whichever deck is open. Operators can pick from 8 preset swatches (orange, green, blue, purple, pink, yellow, cyan, slate) or paste in any 6-digit hex. Same palette and same normalization as the per-column color labels shipped yesterday, so an operator who learned "DeFi = orange" from column tagging can apply the convention at the deck level and the two surfaces stay coherent.
+## Summary
 
-Why this matters:
-The per-column UX axis is now well-covered (tab groups → collapse → JSON export → quick-search → pin → duplicate → column color labels — seven rungs over the last two weeks). The next bottleneck — flagged in the Jun-04 repo-actions article — is visual organization at the deck level. At five or more decks per operator, the sidebar's identical-looking deck headers become a scan-time bottleneck; a Markets deck and a Dev deck should look different at a glance, not just by name. Color is the deck-level analog of the per-column work — the same affordance, one level up.
+| Repo | Outcome | PR |
+|------|---------|-----|
+| aaronjmars/aeon | **Built** — `vigil-revoke` skill (new `workflow_dispatch`-only skill, closes the detection→revoke loop VIGIL PR #323 explicitly split out; pairs with `wallet-risk-weekly` which has been surfacing HIGH-bucket approvals with no autonomous remedy path since Jun-04). Capabilities: `external_api, writes_external_host, onchain_writes, sends_notifications`. skills.json 193→194. | https://github.com/aaronjmars/aeon/pull/354 |
+| aaronjmars/aeon-agent | **Built** — `skill-of-the-day` backport from upstream PR #341 (Nurstar, Jun-04). 23rd consecutive same-day-after backport. First backport where `./notify` wiring needed no translation (upstream already used positional `$(cat ...)` argv style). skills.json 100→101. | https://github.com/aaronjmars/aeon-agent/pull/85 |
+| aaronjmars/minitor | **Built** — Per-column width control (narrow/normal/wide) — 8th rung on the per-column UX axis. View-state only (no DB schema, no migration, no `DECK_EXPORT_VERSION` bump). Default branch character-identical to prior class so existing decks render pixel-identical until opt-in. | https://github.com/aaronjmars/minitor/pull/63 |
 
-What was built:
-- drizzle/0009_deck_color.sql + journal + 0009_snapshot.json: additive nullable text column on decks (no churn on existing rows, no migration risk).
-- lib/db/schema.ts + lib/columns/types.ts: Deck.color?: string field with inline doc on sidebar and top-bar rendering.
-- app/actions.ts: new updateDeckColor server action that reuses the column-level normalizeColumnColor (so case-folding and shorthand rejection can never drift between deck and column surfaces); exportDeck emits an optional deckColor field; importDeck re-validates through the same normalizer and propagates the persisted color back to the optimistic client store via ImportedDeckResult.deckColor.
-- lib/store/use-deck-store.ts: updateDeckColor zustand action mirroring renameDeck's optimistic-then-server pattern; importedDeckPatch carries the color through deck imports.
-- components/dialogs/deck-color-dialog.tsx: new dialog with the same 8 preset swatches + Clear button + freeform hex input + live invalid-hex error as the column picker. Save only enables when the value would actually change — opening and closing without touching anything is a no-op.
-- components/sidebar-01/nav-decks.tsx: "Set color" / "Change color" menu item between Rename and Version history; tagged-deck dot renders in the operator's color (full opacity active, 65% inactive).
-- components/deck/deck-view.tsx: 10px circular dot next to the deck name in the top bar when the active deck has a color.
+**Files changed (this repo):**
+- `memory/MEMORY.md` — added three Skills Built rows for 2026-06-07; updated Repo Actions Ideas Pipeline with Jun-07 burned status.
+- `memory/logs/2026-06-07.md` — appended `## Feature Built` section with per-repo entries.
+- `.pending-notify/1780831418-feature-aeon.md`, `1780831419-feature-aeon-agent.md`, `1780831420-feature-minitor.md` — three detailed notifications queued for workflow's post-run delivery step (sandbox-safe fallback per CLAUDE.md pattern).
 
-How it works:
-The 6-hex color is server-validated against the same /^#[0-9a-f]{6}$/i regex columns use, lowercased on persist. Old deck exports created before this feature simply omit the deckColor field and import as a deck with color=null — the Zod schema is additive, not a v2 bump. Operator color overrides the active-deck brand color on the sidebar dot: when a deck is tagged, the dot stays in its color even when active, because swapping to the brand color would erase the operator's intent. Inactive tagged decks dip to 65% opacity so the active deck still reads as primary. Renames and color changes deliberately don't snapshot the deck — they're metadata, not structural — version history continues to cover add/remove/reorder/duplicate/import/restore only.
-
-What's next:
-Could extend to deck icons (lucide names + emoji) for one more visual axis at the deck level — color and icon together make 5+ decks instantly distinguishable. Could also let starter templates ship pre-colored (the deckColor field is already in DeckTemplatePayload, just no templates use it yet).
-
-PR: https://github.com/aaronjmars/minitor/pull/62
+**Follow-ups:**
+- Jun-06 idea #1 (OAuth credential write-back, aeon) and #5 (show-HN-draft auto-fire at 500⭐, aeon) deferred — #1 touches CORE files (aeon.yml + chain-runner.yml) at higher autonomous-PR risk than the additive `vigil-revoke` skill chosen; #5 carried for the natural cron post-500⭐ crossing (currently 490⭐, ~4d out per today's star-momentum-alert).
+- aeon PR #354 is the first scheduled-consumer-free state-changing companion to the HoundFlow read-only pack — five other HoundFlow skills (`lp-lock-check`, `linked-wallets`, `fund-flow`, `investigation-report`, plus the read-only `honeypot-check` and `approval-audit` which `wallet-risk-weekly` already consumes) remain without a write-side companion.

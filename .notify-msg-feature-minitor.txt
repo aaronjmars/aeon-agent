@@ -1,0 +1,19 @@
+*Feature Built — 2026-06-07 — aaronjmars/minitor*
+
+Per-column width control (narrow / normal / wide)
+Every minitor column was a fixed 360px until today. With this PR, the operator can pick narrow (240px), normal (360px, the historical default), or wide (480px) per column from the More-menu dropdown. The active width gets a brand-coloured check next to it. A crypto price column reads densest narrow — token symbol + price + delta fits in ~180px and the wasted right margin disappears. A news-feed column reads best wide — headline text stops wrapping mid-sentence at 360. Three discrete sizes cover the real spread without a draggable resize handle.
+
+Why this matters:
+This is the 8th rung on the per-column UX axis. Looking back at the chain: tab groups (May-29 PR #53) → collapse (May-30 PR #55) → JSON export (May-31 PR #56) → quick-search (Jun-02 PR #58) → pin (Jun-03 PR #59) → duplicate (Jun-04 PR #60) → color labels (Jun-05 PR #61) → **width (today)**. Operators with 10–15 columns per deck have been mentally tolerating wasted space on price columns and scrunched headlines on RSS feeds for months. `articles/repo-actions-2026-06-06.md` named this as the natural next ergonomic surface — a single-click toggle, no resize handle, no compound interaction with collapse or pin.
+
+What was built:
+- `lib/store/use-deck-store.ts` (+62 / -1): New `ColumnWidth` type, new `widthByColumn: Record<string, ColumnWidth>` view-state field initialised `{}`, new `setColumnWidth(columnId, width|null)` action. `width === null` clears back to the absence-from-map state (default 360px). Same-width re-click is a no-op that returns the prior state object so React skips re-render on a hot menu path. `deleteDeck` and `removeColumn` actions extended to scrub stale `widthByColumn` entries alongside `collapsedColumnIds`/`searchByColumn` — stale entries from deleted columns can't accumulate across long sessions.
+- `components/column/column-card.tsx` (+47 / -1): New lucide-react imports (`Check`, `Maximize2`, `Minimize2`). Reads `columnWidth` and `setColumnWidth` from the store. Computes a resolved `widthClass` per render: narrow → `sm:w-[240px]`, wide → `sm:w-[480px]`, default → `sm:w-[360px]` (exact historical class). `transition-shadow` → `transition-[box-shadow,width]` so width changes animate smoothly. Three new `DropdownMenuItem` entries between *Download items* and *Delete*, each with a brand-coloured `Check` next to the active width.
+
+How it works:
+Width is **view-state only** — same lifetime as `collapsedColumnIds` and `searchByColumn`. Reload returns every column to 360px. Deck export/import/share-links carry no width data. The pattern follows the rule used across the deck-density axis: what defines the deck's identity goes in the DB; how the operator is reading it right now stays in memory. Going DB-backed would have meant a `drizzle/0010_column_width.sql` migration, a server action, a `DECK_EXPORT_VERSION` bump, and round-tripping through every export/import/share-link/snapshot path — none of that pays for itself for an ergonomic-only knob the operator changes a few times per session. Mobile (`<sm`) clamps to `min(360px, calc(100vw-1rem))` regardless of the width override — a 480px column would overflow a phone viewport — so width is a desktop-only ergonomic. Collapse still owns its 48px strip; the saved width re-applies on expand from the in-memory map.
+
+What's next:
+Per-column UX axis is at 8 rungs and starting to feel saturated for a single column. Natural future surfaces include: per-deck width defaults (apply "wide" to every column in a news-feed deck), per-typeId width defaults from the plugin manifest (price plugins default narrow), or operator-defined custom widths beyond the three steps.
+
+PR: https://github.com/aaronjmars/minitor/pull/63
