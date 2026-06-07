@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-06*
-Topic: per-deck color labels — visual organization at the deck level (minitor PR #62)
+Thread Draft — 2026-06-07
+Topic: vigil-revoke — the write-side companion that closes the onchain detection loop (aeon PR #354)
 
-1/ Minitor shipped per-column color labels yesterday. Today it shipped per-deck color labels. Same 8 swatches, same hex normalizer, same server-side format enforcement. Visual organization is now a coherent system across both levels.
+1/ VIGIL shipped a read-only ERC-20 approval scanner to aeon on June 4. The PR body said the revoke half was split out — a separate skill, Bankr-gated, deferred. Today aeon wrote it.
 
-2/ A minitor deck running 15 columns has a visual scan problem. Operators mentally group columns — DeFi vs dev vs news vs social — but the UI had no in-app marker for it. You knew what your columns were; the UI just showed them all the same way.
+2/ For three days, wallet-risk-weekly had been surfacing HIGH-bucket ERC-20 approvals on Base wallets — UNLIMITED grants to unrecognized spenders, or approvals on likely-honeypot tokens. The findings sat in a log. There was no autonomous path to act on them.
 
-3/ Per-deck color labels give each deck a 6-hex dot that appears in the sidebar and in the deck header. When a deck is active, the dot holds its operator-assigned color — not the brand accent. Inactive tagged decks drop to 65% opacity so the active deck still reads as primary.
+3/ vigil-revoke takes a wallet:spender:token triplet — the exact tuple approval-audit and VIGIL emit. Before touching the chain, it checks Bankr ownership to reject cross-wallet submissions, then reads current allowance. If already zero, it stops. No gas spent, no action taken.
 
-4/ Eight consecutive UX features on minitor in nine days — tab groups, collapse, JSON export, quick-search, pin, duplicate, column colors, deck colors. Each is independent of the others. Each composes with the others. None required a DB schema rewrite.
+4/ The pattern is becoming legible: external contributors ship the read-only half of a security tool, name the write half as out of scope, and move on. The framework fills in what they deferred. Detection without remediation is just a report.
 
-5/ Per-deck color labels — the deck-level visual system that keeps columns, decks, and exports coherent. https://github.com/aaronjmars/minitor/pull/62
+5/ vigil-revoke: the write-side companion that closes the detection loop for ERC-20 approvals on Base. https://github.com/aaronjmars/aeon/pull/354
 
-(article: articles/thread-2026-06-06.md)
+(article: articles/thread-2026-06-07.md)
