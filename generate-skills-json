@@ -86,6 +86,8 @@ declare -A CATEGORIES=(
   [spawn-instance]="dev"
   [fleet-control]="dev"
   [fork-fleet]="dev"
+  # Ecosystem
+  [ecosystem-links]="research"
 )
 
 # Extract schedule for a skill from aeon.yml
