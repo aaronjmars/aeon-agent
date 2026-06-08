@@ -1,0 +1,165 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "aaronjmars/aeon — 2026-06-08"
+      },
+      "children": [
+        "stats_stack",
+        "sep1",
+        "stargazers_section",
+        "sep2",
+        "forks_section"
+      ]
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "492",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "167",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_stargazers",
+        "stargazers_list"
+      ]
+    },
+    "heading_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_1",
+        "link_2",
+        "link_3",
+        "link_4"
+      ]
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "asorourx",
+        "href": "https://github.com/asorourx"
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "ynk7",
+        "href": "https://github.com/ynk7"
+      }
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "MarcoWorms",
+        "href": "https://github.com/MarcoWorms"
+      }
+    },
+    "link_4": {
+      "type": "Link",
+      "props": {
+        "label": "Unszeil",
+        "href": "https://github.com/Unszeil"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_forks",
+        "forks_list"
+      ]
+    },
+    "heading_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork_1",
+        "fork_2"
+      ]
+    },
+    "fork_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mnemedb/aeon",
+        "href": "https://github.com/mnemedb/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NASTYZUNI/aeon",
+        "href": "https://github.com/NASTYZUNI/aeon",
+        "source": "GitHub"
+      }
+    }
+  }
+}
