@@ -51,7 +51,7 @@
       "type": "StoryLink",
       "props": {
         "title": "An Ant Doesn't Get A Meeting Invite. It Reads The Floor.",
-        "href": "https://github.com/aaronjmars/aeon-agent/blob/project-lens-2026-06-07/articles/project-lens-2026-06-07.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-07.md",
         "source": "aeon-agent"
       },
       "children": []
