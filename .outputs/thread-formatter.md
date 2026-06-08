@@ -1,14 +1,14 @@
-Thread Draft — 2026-06-07
-Topic: vigil-revoke — the write-side companion that closes the onchain detection loop (aeon PR #354)
+Thread Draft — 2026-06-08
+Topic: per-deck drag-to-reorder (minitor PR #65)
 
-1/ VIGIL shipped a read-only ERC-20 approval scanner to aeon on June 4. The PR body said the revoke half was split out — a separate skill, Bankr-gated, deferred. Today aeon wrote it.
+1/ reorderDecks was already in the minitor store. Already wired to the server. Already saving to the database. For however long the sidebar has existed, you could reorder decks — in code. There was just no drag handle. Today there is.
 
-2/ For three days, wallet-risk-weekly had been surfacing HIGH-bucket ERC-20 approvals on Base wallets — UNLIMITED grants to unrecognized spenders, or approvals on likely-honeypot tokens. The findings sat in a log. There was no autonomous path to act on them.
+2/ The workaround was delete and re-create. Any deck you wanted to move cost you its column configuration, its version history, and whatever snapshot the operator had taken. Fifteen-deck setups were basically fixed in place once named.
 
-3/ vigil-revoke takes a wallet:spender:token triplet — the exact tuple approval-audit and VIGIL emit. Before touching the chain, it checks Bankr ownership to reject cross-wallet submissions, then reads current allowance. If already zero, it stops. No gas spent, no action taken.
+3/ GripVertical handle on the left edge of each deck row, visible on hover. Pointer activation distance 4px — same threshold as column DnD — so a stray click doesn't start a sort. Layout reservation is constant so deck names don't reflow when you move your cursor.
 
-4/ The pattern is becoming legible: external contributors ship the read-only half of a security tool, name the write half as out of scope, and move on. The framework fills in what they deferred. Detection without remediation is just a report.
+4/ The per-column axis — eight consecutive UX rungs in seven days — is now mirrored at the deck level. Color labels last week. Drag reorder today. The pattern is the same: one composable feature at a time, each independent of the others, none requiring a schema rewrite.
 
-5/ vigil-revoke: the write-side companion that closes the detection loop for ERC-20 approvals on Base. https://github.com/aaronjmars/aeon/pull/354
+5/ Per-deck drag-to-reorder in minitor — the sidebar-level complement to column DnD. https://github.com/aaronjmars/minitor/pull/65
 
-(article: articles/thread-2026-06-07.md)
+(article: articles/thread-2026-06-08.md)
