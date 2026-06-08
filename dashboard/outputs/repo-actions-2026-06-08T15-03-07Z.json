@@ -1,0 +1,243 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas",
+        "description": "2026-06-08"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-header",
+        "sep1",
+        "item1-stack",
+        "sep2",
+        "item2-stack",
+        "sep3",
+        "item3-stack",
+        "sep4",
+        "item4-stack",
+        "sep5",
+        "item5-stack",
+        "sep6",
+        "link-details"
+      ]
+    },
+    "text-header": {
+      "type": "Text",
+      "props": {
+        "text": "Generated from analysis of aaronjmars/aeon (493⭐, 500 in ~3d), aeon-agent (102 skills, 24 backports), and minitor (9 UX rungs in 11 days). Jun-06 ideas fully consumed.",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item1-heading",
+        "item1-badge",
+        "item1-desc"
+      ]
+    },
+    "item1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Phase 2 capabilities declarations sweep",
+        "level": "h3"
+      }
+    },
+    "item1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DX, Medium"
+      }
+    },
+    "item1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Batch-infer and declare capabilities for the ~150+ undeclared skills; cleans the noisy (undeclared) row in capabilities-map in one PR."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item2-heading",
+        "item2-badge",
+        "item2-desc"
+      ]
+    },
+    "item2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "ecosystem-entrants backport",
+        "level": "h3"
+      }
+    },
+    "item2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration, Small"
+      }
+    },
+    "item2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "25th consecutive same-day-after backport; closes the 3-skill ecosystem loop on aeon-agent — pulse + entrants + links all live."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item3-heading",
+        "item3-badge",
+        "item3-desc"
+      ]
+    },
+    "item3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Deck keyboard navigation shortcuts",
+        "level": "h3"
+      }
+    },
+    "item3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DX, Small"
+      }
+    },
+    "item3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "j/k column focus + / quick-search + c collapse + Escape — no keyboard layer exists in minitor today; single keydown listener at DeckBoard level."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item4-heading",
+        "item4-badge",
+        "item4-desc"
+      ]
+    },
+    "item4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "show-hn-draft prompt refresh",
+        "level": "h3"
+      }
+    },
+    "item4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth, Small"
+      }
+    },
+    "item4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Auto-dispatch fires at 500⭐ (~Jun 11); update the SKILL.md context from early-May snapshot to current state (193 skills, 8 categories, 166 forks, external contributors, onchain security layer)."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "item5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item5-heading",
+        "item5-badge",
+        "item5-desc"
+      ]
+    },
+    "item5-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "install-from-atrium script backport",
+        "level": "h3"
+      }
+    },
+    "item5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration, Small"
+      }
+    },
+    "item5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Prerequisites the atrium-catalog-watcher backport (explicitly blocked today); shell script port that unlocks the 26th consecutive backport."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-details": {
+      "type": "Link",
+      "props": {
+        "label": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-08.md"
+      }
+    }
+  }
+}
