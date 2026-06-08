@@ -59,6 +59,7 @@
 | 2026-06-06 | Aeon Has 193 Skills. Fifteen Of Them Are The Machine. Yesterday The Framework Labelled Them. | repo-article |
 | 2026-06-06 | Most AI Agent Projects Stop When You Close The Laptop. The Ones That Don't Are A Different Market. | project-lens |
 | 2026-06-07 | Three Days Ago A Stranger Shipped Aeon's Onchain Scanner. This Morning The Framework Wrote The Skill That Acts On What It Finds. | repo-article |
+| 2026-06-08 | Aeon Is Six Stars From A Launch The Operator Drafted Thirty-Eight Days Ago And Never Enabled. This Morning The Framework Wired The Trigger That Will Fire It. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
