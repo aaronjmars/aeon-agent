@@ -1,0 +1,409 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-08"
+      },
+      "children": [
+        "overview",
+        "sep1",
+        "framework_section",
+        "sep2",
+        "ecosystem_section",
+        "sep3",
+        "aeon_agent_section",
+        "sep4",
+        "minitor_section",
+        "sep5",
+        "key_changes_section",
+        "sep6",
+        "stats_section"
+      ]
+    },
+    "overview": {
+      "type": "Text",
+      "props": {
+        "text": "14 substantive merges across aeon, aeon-agent, minitor (plus ~30 cron auto-commits). Centre of gravity: a 98-minute window on aeon between 11:11 and 12:49 UTC.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "framework_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "framework_title",
+        "framework_items"
+      ]
+    },
+    "framework_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Three new framework skills on aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "framework_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skill1",
+        "skill2",
+        "skill3"
+      ]
+    },
+    "skill1": {
+      "type": "Text",
+      "props": {
+        "text": "ecosystem-links (PR #351) — weekly Monday URL-health audit of ECOSYSTEM.md with two-strike INCONCLUSIVE rule so sandbox-blocked outbounds can't false-flag DEAD; closes the three-skill ecosystem loop (pulse + entrants + links)."
+      },
+      "children": []
+    },
+    "skill2": {
+      "type": "Text",
+      "props": {
+        "text": "vigil-revoke (PR #354) — Bankr-gated approval revoker with wallet:spender:token triplet allowlist, pre-flight wallet check, NOOP short-circuit on already-zero, chain-confirmed success; closes the detection→revoke loop wallet-risk-weekly opened Jun-04."
+      },
+      "children": []
+    },
+    "skill3": {
+      "type": "Text",
+      "props": {
+        "text": "star-milestone auto-dispatch (PR #358) — first cross-skill routing wire on the framework, seeded aeon:500 → show-hn-draft so the launch draft fires on its own when aeon crosses 500★ (~Jun-11 at v7=3.6/day; currently 492)."
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "ecosystem_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ecosystem_title",
+        "ecosystem_items"
+      ]
+    },
+    "ecosystem_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Three external ecosystem entries on aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "ecosystem_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "entry1",
+        "entry2",
+        "entry3"
+      ]
+    },
+    "entry1": {
+      "type": "Text",
+      "props": {
+        "text": "Mneme (agent-native database with pgvector + graph + Base streams + async LLM reflection, 8-skill pack)"
+      },
+      "children": []
+    },
+    "entry2": {
+      "type": "Text",
+      "props": {
+        "text": "Careful Finance pack"
+      },
+      "children": []
+    },
+    "entry3": {
+      "type": "Text",
+      "props": {
+        "text": "SIGNA pack update from 10→20 skills now shipping bounded spend mandates + x402 receipts."
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "aeon_agent_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_agent_title",
+        "aeon_agent_items"
+      ]
+    },
+    "aeon_agent_title": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon-agent",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "aeon_agent_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_update1",
+        "aeon_update2",
+        "aeon_update3",
+        "aeon_update4"
+      ]
+    },
+    "aeon_update1": {
+      "type": "Text",
+      "props": {
+        "text": "shell-substitution anti-pattern chain finally closed across last 2 sites (PR #83 — chain ran 6 PRs over 13 days)"
+      },
+      "children": []
+    },
+    "aeon_update2": {
+      "type": "Text",
+      "props": {
+        "text": "self-improve now reads cron-state.json instead of sandbox-blocked skill-runs (PR #84)"
+      },
+      "children": []
+    },
+    "aeon_update3": {
+      "type": "Text",
+      "props": {
+        "text": "23rd consecutive same-day-after backport — skill-of-the-day from upstream PR #341 (PR #85, first backport in chain where notify wiring needed no translation)"
+      },
+      "children": []
+    },
+    "aeon_update4": {
+      "type": "Text",
+      "props": {
+        "text": "repo-pulse now enriches new stargazers/forkers with gh api users/$LOGIN profile data + low-signal fake-star flag (PR #88, lands first run tomorrow)."
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "minitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor_title",
+        "minitor_items"
+      ]
+    },
+    "minitor_title": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "minitor_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor_update1",
+        "minitor_update2",
+        "minitor_update3"
+      ]
+    },
+    "minitor_update1": {
+      "type": "Text",
+      "props": {
+        "text": "8th rung on per-column UX axis — width control narrow/normal/wide as view-state (PR #63)"
+      },
+      "children": []
+    },
+    "minitor_update2": {
+      "type": "Text",
+      "props": {
+        "text": "per-deck color labels (DB-backed, round-trips through export/import, deck-axis analog of column color PR #61) (PR #62)"
+      },
+      "children": []
+    },
+    "minitor_update3": {
+      "type": "Text",
+      "props": {
+        "text": "DeFiLlama gainers gets a default $1M TVL floor so $500 microcaps doubling overnight don't outrank $1B protocols (PR #64)."
+      },
+      "children": []
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "key_changes_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key_changes_title",
+        "key_changes_items"
+      ]
+    },
+    "key_changes_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "key_changes_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key_change1",
+        "key_change2",
+        "key_change3"
+      ]
+    },
+    "key_change1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #358 introduces cross-skill routing for the first time — memory/topics/milestone-dispatch.json rule map (+9 lines) + new step 8 in star-milestone (+46/-5) wires arbitrary (repo, threshold) → skill pairings via gh workflow run"
+      },
+      "children": []
+    },
+    "key_change2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon PR #354 vigil-revoke (+290 lines) is the security stack's first write-side skill — detection (wallet-risk-weekly + approval-audit) finally has an autonomous remedy path"
+      },
+      "children": []
+    },
+    "key_change3": {
+      "type": "Text",
+      "props": {
+        "text": "minitor PR #62 per-deck color labels (+708 lines, 11 files, drizzle migration 0009) reuses normalizeColumnColor verbatim from PR #61 so column-level + deck-level surfaces stay coherent"
+      },
+      "children": []
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_title",
+        "stats_grid"
+      ]
+    },
+    "stats_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat1",
+        "stat2",
+        "stat3",
+        "recap_link"
+      ]
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "~51"
+      },
+      "children": []
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Substantive PRs",
+        "value": "14"
+      },
+      "children": []
+    },
+    "stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "Changes",
+        "value": "+2144/-35"
+      },
+      "children": []
+    },
+    "recap_link": {
+      "type": "Link",
+      "props": {
+        "label": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-08.md"
+      },
+      "children": []
+    }
+  }
+}

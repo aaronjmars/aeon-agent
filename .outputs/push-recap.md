@@ -1,16 +1,18 @@
-*Push Recap — 2026-06-07*
-aeon-agent — 44 commits by aeonframework (cron). aeon and minitor: 0 pushes to main.
+*Push Recap — 2026-06-08*
+14 substantive merges across aeon, aeon-agent, minitor (plus ~30 cron auto-commits). Centre of gravity: a 98-minute window on aeon between 11:11 and 12:49 UTC.
 
-Three new features built and PR'd: One feature cron run at 11:25 UTC built the day's substantive work across the fleet — aeon PR #354 (vigil-revoke, the write-side companion to wallet-risk-weekly that closes the detection→revoke loop VIGIL PR #323 explicitly split out), aeon-agent PR #85 (skill-of-the-day backport, 23rd consecutive same-day-after and the first one where notify wiring needed no translation), minitor PR #63 (per-column width control, 8th rung on the per-column UX ladder, pure view-state with no DB schema change).
+*Three new framework skills on aeon*: `ecosystem-links` (PR #351) — weekly Monday URL-health audit of ECOSYSTEM.md with two-strike INCONCLUSIVE rule so sandbox-blocked outbounds can't false-flag DEAD; closes the three-skill ecosystem loop (pulse + entrants + links). `vigil-revoke` (PR #354) — Bankr-gated approval revoker with `wallet:spender:token` triplet allowlist, pre-flight wallet check, NOOP short-circuit on already-zero, chain-confirmed success; closes the detection→revoke loop wallet-risk-weekly opened Jun-04. `star-milestone auto-dispatch` (PR #358) — first cross-skill routing wire on the framework, seeded `aeon:500 → show-hn-draft` so the launch draft fires on its own when aeon crosses 500★ (~Jun-11 at v7=3.6/day; currently 492).
 
-Daily cron stack ran clean: Token-report, repo-pulse, star-momentum-alert, heartbeat, star-milestone, repo-actions, push-recap, repo-article, project-lens, thread-formatter, self-improve — every scheduled daily skill produced its expected output with no failures. Self-improve found nothing to patch — consistent with PR #83 having closed the last shell-substitution anti-pattern sites two days ago.
+*Three external ecosystem entries on aeon*: Mneme (agent-native database with pgvector + graph + Base streams + async LLM reflection, 8-skill pack), Careful Finance pack, SIGNA pack update from 10→20 skills now shipping bounded spend mandates + x402 receipts.
 
-Content publishing on 2026-06-06: Repo-article ("Aeon Has 193 Skills. Fifteen Of Them Are The Machine.") covered Friday's 5→8 category taxonomy refactor on upstream aeon. Project-lens ("Most AI Agent Projects Stop When You Close The Laptop") argued Aeon belongs in a fifth, undermapped 'Autonomous Operators' market. Thread-formatter cut a 5-tweet thread on minitor PR #62 per-deck color labels.
+*aeon-agent*: shell-substitution anti-pattern chain finally closed across last 2 sites (PR #83 — chain ran 6 PRs over 13 days); self-improve now reads cron-state.json instead of sandbox-blocked skill-runs (PR #84); 23rd consecutive same-day-after backport — skill-of-the-day from upstream PR #341 (PR #85, first backport in chain where notify wiring needed no translation); repo-pulse now enriches new stargazers/forkers with `gh api users/$LOGIN` profile data + low-signal fake-star flag (PR #88, lands first run tomorrow).
+
+*minitor*: 8th rung on per-column UX axis — width control narrow/normal/wide as view-state (PR #63); per-deck color labels (DB-backed, round-trips through export/import, deck-axis analog of column color PR #61) (PR #62); DeFiLlama gainers gets a default $1M TVL floor so $500 microcaps doubling overnight don't outrank $1B protocols (PR #64).
 
 Key changes:
-- aeon at 487⭐ — 13 from 500 — projected to cross 2026-06-11 (Thursday), now inside the 7-day Show HN window (too late to dispatch before crossing)
-- $aeon +19.52% to $0.00002924, buy/sell ratio 1.74:1 (up from 1.07:1), main pool liquidity expanded $1.05M→$1.21M, new aeon/SMB pool on Aerodrome Slipstream
-- New ecosystem-links skill PR #351 closed the three-skill ecosystem loop on upstream (pulse + entrants + links covering liveness + arrivals + URL validity)
+- aeon PR #358 introduces cross-skill routing for the first time — `memory/topics/milestone-dispatch.json` rule map (+9 lines) + new step 8 in star-milestone (+46/-5) wires arbitrary (repo, threshold) → skill pairings via `gh workflow run`
+- aeon PR #354 vigil-revoke (+290 lines) is the security stack's first write-side skill — detection (wallet-risk-weekly + approval-audit) finally has an autonomous remedy path
+- minitor PR #62 per-deck color labels (+708 lines, 11 files, drizzle migration 0009) reuses normalizeColumnColor verbatim from PR #61 so column-level + deck-level surfaces stay coherent
 
-Stats: 40 files changed, +2672/-136 lines
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-07.md
+Stats: ~51 files changed, +2144/-35 across 14 substantive PRs (plus ~30 cron auto-commits)
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-08.md
