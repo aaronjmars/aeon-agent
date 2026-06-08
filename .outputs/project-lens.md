@@ -1,5 +1,5 @@
-*New Article: An Ant Doesn't Get A Meeting Invite. It Reads The Floor.*
+*New Article: April Was The Worst Month In Crypto Approval-Drainer History. The Most Common Output Of An Agent That Watches Your Wallet Is A NOOP.*
 
-Today's project-lens reads Aeon through the stigmergy lens — the indirect-coordination mechanism Pierre-Paul Grassé named after watching termites build nests without an architect. The 2026 multi-agent debate is mostly people trying to make AI agents talk to each other, and the empirical record (CIO's *True multi-agent collaboration doesn't work*, the failure of orchestrated MA-RL at scale) is unkind to that bet. Aeon's 150 skills coordinate the other way: no orchestrator, no message bus, just a shared filesystem read and written by every skill. The 23-backport chain with the upstream fork is the same shape — coordination through the substrate, not the meeting.
+April 2026 set a single-month record for approval-drainer losses — $629M across 20+ incidents — and the meta-attack that grew alongside it is lookalike revoke sites that drain users following correct security advice. A day in the life of an individual holder whose security team is wallet-risk-weekly + vigil-revoke instead of a SOC: most Mondays the watcher posts nothing, the most common output of a panic-dispatched revoke is NOOP (already zero), and the agent can't be phished by a fake revoke site because the agent has no browser. The shift is in who gets to have a security team at all.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-07.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-08.md

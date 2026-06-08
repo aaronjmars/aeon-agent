@@ -1,0 +1,71 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "heading_title",
+        "stack_stats",
+        "text_context",
+        "text_security",
+        "link_article"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "April Was The Worst Month In Crypto Approval-Drainer History. The Most Common Output Of An Agent That Watches Your Wallet Is A NOOP.",
+        "level": "h2"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_losses",
+        "stat_incidents"
+      ]
+    },
+    "stat_losses": {
+      "type": "Stat",
+      "props": {
+        "label": "April 2026 Approval-Drainer Losses",
+        "value": "$629M"
+      }
+    },
+    "stat_incidents": {
+      "type": "Stat",
+      "props": {
+        "label": "Incidents",
+        "value": "20+"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "A single-month record was set in April 2026 for approval-drainer losses. The meta-attack that grew alongside it is lookalike revoke sites that drain users following correct security advice."
+      }
+    },
+    "text_security": {
+      "type": "Text",
+      "props": {
+        "text": "For an individual holder whose security team is wallet-risk-weekly and vigil-revoke instead of a SOC: most Mondays the watcher posts nothing, the most common output of a panic-dispatched revoke is NOOP (already zero), and the agent cannot be phished by a fake revoke site because the agent has no browser. The shift is in who gets to have a security team at all."
+      }
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-08.md",
+        "source": "project-lens"
+      }
+    }
+  }
+}
