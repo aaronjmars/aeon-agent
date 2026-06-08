@@ -1,0 +1,159 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_title",
+        "text_intro",
+        "sep1",
+        "heading_why",
+        "text_why_context",
+        "text_prs_list",
+        "sep2",
+        "heading_what",
+        "stack_changes",
+        "sep3",
+        "heading_impact",
+        "text_impact",
+        "sep4",
+        "pr_link"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Self-Improvement — 2026-06-08",
+        "level": "h2"
+      }
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "Documented the runner-hook shell-expansion restriction system-wide in CLAUDE.md. The runner blocks $(...) and $VAR expansion in skill bash blocks. Only ${today} and ${var} are injected. Future agents writing or backporting skills now read the constraint up front instead of rediscovering it from broken skill output.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why",
+        "level": "h3"
+      }
+    },
+    "text_why_context": {
+      "type": "Text",
+      "props": {
+        "text": "The anti-pattern has driven 6 consecutive improve: PRs over 14 days, plus a 7th mid-PR fix:",
+        "variant": "body"
+      }
+    },
+    "text_prs_list": {
+      "type": "Text",
+      "props": {
+        "text": "#63 weekly-shiplog, #67 push-recap, #71 heartbeat, #77 repo-pulse, #81 repo-article, #83 repo-actions + star-momentum-alert, plus mcp-pulse PR #82 (Jun-5) when the agent inherited a phantom ${today_minus_7} reference from a repo-actions idea. The class of bug was \"constraint isn't in CLAUDE.md\", not \"another skill needs the same patch\" — every skill's bash block was vulnerable independently. The push-recap on Jun-6 explicitly flagged the pattern: \"Worth instrumenting the bot's pre-merge self-review pass.\"",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_what": {
+      "type": "Heading",
+      "props": {
+        "text": "What Changed",
+        "level": "h3"
+      }
+    },
+    "stack_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "change1",
+        "change2",
+        "change3"
+      ]
+    },
+    "change1": {
+      "type": "Text",
+      "props": {
+        "text": "CLAUDE.md: added Sandbox Limitations section 3 — names ${today} and ${var} as the ONLY runner-injected vars, explicitly debunks ${today_minus_N} as a phantom that resolves to a literal string and silently breaks date filters; lists the 6+1 fix history inline so the constraint is traceable to its evidence",
+        "variant": "body"
+      }
+    },
+    "change2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml line 156: fixed stale mcp-pulse comment that still claimed ${today_minus_7} cutoff even though the actual skill body explicitly says \"there is no ${today_minus_7} template var\" in 3 places (SKILL.md:36, :127, :307) — last stale survivor of the documentation mismatch",
+        "variant": "body"
+      }
+    },
+    "change3": {
+      "type": "Text",
+      "props": {
+        "text": "memory/logs/2026-06-08.md: self-improve log entry",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_impact": {
+      "type": "Heading",
+      "props": {
+        "text": "Impact",
+        "level": "h3"
+      }
+    },
+    "text_impact": {
+      "type": "Text",
+      "props": {
+        "text": "CLAUDE.md is the system-wide preamble every skill run reads first. Documenting the runner-hook constraint here propagates to all future skill runs, including non-feature skills like repo-actions that originated the phantom-variable suggestion in the first place. Higher leverage than instrumenting feature's self-review pass alone, and recent backports (Jun-07 skill-of-the-day, Jun-08 ecosystem-links) already shipped clean with zero mid-PR fixes — the pattern was trending down, this fix preserves that trend in writing.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #89",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/89",
+        "source": "GitHub"
+      }
+    }
+  }
+}
