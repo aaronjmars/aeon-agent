@@ -1,0 +1,294 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat 2026-06-08"
+      },
+      "children": [
+        "alert-missing",
+        "sep-1",
+        "stats-section",
+        "sep-2",
+        "skills-section",
+        "sep-3",
+        "prs-section",
+        "sep-4",
+        "backoff-section",
+        "sep-5",
+        "recovery-section"
+      ]
+    },
+    "alert-missing": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "operator-scorecard MISSING",
+        "message": "Scheduled Monday 10:30 UTC, now 8.5h overdue. Absent from both Actions run list and today's log. Last clean run: Monday, June 1."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-skills-ran"
+      ]
+    },
+    "stat-skills-ran": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills Ran Today",
+        "value": "13/14"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "skills-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-skills",
+        "skills-list"
+      ]
+    },
+    "heading-skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Skills That Ran Today",
+        "level": "h3"
+      }
+    },
+    "skills-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-token-report",
+        "badge-weekly-shiplog",
+        "badge-repo-pulse",
+        "badge-star-momentum-alert",
+        "badge-feature",
+        "badge-self-improve",
+        "badge-repo-actions",
+        "badge-push-recap",
+        "badge-star-milestone",
+        "badge-project-lens",
+        "badge-repo-article",
+        "badge-thread-formatter"
+      ]
+    },
+    "badge-token-report": {
+      "type": "Badge",
+      "props": {
+        "text": "token-report ✓",
+        "variant": "default"
+      }
+    },
+    "badge-weekly-shiplog": {
+      "type": "Badge",
+      "props": {
+        "text": "weekly-shiplog ✓",
+        "variant": "default"
+      }
+    },
+    "badge-repo-pulse": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-pulse ✓",
+        "variant": "default"
+      }
+    },
+    "badge-star-momentum-alert": {
+      "type": "Badge",
+      "props": {
+        "text": "star-momentum-alert ✓",
+        "variant": "default"
+      }
+    },
+    "badge-feature": {
+      "type": "Badge",
+      "props": {
+        "text": "feature ✓",
+        "variant": "default"
+      }
+    },
+    "badge-self-improve": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve ✓",
+        "variant": "default"
+      }
+    },
+    "badge-repo-actions": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-actions ✓",
+        "variant": "default"
+      }
+    },
+    "badge-push-recap": {
+      "type": "Badge",
+      "props": {
+        "text": "push-recap ✓",
+        "variant": "default"
+      }
+    },
+    "badge-star-milestone": {
+      "type": "Badge",
+      "props": {
+        "text": "star-milestone ✓",
+        "variant": "default"
+      }
+    },
+    "badge-project-lens": {
+      "type": "Badge",
+      "props": {
+        "text": "project-lens ✓",
+        "variant": "default"
+      }
+    },
+    "badge-repo-article": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-article ✓",
+        "variant": "default"
+      }
+    },
+    "badge-thread-formatter": {
+      "type": "Badge",
+      "props": {
+        "text": "thread-formatter ✓",
+        "variant": "default"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "prs-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-prs",
+        "prs-info"
+      ]
+    },
+    "heading-prs": {
+      "type": "Heading",
+      "props": {
+        "text": "Open PRs",
+        "level": "h3"
+      }
+    },
+    "prs-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-87",
+        "pr-89"
+      ]
+    },
+    "pr-87": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #87 (opened today, < 24h)",
+        "variant": "outline"
+      }
+    },
+    "pr-89": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #89 (opened today, < 24h)",
+        "variant": "outline"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "backoff-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-status",
+        "text-urgent",
+        "alert-backoff"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status",
+        "level": "h3"
+      }
+    },
+    "text-urgent": {
+      "type": "Text",
+      "props": {
+        "text": "Urgent issues: none",
+        "variant": "body"
+      }
+    },
+    "alert-backoff": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "show-hn-draft backoff continues. Next escalation: Jun 10."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recovery-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-recovery",
+        "text-command"
+      ]
+    },
+    "heading-recovery": {
+      "type": "Heading",
+      "props": {
+        "text": "Manual Recovery",
+        "level": "h3"
+      }
+    },
+    "text-command": {
+      "type": "Text",
+      "props": {
+        "text": "gh workflow run aeon.yml -f skill=operator-scorecard",
+        "variant": "caption"
+      }
+    }
+  }
+}
