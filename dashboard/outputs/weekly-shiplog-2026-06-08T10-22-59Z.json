@@ -1,0 +1,218 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Weekly Shiplog — 2026-06-08"
+      },
+      "children": [
+        "opening_text",
+        "sep1",
+        "shipped_section",
+        "sep2",
+        "stats_section",
+        "sep3",
+        "link_section"
+      ]
+    },
+    "opening_text": {
+      "type": "Text",
+      "props": {
+        "text": "The catalog finally knew its own size. Friday's 8-PR refresh reconciled README + skills.json + MCP labels at 193 across a new 8-category taxonomy (core / onchain-security / meta finally split out). Two brand-new outsiders shipped substantive code, HoundFlow got its first standing consumer, and minitor incremented its per-column UX axis literally every weekday."
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "shipped_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped_heading",
+        "shipped_items"
+      ]
+    },
+    "shipped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "shipped_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item1",
+        "item2",
+        "item3",
+        "item4",
+        "item5",
+        "item6",
+        "item7"
+      ]
+    },
+    "item1": {
+      "type": "Text",
+      "props": {
+        "text": "Upstream taxonomy refresh (5→8 categories, 65 `other` skills cleared, docs/CORE.md for the load-bearing 15) + 37-skill catalog growth (156→193)"
+      },
+      "children": []
+    },
+    "item2": {
+      "type": "Text",
+      "props": {
+        "text": "HoundFlow loop closed: wallet-risk-weekly (PR #340) became the first scheduled consumer; vigil-revoke (PR #354) is the write-side companion"
+      },
+      "children": []
+    },
+    "item3": {
+      "type": "Text",
+      "props": {
+        "text": "Two new external contributors: Nurstar (skill-of-the-day rotation) + vigilcodes (VIGIL MCP server, 9 onchain-security tools after 5 review cycles)"
+      },
+      "children": []
+    },
+    "item4": {
+      "type": "Text",
+      "props": {
+        "text": "Capabilities taxonomy went load-bearing — CI parity gate, capabilities-map skill + fix, 19-skill declarations sweep"
+      },
+      "children": []
+    },
+    "item5": {
+      "type": "Text",
+      "props": {
+        "text": "Ecosystem catalog became visual (Logo column + 7 batched logo PRs + 9 new entries on Friday)"
+      },
+      "children": []
+    },
+    "item6": {
+      "type": "Text",
+      "props": {
+        "text": "Minitor: 8 per-column features in 7 days (collapse / export / search / pin / duplicate / column color / deck color / width)"
+      },
+      "children": []
+    },
+    "item7": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent backport chain: 17 → 23 consecutive same-day-after days"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_heading",
+        "stats_grid"
+      ]
+    },
+    "stats_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stats",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat1",
+        "stat2",
+        "stat3",
+        "stat4"
+      ]
+    },
+    "stat1": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs across 3 repos",
+        "value": "57"
+      },
+      "children": []
+    },
+    "stat2": {
+      "type": "Stat",
+      "props": {
+        "label": "Distinct authors",
+        "value": "15"
+      },
+      "children": []
+    },
+    "stat3": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines changed",
+        "value": "+7,000 / -1,000"
+      },
+      "children": []
+    },
+    "stat4": {
+      "type": "Stat",
+      "props": {
+        "label": "Releases",
+        "value": "0"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "link_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_label",
+        "link"
+      ]
+    },
+    "link_label": {
+      "type": "Text",
+      "props": {
+        "text": "Full update:",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "link": {
+      "type": "Link",
+      "props": {
+        "label": "weekly-shiplog-2026-06-08.md on GitHub",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-06-08.md"
+      },
+      "children": []
+    }
+  }
+}

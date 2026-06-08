@@ -528,4 +528,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-07,memory-flush,claude-sonnet-4-6,765,66151,2293596,184472
 2026-06-07,heartbeat,claude-sonnet-4-6,20,9207,1087864,52792
 2026-06-08,token-report,claude-sonnet-4-6,85,37576,874217,76779
-2026-06-08,star-momentum-alert,claude-sonnet-4-6,14,10594,652958,45233
+2026-06-08,weekly-shiplog,claude-opus-4-7,26,15122,1590576,172329

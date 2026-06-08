@@ -1,12 +1,15 @@
-*Weekly Shiplog — 2026-06-01*
+*Weekly Shiplog — 2026-06-08*
 
-Eleven new framework skills in one Friday afternoon, a dashboard rebrand that ports the marketing site's motion vocabulary into the operator UI, and a weekend that went quiet with the open-PR queue stacked.
+The catalog finally knew its own size. Friday's 8-PR refresh reconciled README + skills.json + MCP labels at 193 across a new 8-category taxonomy (core / onchain-security / meta finally split out). Two brand-new outsiders shipped substantive code, HoundFlow got its first standing consumer, and minitor incremented its per-column UX axis literally every weekday.
 
 Shipped:
-- 11 new skills (5 ops + 6 keyless on-chain) + skill-pack manifest grew capabilities[] taxonomy and secrets_required/optional fields — biggest single-day catalog growth in the recap window
-- Dashboard editorial overhaul (PRs #263/#264/#265): Dela Gothic / Inter / Space Mono, halftone heroes, Scramble + Flip + VelocityMarquee motion components
-- 3 community packs (Sparkleware 7, Signa 10, noelclaw 2) + first-party sparkleware-catalog skill; 5 per-column features on minitor (refresh intervals, webhooks, filters, version history, tab groups); pr-skill-triage + liquidpad shims closed both ends of the inbound-PR pipeline
+- Upstream taxonomy refresh (5→8 categories, 65 `other` skills cleared, docs/CORE.md for the load-bearing 15) + 37-skill catalog growth (156→193)
+- HoundFlow loop closed: wallet-risk-weekly (PR #340) became the first scheduled consumer; vigil-revoke (PR #354) is the write-side companion
+- Two new external contributors: Nurstar (skill-of-the-day rotation) + vigilcodes (VIGIL MCP server, 9 onchain-security tools after 5 review cycles)
+- Capabilities taxonomy went load-bearing — CI parity gate, capabilities-map skill + fix, 19-skill declarations sweep
+- Ecosystem catalog became visual (Logo column + 7 batched logo PRs + 9 new entries on Friday)
+- Minitor: 8 per-column features in 7 days (collapse / export / search / pin / duplicate / column color / deck color / width)
+- aeon-agent backport chain: 17 → 23 consecutive same-day-after days
 
-Stats: ~64 PRs merged, ~+8,500/-1,200 lines, 12 distinct authors, 16th consecutive same-day backport on aeon-agent.
-
-Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-06-01.md
+Stats: ~57 PRs across 3 repos, 15 distinct authors, +7,000/-1,000 lines, 0 releases
+Full update: https://github.com/aaronjmars/aeon-agent/blob/main/articles/weekly-shiplog-2026-06-08.md
