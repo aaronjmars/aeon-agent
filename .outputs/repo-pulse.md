@@ -1,11 +1,11 @@
-*Repo Pulse — 2026-06-08*
-aaronjmars/aeon
+## Summary
 
-Stars: 492 total (+4 new)
-Forks: 167 total (+2 new)
+**Repo Pulse — 2026-06-08 (subsequent run)**
 
-New stargazers:
-github.com/asorourx | github.com/ynk7 | github.com/MarcoWorms | github.com/Unszeil
+This was a subsequent run today. The prior run (also 2026-06-08) already reported:
+- **aaronjmars/aeon**: 4 new stars (asorourx, ynk7, MarcoWorms, Unszeil), 2 new forks (mnemedb/aeon, NASTYZUNI/aeon) — notification sent
+- **aaronjmars/minitor**: 0 new stars, 0 new forks — quiet
 
-New forks:
-github.com/mnemedb/aeon | github.com/NASTYZUNI/aeon
+Current counts are unchanged (aeon: 492 stars / 167 forks, minitor: 11 stars / 1 fork). Delta is empty for both repos.
+
+**Result: REPO_PULSE_QUIET** — no new stars or forks since the last run today. No notification sent. Log updated with subsequent-run entry.
