@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 101,
+  "total": 102,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -690,6 +690,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon competitor-launch-radar"
+    },
+    {
+      "slug": "ecosystem-links",
+      "name": "ecosystem-links",
+      "description": "Weekly link-health audit of ECOSYSTEM.md — checks every GitHub repo for archived/disabled state and every project URL for HTTP 4xx/5xx or redirect chains, surfacing dead/archived/moved entries before a casual reader stumbles into one. Closes the three-skill ecosystem loop with ecosystem-entrants (arrivals) and ecosystem-pulse (liveness).",
+      "category": "research",
+      "schedule": "55 11 * * 1",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon ecosystem-links"
     },
     {
       "slug": "ecosystem-pulse",
