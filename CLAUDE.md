@@ -91,7 +91,7 @@ Message priority: Telegram > Discord > Slack (first message found wins per poll 
 
 ## Sandbox Limitations
 
-GitHub Actions runs Claude Code in a sandbox that may block outbound network from bash. Two patterns:
+GitHub Actions runs Claude Code in a sandbox that may block outbound network from bash. Three patterns:
 
 1. **Public APIs (no auth):** curl may fail intermittently. Always add a **WebFetch fallback** — WebFetch is a built-in Claude tool that bypasses the sandbox. Example: "If curl fails, use WebFetch for the same URL."
 
