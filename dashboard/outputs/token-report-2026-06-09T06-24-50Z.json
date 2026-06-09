@@ -1,0 +1,210 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "token-report — AEON Daily 2026-06-09"
+      },
+      "children": [
+        "section_24h",
+        "sep_1",
+        "section_trends",
+        "sep_2",
+        "section_summary",
+        "sep_3",
+        "chart_link"
+      ]
+    },
+    "section_24h": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_24h",
+        "grid_24h"
+      ]
+    },
+    "heading_24h": {
+      "type": "Heading",
+      "props": {
+        "text": "24-Hour Metrics",
+        "level": "h2"
+      }
+    },
+    "grid_24h": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liquidity",
+        "stat_volume",
+        "stat_ratio"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00003685",
+        "delta": "+22.6%",
+        "trend": "up"
+      }
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.46M"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$256.5K",
+        "delta": "-63%",
+        "trend": "down"
+      }
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "1,289/1,030"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_trends": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_trends",
+        "grid_trends"
+      ]
+    },
+    "heading_trends": {
+      "type": "Heading",
+      "props": {
+        "text": "Trend Metrics",
+        "level": "h2"
+      }
+    },
+    "grid_trends": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_7d_price",
+        "stat_7d_vol",
+        "stat_30d_price"
+      ]
+    },
+    "stat_7d_price": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Price",
+        "value": "+33.0%",
+        "trend": "up"
+      }
+    },
+    "stat_7d_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Vol Avg",
+        "value": "+7.8%",
+        "trend": "up"
+      }
+    },
+    "stat_30d_price": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Price",
+        "value": "+1,044%",
+        "trend": "up"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_analysis",
+        "text_analysis",
+        "badge_recovery",
+        "badge_buyside",
+        "badge_lp"
+      ]
+    },
+    "heading_analysis": {
+      "type": "Heading",
+      "props": {
+        "text": "Analysis",
+        "level": "h3"
+      }
+    },
+    "text_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "Recovery continues from June 3 trough",
+        "variant": "body"
+      }
+    },
+    "badge_recovery": {
+      "type": "Badge",
+      "props": {
+        "text": "Buy-side dominant 1.25:1"
+      }
+    },
+    "badge_buyside": {
+      "type": "Badge",
+      "props": {
+        "text": "LP depth $1.46M"
+      }
+    },
+    "badge_lp": {
+      "type": "Badge",
+      "props": {
+        "text": "Volume -63% vs yesterday"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    }
+  }
+}
