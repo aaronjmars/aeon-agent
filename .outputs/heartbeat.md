@@ -1,1 +1,5 @@
-Heartbeat 2026-06-08 — operator-scorecard MISSING. Scheduled Monday 10:30 UTC, now 8.5h overdue, absent from both Actions run list and today's log. Ran cleanly last Monday (Jun 1). 13/14 expected skills ran today (token-report, weekly-shiplog, repo-pulse, star-momentum-alert, feature, self-improve, repo-actions, push-recap, star-milestone, project-lens, repo-article, thread-formatter all ✓). Open PRs: PR #87 + #89 opened today (< 24h). Urgent issues: none. show-hn-draft backoff continues (next escalation Jun 10). Manual recovery: gh workflow run aeon.yml -f skill=operator-scorecard
+**HEARTBEAT_OK.** All 10 expected skills ran on June 9. No new issues, no escalations due today. Logged to `memory/logs/2026-06-09.md`.
+
+Key ongoing items tracked (no notifications sent):
+- **operator-scorecard MISSING** — 48h dedup active (notified June 8); next Monday June 15 will confirm if this is persistent
+- **show-hn-draft** — 7d backoff in effect; escalation due tomorrow June 10; auto-dispatch wired at 500⭐ (~June 11, 3 stars away)
