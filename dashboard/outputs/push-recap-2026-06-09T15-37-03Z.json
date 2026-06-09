@@ -1,0 +1,247 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-09"
+      },
+      "children": [
+        "intro-stack",
+        "sep1",
+        "aeon-section",
+        "sep2",
+        "aeon-agent-section",
+        "sep3",
+        "minitor-section",
+        "sep4",
+        "key-changes-section",
+        "sep5",
+        "stats-section",
+        "sep6",
+        "full-recap"
+      ]
+    },
+    "intro-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-commits",
+        "intro-text"
+      ]
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Substantive commits",
+        "value": "33"
+      }
+    },
+    "intro-text": {
+      "type": "Text",
+      "props": {
+        "text": "Biggest push day this fork has audited across aeon/aeon-agent/minitor.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeon-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-content"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon (~27 commits)",
+        "level": "h3"
+      }
+    },
+    "aeon-content": {
+      "type": "Text",
+      "props": {
+        "text": "Dashboard rebuilt to provision MCP servers + secrets in one screen. Skills can now call MCP servers during runs (opt-in via .mcp.json) — runner resolves every ${VAR} from repo secrets, discards the blob before any skill code runs, gracefully skips MCP on unset vars instead of crashing the step. Sub-apps (dashboard/, mcp-server/, a2a-server/, webhook/) moved into apps/. STRATEGY.md shipped + @-imported into CLAUDE.md so every skill run inherits the operator's north-star. Telegram poller stopped double-dispatching on ack-failure; instant-mode Worker became one-click Cloudflare deploy. Skill count reconciled to 195 across 8 canonical categories. Seven-PR cleanup chain (types, error masking, dead imports, decorative comments) made dents 1/7 and 2/7. show-hn-draft prompt refreshed for the 500⭐ auto-fire — aeon at 496⭐, ~Jun-11.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeon-agent-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-agent-heading",
+        "aeon-agent-content"
+      ]
+    },
+    "aeon-agent-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon-agent (3 PRs)",
+        "level": "h3"
+      }
+    },
+    "aeon-agent-content": {
+      "type": "Text",
+      "props": {
+        "text": "ecosystem-links backport (#87, 24th consecutive), runner-hook restriction consolidated into CLAUDE.md (#89), install-from-atrium backported (#90, 25th — first non-SKILL.md backport in the chain, unblocks atrium-catalog-watcher).",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "minitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor-heading",
+        "minitor-content"
+      ]
+    },
+    "minitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor (3 PRs)",
+        "level": "h3"
+      }
+    },
+    "minitor-content": {
+      "type": "Text",
+      "props": {
+        "text": "Per-deck drag-to-reorder via @dnd-kit (#65). Full j/k///c/Esc keyboard nav (#66, rung 10 on the UX axis). Same-day follow-up (#67) stands down the nav handler during an active dnd-kit keyboard drag so KeyboardSensor exclusively owns arrows/Escape until drop.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "key-changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "key-changes-heading",
+        "key-changes-list"
+      ]
+    },
+    "key-changes-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key changes",
+        "level": "h3"
+      }
+    },
+    "key-changes-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "key-change-1",
+        "key-change-2",
+        "key-change-3"
+      ]
+    },
+    "key-change-1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon #372/#378/#381: MCP runtime + auto-resolve + inline secret-set per server row",
+        "variant": "body"
+      }
+    },
+    "key-change-2": {
+      "type": "Text",
+      "props": {
+        "text": "aeon #370/#371: STRATEGY.md + @-import in CLAUDE.md + dashboard editor",
+        "variant": "body"
+      }
+    },
+    "key-change-3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon #376: 129-file restructure moving 4 sub-apps under apps/",
+        "variant": "body"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-files",
+        "stat-lines"
+      ]
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files touched",
+        "value": "250+"
+      }
+    },
+    "stat-lines": {
+      "type": "Stat",
+      "props": {
+        "label": "Net lines added",
+        "value": "3,200+"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-09.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
