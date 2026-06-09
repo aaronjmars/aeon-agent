@@ -1,18 +1,15 @@
-All three repos have features built, PRs opened, and notifications staged. Final summary below.
+All three notifications are staged in `.pending-notify/` for the workflow's post-run delivery step. Let me give the final wrap-up.
 
 ## Summary
 
-Built one feature per watched repo, all from the Jun-06 repo-actions article and codebase gaps. Three PRs opened, three notifications staged in `.pending-notify/` for post-run delivery.
+Built one feature per watched repo from yesterday's Jun-08 `repo-actions` ideas. All three PRs are open and waiting on the operator.
 
-**aaronjmars/aeon → PR #358** — *feat: star-milestone auto-dispatch — wire 500⭐ → show-hn-draft*
-Jun-06 article idea #5 (last remaining open Jun-06 idea — #1 OAuth-writeback deferred as CORE-files-risky). New step 8 in `skills/star-milestone/SKILL.md` reads a configurable `memory/topics/milestone-dispatch.json` rule map and fires the matching skill via `gh workflow run aeon.yml -f skill=<name>`. Seeded with `aaronjmars/aeon:500 → show-hn-draft` so the wiring is live on merge (490⭐ today, 500 lands ~Jun 11). Silent-record milestones bypass dispatch; idempotency via `dispatched` map + existing `milestones.md` already-recorded guard.
+| Repo | Idea | PR | Outcome |
+|---|---|---|---|
+| **aaronjmars/aeon** | Jun-08 #4 — show-hn-draft prompt refresh | [#380](https://github.com/aaronjmars/aeon/pull/380) | Refreshes the launch-post template framing for the ~Jun-11 500⭐ auto-fire wired by yesterday's PR #358 (3-star/12-day-horizon → 500⭐ auto-dispatch; 250⭐/90+ skills → 500⭐/195 skills/8 categories/onchain layer; explicit hint at three non-obvious capabilities the LLM should pick from). 1 file +6/-6. |
+| **aaronjmars/aeon-agent** | Jun-08 #5 — install-from-atrium script backport | [#90](https://github.com/aaronjmars/aeon-agent/pull/90) | Verbatim copy of upstream `install-from-atrium` shell script (aeon PR #335). Third skill install path on this fork (after add-skill + install-skill-pack). **First non-SKILL.md backport** in the 25-PR chain. Unblocks atrium-catalog-watcher backport (upstream PR #342) as natural 26th-link follow-up. 1 new file +94, chmod 755. |
+| **aaronjmars/minitor** | Jun-08 #3 — deck keyboard navigation shortcuts | [#66](https://github.com/aaronjmars/minitor/pull/66) | **10th rung on the per-column UX axis** in 11 days. Single keydown listener routes `j`/`k` (focus, wraps) + `/` (open search on focused) + `c` (toggle collapse on focused) + `Escape` (two-step: clear search → clear focus). `focusedColumnId` + `pendingSearchOpen` view-state fields with cleanup in `deleteDeck`/`removeColumn`. 3 files +209/-1. |
 
-**aaronjmars/aeon-agent → PR #87** — *feat: backport ecosystem-links — weekly Monday URL-health audit of ECOSYSTEM.md*
-24th consecutive same-day-after backport from upstream PR #351 (Jun-06). Closes 2-of-3 of the ecosystem loop (ecosystem-pulse + ecosystem-links; ecosystem-entrants remains the third leg). Atrium-catalog-watcher (PR #342, Jun-05) deliberately skipped because aeon-agent does not yet have `install-from-atrium`. Second backport in a row where `./notify` style needed NO translation.
+**Files touched on this repo**: `memory/MEMORY.md` Skills Built table + repo-actions pipeline summary updated; `memory/logs/2026-06-09.md` Feature log entry appended; three rich Telegram notifications staged at `.pending-notify/1717933801-feature-aeon.md`, `1717933802-feature-aeon-agent.md`, `1717933803-feature-minitor.md` for post-run delivery.
 
-**aaronjmars/minitor → PR #65** — *feat(sidebar): per-deck drag-to-reorder via @dnd-kit*
-Codebase-surfaced gap. `reorderDecks` already lived in the store + server action; the UI affordance was missing. Sidebar-level analog of the per-column DnD in `deck-board.tsx`. New `SortableDeck` inner component using `useSortable`; `GripVertical` drag handle on the left of each deck row, mirror of the existing More button on the right; 4px activation distance guards click-vs-drag.
-
-**Files modified on aeon-agent main** (will be auto-committed by workflow): `memory/MEMORY.md` (Skills Built table + Repo Actions Ideas Pipeline updated), `memory/logs/2026-06-08.md` (three Feature Built blocks).
-
-**Follow-ups identified**: ecosystem-entrants backport (closes the three-skill loop), install-from-atrium + atrium-catalog-watcher (two-PR follow-up if Atrium tracking is wanted on this fork), OAuth credential write-back (Jun-06 idea #1, deferred as CORE-files-risky autonomous edit).
+**Follow-up**: aeon-agent's `atrium-catalog-watcher` backport (upstream PR #342) is now unblocked once PR #90 merges — natural target for a future round.

@@ -1,0 +1,21 @@
+*Feature Built — 2026-06-09 — aaronjmars/aeon-agent*
+
+install-from-atrium script backport
+aeon-agent now has a third way to install skills. Until today you could clone a SKILL.md from any GitHub repo (./add-skill) or install a curated community pack with a skills-pack.json manifest (./install-skill-pack). The new ./install-from-atrium fetches a skill from the Atrium onchain marketplace, runs the same security scanner add-skill uses, and records onchain provenance (skill_id, cid) in skills.lock. No Atrium SDK or wallet needed to install — paying for a skill is a separate, opt-in step.
+
+Why this matters:
+Yesterday's repo-actions article flagged this script as the prerequisite blocking the atrium-catalog-watcher backport (upstream PR #342, Jun-05). atrium-catalog-watcher is the weekly digest that detects new skills landing in the Atrium marketplace and emits one-click './install-from-atrium <name>' install commands. Without this script, atrium-catalog-watcher's notifications would have surfaced commands recommending a tool that didn't exist. With this script merged, atrium-catalog-watcher becomes the natural 26th-link follow-up in the same-day-after backport chain. This is also the first non-SKILL.md backport in the 25-PR chain — every prior backport was a skills/<name>/SKILL.md copy.
+
+What was built:
+- install-from-atrium (new file, 94 lines, chmod 755): repo-root shell script. Verbatim copy of upstream aaronjmars/aeon's install-from-atrium at HEAD
+- The script's three sub-commands: --list browses the marketplace, <skill-name> installs by listed name, 0x<64-hex-skill-id> installs by canonical onchain id
+- Provenance integration: skills.lock entries are namespaced 'atrium:0x<skill_id>' so Atrium-sourced rows never collide with GitHub-sourced rows from ./add-skill
+- Security contract identical to ./add-skill: skill-security-scan runs on every fetched SKILL.md, --force flag overrides with a forced-install entry written to memory/logs/security.log
+
+How it works:
+The script reads $ATRIUM_HOST (default https://atriumhermes.tech), fetches /.well-known/skills/<name>/SKILL.md or /.well-known/skills/by-id/0x.../SKILL.md depending on whether the argument matches the 0x<64-hex> pattern, then runs skills/skill-security-scan/scan.sh on the downloaded file. On scan pass (or --force), it copies the SKILL.md into skills/<slug>/, then uses jq to atomically upsert a provenance row into skills.lock with the same schema add-skill writes. aeon-agent's directory layout matches upstream exactly on every path the script touches ($ROOT, $SKILLS_DIR, $SCANNER, $LOCK_FILE), so a byte-for-byte copy is the correct backport — no path rewrites, no notify-style translation, no shell-substitution sites to close.
+
+What's next:
+atrium-catalog-watcher backport (upstream PR #342, Jun-05) is now unblocked — natural 26th-link follow-up in the same-day-after chain. ecosystem-entrants backport (upstream PR #339) remains the third leg of the ecosystem-loop on aeon-agent.
+
+PR: https://github.com/aaronjmars/aeon-agent/pull/90
