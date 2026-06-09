@@ -60,6 +60,7 @@
 | 2026-06-06 | Most AI Agent Projects Stop When You Close The Laptop. The Ones That Don't Are A Different Market. | project-lens |
 | 2026-06-07 | Three Days Ago A Stranger Shipped Aeon's Onchain Scanner. This Morning The Framework Wrote The Skill That Acts On What It Finds. | repo-article |
 | 2026-06-08 | Aeon Is Six Stars From A Launch The Operator Drafted Thirty-Eight Days Ago And Never Enabled. This Morning The Framework Wired The Trigger That Will Fire It. | repo-article |
+| 2026-06-09 | The Show HN Draft Was Written Thirty-Nine Days Ago For A 250-Star Project. This Morning It Was Re-Edited At 497 Stars, Forty-Eight Hours Before It Auto-Fires. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |

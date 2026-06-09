@@ -1,0 +1,80 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading-title",
+        "grid-metrics",
+        "text-body",
+        "link-article"
+      ]
+    },
+    "heading-title": {
+      "type": "Heading",
+      "props": {
+        "text": "The Show HN Draft Was Written Thirty-Nine Days Ago For A 250-Star Project. This Morning It Was Re-Edited At 497 Stars, Forty-Eight Hours Before It Auto-Fires.",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "grid-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-original",
+        "stat-current",
+        "stat-target"
+      ]
+    },
+    "stat-original": {
+      "type": "Stat",
+      "props": {
+        "label": "Started (39 days ago)",
+        "value": "250⭐"
+      },
+      "children": []
+    },
+    "stat-current": {
+      "type": "Stat",
+      "props": {
+        "label": "Now (this morning)",
+        "value": "497⭐",
+        "delta": "+247",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-target": {
+      "type": "Stat",
+      "props": {
+        "label": "Target (Thursday)",
+        "value": "500⭐"
+      },
+      "children": []
+    },
+    "text-body": {
+      "type": "Text",
+      "props": {
+        "text": "PR #380 today changed six lines in skills/show-hn-draft/SKILL.md — the prompt the framework will hand itself when star-milestone auto-dispatches at 500⭐. The edits were needed because the last 24h shipped the biggest push day this fork has audited (MCP-inbound runtime, dashboard MCP UI, STRATEGY.md, apps/ restructure) and made every earlier number in the draft obsolete. 500⭐ projected Thursday.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link-article": {
+      "type": "Link",
+      "props": {
+        "label": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-09.md"
+      },
+      "children": []
+    }
+  }
+}
