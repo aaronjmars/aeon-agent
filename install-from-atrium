@@ -31,7 +31,7 @@ command -v curl >/dev/null || die "missing dependency: curl"
 if [[ "${1:-}" == "--list" || -z "${1:-}" || "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
   echo "Atrium marketplace — installable skills:"
   curl -fsS "$WELLKNOWN/index.json" \
-    | grep -oE '"(name|skill_id|description)":"[^"]*"' \
+    | { grep -oE '"(name|skill_id|description)":"[^"]*"' || true; } \
     | sed 's/^"name":/\n• /; s/^"skill_id":/  id:   /; s/^"description":/  /; s/"//g'
   echo
   echo "Install:  ./install-from-atrium <skill-name|0x-skillId> [--force]"
