@@ -1,0 +1,38 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens"
+      },
+      "children": [
+        "story-main",
+        "sep-1",
+        "text-parallel"
+      ]
+    },
+    "story-main": {
+      "type": "StoryLink",
+      "props": {
+        "title": "In 1869, Mendeleev Left Four Empty Cells In His Table. The Cells Were The Point.",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-09.md",
+        "source": "GitHub"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-parallel": {
+      "type": "Text",
+      "props": {
+        "text": "Historical parallel: Dmitri Mendeleev's 1869 periodic table is remembered for what it organized, but what made it a working theory was the four cells he refused to fill — eka-aluminium, eka-boron, eka-silicon, eka-manganese. Gallium, scandium, and germanium walked into those slots in 1875, 1879, and 1886, and the framework bought an authority no handbook had ever earned. Aeon's June 8 declaration of eight canonical skill categories plus STRATEGY.md as a north-star is the same trade at miniature: a taxonomy stable enough that a sparsely-filled column is a question, not noise. The Onchain Security column went from zero to 100% scheduled-consumer coverage in 30 days because the framework could see the empty cell.",
+        "variant": "body"
+      }
+    }
+  }
+}
