@@ -538,3 +538,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-08,heartbeat,claude-sonnet-4-6,1594,11304,1134246,65682
 2026-06-09,token-report,claude-sonnet-4-6,1843,18904,667552,70076
 2026-06-09,repo-pulse,claude-sonnet-4-6,11,7952,525715,49955
+2026-06-09,star-momentum-alert,claude-sonnet-4-6,5721,12200,459603,50931
