@@ -91,7 +91,7 @@ Message priority: Telegram > Discord > Slack (first message found wins per poll 
 
 ## Sandbox Limitations
 
-GitHub Actions runs Claude Code in a sandbox that may block outbound network from bash. Two patterns:
+GitHub Actions runs Claude Code in a sandbox that may block outbound network from bash. Three patterns:
 
 1. **Public APIs (no auth):** curl may fail intermittently. Always add a **WebFetch fallback** — WebFetch is a built-in Claude tool that bypasses the sandbox. Example: "If curl fails, use WebFetch for the same URL."
 
@@ -99,6 +99,11 @@ GitHub Actions runs Claude Code in a sandbox that may block outbound network fro
    - **Pre-fetch** (before Claude runs): Create `scripts/prefetch-{name}.sh`. The workflow runs all `scripts/prefetch-*.sh` before Claude starts, with full env access. Skills read cached data from `.xai-cache/` or similar.
    - **Post-process** (after Claude runs): Write request JSON to `.pending-{service}/`. Create `scripts/postprocess-{name}.sh` to process them. The workflow runs all `scripts/postprocess-*.sh` after Claude finishes. Used for: `.pending-replicate/`, `.pending-notify/`, etc.
    - **`gh` CLI**: For GitHub API, use `gh api` instead of curl — handles auth internally.
+
+3. **Shell command/variable expansion blocked in skill bash blocks:** A runner-side hook rejects `$(...)` subshells and `$VAR` expansion with `"Contains simple_expansion"`. The only template variables the runner injects are `${today}` (UTC `YYYY-MM-DD`) and `${var}` (the skill's input). Anything else must be a literal you compute in your prompt text before running.
+   - **Relative dates**: Compute the literal cutoff from `${today}`. E.g. for a 7-day window with today `2026-06-08`, write `SINCE=2026-06-01T00:00:00Z` directly — NOT `SINCE=$(date -u -d '7 days ago' ...)` and NOT `SINCE=${today_minus_7}` (no such variable exists). Same trade for any `${today_minus_N}` shape — it's a phantom variable and resolves to the literal string, silently breaking date filters.
+   - **Other dynamic values**: Pre-compute in a `scripts/prefetch-*.sh` helper or hoist the value out of the bash block before the runner sees it.
+   - History: fixed in PRs #63 (weekly-shiplog), #67 (push-recap), #71 (heartbeat), #77 (repo-pulse), #81 (repo-article), #83 (repo-actions + star-momentum-alert), plus the mid-PR fix on mcp-pulse PR #82 that caught a phantom `${today_minus_7}` reference inherited from a repo-actions idea.
 
 When writing new skills, always include a "Sandbox note" section with the appropriate fallback pattern.
 
