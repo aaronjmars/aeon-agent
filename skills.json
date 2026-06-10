@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 102,
+  "total": 103,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -690,6 +690,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon competitor-launch-radar"
+    },
+    {
+      "slug": "ecosystem-entrants",
+      "name": "ecosystem-entrants",
+      "description": "Weekly diff of ECOSYSTEM.md against the prior run's snapshot — reports added / removed / updated entries (updated article-only, never notified). Closes the three-skill ecosystem loop with ecosystem-pulse (liveness) and ecosystem-links (URL validity).",
+      "category": "research",
+      "schedule": "45 11 * * 1",
+      "var": "",
+      "files": 0,
+      "install": "./add-skill aaronjmars/aeon ecosystem-entrants"
     },
     {
       "slug": "ecosystem-links",
