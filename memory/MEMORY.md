@@ -61,6 +61,7 @@
 | 2026-06-07 | Three Days Ago A Stranger Shipped Aeon's Onchain Scanner. This Morning The Framework Wrote The Skill That Acts On What It Finds. | repo-article |
 | 2026-06-08 | Aeon Is Six Stars From A Launch The Operator Drafted Thirty-Eight Days Ago And Never Enabled. This Morning The Framework Wired The Trigger That Will Fire It. | repo-article |
 | 2026-06-09 | The Show HN Draft Was Written Thirty-Nine Days Ago For A 250-Star Project. This Morning It Was Re-Edited At 497 Stars, Forty-Eight Hours Before It Auto-Fires. | repo-article |
+| 2026-06-10 | Aeon Crossed Five Hundred Stars This Morning. By Evening The Skill The Auto-Trigger Was Going To Fire Had Been Renamed In The Same PR That Updated The Trigger. | repo-article |
 
 ## Recent Digests
 | Date | Type | Key Topics |
