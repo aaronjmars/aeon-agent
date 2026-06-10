@@ -115,9 +115,11 @@ Read memory/watched-repos.md for the list of repos to track. Skip any repo whose
    - Omit "New forks" section entirely if there are none
    - Do NOT include traffic data, watchers, or open issues
 
-7. **Log** to `memory/logs/${today}.md` — ALWAYS include the exact current counts AND the list of handles/forks so the next same-day run can compute its delta correctly:
+7. **Log** to `memory/logs/${today}.md` — ALWAYS include the exact current counts AND the list of handles/forks so the next same-day run can compute its delta correctly. **When multiple repos run in one invocation, give each repo its own `### owner/repo` subheader inside the single `## Repo Pulse` section** — otherwise the next repo's bullets get visually absorbed into the prior repo's `**New account profiles (24h):**` list (seen in 2026-06-09 and 2026-06-10 logs before this rule landed).
    ```
    ## Repo Pulse
+
+   ### aaronjmars/repo
    - **aaronjmars/repo**: stargazers_count=X, forks_count=Y
    - **New stars (24h):** N (handle1, handle2, ...)
    - **New forks (24h):** N (owner1/repo, owner2/repo, ...)
@@ -126,5 +128,9 @@ Read memory/watched-repos.md for the list of repos to track. Skip any repo whose
    **New account profiles (24h):**
    - github.com/alice (star) — Alice Chen · @ Vercel · San Francisco · 2.3k followers · 87 repos · twitter.com/alice · "building dev tools"
    - github.com/dave (fork) — Dave Kim · @ Acme · 1.1k followers
+
+   ### aaronjmars/other-repo
+   - **aaronjmars/other-repo**: stargazers_count=X, forks_count=Y
+   - ...
    ```
-   Keep the `**aaronjmars/repo**: stargazers_count=X, forks_count=Y` line and the bare-handle `New stars/forks (24h)` lines **exactly** as shown — `star-momentum-alert` and the same-day dedup parse them. The `**New account profiles (24h):**` block is additive enrichment (the fuller form from step 5c, including `twitter`/`blog`); tag each entry `(star)` or `(fork)`. Omit the block entirely if there are no new accounts.
+   Keep the `- **aaronjmars/repo**: stargazers_count=X, forks_count=Y` bullet and the bare-handle `New stars/forks (24h)` lines **exactly** as shown — `star-momentum-alert` and the same-day dedup parse them by literal string match, not by structure, so the `### owner/repo` subheader is purely a visual separator and does not affect downstream parsers. The `**New account profiles (24h):**` block is additive enrichment (the fuller form from step 5c, including `twitter`/`blog`); tag each entry `(star)` or `(fork)`. Omit the block entirely if there are no new accounts.
