@@ -1,5 +1,13 @@
-**HEARTBEAT_OK.** All 10 expected skills ran on June 9. No new issues, no escalations due today. Logged to `memory/logs/2026-06-09.md`.
+Heartbeat 2026-06-10 — 4 findings:
 
-Key ongoing items tracked (no notifications sent):
-- **operator-scorecard MISSING** — 48h dedup active (notified June 8); next Monday June 15 will confirm if this is persistent
-- **show-hn-draft** — 7d backoff in effect; escalation due tomorrow June 10; auto-dispatch wired at 500⭐ (~June 11, 3 stars away)
+ESCALATION (day 3): operator-scorecard still missing. Expected Mon 10:30 UTC; last ran 2026-06-01 (9 days ago). Has not run for 2 consecutive Mondays. Recovery: gh workflow run aeon.yml -f skill=operator-scorecard
+
+NEW: feature skill cancelled today (12:09 UTC). Ran but did not complete — conclusion: cancelled. No prior occurrences this week.
+
+NEW: push-recap missing (expected 15:00 UTC, 4h+ overdue — not in Actions runs or today's log).
+
+NEW: star-milestone missing (expected 15:15 UTC, 4h+ overdue — not in Actions runs or today's log).
+
+Recovery for last two: gh workflow run aeon.yml -f skill=push-recap && gh workflow run aeon.yml -f skill=star-milestone
+
+Resolved: show-hn-draft persistent item cleared — 500 stars crossed today, auto-dispatch fired, memory-flush removed.

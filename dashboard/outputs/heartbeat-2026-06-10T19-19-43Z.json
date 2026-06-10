@@ -1,0 +1,203 @@
+{
+  "root": "heartbeat-card",
+  "state": {},
+  "elements": {
+    "heartbeat-card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat 2026-06-10",
+        "description": "4 findings"
+      },
+      "children": [
+        "findings-stack"
+      ]
+    },
+    "findings-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "finding-1-stack",
+        "sep-1",
+        "finding-2-stack",
+        "sep-2",
+        "finding-3-stack",
+        "sep-3",
+        "finding-4-stack",
+        "sep-4",
+        "finding-5-stack"
+      ]
+    },
+    "finding-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-escalation",
+        "alert-operator-scorecard",
+        "recovery-cmd-1"
+      ]
+    },
+    "badge-escalation": {
+      "type": "Badge",
+      "props": {
+        "text": "ESCALATION (day 3)",
+        "variant": "destructive"
+      }
+    },
+    "alert-operator-scorecard": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "operator-scorecard missing",
+        "message": "Expected Mon 10:30 UTC; last ran 2026-06-01 (9 days ago). Has not run for 2 consecutive Mondays."
+      }
+    },
+    "recovery-cmd-1": {
+      "type": "Text",
+      "props": {
+        "text": "Recovery: gh workflow run aeon.yml -f skill=operator-scorecard",
+        "variant": "muted"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "finding-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-2",
+        "alert-feature-skill"
+      ]
+    },
+    "badge-new-2": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "alert-feature-skill": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "feature skill cancelled",
+        "message": "Ran but did not complete — cancelled today at 12:09 UTC. No prior occurrences this week."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "finding-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-3",
+        "alert-push-recap"
+      ]
+    },
+    "badge-new-3": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "alert-push-recap": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "push-recap missing",
+        "message": "Expected 15:00 UTC, 4h+ overdue — not in Actions runs or today's log."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "finding-4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-4",
+        "alert-star-milestone",
+        "recovery-cmd-2"
+      ]
+    },
+    "badge-new-4": {
+      "type": "Badge",
+      "props": {
+        "text": "NEW",
+        "variant": "secondary"
+      }
+    },
+    "alert-star-milestone": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "star-milestone missing",
+        "message": "Expected 15:15 UTC, 4h+ overdue — not in Actions runs or today's log."
+      }
+    },
+    "recovery-cmd-2": {
+      "type": "Text",
+      "props": {
+        "text": "Recovery for last two: gh workflow run aeon.yml -f skill=push-recap && gh workflow run aeon.yml -f skill=star-milestone",
+        "variant": "muted"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "finding-5-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-resolved",
+        "text-hn-draft"
+      ]
+    },
+    "badge-resolved": {
+      "type": "Badge",
+      "props": {
+        "text": "Resolved",
+        "variant": "default"
+      }
+    },
+    "text-hn-draft": {
+      "type": "Text",
+      "props": {
+        "text": "show-hn-draft persistent item cleared — 500 stars crossed today, auto-dispatch fired, memory-flush removed.",
+        "variant": "body"
+      }
+    }
+  }
+}
