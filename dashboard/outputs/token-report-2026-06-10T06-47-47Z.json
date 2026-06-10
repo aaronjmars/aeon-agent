@@ -1,0 +1,95 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon Daily — 2026-06-10",
+        "description": "token-report"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume",
+        "stat-buys-sells",
+        "stat-7d",
+        "stat-30d",
+        "text-commentary",
+        "link-chart"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00003302",
+        "delta": "-9.1%",
+        "trend": "down"
+      }
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.33M"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Vol",
+        "value": "$265K",
+        "delta": "+3.1%",
+        "trend": "up"
+      }
+    },
+    "stat-buys-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "327/235"
+      }
+    },
+    "stat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "+19.0%",
+        "trend": "up"
+      }
+    },
+    "stat-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "+634%",
+        "trend": "up"
+      }
+    },
+    "text-commentary": {
+      "type": "Text",
+      "props": {
+        "text": "Profit-taking after yesterday's +22.6% surge — intraday low $0.000030 held above Jun 4–6 floor.",
+        "variant": "body"
+      }
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
