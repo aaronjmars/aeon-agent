@@ -1,0 +1,314 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — 2026-06-10",
+        "description": "Generated from analysis of the current project — these are ideas that could be autonomously built by the feature skill tomorrow."
+      },
+      "children": [
+        "stack-items",
+        "sep-before-details",
+        "link-details"
+      ]
+    },
+    "stack-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-1",
+        "sep-1",
+        "item-2",
+        "sep-2",
+        "item-3",
+        "sep-3",
+        "item-4",
+        "sep-4",
+        "item-5"
+      ]
+    },
+    "item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-1-title",
+        "item-1-badges",
+        "item-1-desc"
+      ]
+    },
+    "item-1-title": {
+      "type": "Heading",
+      "props": {
+        "text": "atrium-catalog-watcher backport",
+        "level": "h3"
+      }
+    },
+    "item-1-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1-cat",
+        "badge-1-size"
+      ]
+    },
+    "badge-1-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "default"
+      }
+    },
+    "badge-1-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "item-1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Verbatim backport of upstream PR #342 — the 26th consecutive same-day-after backport, unblocked by install-from-atrium landing Jun-09; weekly Atrium marketplace diff with one-click install commands."
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-2-title",
+        "item-2-badges",
+        "item-2-desc"
+      ]
+    },
+    "item-2-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Show HN Response Monitor skill",
+        "level": "h3"
+      }
+    },
+    "item-2-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-2-cat",
+        "badge-2-size"
+      ]
+    },
+    "badge-2-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Community",
+        "variant": "default"
+      }
+    },
+    "badge-2-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "item-2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "aeon just crossed 500⭐ and the Show HN auto-fires; no skill tracks the thread response (points, comment themes, star delta) — closes the fire-and-forget launch gap."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-3-title",
+        "item-3-badges",
+        "item-3-desc"
+      ]
+    },
+    "item-3-title": {
+      "type": "Heading",
+      "props": {
+        "text": "STRATEGY.md Weekly Alignment Check skill",
+        "level": "h3"
+      }
+    },
+    "item-3-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-3-cat",
+        "badge-3-size"
+      ]
+    },
+    "badge-3-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Meta-Agent",
+        "variant": "default"
+      }
+    },
+    "badge-3-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "item-3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "STRATEGY.md landed Jun-8 as a @-imported north-star; no skill checks whether weekly output aligns with stated priorities — weekly strategy-check scores each signal category against the roadmap."
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-4-title",
+        "item-4-badges",
+        "item-4-desc"
+      ]
+    },
+    "item-4-title": {
+      "type": "Heading",
+      "props": {
+        "text": "capabilities-sweep backport",
+        "level": "h3"
+      }
+    },
+    "item-4-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-4-cat",
+        "badge-4-size"
+      ]
+    },
+    "badge-4-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      }
+    },
+    "badge-4-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "item-4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Phase 2 automated capabilities sweep (upstream PR #416, today) backported to aeon-agent would self-audit the ~100-skill catalog for missing capabilities frontmatter in one shot."
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item-5-title",
+        "item-5-badges",
+        "item-5-desc"
+      ]
+    },
+    "item-5-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Color-label filter toggle in minitor",
+        "level": "h3"
+      }
+    },
+    "item-5-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-5-cat",
+        "badge-5-size"
+      ]
+    },
+    "badge-5-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Feature",
+        "variant": "default"
+      }
+    },
+    "badge-5-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "item-5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Column + deck color labels (PRs #61 #62) exist but have no filter layer; adding a color-pill filter bar above the deck grid lets operators single-click to isolate a tagged group at 15+ columns."
+      }
+    },
+    "sep-before-details": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link-details": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-10.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
