@@ -87,6 +87,7 @@ declare -A CATEGORIES=(
   [fleet-control]="dev"
   [fork-fleet]="dev"
   # Ecosystem
+  [ecosystem-entrants]="research"
   [ecosystem-links]="research"
 )
 
