@@ -1,12 +1,16 @@
 ## Summary
 
-**Status: STAR_MOMENTUM_NO_ALERTS**
+Executed `star-momentum-alert` for 2026-06-10.
 
-**aaronjmars/aeon**: 496⭐, gap of 4 to the 500 milestone. v7=3.29/day, v3=3.0/day. Projected crossing: **2026-06-11 (Thursday)** in ~2 days. Gate failed: `OUT_OF_WINDOW` (2 days < 7-day minimum). The alert already fired on 2026-06-01 when the window was clean. The 500⭐ milestone is now imminent — if the operator wants to dispatch `show-hn-draft`, the window is manually now (24-48h before June 11). The star-milestone auto-dispatch wired in PR #358 will fire `show-hn-draft` automatically when the milestone actually crosses.
+**Repos audited:** 2 (aeon-agent filtered as an agent repo)
 
-**aaronjmars/minitor**: constant 11⭐ across all 14 days, v7=0 → `STALLED`. No projection possible.
+**Results:**
+- `aaronjmars/aeon` — **OUT_OF_WINDOW**: 496⭐, targeting 500⭐ (gap: 4). Pace 3.29/day (v7), projected crossing 2026-06-12 (Thursday). The 2-day lead time falls below the 7-day minimum dispatch window — too close to act on. The star-milestone auto-dispatch from PR #358 is already wired to fire `show-hn-draft` when the crossing happens.
+- `aaronjmars/minitor` — **STALLED**: 11⭐, zero net growth across 13 days.
 
-Files written:
-- `articles/star-momentum-2026-06-09.md` — full projection report
-- `memory/topics/star-momentum-state.json` — updated `last_run_at`
-- `memory/logs/2026-06-09.md` — log entry appended
+**Status:** `STAR_MOMENTUM_NO_ALERTS` — no notification sent.
+
+**Files written:**
+- `articles/star-momentum-2026-06-10.md`
+- `memory/topics/star-momentum-state.json` (last_run_at updated, projected_date_v7 updated to 2026-06-12)
+- `memory/logs/2026-06-10.md` (log block appended)
