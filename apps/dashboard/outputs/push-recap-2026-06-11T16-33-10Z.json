@@ -1,0 +1,227 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-11"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_tagline",
+        "sep_1",
+        "heading_shipped",
+        "stack_shipped",
+        "sep_2",
+        "heading_under",
+        "text_under",
+        "sep_3",
+        "heading_shape",
+        "grid_shape",
+        "sep_4",
+        "heading_volume",
+        "stack_volume",
+        "sep_5",
+        "link_full_recap"
+      ]
+    },
+    "text_tagline": {
+      "type": "Text",
+      "props": {
+        "text": "aeon · aeon-agent · minitor — SHIPPING: gateway auto-routing + cascade failover, two new skills, minitor color filter.",
+        "variant": "lead"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h2"
+      }
+    },
+    "stack_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_aeon_gw",
+        "text_aeon_skills",
+        "text_minitor_color"
+      ]
+    },
+    "text_aeon_gw": {
+      "type": "Text",
+      "props": {
+        "text": "aeon: LLM gateway now resolves the provider at run time from whichever key is set (gateway=auto default) and cascades to the next provider on any failure — outage, rate limit, or empty credits no longer kills a run (#430, #435)."
+      }
+    },
+    "text_aeon_skills": {
+      "type": "Text",
+      "props": {
+        "text": "aeon: two net-new skills — wc-resale (WC2026 resale ticket price tracker, no secrets) and an atrium-watch backport (weekly Atrium catalog diff); plus ./notify -f for multi-line sends (#442, #93, #441)."
+      }
+    },
+    "text_minitor_color": {
+      "type": "Text",
+      "props": {
+        "text": "minitor: per-deck color-label filter toggle above the column grid (#69); pypi feed tsc build break fixed (#70)."
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_under": {
+      "type": "Heading",
+      "props": {
+        "text": "Under the hood",
+        "level": "h2"
+      }
+    },
+    "text_under": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent rebuilt on the new aeon template (#94), re-applying 15 skills + $AEON identity; two latent scheduler bugs that silently dropped skills fixed in aeon (#439, #440)."
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_shape": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape",
+        "level": "h2"
+      }
+    },
+    "grid_shape": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_visible",
+        "stat_internal",
+        "stat_infra",
+        "stat_filtered",
+        "stat_prs"
+      ]
+    },
+    "stat_visible": {
+      "type": "Stat",
+      "props": {
+        "label": "user-visible",
+        "value": "17"
+      }
+    },
+    "stat_internal": {
+      "type": "Stat",
+      "props": {
+        "label": "internal",
+        "value": "6"
+      }
+    },
+    "stat_infra": {
+      "type": "Stat",
+      "props": {
+        "label": "infra",
+        "value": "2"
+      }
+    },
+    "stat_filtered": {
+      "type": "Stat",
+      "props": {
+        "label": "bot-filtered",
+        "value": "29"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "merged PRs",
+        "value": "25"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_volume": {
+      "type": "Heading",
+      "props": {
+        "text": "Volume",
+        "level": "h2"
+      }
+    },
+    "stack_volume": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_aeon_volume",
+        "text_minitor_volume",
+        "text_aeon_agent_volume"
+      ]
+    },
+    "text_aeon_volume": {
+      "type": "Text",
+      "props": {
+        "text": "aeon +963/−732 (122 files)"
+      }
+    },
+    "text_minitor_volume": {
+      "type": "Text",
+      "props": {
+        "text": "minitor +228/−16"
+      }
+    },
+    "text_aeon_agent_volume": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-agent feature work + one wholesale template rebuild"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_full_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-11.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
