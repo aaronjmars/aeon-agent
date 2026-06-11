@@ -2,7 +2,7 @@
   "version": "1.0",
   "generated": "2026-05-11T00:00:00Z",
   "repo": "aaronjmars/aeon",
-  "total": 103,
+  "total": 104,
   "categories": {
     "research": "Research & Content",
     "dev": "Dev & Code",
@@ -680,6 +680,16 @@
       "var": "",
       "files": 0,
       "install": "./add-skill aaronjmars/aeon aixbt-pulse"
+    },
+    {
+      "slug": "atrium-watch",
+      "name": "atrium-watch",
+      "description": "Weekly diff of the Atrium marketplace catalog at atriumhermes.tech/.well-known/skills/index.json — surfaces newly-published / removed / updated skills. Keyed on collision-free onchain skill_id. Supply-side complement to sparkleware-catalog and skill-update-check.",
+      "category": "dev",
+      "schedule": "0 12 * * 5",
+      "var": "",
+      "files": 1,
+      "install": "./add-skill aaronjmars/aeon atrium-watch"
     },
     {
       "slug": "competitor-launch-radar",
