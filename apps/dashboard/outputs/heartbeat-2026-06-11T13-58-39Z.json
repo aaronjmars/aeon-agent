@@ -1,0 +1,304 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "status-section",
+        "findings-section",
+        "footer-section"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "status-badge",
+        "status-text"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "First heartbeat run on rebuilt instance",
+        "variant": "body"
+      }
+    },
+    "findings-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "finding-p0",
+        "sep1",
+        "finding-p2",
+        "sep2",
+        "finding-p3"
+      ]
+    },
+    "finding-p0": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "p0-badge",
+        "p0-text"
+      ]
+    },
+    "p0-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "P0",
+        "variant": "destructive"
+      }
+    },
+    "p0-text": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat self-check — no last_success on record (first run post-rebuild; expected)",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "finding-p2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "p2-badge",
+        "p2-text"
+      ]
+    },
+    "p2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "P2",
+        "variant": "secondary"
+      }
+    },
+    "p2-text": {
+      "type": "Text",
+      "props": {
+        "text": "MEMORY flags — confirm GitHub secrets + notification channels survived template rebuild",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "finding-p3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "p3-badge",
+        "p3-text",
+        "p3-count",
+        "skill-list"
+      ]
+    },
+    "p3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "P3",
+        "variant": "outline"
+      }
+    },
+    "p3-text": {
+      "type": "Text",
+      "props": {
+        "text": "Enabled skills with no cron-state entries — none have been dispatched yet:",
+        "variant": "body"
+      }
+    },
+    "p3-count": {
+      "type": "Stat",
+      "props": {
+        "value": "15"
+      }
+    },
+    "skill-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skill-1",
+        "skill-2",
+        "skill-3",
+        "skill-4",
+        "skill-5",
+        "skill-6",
+        "skill-7",
+        "skill-8",
+        "skill-9",
+        "skill-10",
+        "skill-11",
+        "skill-12",
+        "skill-13",
+        "skill-14",
+        "skill-15"
+      ]
+    },
+    "skill-1": {
+      "type": "Badge",
+      "props": {
+        "text": "token-report",
+        "variant": "outline"
+      }
+    },
+    "skill-2": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-pulse",
+        "variant": "outline"
+      }
+    },
+    "skill-3": {
+      "type": "Badge",
+      "props": {
+        "text": "star-momentum",
+        "variant": "outline"
+      }
+    },
+    "skill-4": {
+      "type": "Badge",
+      "props": {
+        "text": "feature",
+        "variant": "outline"
+      }
+    },
+    "skill-5": {
+      "type": "Badge",
+      "props": {
+        "text": "self-improve",
+        "variant": "outline"
+      }
+    },
+    "skill-6": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-actions",
+        "variant": "outline"
+      }
+    },
+    "skill-7": {
+      "type": "Badge",
+      "props": {
+        "text": "push-recap",
+        "variant": "outline"
+      }
+    },
+    "skill-8": {
+      "type": "Badge",
+      "props": {
+        "text": "star-milestone",
+        "variant": "outline"
+      }
+    },
+    "skill-9": {
+      "type": "Badge",
+      "props": {
+        "text": "repo-article",
+        "variant": "outline"
+      }
+    },
+    "skill-10": {
+      "type": "Badge",
+      "props": {
+        "text": "project-lens",
+        "variant": "outline"
+      }
+    },
+    "skill-11": {
+      "type": "Badge",
+      "props": {
+        "text": "thread-formatter",
+        "variant": "outline"
+      }
+    },
+    "skill-12": {
+      "type": "Badge",
+      "props": {
+        "text": "shiplog",
+        "variant": "outline"
+      }
+    },
+    "skill-13": {
+      "type": "Badge",
+      "props": {
+        "text": "operator-scorecard",
+        "variant": "outline"
+      }
+    },
+    "skill-14": {
+      "type": "Badge",
+      "props": {
+        "text": "memory-flush",
+        "variant": "outline"
+      }
+    },
+    "skill-15": {
+      "type": "Badge",
+      "props": {
+        "text": "heartbeat",
+        "variant": "outline"
+      }
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sep3",
+        "footer-text"
+      ]
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer-text": {
+      "type": "Text",
+      "props": {
+        "text": "No failed runs, no stalled PRs, no open issues.",
+        "variant": "body"
+      }
+    }
+  }
+}
