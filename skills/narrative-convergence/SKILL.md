@@ -1,43 +1,9 @@
 ---
 name: narrative-convergence
-description: Daily cross-skill signal detector — finds entities or themes surfaced independently by 3+ different skill categories in the last 48h and surfaces them as high-confidence write opportunities
+description: Cross-skill signal detector — finds entities or themes surfaced independently by 3+ different skill categories within 48h and surfaces them as high-confidence write opportunities
 var: ""
 tags: [content, meta, intelligence]
 ---
-<!--
-  Verbatim backport of upstream aeon `skills/narrative-convergence/SKILL.md`
-  (originally shipped as part of upstream aeon PR #272, merged 2026-05-29 —
-  the same general-ops batch as spend-monitor [aeon-agent PR #74, Jun-01] and
-  follow-up-patrol [aeon-agent PR #76, Jun-02]).
-
-  Three adaptations vs upstream:
-    (1) `./notify` call style: upstream uses `./notify -f .pending-notify-temp/<file>`,
-        aeon-agent's `./notify` reads its argument as a single positional `$1`
-        (confirmed at root `notify` line 3 `MSG="$1"`, same constraint that
-        drove the spend-monitor + follow-up-patrol adaptations). Step 7
-        rewrites the call as `./notify "$(cat .pending-notify-temp/<file>)"`
-        — same temp-file contents, same gating, same body, single argv.
-    (2) Signal-categories seed is left **verbatim** from upstream — many of
-        those skills (mcp-pulse, x402-monitor, vuln-scanner, etc.) do not run
-        on aeon-agent. The skill explicitly handles missing skills by sending
-        their would-be category lane to `other`, and the file is
-        operator-editable per the upstream design. On first run on this fork,
-        the operator should trim the seed to the actually-enabled skill set
-        (repo-pulse, repo-article, push-recap, project-lens, repo-actions,
-        token-report, star-momentum-alert, thread-formatter, operator-scorecard,
-        weekly-shiplog, feature, star-milestone, heartbeat, memory-flush,
-        self-improve). Until they do, the skill still runs — it just maps
-        fewer outputs to named lanes.
-    (3) `.outputs/` directory is sparse on aeon-agent (chain-runner staging
-        only fills for chained skills; most aeon-agent skills run standalone).
-        The upstream skill already handles this case in step 2 + the Sandbox
-        Note: fall back to reading the last 2 memory logs directly. On
-        aeon-agent this fallback path will be the primary one until chains
-        are configured.
-
-  Source upstream commit: upstream `main` at the time of backport.
--->
-
 > **${var}** — Optional entity or theme filter (e.g. "Anthropic", "coordination markets"). If empty, scans all skill output categories.
 
 Today is ${today}. Read `memory/MEMORY.md` before starting.
@@ -48,9 +14,9 @@ If `soul/SOUL.md` and `soul/STYLE.md` exist and are populated, read them and mat
 
 ## Why this skill exists
 
-`topic-momentum` (upstream) and `repo-article` / `project-lens` (this fork) surface content gaps by scanning a pre-tagged narrative pipeline against article history. They work well for known categories.
+`topic-momentum` surfaces content gaps by scanning the content-discovery pipeline against article history. It works well for pre-tagged narrative categories.
 
-This skill does something different: it detects **emergent cross-skill convergence** — when independent operational skills (repo trackers, market trackers, sector pulses, etc.) all surface the same entity, company, protocol, or theme within 48h, without any prior coordination. That kind of convergence is a higher-signal indicator than any single source — it often precedes a breakout narrative. Example: a security skill flags a company's automated-vulnerability work, a social digest catches that same company announcing a major deal, and a market tracker notes a related fraud-prevention win — three independent skills, one entity, in 48h. That bleedthrough is the signal. This skill catches it automatically.
+This skill does something different: it detects **emergent cross-skill convergence** — when independent operational skills (security scanners, market trackers, sector pulses, etc.) all surface the same entity, company, protocol, or theme within 48h, without any prior coordination. That kind of convergence is a higher-signal indicator than any single source — it often precedes a breakout narrative. Example: a security skill flags a company's automated-vulnerability work, a social digest catches that same company announcing a major deal, and a market tracker notes a related fraud-prevention win — three independent skills, one entity, in 48h. That bleedthrough is the signal. This skill catches it automatically.
 
 ## Config
 
@@ -60,20 +26,20 @@ The signal-category map is **operator-editable** and lives in `memory/topics/sig
 # Signal Categories
 
 ## Housekeeping (excluded — no external signals)
-config-validator, janitor, run-frequency-guard, batch-health, heartbeat, memory-flush,
-memory-structural-dedupe, skill-evals, skill-health, skill-repair, self-review, reflect,
+config-validator, janitor, frequency-guard, batch-health, heartbeat, memory-flush,
+memory-dedupe, skill-evals, skill-health, skill-repair, self-review, reflect,
 spend-monitor, cost-report, fleet-scorecard, fleet-control, repo-scanner, narrative-convergence
 
 ## Signal categories (skill → category)
 | Category | Skills |
 |----------|--------|
-| market | market-context-refresh, token-pick, token-movers, rwa-pulse, defi-monitor, token-report |
-| social | tweet-roundup, list-digest, narrative-tracker, remix-tweets, refresh-x, thread-formatter |
-| ecosystem | github-issues, github-trending, project-lens, builder-map, external-feature, milestone-tracker, repo-pulse, repo-article, push-recap, repo-actions |
+| market | market-context, token-pick, token-movers, rwa-pulse, defi-monitor |
+| social | tweet-roundup, list-digest, narrative-tracker, remix-tweets, refresh-x |
+| ecosystem | github-issues, github-trending, project-lens, builder-map, external-feature, milestone-tracker |
 | sector | mcp-pulse, compute-pulse, x402-monitor, agent-displacement, pm-pulse |
-| security | vuln-scanner, vuln-tracker, disclosure-tracker, pvr-watchlist, pvr-triage-monitor |
+| security | vuln-scanner, vuln-tracker, disclosure-tracker, pvr-watchlist, pvr-triage |
 | research | paper-pick, article, idea-validator, idea-pipeline |
-| opportunity | startup-idea, deal-flow, launch-radar, star-momentum-alert, star-milestone |
+| opportunity | startup-idea, deal-flow, launch-radar |
 ```
 
 ## Steps
@@ -103,7 +69,7 @@ Build an entity/theme map:
 }
 ```
 
-Also read memory logs from the last 2 days (Glob `memory/logs/*.md`, take the 2 most recent). From each log, extract entities/themes mentioned in specific skill run entries and add them to the map with their source skill. Every skill appends a log entry, so the signal map can be reconstructed from logs alone when `.outputs/` is sparse — on aeon-agent this is the **primary** data path until chains are configured.
+Also read memory logs from the last 2 days (Glob `memory/logs/*.md`, take the 2 most recent). From each log, extract entities/themes mentioned in specific skill run entries and add them to the map with their source skill. Every skill appends a log entry, so the signal map can be reconstructed from logs alone when `.outputs/` is sparse.
 
 ### 3. Score convergence signals
 
@@ -170,7 +136,7 @@ Write `memory/topics/convergence-signals.md` (overwrite if exists):
 
 ---
 *Generated by narrative-convergence on ${today}. Top signal has N source skills across N categories.*
-*Consumed by: repo-article, project-lens, thread-formatter.*
+*Consumed by: article skill, topic-momentum.*
 ```
 
 If no signals meet the threshold: write a minimal file noting the scan ran clean.
@@ -195,15 +161,12 @@ these aren't single-source signals. they're bleedthrough.
 full breakdown: memory/topics/convergence-signals.md
 ```
 
-Keep under 900 chars. Then dispatch through this fork's single-positional-arg `./notify`:
-
+Keep under 900 chars. Run:
 ```bash
-./notify "$(cat .pending-notify-temp/narrative-convergence-${today}.md)"
+./notify -f .pending-notify-temp/narrative-convergence-${today}.md
 ```
 
-(Upstream used `./notify -f <file>`; aeon-agent's notify reads `$1` only. The temp file is still written so a workflow re-run can re-emit the same body without recomputing.)
-
-### 8. Log to `memory/logs/${today}.md`
+### 8. Log to memory/logs/${today}.md
 
 Append:
 ```markdown
@@ -224,4 +187,4 @@ None. All reads from local `.outputs/`, `memory/`, and `articles/` dirs.
 
 ## Sandbox Note
 
-No network calls required. All data comes from local files written by other skills. If `.outputs/` is sparse (e.g. first morning run before any chained skills have written — and on aeon-agent **most** runs hit this case because chains aren't broadly configured), fall back to reading the last 3 memory logs directly. Every skill appends a log entry, so the signal map can be reconstructed from logs alone. The only outbound call is `./notify`, which is already sandbox-safe.
+No network calls required. All data comes from local files written by other skills. If `.outputs/` is sparse (e.g. first morning run before skills have written), fall back to reading the last 3 memory logs directly — every skill appends a log entry, so the signal map can be reconstructed from logs alone. The only outbound call is `./notify`, which is already sandbox-safe.

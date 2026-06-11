@@ -1,43 +1,42 @@
 ---
 name: Config Validator
-description: Validate aeon.yml and .github/workflows/aeon.yml for structural invariants that have caused past outages — checkout-before-run ordering, duplicate skill keys, missing skill files
-tags: [dev, ops]
+description: Validate aeon.yml and .github/workflows/aeon.yml for structural invariants that have caused past outages — checkout step ordering, duplicate skill keys, missing skill files
+tags: [meta, dev]
 ---
 
 Today is ${today}. Your task is to validate the structural correctness of `aeon.yml` and `.github/workflows/aeon.yml`.
 
-This skill exists because two incident classes can cause major outages:
-- **Checkout-ordering class**: the workflow invokes Claude (`Run` step) before the repository is checked out — every skill then runs against an empty workspace and fails in a single run.
-- **Duplicate-key class**: duplicate YAML keys in `aeon.yml` — YAML silently keeps the last value, disabling or mis-scheduling any skill whose key is shadowed.
+This skill exists because two incident classes have caused major outages:
+- **Checkout-ordering class**: `Early checkout` step missing or conditionally gated — can cause every skill to fail in a single run.
+- **Duplicate-key class**: duplicate YAML keys in `aeon.yml` — silently disable any skill whose key is shadowed.
 
-Run all checks. Report findings. Alert only if any fail.
+The same checks also run as a pre-merge CI workflow at `.github/workflows/ci-config-validate.yml` (via `scripts/validate-config.js`) — that workflow blocks PRs that break these invariants. This skill is the **weekly safety net** for state that drifts on `main` outside of PRs (manual edits, scheduled rewrites, post-process commits). Run all checks. Report findings. Alert if any fail.
 
-> **Backport note.** This skill is backported from upstream `aaronjmars/aeon` (PR #219). Two things differ in aeon-agent and the checks below are adapted accordingly:
-> 1. aeon-agent's workflow checks out the repo **conditionally per event type** — `Early checkout` (`if: github.event_name == 'issues'`) and `Checkout repo` (`if: steps.work.outputs.mode != ''`) — both before the `Run` step. Upstream's single-step "unconditional Early checkout first" rule does **not** apply here; the adapted check (step 1) enforces the real invariant: *a checkout step must precede the Run step*, and tolerates the conditionals.
-> 2. aeon-agent has no shared `scripts/validate-config.js` and no pre-merge `ci-config-validate.yml`. The manual node checks in steps 1–3 are the primary path. If an operator later adds a shared validator script, prefer it (see fast path).
+### Fast path — invoke the shared validator
 
-### Fast path — invoke a shared validator if one exists
-
-If this repo has a shared validator script (the upstream CI workflow uses `scripts/validate-config.js`), run it — it is the most consistent way to run all checks:
+The fastest, most consistent way to run all three checks is the shared script the CI workflow uses:
 
 ```bash
-[ -f scripts/validate-config.js ] && node scripts/validate-config.js
+node scripts/validate-config.js
 ```
 
-Exit code 0 = CLEAN (no notification needed). Non-zero exit + `FAIL[*]:` lines on stdout = ISSUES (skip to step 4). If the script is absent (the default in aeon-agent), fall back to the manual checks in steps 1–3.
+Exit code 0 = CLEAN (no notification needed). Non-zero exit + `FAIL[*]:` lines on stdout = ISSUES (skip to step 4).
+
+If the script is unavailable for any reason, fall back to the manual checks in steps 1–3.
 
 ## Steps
 
-### 1. Check workflow checkout-before-run ordering (checkout-ordering class)
+### 1. Check workflow step ordering (checkout-ordering class)
 
 Read `.github/workflows/aeon.yml`.
 
 Find the `jobs.run.steps` array. Verify:
 
-a. At least one `actions/checkout` step exists.
-b. A checkout step appears **before** the step named `Run` (the step that invokes Claude Code). If the `Run` step is reached before any checkout, that's the outage class — Claude would execute against an empty workspace.
+a. A step named `Early checkout` (or `uses: actions/checkout`) exists.
+b. That step has **no** `if:` condition — it must run unconditionally.
+c. That step is positioned **before** any step that has an `if:` condition.
 
-This is the aeon-agent-adapted invariant (see Backport note): conditional checkouts are allowed; what matters is that the repo is on disk before `Run`.
+Use node inline to parse and check:
 
 ```bash
 node -e "
@@ -45,8 +44,8 @@ const fs = require('fs');
 const text = fs.readFileSync('.github/workflows/aeon.yml', 'utf8');
 const lines = text.split('\n');
 
-let inSteps = false;
-let steps = [], cur = null;
+let inSteps = false, stepDepth = 0;
+let steps = [], cur = null, lineNum = 0;
 
 for (let i = 0; i < lines.length; i++) {
   const line = lines[i];
@@ -58,26 +57,33 @@ for (let i = 0; i < lines.length; i++) {
 
   if (/^\s{6}- /.test(line)) {
     if (cur) steps.push(cur);
-    cur = { lineNum: i + 1, name: null, isCheckout: false, isRun: false };
+    cur = { lineNum: i + 1, name: null, hasIf: false, isCheckout: false };
   }
   if (cur) {
-    if (/name:/.test(trimmed)) cur.name = trimmed.replace(/^- /, '').replace(/^name:\s*/, '').replace(/[\"']/g, '');
+    if (/name:/.test(trimmed)) cur.name = trimmed.replace(/^name:\s*/, '').replace(/[\"']/g, '');
     if (/uses:\s*actions\/checkout/.test(trimmed)) cur.isCheckout = true;
     if (/Early checkout/.test(trimmed)) cur.isCheckout = true;
+    if (/^\s{6}if:/.test(line)) cur.hasIf = true;
   }
 }
 if (cur) steps.push(cur);
-steps.forEach(s => { if (s.name === 'Run') s.isRun = true; });
 
 let issues = [];
-const firstCheckout = steps.findIndex(s => s.isCheckout);
-const runIdx = steps.findIndex(s => s.isRun);
-if (firstCheckout === -1) {
-  issues.push('FAIL: No checkout step (actions/checkout) found in jobs.run.steps');
-} else if (runIdx !== -1 && firstCheckout > runIdx) {
-  issues.push('FAIL: Run step (line ' + steps[runIdx].lineNum + ') appears before any checkout step (line ' + steps[firstCheckout].lineNum + ') — Claude would run on an empty workspace');
+const checkoutIdx = steps.findIndex(s => s.isCheckout);
+if (checkoutIdx === -1) {
+  issues.push('FAIL: No checkout step (actions/checkout or Early checkout) found in jobs.run.steps');
 } else {
-  console.log('PASS checkout: checkout step at line ' + steps[firstCheckout].lineNum + ' precedes Run' + (runIdx !== -1 ? ' (line ' + steps[runIdx].lineNum + ')' : ' (no Run step found — informational)'));
+  const cs = steps[checkoutIdx];
+  if (cs.hasIf) {
+    issues.push('FAIL: Checkout step at line ' + cs.lineNum + ' has an if: condition — must be unconditional');
+  }
+  const firstConditional = steps.findIndex(s => s.hasIf);
+  if (firstConditional !== -1 && firstConditional < checkoutIdx) {
+    issues.push('FAIL: Checkout step appears after a conditional step at line ' + steps[firstConditional].lineNum);
+  }
+  if (issues.length === 0) {
+    console.log('PASS checkout: Early checkout is unconditional and first (line ' + cs.lineNum + ')');
+  }
 }
 if (issues.length > 0) { issues.forEach(i => console.log(i)); process.exit(1); }
 "
@@ -185,10 +191,9 @@ After running all three checks, collect results:
 - **CLEAN**: Log only, no notification. Silent runs are expected — the value is the alert when something breaks.
 - **ISSUES**: Send notification via `./notify`.
 
-If ISSUES, send a single multi-line message (aeon-agent's `./notify` takes one positional message argument and handles chunking/escaping internally — there is no `-f` flag):
+If ISSUES, write notification to `.pending-notify-temp/config-validator-${today}.md` then send with `./notify -f`:
 
-```bash
-./notify "$(cat <<'EOF'
+```
 *Config Validator — ${today}*
 
 STATUS: ISSUES FOUND
@@ -199,8 +204,6 @@ These invariants have caused full outages before.
 Check aeon.yml and .github/workflows/aeon.yml immediately.
 
 log: memory/logs/${today}.md
-EOF
-)"
 ```
 
 ---
@@ -212,7 +215,7 @@ Append to `memory/logs/${today}.md`:
 ```
 ## Config Validator
 - **Status:** CLEAN / ISSUES
-- **Checkout ordering:** PASS / FAIL — [detail]
+- **Checkout step:** PASS / FAIL — [detail]
 - **Duplicate keys:** PASS / FAIL — [detail]
 - **Skill files:** PASS / N warnings — [detail]
 - **Notification:** sent / skipped (clean)
@@ -220,9 +223,7 @@ Append to `memory/logs/${today}.md`:
 
 ## Sandbox Note
 
-All checks use **local file reads only** — no external network calls, no auth, no `$ENV_VAR`-in-curl-header concerns. Node is available in the workflow (Setup Node.js step). No prefetch/postprocess wrapper required.
-
-The only outbound action is `./notify` on the ISSUES path, which already handles the sandbox/post-run delivery fallback internally.
+All checks use local file reads only — no external network calls needed. No prefetch/postprocess wrapper required.
 
 ## Environment Variables Required
 

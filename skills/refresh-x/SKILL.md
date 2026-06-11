@@ -1,90 +1,137 @@
 ---
 name: Refresh X
-description: Fetch a tracked X/Twitter account's latest tweets and save the gist to memory
+description: Fetch a tracked X/Twitter account's latest tweets, cluster them, and save a decision-ready gist to memory
 var: ""
 tags: [social]
+requires: [XAI_API_KEY]
 ---
-> **${var}** — The @handle to check (e.g. "@elonmusk", "vitalikbuterin"). **Required** — set this in aeon.yml or pass it when triggering the skill.
+<!-- autoresearch: variation B — sharper output via verdict + clustering + thread detection + insight lines + signal-score gating -->
 
-Read memory/MEMORY.md for context.
-Read the last 2 days of memory/logs/ to avoid logging duplicate tweets.
+> **${var}** — The @handle to check (e.g. "@elonmusk", "vitalikbuterin", "https://x.com/pmarca"). **Required** — set this in aeon.yml or pass when triggering.
+
+If `${var}` is empty or only whitespace after normalization, send `./notify "refresh-x: REFRESH_X_NO_VAR — set var to an X handle"` and exit 0.
+
+Read `memory/MEMORY.md` for context. Read the last 2 days of `memory/logs/` — extract every `https://x.com/` URL under a prior `## Refresh X` section for the same handle into a `SEEN_URLS` set (used for dedup in step 4).
 
 ## Steps
 
-1. **Fetch the latest tweets for the specified account.** Use whichever path is available, in order:
+### 1. Normalize var
 
-   ```bash
-   FROM_DATE=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
-   TO_DATE=$(date -u +%Y-%m-%d)
-   ACCOUNT="${var}"
-   ACCOUNT="${ACCOUNT#@}"
+Strip leading `@`, `https://x.com/`, `https://twitter.com/`, `https://nitter.net/`, and any trailing slash or `/status/...`. Lowercase. Reject if the remainder is empty, contains whitespace, or is longer than 15 chars (X handle limit). On reject → `REFRESH_X_NO_VAR` and exit.
 
-   if [ -z "$ACCOUNT" ]; then
-     echo "Error: var must be set to a Twitter handle (e.g. 'elonmusk')"
-     exit 1
-   fi
-   ```
+Store the cleaned handle as `ACCOUNT`.
 
-   **Path A — pre-fetched cache** (preferred — `scripts/prefetch-xai.sh` already covers `refresh-x` and writes the response to `.xai-cache/refresh-x.json`):
-   ```bash
-   cat .xai-cache/refresh-x.json 2>/dev/null | jq -r '.output[] | select(.type == "message") | .content[] | select(.type == "output_text") | .text'
-   ```
+### 2. Load tweets
 
-   **Path A error short-circuit:** if `.xai-cache/refresh-x.json` is missing AND `.xai-cache/refresh-x.json.error` exists, the prefetch failed (XAI api timeout, HTTP error, etc.). In that case **skip Paths B and C entirely** — Path B's curl call requires `$XAI_API_KEY` env-var expansion which the sandbox blocks (the historical failure mode that wrote a misleading "XAI_API_KEY not set" line into the log even when the key was set), and Path C's WebSearch path consistently returns 0 fresh per-account tweets when XAI is the real source of truth. Read the one-line reason from `.xai-cache/refresh-x.json.error`, jump straight to step 3 with status `REFRESH_X_PREFETCH_FAILED`, and include the prefetch error reason in the log + notification.
+**Path A — prefetched cache (preferred)**: read `.xai-cache/refresh-x.json`. If present and non-empty, parse with:
+```bash
+jq -r '.output[] | select(.type == "message") | .content[] | select(.type == "output_text") | .text' .xai-cache/refresh-x.json
+```
+Record `source=xai-cache`.
 
-   **Path A truncation marker:** if `.xai-cache/refresh-x.json.truncated` exists, the cache was written but the XAI response hit the `max_output_tokens` ceiling — the cache is real but **incomplete**. Continue processing normally, but: (a) tag the status as `REFRESH_X_OK_TRUNCATED` (not plain `OK`) when logging; (b) append a single line to the notification: `⚠️ XAI cache truncated (output_tokens=N/max=M); results may be incomplete.` — read the values from the marker file (format `output_tokens=N reasoning_tokens=R max_output_tokens=M`).
+**Path B — WebFetch fallback**: if the cache is missing, empty, or the parsed text contains zero x.com status URLs, use WebFetch against `https://x.com/${ACCOUNT}` with the prompt: *"List every tweet, reply, and quote tweet visible on this profile with its full text, timestamp, engagement counts (likes/retweets/replies) if shown, and the permalink in the form https://x.com/handle/status/ID. Return a chronological list."* Record `source=webfetch`.
 
-   **Path B — X.AI API direct** (fallback for local runs where the sandbox does not block env-var expansion in curl headers — does NOT work inside GitHub Actions' Claude sandbox; the prefetch is the supported path there):
-   ```bash
-   curl -s -X POST "https://api.x.ai/v1/responses" \
-     -H "Content-Type: application/json" \
-     -H "Authorization: Bearer $XAI_API_KEY" \
-     -d '{
-       "model": "grok-4-1-fast",
-       "input": [{"role": "user", "content": "Search X for all tweets posted by @'"$ACCOUNT"' from '"$FROM_DATE"' to '"$TO_DATE"'. Return every tweet — not just popular ones. For each: the full tweet text, date/time posted, engagement stats (likes, retweets, replies), and the direct link (https://x.com/'"$ACCOUNT"'/status/ID). If it was a reply, note who it was replying to. If it was a quote tweet, include what was quoted. Return as a chronological list."}],
-       "tools": [{"type": "x_search", "from_date": "'"$FROM_DATE"'", "to_date": "'"$TO_DATE"'"}]
-     }'
-   ```
+**Path C — degraded**: if both paths fail or `XAI_API_KEY` is unset and WebFetch returns nothing parseable, skip to step 8 with status `REFRESH_X_NO_API_KEY` (if key missing) or `REFRESH_X_ERROR` (if key set but both paths failed).
 
-   **Path C — WebSearch fallback** (use only when both cache and Path B are unavailable — coverage is partial because WebSearch favours older high-engagement tweets):
-   Use the built-in WebSearch tool with `site:x.com/${ACCOUNT} after:${FROM_DATE}`. Note at the top of the log entry: "results compiled via WebSearch — coverage partial".
+### 3. Parse into structured tweets
 
-   Do **not** write a line claiming "XAI_API_KEY not set" — the data source on the cron path is the prefetch cache, not a live key inside the skill. If the cache is absent and there is no `.error` marker, that means the prefetch was never invoked for this skill (e.g. when refresh-x runs ad-hoc without going through `chain-runner.yml` / `aeon.yml`); in that case go to Path C, and log `REFRESH_X_NO_PREFETCH: prefetch not invoked`.
+For each tweet extract: `url`, `text`, `timestamp`, `type` (original / reply / quote), `reply_to` (handle, if reply), `quoted_text` (if quote), `likes`, `retweets`, `replies`. Drop retweets of others (not originals from this account). If engagement counts are missing, treat them as 0 — do not fabricate.
 
-2. Summarize what was posted:
-   - How many tweets/replies/quote tweets
-   - Top themes and topics covered
-   - Which tweets got the most engagement and why
-   - Any threads or multi-tweet arcs
-   - Tone/mood of the day (shitposting? serious? argumentative?)
+Compute `signal_score = likes + 2*retweets + replies − (3 if type=reply else 0)`.
 
-3. Save the gist to memory/logs/${today}.md:
-   ```
-   ## Refresh X
-   - **Account:** @ACCOUNT
-   - **Source:** Path A (prefetch cache) | Path A truncated | Path B (direct XAI) | Path C (WebSearch) | prefetch failed (reason)
-   - **Status:** REFRESH_X_OK | REFRESH_X_OK_TRUNCATED | REFRESH_X_PREFETCH_FAILED | REFRESH_X_NO_PREFETCH | REFRESH_X_EMPTY
-   - **Tweets found:** N (X original, Y replies, Z quotes)
-   - **Top themes:** theme1, theme2, theme3
-   - **Best performing:** "[tweet excerpt]" — X likes, Y RTs
-   - **Gist:** [2-3 sentence summary of what they were talking about and the vibe]
-   ```
+### 4. Dedup and gate
 
-4. If there are tweets worth remembering (strong takes, announcements, threads), also note them in memory/MEMORY.md under a relevant section.
+Drop any tweet whose `url` is in `SEEN_URLS` — count these as `deduped_count`.
 
-5. Send a brief summary via `./notify`:
-   ```
-   x refresh: @ACCOUNT posted N tweets yesterday
-   top themes: theme1, theme2
-   best: "[excerpt]" (X likes)
-   ```
+If fewer than 3 tweets survive dedup AND no thread is detectable (see step 5), skip to step 8 with status `REFRESH_X_NO_NEW` (if everything was deduped) or `REFRESH_X_EMPTY` (if the account simply posted nothing).
 
-   If the status is `REFRESH_X_PREFETCH_FAILED`, send a one-line notification including the prefetch error reason (so persistent XAI outages are visible) instead of the normal summary. If the status is `REFRESH_X_OK_TRUNCATED`, append the truncation warning line described in step 1.
+### 5. Detect threads
+
+A thread = 2+ tweets by `ACCOUNT`, posted within 30 minutes of each other, where later tweets reply to earlier ones OR share ≥2 meaningful keywords with the opener. Thread tweets are preserved as atomic units regardless of individual signal score. Record each thread as `{opener_url, tweet_count, combined_signal}`.
+
+### 6. Cluster and extract insights
+
+Group surviving tweets (threads count as one unit) into **2–4 sub-narratives** by topic overlap — named entities, project names, recurring keywords. If fewer than 2 narratives emerge, use a single cluster.
+
+For each cluster write:
+- **Title** — a 3-8 word topic label.
+- **Top tweet(s)** — 1-3 excerpts (≤200 chars each) with permalink and engagement.
+- **Insight** — one sentence: what this cluster reveals about the author's stance, claim, or shift today. Not a paraphrase — a claim about what they seem to be arguing or announcing. If you can't write an insight beyond paraphrase, drop the cluster.
+
+For each detected thread, write a 1–2 sentence summary of where the thread lands, plus the opener URL.
+
+### 7. Write the verdict
+
+Pick exactly one verdict based on the clusters:
+
+| Verdict | When |
+|---------|------|
+| `ANNOUNCEMENT` | Cluster contains a launch, hire, policy, or product drop |
+| `ARGUMENT` | Majority of signal comes from contrarian takes or fights |
+| `BUILDING` | Ships/code/tech-progress clusters dominate |
+| `SHITPOST` | Jokes, memes, low-stakes banter dominate |
+| `CONTEXT` | Mostly reacting to a news cycle, not driving one |
+| `QUIET` | <3 originals and no thread |
+
+Pair it with a ≤20-word lede describing the day's shape.
+
+### 8. Save gist to memory/logs/${today}.md
+
+Append:
+
+```
+## Refresh X — @ACCOUNT
+**Verdict:** VERDICT — [lede]
+**Counts:** N tweets (X original / Y reply / Z quote), T threads, deduped K
+
+### Clusters
+1. **[title]** — signal S
+   > "[excerpt]" ([likes]❤ [rt]🔁) [permalink]
+   **Insight:** [one-sentence claim]
+2. ...
+
+### Threads
+- **[topic]** (N tweets, combined signal S): [1-2 sentence landing] — [opener permalink]
+
+### Vibe
+[2-3 sentence tone read — not a stat restatement. What's the day *feel* like from this account?]
+
+**Status:** STATUS | source=[xai-cache|webfetch] | count=N | deduped=K
+```
+
+If status is `REFRESH_X_EMPTY`, `REFRESH_X_NO_NEW`, `REFRESH_X_NO_API_KEY`, `REFRESH_X_ERROR`, or `REFRESH_X_NO_VAR` — write only the `## Refresh X — @ACCOUNT` header and the `**Status:**` footer, skip the cluster sections.
+
+### 9. Update MEMORY.md (conditional)
+
+Only if a cluster carries an announcement, a specific claim, a named project, or a stance shift the operator will want to reference later: add a one-line bullet under a `## Tracked X Accounts` section (create the section if missing). Format: `- @ACCOUNT YYYY-MM-DD: [one-sentence claim] — [permalink]`.
+
+Do **not** append paraphrases, memes, or generic opinions to MEMORY.md.
+
+### 10. Notify via `./notify`
+
+On `REFRESH_X_OK`:
+```
+x refresh — @ACCOUNT ([VERDICT])
+[lede]
+top cluster: [title] — "[≤80 char excerpt]" ([likes]❤)
+[N tweets, T threads, K deduped]
+```
+
+On `REFRESH_X_EMPTY` / `REFRESH_X_NO_NEW`: **skip notify** — no signal is no signal. Still write the log entry so skill-health can observe the run.
+
+On `REFRESH_X_NO_API_KEY`, `REFRESH_X_ERROR`, `REFRESH_X_NO_VAR`: notify with the status code and a one-line hint (e.g. `"refresh-x: REFRESH_X_NO_API_KEY — set XAI_API_KEY in workflow secrets"`).
 
 ## Sandbox note
 
-`scripts/prefetch-xai.sh` (case `refresh-x)`, lines 149-160) runs OUTSIDE the Claude sandbox and writes the XAI response — plus `.error` / `.truncated` marker files on failure — to `.xai-cache/refresh-x.json`. The skill's primary path is the cache read. The direct-curl Path B is kept for local-mode invocations where env-var expansion in curl headers works; on the GitHub Actions cron path the sandbox blocks `$XAI_API_KEY` expansion in curl headers, so Path B is **expected** to fail there and the cache or markers are the source of truth.
+The sandbox blocks direct curl to api.x.ai because the auth header can't expand `$XAI_API_KEY`. Primary path is the **prefetch cache** (`scripts/prefetch-xai.sh` runs before Claude starts and writes `.xai-cache/refresh-x.json`). Fallback is **WebFetch** against `https://x.com/${ACCOUNT}` — public profile page, no auth needed, bypasses the sandbox. Never curl api.x.ai from the skill body.
 
 ## Environment Variables Required
 
-- `XAI_API_KEY` — X.AI API key (consumed by the prefetch script, not by the skill directly on the cron path)
+- `XAI_API_KEY` — drives the prefetch cache (primary path). If unset, WebFetch fallback still works for public accounts but returns less structured data.
+
+## Constraints
+
+- Never fabricate engagement counts. Missing → 0, not a guess.
+- Never include a tweet URL already in `SEEN_URLS` in the output.
+- An insight line that only paraphrases the tweet is not an insight — drop the cluster.
+- Keep MEMORY.md updates to one line per noteworthy item. No paragraphs.

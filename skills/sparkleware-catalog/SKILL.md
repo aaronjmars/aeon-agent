@@ -1,6 +1,6 @@
 ---
 name: sparkleware-catalog
-description: Weekly enriched export of skill-packs.json — joins the canonical community registry to live GitHub signals (stars, last-push, live manifest skill count) and writes a machine-readable skill-packs-catalog.json that external tools (e.g. Sparkleware) can consume without screen-scraping
+description: Enriched export of skill-packs.json — joins the canonical community registry to live GitHub signals (stars, last-push, live manifest skill count) and writes a machine-readable skill-packs-catalog.json that external tools (e.g. Sparkleware) can consume without screen-scraping
 var: ""
 tags: [dev, community]
 ---
@@ -8,8 +8,6 @@ tags: [dev, community]
 > **${var}** — Optional. `dry-run` skips notify (catalog, article, and state still write). Empty = normal run.
 
 Today is ${today}. Issue #244 introduced **Sparkleware** (`sparkleware/sparkleware`, live at sparkleware.vercel.app) — an external, community-owned discovery catalog that crawls GitHub for `topic:aeon-skill-pack` repos and surfaces each pack with its install command, category, stars, and freshness signals. It complements Aeon's canonical `skill-packs.json` registry rather than replacing it. But Sparkleware crawls GitHub directly and has **no view into `skill-packs.json`** — the curated entries with `trust_level`, declared slug arrays, and human-written descriptions that aeon operators actually install from. This skill bridges that gap: it reads `skill-packs.json`, enriches each entry with live GitHub signals, and writes a stable machine-readable `skill-packs-catalog.json` that any external tool can fetch from `raw.githubusercontent.com/aaronjmars/aeon/main/skill-packs-catalog.json` without scraping the README table.
-
-> **Backport note.** Verbatim backport of upstream aeon PR #252 (merged 2026-05-27). Adaptation: none — `./notify` arg style, output paths (`skill-packs-catalog.json` at repo root), and `gh api` access pattern all already match aeon-agent conventions. `skill-packs.json` was backported to aeon-agent on 2026-05-24 (aeon-agent PR #59), so the input source is in place. The raw-URL example in the body still points at `aaronjmars/aeon/main/skill-packs-catalog.json` because that is the upstream raw URL Sparkleware-like external tools would consume — aeon-agent's fork-local catalog is published at its own raw URL once a run lands, but external consumers fetch the upstream one. 15th same-day-after backport in the established cadence (operator-scorecard May-3→4, skill-freshness May-4→5, skill-update-check May-8→9, fork-cohort May-9→10, thread-formatter May-11→12, v4-readiness May-12→13, product-hunt-launch May-15→17, fork-first-run-alert May-17→18, fork-skill-gap May-18→19, competitor-launch-radar May-19→20, contributor-spotlight May-21→23, install-skill-pack+registry May-22→24, ecosystem-pulse May-24→26, fleet-skill-adoption May-26→27, sparkleware-catalog May-27→28).
 
 Read `memory/MEMORY.md` for context.
 Read the last 8 days of `memory/logs/` for prior-run context.
@@ -39,7 +37,7 @@ Writes:
 - `memory/logs/${today}.md` — one log block per run
 - Notification via `./notify` — only when the registry composition or pack reachability changed (see step 7)
 
-> **Output-path note.** The catalog is written to the **repo root** (next to `skill-packs.json`), **not** to `dashboard/outputs/`. `dashboard/outputs/` is consumed by the dashboard feed, which parses every `*.json` there as a json-render *spec* and renders it through `SpecNode`; dropping a plain data file there would pollute the live feed with an unrenderable card. A root-level `skill-packs-catalog.json` is the natural sibling of `skill-packs.json`, gets a permanent raw URL, and keeps the data artifact separate from the dashboard's spec stream. The human-facing dashboard card for this skill still arrives via the normal `./notify` → `notify-jsonrender` path.
+> **Output-path note.** The catalog is written to the **repo root** (next to `skill-packs.json`), **not** to `apps/dashboard/outputs/`. `apps/dashboard/outputs/` is consumed by the dashboard feed, which parses every `*.json` there as a json-render *spec* and renders it through `SpecNode`; dropping a plain data file there would pollute the live feed with an unrenderable card. A root-level `skill-packs-catalog.json` is the natural sibling of `skill-packs.json`, gets a permanent raw URL, and keeps the data artifact separate from the dashboard's spec stream. The human-facing dashboard card for this skill still arrives via the normal `./notify` → `notify-jsonrender` path.
 
 ## Steps
 
@@ -285,4 +283,4 @@ The data source *is* the authenticated GitHub API, so there is no keyless public
 
 ## Why Tuesday 09:00 UTC
 
-The Monday intelligence stack is already busy: `fleet-state` (08:00), `competitor-launch-radar` (10:00), `ecosystem-pulse` (11:00). This skill takes the first quiet weekday slot afterward — Tuesday 09:00 UTC — so the enriched catalog refreshes early in the week without contending for the Monday window. Weekly, not daily: registry composition changes on a human-PR cadence (days to weeks), and pack repos don't churn fast enough that a daily crawl would surface anything the weekly run misses.
+The Monday intelligence stack is already busy: `fleet-state` (08:00), `competitor-radar` (10:00), `ecosystem-pulse` (11:00). This skill takes the first quiet weekday slot afterward — Tuesday 09:00 UTC — so the enriched catalog refreshes early in the week without contending for the Monday window. Weekly, not daily: registry composition changes on a human-PR cadence (days to weeks), and pack repos don't churn fast enough that a daily crawl would surface anything the weekly run misses.

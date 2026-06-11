@@ -9,20 +9,6 @@ set -euo pipefail
 
 SKILL="${1:-}"
 VAR="${2:-}"
-
-# If var not passed as argument, try reading it from aeon.yml
-if [ -z "$VAR" ] && [ -f "aeon.yml" ]; then
-  VAR=$(python3 -c "
-import re, sys
-skill = sys.argv[1]
-with open('aeon.yml') as f:
-    for line in f:
-        if line.strip().startswith(skill + ':'):
-            m = re.search(r'var:\s*\"([^\"]+)\"', line)
-            if m: print(m.group(1)); break
-" "$SKILL" 2>/dev/null || true)
-  [ -n "$VAR" ] && echo "xai-prefetch: read var from aeon.yml: ${VAR:0:60}..."
-fi
 TODAY=$(date -u +%Y-%m-%d)
 YESTERDAY=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
 THREE_DAYS_AGO=$(date -u -d "3 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-3d +%Y-%m-%d)
@@ -40,19 +26,10 @@ fi
 mkdir -p .xai-cache
 
 # Generic XAI search call. Args: output_file, prompt, [from_date], [to_date], [extra_tools_json]
-# On failure, writes .xai-cache/<outfile>.error with the reason so downstream skills can
-# detect prefetch failures (cache absent + .error present) and skip wasteful sandbox-blocked
-# fallback paths instead of burning tokens on Path B (curl, env-var blocked) and Path C
-# (WebSearch, almost always returns no fresh tweets).
 xai_search() {
   local outfile="$1" prompt="$2"
   local from_date="${3:-$YESTERDAY}" to_date="${4:-$TODAY}"
   local extra_tools="${5:-}"
-  local errfile=".xai-cache/${outfile}.error"
-  local truncfile=".xai-cache/${outfile}.truncated"
-
-  # Clear any stale error/truncation markers from a previous run
-  rm -f "$errfile" "$truncfile"
 
   local tools
   if [ -n "$extra_tools" ]; then
@@ -65,45 +42,31 @@ xai_search() {
   local response
   local http_code
   local body
-  # max_output_tokens lifted from the API default to fit reasoning + a list of
-  # results. grok-4-1-fast is a thinking model and can spend 5-7k tokens on
-  # reasoning alone (May 6 fetch-tweets: 6,486 reasoning of 7,354 total → cache
-  # truncated at 2 tweets out of 10+ requested). 16384 leaves ~9k for output
-  # text after typical reasoning, enough for a 10-15 tweet numbered list.
-  local max_output_tokens=16384
   body=$(jq -n \
     --arg model "grok-4-1-fast" \
     --arg prompt "$prompt" \
     --argjson tools "$tools" \
-    --argjson max_out "$max_output_tokens" \
-    '{model: $model, input: [{role: "user", content: $prompt}], tools: $tools, max_output_tokens: $max_out}')
-  # Allow up to 3 attempts (1 initial + 2 retries). XAI api occasionally has
-  # transient 60s-ish timeouts that recover on retry — retry budget is per-call.
+    '{model: $model, input: [{role: "user", content: $prompt}], tools: $tools}')
   local attempt=1
-  local max_attempts=3
   while : ; do
     local curl_exit=0
-    response=$(curl -sS --max-time 180 --connect-timeout 30 \
-      -w "\n__HTTP_CODE__%{http_code}" -X POST "https://api.x.ai/v1/responses" \
+    response=$(curl -s --max-time 180 -w "\n__HTTP_CODE__%{http_code}" -X POST "https://api.x.ai/v1/responses" \
       -H "Content-Type: application/json" \
       -H "Authorization: Bearer $XAI_API_KEY" \
       -d "$body" 2>&1) || curl_exit=$?
     if [ "$curl_exit" -ne 0 ]; then
-      if [ "$curl_exit" = "28" ] && [ "$attempt" -lt "$max_attempts" ]; then
-        echo "xai-prefetch: curl timeout on $outfile (attempt $attempt/$max_attempts), retrying"
+      if [ "$curl_exit" = "28" ] && [ "$attempt" -lt 2 ]; then
+        echo "xai-prefetch: curl timeout on $outfile (attempt $attempt), retrying once"
         attempt=$((attempt + 1))
-        sleep 5
         continue
       fi
-      echo "::warning::xai-prefetch: FAILED $outfile (curl error: $curl_exit after $attempt attempts)"
-      mkdir -p .xai-cache
-      echo "curl error $curl_exit after $attempt attempts (XAI api unreachable or timed out)" > "$errfile"
+      echo "::warning::xai-prefetch: FAILED $outfile (curl error: $curl_exit)"
       return 1
     fi
     http_code=$(echo "$response" | grep '__HTTP_CODE__' | sed 's/__HTTP_CODE__//')
     response=$(echo "$response" | grep -v '__HTTP_CODE__')
-    if [ "$http_code" = "429" ] && [ "$attempt" -lt "$max_attempts" ]; then
-      echo "xai-prefetch: HTTP 429 on $outfile (attempt $attempt/$max_attempts), backing off 30s then retrying"
+    if [ "$http_code" = "429" ] && [ "$attempt" -lt 2 ]; then
+      echo "xai-prefetch: HTTP 429 on $outfile, backing off 30s then retrying"
       sleep 30
       attempt=$((attempt + 1))
       continue
@@ -113,35 +76,23 @@ xai_search() {
   if [ "$http_code" != "200" ]; then
     echo "::warning::xai-prefetch: FAILED $outfile (HTTP $http_code)"
     echo "::warning::xai-prefetch: response: $(echo "$response" | head -c 300)"
-    mkdir -p .xai-cache
-    echo "HTTP $http_code from XAI api: $(echo "$response" | head -c 200)" > "$errfile"
+    # Log persistent errors to memory so skills and health checks can see them
+    if [ "$http_code" = "429" ] || [ "$http_code" = "401" ] || [ "$http_code" = "403" ]; then
+      mkdir -p memory/logs
+      TODAY=$(date -u +%Y-%m-%d)
+      NOW=$(date -u +%H:%M)
+      ERROR_MSG=$(echo "$response" | jq -r '.error // .message // "unknown"' 2>/dev/null | head -c 200)
+      echo "" >> "memory/logs/${TODAY}.md"
+      echo "## XAI Prefetch Error ($NOW UTC)" >> "memory/logs/${TODAY}.md"
+      echo "- **Skill:** $SKILL" >> "memory/logs/${TODAY}.md"
+      echo "- **HTTP:** $http_code" >> "memory/logs/${TODAY}.md"
+      echo "- **Error:** $ERROR_MSG" >> "memory/logs/${TODAY}.md"
+    fi
     return 1
   fi
 
   echo "$response" > ".xai-cache/$outfile"
   echo "xai-prefetch: saved $outfile ($(echo "$response" | wc -c | tr -d ' ') bytes)"
-
-  # Truncation early-warning. The May 6 fetch-tweets regression (cache truncated
-  # at 2 tweets of 10+) was invisible in workflow logs — the prefetch step
-  # reported "saved" while the cache itself was clipped. PR #32 raised the cap
-  # to 16384, but if reasoning+output ever climbs back into that ceiling the
-  # same silent-clip happens (May 12: cache cut mid-tweet-#2, 4 thread_fetch
-  # calls consumed budget). Emit a ::warning:: when output_tokens is within
-  # 5% of the cap so heartbeat and skill-runs --failures can pick it up.
-  # ALSO write a `.truncated` marker file alongside the cache so the consumer
-  # skill (fetch-tweets, refresh-x, remix-tweets, tweet-roundup,
-  # narrative-tracker, article) can detect the condition inline and log the
-  # short output as truncation rather than silently shipping it as a small day.
-  local out_tok reasoning_tok threshold
-  out_tok=$(echo "$response" | jq -r '.usage.output_tokens // empty' 2>/dev/null)
-  if [ -n "$out_tok" ] && [ "$out_tok" -gt 0 ] 2>/dev/null; then
-    threshold=$(( max_output_tokens * 95 / 100 ))
-    if [ "$out_tok" -ge "$threshold" ]; then
-      reasoning_tok=$(echo "$response" | jq -r '.usage.output_tokens_details.reasoning_tokens // 0' 2>/dev/null)
-      echo "::warning::xai-prefetch: $outfile output_tokens=$out_tok (reasoning=$reasoning_tok) within 5% of max_output_tokens=$max_output_tokens — response may be truncated; consider raising the cap or shortening the prompt"
-      echo "output_tokens=$out_tok reasoning_tokens=$reasoning_tok max_output_tokens=$max_output_tokens" > ".xai-cache/${outfile}.truncated"
-    fi
-  fi
 }
 
 case "$SKILL" in
@@ -191,6 +142,27 @@ case "$SKILL" in
       "$THREE_DAYS_AGO"
     ;;
 
+  reply-maker)
+    if [ -z "$VAR" ]; then
+      echo "xai-prefetch: reply-maker has no var, skipping (skill falls back to memory logs + WebSearch)"
+      exit 0
+    fi
+    # Detect var shape: numeric → X list ID, @-prefixed → handle, anything else → topic
+    if echo "$VAR" | grep -Eq '^[0-9]+$'; then
+      xai_search "reply-maker.json" \
+        "Look at X list https://x.com/i/lists/${VAR}. Return the 12 most reply-worthy original posts (not retweets, not replies) by members of this list posted in the last 6 hours (between ${YESTERDAY} and ${TODAY}). Reply-worthy = has a take, claim, question, or framing worth engaging — NOT pure self-promo, breaking news without analysis, or threads already past 500 replies. For each: @handle, full tweet text, tweet URL, posted_at ISO timestamp, like/reply/retweet counts."
+    elif [ "${VAR#@}" != "$VAR" ]; then
+      ACCOUNT="${VAR#@}"
+      xai_search "reply-maker.json" \
+        "Search X for the 12 most reply-worthy original posts (not retweets, not replies) by @${ACCOUNT} between ${YESTERDAY} and ${TODAY}, prioritizing the last 6 hours. Reply-worthy = has a take, claim, question, or framing worth engaging — NOT pure self-promo, breaking news without analysis, or threads already past 500 replies. For each: @handle, full tweet text, tweet URL, posted_at ISO timestamp, like/reply/retweet counts." \
+        "$YESTERDAY" "$TODAY" \
+        "\"allowed_x_handles\": [\"${ACCOUNT}\"]"
+    else
+      xai_search "reply-maker.json" \
+        "Search X for 12 reply-worthy original posts on this topic: ${VAR}. Posted between ${YESTERDAY} and ${TODAY}, prioritizing the last 6 hours. Reply-worthy = has a take, claim, question, or framing worth engaging — NOT pure self-promo, breaking news without analysis, or threads already past 500 replies. Avoid threads already past 500 replies. For each: @handle, full tweet text, tweet URL, posted_at ISO timestamp, like/reply/retweet counts."
+    fi
+    ;;
+
   article)
     if [ -n "$VAR" ]; then
       xai_search "article-x.json" \
@@ -203,17 +175,25 @@ case "$SKILL" in
   fetch-tweets)
     if [ -n "$VAR" ]; then
       xai_search "fetch-tweets.json" \
-        "Search X for tweets matching this query: ${VAR} — strictly interpret OR operators. Date range: ${YESTERDAY} to ${TODAY}. IMPORTANT: only return tweets whose text actually contains at least one of the exact tokens from the query (the cashtag with the \$ prefix, the @ handle, or the URL). Do NOT return tweets that merely use the bare word 'aeon' or 'miroshark' without the \$ prefix — those are false positives about unrelated things (people named aeon, the word used casually, etc.). Return at least 10 matching tweets (more if available) — prioritize the most interesting, insightful, or highly-engaged posts but also include smaller accounts. For each tweet include: @handle, full tweet text, date posted, engagement stats (likes, retweets, replies), and the direct link (https://x.com/handle/status/ID). Return as a numbered list." \
-        "$YESTERDAY"
-
-      # Post-filter: drop tweets whose text doesn't contain any required token.
-      # Guards against Grok returning bare-word matches despite the strict prompt.
-      if [ -f ".xai-cache/fetch-tweets.json" ] && [ -f "scripts/filter-xai-tweets.py" ]; then
-        python3 scripts/filter-xai-tweets.py .xai-cache/fetch-tweets.json "$VAR" \
-          || echo "::warning::xai-prefetch: post-filter failed (keeping raw output)"
-      fi
+        "Search X for the latest tweets about: ${VAR} from ${YESTERDAY} to ${TODAY}. Return the 10 most interesting tweets. For each: @handle, full tweet text, date, engagement stats (likes, retweets, replies), and the direct link (https://x.com/username/status/ID)."
     else
       echo "xai-prefetch: fetch-tweets has no var, skipping"
+    fi
+    ;;
+
+  content-performance)
+    SEVEN_DAYS_AGO=$(date -u -d "7 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-7d +%Y-%m-%d)
+    HANDLE="${VAR:-}"
+    if [ -z "$HANDLE" ] && [ -f soul/SOUL.md ]; then
+      HANDLE=$(grep -oE '@[A-Za-z0-9_]{2,15}' soul/SOUL.md | head -1 | tr -d '@')
+    fi
+    if [ -z "$HANDLE" ]; then
+      echo "xai-prefetch: content-performance — no handle (var empty, none found in soul/SOUL.md), skipping"
+    else
+      xai_search "content-performance.json" \
+        "Search X for all public tweets posted by @${HANDLE} between ${SEVEN_DAYS_AGO} and ${TODAY}. Include original tweets, replies, and quote tweets. For each tweet return: the full text (up to 150 chars), date posted (YYYY-MM-DD), like count, retweet count, quote tweet count, and reply count. Return up to 25 tweets sorted by total engagement (likes + retweets*2 + quotes*3) descending. If fewer tweets exist in the window, return all of them." \
+        "$SEVEN_DAYS_AGO" "$TODAY" \
+        "\"allowed_x_handles\": [\"${HANDLE}\"]"
     fi
     ;;
 

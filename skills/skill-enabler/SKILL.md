@@ -5,9 +5,9 @@ var: ""
 tags: [dev, meta]
 ---
 
-> **${var}** — REQUIRED. Comma-separated list of skill slugs to enable (e.g. `star-milestone,thread-formatter,show-hn-draft`). Empty var is a no-op — log `SKILL_ENABLER_NO_INPUT` and exit silently (this skill is explicit opt-in only; an empty `var` must never flip switches by accident). Pass `dry-run:slug1,slug2` to validate without committing or opening a PR.
+> **${var}** — REQUIRED. Comma-separated list of skill slugs to enable (e.g. `skill-a,skill-b,skill-c`). Empty var is a no-op — log `SKILL_ENABLER_NO_INPUT` and exit silently (this skill is explicit opt-in only; an empty `var` must never flip switches by accident). Pass `dry-run:slug1,slug2` to validate without committing or opening a PR.
 
-Today is ${today}. Four announcement skills (star-milestone, star-momentum-alert, thread-formatter, show-hn-draft) had all their activation conditions met since 2026-05-12 — 300⭐ crossed, ATH day scored 16+ on thread-formatter's signal table — and remained `enabled: false` for three consecutive days while the operator was occupied elsewhere. The same finding appeared in three repo-articles and two heartbeat escalations before PR #45 (May-14) finally flipped them. The lesson: the human review of "is this skill ready to run" is not what blocks activation — the typing is. This skill makes the typing one command.
+Today is ${today}. Skills can sit at `enabled: false` for days while the operator is occupied elsewhere. The human review of "is this skill ready to run" is not what blocks activation — the typing is. This skill makes the typing one command.
 
 ## Why this exists
 
@@ -201,5 +201,5 @@ If `gh pr create` itself fails (rate-limit, transient 5xx), retry once after 30s
 - **Multiple slugs share a branch-name collision** (i.e. `feat/enable-skills-${today}` already exists locally because the operator ran the skill twice in one day): pick a numeric suffix — `feat/enable-skills-${today}-${run_count}` — and proceed. The existing branch is left untouched; a separate PR is opened.
 - **Skill is `enabled: false` AND has `schedule: workflow_dispatch`:** still eligible. The operator's intent is to mark it as "active in this fork" so heartbeat treats it as expected-but-on-demand rather than `disabled-and-ignored`. The PR is the right outcome.
 - **`aeon.yml` line has a trailing comment that mentions `false`:** the substitution must scope to the `enabled:` key only — match `enabled\s*:\s*false`, do not touch other `false` tokens on the line. The most likely format is `${slug}: { enabled: false, ... } # comment` and the substitution should change `enabled: false,` (with the comma) without touching the comment.
-- **Operator passes the same slug twice in `var` (e.g. `star-milestone,star-milestone`):** deduplicate during parsing in step 1 — second occurrence is dropped silently. Don't fail the run.
+- **Operator passes the same slug twice in `var` (e.g. `slug-a,slug-a`):** deduplicate during parsing in step 1 — second occurrence is dropped silently. Don't fail the run.
 - **`MODE=dry-run` with a valid slug list:** report all gates as if executing, but include `[DRY RUN]` in every log line and notification, and DO NOT branch / commit / push / open a PR. Status: `SKILL_ENABLER_DRY_RUN`.
