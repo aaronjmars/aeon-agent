@@ -89,6 +89,7 @@ declare -A CATEGORIES=(
   # Ecosystem
   [ecosystem-entrants]="research"
   [ecosystem-links]="research"
+  [atrium-watch]="dev"
 )
 
 # Extract schedule for a skill from aeon.yml
