@@ -1,15 +1,13 @@
 ---
 name: ecosystem-pulse
-description: Weekly liveness check of the projects listed in ECOSYSTEM.md — stars/forks/last-commit recency + new releases for any project that can be matched to a GitHub repo
+description: Liveness check of the projects listed in ECOSYSTEM.md — stars/forks/last-commit recency + new releases for any project that can be matched to a GitHub repo
 var: ""
 tags: [research, dev]
 ---
 
 > **${var}** — Optional. `dry-run` skips notify (state still updates and article still writes). Empty = normal run.
 
-> **Backport note** — Backported from upstream aeon PR #227 (merged 2026-05-25). Shipped together with `ECOSYSTEM.md` in the same aeon-agent PR, because this skill reads that file and would otherwise exit `NO_ECOSYSTEM_FILE` on every run. The skill body is environment-independent and carried over verbatim; only this note and the ECOSYSTEM.md provenance line below are adapted. Notification uses aeon-agent's single-positional-arg `./notify` (same as upstream).
-
-Today is ${today}. `ECOSYSTEM.md` lists the projects, agents, and products building on top of Aeon (backported to aeon-agent from upstream aeon, where the list shipped in #220). Today there is no skill that asks the obvious follow-up question: **are those projects actually shipping?** `fork-cohort` buckets Aeon *forks* by activation stage; `contributor-spotlight` recognises who pushes code to Aeon *itself*; `competitor-launch-radar` watches *new* entrants on Product Hunt / HN. None of them watch the projects already in `ECOSYSTEM.md`. This skill closes that gap: a weekly Monday scan that reads `ECOSYSTEM.md`, matches each project to a GitHub repo where it can, and reports stars / forks / last-commit recency plus any new releases in the 7-day window.
+Today is ${today}. `ECOSYSTEM.md` lists the projects, agents, and products building on top of Aeon (merged in #220). Today there is no skill that asks the obvious follow-up question: **are those projects actually shipping?** `fork-cohort` buckets Aeon *forks* by activation stage; `contributor-spotlight` recognises who pushes code to Aeon *itself*; `competitor-radar` watches *new* entrants on Product Hunt / HN. None of them watch the projects already in `ECOSYSTEM.md`. This skill closes that gap: a weekly Monday scan that reads `ECOSYSTEM.md`, matches each project to a GitHub repo where it can, and reports stars / forks / last-commit recency plus any new releases in the 7-day window.
 
 Read `memory/MEMORY.md` for context.
 Read the last 8 days of `memory/logs/` for prior-run context.
@@ -126,7 +124,7 @@ If `jq empty` fails on either file (corrupt JSON from a prior aborted write), ba
 
 ### 2. Parse ECOSYSTEM.md
 
-Read `ECOSYSTEM.md` from the repo root. If the file is absent → status `ECOSYSTEM_PULSE_NO_ECOSYSTEM_FILE`, notify a single-line operator error, do not write an article, do not mutate state. (The file ships alongside this skill; its absence means a broken checkout or a fork that removed it.)
+Read `ECOSYSTEM.md` from the repo root. If the file is absent → status `ECOSYSTEM_PULSE_NO_ECOSYSTEM_FILE`, notify a single-line operator error, do not write an article, do not mutate state. (The file shipped in #220; its absence means a broken checkout or a fork that removed it.)
 
 Parse the markdown table under "Building on Aeon". Each data row looks like:
 
@@ -401,4 +399,4 @@ If `gh` is entirely unavailable (no token, CLI missing), every repo lookup fails
 
 ## Why weekly, Monday 11:00 UTC
 
-Project shipping cadence is measured in days-to-weeks, not hours — a daily pulse would 7× the API load and the notification clock for almost no extra signal (most projects don't ship daily). Monday 11:00 UTC slots the ecosystem read just after the rest of the Monday-morning intelligence stack: `fleet-state` (08:00) → `ai-framework-watch` (08:30) → `competitor-launch-radar` (10:00) → `ecosystem-pulse` (11:00). The operator reads known-cohort momentum, new entrants, and finally "are the projects built on us alive?" in one sitting.
+Project shipping cadence is measured in days-to-weeks, not hours — a daily pulse would 7× the API load and the notification clock for almost no extra signal (most projects don't ship daily). Monday 11:00 UTC slots the ecosystem read just after the rest of the Monday-morning intelligence stack: `fleet-state` (08:00) → `framework-watch` (08:30) → `competitor-radar` (10:00) → `ecosystem-pulse` (11:00). The operator reads fork health, known-cohort momentum, new entrants, and finally "are the projects built on us alive?" in one sitting.

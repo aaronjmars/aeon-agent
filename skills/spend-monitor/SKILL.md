@@ -1,21 +1,11 @@
 ---
 name: Spend Monitor
-description: Daily API spend watchdog — checks running weekly cost against a budget cap, alerts when approaching or exceeding it
+description: API spend watchdog — checks running cost against the configured weekly budget cap, alerts when approaching or exceeding it
 var: ""
 tags: [meta]
 schedule: "0 12 * * *"
 ---
 > **${var}** — Budget cap override in dollars (e.g. "250"). If empty, uses the `WEEKLY_BUDGET_CAP` env var, else defaults to $200.
-
-<!-- Verbatim backport of upstream aaronjmars/aeon PR #272 (merged 2026-05-29). Adaptations vs upstream:
-     (1) ./notify call style: single-positional-arg ./notify "MESSAGE" instead of upstream's ./notify -f file
-         (aeon-agent's notify script reads $1, not a -f flag — confirmed in repo root notify line 3).
-     (2) Pricing tables: aligned with aeon-agent's existing skills/cost-report (cache write column reads
-         $3.75 for all three Claude models; upstream's cost-report and spend-monitor were updated to
-         $18.75 opus / $1.00 haiku for accurate Anthropic rates. Holding lockstep with cost-report
-         locally per the skill's own constraint — when cost-report is updated to upstream values,
-         spend-monitor's tables move in the same PR).
-     (3) No frontmatter changes — schedule key is preserved (some aeon-agent skills carry it; harmless). -->
 
 Today is ${today}. Monitor this instance's running API spend for the current week and alert if costs are spiking. This is the daily complement to `cost-report` (weekly retrospective): cost-report explains *where* spend went; spend-monitor catches *runaway* spend before the week is over.
 
@@ -31,15 +21,15 @@ If `soul/SOUL.md` and `soul/STYLE.md` exist and are populated, read them and mat
 
 ## Model Pricing (per million tokens)
 
-First read `aeon.yml` and find the `gateway.provider` value. Use the matching table. **Keep these rates in lockstep with `skills/cost-report`** — they are the same tables. When cost-report's pricing changes, this file moves in the same PR.
+First read `aeon.yml` and find the `gateway.provider` value. Use the matching table. Keep these rates in sync with `skills/cost-report` — they are the same tables.
 
 ### Direct Anthropic (gateway.provider: direct)
 
 | Model | Input | Output | Cache Read | Cache Write |
 |-------|-------|--------|------------|-------------|
-| claude-opus-4-7 | $15.00 | $75.00 | $1.50 | $3.75 |
+| claude-opus-4-7 | $15.00 | $75.00 | $1.50 | $18.75 |
 | claude-sonnet-4-6 | $3.00 | $15.00 | $0.30 | $3.75 |
-| claude-haiku-4-5-20251001 | $0.80 | $4.00 | $0.08 | $3.75 |
+| claude-haiku-4-5-20251001 | $0.80 | $4.00 | $0.08 | $1.00 |
 
 ### Bankr Gateway (gateway.provider: bankr)
 
@@ -107,29 +97,26 @@ For any unlisted model, default to Opus pricing (conservative estimate).
 
 8. **Format notification** (for WATCH / WARN / ALERT):
 
-   aeon-agent's `./notify` reads its argument as `$1` (single positional, multiline-safe). Pass the message inline — no temp file, no `-f` flag:
+   Write the message to a temp file `.pending-notify-temp/spend-monitor-${today}.md` (create the dir if needed) then send with `./notify -f`.
 
-   ```bash
-   ./notify "$(cat <<EOF
+   ```
    *Spend Monitor — ${today}*
 
-   Week: \$X.XX / \$CAP.XX cap (X% used, Xd elapsed)
-   Projected: \$X.XX by Sunday (X%)
+   Week: $X.XX / $CAP.XX cap (X% used, Xd elapsed)
+   Projected: $X.XX by Sunday (X%)
    Status: WATCH / WARN / ALERT
 
    Top drivers:
-   1. skill-a — \$X.XX
-   2. skill-b — \$X.XX
-   3. skill-c — \$X.XX
+   1. skill-a — $X.XX
+   2. skill-b — $X.XX
+   3. skill-c — $X.XX
 
    [If ALERT]: Pause candidates: <the top 2-3 cost-driver skills this week, by name>
 
    log: memory/logs/${today}.md
-   EOF
-   )"
    ```
 
-   The "Pause candidates" line is derived, not hardcoded — name the heaviest cost-driver skills from the per-skill totals in step 5. Keep it tight, no corporate fluff. Escape literal `$` signs inside the heredoc (`\$X.XX`) so the shell doesn't try to expand them — only `${today}` should be substituted.
+   The "Pause candidates" line is derived, not hardcoded — name the heaviest cost-driver skills from the per-skill totals in step 5. Keep it tight, no corporate fluff.
 
 9. **Log to `memory/logs/${today}.md`:**
    ```

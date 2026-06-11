@@ -1,21 +1,9 @@
 ---
 name: ecosystem-links
-description: Weekly link-health audit of ECOSYSTEM.md — checks every GitHub repo for archived/disabled state and every project URL for HTTP 4xx/5xx or redirect chains, surfacing dead/archived/moved entries before a casual reader stumbles into one. Closes the three-skill ecosystem loop with ecosystem-entrants (arrivals) and ecosystem-pulse (liveness).
+description: Link-health audit of ECOSYSTEM.md — checks every GitHub repo for archived/disabled state and every project URL for HTTP 4xx/5xx or redirect chains, surfacing dead/archived/moved entries before a casual reader stumbles into one. Closes the three-skill ecosystem loop with ecosystem-entrants (arrivals) and ecosystem-pulse (liveness).
 var: ""
 tags: [research, dev]
 ---
-
-<!--
-BACKPORT NOTE — backported verbatim from upstream `aaronjmars/aeon` PR #351 (merged 2026-06-06).
-
-Adaptations from upstream:
-- `./notify "$MSG"` already aligned with aeon-agent's positional-`$1` notify contract — no rewrite needed (same as PR #85 skill-of-the-day backport, distinct from PRs #74/#76/#80/#82 which had to rewrite upstream `-f file` calls).
-- No `$(date ...)` shell substitutions in this skill — the runner-hook anti-pattern fixed across PRs #63/#67/#71/#77/#81/#83 does not apply here. `${today}` is used consistently and resolves through the skill-template substitution.
-- ECOSYSTEM.md exists at the repo root (verified). `ecosystem-pulse` already exists at aeon-agent (Monday 11:00 UTC) so the three-skill ecosystem loop is now two-of-three on this fork. `ecosystem-entrants` (upstream PR #339, Jun-03) is the third leg and has NOT yet been backported to aeon-agent; this skill's parser-shape parity note now references `ecosystem-pulse` (which is present and reads the same 2-column `Project | Links` table), so nothing here depends on the missing skill. Backporting ecosystem-entrants is a natural follow-up but unblocked by this PR.
-- WebFetch fallback for `curl` already part of the upstream skill (CLAUDE.md sandbox pattern 1) — preserved verbatim.
-
-24th consecutive same-day-after backport (PR #85 skill-of-the-day Jun-07 → ecosystem-links Jun-08). Upstream PR #342 (atrium-catalog-watcher Jun-05) skipped this round because aeon-agent does not yet have the `install-from-atrium` script (PR #335 upstream); ecosystem-links is the cleaner pick.
--->
 
 > **${var}** — Optional. `dry-run` skips notify (state still updates and article still writes). Empty = normal run.
 
@@ -58,12 +46,12 @@ Writes:
 
 ## URL extraction
 
-Each `ECOSYSTEM.md` row exposes a second pipe-delimited cell (the `Links` column) containing one or more Markdown links: `[label](url) · [label2](url2)`. The first cell is the project **name** (plain text — this fork's table is a 2-column `Project | Links` layout with no logo column). We check the operator-curated outbound links only.
+Each `ECOSYSTEM.md` row exposes a third pipe-delimited cell containing one or more Markdown links: `[label](url) · [label2](url2)`. Logo URLs in the first cell (`<img src="...">`) are **out of scope** — they are CDN-hosted by Twitter/CoinGecko and their freshness is not a curation signal. We check the operator-curated outbound links only.
 
 For each accepted row:
 
-1. Extract the project **name** from the first pipe-delimited cell.
-2. Extract every `[label](url)` match in the second cell, in order. Keep the raw URL string verbatim — no normalisation (case + trailing slash matter for cache keys).
+1. Extract the project **name** from the second pipe-delimited cell.
+2. Extract every `[label](url)` match in the third cell, in order. Keep the raw URL string verbatim — no normalisation (case + trailing slash matter for cache keys).
 3. **Classify** each URL by host:
    - `github.com/{owner}/{repo}[/...]` → kind=`github`, target=`{owner}/{repo}` (strip path tail beyond the repo).
    - `x.com/{handle}` or `twitter.com/{handle}` → kind=`x`. **Not checked**: X aggressively rate-limits unauthenticated HEAD requests and a 429/403 from X would generate noise indistinguishable from a real dead handle. Recorded for completeness; status frozen as `XONLY`.
@@ -155,14 +143,14 @@ If `jq empty memory/topics/ecosystem-links-state.json` fails (corrupt JSON from 
 
 If `ECOSYSTEM.md` does not exist at the repo root → log `ECOSYSTEM_LINKS_NO_ECOSYSTEM_FILE`, write a one-line notification (`ecosystem-links: ECOSYSTEM.md not found at repo root`), exit. The file is the floor — if it's missing the skill has no signal to compute on.
 
-Apply the same parser shape as `ecosystem-pulse` (`name` = first cell, links = second cell) so the two skills can never disagree on what counts as a row:
+Apply the same parser shape as `ecosystem-entrants` so the two skills can never disagree on what counts as a row:
 
 - Read every line that begins with `| ` and contains at least 2 `|` separators after the leading one.
 - Reject the header line and the divider line.
-- Reject rows where the first cell (project name) is empty after trim (decorative separators).
+- Reject rows where the second cell is empty after trim (decorative separators).
 - Scope to the **first** markdown table whose header line includes the word `Project` (case-insensitive). If no such header is found → log `ECOSYSTEM_LINKS_NO_PROJECT_TABLE`, exit with no notify.
 
-For each accepted row: extract the project name (first cell) and every `[label](url)` link in the second cell. Classify each URL per the URL extraction section.
+For each accepted row: extract the project name (second cell) and every `[label](url)` link in the third cell. Classify each URL per the URL extraction section.
 
 ### 3. Check each URL
 
@@ -386,7 +374,7 @@ Append to `memory/logs/${today}.md`:
 
 - **INCONCLUSIVE never single-shots to DEAD.** The most likely cause of an INCONCLUSIVE on aeon-agent is a sandbox-blocked outbound, not a genuinely dead URL. Treating a sandbox failure as a DEAD verdict would false-flag healthy projects on every run that the sandbox happens to misfire. The two-strike rule means a real dead URL fires within a week of going down (run T sees INCONCLUSIVE, run T+1 sees INCONCLUSIVE-streak=2 → reclassified DEAD), while a sandbox glitch self-clears on the next run.
 - **X / Twitter URLs are recorded but not checked.** Unauthenticated HEAD requests to x.com are aggressively rate-limited; a 429 from X reads identically to a real 4xx for a dead handle. Surfacing a flood of `DEAD: @handle` rows that are actually "X blocked us" would slander the operator's curation. The article surfaces the X-only count for transparency, and the operator can manually audit those handles when they want to.
-- **Image/logo cells are out of scope.** This fork's `ECOSYSTEM.md` is a 2-column `Project | Links` table with no logo column, so every checkable URL lives in the Links (second) cell. If an image cell is ever reintroduced (`<img src="...">`), its CDN host (pbs.twimg.com, coin-images.coingecko.com, custom CDNs) is not a curation surface — display assets owned by upstream services, whose availability is not a signal about the project's liveness — and is skipped.
+- **Logo URLs in the first cell are out of scope.** Logo CDN hosts (pbs.twimg.com, coin-images.coingecko.com, custom CDNs) are not curation surfaces — they are display assets owned by upstream services, and their availability is not a signal about the project's liveness. Checking them would generate noise the operator cannot act on.
 - **MOVED is separate from DEAD on purpose.** A redirect from `foo.com` to `bar.com` resolves successfully — the original URL still works. But the destination is no longer what the operator listed (e.g. the domain expired and is now parked on a registrar landing page). That's a curation issue, but a *softer* one than DEAD — surfaced separately so the operator can prioritise.
 - **Recoveries fire a notification.** If the operator saw "DEAD: foo.com" last week, they need closure when the same URL comes back. Otherwise they'll keep checking manually, or worse, doubt the next DEAD alert as "probably transient like last time."
 - **The diff is the source of truth, not any single run's verdict.** A URL can go from DEAD → OK → DEAD across three runs (transient infrastructure issues, scheduled maintenance, etc.). Every transition is reported as it happens — the digest doesn't try to smooth over noisy weeks. If real-world noise gets bad enough that the notifications themselves become noise, the right response is to raise the INCONCLUSIVE streak threshold or add a per-URL allowlist, not to silently smooth the data.

@@ -16,6 +16,8 @@
 .pending-replicate/
 .pending-supernotes/
 .pending-deploy/
+.pending-devto/
+.pending-farcaster/
 .tg_cache/
 
 # Skill provenance lock (per-repo, not committed)
@@ -47,14 +49,3 @@ node_modules/
 # Stale artifacts
 .external-work
 .vuln-scan/
-
-# Per-skill scratch clones (e.g. feature skill builds external repo PRs in .work/build-* or .build-targets/<repo-name>)
-.work/
-.build-targets/
-
-# Hash dedup file used by ./notify within a workflow run
-.notify-sent-hashes
-
-# Per-run scratch staging for PR-body drafts (feature skill writes here before
-# `gh pr create --body-file`; transient, never committed)
-.pr-bodies/

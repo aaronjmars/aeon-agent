@@ -1,118 +1,175 @@
 ---
-name: feature
-description: Build a feature for every watched repo — picks from yesterday's repo-actions ideas first
+name: Feature
+description: Build a feature for every watched repo in one run — iterates the full repo list, picks one feature per repo from yesterday's repo-actions ideas first
 var: ""
-tags: [dev]
+tags: [dev, build]
 ---
 > **${var}** — Optional. If set, build this specific feature for the FIRST watched repo only. If empty, iterate every watched repo and pick per-repo.
 
-Today is ${today}. Your task is to build a new feature for **every repo** listed in `memory/watched-repos.md` (not this agent repo). Each repo gets its own branch, PR, and notification.
+This skill is the **multi-repo** sibling of `external-feature`:
+
+| | `feature` (this skill) | `external-feature` |
+|---|---|---|
+| Per run | Iterates **every** watched repo, ships one PR per repo | **Single** repo per run |
+| Repo source | `memory/watched-repos.md` | `memory/watched-repos.md` (or `${var}` override) |
+| Use it for | Weekly broad sweep — keep every repo moving | Targeted enhancement on one repo |
+| Notification | One per successfully-built feature (per repo) | One per run |
+
+Today is ${today}. Read `memory/MEMORY.md` and the last 7 days of `memory/logs/` before starting.
+
+## Voice
+
+If `soul/SOUL.md` and `soul/STYLE.md` are populated, read both and match the operator's voice in every per-repo notification. If they are empty templates or absent, use a clear, direct, neutral tone — short sentences, no corporate launch-language.
+
+## Config
+
+This skill reads the candidate repo list from `memory/watched-repos.md`. If the file is missing or empty, log `FEATURE_NO_CONFIG` and exit cleanly (no notification — empty config is not an error).
+
+Format: one `owner/repo` per line. Markdown bullets like `- owner/repo` are fine; comment lines starting with `#` are ignored.
 
 ## Steps
 
-1. **Load the target list** — read `memory/watched-repos.md` and parse every `- owner/repo` line into a list. If `${var}` is set, restrict the list to the first repo only and use `${var}` as the feature spec for it.
+### 1. Load the target list
 
-2. **For each repo in the list, run steps 3–10 independently.** A failure on one repo must NOT stop the others — log the failure and continue. Use a fresh working directory per repo (e.g. `/tmp/build-target-{repo-name}`).
+Parse `memory/watched-repos.md` into a list of `owner/repo` entries.
 
-3. **Pick what to build for this repo** (in this priority order):
-   a. If `${var}` is set AND this is the first repo, build that.
-   b. Check yesterday's `repo-actions` output in `articles/repo-actions-*.md` (most recent file) for ideas relevant to THIS repo. Pick the highest-impact idea scoped for autonomous implementation.
-   c. Check open GitHub issues labelled "ai-build" on this repo: `gh issue list -R owner/repo --label ai-build`.
-   d. Check `memory/MEMORY.md` for planned features or next priorities tied to this repo.
-   e. If none of the above yields anything for this repo, log "FEATURE_SKIP: {repo} — no suitable feature found" and **skip to the next repo. Do NOT send a notification for skipped repos.**
+If `${var}` is set, restrict the list to **the first repo only** and use `${var}` as the feature spec for it.
 
-4. **Clone the repo** into a per-repo temp directory and work from there:
+### 2. For each repo in the list, run steps 3–10 independently
+
+A failure on one repo must NOT stop the others — catch the failure, log it, continue. Use a fresh working directory per repo (e.g. `/tmp/feature-build-${repo-name}`).
+
+### 3. Pick what to build for this repo
+
+In this priority order:
+
+a. **If `${var}` is set AND this is the first repo**, build that.
+b. **Check yesterday's `repo-actions` output** in `articles/repo-actions-*.md` (most recent file) for ideas scoped to THIS repo. Pick the highest-impact idea that's autonomously implementable.
+c. **Check open GitHub issues labelled `ai-build`** on this repo:
    ```bash
-   gh repo clone owner/repo /tmp/build-target-{repo-name}
-   cd /tmp/build-target-{repo-name}
+   gh issue list -R owner/repo --label ai-build --state open
    ```
+d. **Check `memory/MEMORY.md`** for planned features or next priorities tied to this repo.
+e. **If none of the above yields anything for this repo**, log `FEATURE_SKIP: <repo> — no suitable feature found` and **skip to the next repo. Do NOT send a notification for skipped repos.**
 
-5. **Read the codebase** — understand the project structure, README, package.json/config files, and the area you'll be modifying.
+### 4. Clone the repo
 
-6. **Implement the feature.** Write clean, complete code. No TODOs or placeholders.
+Into a per-repo temp directory:
 
-7. **Create a branch and push** to the repo:
-   ```bash
-   cd /tmp/build-target-{repo-name}
-   git checkout -b feat/short-feature-name
-   git add -A
-   git commit -m "feat: description of what was built"
-   git push -u origin feat/short-feature-name
-   ```
+```bash
+gh repo clone owner/repo /tmp/feature-build-${repo-name}
+cd /tmp/feature-build-${repo-name}
+```
 
-8. **Open a PR** on the repo:
-   ```bash
-   gh pr create -R owner/repo \
-     --title "feat: short description" \
-     --body "## What
-   Description of the feature.
+### 5. Read the codebase
 
-   ## Why
-   What triggered this — repo-actions idea, issue, or gap identified.
+Understand the project structure, README, package.json/config files, recent commits, and the area you'll modify:
 
-   ## Changes
-   - file1: what changed
-   - file2: what changed
+```bash
+git log --oneline -20
+```
 
-   ---
-   *Built autonomously by Aeon*"
-   ```
+Read the area you'll modify in full before changing anything.
 
-9. **Update memory** — log what was built (per repo) to `memory/logs/${today}.md` and update `memory/MEMORY.md` Skills Built table. Include the repo name in every log line so the per-repo history stays distinct.
+### 6. Implement the feature
 
-10. **Send a DETAILED notification** via `./notify` for THIS repo. Send one notification per successfully-built feature (one per repo). The notification goes to a Telegram group and must be rich enough that readers understand exactly what was built, why it matters, and how it works WITHOUT clicking the PR link.
+Write clean, complete code. No TODOs or placeholders. Match the existing code style exactly — indentation, naming, patterns. Don't introduce new dependencies unless absolutely necessary. Don't refactor unrelated code — stay focused on one improvement.
 
-    DO NOT compress this into 1-2 lines. Every section below is REQUIRED:
+### 7. Branch and push
 
-    ```
-    *Feature Built — ${today} — owner/repo*
+```bash
+git checkout -b feat/<short-feature-name>
+git add -A
+git commit -m "feat: <description of what was built>"
+git push -u origin feat/<short-feature-name>
+```
 
-    [Feature name]
-    [2-3 sentence description of what the feature does in plain language. Explain it like you're telling a non-technical person in the community what just got added to the project.]
+### 8. Open a PR
 
-    Why this matters:
-    [2-3 sentences on why this feature is relevant to the project RIGHT NOW. What problem did users/developers have before? What triggered building this — a repo-actions idea, a GitHub issue, a gap noticed in the codebase? How does it move the project forward?]
+```bash
+gh pr create -R owner/repo \
+  --title "feat: <short description>" \
+  --body "## What
+<Description of the feature>
 
-    What was built:
-    - [file/component 1]: [what was added/modified — be specific about the functionality, not just "added endpoint"]
-    - [file/component 2]: [same level of detail]
-    - [file/component 3 if applicable]
-    - [file/component 4 if applicable]
+## Why
+<What triggered this — repo-actions idea, issue, or gap identified>
 
-    How it works:
-    [3-4 sentences explaining the technical implementation. What approach was chosen and why? What libraries/APIs does it use? How does it integrate with existing code? Any interesting design decisions?]
+## Changes
+- file1: what changed
+- file2: what changed
 
-    What's next:
-    [1-2 sentences on follow-up work, potential improvements, or how this connects to the broader roadmap]
+---
+*Built autonomously by Aeon*"
+```
 
-    PR: [url]
-    ```
+### 9. Update memory
 
-    BAD example (too short — DO NOT do this):
-    "Feature Built: Simulation Data Export. Users can download results as JSON/CSV. PR: url"
+Log what was built (per repo) to `memory/logs/${today}.md`. Include the repo name in every log line so per-repo history stays distinct:
 
-    GOOD example (this is the level of detail expected):
-    "Feature Built — 2026-03-25 — aaronjmars/MiroShark
+```markdown
+## Feature — owner/repo
+- **Built:** <feature name>
+- **Why:** <trigger>
+- **PR:** <url>
+- **Files:** <list>
+- FEATURE_OK
+```
 
-    Simulation Data Export
-    MiroShark simulations now have a one-click export feature. Users can download their full simulation results — including all agent states, interaction logs, and performance metrics — as either JSON (for programmatic use) or CSV (for spreadsheets and analysis).
+### 10. Notify — one per successfully built feature
 
-    Why this matters:
-    Until now, simulation data was trapped in the browser. Researchers and developers running MiroShark swarms had no way to extract results for external analysis, comparison across runs, or sharing with collaborators. This was the #2 most requested feature in repo-actions and directly supports the project's goal of being a serious research tool, not just a demo.
+For each repo with a shipped PR, send a separate `./notify` so the operator gets a detailed per-repo message. The notification should be rich enough that a reader understands exactly what was built, why it matters, and how it works WITHOUT clicking the PR link.
 
-    What was built:
-    - api/export/route.ts: New API endpoint that serializes simulation state to JSON or CSV based on Accept header. Handles large datasets with streaming response to avoid memory issues.
-    - components/ExportButton.tsx: Download buttons added to the simulation results panel. JSON and CSV options with proper MIME types and generated filenames.
-    - lib/serializer.ts: Conversion logic that flattens nested agent state trees into tabular CSV format while preserving full structure in JSON output.
+**Do NOT compress into 1–2 lines. Every section below is REQUIRED.**
 
-    How it works:
-    The export endpoint reads the simulation ID from the request, pulls the full state tree from the in-memory store, and streams it as either application/json or text/csv. The CSV serializer walks the nested agent hierarchy depth-first and flattens each agent's state into a row with dot-notation column headers (e.g. agent.memory.shortTerm). The frontend buttons trigger a fetch with the appropriate Accept header and use the download attribute for a clean save-as experience.
+```
+*Feature Built — ${today} — owner/repo*
 
-    What's next:
-    Could add PDF report generation with charts, or a shareable link that hosts the export temporarily for collaboration.
+<Feature name>
+<2–3 sentence description of what the feature does in plain language. Explain it like you're telling a non-technical reader in the community what just got added to the project.>
 
-    PR: https://github.com/aaronjmars/MiroShark/pull/1"
+Why this matters:
+<2–3 sentences on why this is relevant to the project RIGHT NOW. What problem did users/developers have before? What triggered this — a repo-actions idea, a GitHub issue, a gap in the codebase? How does it move the project forward?>
 
-11. **Final wrap-up** — after iterating every repo, end with a `## Summary` listing each watched repo and its outcome (PR url, skipped, or failed). If every repo was skipped, do NOT send a notification at all.
+What was built:
+- <file/component>: <what was added/modified — be specific about the functionality, not just "added endpoint">
+- <file/component>: <same level of detail>
+- <file/component (if applicable)>: ...
 
-Write complete, working code. No TODOs or placeholders.
+How it works:
+<3–4 sentences on the technical implementation. Approach taken and why. Libraries/APIs used. How it integrates with existing code. Any interesting design decisions.>
+
+What's next:
+<1–2 sentences on follow-up work or how this connects to the broader roadmap.>
+
+PR: <url>
+```
+
+BAD (too short — do NOT do this):
+> "Feature Built: Data Export. Users can download results as JSON/CSV. PR: url"
+
+GOOD level of detail:
+> Per-section answers like the template above. A reader who never clicks the PR should still come away knowing what changed and why.
+
+### 11. Final wrap-up
+
+After iterating every repo, end with a `## Summary` listing each watched repo and its outcome: PR url, skipped, or failed. If every repo was skipped, do NOT send a notification at all — just log the per-repo skip lines.
+
+## Sandbox Note
+
+All GitHub operations go through `gh` CLI — handles auth internally via `GITHUB_TOKEN`. No env-var-authenticated curl from bash. The `./notify` call uses the standard fan-out pattern.
+
+## Environment Variables
+
+- `GH_TOKEN` / `GITHUB_TOKEN` — required. Cross-repo access (the token needs permission to fork/push/PR on every watched repo).
+
+## Guidelines
+
+- ONE feature per repo per run. Don't bundle unrelated changes inside a single PR.
+- Understand before you change. Read the codebase first. Don't guess at conventions.
+- Match the repo's style. If they use tabs, use tabs. If they use semicolons, use semicolons.
+- Small, high-quality PRs > ambitious rewrites. A 10-line bug fix beats a 500-line refactor.
+- If the repo has CI, make sure your changes won't break it.
+- Never push to main/master. Always branch.
+- If you can't find anything worth doing on a repo, log "no suitable feature" and skip — that's a valid outcome.
+- Don't add unnecessary abstractions, comments, or documentation the repo doesn't need.

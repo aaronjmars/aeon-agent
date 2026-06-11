@@ -21,7 +21,7 @@ ATRIUM_HOST="${ATRIUM_HOST:-https://atriumhermes.tech}"
 WELLKNOWN="$ATRIUM_HOST/.well-known/skills"
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 SKILLS_DIR="$ROOT/skills"
-SCANNER="$ROOT/skills/skill-security-scan/scan.sh"
+SCANNER="$ROOT/skills/skill-scan/scan.sh"
 LOCK_FILE="$ROOT/skills.lock"
 
 die() { echo "error: $*" >&2; exit 1; }
@@ -31,7 +31,7 @@ command -v curl >/dev/null || die "missing dependency: curl"
 if [[ "${1:-}" == "--list" || -z "${1:-}" || "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
   echo "Atrium marketplace — installable skills:"
   curl -fsS "$WELLKNOWN/index.json" \
-    | { grep -oE '"(name|skill_id|description)":"[^"]*"' || true; } \
+    | grep -oE '"(name|skill_id|description)":"[^"]*"' \
     | sed 's/^"name":/\n• /; s/^"skill_id":/  id:   /; s/^"description":/  /; s/"//g'
   echo
   echo "Install:  ./install-from-atrium <skill-name|0x-skillId> [--force]"

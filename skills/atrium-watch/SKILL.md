@@ -1,41 +1,29 @@
 ---
-name: atrium-watch
-description: Diff of the Atrium marketplace catalog at https://atriumhermes.tech/.well-known/skills/index.json against the prior snapshot — surfaces newly-published skills, removed skills, and updated descriptions. Supply-side complement to sparkleware-catalog (curated skill-packs.json registry) and skill-update-check (version drift of installed skills).
+name: Atrium Watch
+description: Diff of the Atrium marketplace catalog at https://atriumhermes.tech/.well-known/skills/index.json against the prior snapshot — surfaces newly-published skills, removed skills, and updated descriptions. Supply-side complement to sparkleware-catalog (curated skill-packs.json registry) and skill-update (version drift of installed skills).
 var: ""
 tags: [dev, community]
 ---
 
-<!--
-BACKPORT NOTE — backported verbatim from upstream `aaronjmars/aeon` `skills/atrium-watch/SKILL.md` (originally landed as PR #342 atrium-catalog-watcher merged 2026-06-05, slug shortened to `atrium-watch` in PR #427 merged 2026-06-10).
-
-Adaptations from upstream:
-- `./notify "$MSG"` already aligned with aeon-agent's positional-`$1` notify contract — no rewrite needed (third consecutive backport where notify wiring needed NO translation, after PR #85 skill-of-the-day Jun-07 and PR #87 ecosystem-links Jun-08; distinct from PRs #74/#76/#80/#82 which had to rewrite upstream `-f file` calls).
-- No `$(date ...)` shell substitutions in this skill — the runner-hook anti-pattern fixed across PRs #63/#67/#71/#77/#81/#83 + documented system-wide in CLAUDE.md by PR #89 does not apply. `${today}` is used consistently and resolves through the skill-template substitution.
-- Prerequisites verified on this fork: `install-from-atrium` script present at repo root (backported in PR #90 Jun-09), `skills/sparkleware-catalog/SKILL.md` present (backported in PR #66 May-28). The cross-reference to `skill-update` in the upstream copy is renamed to `skill-update-check` to match aeon-agent's existing skill slug (upstream's slug, this fork's slug differs but the function is the same — installed-skill upstream-SHA drift).
-- WebFetch fallback for `curl` already part of the upstream skill (CLAUDE.md sandbox pattern 1) — preserved verbatim.
-
-26th consecutive same-day-after backport (PR #91 ecosystem-entrants Jun-10 → atrium-watch Jun-11). Explicitly flagged as the natural next link in PR #87 (Jun-08) and PR #90 (Jun-09) — the install-from-atrium dependency landed Jun-09, unblocking this verbatim copy.
--->
-
 > **${var}** — Optional. `dry-run` skips notify (state still updates and article still writes). Empty = normal run.
 
-Today is ${today}. The `install-from-atrium` script (merged in PR #335 upstream, backported here as PR #90, the third skill install path after `add-skill` and `install-skill-pack`) fetches skills from the Atrium onchain marketplace at `https://atriumhermes.tech/.well-known/skills/index.json`. The endpoint is the live source of truth for everything publishable through `./install-from-atrium <name>`, but the operator has no signal when new skills appear in it. A skill that ships on Atrium is discoverable today only by running `./install-from-atrium --list` by hand. By the time `install-from-atrium` is used reactively (after someone mentions a skill), the skill may already have been live for days.
+Today is ${today}. The `install-from-atrium` script (merged in PR #335, the third skill install path after `add-skill` and `install-skill-pack`) fetches skills from the Atrium onchain marketplace at `https://atriumhermes.tech/.well-known/skills/index.json`. The endpoint is the live source of truth for everything publishable through `./install-from-atrium <name>`, but the operator has no signal when new skills appear in it. A skill that ships on Atrium is discoverable today only by running `./install-from-atrium --list` by hand. By the time `install-from-atrium` is used reactively (after someone mentions a skill), the skill may already have been live for days.
 
-This skill closes that gap. It is a weekly Friday watcher of the Atrium catalog — what was added, what was removed, what was renamed or had its description changed, all reported as a structured digest. Pairs with `sparkleware-catalog` (Tuesday 09:00 — curated `skill-packs.json` registry) as the supply-side equivalent for the *discovered* Atrium marketplace, and with `skill-update-check` (Sunday 19:00 — version drift on already-installed skills) as the **upstream-arrivals** signal that precedes any install decision.
+This skill closes that gap. It is a weekly Friday watcher of the Atrium catalog — what was added, what was removed, what was renamed or had its description changed, all reported as a structured digest. Pairs with `sparkleware-catalog` (Tuesday 09:00 — curated `skill-packs.json` registry) as the supply-side equivalent for the *discovered* Atrium marketplace, and with `skill-update` (Sunday 19:00 — version drift on already-installed skills) as the **upstream-arrivals** signal that precedes any install decision.
 
 Read `memory/MEMORY.md` for context.
 Read the last 8 days of `memory/logs/` for prior-run context.
 Read `soul/SOUL.md` + `soul/STYLE.md` if populated to match voice in the notification and article.
 
-## Why a separate skill from sparkleware-catalog and skill-update-check
+## Why a separate skill from sparkleware-catalog and skill-update
 
 | Skill | Source | Question answered | Cadence |
 |-------|--------|-------------------|---------|
 | `sparkleware-catalog` | `skill-packs.json` (curated registry, Aeon repo) | "What's in the curated pack registry and is it healthy?" | Tuesday 09:00 UTC |
-| `skill-update-check` | `skills.lock` × upstream SHAs | "Did any of my already-installed skills change upstream?" | Sunday 19:00 UTC |
+| `skill-update` | `skills.lock` × upstream SHAs | "Did any of my already-installed skills change upstream?" | Sunday 19:00 UTC |
 | **`atrium-watch`** | **`atriumhermes.tech/.well-known/skills/index.json` (Atrium marketplace)** | **"What new skills are publishable on Atrium this week?"** | **Friday 12:00 UTC** |
 
-The three signals compose without overlap. `sparkleware-catalog` watches the **curated** registry that ships in the repo; `skill-update-check` watches **installed** skills against their upstream sources; `atrium-watch` watches the **public marketplace** for new arrivals before any install decision. A skill that lands in the Atrium catalog and is also added to `skill-packs.json` will appear in both Tuesday and Friday digests — that's expected and not duplication (the two skills answer different questions: "curated and trusted?" vs. "publishable on the chain?").
+The three signals compose without overlap. `sparkleware-catalog` watches the **curated** registry that ships in the repo; `skill-update` watches **installed** skills against their upstream sources; `atrium-watch` watches the **public marketplace** for new arrivals before any install decision. A skill that lands in the Atrium catalog and is also added to `skill-packs.json` will appear in both Tuesday and Friday digests — that's expected and not duplication (the two skills answer different questions: "curated and trusted?" vs. "publishable on the chain?").
 
 Building this into `install-from-atrium` itself would have entangled the install path with surveillance: today the script is a thin fetcher (curl → scan → copy), and adding a state file + diff logic to a single-use install command would conflate one-shot install with weekly polling. Keeping them separate keeps each surface structurally simple.
 
@@ -299,7 +287,7 @@ Append to `memory/logs/${today}.md`:
 - **`skill_id` is the canonical key.** A name rename or description change does NOT trigger an add+remove pair — those would noisily fire two notifications for one editorial change. The diff is entirely keyed on the onchain `skill_id`, which is the same id `install-from-atrium 0x...` accepts and the same id Atrium guarantees collision-free.
 - **Read-only against the Atrium endpoint.** This skill never publishes, modifies, or removes catalog entries — Atrium publishing is an onchain action the operator takes deliberately (or another agent does on their behalf). The skill only *observes* the catalog and reports diffs.
 - **No multi-host comparison.** A switch of `ATRIUM_HOST` re-baselines from scratch. Comparing snapshots across hosts would be meaningless because the underlying registries are independent.
-- **PR / commit enrichment deliberately not added.** Unlike `ecosystem-entrants` (which can map a row to a merged PR on `aaronjmars/aeon-agent`), Atrium catalog entries are not tied to a single GitHub repo or PR — they are onchain artefacts. Surfacing a "publisher" attribution would require resolving each `skill_id` to its publishing wallet via Atrium SDK + chain calls, which is out of scope for a read-only weekly watcher. The article does, however, surface the **install command** (`./install-from-atrium <name>`) on every added row, which is the operator's actual next-step.
+- **PR / commit enrichment deliberately not added.** Unlike `ecosystem-entrants` (which can map a row to a merged PR on `aaronjmars/aeon`), Atrium catalog entries are not tied to a single GitHub repo or PR — they are onchain artefacts. Surfacing a "publisher" attribution would require resolving each `skill_id` to its publishing wallet via Atrium SDK + chain calls, which is out of scope for a read-only weekly watcher. The article does, however, surface the **install command** (`./install-from-atrium <name>`) on every added row, which is the operator's actual next-step.
 - **Notify gating mirrors `ecosystem-entrants` and `sparkleware-catalog`.** The three Monday/Tuesday/Friday weekly digests use the same baseline+composition+removal trigger pattern so the operator's mental model is consistent across all three.
 - **`install-from-atrium --list` is the manual sibling.** Anyone can run `./install-from-atrium --list` on demand for an ad-hoc browse. This skill exists because **nobody runs `--list` weekly by hand**; the cron makes the discovery automatic.
 
@@ -315,4 +303,4 @@ No pre-fetch / post-process script needed. `./notify` is the only other outbound
 
 ## Why Friday 12:00 UTC
 
-The Monday intelligence stack is already busy (`fleet-state` 08:00, `competitor-launch-radar` 10:00, `ecosystem-pulse` 11:00, `ecosystem-entrants` 11:45, `ecosystem-links` 11:55). Tuesday 09:00 holds `sparkleware-catalog` (the curated-registry equivalent). Friday afternoon is the first quiet weekly slot, mid-day enough that a fresh-arrivals digest makes it into the operator's late-week skim rather than landing in the weekend lull. Weekly, not daily: the Atrium catalog grows on a publish-event cadence (days to weeks), and a daily crawl would surface nothing the weekly run misses while adding ~7× the noise floor.
+The Monday intelligence stack is already busy (`fleet-state` 08:00, `competitor-radar` 10:00, `ecosystem-pulse` 11:00, `ecosystem-entrants` 11:45, `wallet-risk` 11:15, `capabilities-map` 11:30). Tuesday 09:00 holds `sparkleware-catalog` (the curated-registry equivalent). Friday afternoon is the first quiet weekly slot, mid-day enough that a fresh-arrivals digest makes it into the operator's late-week skim rather than landing in the weekend lull. Weekly, not daily: the Atrium catalog grows on a publish-event cadence (days to weeks), and a daily crawl would surface nothing the weekly run misses while adding ~7× the noise floor.
