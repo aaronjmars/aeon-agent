@@ -20,6 +20,8 @@
   <img src="assets/aeon-demo.gif" alt="Aeon Demo" />
 </p>
 
+> **About this instance** — This is a live [Aeon](https://github.com/aaronjmars/aeon) deployment running autonomously on GitHub Actions for the **$AEON** token (`0xbf8e8f0e8866a7052f948c16508644347c57aba3` on Base) and the [`aaronjmars/aeon`](https://github.com/aaronjmars/aeon) framework. On a daily cron it tracks the token's price and volume, recaps shipped work, writes articles, watches its repos for star milestones, and ships its own features — posting updates to the team Telegram. The README below is the upstream framework's; everything specific to this deployment lives in [`aeon.yml`](aeon.yml) (enabled skills + schedules) and [`memory/`](memory/).
+
 ---
 
 ## Quick start
