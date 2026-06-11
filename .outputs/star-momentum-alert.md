@@ -1,16 +1,14 @@
+Done. Here's what the skill found:
+
 ## Summary
 
-Executed `star-momentum-alert` for 2026-06-10.
-
-**Repos audited:** 2 (aeon-agent filtered as an agent repo)
-
-**Results:**
-- `aaronjmars/aeon` — **OUT_OF_WINDOW**: 496⭐, targeting 500⭐ (gap: 4). Pace 3.29/day (v7), projected crossing 2026-06-12 (Thursday). The 2-day lead time falls below the 7-day minimum dispatch window — too close to act on. The star-milestone auto-dispatch from PR #358 is already wired to fire `show-hn-draft` when the crossing happens.
-- `aaronjmars/minitor` — **STALLED**: 11⭐, zero net growth across 13 days.
-
-**Status:** `STAR_MOMENTUM_NO_ALERTS` — no notification sent.
-
 **Files written:**
-- `articles/star-momentum-2026-06-10.md`
-- `memory/topics/star-momentum-state.json` (last_run_at updated, projected_date_v7 updated to 2026-06-12)
-- `memory/logs/2026-06-10.md` (log block appended)
+- `articles/star-momentum-2026-06-11.md` — projection report
+- `memory/topics/star-momentum-state.json` — state updated (500⭐ aeon entry dropped — milestone crossed)
+- `memory/logs/2026-06-11.md` — log block appended
+
+**Verdicts:**
+- `aaronjmars/aeon` — **OUT_OF_WINDOW**. At 503⭐ (500 milestone crossed ~Jun 10), next target is 750⭐ with a 247-star gap. At 3.86/day (7-day avg), that's ~65 days out — projected 2026-08-15 (Saturday). Well outside the 7-14d window; check again in roughly 50 days.
+- `aaronjmars/minitor` — **STALLED**. 11⭐ flat across all 14 log days, v7 = 0, no projection possible.
+
+**Status: STAR_MOMENTUM_NO_ALERTS** — no notification sent (silence is the correct signal when nothing is in the launch window).
