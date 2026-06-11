@@ -1,0 +1,114 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Milestone — 500 stars · ORGANIC"
+      },
+      "children": [
+        "heading-repo",
+        "sep-1",
+        "stat-stars",
+        "text-timeline",
+        "text-pace",
+        "sep-2",
+        "heading-highlights",
+        "stack-highlights",
+        "sep-3",
+        "link-repo"
+      ]
+    },
+    "heading-repo": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "507",
+        "delta": "+7",
+        "trend": "up"
+      }
+    },
+    "text-timeline": {
+      "type": "Text",
+      "props": {
+        "text": "Time to 500: 21 days from 400 (on-trend with the last milestone — steady ~4 stars/day, no burst)."
+      }
+    },
+    "text-pace": {
+      "type": "Text",
+      "props": {
+        "text": "Pace: 26/wk · baseline 6.9/day · projected 750 by ~2026-08-15."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-highlights": {
+      "type": "Heading",
+      "props": {
+        "text": "Highlights since 2026-05-20",
+        "level": "h3"
+      }
+    },
+    "stack-highlights": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-highlight-1",
+        "text-highlight-2",
+        "text-highlight-3"
+      ]
+    },
+    "text-highlight-1": {
+      "type": "Text",
+      "props": {
+        "text": "Shipped a multi-provider gateway with cascade failover across 7 AI providers (PRs #435, #430, #409)"
+      }
+    },
+    "text-highlight-2": {
+      "type": "Text",
+      "props": {
+        "text": "Added the capabilities-sweep skill to close the Phase 2 backlog (PR #416)"
+      }
+    },
+    "text-highlight-3": {
+      "type": "Text",
+      "props": {
+        "text": "Added one-click \"Connect with Claude Code\" auth to the dashboard (PR #433)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-repo": {
+      "type": "Link",
+      "props": {
+        "label": "GitHub Repo",
+        "href": "https://github.com/aaronjmars/aeon"
+      }
+    }
+  }
+}
