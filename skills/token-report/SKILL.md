@@ -3,7 +3,7 @@ name: token-report
 description: Price performance report for the project's token — price, volume, liquidity, and context
 var: ""
 tags: [crypto]
-requires: [ALCHEMY_API_KEY?, XAI_API_KEY?]
+requires: [ALCHEMY_API_KEY?, XAI_API_KEY?, BASE_RPC_URL?]
 capabilities: [external_api]
 ---
 <!-- autoresearch: variation B — verdict-first template, threshold-based classification, true deltas from persistent STATE log, skip-when-empty sections -->
@@ -69,21 +69,25 @@ WALLETS_FILE=".x402books/wallets.json"
 
 For each wallet line, query Base in this fallback order:
 
-1. **BaseScan (primary, no key required for low rate):**
+1. **Public Base RPC `eth_getBalance` (primary, keyless — the same endpoint the repo's other Base skills use):**
    ```bash
-   curl -s "https://api.basescan.org/api?module=account&action=balance&address=ADDRESS&tag=latest"
+   RPC="${BASE_RPC_URL:-https://mainnet.base.org}"
+   curl -m 10 -s -X POST "$RPC" -H "Content-Type: application/json" \
+     -d '{"jsonrpc":"2.0","method":"eth_getBalance","params":["ADDRESS","latest"],"id":1}'
    ```
-   Response is JSON `{"status":"1","result":"<wei>"}`. Convert wei → ETH by dividing by 1e18. If `status != "1"` or the result is non-numeric, mark this wallet `eth=fetch_fail` and continue.
+   `https://mainnet.base.org` is the public, keyless Base JSON-RPC endpoint that `wallet-profile`, `tx-explain`, `lp-lock`, and `fund-flow` already default to; override with `BASE_RPC_URL` for an authenticated endpoint (append any key in the URL path, **never a `-H` header** — the sandbox blocks env-var expansion in headers). The static `-H "Content-Type: application/json"` carries no secret, so it is safe. Response is JSON-RPC `{"jsonrpc":"2.0","result":"0x<hex_wei>","id":1}`. Convert hex → decimal → ÷1e18. If the response has no `result`, the `result` is `null`/non-hex, or it carries an `error`, mark this wallet `eth=fetch_fail` and continue.
 
-2. **Alchemy (secondary, only if `ALCHEMY_API_KEY` is set AND BaseScan failed):**
+   > Why not Etherscan here: the legacy per-chain `api.basescan.org/api` host (BaseScan V1) is deprecated, and the unified `api.etherscan.io/v2` endpoint gates Base (`chainid=8453`) behind a paid plan (`"Free API access is not supported for this chain"`). Neither works keyless, so a plain JSON-RPC `eth_getBalance` is the reliable keyless path — matching `wallet-profile`/`tx-explain`.
+
+2. **Alchemy (secondary, only if `ALCHEMY_API_KEY` is set AND the public RPC failed):**
    ```bash
-   curl -s -X POST "https://base-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY" \
+   curl -m 10 -s -X POST "https://base-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY" \
      -H "Content-Type: application/json" \
      -d '{"jsonrpc":"2.0","id":1,"method":"eth_getBalance","params":["ADDRESS","latest"]}'
    ```
-   Response is JSON-RPC `{"jsonrpc":"2.0","id":1,"result":"0x<hex_wei>"}`. Convert hex → decimal → ÷1e18.
+   Identical JSON-RPC shape and hex → decimal → ÷1e18 conversion as above. The key sits in the URL path (not a header), so curl envvar expansion is safe.
 
-3. **WebFetch fallback** (sandbox block on either curl): retry the same URL with **WebFetch** before declaring `fetch_fail`.
+3. **WebFetch fallback** (sandbox block on either curl): retry the same POST with **WebFetch** before declaring `fetch_fail`.
 
 Compute, per wallet:
 - `eth_balance` — decimal ETH, 4 decimals.
@@ -251,9 +255,9 @@ The `Treasury:` line is included ONLY when step 2b populated treasury_eth_total 
 
 ## Sandbox note
 
-The sandbox may block outbound curl. For any URL fetch that fails, retry with **WebFetch** as a fallback — GeckoTerminal, DexScreener, BaseScan, and api.x.ai are all public or token-auth'd via header, so no pre-fetch / post-process plumbing is needed.
+The sandbox may block outbound curl. For any URL fetch that fails, retry with **WebFetch** as a fallback — GeckoTerminal, DexScreener, the public Base RPC (`mainnet.base.org`), and api.x.ai are all public or token-auth'd via header, so no pre-fetch / post-process plumbing is needed. WebFetch accepts the JSON body for the `eth_getBalance` POST.
 
-The Alchemy fallback in step 2b uses `$ALCHEMY_API_KEY` in the URL path (not in a header), so curl envvar expansion is safe here. If Alchemy is unset, skip silently — BaseScan + WebFetch are enough.
+The Alchemy fallback in step 2b uses `$ALCHEMY_API_KEY` in the URL path (not in a header), so curl envvar expansion is safe here. If Alchemy is unset, skip silently — the keyless public RPC + WebFetch are enough.
 
 ## Constraints
 

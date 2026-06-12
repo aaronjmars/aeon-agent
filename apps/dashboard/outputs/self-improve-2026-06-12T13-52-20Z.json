@@ -1,0 +1,131 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "alert_success",
+        "separator_1",
+        "body_stack"
+      ]
+    },
+    "alert_success": {
+      "type": "Alert",
+      "props": {
+        "title": "Fixed token-report treasury fetch",
+        "type": "success"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "body_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_desc",
+        "endpoints_section",
+        "text_context",
+        "text_resolution",
+        "link_pr"
+      ]
+    },
+    "text_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Repointed the treasury balance fetch to a keyless public Base JSON-RPC eth_getBalance call"
+      }
+    },
+    "endpoints_section": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "endpoint_old_container",
+        "endpoint_new_container"
+      ]
+    },
+    "endpoint_old_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_old",
+        "link_old"
+      ]
+    },
+    "label_old": {
+      "type": "Text",
+      "props": {
+        "text": "Old endpoint",
+        "variant": "muted"
+      }
+    },
+    "link_old": {
+      "type": "Link",
+      "props": {
+        "label": "api.basescan.org",
+        "href": "https://api.basescan.org"
+      }
+    },
+    "endpoint_new_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "label_new",
+        "link_new"
+      ]
+    },
+    "label_new": {
+      "type": "Text",
+      "props": {
+        "text": "New endpoint",
+        "variant": "muted"
+      }
+    },
+    "link_new": {
+      "type": "Link",
+      "props": {
+        "label": "mainnet.base.org (eth_getBalance)",
+        "href": "https://mainnet.base.org"
+      }
+    },
+    "text_context": {
+      "type": "Text",
+      "props": {
+        "text": "Matching the repo's other Base skills",
+        "variant": "caption"
+      }
+    },
+    "text_resolution": {
+      "type": "Text",
+      "props": {
+        "text": "Resolves treasury=fetch_fail error seen on 2026-06-12"
+      }
+    },
+    "link_pr": {
+      "type": "Link",
+      "props": {
+        "label": "View PR #97",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/97"
+      }
+    }
+  }
+}
