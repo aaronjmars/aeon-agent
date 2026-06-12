@@ -69,13 +69,13 @@ WALLETS_FILE=".x402books/wallets.json"
 
 For each wallet line, query Base in this fallback order:
 
-1. **BaseScan (primary, no key required for low rate):**
+1. **Etherscan v2 (primary, keyless at low rate — same endpoint the repo's other Base skills use):**
    ```bash
-   curl -s "https://api.basescan.org/api?module=account&action=balance&address=ADDRESS&tag=latest"
+   curl -m 10 -s "https://api.etherscan.io/v2/api?chainid=8453&module=account&action=balance&address=ADDRESS&tag=latest${ETHERSCAN_API_KEY:+&apikey=$ETHERSCAN_API_KEY}"
    ```
-   Response is JSON `{"status":"1","result":"<wei>"}`. Convert wei → ETH by dividing by 1e18. If `status != "1"` or the result is non-numeric, mark this wallet `eth=fetch_fail` and continue.
+   Etherscan v2 is the unified multi-chain endpoint (`chainid=8453` = Base); the legacy per-chain `api.basescan.org/api` host is deprecated and now rejects keyless calls. The optional key is **appended to the URL, never a `-H` header** (sandbox blocks env-var expansion in headers — see `deployer-trace`/`tx-explain`). Response is JSON `{"status":"1","result":"<wei>"}`. Convert wei → ETH by dividing by 1e18. If `status != "1"` or the result is non-numeric, mark this wallet `eth=fetch_fail` and continue.
 
-2. **Alchemy (secondary, only if `ALCHEMY_API_KEY` is set AND BaseScan failed):**
+2. **Alchemy (secondary, only if `ALCHEMY_API_KEY` is set AND Etherscan failed):**
    ```bash
    curl -s -X POST "https://base-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY" \
      -H "Content-Type: application/json" \
@@ -251,9 +251,9 @@ The `Treasury:` line is included ONLY when step 2b populated treasury_eth_total 
 
 ## Sandbox note
 
-The sandbox may block outbound curl. For any URL fetch that fails, retry with **WebFetch** as a fallback — GeckoTerminal, DexScreener, BaseScan, and api.x.ai are all public or token-auth'd via header, so no pre-fetch / post-process plumbing is needed.
+The sandbox may block outbound curl. For any URL fetch that fails, retry with **WebFetch** as a fallback — GeckoTerminal, DexScreener, Etherscan v2 (`api.etherscan.io/v2`), and api.x.ai are all public or token-auth'd via header, so no pre-fetch / post-process plumbing is needed.
 
-The Alchemy fallback in step 2b uses `$ALCHEMY_API_KEY` in the URL path (not in a header), so curl envvar expansion is safe here. If Alchemy is unset, skip silently — BaseScan + WebFetch are enough.
+The Alchemy fallback in step 2b uses `$ALCHEMY_API_KEY` in the URL path (not in a header), so curl envvar expansion is safe here. If Alchemy is unset, skip silently — Etherscan v2 + WebFetch are enough.
 
 ## Constraints
 
