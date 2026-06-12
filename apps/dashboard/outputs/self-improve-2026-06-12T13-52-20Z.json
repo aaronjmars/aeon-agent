@@ -43,7 +43,7 @@
     "text_desc": {
       "type": "Text",
       "props": {
-        "text": "Migrated the deprecated keyless API call to the unified Etherscan v2 endpoint"
+        "text": "Repointed the treasury balance fetch to a keyless public Base JSON-RPC eth_getBalance call"
       }
     },
     "endpoints_section": {
@@ -103,8 +103,8 @@
     "link_new": {
       "type": "Link",
       "props": {
-        "label": "api.etherscan.io/v2?chainid=8453",
-        "href": "https://api.etherscan.io/v2?chainid=8453"
+        "label": "mainnet.base.org (eth_getBalance)",
+        "href": "https://mainnet.base.org"
       }
     },
     "text_context": {
