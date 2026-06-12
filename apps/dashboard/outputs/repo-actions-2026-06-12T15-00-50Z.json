@@ -1,0 +1,305 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — aaronjmars/aeon",
+        "description": "2026-06-12"
+      },
+      "children": [
+        "summary_text",
+        "sep1",
+        "star_stat",
+        "sep2",
+        "top_pick_alert",
+        "sep3",
+        "actions_heading",
+        "actions_stack",
+        "sep4",
+        "details_link"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "Five PRs merged today, one community contribution left conflicting, four structural health files still absent.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "star_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Repository Stars",
+        "value": "509"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "top_pick_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Top Priority: Rebase PR #418",
+        "message": "Unblock BEAMR gateway (Integration, Medium, Priority HIGH). BEAMR becomes the 6th gateway option, but only once the branch is rebased past today's five merges.",
+        "type": "warning"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "actions_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Action Items",
+        "level": "h3"
+      }
+    },
+    "actions_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action1",
+        "action2",
+        "action3",
+        "action4",
+        "action5"
+      ]
+    },
+    "action1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action1_text",
+        "action1_priority",
+        "action1_category",
+        "action1_size"
+      ]
+    },
+    "action1_text": {
+      "type": "Text",
+      "props": {
+        "text": "1. Rebase PR #418 — unblock BEAMR gateway",
+        "variant": "lead"
+      }
+    },
+    "action1_priority": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "action1_category": {
+      "type": "Badge",
+      "props": {
+        "text": "Integration",
+        "variant": "default"
+      }
+    },
+    "action1_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Medium",
+        "variant": "secondary"
+      }
+    },
+    "action2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action2_text",
+        "action2_priority",
+        "action2_category",
+        "action2_size"
+      ]
+    },
+    "action2_text": {
+      "type": "Text",
+      "props": {
+        "text": "2. Add CONTRIBUTING.md — first-time contributor guide",
+        "variant": "lead"
+      }
+    },
+    "action2_priority": {
+      "type": "Badge",
+      "props": {
+        "text": "MED",
+        "variant": "outline"
+      }
+    },
+    "action2_category": {
+      "type": "Badge",
+      "props": {
+        "text": "Community",
+        "variant": "default"
+      }
+    },
+    "action2_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action3_text",
+        "action3_priority",
+        "action3_category",
+        "action3_size"
+      ]
+    },
+    "action3_text": {
+      "type": "Text",
+      "props": {
+        "text": "3. Add .github/dependabot.yml — automate dep bumps for Next.js dashboard",
+        "variant": "lead"
+      }
+    },
+    "action3_priority": {
+      "type": "Badge",
+      "props": {
+        "text": "MED",
+        "variant": "outline"
+      }
+    },
+    "action3_category": {
+      "type": "Badge",
+      "props": {
+        "text": "Security",
+        "variant": "default"
+      }
+    },
+    "action3_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action4_text",
+        "action4_priority",
+        "action4_category",
+        "action4_size"
+      ]
+    },
+    "action4_text": {
+      "type": "Text",
+      "props": {
+        "text": "4. Add .github/ISSUE_TEMPLATE — bug + feature templates for a zero-open-issues repo",
+        "variant": "lead"
+      }
+    },
+    "action4_priority": {
+      "type": "Badge",
+      "props": {
+        "text": "MED",
+        "variant": "outline"
+      }
+    },
+    "action4_category": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      }
+    },
+    "action4_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "action5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "action5_text",
+        "action5_priority",
+        "action5_category",
+        "action5_size"
+      ]
+    },
+    "action5_text": {
+      "type": "Text",
+      "props": {
+        "text": "5. Fix README skill count \"197\" stale after beamr-route + CTRL merged today",
+        "variant": "lead"
+      }
+    },
+    "action5_priority": {
+      "type": "Badge",
+      "props": {
+        "text": "MED",
+        "variant": "outline"
+      }
+    },
+    "action5_category": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "default"
+      }
+    },
+    "action5_size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "details_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-12.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
