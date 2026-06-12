@@ -1,0 +1,1 @@
+self-improve: fixed token-report treasury fetch — migrated the deprecated keyless api.basescan.org call to the unified Etherscan v2 endpoint (api.etherscan.io/v2?chainid=8453), matching the repo's other Base skills. Resolves the treasury=fetch_fail seen on 2026-06-12. PR: https://github.com/aaronjmars/aeon-agent/pull/97
