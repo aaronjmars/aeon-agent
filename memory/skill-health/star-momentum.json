@@ -1,0 +1,14 @@
+{
+  "skill": "star-momentum",
+  "last_analyzed": "2026-06-12T11:29:56Z",
+  "quality_score": 3,
+  "assessment": "Acceptable — skill ran correctly, identified insufficient data, updated state properly, explained next steps clearly",
+  "flags": [],
+  "avg_score": 3,
+  "history": [
+    {
+      "date": "2026-06-12",
+      "score": 3
+    }
+  ]
+}
