@@ -1,0 +1,14 @@
+{
+  "skill": "token-report",
+  "last_analyzed": "2026-06-12T07:05:51Z",
+  "quality_score": 4,
+  "assessment": "Substantive token report with specific metrics, transparent error handling, and proper operational continuity — core deliverable complete despite some data source failures.",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-06-12",
+      "score": 4
+    }
+  ]
+}
