@@ -1,0 +1,301 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-12",
+        "description": "aaronjmars/aeon — SHIPPING: operator-onboarding suite + two community on-chain skills"
+      },
+      "children": [
+        "heading-shipped",
+        "stack-dashboard",
+        "stack-ecosystem",
+        "stack-minitor",
+        "sep-1",
+        "heading-under-hood",
+        "stack-ci-gate",
+        "sep-2",
+        "heading-metrics",
+        "grid-metrics",
+        "sep-3",
+        "link-full-recap"
+      ]
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h2"
+      }
+    },
+    "stack-dashboard": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-dashboard",
+        "links-dashboard"
+      ]
+    },
+    "text-dashboard": {
+      "type": "Text",
+      "props": {
+        "text": "Dashboard SOUL.md & STRATEGY.md tabs — author voice + north-star in-app, with template pickers, one-click real-soul installs, and AI builder skills (soul-builder, strategy-builder)",
+        "variant": "body"
+      }
+    },
+    "links-dashboard": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-448",
+        "link-451"
+      ]
+    },
+    "link-448": {
+      "type": "Link",
+      "props": {
+        "label": "#448",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/448"
+      }
+    },
+    "link-451": {
+      "type": "Link",
+      "props": {
+        "label": "#451",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/451"
+      }
+    },
+    "stack-ecosystem": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-ecosystem",
+        "links-ecosystem"
+      ]
+    },
+    "text-ecosystem": {
+      "type": "Text",
+      "props": {
+        "text": "Two ecosystem skills from outside contributors — beamr-route (pay-per-call x402 inference with an onchain receipt) and CTRL (NL→on-chain automation on Base)",
+        "variant": "body"
+      }
+    },
+    "links-ecosystem": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-419",
+        "link-353"
+      ]
+    },
+    "link-419": {
+      "type": "Link",
+      "props": {
+        "label": "#419",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/419"
+      }
+    },
+    "link-353": {
+      "type": "Link",
+      "props": {
+        "label": "#353",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/353"
+      }
+    },
+    "stack-minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-minitor",
+        "link-71"
+      ]
+    },
+    "text-minitor": {
+      "type": "Text",
+      "props": {
+        "text": "minitor — the \"use server\" export bug that broke `next build` (62 cascading errors) is fixed; main builds again",
+        "variant": "body"
+      }
+    },
+    "link-71": {
+      "type": "Link",
+      "props": {
+        "label": "#71",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/71"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-under-hood": {
+      "type": "Heading",
+      "props": {
+        "text": "Under the hood",
+        "level": "h2"
+      }
+    },
+    "stack-ci-gate": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-ci-gate",
+        "links-ci-gate"
+      ]
+    },
+    "text-ci-gate": {
+      "type": "Text",
+      "props": {
+        "text": "ci-skills-json gate — fails any PR that changes a skill without regenerating skills.json; token-report treasury fetch repointed to keyless Base RPC (agent #97)",
+        "variant": "body"
+      }
+    },
+    "links-ci-gate": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-457",
+        "link-458"
+      ]
+    },
+    "link-457": {
+      "type": "Link",
+      "props": {
+        "label": "#457",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/457"
+      }
+    },
+    "link-458": {
+      "type": "Link",
+      "props": {
+        "label": "#458",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/458"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape & Volume",
+        "level": "h2"
+      }
+    },
+    "grid-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-user-visible",
+        "stat-internal",
+        "stat-infra",
+        "stat-bot-filtered",
+        "stat-merged-prs",
+        "stat-files",
+        "stat-added-lines",
+        "stat-removed-lines"
+      ]
+    },
+    "stat-user-visible": {
+      "type": "Stat",
+      "props": {
+        "label": "User-visible",
+        "value": "12"
+      }
+    },
+    "stat-internal": {
+      "type": "Stat",
+      "props": {
+        "label": "Internal",
+        "value": "5"
+      }
+    },
+    "stat-infra": {
+      "type": "Stat",
+      "props": {
+        "label": "Infra",
+        "value": "3"
+      }
+    },
+    "stat-bot-filtered": {
+      "type": "Stat",
+      "props": {
+        "label": "Bot-filtered",
+        "value": "~34"
+      }
+    },
+    "stat-merged-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged PRs",
+        "value": "18"
+      }
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files changed",
+        "value": "~81"
+      }
+    },
+    "stat-added-lines": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines added",
+        "value": "+2,568"
+      }
+    },
+    "stat-removed-lines": {
+      "type": "Stat",
+      "props": {
+        "label": "Lines removed",
+        "value": "−220"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-full-recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-12.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
