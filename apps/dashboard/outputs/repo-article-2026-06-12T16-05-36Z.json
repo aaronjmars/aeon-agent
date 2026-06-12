@@ -1,0 +1,86 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Optimized the Fork This Week, Not the Engine"
+      },
+      "children": [
+        "thesis-text",
+        "sep1",
+        "stats-section",
+        "sep2",
+        "article-link"
+      ]
+    },
+    "thesis-text": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon spent the week on onboarding, not the agent — 51 of 109 merged PRs reshaped the dashboard, deploy wizard, soul/strategy builders, and README; only 28 touched the engine.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-onboarding",
+        "stat-engine",
+        "stat-total"
+      ]
+    },
+    "stat-onboarding": {
+      "type": "Stat",
+      "props": {
+        "label": "Onboarding PRs",
+        "value": "51"
+      },
+      "children": []
+    },
+    "stat-engine": {
+      "type": "Stat",
+      "props": {
+        "label": "Engine PRs",
+        "value": "28"
+      },
+      "children": []
+    },
+    "stat-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Merged PRs",
+        "value": "109"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-12.md",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

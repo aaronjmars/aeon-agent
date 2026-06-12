@@ -1,5 +1,5 @@
-*Aeon Spent This Week Un-Marrying Itself From Claude*
+*Aeon Optimized the Fork This Week, Not the Engine*
 
-Thesis: ~19 of aeon's 100 commits this week built a runtime gateway that cascades across 7 LLM providers and fails over on any error — the runtime is now provider-agnostic, even as the dashboard UX still leads with Claude.
+Thesis: aaronjmars/aeon spent the week on onboarding, not the agent — 51 of 109 merged PRs reshaped the dashboard, deploy wizard, soul/strategy builders, and README; only 28 touched the engine.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-11.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-12.md
