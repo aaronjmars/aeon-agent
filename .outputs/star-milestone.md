@@ -1,8 +1,9 @@
 ## Summary
 
-**What ran:**
-- Checked 2 active repos (`aaronjmars/aeon-agent` skipped as an agent repo).
-- `aaronjmars/aeon`: 507 stars — highest threshold is 500, which was already recorded this morning. Step 5a gate fired → no notification.
-- `aaronjmars/minitor`: 11 stars — below the first threshold (25) → `STAR_MILESTONE_QUIET`, skipped.
+**star-milestone run — 2026-06-12**
 
-**No new milestones crossed.** No notifications sent, no dispatch triggered. Log entry appended to `memory/logs/2026-06-11.md`.
+- `aaronjmars/aeon-agent` skipped (agent repo).
+- `aaronjmars/aeon` — 509 stars. Highest threshold crossed: **500**, already recorded 2026-06-11 (organic). No new milestone. Velocity: v7=27, baseline≈3.6/day, last star today. Next threshold is 750 — at current pace in ~65 days.
+- `aaronjmars/minitor` — 11 stars, below first threshold (25). `STAR_MILESTONE_QUIET`.
+
+No notifications sent. No dispatches triggered. Log appended to `memory/logs/2026-06-12.md`.
