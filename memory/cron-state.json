@@ -85,5 +85,13 @@
     "consecutive_failures": 0,
     "success_rate": 1,
     "last_quality_score": 4
+  },
+  "star-momentum": {
+    "last_dispatch": "2026-06-12T11:27:34Z",
+    "last_status": "dispatched"
+  },
+  "feature": {
+    "last_dispatch": "2026-06-12T11:27:34Z",
+    "last_status": "dispatched"
   }
 }
