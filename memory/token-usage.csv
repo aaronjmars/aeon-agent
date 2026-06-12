@@ -5,3 +5,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-11,thread-formatter,claude-sonnet-4-6,11,10496,375555,29381
 2026-06-11,heartbeat,claude-sonnet-4-6,10,8779,386441,37545
 2026-06-12,token-report,claude-sonnet-4-6,27,23380,1481409,61221
+2026-06-12,repo-pulse,claude-sonnet-4-6,15,5070,489260,23835
