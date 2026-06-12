@@ -1,12 +1,13 @@
-**HEARTBEAT_OK · STATUS_PAGE=WATCH**
+Heartbeat complete. Here's the summary:
 
-All P0 checks are clean: 6 skills in cron-state.json (thread-formatter, project-lens, push-recap, repo-article, star-milestone, heartbeat) are all `success` with zero consecutive failures. Heartbeat self-check passes (~5h since last success). No open PRs, no urgent issues, no open issue tracker entries.
+**P0 (Failed/stuck skills):** CLEAN — all 12 skills in cron-state.json succeeded, zero consecutive failures, heartbeat self-check healthy (~24h since last success, within 36h window).
 
-Status page updated to 🟡 WATCH — the watch signal comes from 9 enabled daily/weekly skills (token-report, repo-pulse, star-momentum, feature, self-improve, repo-actions, shiplog, operator-scorecard, memory-flush) still having no cron-state entry. These were already flagged in the earlier 19:00 UTC run, so no duplicate notification was sent.
+**P1 (Stalled PRs/issues):** CLEAN — 1 open PR (#418 BEAMR gateway, updated today), no urgent issues.
 
-## Summary
+**P2 (Memory flags):** Minitor PR #71 merged → Dexscreener plugin is now unblocked (already in today's logs via `feature` skill, dedup applied).
 
-- **Checked:** cron-state.json (P0), open PRs/issues (P1), memory flags (P2), aeon.yml vs cron-state (P3)
-- **Result:** No new findings — all prior flags already notified within 48h
-- **Updated:** `docs/status.md` → 🟡 WATCH (P3 condition: 9 skills not yet run)
-- **Logged:** `memory/logs/2026-06-11.md`
+**P3 (Missing skills):** `shiplog`, `operator-scorecard`, `memory-flush` still have no cron-state entries — flagged in yesterday's heartbeat, dedup applies, no new notification sent.
+
+**No notification sent** — all findings within 48h dedup window.
+
+**Status page** (`docs/status.md`) regenerated: 🟡 WATCH, token pulse updated (AEON $0.00002619 · -8.36% · CONSOLIDATING), all 12 active skills showing ✅ success.
