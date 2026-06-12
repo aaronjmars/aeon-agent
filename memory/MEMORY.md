@@ -39,3 +39,4 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Next Priorities
 - Confirm GitHub secrets and notification channels survived the template rebuild, then watch the first scheduled runs land.
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
+- **minitor:** once [PR #71](https://github.com/aaronjmars/minitor/pull/71) (build fix — `"use server"` exports) merges and `main` builds, ship the queued **Dexscreener column plugin** as a fast follow (built + tsc/lint-clean, see 2026-06-12 log).

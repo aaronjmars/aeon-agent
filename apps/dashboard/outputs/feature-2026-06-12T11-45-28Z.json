@@ -1,0 +1,297 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-06-12 — aaronjmars/minitor"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-heading",
+        "summary-line1",
+        "sep1",
+        "why-matters-section",
+        "sep2",
+        "what-built-section",
+        "sep3",
+        "how-works-section",
+        "sep4",
+        "verification-section",
+        "sep5",
+        "whats-next-section",
+        "sep6",
+        "pr-link"
+      ]
+    },
+    "summary-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fixed a broken production build on minitor's main branch",
+        "level": "h2"
+      }
+    },
+    "summary-line1": {
+      "type": "Text",
+      "props": {
+        "text": "minitor's `main` branch does not currently compile — `next build` fails with 62 errors. Every build and deploy is blocked until it's fixed. This PR finds the single root cause and unblocks the whole app."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "why-matters-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "why-heading",
+        "why-text1",
+        "why-text2"
+      ]
+    },
+    "why-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters:",
+        "level": "h3"
+      }
+    },
+    "why-text1": {
+      "type": "Text",
+      "props": {
+        "text": "A dead build stops every contributor and any deploy of the dashboard. The break is subtle: `app/actions.ts` is a Next.js `\"use server\"` module, and those are only allowed to export async functions — but it also exported six plain constants and helper functions (refresh-interval rules, the tab-group cap, the color-hex validator, the deck export version)."
+      }
+    },
+    "why-text2": {
+      "type": "Text",
+      "props": {
+        "text": "Turbopack rejects them, the module fails to load, and 62 cascading \"module has no exports\" errors take down the build. `tsc` doesn't check this rule, so it passed typecheck and slipped onto a green-looking main."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "what-built-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "what-heading",
+        "file1",
+        "file2",
+        "file3"
+      ]
+    },
+    "what-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built:",
+        "level": "h3"
+      }
+    },
+    "file1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file1-title",
+        "file1-desc"
+      ]
+    },
+    "file1-title": {
+      "type": "Badge",
+      "props": {
+        "text": "lib/deck-rules.ts (new)",
+        "variant": "secondary"
+      }
+    },
+    "file1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "a plain shared module holding the deck/column validation rules — refresh-interval allowlist, TAB_GROUP_MAX, the hex-color regex + normalizer, and the deck export version. Moved verbatim, no behavior change."
+      }
+    },
+    "file2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file2-title",
+        "file2-desc"
+      ]
+    },
+    "file2-title": {
+      "type": "Badge",
+      "props": {
+        "text": "app/actions.ts",
+        "variant": "secondary"
+      }
+    },
+    "file2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "removed those six non-async exports and imports them back from the new module. It now exports only Server Actions, which is what \"use server\" requires."
+      }
+    },
+    "file3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "file3-title",
+        "file3-desc"
+      ]
+    },
+    "file3-title": {
+      "type": "Badge",
+      "props": {
+        "text": "lib/store/use-deck-store.ts",
+        "variant": "secondary"
+      }
+    },
+    "file3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "the client store now imports those constants/validators from the plain module instead of across the server boundary — getting the real synchronous values it always used them as."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "how-works-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "how-heading",
+        "how-text1",
+        "how-text2"
+      ]
+    },
+    "how-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works:",
+        "level": "h3"
+      }
+    },
+    "how-text1": {
+      "type": "Text",
+      "props": {
+        "text": "The fix separates \"server actions\" from \"shared rules\". A `\"use server\"` file becomes an RPC surface where every export is callable from the client as an async server function — so non-function exports are illegal. By hoisting the constants and sync validators into an ordinary module, both the server actions and the client store import them as plain values, and `actions.ts` is left as a clean action-only surface."
+      }
+    },
+    "how-text2": {
+      "type": "Text",
+      "props": {
+        "text": "Existing duplicate copies of these constants in two dialog components were left untouched to keep the diff minimal and focused on the build fix."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "verification-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "verification-heading",
+        "verification-text"
+      ]
+    },
+    "verification-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Verification:",
+        "level": "h3"
+      }
+    },
+    "verification-text": {
+      "type": "Text",
+      "props": {
+        "text": "`next build` now compiles and generates all 7 routes; `tsc --noEmit` and eslint both clean."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "whats-next-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "whats-next-heading",
+        "whats-next-text"
+      ]
+    },
+    "whats-next-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next:",
+        "level": "h3"
+      }
+    },
+    "whats-next-text": {
+      "type": "Text",
+      "props": {
+        "text": "Once this merges and main builds again, a ready follow-up is queued: a keyless Dexscreener column plugin (on-chain DEX pair search + contract watchlist) — built and passing typecheck/lint, held back so this critical fix lands on its own."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #71",
+        "href": "https://github.com/aaronjmars/minitor/pull/71",
+        "source": "GitHub"
+      }
+    }
+  }
+}
