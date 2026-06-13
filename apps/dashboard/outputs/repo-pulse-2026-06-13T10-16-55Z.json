@@ -1,0 +1,296 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-13"
+      },
+      "children": [
+        "aeon_section",
+        "sep1",
+        "minitor_section"
+      ]
+    },
+    "aeon_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_header",
+        "aeon_stats",
+        "aeon_stargazers_heading",
+        "aeon_stargazers",
+        "aeon_forks_heading",
+        "aeon_forks"
+      ]
+    },
+    "aeon_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_title",
+        "aeon_badge"
+      ]
+    },
+    "aeon_title": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "aeon_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SURGE",
+        "variant": "destructive"
+      }
+    },
+    "aeon_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "aeon_stars_stat",
+        "aeon_forks_stat"
+      ]
+    },
+    "aeon_stars_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "510",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "aeon_forks_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "170",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "aeon_stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers",
+        "level": "h3"
+      }
+    },
+    "aeon_stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazer1",
+        "stargazer2",
+        "stargazer3",
+        "stargazer4"
+      ]
+    },
+    "stargazer1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "crowdshifter",
+        "href": "https://github.com/crowdshifter",
+        "source": "GitHub"
+      }
+    },
+    "stargazer2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "yorvalds",
+        "href": "https://github.com/yorvalds",
+        "source": "GitHub"
+      }
+    },
+    "stargazer3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Curiousding",
+        "href": "https://github.com/Curiousding",
+        "source": "GitHub"
+      }
+    },
+    "stargazer4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "0xPunkd",
+        "href": "https://github.com/0xPunkd",
+        "source": "GitHub"
+      }
+    },
+    "aeon_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "aeon_forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1",
+        "fork2",
+        "fork3",
+        "fork4",
+        "fork5"
+      ]
+    },
+    "fork1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ghostx-dev/aeon",
+        "href": "https://github.com/ghostx-dev/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "sinfronterasai/aeon",
+        "href": "https://github.com/sinfronterasai/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "gitlumen-team/aeon",
+        "href": "https://github.com/gitlumen-team/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ashneil12/aeon",
+        "href": "https://github.com/ashneil12/aeon",
+        "source": "GitHub"
+      }
+    },
+    "fork5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AdversaLLC/aeon",
+        "href": "https://github.com/AdversaLLC/aeon",
+        "source": "GitHub"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "minitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor_header",
+        "minitor_stats",
+        "minitor_forks_heading",
+        "minitor_forks"
+      ]
+    },
+    "minitor_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "minitor_title",
+        "minitor_badge"
+      ]
+    },
+    "minitor_title": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/minitor",
+        "level": "h2"
+      }
+    },
+    "minitor_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "outline"
+      }
+    },
+    "minitor_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "minitor_stars_stat",
+        "minitor_forks_stat"
+      ]
+    },
+    "minitor_stars_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "11"
+      }
+    },
+    "minitor_forks_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "1",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "minitor_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "minitor_forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor_fork1"
+      ]
+    },
+    "minitor_fork1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "AdversaLLC/minitor",
+        "href": "https://github.com/AdversaLLC/minitor",
+        "source": "GitHub"
+      }
+    }
+  }
+}
