@@ -1,0 +1,247 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-13"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-header",
+        "sep1",
+        "section-shipped",
+        "sep2",
+        "section-under-hood",
+        "sep3",
+        "section-metrics",
+        "sep4",
+        "link-recap"
+      ]
+    },
+    "repo-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-repo",
+        "heading-shipping"
+      ]
+    },
+    "badge-repo": {
+      "type": "Badge",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "outline"
+      }
+    },
+    "heading-shipping": {
+      "type": "Heading",
+      "props": {
+        "text": "SHIPPING: collapsible dashboard panel + gateway sidecars that track the chosen model",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-shipped",
+        "item-shipped-1",
+        "item-shipped-2",
+        "item-shipped-3"
+      ]
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h3"
+      }
+    },
+    "item-shipped-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-item-1",
+        "link-462"
+      ]
+    },
+    "text-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "• Right panel collapses to a thin rail now (state persisted), expanded width trimmed 320→288px — more room for the main view"
+      }
+    },
+    "link-462": {
+      "type": "Link",
+      "props": {
+        "label": "#462",
+        "href": "https://github.com/aaronjmars/aeon/pull/462"
+      }
+    },
+    "item-shipped-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-item-2",
+        "link-461"
+      ]
+    },
+    "text-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "• Surplus + Venice sidecars stop hardcoding a model — they derive it from your $MODEL pick, with Venice gated to a catalog it actually carries so a newer model can't 404"
+      }
+    },
+    "link-461": {
+      "type": "Link",
+      "props": {
+        "label": "#461",
+        "href": "https://github.com/aaronjmars/aeon/pull/461"
+      }
+    },
+    "item-shipped-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-item-3",
+        "link-460"
+      ]
+    },
+    "text-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "• VENICE_BASE_URL repo var points the Venice sidecar at any compatible endpoint — shipped by external contributor ashneil12"
+      }
+    },
+    "link-460": {
+      "type": "Link",
+      "props": {
+        "label": "#460",
+        "href": "https://github.com/aaronjmars/aeon/pull/460"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-under-hood": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-under-hood",
+        "item-under-hood-1"
+      ]
+    },
+    "heading-under-hood": {
+      "type": "Heading",
+      "props": {
+        "text": "Under the hood",
+        "level": "h3"
+      }
+    },
+    "item-under-hood-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-under-hood-1",
+        "link-463"
+      ]
+    },
+    "text-under-hood-1": {
+      "type": "Text",
+      "props": {
+        "text": "• Every screen opens scrolled to the top on tab/skill change"
+      }
+    },
+    "link-463": {
+      "type": "Link",
+      "props": {
+        "label": "#463",
+        "href": "https://github.com/aaronjmars/aeon/pull/463"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-shape",
+        "text-volume"
+      ]
+    },
+    "text-shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: 4 user-visible · 0 internal · 0 infra · 27 bot-filtered · 4 merged PRs"
+      }
+    },
+    "text-volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: 7 files, +84/-14"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-13.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

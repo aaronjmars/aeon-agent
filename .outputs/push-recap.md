@@ -1,15 +1,15 @@
-*Push Recap — 2026-06-12*
-aaronjmars/aeon — SHIPPING: operator-onboarding suite + two community on-chain skills
+*Push Recap — 2026-06-13*
+aaronjmars/aeon — SHIPPING: collapsible dashboard panel + gateway sidecars that track the chosen model
 
 Shipped to users:
-• Dashboard SOUL.md & STRATEGY.md tabs (#448/#451) — author voice + north-star in-app, with template pickers, one-click real-soul installs, and AI builder skills (soul-builder, strategy-builder)
-• Two ecosystem skills from outside contributors — beamr-route (#419, pay-per-call x402 inference with an onchain receipt) and CTRL (#353, NL→on-chain automation on Base)
-• minitor #71 — the "use server" export bug that broke `next build` (62 cascading errors) is fixed; main builds again
+• Right panel collapses to a thin rail now (state persisted), expanded width trimmed 320→288px — more room for the main view (#462)
+• Surplus + Venice sidecars stop hardcoding a model — they derive it from your $MODEL pick, with Venice gated to a catalog it actually carries so a newer model can't 404 (#461)
+• VENICE_BASE_URL repo var points the Venice sidecar at any compatible endpoint — shipped by external contributor ashneil12 (#460)
 
 Under the hood:
-• ci-skills-json gate (#457/#458) — fails any PR that changes a skill without regenerating skills.json; token-report treasury fetch repointed to keyless Base RPC (agent #97)
+• Every screen opens scrolled to the top on tab/skill change (#463)
 
-Shape: 12 user-visible · 5 internal · 3 infra · ~34 bot-filtered · 18 merged PRs
-Volume: ~81 files, +2,568/−220
+Shape: 4 user-visible · 0 internal · 0 infra · 27 bot-filtered · 4 merged PRs
+Volume: 7 files, +84/-14
 
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-12.md
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-13.md
