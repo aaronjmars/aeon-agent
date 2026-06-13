@@ -2,6 +2,12 @@
 
 Tracks angle categories and theses so they don't repeat within 14 days.
 
+## 2026-06-13
+- Angle: Technical deep-dive for non-technical readers (one architectural decision: the CI gate that recomputes a self-modifying agent's capability manifest)
+- Thesis: A self-modifying agent can't be trusted to describe itself — so Aeon doesn't ask: a CI gate recomputes its capability manifest from source and rejects any self-authored PR that drifts.
+- Title: A Self-Modifying Agent's Most Dangerous Output Is Its Own Capability List
+- Sources: thenewstack.io, arxiv.org/2603.10060, arxiv.org/2601.05111, o-mega.ai, github.com/aaronjmars/aeon (PR #457)
+
 ## 2026-06-12
 - Angle: Contrarian take (challenge the assumption that agent memory = vector database)
 - Thesis: While the agent-memory industry standardizes on vector databases, Aeon keeps memory as git-committed markdown — trading millisecond retrieval for what those stores structurally can't offer: a blamable, revertable, forkable audit trail.

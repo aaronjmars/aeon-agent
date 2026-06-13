@@ -1,5 +1,5 @@
-*New Article: The Agent-Memory Race Is Optimizing the Wrong Thing*
+*New Article: A Self-Modifying Agent's Most Dangerous Output Is Its Own Capability List*
 
-The agent-memory market is booming — Mem0 (51k stars, $24M), Letta (Jeff Dean-backed), Zep — and they're all racing to win the same benchmark: retrieval. The article argues that's the wrong trophy. The gap nobody's vector store closes is governance: who taught the agent a fact, what got merged, how you take it back. Aeon answers all three by storing memory as git-committed markdown (`memory/MEMORY.md`, `topics/`, `logs/`, `issues/`) — so `git blame` gives provenance, a pull request gates what's learned, and `git revert` is how the agent forgets. The bet: by 2027 at least one memory vendor ships version history as a first-class feature, conceding the boring file in a repo had it right.
+2026 shipped agents that rewrite their own code — and the trust problem nobody solved: an agent that edits itself also writes the file describing what it can do, and agents fabricate that kind of self-report 30–40% of the time. The industry reflex is more model (self-verification, agent-as-a-judge). Aeon's fix for its own capability manifest is dumber and deterministic: a CI gate (`ci-skills-json`) recomputes `skills.json` from the skill files on every PR and fails the build on any drift — no model in the loop, nothing to hallucinate. The bet: a checked-in "capability lockfile," gated in CI the way `package-lock.json` is now, becomes table stakes by 2027.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-12.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-13.md
