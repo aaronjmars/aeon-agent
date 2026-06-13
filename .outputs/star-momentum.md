@@ -1,16 +1,12 @@
 ## Summary
 
-**What ran:** `star-momentum` for 2026-06-12.
+**Status: STAR_MOMENTUM_NO_ALERTS**
 
-**Repos audited:** 2 — `aaronjmars/aeon` (507⭐, next milestone: 750) and `aaronjmars/minitor` (11⭐, next milestone: 50). `aaronjmars/aeon-agent` filtered out as an agent repo.
+- **Repos audited**: 2 (`aaronjmars/aeon`, `aaronjmars/minitor` — `aeon-agent` filtered)
+- **Data series**: Only 2 data points per repo in the 14-day window (2026-06-11: 507⭐ / 11⭐, 2026-06-12: 507⭐ / 11⭐). Both require ≥4 points for a projection — verdict: **INSUFFICIENT_DATA** for both.
+- **Alerts fired**: 0 — no notification sent
+- **Article written**: `articles/star-momentum-2026-06-13.md`
+- **State updated**: `memory/topics/star-momentum-state.json` (`last_run_at` bumped to 2026-06-13)
+- **Log appended**: `memory/logs/2026-06-13.md`
 
-**Verdict: INSUFFICIENT_DATA across the board.** Only 2 days of log data exist (2026-06-11 and 2026-06-12). The projection algorithm requires ≥ 4 data points to compute a reliable rolling average. No velocity can be calculated, no window check runs, no alert fires.
-
-**No notification sent** (`STAR_MOMENTUM_NO_ALERTS`).
-
-**Files written:**
-- `articles/star-momentum-2026-06-12.md` — full per-repo projection report
-- `memory/topics/star-momentum-state.json` — updated `last_run_at`
-- `memory/logs/2026-06-12.md` — log block appended
-
-The skill will become fully operational once `repo-pulse` has run for at least 4 consecutive days and populated enough `memory/logs/` entries.
+Projections will unlock once repo-pulse accumulates 4+ consecutive daily entries (expected by 2026-06-15 at the current cadence).
