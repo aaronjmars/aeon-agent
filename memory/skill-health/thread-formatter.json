@@ -1,10 +1,13 @@
 {
   "skill": "thread-formatter",
-  "last_analyzed": "2026-06-12T18:03:28Z",
-  "quality_score": 5,
-  "assessment": "Excellent — insightful, well-sourced thread with substantive technical narrative, specific context awareness (Etherscan deprecation, Base JSON-RPC pattern reuse), and immediately actionable output",
-  "flags": [],
-  "avg_score": 4.5,
+  "last_analyzed": "2026-06-13T17:41:15Z",
+  "quality_score": 4,
+  "assessment": "Substantive, well-structured output with clear reasoning, file tracking, and actionable thread angle—but uses non-standard scoring scale (6 vs 1-5) and truncates the actual JSON response.",
+  "flags": [
+    "truncated_output",
+    "non_standard_score_range"
+  ],
+  "avg_score": 4.33,
   "history": [
     {
       "date": "2026-06-11",
@@ -13,6 +16,10 @@
     {
       "date": "2026-06-12",
       "score": 5
+    },
+    {
+      "date": "2026-06-13",
+      "score": 4
     }
   ]
 }
