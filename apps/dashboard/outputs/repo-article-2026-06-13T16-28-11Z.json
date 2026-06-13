@@ -1,0 +1,49 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon's Identity Layer Now Writes Itself"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-1",
+        "text-2",
+        "link-read"
+      ]
+    },
+    "text-1": {
+      "type": "Text",
+      "props": {
+        "text": "most frameworks let you configure behavior. this week aeon made you configure *who the agent is* — and generates it for you. soul-builder reads your X, strategy-builder reads your goal, out come SOUL.md (voice) + STRATEGY.md (north-star). 7 PRs, both wired into every skill.",
+        "variant": "body"
+      }
+    },
+    "text-2": {
+      "type": "Text",
+      "props": {
+        "text": "a fork that argues in your voice and chases your metric before you write a line of skill code. different product.",
+        "variant": "body"
+      }
+    },
+    "link-read": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-13.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

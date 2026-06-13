@@ -18,6 +18,7 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Recent Articles
 | Date | Title | Topic |
 |------|-------|-------|
+| 2026-06-13 | Aeon's Identity Layer Now Writes Itself: SOUL.md and STRATEGY.md as Generated Files | aaronjmars/aeon identity/personalization layer |
 | 2026-06-12 | Aeon Optimized the Fork This Week, Not the Engine | aaronjmars/aeon onboarding/productization pivot |
 | 2026-06-11 | Aeon Spent This Week Un-Marrying Itself From Claude | aaronjmars/aeon multi-provider gateway pivot |
 
