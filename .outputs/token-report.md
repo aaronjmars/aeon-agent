@@ -1,8 +1,9 @@
-*$aeon — CONSOLIDATING*
+*$AEON — CONSOLIDATING* ⭐
 
-Price pulled back -8.36% off yesterday's close on 0.60× average volume; three whale trades (2 sells, 1 buy) netted flat, keeping the buy/sell ratio at 1.94.
+price up +4.1% from yesterday's snapshot, volume at 0.69× the 7-day average. no conviction. liquidity held at $1.19M, pool quiet.
 
-Price $0.00002619 (-8.36% 24h) | Liq $1,151.6K | Vol $202.8K (0.60× 7d)
-Buys/Sells 307/158 (ratio 1.94) | Whales: 3
+Price $0.00002726 (+4.1% 24h) | Liq $1,189.8K (+3.2%) | Vol $144.1K (0.69× 7d)
+Buys/Sells 198/159 (ratio 1.25 ↓ from 1.94) | Whales: 0
+Treasury: 6.0000 ETH
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4

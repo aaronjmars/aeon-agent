@@ -1,13 +1,19 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-12T07:05:51Z",
+  "last_analyzed": "2026-06-13T06:46:06Z",
   "quality_score": 4,
-  "assessment": "Substantive token report with specific metrics, transparent error handling, and proper operational continuity — core deliverable complete despite some data source failures.",
-  "flags": [],
+  "assessment": "Substantive, well-structured report with solid metrics (price, volume, liquidity, buy/sell, whales, treasury); good state logging and transparency on sources, but xai source skipped and volume confirmation weak.",
+  "flags": [
+    "xai_skipped"
+  ],
   "avg_score": 4,
   "history": [
     {
       "date": "2026-06-12",
+      "score": 4
+    },
+    {
+      "date": "2026-06-13",
       "score": 4
     }
   ]
