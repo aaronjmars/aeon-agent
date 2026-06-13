@@ -1,22 +1,20 @@
-*Feature Built — 2026-06-12 — aaronjmars/minitor*
+⭐ *Feature Built — 2026-06-13 — aaronjmars/minitor*
 
-Fixed a broken production build on minitor's main branch
-minitor's `main` branch does not currently compile — `next build` fails with 62 errors. Every build and deploy is blocked until it's fixed. This PR finds the single root cause and unblocks the whole app.
+Dexscreener column
+minitor is a TweetDeck for everything — stack columns, each a live feed. it had CoinGecko, DeFiLlama, wallet activity. it didn't have the one screen people actually stare at when a token starts moving: the DEX pair view. now it does. search any token by symbol, name, or contract across every chain, or watch a list of contract addresses. each row shows price, 24h change, liquidity, volume, and the buy/sell split.
 
 Why this matters:
-A dead build stops every contributor and any deploy of the dashboard. The break is subtle: `app/actions.ts` is a Next.js `"use server"` module, and those are only allowed to export async functions — but it also exported six plain constants and helper functions (refresh-interval rules, the tab-group cap, the color-hex validator, the deck export version). Turbopack rejects them, the module fails to load, and 62 cascading "module has no exports" errors take down the build. `tsc` doesn't check this rule, so it passed typecheck and slipped onto a green-looking main.
+the price layer tells you what a token costs. the pair layer tells you what's happening to it right now — which DEX, how deep the liquidity, whether buys outnumber sells. that's the live on-chain signal a monitor is for. Dexscreener's API is keyless, so it slots in with zero new secrets. this was the queued fast-follow to the #71 build fix — unblocked now that main compiles.
 
 What was built:
-- lib/deck-rules.ts (new): a plain shared module holding the deck/column validation rules — refresh-interval allowlist, TAB_GROUP_MAX, the hex-color regex + normalizer, and the deck export version. Moved verbatim, no behavior change.
-- app/actions.ts: removed those six non-async exports and imports them back from the new module. It now exports only Server Actions, which is what "use server" requires.
-- lib/store/use-deck-store.ts: the client store now imports those constants/validators from the plain module instead of across the server boundary — getting the real synchronous values it always used them as.
+- lib/integrations/dexscreener.ts: keyless client for the search + tokens endpoints, maps pairs to feed items, coerces string prices, sorts by 24h volume.
+- the 3-file plugin trio (plugin/server/client) — slice-paginated via the shared helper, the same pattern as the other crypto columns. registered in all three aggregators.
+- a `Dexscreener · $AEON` column added to the Base Ecosystem starter deck, next to the existing $AEON CoinGecko column.
 
 How it works:
-The fix separates "server actions" from "shared rules". A `"use server"` file becomes an RPC surface where every export is callable from the client as an async server function — so non-function exports are illegal. By hoisting the constants and sync validators into an ordinary module, both the server actions and the client store import them as plain values, and `actions.ts` is left as a clean action-only surface. Existing duplicate copies of these constants in two dialog components were left untouched to keep the diff minimal and focused on the build fix.
-
-Verification: `next build` now compiles and generates all 7 routes; `tsc --noEmit` and eslint both clean.
+standard 3-file plugin contract — pure metadata, server-only fetcher, client renderer — so the registry parity check enforces it's wired in all three places. verified hard: tsc clean, eslint clean, a real `next build` passes (the only check that catches the registry/"use server" class), and the field mapping was checked against a live API response for the $AEON contract on Base.
 
 What's next:
-Once this merges and main builds again, a ready follow-up is queued: a keyless Dexscreener column plugin (on-chain DEX pair search + contract watchlist) — built and passing typecheck/lint, held back so this critical fix lands on its own.
+48 column types now. closes the minitor fleet follow-on from the repo-actions audit.
 
-PR: https://github.com/aaronjmars/minitor/pull/71
+PR: https://github.com/aaronjmars/minitor/pull/72

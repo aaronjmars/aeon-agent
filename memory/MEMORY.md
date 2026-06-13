@@ -40,4 +40,5 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Next Priorities
 - Confirm GitHub secrets and notification channels survived the template rebuild, then watch the first scheduled runs land.
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
-- **minitor:** once [PR #71](https://github.com/aaronjmars/minitor/pull/71) (build fix — `"use server"` exports) merges and `main` builds, ship the queued **Dexscreener column plugin** as a fast follow (built + tsc/lint-clean, see 2026-06-12 log).
+- **minitor:** ✅ Dexscreener column plugin shipped 2026-06-13 ([PR #72](https://github.com/aaronjmars/minitor/pull/72), build-verified) after #71 merged. Fleet follow-on complete.
+- **aeon:** CONTRIBUTING.md shipped 2026-06-13 ([PR #465](https://github.com/aaronjmars/aeon/pull/465)) — repo-actions idea #2. Next repo-actions pick still open: rebase external PR #418 (BEAMR gateway) — needs maintainer-side fork access, not cleanly autonomous.

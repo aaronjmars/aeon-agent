@@ -1,0 +1,173 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built — 2026-06-13 — aaronjmars/minitor",
+        "description": "Dexscreener column for minitor"
+      },
+      "children": [
+        "heading-feature",
+        "text-feature-intro",
+        "separator-1",
+        "heading-why",
+        "text-why",
+        "separator-2",
+        "heading-built",
+        "text-built-1",
+        "text-built-2",
+        "text-built-3",
+        "separator-3",
+        "heading-how",
+        "text-how",
+        "separator-4",
+        "heading-next",
+        "text-next",
+        "separator-5",
+        "link-pr"
+      ]
+    },
+    "heading-feature": {
+      "type": "Heading",
+      "props": {
+        "text": "Dexscreener column",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "text-feature-intro": {
+      "type": "Text",
+      "props": {
+        "text": "minitor is a TweetDeck for everything — stack columns, each a live feed. it had CoinGecko, DeFiLlama, wallet activity. it didn't have the one screen people actually stare at when a token starts moving: the DEX pair view. now it does. search any token by symbol, name, or contract across every chain, or watch a list of contract addresses. each row shows price, 24h change, liquidity, volume, and the buy/sell split.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-why": {
+      "type": "Text",
+      "props": {
+        "text": "The price layer tells you what a token costs. The pair layer tells you what's happening to it right now — which DEX, how deep the liquidity, whether buys outnumber sells. That's the live on-chain signal a monitor is for. Dexscreener's API is keyless, so it slots in with zero new secrets. This was the queued fast-follow to the #71 build fix — unblocked now that main compiles.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-built": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-built-1": {
+      "type": "Text",
+      "props": {
+        "text": "lib/integrations/dexscreener.ts: keyless client for the search + tokens endpoints, maps pairs to feed items, coerces string prices, sorts by 24h volume.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-built-2": {
+      "type": "Text",
+      "props": {
+        "text": "The 3-file plugin trio (plugin/server/client) — slice-paginated via the shared helper, the same pattern as the other crypto columns. Registered in all three aggregators.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "text-built-3": {
+      "type": "Text",
+      "props": {
+        "text": "A 'Dexscreener · $AEON' column added to the Base Ecosystem starter deck, next to the existing $AEON CoinGecko column.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-how": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-how": {
+      "type": "Text",
+      "props": {
+        "text": "Standard 3-file plugin contract — pure metadata, server-only fetcher, client renderer — so the registry parity check enforces it's wired in all three places. Verified hard: tsc clean, eslint clean, a real 'next build' passes (the only check that catches the registry/'use server' class), and the field mapping was checked against a live API response for the $AEON contract on Base.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-next": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text-next": {
+      "type": "Text",
+      "props": {
+        "text": "48 column types now. Closes the minitor fleet follow-on from the repo-actions audit.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #72",
+        "href": "https://github.com/aaronjmars/minitor/pull/72",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
