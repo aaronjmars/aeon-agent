@@ -1,13 +1,13 @@
-*Repo Action Ideas — aaronjmars/aeon — 2026-06-12*
-Five PRs merged today, one community contribution left conflicting, four structural health files still absent on a 509-star repo.
+*Repo Action Ideas — aaronjmars/aeon — 2026-06-14*
+Five HIGH/MED ideas this cycle, all anchored to the live issue or structurally absent files; top pick is a direct ask from the community that closes open ISSUE:#464 and surfaces x402 ecosystem depth.
 
-Top pick: Rebase PR #418 to unblock BEAMR gateway (Integration, Medium, Priority HIGH)
- → BEAMR becomes the 6th gateway option, but only once the branch is rebased past today's five merges.
+Top pick: Add glim.sh to the dashboard's featured MCP catalog (DX, Small, Priority HIGH)
+ → Closes ISSUE:#464 and puts an x402-native live-data MCP in front of every new forker via the dashboard catalog.
 
-1. Rebase PR #418 — unblock BEAMR gateway (HIGH, Integration, Medium)
-2. Add CONTRIBUTING.md — first-time contributor guide (MED, Community, Small)
-3. Add .github/dependabot.yml — automate dep bumps for Next.js dashboard (MED, Security, Small)
-4. Add .github/ISSUE_TEMPLATE — bug + feature templates for a zero-open-issues repo (MED, DX, Small)
-5. Fix README skill count "197" stale after beamr-route + CTRL merged today (MED, DX, Small)
+1. Add glim.sh to dashboard featured MCP catalog (HIGH, DX, Small)
+2. Add copy-pasteable bootstrap block to README Install section (HIGH, DX, Small)
+3. SHA-pin GitHub Actions in .github/workflows/*.yml (MED, Security, Small)
+4. Add CODE_OF_CONDUCT.md (MED, Community, Small)
+5. Add SECURITY.md with responsible disclosure policy (MED, Security, Small)
 
-Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-12.md
+Full details: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-14.md

@@ -1,0 +1,399 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas"
+      },
+      "children": [
+        "text-header",
+        "text-intro",
+        "sep-1",
+        "heading-top",
+        "item-top",
+        "sep-2",
+        "heading-all",
+        "items-stack",
+        "sep-3",
+        "link-full"
+      ]
+    },
+    "text-header": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon — 2026-06-14",
+        "variant": "muted"
+      }
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Five HIGH/MED ideas this cycle, all anchored to the live issue or structurally absent files; top pick is a direct ask from the community that closes open ISSUE:#464 and surfaces x402 ecosystem depth.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-top": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "item-top": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-top-title",
+        "badges-top",
+        "text-top-desc"
+      ]
+    },
+    "text-top-title": {
+      "type": "Text",
+      "props": {
+        "text": "Add glim.sh to the dashboard's featured MCP catalog",
+        "variant": "lead"
+      }
+    },
+    "badges-top": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-top-priority",
+        "badge-top-dx",
+        "badge-top-size"
+      ]
+    },
+    "badge-top-priority": {
+      "type": "Badge",
+      "props": {
+        "text": "Priority HIGH",
+        "variant": "destructive"
+      }
+    },
+    "badge-top-dx": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge-top-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "text-top-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Closes ISSUE:#464 and puts an x402-native live-data MCP in front of every new forker via the dashboard catalog.",
+        "variant": "caption"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-all": {
+      "type": "Heading",
+      "props": {
+        "text": "All Ideas",
+        "level": "h3"
+      }
+    },
+    "items-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-1",
+        "item-2",
+        "item-3",
+        "item-4",
+        "item-5"
+      ]
+    },
+    "item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-1-title",
+        "badges-1"
+      ]
+    },
+    "text-1-title": {
+      "type": "Text",
+      "props": {
+        "text": "1. Add glim.sh to dashboard featured MCP catalog",
+        "variant": "body"
+      }
+    },
+    "badges-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-1-priority",
+        "badge-1-cat",
+        "badge-1-size"
+      ]
+    },
+    "badge-1-priority": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "badge-1-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge-1-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-2-title",
+        "badges-2"
+      ]
+    },
+    "text-2-title": {
+      "type": "Text",
+      "props": {
+        "text": "2. Add copy-pasteable bootstrap block to README Install section",
+        "variant": "body"
+      }
+    },
+    "badges-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-2-priority",
+        "badge-2-cat",
+        "badge-2-size"
+      ]
+    },
+    "badge-2-priority": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "badge-2-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge-2-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "item-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-3-title",
+        "badges-3"
+      ]
+    },
+    "text-3-title": {
+      "type": "Text",
+      "props": {
+        "text": "3. SHA-pin GitHub Actions in .github/workflows/*.yml",
+        "variant": "body"
+      }
+    },
+    "badges-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-3-priority",
+        "badge-3-cat",
+        "badge-3-size"
+      ]
+    },
+    "badge-3-priority": {
+      "type": "Badge",
+      "props": {
+        "text": "MED",
+        "variant": "outline"
+      }
+    },
+    "badge-3-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Security",
+        "variant": "secondary"
+      }
+    },
+    "badge-3-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "item-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-4-title",
+        "badges-4"
+      ]
+    },
+    "text-4-title": {
+      "type": "Text",
+      "props": {
+        "text": "4. Add CODE_OF_CONDUCT.md",
+        "variant": "body"
+      }
+    },
+    "badges-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-4-priority",
+        "badge-4-cat",
+        "badge-4-size"
+      ]
+    },
+    "badge-4-priority": {
+      "type": "Badge",
+      "props": {
+        "text": "MED",
+        "variant": "outline"
+      }
+    },
+    "badge-4-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Community",
+        "variant": "secondary"
+      }
+    },
+    "badge-4-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "item-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-5-title",
+        "badges-5"
+      ]
+    },
+    "text-5-title": {
+      "type": "Text",
+      "props": {
+        "text": "5. Add SECURITY.md with responsible disclosure policy",
+        "variant": "body"
+      }
+    },
+    "badges-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-5-priority",
+        "badge-5-cat",
+        "badge-5-size"
+      ]
+    },
+    "badge-5-priority": {
+      "type": "Badge",
+      "props": {
+        "text": "MED",
+        "variant": "outline"
+      }
+    },
+    "badge-5-cat": {
+      "type": "Badge",
+      "props": {
+        "text": "Security",
+        "variant": "secondary"
+      }
+    },
+    "badge-5-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "outline"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link-full": {
+      "type": "Link",
+      "props": {
+        "label": "Full details: repo-actions-2026-06-14.md",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-14.md"
+      }
+    }
+  }
+}
