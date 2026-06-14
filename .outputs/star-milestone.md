@@ -1,14 +1,9 @@
-Done. Here's what the skill found:
-
-**aaronjmars/aeon** — 510 stars. The 500-star milestone was already recorded on 2026-06-11, and 510 hasn't crossed the next threshold (750). No announcement. Velocity is healthy: v7=10 stars/week, v30=202, baseline ~6.7/day, last star arrived less than a day ago.
-
-**aaronjmars/minitor** — 11 stars. Below the first threshold (25). `STAR_MILESTONE_QUIET`.
-
-No notifications sent, no downstream dispatch (no rules configured in `milestone-dispatch.json`). Log entry appended to `memory/logs/2026-06-13.md`.
+Log written. No commits or notifications needed — both repos are below unrecorded thresholds.
 
 ## Summary
-- Checked 2 repos (skipped `aaronjmars/aeon-agent` per rule)
-- `aaronjmars/aeon`: 510 stars — 500 already recorded, 750 not yet reached → no action
-- `aaronjmars/minitor`: 11 stars — below first threshold → STAR_MILESTONE_QUIET
-- `milestone-dispatch.json` exists with empty rules — nothing to dispatch
-- Log appended to `memory/logs/2026-06-13.md`
+
+- **aaronjmars/aeon** — 511 stars. Highest threshold ≤ 511 is **500**, already recorded 2026-06-11 (organic). Step 5a fired; no announcement.
+- **aaronjmars/minitor** — 11 stars. Below first threshold (25). STAR_MILESTONE_QUIET.
+- **Velocity (aeon)**: v7=27, v30=189, baseline=6.3/day, last star 2026-06-14T07:15:01Z. Next milestone is **750** — at 6.3/day that's ~37 days out (~2026-07-21).
+- **Dispatched**: none — rules map is empty.
+- **Log**: appended to `memory/logs/2026-06-14.md`.
