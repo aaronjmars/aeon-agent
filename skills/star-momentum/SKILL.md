@@ -182,7 +182,13 @@ For each repo with verdict `OUT_OF_WINDOW`, one line:
 
 > ${repo}: ${target}⭐ in ~${days_remaining_v7}d — outside the 7-14d launch window. No action.
 
-For `OFF_DAY` / `STALLED` / `INSUFFICIENT_DATA` / `BAD_TARGET`: one line each, same format.
+For `OFF_DAY` (projected): one line, same format as `OUT_OF_WINDOW` above.
+
+For the non-projected verdicts there is no target or ETA — print only the reason, one line each (same forms as the step-11 log):
+
+> ${repo}: INSUFFICIENT_DATA — ${current_stars}⭐, ${n} data point(s) in 14-day window (need ≥4)
+> ${repo}: STALLED — ${current_stars}⭐, 7-day pace ${v7}/day ≤ 0
+> ${repo}: BAD_TARGET — ${current_stars}⭐, override ${OVERRIDE_MILESTONE} ≤ current
 
 ---
 *Reads `memory/logs/YYYY-MM-DD.md` repo-pulse blocks. Pure local file I/O. Companion to `star-milestone` (post-crossing celebration) and `show-hn` (the launch artifact this signal times).*
