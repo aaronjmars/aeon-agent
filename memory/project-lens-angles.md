@@ -19,3 +19,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: Multi-provider failover is sold as a gateway problem — but an agent that runs as a cron job gets it nearly free: a dead run just restarts on the next provider.
 - Title: The Cheapest Place to Put AI Failover Isn't a Gateway
 - Sources: thoughtworks.com, virtido.com, universal.cloud, ardanlabs.com, blog.cybelesoft.com, windowsnews.ai
+
+## 2026-06-14
+- Angle: Historical parallel (HTTP 402 "Payment Required" reserved in RFC 2068/1997, dormant ~29 years; concrete mechanism = card-fee arithmetic blocked sub-cent payments until agents + stablecoin rails made the fee smaller than the price)
+- Thesis: HTTP 402 sat blank for 29 years because no human payer could afford a sub-cent charge; its first real users are agents paying agents — settling each inference call onchain.
+- Title: The Status Code That Waited 29 Years for a Customer Who Wasn't Human
+- Sources: developer.mozilla.org, dev.to, coinbase.com, coindesk.com (x2), github.com/aaronjmars/aeon (PR #419)
