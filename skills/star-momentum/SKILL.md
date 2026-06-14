@@ -80,7 +80,7 @@ done
 
 The result is a `(date, stars)` series sorted ascending, one row per day where `repo-pulse` ran. Days with no log entry are simply absent — gaps in the series are fine and do not require interpolation.
 
-If the series has fewer than 4 data points: record this repo's verdict as `INSUFFICIENT_DATA`, write its section in the article anyway, and skip projection.
+If the series has fewer than 4 data points: record this repo's verdict as `INSUFFICIENT_DATA`, write its section in the article anyway, and skip projection. **When projection is skipped, `target`, `gap`, `eta`/`days_remaining_v7`, and `projected_date_v7` are undefined — never emit them (in the log, article, or notification). Do not substitute the next ladder rung as a stand-in target; there is no projection toward it.**
 
 ### 4. Compute deltas and rolling averages
 
@@ -144,6 +144,8 @@ Path: `articles/star-momentum-${today}.md`. Overwrite if exists.
 
 ## ${repo} — ${current_stars}⭐ → ${target}⭐ in ~${days_remaining_v7}d
 
+(Section header form depends on the verdict. **Projected verdicts** — `ALERT`, `OUT_OF_WINDOW`, `OFF_DAY`, `ALREADY_ALERTED` — use the `${current_stars}⭐ → ${target}⭐ in ~${days_remaining_v7}d` form above. **Non-projected verdicts** — `INSUFFICIENT_DATA`, `STALLED`, `BAD_TARGET` — have no target or ETA, so use `## ${repo} — ${current_stars}⭐ — ${verdict}` instead and omit the projection rows from the metrics table.)
+
 | Metric | Value |
 |--------|-------|
 | Current stars | ${current_stars} |
@@ -180,7 +182,13 @@ For each repo with verdict `OUT_OF_WINDOW`, one line:
 
 > ${repo}: ${target}⭐ in ~${days_remaining_v7}d — outside the 7-14d launch window. No action.
 
-For `OFF_DAY` / `STALLED` / `INSUFFICIENT_DATA` / `BAD_TARGET`: one line each, same format.
+For `OFF_DAY` (projected): one line, same format as `OUT_OF_WINDOW` above.
+
+For the non-projected verdicts there is no target or ETA — print only the reason, one line each (same forms as the step-11 log):
+
+> ${repo}: INSUFFICIENT_DATA — ${current_stars}⭐, ${n} data point(s) in 14-day window (need ≥4)
+> ${repo}: STALLED — ${current_stars}⭐, 7-day pace ${v7}/day ≤ 0
+> ${repo}: BAD_TARGET — ${current_stars}⭐, override ${OVERRIDE_MILESTONE} ≤ current
 
 ---
 *Reads `memory/logs/YYYY-MM-DD.md` repo-pulse blocks. Pure local file I/O. Companion to `star-milestone` (post-crossing celebration) and `show-hn` (the launch artifact this signal times).*
@@ -247,8 +255,13 @@ Cap to last 20 milestone entries per repo to bound the file.
 ## Star Momentum
 - **Skill**: star-momentum
 - **Repos audited**: ${repo_count}
-- **Per-repo verdicts**:
-  - ${repo}: ${verdict} — ${current_stars}⭐ → ${target}⭐ in ~${eta}d (${projected_date_v7}, ${day_of_week_v7})
+- **Per-repo verdicts**: (line form depends on verdict — never print a fabricated target/ETA for a verdict that skipped projection)
+  - Projected verdicts (`ALERT` / `OUT_OF_WINDOW` / `OFF_DAY` / `ALREADY_ALERTED`):
+    `${repo}: ${verdict} — ${current_stars}⭐ → ${target}⭐ in ~${eta}d (${projected_date_v7}, ${day_of_week_v7})`
+  - Non-projected verdicts (`INSUFFICIENT_DATA` / `STALLED` / `BAD_TARGET`): no target or ETA exists, so print only the reason:
+    - `INSUFFICIENT_DATA`: `${repo}: INSUFFICIENT_DATA — ${current_stars}⭐, ${n} data point(s) in 14-day window (need ≥4)`
+    - `STALLED`: `${repo}: STALLED — ${current_stars}⭐, 7-day pace ${v7}/day ≤ 0`
+    - `BAD_TARGET`: `${repo}: BAD_TARGET — ${current_stars}⭐, override ${OVERRIDE_MILESTONE} ≤ current`
 - **Alerts sent**: ${alert_count}
 - **Article**: articles/star-momentum-${today}.md
 - **Notification sent**: ${yes — N alerts | no — STAR_MOMENTUM_NO_ALERTS | no — dry-run}
