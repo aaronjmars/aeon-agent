@@ -1,13 +1,10 @@
 {
   "skill": "thread-formatter",
-  "last_analyzed": "2026-06-13T17:41:15Z",
+  "last_analyzed": "2026-06-14T17:56:13Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-structured output with clear reasoning, file tracking, and actionable thread angle—but uses non-standard scoring scale (6 vs 1-5) and truncates the actual JSON response.",
-  "flags": [
-    "truncated_output",
-    "non_standard_score_range"
-  ],
-  "avg_score": 4.33,
+  "assessment": "Good — substantive thread artifact with smart dedup, verified constraints, proper logging and notifications",
+  "flags": [],
+  "avg_score": 4.25,
   "history": [
     {
       "date": "2026-06-11",
@@ -19,6 +16,10 @@
     },
     {
       "date": "2026-06-13",
+      "score": 4
+    },
+    {
+      "date": "2026-06-14",
       "score": 4
     }
   ]
