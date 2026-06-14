@@ -49,3 +49,6 @@ node_modules/
 # Stale artifacts
 .external-work
 .vuln-scan/
+
+# feature skill scratch (per-repo clones + temp validators)
+.fb-*
