@@ -1,7 +1,5 @@
-*Aeon's Identity Layer Now Writes Itself*
+*Aeon's outside contributors aren't adding content skills — they're wiring it for onchain payments*
 
-most frameworks let you configure behavior. this week aeon made you configure *who the agent is* — and generates it for you. soul-builder reads your X, strategy-builder reads your goal, out come SOUL.md (voice) + STRATEGY.md (north-star). 7 PRs, both wired into every skill.
+Aaron shipped ~85 of this week's PRs — all dashboard, gateway, docs. The two new skills from forkers? Both settle on Base. CTRL (#353) builds DeFi vaults on a single signature. beamr-route (#419) pays for inference over x402 in USDC, with an onchain receipt. When outsiders extend Aeon, they reach for a wallet, not a digest.
 
-a fork that argues in your voice and chases your metric before you write a line of skill code. different product.
-
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-13.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-14.md

@@ -18,6 +18,7 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Recent Articles
 | Date | Title | Topic |
 |------|-------|-------|
+| 2026-06-14 | Aeon's Outside Contributors Aren't Adding Content Skills — They're Wiring It for Onchain Payments | aaronjmars/aeon ecosystem: external contributors add Base/x402 onchain skills |
 | 2026-06-13 | Aeon's Identity Layer Now Writes Itself: SOUL.md and STRATEGY.md as Generated Files | aaronjmars/aeon identity/personalization layer |
 | 2026-06-13 | A Self-Modifying Agent's Most Dangerous Output Is Its Own Capability List | project-lens: CI gate recomputes the agent's capability manifest vs trusting it |
 | 2026-06-12 | Aeon Optimized the Fork This Week, Not the Engine | aaronjmars/aeon onboarding/productization pivot |

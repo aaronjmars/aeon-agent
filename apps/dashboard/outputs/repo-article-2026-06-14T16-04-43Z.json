@@ -1,0 +1,95 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "repo-article"
+      },
+      "children": [
+        "heading_main",
+        "sep1",
+        "content_stack"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon's outside contributors aren't adding content skills — they're wiring it for onchain payments",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_para",
+        "features_section",
+        "conclusion_para",
+        "sep2",
+        "read_article"
+      ]
+    },
+    "summary_para": {
+      "type": "Text",
+      "props": {
+        "text": "Aaron shipped ~85 of this week's PRs — all dashboard, gateway, docs. The two new skills from forkers? Both settle on Base.",
+        "variant": "body"
+      }
+    },
+    "features_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ctrl_skill",
+        "beamr_skill"
+      ]
+    },
+    "ctrl_skill": {
+      "type": "StoryLink",
+      "props": {
+        "title": "CTRL (#353) — Builds DeFi vaults on a single signature",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/353",
+        "source": "GitHub"
+      }
+    },
+    "beamr_skill": {
+      "type": "StoryLink",
+      "props": {
+        "title": "beamr-route (#419) — Pays for inference over x402 in USDC, with an onchain receipt",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/419",
+        "source": "GitHub"
+      }
+    },
+    "conclusion_para": {
+      "type": "Text",
+      "props": {
+        "text": "When outsiders extend Aeon, they reach for a wallet, not a digest.",
+        "variant": "lead"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "read_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read the full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-14.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
