@@ -1,11 +1,9 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-13T06:46:06Z",
+  "last_analyzed": "2026-06-14T07:10:19Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-structured report with solid metrics (price, volume, liquidity, buy/sell, whales, treasury); good state logging and transparency on sources, but xai source skipped and volume confirmation weak.",
-  "flags": [
-    "xai_skipped"
-  ],
+  "assessment": "Substantive report with specific metrics (price, volume, whale trades, trends, treasury), clear verdict, actionable context, and complete workflow (article, logs, notification).",
+  "flags": [],
   "avg_score": 4,
   "history": [
     {
@@ -14,6 +12,10 @@
     },
     {
       "date": "2026-06-13",
+      "score": 4
+    },
+    {
+      "date": "2026-06-14",
       "score": 4
     }
   ]

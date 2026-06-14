@@ -1,9 +1,9 @@
-*$AEON — CONSOLIDATING* ⭐
+*$AEON — CONSOLIDATING*
 
-price up +4.1% from yesterday's snapshot, volume at 0.69× the 7-day average. no conviction. liquidity held at $1.19M, pool quiet.
+Price bounced +6.5% to $0.00002903 on just 0.45× average volume — 8 whale trades split evenly between buys and sells, no directional conviction.
 
-Price $0.00002726 (+4.1% 24h) | Liq $1,189.8K (+3.2%) | Vol $144.1K (0.69× 7d)
-Buys/Sells 198/159 (ratio 1.25 ↓ from 1.94) | Whales: 0
-Treasury: 6.0000 ETH
+Price $0.00002903 (+6.5% 24h) | Liq $1,207.0K (+1.5%) | Vol $90.2K (0.45× 7d)
+Buys/Sells 275/306 (ratio 0.90) | Whales: 8
+Treasury: 6.0000 ETH (+0.0000 24h)
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
