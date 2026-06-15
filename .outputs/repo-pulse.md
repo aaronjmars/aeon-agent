@@ -1,13 +1,7 @@
-*Repo Pulse — 2026-06-14* — [ACTIVE]
-aaronjmars/aeon — stars 512 (+2) · forks 170 (+2)
-
-Notable new stargazers:
-github.com/mxygem (43 followers)
-
-Other new stargazers:
-github.com/sodhibhupinder
+*Repo Pulse — 2026-06-15* — [STEADY]
+aaronjmars/aeon — stars 511 (+0) · forks 172 (+2)
 
 New forks:
-github.com/modelcollapse/aeon | github.com/wrenwealth/aeon
+github.com/ziyosteve/aeon | github.com/zszkey/aeon-1
 
 Source: events

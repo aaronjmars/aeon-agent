@@ -1,0 +1,148 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-06-15"
+      },
+      "children": [
+        "status-badge",
+        "sep1",
+        "repo-section",
+        "sep2",
+        "forks-section",
+        "source-text"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "repo-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-heading",
+        "stats-stack"
+      ]
+    },
+    "repo-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stars-stat",
+        "forks-stat"
+      ]
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "511",
+        "delta": "+0",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "172",
+        "delta": "+2",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new-forks-heading",
+        "forks-links-stack"
+      ]
+    },
+    "new-forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "forks-links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-link-1",
+        "fork-link-2"
+      ]
+    },
+    "fork-link-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ziyosteve/aeon",
+        "href": "https://github.com/ziyosteve/aeon",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "fork-link-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "zszkey/aeon-1",
+        "href": "https://github.com/zszkey/aeon-1",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "source-text": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
