@@ -1,0 +1,179 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Feature Built",
+        "description": "2026-06-15 — aaronjmars/minitor"
+      },
+      "children": [
+        "heading-feature",
+        "description-main",
+        "sep-1",
+        "section-why",
+        "sep-2",
+        "section-what-built",
+        "sep-3",
+        "section-how",
+        "sep-4",
+        "section-next",
+        "sep-5",
+        "link-pr"
+      ]
+    },
+    "heading-feature": {
+      "type": "Heading",
+      "props": {
+        "text": "github-commits — a new column type ⭐",
+        "level": "h2"
+      }
+    },
+    "description-main": {
+      "type": "Text",
+      "props": {
+        "text": "minitor can now watch a repo's commits. point a column at owner/repo, optionally pin a branch, and it streams every new commit newest-first — subject, body, author, short SHA, timestamp, each linking straight to the commit on GitHub. load-more pages through history 10 at a time.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-why": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-why",
+        "text-why"
+      ]
+    },
+    "heading-why": {
+      "type": "Heading",
+      "props": {
+        "text": "Why this matters:",
+        "level": "h3"
+      }
+    },
+    "text-why": {
+      "type": "Text",
+      "props": {
+        "text": "the github column family already had trending, issues, PRs, stars, forks, releases, Actions, Discussions. but not commits — the single most direct \"is this repo moving?\" signal. the maintainer use case in the README is built on watching a repo, and commits were the missing lane: track a dependency's main branch, a competitor's velocity, a release branch settling down. this fills the gap. catalog goes 48 → 49 column types.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-what-built": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-built",
+        "text-built"
+      ]
+    },
+    "heading-built": {
+      "type": "Heading",
+      "props": {
+        "text": "What was built:",
+        "level": "h3"
+      }
+    },
+    "text-built": {
+      "type": "Text",
+      "props": {
+        "text": "- lib/integrations/github.ts: new fetchCommits() hitting GET /repos/{repo}/commits through the existing shared client — same keyless-or-token auth, same 60→5000 req/hr profile, no new dependency.\n\n- lib/columns/plugins/github-commits/: the column itself — repo + branch config form, a renderer with a purple \"commit\" pill, SHA, author and relative time.\n\n- registered in all three id registries; README catalog updated.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-how": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-how",
+        "text-how"
+      ]
+    },
+    "heading-how": {
+      "type": "Heading",
+      "props": {
+        "text": "How it works:",
+        "level": "h3"
+      }
+    },
+    "text-how": {
+      "type": "Text",
+      "props": {
+        "text": "it follows minitor's own 3-file plugin contract — plugin.ts (metadata + Zod schema), client.tsx (form + renderer), server.ts (fetcher) — and copies the github-releases pattern almost exactly. the branch field maps to the API's sha param; pagination uses the same page-number cursor as releases and PRs. the build's init-time parity check verifies all three registries agree, so it can't 404 at runtime.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-next": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-next",
+        "text-next"
+      ]
+    },
+    "heading-next": {
+      "type": "Heading",
+      "props": {
+        "text": "What's next:",
+        "level": "h3"
+      }
+    },
+    "text-next": {
+      "type": "Text",
+      "props": {
+        "text": "verified with a full npm run build — TypeScript clean, parity check passed. clean reviewable diff, no new deps. comes a week after the dexscreener column (PR #72) merged, so the plugin pattern keeps proving it scales.",
+        "variant": "body"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #74",
+        "href": "https://github.com/aaronjmars/minitor/pull/74",
+        "source": "GitHub"
+      }
+    }
+  }
+}

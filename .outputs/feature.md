@@ -1,20 +1,21 @@
-*Feature Built — 2026-06-14 — aaronjmars/aeon* ⭐
+*Feature Built — 2026-06-15 — aaronjmars/minitor*
 
-GitHub issue templates — bug report + feature request
-The repo now has real issue forms. Open a new issue and you get a chooser: a structured bug report or a feature request, instead of a blank box. The bug form asks the things that actually matter for an autonomous agent — which skill broke, whether it was an API error or a sandbox limitation, where it ran (cron / dashboard / local), and a logs box that reminds you to redact secrets.
+github-commits — a new column type ⭐
+
+minitor can now watch a repo's commits. point a column at owner/repo, optionally pin a branch, and it streams every new commit newest-first — subject, body, author, short SHA, timestamp, each linking straight to the commit on GitHub. load-more pages through history 10 at a time.
 
 Why this matters:
-512 stars, 170 forks, active external contributors — and every bug report showed up in a different shape. "it failed" tells a maintainer nothing. Aeon's failures are specific: a skill name, an API-vs-sandbox distinction, whether a notification fired. The form pulls those out up front. Lower the barrier to fork, lower the barrier to report — same fight.
+the github column family already had trending, issues, PRs, stars, forks, releases, Actions, Discussions. but not commits — the single most direct "is this repo moving?" signal. the maintainer use case in the README is built on watching a repo, and commits were the missing lane: track a dependency's main branch, a competitor's velocity, a release branch settling down. this fills the gap. catalog goes 48 → 49 column types.
 
 What was built:
-- .github/ISSUE_TEMPLATE/bug_report.yml: bug form with Aeon-native fields — skill name, failure type (API / sandbox / config / output), run context, repro + var, render:shell logs box, "did you get a notification?", plus required "I redacted secrets" + "I searched existing issues" gates
-- .github/ISSUE_TEMPLATE/feature_request.yml: propose a new skill / gateway / dashboard / core change, with a "would you open a PR?" field and a skill schedule+var input
-- .github/ISSUE_TEMPLATE/config.yml: blank_issues_enabled:false so everything funnels through the chooser, plus contact links to the Quick start and @aeonframework
+- lib/integrations/github.ts: new fetchCommits() hitting GET /repos/{repo}/commits through the existing shared client — same keyless-or-token auth, same 60→5000 req/hr profile, no new dependency.
+- lib/columns/plugins/github-commits/: the column itself — repo + branch config form, a renderer with a purple "commit" pill, SHA, author and relative time.
+- registered in all three id registries; README catalog updated.
 
 How it works:
-GitHub issue forms are YAML schemas in .github/ISSUE_TEMPLATE/ — dropdowns, inputs, textareas, checkboxes rendered natively, no extra deps. The failure-type dropdown encodes the one distinction that's specific to this codebase: sandbox limitations (blocked network, env vars not expanding in bash) are a different class from API errors, and routing them apart saves triage. Config-only — touches no skills, aeon.yml, or taxonomy, so neither CI gate fires.
+it follows minitor's own 3-file plugin contract — plugin.ts (metadata + Zod schema), client.tsx (form + renderer), server.ts (fetcher) — and copies the github-releases pattern almost exactly. the branch field maps to the API's sha param; pagination uses the same page-number cursor as releases and PRs. the build's init-time parity check verifies all three registries agree, so it can't 404 at runtime.
 
 What's next:
-This was repo-actions idea #4, the last clean community-health gap after CONTRIBUTING.md (#465). Dependabot is the remaining one. Once forks start filing structured issues, ai-build-labeled feature requests can feed straight back into this build loop.
+verified with a full npm run build — TypeScript clean, parity check passed. clean reviewable diff, no new deps. comes a week after the dexscreener column (PR #72) merged, so the plugin pattern keeps proving it scales.
 
-PR: https://github.com/aaronjmars/aeon/pull/466
+PR: https://github.com/aaronjmars/minitor/pull/74

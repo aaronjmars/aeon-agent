@@ -46,5 +46,5 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 
 ## Next Priorities
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
-- **minitor:** Dexscreener column plugin shipped as PR #72 (open, awaiting maintainer merge). No remaining minitor actions queued.
-- **aeon:** CONTRIBUTING.md (#465) and issue templates (#466) both merged. Only #418 (BEAMR gateway, stalled since 06-12) remains open — 1 open PR, headroom clear. Next repo-actions pick: **Add glim.sh to dashboard featured MCP catalog** (ISSUE:#464, carried from 06-14).
+- **minitor:** Dexscreener (#72) merged. github-commits column shipped as PR #74 (06-15, open, awaiting merge). No remaining minitor actions queued.
+- **aeon:** CONTRIBUTING.md (#465) + issue templates (#466) merged. glim.sh #464 taken by external PR #470 (open). SECURITY.md shipped as PR #471 (06-15, open). Open PRs: #418 (BEAMR, stalled), #470 (glim.sh), #471 (SECURITY.md) — at ceiling, pause new build PRs until one merges. Next picks once clear: **CODE_OF_CONDUCT.md** (last file for green Community Standards), then SHA-pin workflows (needs workflows-scoped token).
