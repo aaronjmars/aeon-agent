@@ -1,0 +1,63 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Article"
+      },
+      "children": [
+        "heading-1",
+        "text-thesis",
+        "link-pr473",
+        "link-pr474",
+        "link-pr479",
+        "story-article"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon Spent Six Months Adding Skills. This Week It Started Hiding Them.",
+        "level": "h2"
+      }
+    },
+    "text-thesis": {
+      "type": "Text",
+      "props": {
+        "text": "This week aaronjmars/aeon reversed its skill-count growth — pruned 202→182 (#473) and now hides everything but a 13-skill Core behind opt-in packs (#474, #479). Count was never the capability metric.",
+        "variant": "body"
+      }
+    },
+    "link-pr473": {
+      "type": "Link",
+      "props": {
+        "label": "PR #473",
+        "href": "https://github.com/aaronjmars/aeon/pull/473"
+      }
+    },
+    "link-pr474": {
+      "type": "Link",
+      "props": {
+        "label": "PR #474",
+        "href": "https://github.com/aaronjmars/aeon/pull/474"
+      }
+    },
+    "link-pr479": {
+      "type": "Link",
+      "props": {
+        "label": "PR #479",
+        "href": "https://github.com/aaronjmars/aeon/pull/479"
+      }
+    },
+    "story-article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-15.md",
+        "source": "aaronjmars/aeon-agent"
+      }
+    }
+  }
+}
