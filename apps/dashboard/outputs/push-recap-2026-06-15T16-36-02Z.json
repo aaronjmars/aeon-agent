@@ -1,0 +1,259 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-15"
+      },
+      "children": [
+        "intro",
+        "sep1",
+        "shipped-section",
+        "sep2",
+        "under-hood-section",
+        "sep3",
+        "stats-section",
+        "sep4",
+        "recap-link"
+      ]
+    },
+    "intro": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon — SHIPPING: first-party skill packs land. The dashboard now opens on a curated 13-skill Core set, not 180+.",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "shipped-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped-heading",
+        "shipped-item-1",
+        "shipped-item-2",
+        "shipped-item-3"
+      ]
+    },
+    "shipped-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h3"
+      }
+    },
+    "shipped-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "Skill-pack system + dashboard Packs view (#474) — packs.config.json defines Core + 8 opt-in packs; a pack is a visibility lens, not a bulk switch (#478, #479).",
+        "variant": "body"
+      }
+    },
+    "shipped-item-2": {
+      "type": "Text",
+      "props": {
+        "text": "A skill's pack is now one line of SKILL.md frontmatter (#475) — `category:` backfilled across all 182 skills, plus a `--category` flag and a dashboard Pack dropdown.",
+        "variant": "body"
+      }
+    },
+    "shipped-item-3": {
+      "type": "Text",
+      "props": {
+        "text": "Fresh clone defaults to enabled-skills-only with a clean empty state (#477); README/CONTRIBUTING + a ci-skill-category gate folded in (#476).",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "under-hood-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "under-hood-heading",
+        "under-hood-item-1"
+      ]
+    },
+    "under-hood-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Under the hood",
+        "level": "h3"
+      }
+    },
+    "under-hood-item-1": {
+      "type": "Text",
+      "props": {
+        "text": "Pruned 202→182 skills (#473, −3,765 lines) — the cut that made the catalog packable. Code-quality cleanup across aeon (#467–#469) and minitor (#73).",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "shape-group",
+        "volume-group"
+      ]
+    },
+    "shape-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shape-heading",
+        "shape-grid"
+      ]
+    },
+    "shape-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape",
+        "level": "h4"
+      }
+    },
+    "shape-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat-user-visible",
+        "stat-internal",
+        "stat-infra",
+        "stat-bot-filtered",
+        "stat-merged-prs"
+      ]
+    },
+    "stat-user-visible": {
+      "type": "Stat",
+      "props": {
+        "label": "user-visible",
+        "value": "7"
+      }
+    },
+    "stat-internal": {
+      "type": "Stat",
+      "props": {
+        "label": "internal",
+        "value": "6"
+      }
+    },
+    "stat-infra": {
+      "type": "Stat",
+      "props": {
+        "label": "infra",
+        "value": "1"
+      }
+    },
+    "stat-bot-filtered": {
+      "type": "Stat",
+      "props": {
+        "label": "bot-filtered",
+        "value": "26"
+      }
+    },
+    "stat-merged-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "merged PRs",
+        "value": "14"
+      }
+    },
+    "volume-group": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "volume-heading",
+        "volume-grid"
+      ]
+    },
+    "volume-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Volume",
+        "level": "h4"
+      }
+    },
+    "volume-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-files",
+        "stat-additions",
+        "stat-deletions",
+        "stat-net"
+      ]
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "files",
+        "value": "271"
+      }
+    },
+    "stat-additions": {
+      "type": "Stat",
+      "props": {
+        "label": "additions",
+        "value": "+3,998",
+        "trend": "up"
+      }
+    },
+    "stat-deletions": {
+      "type": "Stat",
+      "props": {
+        "label": "deletions",
+        "value": "−5,823",
+        "trend": "down"
+      }
+    },
+    "stat-net": {
+      "type": "Stat",
+      "props": {
+        "label": "net",
+        "value": "−1,825",
+        "trend": "down"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "recap-link": {
+      "type": "Link",
+      "props": {
+        "label": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-15.md"
+      }
+    }
+  }
+}
