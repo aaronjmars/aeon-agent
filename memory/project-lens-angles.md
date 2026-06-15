@@ -25,3 +25,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: HTTP 402 sat blank for 29 years because no human payer could afford a sub-cent charge; its first real users are agents paying agents — settling each inference call onchain.
 - Title: The Status Code That Waited 29 Years for a Customer Who Wasn't Human
 - Sources: developer.mozilla.org, dev.to, coinbase.com, coindesk.com (x2), github.com/aaronjmars/aeon (PR #419)
+
+## 2026-06-15
+- Angle: Philosophy / big ideas (the default effect + progressive disclosure → choice architecture)
+- Thesis: An agent framework's most consequential decision isn't how many skills it ships — it's how few a fresh fork wakes up running, because forkers inherit defaults and agents drown in options.
+- Title: The Setting Almost Nobody Changes Decides Almost Everything
+- Sources: alexmurrell.co.uk, behavioraleconomics.com, ixdf.org, arxiv.org/2605.24660, writer.com, github.com/aaronjmars/aeon (PR #473/#474/#479)
