@@ -1,0 +1,115 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING",
+        "description": "Price recovered +3.8% to $0.000030 but volume stayed at 0.74× the 7d mean. Buyers flipped to 1.33:1 after yesterday's sell-side session. Two whale-scale trades in the feed, net neutral."
+      },
+      "children": [
+        "separator_1",
+        "metrics_grid",
+        "separator_2",
+        "chart_link"
+      ]
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liquidity_stat",
+        "volume_stat",
+        "buys_stat",
+        "sells_stat",
+        "ratio_stat",
+        "whales_stat",
+        "treasury_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "0.00003014",
+        "delta": "+3.8%",
+        "trend": "up"
+      }
+    },
+    "liquidity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "1.28M",
+        "delta": "+5.9%",
+        "trend": "up"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "103.1K",
+        "delta": "0.74× 7d",
+        "trend": "down"
+      }
+    },
+    "buys_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "172"
+      }
+    },
+    "sells_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "129"
+      }
+    },
+    "ratio_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "1.33:1"
+      }
+    },
+    "whales_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "2"
+      }
+    },
+    "treasury_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury",
+        "value": "6.0000 ETH",
+        "delta": "±0.00",
+        "trend": "neutral"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
