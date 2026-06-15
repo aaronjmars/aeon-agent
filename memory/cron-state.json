@@ -98,8 +98,8 @@
     "last_quality_score": 4
   },
   "feature": {
-    "last_dispatch": "2026-06-14T11:41:25Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-15T12:43:52Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-14T11:48:38Z",
     "total_runs": 3,
     "total_successes": 3,
@@ -150,5 +150,9 @@
     "consecutive_failures": 0,
     "success_rate": 1,
     "last_quality_score": 4
+  },
+  "operator-scorecard": {
+    "last_dispatch": "2026-06-15T12:43:52Z",
+    "last_status": "dispatched"
   }
 }
