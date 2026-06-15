@@ -1,9 +1,8 @@
-Log written. No commits or notifications needed — both repos are below unrecorded thresholds.
+Done.
 
 ## Summary
 
-- **aaronjmars/aeon** — 511 stars. Highest threshold ≤ 511 is **500**, already recorded 2026-06-11 (organic). Step 5a fired; no announcement.
-- **aaronjmars/minitor** — 11 stars. Below first threshold (25). STAR_MILESTONE_QUIET.
-- **Velocity (aeon)**: v7=27, v30=189, baseline=6.3/day, last star 2026-06-14T07:15:01Z. Next milestone is **750** — at 6.3/day that's ~37 days out (~2026-07-21).
-- **Dispatched**: none — rules map is empty.
-- **Log**: appended to `memory/logs/2026-06-14.md`.
+- **aaronjmars/aeon** (513⭐): Highest threshold crossed is 500, which was already recorded on 2026-06-11. Step 5a gate — no notification sent, no dispatch. Next milestone is 750⭐ (currently ~237 stars away).
+- **aaronjmars/minitor** (11⭐): Below first threshold (25). `STAR_MILESTONE_QUIET` — skipped cleanly.
+- **milestone-dispatch.json**: already exists with empty rules; no seeding needed.
+- Logged both results to `memory/logs/2026-06-15.md`.
