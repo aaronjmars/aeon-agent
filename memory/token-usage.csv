@@ -36,3 +36,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-15,shiplog,claude-opus-4-8,3815,18186,1685727,56144
 2026-06-15,feature,claude-opus-4-8,3655,42197,8021305,130240
 2026-06-15,project-lens,claude-opus-4-8,3721,18097,1437942,49467
+2026-06-15,thread-formatter,claude-sonnet-4-6,15,17097,830876,76011
