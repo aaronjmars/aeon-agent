@@ -1,10 +1,19 @@
 ## Summary
 
-**Status: STAR_MOMENTUM_NO_ALERTS**
+**star-momentum** ran for 2026-06-15. No alerts fired.
 
-- **Repos audited**: 2 (`aaronjmars/aeon`, `aaronjmars/minitor` — `aeon-agent` filtered as agent repo)
-- **Data available**: Only 2 repo-pulse data points per repo (2026-06-12 and 2026-06-13). Both are INSUFFICIENT_DATA; need ≥4 points for projection. A 4-point series becomes available tomorrow if repo-pulse runs today.
-- **aeon**: 510⭐, next milestone 750⭐ (gap: 240) — no projection possible yet
-- **minitor**: 11⭐, next milestone 50⭐ (gap: 39) — no projection possible yet
-- **No notification sent** (silence = no signal)
-- **Files written**: `articles/star-momentum-2026-06-14.md`, `memory/topics/star-momentum-state.json`, appended to `memory/logs/2026-06-14.md`
+**Data parsed** (last 14 days — 4 data points per repo, from Jun 11–14 logs):
+
+| Repo | Stars | v7 | Target | ETA | Verdict |
+|------|-------|----|--------|-----|---------|
+| aaronjmars/aeon | 512 | 1.67/day | 750 | ~143d (2026-11-05, Thu) | OUT_OF_WINDOW |
+| aaronjmars/minitor | 11 | 0/day | — | — | STALLED |
+
+**Why no alert:** `aaronjmars/aeon` at the current pace of 1.67 stars/day projects to cross 750 in 143 days — well outside the 7-14 day Show HN dispatch window. `aaronjmars/minitor` has zero growth across all 4 days of available data.
+
+**Files written:**
+- `articles/star-momentum-2026-06-15.md` — full projection report
+- `memory/topics/star-momentum-state.json` — updated `last_run_at`
+- `memory/logs/2026-06-15.md` — log block appended
+
+No notification sent (`STAR_MOMENTUM_NO_ALERTS`).
