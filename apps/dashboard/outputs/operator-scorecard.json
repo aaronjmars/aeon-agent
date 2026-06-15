@@ -1,0 +1,44 @@
+{
+  "version": "1",
+  "generated_at": "2026-06-15T00:00:00Z",
+  "skill": "operator-scorecard",
+  "title": "Operator Scorecard — 2026-06-15",
+  "spec": {
+    "type": "Stack",
+    "props": {"direction": "vertical", "gap": "md"},
+    "children": [
+      {"type": "Heading", "props": {"level": 2, "children": "Operator Scorecard — 2026-06-15"}},
+      {"type": "Alert", "props": {"variant": "destructive", "children": "DEGRADED — Fleet healthy and shipping; $AEON community distribution is silent (tweet-allocator disabled) and token trends lower at −3.6% 7d"}},
+      {"type": "Grid", "props": {"columns": 3, "gap": "sm"}, "children": [
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Agent health"}},
+          {"type": "Heading", "props": {"level": 3, "children": "—%"}},
+          {"type": "Text", "props": {"children": "no analytics · 4 clean heartbeats"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Stars added"}},
+          {"type": "Heading", "props": {"level": 3, "children": "+7"}},
+          {"type": "Text", "props": {"children": "9 forks · — new contributors"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "$AEON distributed"}},
+          {"type": "Heading", "props": {"level": 3, "children": "$0.00"}},
+          {"type": "Text", "props": {"children": "0 recipients · token −3.6% 7d"}}
+        ]}}
+      ]},
+      {"type": "Heading", "props": {"level": 3, "children": "Verdicts by lane"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "lane", "header": "Lane"},
+          {"key": "verdict", "header": "Verdict"},
+          {"key": "headline", "header": "Headline"}
+        ],
+        "rows": [
+          {"lane": "Agent health", "verdict": "INSUFFICIENT_DATA", "headline": "No analytics this window; 4/5 heartbeats clean (P0 bootstrap self-resolved)"},
+          {"lane": "Community growth", "verdict": "WATCH", "headline": "+7⭐ +8 forks aeon — 4-day sample, partial coverage"},
+          {"lane": "Economic activity", "verdict": "DEGRADED", "headline": "$0 distributed · tweet-allocator silent · token −3.6% 7d"}
+        ]
+      }}
+    ]
+  }
+}
