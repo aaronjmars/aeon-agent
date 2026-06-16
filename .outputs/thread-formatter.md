@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-15*
-Topic: github-commits column plugin shipped for aaronjmars/minitor (PR #74)
+*Thread Draft — 2026-06-16*
+Topic: CONTRIBUTING.md shipped for aaronjmars/minitor (PR #75)
 
-1/ minitor tracked github trending, issues, PRs, stars, forks, releases, Actions, and Discussions. the one thing missing: commits. PR #74 fixes that. 49th column type.
+1/ minitor had 49 column types, zero contributor docs. builders couldn't add a 50th without reading the source. PR #75 fixes that.
 
-2/ 10 github columns before today. trending repos, open issues, pull requests, stars and forks per day, backlinks, releases, Actions runs, Discussions threads. every layer of a repo's social activity. but zero signal on what the maintainers actually shipped.
+2/ 49 column types. github trending, stars, forks, issues, PRs, commits, releases. dexscreener pairs. wallet transactions. coingecko prices. the full dashboard skeleton. but no guide for adding the 50th type. just read the source or ask the maintainer.
 
-3/ new fetchCommits() hits the standard GitHub commits endpoint — keyless or token for private repos. optional branch parameter. registered in all three column registries. build clean, README bumped from 48 to 49 columns.
+3/ CONTRIBUTING.md covers: local setup (./minitor, Node 20+, keyless-first), project layout, step-by-step for adding a column type — copy the template, edit 3 files, register in the three manifests, run npm build. one doc. all the gates in one place.
 
-4/ commits is the most direct velocity signal a repo has. stars lag. issues drift. PRs batch. commits are the daily heartbeat. minitor can now replace the X Pro-style velocity dashboard at $40/mo less — with a column type that anyone can add to any dashboard in a fork.
+4/ minitor is how forks customize their monitoring. each column type is a plugin. the only way that scales: outside contributors add columns without asking the original maintainer. CONTRIBUTING.md closes that gap — every fork is now one doc away from being maintainable.
 
-5/ PR #74 — github-commits column for minitor: https://github.com/aaronjmars/minitor/pull/74
+5/ PR #75 — CONTRIBUTING.md for aaronjmars/minitor: https://github.com/aaronjmars/minitor/pull/75
 
-(article: articles/thread-2026-06-15.md)
+(article: articles/thread-2026-06-16.md)
