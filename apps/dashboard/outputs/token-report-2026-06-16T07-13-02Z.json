@@ -1,0 +1,134 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report"
+      },
+      "children": [
+        "heading_status",
+        "text_narrative",
+        "separator1",
+        "metrics_grid",
+        "separator2",
+        "activity_section",
+        "separator3",
+        "stat_treasury",
+        "chart_link"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — SLIDING",
+        "level": "h2"
+      }
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price fell -3.3% on 1.09× average volume as the buy/sell ratio flipped from 1.33 yesterday to 0.98 today — sellers edging buyers for the first time in two sessions.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00002914",
+        "delta": "-3.3%",
+        "trend": "down"
+      }
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1,263.6K",
+        "delta": "-1.1%",
+        "trend": "down"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$141.7K",
+        "delta": "1.09× 7d avg"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "activity_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_buysell",
+        "stat_whales"
+      ]
+    },
+    "stat_buysell": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "182/186",
+        "delta": "ratio 0.98"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "0"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_treasury": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury",
+        "value": "6.0000 ETH",
+        "delta": "+0.0000 24h"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

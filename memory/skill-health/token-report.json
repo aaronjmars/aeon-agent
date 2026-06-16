@@ -1,8 +1,8 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-15T08:26:12Z",
+  "last_analyzed": "2026-06-16T07:13:02Z",
   "quality_score": 4,
-  "assessment": "Solid execution: multi-source data integration (GeckoTerminal, DexScreener, JSON-RPC), proper state-delta computation for continuity, specific quantitative metrics, clear market verdict (CONSOLIDATING), whale tracking, treasury monitoring, and proper artifact creation with notifications sent successfully.",
+  "assessment": "Substantive report with specific metrics, directional analysis, clear verdict, and proper artifact creation; truncation prevents assessing full article depth.",
   "flags": [],
   "avg_score": 4,
   "history": [
@@ -20,6 +20,10 @@
     },
     {
       "date": "2026-06-15",
+      "score": 4
+    },
+    {
+      "date": "2026-06-16",
       "score": 4
     }
   ]
