@@ -739,6 +739,11 @@ jobs:
           ALLOWED="$ALLOWED,Bash(curl:*),Bash(gh:*),Bash(git:*),Bash(jq:*)"
           ALLOWED="$ALLOWED,Bash(./notify:*)"
           ALLOWED="$ALLOWED,Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(chmod:*)"
+          # rm/cd/cp/mv: a message can ask Aeon to run a skill (e.g. feature) that
+          # clones each repo into a fresh per-repo temp dir (/tmp/...) outside the
+          # workspace and `cd`s into it. Without these the clone/cleanup commands
+          # get denied and the run thrashes. Mirrors aeon.yml's allowlist.
+          ALLOWED="$ALLOWED,Bash(rm:*),Bash(cd:*),Bash(cp:*),Bash(mv:*)"
           ALLOWED="$ALLOWED,Bash(date:*),Bash(echo:*),Bash(node:*),Bash(npm:*),Bash(npx:*)"
           ALLOWED="$ALLOWED,Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(sort:*),Bash(grep:*)"
 
@@ -791,6 +796,17 @@ jobs:
           if ! CLAUDE_OUTPUT=$(echo "$PROMPT" | claude -p - \
             --model "$MODEL" --allowedTools "$ALLOWED" \
             "${MCP_FLAGS[@]}" --output-format json 2>&1); then
+            # Content-filter blocks are a soft outcome, not an outage: claude -p
+            # exits non-zero when its final output trips Anthropic's output
+            # classifier (is_error=true, "Output blocked by content filtering
+            # policy"). The block is roughly deterministic, so a red X here just
+            # signals a fault that a re-run won't clear. Treat it as a clean skip
+            # (mirrors aeon.yml). Note: the user's message gets no reply in this
+            # case — the run simply goes green instead of failing.
+            if printf '%s' "$CLAUDE_OUTPUT" | grep -qi "content filtering policy"; then
+              echo "::warning::Message reply blocked by content filtering policy — treating as a clean skip (no failure)."
+              exit 0
+            fi
             echo "::error::Claude CLI failed. Output: $CLAUDE_OUTPUT"
             exit 1
           fi
