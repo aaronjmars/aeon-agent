@@ -1,0 +1,240 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-06-16"
+      },
+      "children": [
+        "section_1",
+        "section_2",
+        "section_3"
+      ]
+    },
+    "section_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_1",
+        "sep_1",
+        "tweet_1_1",
+        "tweet_1_2"
+      ]
+    },
+    "heading_1": {
+      "type": "Heading",
+      "props": {
+        "text": "Security as a pillar",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet_1_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_1_1",
+        "link_1_1"
+      ]
+    },
+    "tweetcard_1_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "says aeon now secures repos totaling 1M+ cumulative stars — openclaw, alibaba, vercel, pewdiepie"
+      },
+      "children": []
+    },
+    "link_1_1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2066920944250020146"
+      },
+      "children": []
+    },
+    "tweet_1_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_1_2",
+        "link_1_2"
+      ]
+    },
+    "tweetcard_1_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "pitches running your own vuln-scanner on aeon off your existing claude subscription"
+      },
+      "children": []
+    },
+    "link_1_2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2066920945864888431"
+      },
+      "children": []
+    },
+    "section_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_2",
+        "sep_2",
+        "tweet_2_1"
+      ]
+    },
+    "heading_2": {
+      "type": "Heading",
+      "props": {
+        "text": "The harness, not the model",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet_2_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_2_1",
+        "link_2_1"
+      ]
+    },
+    "tweetcard_2_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "argues opus 4.8 isn't the part that compounds — the harness against your own data is; aeon runs unattended, writes its own skills, merges its own PRs"
+      },
+      "children": []
+    },
+    "link_2_1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2066810648856608889"
+      },
+      "children": []
+    },
+    "section_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_3",
+        "sep_3",
+        "tweet_3_1",
+        "tweet_3_2"
+      ]
+    },
+    "heading_3": {
+      "type": "Heading",
+      "props": {
+        "text": "Payments + community",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet_3_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_3_1",
+        "link_3_1"
+      ]
+    },
+    "tweetcard_3_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "new blog post on how aeon agents pay in the agentic-commerce age"
+      },
+      "children": []
+    },
+    "link_3_1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2066911131231293733"
+      },
+      "children": []
+    },
+    "tweet_3_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_3_2",
+        "link_3_2"
+      ]
+    },
+    "tweetcard_3_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "recap of community-building updates from community call #4"
+      },
+      "children": []
+    },
+    "link_3_2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2066886112463728904"
+      },
+      "children": []
+    }
+  }
+}
