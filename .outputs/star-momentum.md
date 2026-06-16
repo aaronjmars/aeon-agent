@@ -1,19 +1,8 @@
 ## Summary
 
-**star-momentum** ran for 2026-06-15. No alerts fired.
+Ran `star-momentum` for 2026-06-16. Audited 2 repos (filtered `aeon-agent`):
 
-**Data parsed** (last 14 days — 4 data points per repo, from Jun 11–14 logs):
+- **aaronjmars/aeon** — 511⭐ → next milestone 750⭐, gap 239 stars. At 1.0 stars/day (7d avg), projected crossing is **2027-02-10 (Wednesday)** — 239 days out, far outside the 7-14d Show HN dispatch window. Verdict: OUT_OF_WINDOW.
+- **aaronjmars/minitor** — stuck at 11⭐ across all 5 data points, v7=0. Verdict: STALLED.
 
-| Repo | Stars | v7 | Target | ETA | Verdict |
-|------|-------|----|--------|-----|---------|
-| aaronjmars/aeon | 512 | 1.67/day | 750 | ~143d (2026-11-05, Thu) | OUT_OF_WINDOW |
-| aaronjmars/minitor | 11 | 0/day | — | — | STALLED |
-
-**Why no alert:** `aaronjmars/aeon` at the current pace of 1.67 stars/day projects to cross 750 in 143 days — well outside the 7-14 day Show HN dispatch window. `aaronjmars/minitor` has zero growth across all 4 days of available data.
-
-**Files written:**
-- `articles/star-momentum-2026-06-15.md` — full projection report
-- `memory/topics/star-momentum-state.json` — updated `last_run_at`
-- `memory/logs/2026-06-15.md` — log block appended
-
-No notification sent (`STAR_MOMENTUM_NO_ALERTS`).
+No alerts. Status: `STAR_MOMENTUM_NO_ALERTS`. Article written to `articles/star-momentum-2026-06-16.md`, state updated, log appended. No notification sent (silence = no signal).
