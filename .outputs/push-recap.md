@@ -1,15 +1,15 @@
-*Push Recap — 2026-06-15*
-aaronjmars/aeon — SHIPPING: first-party skill packs land. The dashboard now opens on a curated 13-skill Core set, not 180+.
+*Push Recap — 2026-06-16*
+aaronjmars/aeon — SHIPPING: one-click community-pack install now lands skills on `main` and shows them in the dashboard.
 
 Shipped to users:
-• Skill-pack system + dashboard Packs view (#474) — packs.config.json defines Core + 8 opt-in packs; a pack is a visibility lens, not a bulk switch (#478, #479).
-• A skill's pack is now one line of SKILL.md frontmatter (#475) — `category:` backfilled across all 182 skills, plus a `--category` flag and a dashboard Pack dropdown.
-• Fresh clone defaults to enabled-skills-only with a clean empty state (#477); README/CONTRIBUTING + a ci-skill-category gate folded in (#476).
+• minitor #74 — new github-commits TweetDeck column (repo-velocity feed, keyless or token; +248)
+• aeon #483 — community pack cards get an "Install pack" button + new `install-skill` core skill that opens a PR; skills land disabled
+• aeon #485/#486/#487/#490/#491/#493 — six fixes that close the install loop: Actions can open+auto-merge the PR on a fresh fork, installed skills land in an always-visible "Installed" pack, packs.json regenerates deterministically, pack visibility is per-repo so forks start Core-only
 
 Under the hood:
-• Pruned 202→182 skills (#473, −3,765 lines) — the cut that made the catalog packable. Code-quality cleanup across aeon (#467–#469) and minitor (#73).
+• aeon #471 SECURITY.md (disclosure policy + threat model); new catalog entries glim.sh #470, Robinhood MCP #489, Hunch betting pack #472 — two external contributors
 
-Shape: 7 user-visible · 6 internal · 1 infra · 26 bot-filtered · 14 merged PRs
-Volume: 271 files, +3,998/−5,823 (net −1,825)
+Shape: 13 user-visible · 3 internal · 4 infra · 35 bot-filtered · 19 merged PRs
+Volume: ~105 files, +1,341/−469 lines
 
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-15.md
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-16.md
