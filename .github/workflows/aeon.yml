@@ -487,6 +487,11 @@ jobs:
           ALLOWED="$ALLOWED,Bash(curl:*),Bash(gh:*),Bash(git:*),Bash(jq:*)"
           ALLOWED="$ALLOWED,Bash(./notify:*),Bash(./notify-jsonrender:*)"
           ALLOWED="$ALLOWED,Bash(mkdir:*),Bash(ls:*),Bash(cat:*),Bash(chmod:*)"
+          # rm/cd/cp/mv: skills like `feature` clone each repo into a fresh per-repo
+          # temp dir (/tmp/feature-build-<repo>) outside the workspace, so they must
+          # `cd` into it and `rm -rf` a stale dir to re-clone idempotently. Without
+          # these the agent's clone/cleanup commands get denied and it burns turns.
+          ALLOWED="$ALLOWED,Bash(rm:*),Bash(cd:*),Bash(cp:*),Bash(mv:*)"
           ALLOWED="$ALLOWED,Bash(date:*),Bash(echo:*),Bash(node:*),Bash(npm:*),Bash(npx:*)"
           ALLOWED="$ALLOWED,Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(sort:*),Bash(grep:*)"
 
@@ -569,6 +574,19 @@ jobs:
             echo "::warning::provider '$cand' failed — $(printf '%s' "$CLAUDE_OUTPUT" | tail -c 160 | tr '\n' ' ')"
           done
           if [ "$CLAUDE_OK" != "1" ]; then
+            # Content-filter blocks are a soft outcome, not an outage: the model did
+            # real work but its final output tripped Anthropic's output classifier
+            # (is_error=true, "Output blocked by content filtering policy"). The block
+            # is roughly deterministic per prompt, so re-running just re-burns spend.
+            # Treat it like a clean skip (mirrors FEATURE_SKIP / FEATURE_NO_CONFIG):
+            # no red X, and any per-repo notification the skill already queued before
+            # the block still sends downstream. Checked AFTER the cascade so a real
+            # failover provider (if configured) is still tried first.
+            if printf '%s' "$CLAUDE_OUTPUT" | grep -qi "content filtering policy"; then
+              echo "::warning::Skill output blocked by content filtering policy — treating as a clean skip (no failure). Provider(s) tried: $CANDIDATES"
+              echo "Skill output blocked by content filtering policy — skipped, no failure." > /tmp/skill-result.txt
+              exit 0
+            fi
             echo "::error::All gateway providers failed ($CANDIDATES). Last output: $CLAUDE_OUTPUT"
             # Save error signature for quality tracking (cron-state step reads this)
             echo "$CLAUDE_OUTPUT" | tail -c 500 | tr '\n' ' ' | cut -c1-200 > /tmp/skill-error.txt
