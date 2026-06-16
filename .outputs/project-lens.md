@@ -1,5 +1,5 @@
-*New Article: The Setting Almost Nobody Changes Decides Almost Everything*
+*New Article: Everyone Is Building a Store for Agent Skills. The Attackers Already Shopped There.*
 
-Change an organ-donor form from opt-in to opt-out and donors go from ~15% to ~90% — the same options, just a different default. New piece runs that lens over a quiet shipping week: a framework now has 182 skills but enables exactly two on a fresh fork (`heartbeat` + `digest`), after pruning 202→182 (#473) and making packs "a visibility lens, not a bulk on-switch" (#479). The argument: what a fork wakes up running matters more than the catalog size — both because forkers inherit defaults and because agents lose tool-selection accuracy past ~30 visible tools.
+Eight agent-skill marketplaces sprang up by Q2 2026 — all racing on discovery while Snyk's ToxicSkills audit found prompt injection across 3,984 skills that scanners can't catch, because the payload is prose, not code. The piece argues Aeon took the opposite route this week: no store. A community pack installs as a pull request into your own fork (#487/#486/#491), so the trust primitive is a revertable, blamable commit in your git history, not a platform's pre-publish scan. It stays honest about the tension — zero-touch auto-merge (#485) means the diff gets recorded but not read, so git buys you forensics after a breach, not prevention before one.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-15.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-16.md

@@ -31,3 +31,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: An agent framework's most consequential decision isn't how many skills it ships — it's how few a fresh fork wakes up running, because forkers inherit defaults and agents drown in options.
 - Title: The Setting Almost Nobody Changes Decides Almost Everything
 - Sources: alexmurrell.co.uk, behavioraleconomics.com, ixdf.org, arxiv.org/2605.24660, writer.com, github.com/aaronjmars/aeon (PR #473/#474/#479)
+
+## 2026-06-16
+- Angle: Industry comparison (central agent-skill stores + scanners vs Aeon's fork-native install-as-commit)
+- Thesis: While agent-skill stores race to scan skills before install, Aeon makes each install a pull request into your own fork — betting on git's revertable audit trail over a platform's scanner.
+- Title: Everyone Is Building a Store for Agent Skills. The Attackers Already Shopped There.
+- Sources: snyk.io, arxiv.org/2605.11418, unite.ai, digitalapplied.com, agensi.io, github.com/aaronjmars/aeon (PRs #485/#486/#487/#491/#472)
