@@ -1,0 +1,246 @@
+{
+  "root": "repo-pulse-card",
+  "state": {},
+  "elements": {
+    "repo-pulse-card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "header",
+        "sep1",
+        "main-stats",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "other-section",
+        "sep4",
+        "forks-section",
+        "sep5",
+        "source"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "date",
+        "status"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-16",
+        "variant": "muted"
+      }
+    },
+    "status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator"
+    },
+    "main-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo",
+        "stars",
+        "forks"
+      ]
+    },
+    "repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      }
+    },
+    "stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "514",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "175",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator"
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "notable-title",
+        "notable-item1"
+      ]
+    },
+    "notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable New Stargazers",
+        "level": "h3"
+      }
+    },
+    "notable-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-dus4w",
+        "repos-32"
+      ]
+    },
+    "link-dus4w": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/dus4w",
+        "href": "https://github.com/dus4w"
+      }
+    },
+    "repos-32": {
+      "type": "Badge",
+      "props": {
+        "text": "32 repos",
+        "variant": "secondary"
+      }
+    },
+    "sep3": {
+      "type": "Separator"
+    },
+    "other-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "other-title",
+        "other-item1"
+      ]
+    },
+    "other-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Other New Stargazers",
+        "level": "h3"
+      }
+    },
+    "other-item1": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/tylerbroqs",
+        "href": "https://github.com/tylerbroqs"
+      }
+    },
+    "sep4": {
+      "type": "Separator"
+    },
+    "forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forks-title",
+        "fork-item1",
+        "fork-item2"
+      ]
+    },
+    "forks-title": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "fork-item1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-link1",
+        "repos-1"
+      ]
+    },
+    "fork-link1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/brainlabors-dot/aeon",
+        "href": "https://github.com/brainlabors-dot/aeon"
+      }
+    },
+    "repos-1": {
+      "type": "Badge",
+      "props": {
+        "text": "1 repo",
+        "variant": "secondary"
+      }
+    },
+    "fork-item2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-link2",
+        "repos-32b"
+      ]
+    },
+    "fork-link2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/dus4w/aeon",
+        "href": "https://github.com/dus4w/aeon"
+      }
+    },
+    "repos-32b": {
+      "type": "Badge",
+      "props": {
+        "text": "32 repos",
+        "variant": "secondary"
+      }
+    },
+    "sep5": {
+      "type": "Separator"
+    },
+    "source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "caption"
+      }
+    }
+  }
+}
