@@ -18,6 +18,7 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Recent Articles
 | Date | Title | Topic |
 |------|-------|-------|
+| 2026-06-16 | Aeon Shipped the Skill-Pack. Then It Spent 48 Hours Building the Vending Machine. | aaronjmars/aeon pack install pipeline: one-click + auto-merge community-pack install (#483/#485/#487) |
 | 2026-06-15 | Aeon Spent Six Months Adding Skills. This Week It Started Hiding Them. | aaronjmars/aeon scope/curation pivot: skill-pack system + prune 202→182, Core-by-default |
 | 2026-06-14 | Aeon's Outside Contributors Aren't Adding Content Skills — They're Wiring It for Onchain Payments | aaronjmars/aeon ecosystem: external contributors add Base/x402 onchain skills |
 | 2026-06-14 | The Status Code That Waited 29 Years for a Customer Who Wasn't Human | project-lens: HTTP 402 dormant 29 years — first real payers are agents (Aeon beamr-route) |
