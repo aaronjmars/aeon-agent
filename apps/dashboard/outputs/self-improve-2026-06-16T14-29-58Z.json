@@ -43,7 +43,7 @@
     "text-fix": {
       "type": "Text",
       "props": {
-        "text": "Now fetches canonical Contributor Covenant text via WebFetch instead of free-generating sensitive boilerplate."
+        "text": "Now fetches canonical Contributor Covenant text straight to disk with curl (never routed through model output) instead of free-generating sensitive boilerplate."
       },
       "children": []
     },
