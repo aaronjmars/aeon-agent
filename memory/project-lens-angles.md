@@ -37,3 +37,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: While agent-skill stores race to scan skills before install, Aeon makes each install a pull request into your own fork — betting on git's revertable audit trail over a platform's scanner.
 - Title: Everyone Is Building a Store for Agent Skills. The Attackers Already Shopped There.
 - Sources: snyk.io, arxiv.org/2605.11418, unite.ai, digitalapplied.com, agensi.io, github.com/aaronjmars/aeon (PRs #485/#486/#487/#491/#472)
+
+## 2026-06-17
+- Angle: Ecosystem map (where Aeon sits on the agent-platform map; axis = the runtime, not the model — hosted/provider-owned runtimes vs no runtime at all)
+- Thesis: 2026's agent platforms compete over whose runtime you rent. Run as your own GitHub Actions cron with state in git, and migration stops being a product — it's a clone.
+- Title: The Agent Wars of 2026 Are a Fight Over Whose Computer Runs Your Agent
+- Sources: zylos.ai, digitalapplied.com, langchain.com, github.com/aaronjmars/aeon (#495/a2947c2, #491)
