@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-16*
-Topic: CONTRIBUTING.md shipped for aaronjmars/minitor (PR #75)
+*Thread Draft — 2026-06-17*
+Topic: validate-pack.sh — pre-flight validator for community skill packs (PR #495)
 
-1/ minitor had 49 column types, zero contributor docs. builders couldn't add a 50th without reading the source. PR #75 fixes that.
+1/ aeon ships a pre-flight validator for community skill packs. validate-pack.sh — broken slugs, missing SKILL.md, invalid capabilities, path traversal — caught before you open a PR.
 
-2/ 49 column types. github trending, stars, forks, issues, PRs, commits, releases. dexscreener pairs. wallet transactions. coingecko prices. the full dashboard skeleton. but no guide for adding the 50th type. just read the source or ask the maintainer.
+2/ packs install into aeon via PR. the validator logic lived inside install-skill-pack.sh — Actions only. zero way to check locally before opening a PR.
 
-3/ CONTRIBUTING.md covers: local setup (./minitor, Node 20+, keyless-first), project layout, step-by-step for adding a column type — copy the template, edit 3 files, register in the three manifests, run npm build. one doc. all the gates in one place.
+3/ validate-pack.sh runs the same checks as install-skill-pack locally. malformed JSON, bad slugs, path traversal (no ..), absent SKILL.md, off-taxonomy capabilities — all exit 1. capability taxonomy pulled from install-skill-pack at runtime, never hardcoded.
 
-4/ minitor is how forks customize their monitoring. each column type is a plugin. the only way that scales: outside contributors add columns without asking the original maintainer. CONTRIBUTING.md closes that gap — every fork is now one doc away from being maintainable.
+4/ pack template (#494) and validate-pack.sh (#495) shipped back to back. the template says what to include. the validator says whether it's correct. together they close the pre-PR gap — submitters know before the maintainer looks.
 
-5/ PR #75 — CONTRIBUTING.md for aaronjmars/minitor: https://github.com/aaronjmars/minitor/pull/75
+5/ validate-pack.sh for aaronjmars/aeon — PR #495: https://github.com/aaronjmars/aeon/pull/495
 
-(article: articles/thread-2026-06-16.md)
+(article: articles/thread-2026-06-17.md)

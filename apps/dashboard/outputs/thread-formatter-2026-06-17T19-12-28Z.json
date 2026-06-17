@@ -1,0 +1,82 @@
+{
+  "root": "card_thread",
+  "state": {},
+  "elements": {
+    "card_thread": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-06-17",
+        "description": "validate-pack.sh — pre-flight validator for community skill packs"
+      },
+      "children": [
+        "topic_heading",
+        "separator1",
+        "tweet1",
+        "tweet2",
+        "tweet3",
+        "tweet4",
+        "tweet5",
+        "separator2",
+        "article_link"
+      ]
+    },
+    "topic_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Topic: validate-pack.sh — pre-flight validator for community skill packs (PR #495)",
+        "level": "h4"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ aeon ships a pre-flight validator for community skill packs. validate-pack.sh — broken slugs, missing SKILL.md, invalid capabilities, path traversal — caught before you open a PR."
+      }
+    },
+    "tweet2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ packs install into aeon via PR. the validator logic lived inside install-skill-pack.sh — Actions only. zero way to check locally before opening a PR."
+      }
+    },
+    "tweet3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ validate-pack.sh runs the same checks as install-skill-pack locally. malformed JSON, bad slugs, path traversal (no ..), absent SKILL.md, off-taxonomy capabilities — all exit 1. capability taxonomy pulled from install-skill-pack at runtime, never hardcoded."
+      }
+    },
+    "tweet4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ pack template (#494) and validate-pack.sh (#495) shipped back to back. the template says what to include. the validator says whether it's correct. together they close the pre-PR gap — submitters know before the maintainer looks."
+      }
+    },
+    "tweet5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "5/ validate-pack.sh for aaronjmars/aeon — PR #495",
+        "href": "https://github.com/aaronjmars/aeon/pull/495",
+        "source": "GitHub"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "articles/thread-2026-06-17.md",
+        "href": "articles/thread-2026-06-17.md"
+      }
+    }
+  }
+}
