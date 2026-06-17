@@ -47,6 +47,7 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-16,thread-formatter,claude-sonnet-4-6,7,3639,436837,48521
 2026-06-16,self-improve,claude-opus-4-8,2388,20278,1385698,59081
 2026-06-16,tweet-digest,claude-opus-4-8,2394,14562,1134433,33807
+2026-06-16,tweet-digest,claude-opus-4-8,2529,15941,2185851,67147
 2026-06-16,heartbeat,claude-sonnet-4-6,12,13274,582973,53615
 2026-06-17,token-report,claude-sonnet-4-6,25,53035,1738614,119190
 2026-06-17,star-momentum,claude-sonnet-4-6,10,11442,447917,50683

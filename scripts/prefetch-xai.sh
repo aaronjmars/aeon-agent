@@ -229,6 +229,32 @@ case "$SKILL" in
     fi
     ;;
 
+  tweet-digest)
+    # Account-based digest. Reads handles from memory/topics/tracked-accounts.yml.
+    # If VAR is set, restrict to that single handle. Writes one file per handle:
+    # .xai-cache/tweet-digest-<handle>.json
+    CONFIG="memory/topics/tracked-accounts.yml"
+    if [ ! -f "$CONFIG" ]; then
+      echo "xai-prefetch: tweet-digest — $CONFIG missing, skipping"
+      exit 0
+    fi
+    HANDLES=$(grep -oE '^[[:space:]]*-[[:space:]]*handle:[[:space:]]*[A-Za-z0-9_]+' "$CONFIG" | sed -E 's/.*handle:[[:space:]]*//')
+    if [ -n "$VAR" ]; then
+      ONLY="${VAR#@}"
+      HANDLES=$(echo "$HANDLES" | grep -ix "$ONLY" || true)
+    fi
+    if [ -z "$HANDLES" ]; then
+      echo "xai-prefetch: tweet-digest — no handles to fetch, skipping"
+      exit 0
+    fi
+    for H in $HANDLES; do
+      xai_search "tweet-digest-${H}.json" \
+        "Search X for the latest tweets from:${H} in the last 3 days. Return the 5 most interesting or substantive tweets. For each: full text, date, direct link (https://x.com/${H}/status/ID). Skip retweets of others." \
+        "$THREE_DAYS_AGO" "$TODAY" \
+        "\"allowed_x_handles\": [\"${H}\"]"
+    done
+    ;;
+
   *)
     echo "xai-prefetch: no prefetch defined for skill '$SKILL'"
     ;;

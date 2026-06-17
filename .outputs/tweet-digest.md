@@ -1,12 +1,10 @@
 *Tweet Digest — 2026-06-16*
 
-*Security as a pillar*
-@aeonframework: says aeon now secures repos totaling 1M+ cumulative stars — openclaw, alibaba, vercel, pewdiepie — [link](https://x.com/aeonframework/status/2066920944250020146)
-@aeonframework: pitches running your own vuln-scanner on aeon off your existing claude subscription — [link](https://x.com/aeonframework/status/2066920945864888431)
+*Theme: skill distribution*
+@aeonframework: Skill Packs ship — one-click install millions of external skills, toggle whole packs on/off, and white-label agents for startups ⭐ — [link](https://x.com/aeonframework/status/2066618089236574670)
+@aeonframework: Robinhood MCP is live on aeon — agents trade, research & rebalance on Robinhood in one click — [link](https://x.com/aeonframework/status/2066616325611405483)
 
-*The harness, not the model*
-@aeonframework: argues opus 4.8 isn't the part that compounds — the harness against your own data is; aeon runs unattended, writes its own skills, merges its own PRs — [link](https://x.com/aeonframework/status/2066810648856608889)
-
-*Payments + community*
-@aeonframework: new blog post on how aeon agents pay in the agentic-commerce age — [link](https://x.com/aeonframework/status/2066911131231293733)
-@aeonframework: recap of community-building updates from community call #4 — [link](https://x.com/aeonframework/status/2066886112463728904)
+*Theme: agent-native defi*
+@aeonframework: the amper community skill hands an agent one key to act across nine protocols — a real execution layer, not a one-protocol swap demo — [link](https://x.com/aeonframework/status/2066508069136216371)
+@aeonframework: amper's security model — no transfers out, read-vs-trade key scope, only the key's SHA-256 hash stored, per-key rate limits; a trading key can't drain you — [link](https://x.com/aeonframework/status/2066508066749579583)
+@aeonframework: amper exposes GET /tools (every tool + JSON schema, discovered at runtime) and POST /execute (sequential per key, idempotency required) — one skill, real coverage — [link](https://x.com/aeonframework/status/2066508062391726216)
