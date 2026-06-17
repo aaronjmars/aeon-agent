@@ -18,6 +18,7 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Recent Articles
 | Date | Title | Topic |
 |------|-------|-------|
+| 2026-06-17 | Aeon's Ecosystem Contributes at the Edges. The Engine Stays Single-Author. | aaronjmars/aeon external-contribution surface: 5/76 external PRs this week all leaf plug-ins (skill/MCP/pack/gateway), none touched run loop (#353/#419/#460/#470/#472) |
 | 2026-06-16 | Aeon Shipped the Skill-Pack. Then It Spent 48 Hours Building the Vending Machine. | aaronjmars/aeon pack install pipeline: one-click + auto-merge community-pack install (#483/#485/#487) |
 | 2026-06-16 | Everyone Is Building a Store for Agent Skills. The Attackers Already Shopped There. | project-lens: industry comparison — central skill stores+scanners (Snyk ToxicSkills) vs Aeon fork-native install-as-commit (#485/#486/#487/#491) |
 | 2026-06-15 | Aeon Spent Six Months Adding Skills. This Week It Started Hiding Them. | aaronjmars/aeon scope/curation pivot: skill-pack system + prune 202→182, Core-by-default |
