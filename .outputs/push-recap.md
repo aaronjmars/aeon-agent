@@ -1,15 +1,16 @@
-*Push Recap — 2026-06-16*
-aaronjmars/aeon — SHIPPING: one-click community-pack install now lands skills on `main` and shows them in the dashboard.
+*Push Recap — 2026-06-17*
+aeon · aeon-agent · minitor — SHIPPING: pack validator, PR template & CONTRIBUTING land across all three repos
 
 Shipped to users:
-• minitor #74 — new github-commits TweetDeck column (repo-velocity feed, keyless or token; +248)
-• aeon #483 — community pack cards get an "Install pack" button + new `install-skill` core skill that opens a PR; skills land disabled
-• aeon #485/#486/#487/#490/#491/#493 — six fixes that close the install loop: Actions can open+auto-merge the PR on a fresh fork, installed skills land in an always-visible "Installed" pack, packs.json regenerates deterministically, pack visibility is per-repo so forks start Core-only
+• `validate-pack.sh` (aeon #495) — 282-line pre-flight validator running the exact invariants `install-skill-pack` enforces (manifest, slugs, paths, capability taxonomy); pack authors now catch rejections before a reviewer does
+• PR template (aeon #494) — `.github/PULL_REQUEST_TEMPLATE.md` with a four-way "type of change" split + per-type checklists, shown on every PR
+• minitor CONTRIBUTING (#75) — 66-line column-plugin walkthrough: Node 20+, PGlite bundled, `git clone && ./minitor`
+• tweet-digest now tracks @aeonframework daily (aeon-agent #105)
 
 Under the hood:
-• aeon #471 SECURITY.md (disclosure policy + threat model); new catalog entries glim.sh #470, Robinhood MCP #489, Hunch betting pack #472 — two external contributors
+• Repaired tweet-digest prefetch so scheduled runs stop hitting an empty cache in the sandbox (aeon-agent #107); content-filter fix unblocks CODE_OF_CONDUCT.md on aeon (#100)
 
-Shape: 13 user-visible · 3 internal · 4 infra · 35 bot-filtered · 19 merged PRs
-Volume: ~105 files, +1,341/−469 lines
+Shape: 4 user-visible · 2 internal · 0 infra · 25 bot-filtered · 6 merged PRs
+Volume: ~20 files, +735/-17 lines
 
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-16.md
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-17.md

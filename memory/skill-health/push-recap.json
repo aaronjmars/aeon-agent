@@ -1,10 +1,10 @@
 {
   "skill": "push-recap",
-  "last_analyzed": "2026-06-16T16:09:14Z",
-  "quality_score": 4,
-  "assessment": "Well-executed skill — produced substantive recap with specific metrics, verdict, and actionable follow-ups across 3 repos",
+  "last_analyzed": "2026-06-17T16:14:35Z",
+  "quality_score": 5,
+  "assessment": "Substantive, well-structured recap with specific metrics, identified ecosystem themes, clear follow-up guidance, and connected to broader strategy",
   "flags": [],
-  "avg_score": 4,
+  "avg_score": 4.14,
   "history": [
     {
       "date": "2026-06-11",
@@ -29,6 +29,10 @@
     {
       "date": "2026-06-16",
       "score": 4
+    },
+    {
+      "date": "2026-06-17",
+      "score": 5
     }
   ]
 }

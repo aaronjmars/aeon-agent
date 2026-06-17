@@ -1,0 +1,208 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap"
+      },
+      "children": [
+        "heading-title",
+        "text-subtitle",
+        "sep-1",
+        "heading-shipped",
+        "stack-shipped-items",
+        "sep-2",
+        "heading-underthehood",
+        "stack-underthehood-items",
+        "sep-3",
+        "heading-metrics",
+        "grid-metrics",
+        "sep-4",
+        "link-fullrecap"
+      ]
+    },
+    "heading-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Push Recap — 2026-06-17",
+        "level": "h2"
+      }
+    },
+    "text-subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "aeon · aeon-agent · minitor — SHIPPING: pack validator, PR template & CONTRIBUTING land across all three repos",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h3"
+      }
+    },
+    "stack-shipped-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-validatepack",
+        "item-prtemplate",
+        "item-minitorcontrib",
+        "item-tweetdigest"
+      ]
+    },
+    "item-validatepack": {
+      "type": "StoryLink",
+      "props": {
+        "title": "validate-pack.sh",
+        "href": "https://github.com/aaronjmars/aeon/pull/495",
+        "source": "aeon #495",
+        "score": "282-line pre-flight validator running the exact invariants `install-skill-pack` enforces (manifest, slugs, paths, capability taxonomy); pack authors now catch rejections before a reviewer does"
+      }
+    },
+    "item-prtemplate": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR template",
+        "href": "https://github.com/aaronjmars/aeon/pull/494",
+        "source": "aeon #494",
+        "score": ".github/PULL_REQUEST_TEMPLATE.md with a four-way \"type of change\" split + per-type checklists, shown on every PR"
+      }
+    },
+    "item-minitorcontrib": {
+      "type": "StoryLink",
+      "props": {
+        "title": "minitor CONTRIBUTING",
+        "href": "https://github.com/aaronjmars/minitor/pull/75",
+        "source": "minitor #75",
+        "score": "66-line column-plugin walkthrough: Node 20+, PGlite bundled, `git clone && ./minitor`"
+      }
+    },
+    "item-tweetdigest": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tweet-digest now tracks @aeonframework daily",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/105",
+        "source": "aeon-agent #105"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "heading-underthehood": {
+      "type": "Heading",
+      "props": {
+        "text": "Under the hood",
+        "level": "h3"
+      }
+    },
+    "stack-underthehood-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-tweetdigest-repair",
+        "item-contentfilter"
+      ]
+    },
+    "item-tweetdigest-repair": {
+      "type": "Text",
+      "props": {
+        "text": "Repaired tweet-digest prefetch so scheduled runs stop hitting an empty cache in the sandbox (aeon-agent #107)"
+      }
+    },
+    "item-contentfilter": {
+      "type": "Text",
+      "props": {
+        "text": "content-filter fix unblocks CODE_OF_CONDUCT.md on aeon (#100)"
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "heading-metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape & Volume",
+        "level": "h3"
+      }
+    },
+    "grid-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-user-visible",
+        "stat-internal",
+        "stat-infra",
+        "stat-botfiltered",
+        "stat-mergedprs",
+        "stat-volume"
+      ]
+    },
+    "stat-user-visible": {
+      "type": "Stat",
+      "props": {
+        "label": "User-visible",
+        "value": "4"
+      }
+    },
+    "stat-internal": {
+      "type": "Stat",
+      "props": {
+        "label": "Internal",
+        "value": "2"
+      }
+    },
+    "stat-infra": {
+      "type": "Stat",
+      "props": {
+        "label": "Infra",
+        "value": "0"
+      }
+    },
+    "stat-botfiltered": {
+      "type": "Stat",
+      "props": {
+        "label": "Bot-filtered",
+        "value": "25"
+      }
+    },
+    "stat-mergedprs": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged PRs",
+        "value": "6"
+      }
+    },
+    "stat-volume": {
+      "type": "Text",
+      "props": {
+        "text": "~20 files, +735/-17 lines"
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "link-fullrecap": {
+      "type": "Link",
+      "props": {
+        "label": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-17.md"
+      }
+    }
+  }
+}
