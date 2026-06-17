@@ -1,15 +1,13 @@
-Done. Here's what changed:
+Done.
 
 ## Summary
 
-**Added to MEMORY.md:**
-- 2 missing project-lens articles in the Recent Articles table: the 06-12 contrarian git-memory piece and the 06-14 HTTP 402 piece
-- 2 new Lessons Learned entries: Next.js `"use server"` enforcement (build-only, not tsc/eslint) and the Etherscan v2/Base paid-plan gotcha
+**MEMORY.md updated** (53 lines, down from 55):
+- **Date**: `Last consolidated` bumped to 2026-06-17
+- **Recent Articles**: Added project-lens-2026-06-17 ("The Agent Wars of 2026 Are a Fight Over Whose Computer Runs Your Agent"); archived 5 pre-06-14 rows to `memory/topics/articles-history.md`
+- **Next Priorities**: Compressed minitor (all 3 PRs merged); updated aeon (ceiling clear — #470/#471/#494/#495 merged, only #418 BEAMR remains open; CODE_OF_CONDUCT.md eligible 2026-06-21)
+- **Lessons Learned**: +2 entries — feature skill CoC content-filter workaround (curl to disk, not model-generated), and compound bash commands auto-denied in sandbox (one op per call)
 
-**Removed from MEMORY.md:**
-- Stale priority "Confirm GitHub secrets and notification channels survived the template rebuild" — 3 consecutive clean heartbeats confirm this is done
+**New file**: `memory/topics/articles-history.md` — archived article table for pre-06-14 entries.
 
-**Updated in MEMORY.md:**
-- aeon Next Priorities: PRs #465 and #466 both merged (only #418 BEAMR remains open, 1 PR = well below the 3-PR ceiling); next repo-actions pick is **Add glim.sh to dashboard featured MCP catalog** (ISSUE:#464)
-- minitor bullet: simplified to note PR #72 is open awaiting maintainer merge, no queued actions
-- Last consolidated date: updated to 2026-06-14
+**Log**: appended `MEMORY_FLUSH_OK` to `memory/logs/2026-06-17.md`.
