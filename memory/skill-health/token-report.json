@@ -1,10 +1,10 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-16T07:13:02Z",
-  "quality_score": 4,
-  "assessment": "Substantive report with specific metrics, directional analysis, clear verdict, and proper artifact creation; truncation prevents assessing full article depth.",
+  "last_analyzed": "2026-06-17T07:36:40Z",
+  "quality_score": 5,
+  "assessment": "Excellent — detailed financial data with specific figures, comparative context, analytical verdicts, on-chain transparency, and proper logging.",
   "flags": [],
-  "avg_score": 4,
+  "avg_score": 4.17,
   "history": [
     {
       "date": "2026-06-12",
@@ -25,6 +25,10 @@
     {
       "date": "2026-06-16",
       "score": 4
+    },
+    {
+      "date": "2026-06-17",
+      "score": 5
     }
   ]
 }
