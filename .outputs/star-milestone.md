@@ -1,13 +1,16 @@
-Done. Here's what the skill found:
-
-**aaronjmars/aeon** — 514 stars, no new milestone. The last recorded milestone is 500 (2026-06-11, organic). Velocity is healthy: v7=23, v30=169, baseline=5.6/day. Next milestone is 750, currently projecting ~37 days out (~July 23).
-
-**aaronjmars/minitor** — 11 stars, below the first threshold of 25. `STAR_MILESTONE_QUIET`.
-
-No notifications sent (no new crossings). Run logged to `memory/logs/2026-06-16.md`.
+Done. Here's the run summary:
 
 ## Summary
-- Checked `aaronjmars/aeon` (514⭐) and `aaronjmars/minitor` (11⭐); `aeon-agent` skipped per skill rules
-- No new milestone crossings: aeon's 500⭐ was already recorded on 2026-06-11; minitor is below the 25⭐ first threshold
-- Dispatch file confirmed: `rules` is empty, no auto-dispatches configured
-- Appended `## Star Milestone` entry to `memory/logs/2026-06-16.md`
+
+**Repos checked**: aaronjmars/aeon, aaronjmars/minitor (aeon-agent skipped — agent repo)
+
+**aaronjmars/aeon — 517 stars**
+- Highest threshold crossed: 500 — already recorded 2026-06-11
+- Step 5a gate: already recorded → no notification
+- Velocity: v7=22, v30=117, baseline=3.9/day, days_since_last_star=0
+- Next milestone: 750⭐ — projected ~2026-08-30 at current pace
+
+**aaronjmars/minitor — 11 stars**
+- Below first threshold (25) → STAR_MILESTONE_QUIET
+
+**Actions taken**: logged to `memory/logs/2026-06-17.md`. No notification sent, no milestones.md update needed, no dispatch triggered.
