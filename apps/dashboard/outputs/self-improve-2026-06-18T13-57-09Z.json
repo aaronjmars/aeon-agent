@@ -1,0 +1,63 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "description",
+        "sep1",
+        "note",
+        "sep2",
+        "pr"
+      ]
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "Heartbeat no longer flips the public status page to 🔴 DEGRADED on a single transient failure a skill already recovered from — those now read 🟡 WATCH, so docs/status.md stops underselling reliability to forkers.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "note": {
+      "type": "Text",
+      "props": {
+        "text": "P0 alerts unchanged.",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #108",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/108",
+        "source": "GitHub"
+      }
+    }
+  }
+}

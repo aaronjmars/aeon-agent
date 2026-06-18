@@ -79,10 +79,12 @@ After the priority checks (even when everything is green — this step **always*
 - Latest `articles/token-report-*.md` (most recent by filename date) — optional; powers the Token Pulse section. Skipped silently when no file exists.
 
 ### Overall status
-Compute one of three overall states from the same signals used above:
-- `🔴 DEGRADED` — any P0 flag fired (failed skill, stuck skill, consecutive_failures ≥ 3, chronic failures with success_rate < 0.5, heartbeat self-check >36h stale)
-- `🟡 WATCH` — any P1/P2/P3 flag fired (stalled PRs, urgent issues, flagged memory items, skills >2x their schedule interval old) or any open issue with severity `critical` or `high`
-- `🟢 OK` — no flags at all
+Compute one of three overall states from the same signals used above. This verdict drives the **public, fork-facing** status page, so reserve 🔴 for skills that are *currently broken* — a single transient failure a skill has already recovered from must not flip the whole page red:
+- `🔴 DEGRADED` — a skill is **currently and persistently broken**: a stuck skill; `consecutive_failures ≥ 3`; chronic failures (`success_rate < 0.5` with `total_runs ≥ 5`); heartbeat self-check >36h stale; or a `last_status: "failed"` skill that has **not recovered since** (`last_failed` ≥ `last_success`) **and** `consecutive_failures ≥ 2`.
+- `🟡 WATCH` — a transient blip or watch-item: a `last_status: "failed"` skill that already recovered (`last_success` > `last_failed`); **or** any other `last_status: "failed"` skill that does not meet the 🔴 bar above (e.g. a first or isolated failure, `consecutive_failures ≤ 1`, including a skill whose only run so far failed) — a non-recovered failure must never read 🟢 OK; or any P1/P2/P3 flag (stalled PRs, urgent issues, flagged memory items, skills >2x their schedule interval old); or any open issue with severity `critical` or `high`.
+- `🟢 OK` — no flags at all.
+
+This refines **only** the public status-page colour. It does **not** change the P0 notification rules above — a fresh `last_status: "failed"` still fires its notification (deduped per the rules above) so the operator is always told; the page just won't read 🔴 for a blip the fleet has already shrugged off.
 
 ### Format
 
