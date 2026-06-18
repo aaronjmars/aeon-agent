@@ -1,0 +1,59 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon's Agents Stopped Watching Prediction Markets. This Week They Started Betting.",
+        "description": "Two community packs merged this week — #472 (hunch-bet) and #499 (polymarket-trade) — cross from monitoring to placing real onchain positions, both behind the same simulate-by-default guardrail. The PM stopped being an observation deck. it's a cockpit now."
+      },
+      "children": [
+        "prs-section",
+        "separator-1",
+        "article-link"
+      ]
+    },
+    "prs-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-472",
+        "pr-499"
+      ]
+    },
+    "pr-472": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#472: hunch-bet",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/472",
+        "source": "GitHub"
+      }
+    },
+    "pr-499": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#499: polymarket-trade",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/499",
+        "source": "GitHub"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-18.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

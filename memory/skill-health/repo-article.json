@@ -1,10 +1,10 @@
 {
   "skill": "repo-article",
-  "last_analyzed": "2026-06-17T16:16:27Z",
-  "quality_score": 5,
-  "assessment": "Insightful thesis (plugin-only PRs) backed by concrete data (5/76 external, specific PR#s and file diffs), self-validated against quality checklist (8/8 passing), complete article artifact (747 words) with honest counter-evidence.",
+  "last_analyzed": "2026-06-18T16:20:11Z",
+  "quality_score": 4,
+  "assessment": "Good — substantive, well-sourced research with specific PRs, timeline, and counter-evidence; proper execution and self-validation; limited by summary-only assessment",
   "flags": [],
-  "avg_score": 4.43,
+  "avg_score": 4.38,
   "history": [
     {
       "date": "2026-06-11",
@@ -33,6 +33,10 @@
     {
       "date": "2026-06-17",
       "score": 5
+    },
+    {
+      "date": "2026-06-18",
+      "score": 4
     }
   ]
 }
