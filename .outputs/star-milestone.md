@@ -2,15 +2,10 @@ Done. Here's the run summary:
 
 ## Summary
 
-**Repos checked**: aaronjmars/aeon, aaronjmars/minitor (aeon-agent skipped — agent repo)
+**Repos checked:** `aaronjmars/aeon` (526 ⭐) and `aaronjmars/minitor` (11 ⭐). `aaronjmars/aeon-agent` skipped per skill rules.
 
-**aaronjmars/aeon — 517 stars**
-- Highest threshold crossed: 500 — already recorded 2026-06-11
-- Step 5a gate: already recorded → no notification
-- Velocity: v7=22, v30=117, baseline=3.9/day, days_since_last_star=0
-- Next milestone: 750⭐ — projected ~2026-08-30 at current pace
+**No milestones crossed:**
+- `aaronjmars/aeon`: 526 stars — sitting between the 500 (recorded 2026-06-11) and 750 thresholds. Velocity is healthy: v7=26, v30=126, baseline=4.2/day. At current pace, 750 is ~53 days out (~mid-August).
+- `aaronjmars/minitor`: 11 stars — below the first threshold of 25.
 
-**aaronjmars/minitor — 11 stars**
-- Below first threshold (25) → STAR_MILESTONE_QUIET
-
-**Actions taken**: logged to `memory/logs/2026-06-17.md`. No notification sent, no milestones.md update needed, no dispatch triggered.
+**No notification sent.** No milestones.md updates needed. Logged to `memory/logs/2026-06-18.md`.
