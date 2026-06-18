@@ -1,0 +1,261 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-18 — [STEADY]"
+      },
+      "children": [
+        "repo_header",
+        "sep1",
+        "stargazers_section",
+        "sep2",
+        "forks_section",
+        "source_section"
+      ]
+    },
+    "repo_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repo_title",
+        "stars_stat",
+        "forks_stat",
+        "releases_stat"
+      ]
+    },
+    "repo_title": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stars_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "520",
+        "delta": "+3",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "forks_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "177",
+        "delta": "+1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "releases_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Releases",
+        "value": "0"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazers_list"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "dnlbox_link",
+        "bd_kalaborasi_link"
+      ]
+    },
+    "dnlbox_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "dnlbox",
+        "href": "https://github.com/dnlbox",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "bd_kalaborasi_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bd-kalaborasi",
+        "href": "https://github.com/bd-kalaborasi",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks_heading",
+        "fork1_container"
+      ]
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "fork1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1_link",
+        "fork1_metadata"
+      ]
+    },
+    "fork1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "hurley87/aeon",
+        "href": "https://github.com/hurley87/aeon",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "fork1_metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1_author",
+        "fork1_location",
+        "fork1_company",
+        "fork1_repos",
+        "fork1_twitter",
+        "fork1_followers",
+        "fork1_bio"
+      ]
+    },
+    "fork1_author": {
+      "type": "Text",
+      "props": {
+        "text": "David Hurley",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "fork1_location": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Toronto",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "fork1_company": {
+      "type": "Text",
+      "props": {
+        "text": "🏢 Conversify",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "fork1_repos": {
+      "type": "Text",
+      "props": {
+        "text": "180 repos",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "fork1_twitter": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 @davidhurley87",
+        "href": "https://twitter.com/davidhurley87"
+      },
+      "children": []
+    },
+    "fork1_followers": {
+      "type": "Text",
+      "props": {
+        "text": "27 followers",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "fork1_bio": {
+      "type": "Badge",
+      "props": {
+        "text": "Onchain developer",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "source_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "source_text"
+      ]
+    },
+    "source_text": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
