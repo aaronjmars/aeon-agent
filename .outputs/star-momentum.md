@@ -1,13 +1,21 @@
+Done. Here's the run summary:
+
 ## Summary
 
-**star-momentum** ran for 2026-06-17. No alerts fired.
+**Status: STAR_MOMENTUM_NO_ALERTS** — article written, no notification sent.
 
-- **aaronjmars/aeon** — 514⭐, pace 1.4/day (v7), gap of 236 to the 750 milestone → projected crossing 2026-12-03 (Thursday) in ~169 days. Well outside the 7-14d Show HN dispatch window. Verdict: **OUT_OF_WINDOW**.
-- **aaronjmars/minitor** — 11⭐ flat across 6 data points, v7=0.0/day. Verdict: **STALLED**.
+**aaronjmars/aeon** (517⭐ → 750⭐):
+- 7-day pace: **2.0 stars/day**, 3-day pace: 1.67/day
+- Gap: 233 stars → ~117 days out → projected **2026-10-13 (Tuesday)**
+- Verdict: **OUT_OF_WINDOW** — 117 days is well outside the 7-14d Show HN dispatch window
 
-Files written:
-- `articles/star-momentum-2026-06-17.md`
-- `memory/topics/star-momentum-state.json` (updated `last_run_at`)
-- `memory/logs/2026-06-17.md` (log block appended)
+**aaronjmars/minitor** (11⭐):
+- Zero growth across all 6 data points
+- Verdict: **STALLED**
 
-Status: `STAR_MOMENTUM_NO_ALERTS` — no notification sent.
+**Files written:**
+- `articles/star-momentum-2026-06-18.md` — full projection report
+- `memory/topics/star-momentum-state.json` — last_run_at updated
+- `memory/logs/2026-06-18.md` — log block appended
+
+The signal will turn actionable if aeon's pace accelerates enough to close the 750-star gap into the 7-14 day window — at the current 2.0/day that's not until mid-October.
