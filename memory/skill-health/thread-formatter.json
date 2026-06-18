@@ -1,10 +1,10 @@
 {
   "skill": "thread-formatter",
-  "last_analyzed": "2026-06-17T19:12:28Z",
+  "last_analyzed": "2026-06-18T18:25:39Z",
   "quality_score": 4,
-  "assessment": "Well-structured skill run with clear topic selection, dedup logic, proper thread scaffolding, and correct file management; substantive but truncated output limits confidence on full article quality",
+  "assessment": "Substantive execution with clear workflow: topic selected (scored and signaled), dedup checked, article written, notification sent, log appended. Structured summary shows proper process and strategy alignment, though actual article/notification content not fully visible.",
   "flags": [],
-  "avg_score": 4.14,
+  "avg_score": 4.13,
   "history": [
     {
       "date": "2026-06-11",
@@ -32,6 +32,10 @@
     },
     {
       "date": "2026-06-17",
+      "score": 4
+    },
+    {
+      "date": "2026-06-18",
       "score": 4
     }
   ]
