@@ -49,4 +49,4 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Next Priorities
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
 - **minitor:** #72/#74/#75 all merged. No remaining actions queued.
-- **aeon:** #470 (glim.sh) + #471 (SECURITY.md) + #494 (PR template) + #495 (validate-pack.sh) all merged. Only #418 (BEAMR) remains open — ceiling clear. Next: **CODE_OF_CONDUCT.md** (eligible 2026-06-21 once novelty window clears), then SHA-pin workflows (needs workflows-scoped token).
+- **aeon:** #470 (glim.sh) + #471 (SECURITY.md) + #494 (PR template) + #495 (validate-pack.sh) all merged; #472 (Hunch pack) merged. PR #497 open (README one-click dashboard pack-install docs — repo-actions 06-16 idea #4, now shipped end-to-end). #418 (BEAMR, contributor) still the only stale open PR. repo-actions 06-16 ideas exhausted except #5 (auto-comment workflow — needs workflows-scoped token). Next: **CODE_OF_CONDUCT.md** (eligible 2026-06-21 once novelty window clears), then SHA-pin workflows (needs workflows-scoped token).
