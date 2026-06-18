@@ -42,4 +42,10 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Angle: Ecosystem map (where Aeon sits on the agent-platform map; axis = the runtime, not the model — hosted/provider-owned runtimes vs no runtime at all)
 - Thesis: 2026's agent platforms compete over whose runtime you rent. Run as your own GitHub Actions cron with state in git, and migration stops being a product — it's a clone.
 - Title: The Agent Wars of 2026 Are a Fight Over Whose Computer Runs Your Agent
+
+## 2026-06-18
+- Angle: User story (developer reads GitHub Agentic Workflows launch post; discovers reactive vs. proactive execution model; finds the fork-based autonomous agent as the answer to the question GitHub didn't solve)
+- Thesis: GitHub Agentic Workflows keep humans as the final gate before any write; a forked Aeon skips the gate entirely — not because it lacks safety, but because the configuration IS the safety.
+- Title: I Read the GitHub Agentic Workflows Launch Post. I Didn't Want My Agent to Ask.
+- Sources: github.blog/changelog (June 11 2026 launch), github.blog/ai-and-ml (technical overview), blog.mean.ceo (solo founder stack Apr 2026), github.com/aaronjmars/aeon
 - Sources: zylos.ai, digitalapplied.com, langchain.com, github.com/aaronjmars/aeon (#495/a2947c2, #491)
