@@ -1,0 +1,157 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Action Ideas — aaronjmars/aeon",
+        "description": "2026-06-18"
+      },
+      "children": [
+        "text-intro",
+        "sep1",
+        "heading-top-pick",
+        "badges-top-pick",
+        "text-top-pick-title",
+        "text-top-pick-explanation",
+        "sep2",
+        "heading-all-actions",
+        "table-actions",
+        "sep3",
+        "link-details"
+      ]
+    },
+    "text-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Five documentation gaps for new ecosystem surface — A2A server, template CLI, Atrium install, MCP server, and SHOWCASE — all shipped without entry-point docs.",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-top-pick": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Pick",
+        "level": "h3"
+      }
+    },
+    "badges-top-pick": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-priority",
+        "badge-category",
+        "badge-size"
+      ]
+    },
+    "badge-priority": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "badge-category": {
+      "type": "Badge",
+      "props": {
+        "text": "DX",
+        "variant": "secondary"
+      }
+    },
+    "badge-size": {
+      "type": "Badge",
+      "props": {
+        "text": "Small",
+        "variant": "secondary"
+      }
+    },
+    "text-top-pick-title": {
+      "type": "Text",
+      "props": {
+        "text": "Add A2A server quickstart guide",
+        "variant": "lead"
+      }
+    },
+    "text-top-pick-explanation": {
+      "type": "Text",
+      "props": {
+        "text": "Four major agent framework clients (AutoGen, CrewAI, LangChain, OpenAI Agents) exist in examples/ with no README or main README link — one doc turns evaluators into operators.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-all-actions": {
+      "type": "Heading",
+      "props": {
+        "text": "All Actions",
+        "level": "h3"
+      }
+    },
+    "table-actions": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Action",
+          "Priority",
+          "Tags",
+          "Size"
+        ],
+        "rows": [
+          [
+            "Add A2A server quickstart guide to apps/a2a-server/ and README",
+            "HIGH",
+            "DX",
+            "Small"
+          ],
+          [
+            "Add ./new-from-template CLI and skill template catalog to README",
+            "MED",
+            "DX",
+            "Small"
+          ],
+          [
+            "Document ./install-from-atrium in README under community packs",
+            "MED",
+            "Growth/DX",
+            "Small"
+          ],
+          [
+            "Add apps/mcp-server/README.md with quickstart and Claude Desktop config",
+            "MED",
+            "DX",
+            "Small"
+          ],
+          [
+            "Update SHOWCASE.md with 2026-06-18 ecosystem snapshot",
+            "MED",
+            "Community/Growth",
+            "Small"
+          ]
+        ]
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link-details": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full details",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-actions-2026-06-18.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
