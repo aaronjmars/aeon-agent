@@ -1,10 +1,11 @@
 HEARTBEAT_OK · STATUS_PAGE=WATCH
 
-## Summary
+**Findings:**
+- **P0:** Clean — all 15 enabled skills succeeded, 0 consecutive failures anywhere. Heartbeat self-check OK (~24h since last success, within the 36h window).
+- **P1:** PR #418 (BEAMR gateway) is still stalled — last updated 2026-06-16. Deduped from 06-18 log; no notification sent.
+- **P2:** Clean — no actionable memory flags.
+- **P3:** Clean — all enabled skills have cron-state entries; none lag beyond 2× their schedule interval.
 
-All checks clean:
-- **P0:** No failed/stuck/degraded skills. All 15 enabled skills succeeded. thread-formatter recovered from yesterday's blip (last_success 18:27 UTC today).
-- **P1:** PR #418 (BEAMR gateway) still stalled at ~52h — deduped from yesterday's log, no notification sent.
-- **P2/P3:** Nothing flagged.
-
-**Status page** updated: `docs/status.md` flipped from 🔴 DEGRADED → 🟡 WATCH (thread-formatter recovered; PR #418 P1 flag persists). Token pulse refreshed with today's AEON data ($0.00002509, −9.6%, CONSOLIDATING). Log entry appended to `memory/logs/2026-06-18.md`.
+**Actions taken:**
+- No notification sent (only finding is deduped PR #418).
+- `docs/status.md` regenerated with today's token pulse (AEON $0.00002260, −9.9%, CONSOLIDATING) and updated skill table. Overall verdict: **🟡 WATCH** (PR #418 persistent stall).
