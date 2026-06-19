@@ -49,3 +49,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Title: I Read the GitHub Agentic Workflows Launch Post. I Didn't Want My Agent to Ask.
 - Sources: github.blog/changelog (June 11 2026 launch), github.blog/ai-and-ml (technical overview), blog.mean.ceo (solo founder stack Apr 2026), github.com/aaronjmars/aeon
 - Sources: zylos.ai, digitalapplied.com, langchain.com, github.com/aaronjmars/aeon (#495/a2947c2, #491)
+
+## 2026-06-19
+- Angle: Current events (EU AI Act August 2 transparency deadline + December 2027 high-risk deferral — compliance tooling wave)
+- Thesis: EU AI Act's tamper-evident logging and human override requirements were written for persistent-server agents. A cron-based agent that commits every run to git inherits both properties as side effects of its design.
+- Title: The EU AI Act's Audit Trail Is Just a Commit History
+- Sources: artificialintelligenceact.eu (Articles 12+14), gibsondunn.com (Omnibus deferral), covasant.com, predictionguard.com, arxiv.org/2604.04604, github.com/aaronjmars/aeon
