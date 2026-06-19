@@ -1,19 +1,20 @@
-*Feature Built — 2026-06-18 — aaronjmars/aeon* ⭐
+*Feature Built — 2026-06-19 — aaronjmars/aeon*
 
-readme now documents the one-click pack install
+A2A gateway quickstart README
 
-the dashboard has always shipped a one-click "Install pack" button — open the Packs view, hit Install on a community card, it runs the security-scanned installer and ships an auto-merging PR. the README never said so. everyone got sent to the CLI.
+The A2A gateway lets any agent framework — LangChain, AutoGen, CrewAI, OpenAI Agents SDK — call an Aeon skill over plain HTTP. The server shipped with working code and four example clients but no README. Now `apps/a2a-server/` has one: what it is, how to start it, every endpoint, and a copy-paste client.
 
 Why this matters:
-every new live instance is the metric, and the lowest-friction way to extend a fork was invisible in the docs. a forker reading the README only learned the `./install-skill-pack` path. now both methods sit side by side — click or copy-paste. onboarding gap, closed.
+A developer evaluating Aeon from their own agent stack browses to `apps/a2a-server/` and lands on raw TypeScript — no quickstart, nothing linking the server to the example clients sitting right next door. That's the exact spot you lose a forker. This was the top-scored idea (13/15) in yesterday's repo-actions pass. Lowering fork friction is priority-zero.
 
 What was built:
-- README.md: split the Community skill packs intro into "One-click (dashboard)" and "CLI" subsections. documented the Packs → Community packs → Install pack flow and that it ships an auto-merging PR. folded the manifest + security-scan + disabled-by-default explanation into one shared line.
+- apps/a2a-server/README.md: new file — what-it-is, `./add-a2a` + direct npm quickstart, `A2A_PORT`/`A2A_URL` env table, all three endpoints, a JSON-RPC submit+poll client, a table linking the four framework examples, and protocol/deployment notes.
+- README.md: one-line pointer from the existing A2A section to the new server README.
 
 How it works:
-docs-only, single file. traced the real flow before writing a word — PacksPanel's Install button calls onInstallPack → runSkill('install-skill'), and install-skill ships an auto-merging, CI-gated PR. made the shared post-install behavior explicit: installed skills land disabled until you set their secrets and flip `enabled: true`. no behavior change, just the truth written down.
+Every command, port, env var, and endpoint path was verified against `src/index.ts` and the `add-a2a` script before writing — no guessing. The README explains the actual mechanics: gateway reads `skills.json`, advertises each skill on its agent card, spawns `claude -p -` per task, returns output as an artifact. Docs-only, zero behavior change.
 
 What's next:
-repo-actions idea #4 is now shipped end to end. only the auto-comment workflow (#5) is left, and that needs a workflows-scoped token. CODE_OF_CONDUCT.md clears its quiet window 2026-06-21.
+Same gap exists for `apps/mcp-server/` (repo-actions idea #4) — the MCP server has no README either. That's the natural follow-on.
 
-PR: https://github.com/aaronjmars/aeon/pull/497
+PR: https://github.com/aaronjmars/aeon/pull/501
