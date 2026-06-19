@@ -1,16 +1,18 @@
-*Push Recap — 2026-06-18*
-aaronjmars/aeon · aaronjmars/aeon-agent · aaronjmars/minitor — SHIPPING — two community packs land; heartbeat status page fixed
+*Push Recap — 2026-06-19*
+aaronjmars/aeon + aeon-agent + minitor — MIXED: A2A gateway documented, catalog scrubbed, heartbeat reliability fixed
 
 Shipped to users:
-• Polymarket Trader by Simmer (#499, aeon) — polymarket-intel/markets/trade land in the community registry; real position-taking on Polymarket, simulate-by-default, one `SIMMER_API_KEY` away from live orders
-• clawhunter-skills (#498, aeon) — Pump Fun GO bounty discovery + content generation pack (voice tones, images, video direction); x402 on Solana or Base
-• Heartbeat fix (#108, aeon-agent) — public status page no longer flips 🔴 DEGRADED on a single transient failure; recovered blips now read 🟡 WATCH; fork-facing reliability page stays honest
+• `ab15246` A2A gateway finally has a README — 116-line quickstart in `apps/a2a-server/README.md` covering `./add-a2a`, all three endpoints, a copy-paste Python submit+poll client, and framework example table (LangChain/AutoGen/CrewAI/OpenAI Agents SDK)
+• `2a4c441` heartbeat: `docs/status.md` stops flashing 🔴 DEGRADED on a single recovered failure — now requires `consecutive_failures ≥ 3` or a non-recovered `last_status: failed` to reach DEGRADED; transient blips drop to 🟡 WATCH
+• `90e8b5f` skill gallery (`docs/index.md`) updated from stale "50 skills" to 180+ with live slugs; skill-graph pruned from 196 to 176 mapped nodes, 17 dead entries removed
+• `d1e07e8` Polymarket Trader by Simmer added to pack registry — 3 skills (intel/markets/trade), simulate-by-default, registry's first onchain position-taking pack (by adlai88)
+• `7bd1b8d` clawhunter-skills added — bounty discovery + x402-paid content studio (by Claw Hunter)
 
 Under the hood:
-• Model routing refactor (aeon-agent) — fleet default switched to Sonnet 4.6; repo-article/self-improve/feature selectively re-pinned to Opus 4.8; aeon.yml is now the single source of truth (3 commits, 80+ lines cleaned)
-• Minitor gets first CI (#76/#77) — next build gate on every push and PR; PGlite fallback means forks run it without secrets
+• #503/#504/#505/#506: four-pass dangling-ref sweep clears all 17 skills deleted 2026-06-15 from docs, evals, manifests, and SKILL.md cross-refs; `smoke.sh` canary repointed from deleted `token-report` to live `token-movers`
+• minitor ships its first CI build gate — `next build` on every push/PR, catching the exact failure class behind recent regressions (#76/#77)
 
-Shape: 4 user-visible · 1 internal · 5 infra · 35 bot-filtered · 7 merged PRs
-Volume: 20 files, +238/−111 lines
+Shape: 6 user-visible · 3 internal · 2 infra · ~35 bot-filtered · 11 merged PRs
+Volume: ~50 files, +393/−208 lines
 
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-18.md
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-19.md
