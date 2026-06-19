@@ -1,0 +1,529 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-19 — [ACTIVE]"
+      },
+      "children": [
+        "repo-badge",
+        "sep1",
+        "stats-container",
+        "sep2",
+        "notable-stargazers-section",
+        "other-stargazers-section",
+        "sep3",
+        "new-forks-section",
+        "sep4",
+        "source-text"
+      ]
+    },
+    "repo-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stats-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "533",
+        "delta": "+7",
+        "trend": "up"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "184",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "notable-stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-notable",
+        "sg-altudev",
+        "sg-xiaozi",
+        "sg-vorale",
+        "sg-hellosimplerick",
+        "sg-d36u99er"
+      ]
+    },
+    "heading-notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers",
+        "level": "h3"
+      }
+    },
+    "sg-altudev": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg-altudev-link",
+        "sg-altudev-location",
+        "sg-altudev-company",
+        "sg-altudev-repos",
+        "sg-altudev-website",
+        "sg-altudev-twitter",
+        "sg-altudev-followers",
+        "sg-altudev-bio"
+      ]
+    },
+    "sg-altudev-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/altudev — Alper Tunga",
+        "href": "https://github.com/altudev",
+        "source": "GitHub"
+      }
+    },
+    "sg-altudev-location": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Turkey",
+        "variant": "caption"
+      }
+    },
+    "sg-altudev-company": {
+      "type": "Link",
+      "props": {
+        "label": "🏢 1453.ai",
+        "href": "https://1453.ai/"
+      }
+    },
+    "sg-altudev-repos": {
+      "type": "Text",
+      "props": {
+        "text": "45 repos",
+        "variant": "caption"
+      }
+    },
+    "sg-altudev-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 https://1453.ai/",
+        "href": "https://1453.ai/"
+      }
+    },
+    "sg-altudev-twitter": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @altudev",
+        "href": "https://twitter.com/altudev"
+      }
+    },
+    "sg-altudev-followers": {
+      "type": "Text",
+      "props": {
+        "text": "385 followers",
+        "variant": "caption"
+      }
+    },
+    "sg-altudev-bio": {
+      "type": "Text",
+      "props": {
+        "text": "Ex Startup CTO who turned out to be an indie dev & solopreneur. I'm a god damn Senior Vibe Coder.",
+        "variant": "body"
+      }
+    },
+    "sg-xiaozi": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg-xiaozi-link",
+        "sg-xiaozi-location",
+        "sg-xiaozi-company",
+        "sg-xiaozi-repos",
+        "sg-xiaozi-website",
+        "sg-xiaozi-followers",
+        "sg-xiaozi-bio"
+      ]
+    },
+    "sg-xiaozi-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/xiaozi — 子天",
+        "href": "https://github.com/xiaozi",
+        "source": "GitHub"
+      }
+    },
+    "sg-xiaozi-location": {
+      "type": "Text",
+      "props": {
+        "text": "📍 beijing",
+        "variant": "caption"
+      }
+    },
+    "sg-xiaozi-company": {
+      "type": "Text",
+      "props": {
+        "text": "🏢 meituan",
+        "variant": "caption"
+      }
+    },
+    "sg-xiaozi-repos": {
+      "type": "Text",
+      "props": {
+        "text": "26 repos",
+        "variant": "caption"
+      }
+    },
+    "sg-xiaozi-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 https://tool.lu/",
+        "href": "https://tool.lu/"
+      }
+    },
+    "sg-xiaozi-followers": {
+      "type": "Text",
+      "props": {
+        "text": "554 followers",
+        "variant": "caption"
+      }
+    },
+    "sg-xiaozi-bio": {
+      "type": "Text",
+      "props": {
+        "text": "tianzi",
+        "variant": "body"
+      }
+    },
+    "sg-vorale": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg-vorale-link",
+        "sg-vorale-repos"
+      ]
+    },
+    "sg-vorale-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/vorale",
+        "href": "https://github.com/vorale",
+        "source": "GitHub"
+      }
+    },
+    "sg-vorale-repos": {
+      "type": "Text",
+      "props": {
+        "text": "67 repos",
+        "variant": "caption"
+      }
+    },
+    "sg-hellosimplerick": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg-hsr-link",
+        "sg-hsr-location",
+        "sg-hsr-company",
+        "sg-hsr-repos",
+        "sg-hsr-bio"
+      ]
+    },
+    "sg-hsr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/hellosimplerick — Rick Segal",
+        "href": "https://github.com/hellosimplerick",
+        "source": "GitHub"
+      }
+    },
+    "sg-hsr-location": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Vancouver Island, Canada",
+        "variant": "caption"
+      }
+    },
+    "sg-hsr-company": {
+      "type": "Link",
+      "props": {
+        "label": "🏢 https://www.hellosimple.com",
+        "href": "https://www.hellosimple.com"
+      }
+    },
+    "sg-hsr-repos": {
+      "type": "Text",
+      "props": {
+        "text": "26 repos",
+        "variant": "caption"
+      }
+    },
+    "sg-hsr-bio": {
+      "type": "Text",
+      "props": {
+        "text": "Pro Bono tech work from Vancouver Island. 🇨🇦",
+        "variant": "body"
+      }
+    },
+    "sg-d36u99er": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg-d36u99er-link",
+        "sg-d36u99er-repos",
+        "sg-d36u99er-followers"
+      ]
+    },
+    "sg-d36u99er-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/D36u99er",
+        "href": "https://github.com/D36u99er",
+        "source": "GitHub"
+      }
+    },
+    "sg-d36u99er-repos": {
+      "type": "Text",
+      "props": {
+        "text": "27 repos",
+        "variant": "caption"
+      }
+    },
+    "sg-d36u99er-followers": {
+      "type": "Text",
+      "props": {
+        "text": "23 followers",
+        "variant": "caption"
+      }
+    },
+    "other-stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-other",
+        "other-stargazers-list"
+      ]
+    },
+    "heading-other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h3"
+      }
+    },
+    "other-stargazers-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "other-sg-1",
+        "other-sg-2"
+      ]
+    },
+    "other-sg-1": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/agreenLIBERTYLORD-coder",
+        "href": "https://github.com/agreenLIBERTYLORD-coder"
+      }
+    },
+    "other-sg-2": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/nikasparmar",
+        "href": "https://github.com/nikasparmar"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "new-forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-forks",
+        "fork-clawhunter",
+        "fork-adlai88",
+        "fork-p9lli"
+      ]
+    },
+    "heading-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "fork-clawhunter": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-ch-link",
+        "fork-ch-website",
+        "fork-ch-twitter",
+        "fork-ch-repos",
+        "fork-ch-bio"
+      ]
+    },
+    "fork-ch-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/clawhunter — Claw Hunter",
+        "href": "https://github.com/clawhunter",
+        "source": "GitHub"
+      }
+    },
+    "fork-ch-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 clawhunter.fun",
+        "href": "https://clawhunter.fun"
+      }
+    },
+    "fork-ch-twitter": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @clawhuntersol",
+        "href": "https://twitter.com/clawhuntersol"
+      }
+    },
+    "fork-ch-repos": {
+      "type": "Text",
+      "props": {
+        "text": "4 repos",
+        "variant": "caption"
+      }
+    },
+    "fork-ch-bio": {
+      "type": "Text",
+      "props": {
+        "text": "Agentic bounty hunting",
+        "variant": "body"
+      }
+    },
+    "fork-adlai88": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-ad-link",
+        "fork-ad-repos",
+        "fork-ad-followers"
+      ]
+    },
+    "fork-ad-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/adlai88 — AD88",
+        "href": "https://github.com/adlai88",
+        "source": "GitHub"
+      }
+    },
+    "fork-ad-repos": {
+      "type": "Text",
+      "props": {
+        "text": "11 repos",
+        "variant": "caption"
+      }
+    },
+    "fork-ad-followers": {
+      "type": "Text",
+      "props": {
+        "text": "13 followers",
+        "variant": "caption"
+      }
+    },
+    "fork-p9lli": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-p9lli-link",
+        "fork-p9lli-repos"
+      ]
+    },
+    "fork-p9lli-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/P9LLI",
+        "href": "https://github.com/P9LLI",
+        "source": "GitHub"
+      }
+    },
+    "fork-p9lli-repos": {
+      "type": "Text",
+      "props": {
+        "text": "17 repos",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "source-text": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      }
+    }
+  }
+}
