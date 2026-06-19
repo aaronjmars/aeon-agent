@@ -1,21 +1,16 @@
-Done. Here's the run summary:
+Done. No notification sent — neither repo cleared all alert gates.
 
 ## Summary
 
-**Status: STAR_MOMENTUM_NO_ALERTS** — article written, no notification sent.
+**Repos audited:** 2 (`aaronjmars/aeon`, `aaronjmars/minitor`; `aaronjmars/aeon-agent` filtered as agent repo)
 
-**aaronjmars/aeon** (517⭐ → 750⭐):
-- 7-day pace: **2.0 stars/day**, 3-day pace: 1.67/day
-- Gap: 233 stars → ~117 days out → projected **2026-10-13 (Tuesday)**
-- Verdict: **OUT_OF_WINDOW** — 117 days is well outside the 7-14d Show HN dispatch window
+**Verdicts:**
+- **aaronjmars/aeon** — `OUT_OF_WINDOW`. At 520⭐ with a 7-day pace of 2.17/day, the next milestone (750⭐) projects to **2026-10-04** — 107 days out, well beyond the 7-14d Show HN dispatch window. No action.
+- **aaronjmars/minitor** — `STALLED`. 11⭐ flat for 7 straight days, pace = 0/day.
 
-**aaronjmars/minitor** (11⭐):
-- Zero growth across all 6 data points
-- Verdict: **STALLED**
+**Alerts sent:** 0 — `STAR_MOMENTUM_NO_ALERTS`
 
 **Files written:**
-- `articles/star-momentum-2026-06-18.md` — full projection report
-- `memory/topics/star-momentum-state.json` — last_run_at updated
-- `memory/logs/2026-06-18.md` — log block appended
-
-The signal will turn actionable if aeon's pace accelerates enough to close the 750-star gap into the 7-14 day window — at the current 2.0/day that's not until mid-October.
+- `articles/star-momentum-2026-06-19.md` — full projection report
+- `memory/topics/star-momentum-state.json` — state updated, no new alert entries
+- `memory/logs/2026-06-19.md` — log block prepended
