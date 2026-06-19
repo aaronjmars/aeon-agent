@@ -1,0 +1,124 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Report — $AEON"
+      },
+      "children": [
+        "status-heading",
+        "narrative-text",
+        "separator-1",
+        "metrics-grid",
+        "separator-2",
+        "chart-link"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "CONSOLIDATING",
+        "level": "h2"
+      }
+    },
+    "narrative-text": {
+      "type": "Text",
+      "props": {
+        "text": "-9.9% on 0.81× volume. buy ratio halved from yesterday (1.96→1.14). four whale trades in the last hour cut both ways — no single seller driving it.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume",
+        "stat-buys-sells",
+        "stat-ratio",
+        "stat-whales",
+        "stat-treasury"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002260",
+        "delta": "-9.9%",
+        "trend": "down"
+      }
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1,033.0K",
+        "delta": "-7.3%",
+        "trend": "down"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (7d)",
+        "value": "$131.0K",
+        "delta": "0.81×"
+      }
+    },
+    "stat-buys-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys / Sells",
+        "value": "144 / 126"
+      }
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy Ratio",
+        "value": "1.14",
+        "delta": "↓ from 1.96"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Trades (1h)",
+        "value": "4"
+      }
+    },
+    "stat-treasury": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury",
+        "value": "6.0000 ETH"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
