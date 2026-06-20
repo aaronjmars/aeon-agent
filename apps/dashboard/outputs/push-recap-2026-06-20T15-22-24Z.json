@@ -1,0 +1,152 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-20"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_header",
+        "description_main",
+        "sep_1",
+        "heading_shipped",
+        "stack_commits",
+        "sep_2",
+        "heading_metrics",
+        "stack_metrics",
+        "sep_3",
+        "link_recap"
+      ]
+    },
+    "stack_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_name",
+        "badge_status"
+      ]
+    },
+    "repo_name": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "lead"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "SHIPPING",
+        "variant": "secondary"
+      }
+    },
+    "description_main": {
+      "type": "Text",
+      "props": {
+        "text": "Litebeam in MCP catalog, auth-secret one-click install unlocked"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h3"
+      }
+    },
+    "stack_commits": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "commit_1",
+        "commit_2",
+        "commit_3"
+      ]
+    },
+    "commit_1": {
+      "type": "Text",
+      "props": {
+        "text": "bb7077b — Litebeam added as first bearer-auth featured MCP; McpCatalogEntry gains transport + authSecret fields; installFeatured() now wires Authorization: Bearer ${VAR} headers and reads SSE vs HTTP from the catalog entry"
+      }
+    },
+    "commit_2": {
+      "type": "Text",
+      "props": {
+        "text": "0d0fd15 — Litebeam's broken SVG logo swapped for X/Twitter 400x400 JPEG so it renders in the 36px catalog slot"
+      }
+    },
+    "commit_3": {
+      "type": "Text",
+      "props": {
+        "text": "9a97ae9 — logbook (signedlogbook.com) self-listed in ECOSYSTEM.md by external contributor logbookbase"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h3"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "metrics_shape",
+        "metrics_volume"
+      ]
+    },
+    "metrics_shape": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: 3 user-visible · 0 internal · 0 infra · 30 bot-filtered · 3 merged PRs"
+      }
+    },
+    "metrics_volume": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: 4 files, +24/−2 lines"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-20.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
