@@ -1,10 +1,10 @@
 {
   "skill": "star-milestone",
-  "last_analyzed": "2026-06-19T15:55:27Z",
-  "quality_score": 4,
-  "assessment": "Skill executed correctly; monitored star counts, applied filtering rules, checked milestones, logged activity. No new milestones reached, output clearly explains reasoning for each repo.",
+  "last_analyzed": "2026-06-20T15:18:54Z",
+  "quality_score": 3,
+  "assessment": "Skill executed correctly, detected no new milestones, properly followed quiet-mode rules and logged activity",
   "flags": [],
-  "avg_score": 4.1,
+  "avg_score": 4,
   "history": [
     {
       "date": "2026-06-11",
@@ -45,6 +45,10 @@
     {
       "date": "2026-06-19",
       "score": 4
+    },
+    {
+      "date": "2026-06-20",
+      "score": 3
     }
   ]
 }

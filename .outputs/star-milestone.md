@@ -1,7 +1,9 @@
+No new milestones this run.
+
 ## Summary
 
-- **aaronjmars/aeon**: 534 stars. Highest threshold ≤ 534 is **500**, already recorded on 2026-06-11. No new milestone — no notification sent.
-- **aaronjmars/aeon-agent**: skipped (excluded by rule — contains `aeon-agent`).
-- **aaronjmars/minitor**: 11 stars. Below first threshold (25) → `STAR_MILESTONE_QUIET`.
-- No dispatches triggered (milestone-dispatch.json `rules` is empty).
-- Log appended to `memory/logs/2026-06-19.md`.
+- **aaronjmars/aeon**: 538 stars. Highest threshold crossed = 500, which was already recorded (2026-06-11, organic). Next threshold is 750. No announcement.
+- **aaronjmars/minitor**: 12 stars. Below the first threshold (25). `STAR_MILESTONE_QUIET`.
+- **aaronjmars/aeon-agent**: Skipped (agent repo per skill rules).
+- No notifications sent, no dispatch triggered, milestone-dispatch.json has empty rules.
+- Log entry appended to `memory/logs/2026-06-20.md`.
