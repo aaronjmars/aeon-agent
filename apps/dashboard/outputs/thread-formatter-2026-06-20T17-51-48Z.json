@@ -1,0 +1,99 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-06-20",
+        "description": "MCP server quickstart README (PR #512, aaronjmars/aeon)"
+      },
+      "children": [
+        "separator_1",
+        "points_stack",
+        "separator_2",
+        "pr_link",
+        "article_ref"
+      ]
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "points_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "point_1",
+        "point_2",
+        "point_3",
+        "point_4",
+        "point_5_text"
+      ]
+    },
+    "point_1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ aeon has an MCP server. every skill in your instance becomes a Claude Desktop tool, named aeon-<slug>. it shipped with a full implementation and no README. PR #512 is the quickstart."
+      },
+      "children": []
+    },
+    "point_2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ the mcp-server sub-app has been in the repo since the beginning. stdio transport, auto-discovery from skills.json, 10-minute budget per tool call, error handling built in. every aeon skill was already an mcp tool. no README, no way to know."
+      },
+      "children": []
+    },
+    "point_3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ PR #512 covers ./add-mcp quickstart, --desktop flag (writes the Claude Desktop config directly), direct npm path, all flags, tool naming via aeon-<slug>, the var contract for parameterized tools, test_connection.py round-trip. 99 insertions."
+      },
+      "children": []
+    },
+    "point_4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ aeon has two ways in — A2A for agents calling agents, MCP for humans calling aeon from Claude Desktop or any IDE plugin. both sub-apps existed. neither had a quickstart. now both do. the fork-ability gap just closed."
+      },
+      "children": []
+    },
+    "point_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "5/ PR #512 — MCP server quickstart for aaronjmars/aeon:"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #512 — MCP server quickstart for aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon/pull/512",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "article_ref": {
+      "type": "Text",
+      "props": {
+        "text": "Article: articles/thread-2026-06-20.md"
+      },
+      "children": []
+    }
+  }
+}

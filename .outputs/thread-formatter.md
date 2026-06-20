@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-19*
-Topic: A2A gateway quickstart README (PR #501)
+*Thread Draft — 2026-06-20*
+Topic: MCP server quickstart README (PR #512, aaronjmars/aeon)
 
-1/ aeon has had an A2A server — Google's agent-to-agent protocol — since it shipped. four framework example clients, full JSON-RPC/SSE implementation. and no README. nobody who browsed the dir knew what to run. PR #501 fixes that.
+1/ aeon has an MCP server. every skill in your instance becomes a Claude Desktop tool, named aeon-<slug>. it shipped with a full implementation and no README. PR #512 is the quickstart.
 
-2/ A2A is the protocol for agents calling other agents — cross-framework, cross-runtime. LangChain to aeon, AutoGen to aeon, CrewAI, OpenAI Agents SDK. the server was live. the source was in the repo. there was no document describing how to point any of them at it.
+2/ the mcp-server sub-app has been in the repo since the beginning. stdio transport, auto-discovery from skills.json, 10-minute budget per tool call, error handling built in. every aeon skill was already an mcp tool. no README, no way to know.
 
-3/ the README covers: ./add-a2a quickstart, A2A_PORT/A2A_URL env vars, agent card endpoint, JSON-RPC tasks (send/get/cancel), SSE sendSubscribe, and a copy-paste submit+poll client. plus a table of every supported framework with example links. 118 insertions.
+3/ PR #512 covers ./add-mcp quickstart, --desktop flag (writes the Claude Desktop config directly), direct npm path, all flags, tool naming via aeon-<slug>, the var contract for parameterized tools, test_connection.py round-trip. 99 insertions.
 
-4/ this is what fork-ability looks like at the margin. aeon forks get a running A2A server but they couldn't connect anything to it. every time something ships without a README, the fork fleet hits a wall. the docs aren't the feature — they're what makes the feature forkable.
+4/ aeon has two ways in — A2A for agents calling agents, MCP for humans calling aeon from Claude Desktop or any IDE plugin. both sub-apps existed. neither had a quickstart. now both do. the fork-ability gap just closed.
 
-5/ PR #501 — A2A server quickstart for aaronjmars/aeon: https://github.com/aaronjmars/aeon/pull/501
+5/ PR #512 — MCP server quickstart for aaronjmars/aeon: https://github.com/aaronjmars/aeon/pull/512
 
-(article: articles/thread-2026-06-19.md)
+(article: articles/thread-2026-06-20.md)
