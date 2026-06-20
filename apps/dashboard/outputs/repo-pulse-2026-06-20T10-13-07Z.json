@@ -1,0 +1,155 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "stack_header",
+        "link_main_repo",
+        "stack_stats",
+        "sep_1",
+        "heading_notable",
+        "link_fausterbit",
+        "sep_2",
+        "heading_other",
+        "link_kh05ifr4n",
+        "sep_3",
+        "heading_forks",
+        "link_logbookbase",
+        "sep_4",
+        "text_source"
+      ]
+    },
+    "stack_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text_date",
+        "badge_status"
+      ]
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-20",
+        "variant": "caption"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY"
+      }
+    },
+    "link_main_repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "536",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "186",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers",
+        "level": "h3"
+      }
+    },
+    "link_fausterbit": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fauster",
+        "href": "https://github.com/fausterbit",
+        "source": "42 repos"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h3"
+      }
+    },
+    "link_kh05ifr4n": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kh05ifr4nD",
+        "href": "https://github.com/Kh05ifr4nD"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "link_logbookbase": {
+      "type": "StoryLink",
+      "props": {
+        "title": "logbookbase/aeon",
+        "href": "https://github.com/logbookbase/aeon",
+        "source": "6 repos"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "text_source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "caption"
+      }
+    }
+  }
+}
