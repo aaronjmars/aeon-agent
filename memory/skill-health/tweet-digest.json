@@ -1,8 +1,8 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-06-19T17:33:52Z",
+  "last_analyzed": "2026-06-20T17:12:05Z",
   "quality_score": 4,
-  "assessment": "Skill executed successfully with substantive analysis — identified 2 distinct themes from candidates, performed deduplication, integrated with notification pipeline, and logged results; output is well-structured and complete.",
+  "assessment": "Completed task with substantive output, proper deduplication/filtering, correct infrastructure use, and clear alignment with project goals; truncation limits full verification",
   "flags": [],
   "avg_score": 4,
   "history": [
@@ -24,6 +24,10 @@
     },
     {
       "date": "2026-06-19",
+      "score": 4
+    },
+    {
+      "date": "2026-06-20",
       "score": 4
     }
   ]

@@ -1,0 +1,112 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-06-20"
+      },
+      "children": [
+        "heading_ecosystem",
+        "tweetcard_1",
+        "link_1",
+        "separator_1",
+        "heading_events",
+        "tweetcard_2",
+        "link_2",
+        "tweetcard_3",
+        "link_3",
+        "tweetcard_4",
+        "link_4"
+      ]
+    },
+    "heading_ecosystem": {
+      "type": "Heading",
+      "props": {
+        "text": "Ecosystem momentum",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweetcard_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "projects building with aeon rising \"at an unbelievable pace\" — the builder base is compounding ⭐"
+      },
+      "children": []
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2068034567995289667"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_events": {
+      "type": "Heading",
+      "props": {
+        "text": "Community events (Jun 19)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweetcard_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "double-session day — community call at 15UTC + bankrbot agent hour at 17UTC, best way to wrap up the week ⭐"
+      },
+      "children": []
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2067891878381457563"
+      },
+      "children": []
+    },
+    "tweetcard_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "weekly community call live on Spaces ⭐"
+      },
+      "children": []
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2067984577583313075"
+      },
+      "children": []
+    },
+    "tweetcard_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "@aaronjmars live at bankrbot agent hour — both aeon and miroshark on the table ⭐🦈"
+      },
+      "children": []
+    },
+    "link_4": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2068017299022315695"
+      },
+      "children": []
+    }
+  }
+}
