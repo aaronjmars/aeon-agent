@@ -18,6 +18,7 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Recent Articles
 | Date | Title | Topic |
 |------|-------|-------|
+| 2026-06-20 | Aeon's CI Doesn't Test Its Code. It Tests Whether Its Catalog Tells the Truth. | repo-article: correctness model — 4 ci-*.yml gates all check catalog/doc parity (skills.json/packs.json/category/capabilities), zero run tests; dashboard's 6 .test.ts run in no workflow; pairs w/ 06-19 "no compiler" — gates ARE the catalog's compiler, logic gated only by next build at deploy |
 | 2026-06-19 | In Aeon, Deleting a Skill Costs Four PRs and Four Days | repo-article: deletion cost of skills-as-markdown — 06-15 prune (#473, 202→182) left dangling refs across docs/manifests/sibling-skill prose; #503–#506 chased them 4 days later, #506 left some by design; no compiler to flag broken refs on delete; fix=find-dangling-skill-refs linter |
 | 2026-06-18 | Aeon's Agents Stopped Watching Prediction Markets. This Week They Started Betting. | repo-article: capability threshold — community packs cross monitor→real onchain position-taking; #472 (hunch-bet) + #499 (polymarket-trade) both ship simulate-by-default/bounded/opt-in guardrail, registry's first onchain_writes pack |
 | 2026-06-17 | The Agent Wars of 2026 Are a Fight Over Whose Computer Runs Your Agent | project-lens: 2026 agent platforms compete on runtime rental; Aeon = GitHub Actions cron, migration is a clone |

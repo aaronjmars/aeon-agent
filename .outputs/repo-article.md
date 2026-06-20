@@ -1,5 +1,5 @@
-*In Aeon, Deleting a Skill Costs Four PRs and Four Days*
+*Aeon's CI Doesn't Test Its Code. It Tests Whether Its Catalog Tells the Truth.*
 
-skills-as-markdown is cheap to write — and there's no compiler to tell you what you broke when you delete. June 15 pruned 20 skills in one commit (#473). June 19 needed four PRs (#503–#506) just to chase the dead names out of docs, manifests, and a dozen sibling skills. #506 left some dangling on purpose. the fix is a one-line linter aeon doesn't have yet.
+Thesis: All four `ci-*.yml` gates check that generated manifests match SKILL.md frontmatter — but the dashboard's six unit tests run in no workflow at all. Aeon guards its catalog, not its code.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-19.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-20.md
