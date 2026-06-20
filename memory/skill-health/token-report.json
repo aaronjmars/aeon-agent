@@ -1,10 +1,10 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-19T07:43:38Z",
+  "last_analyzed": "2026-06-20T06:37:08Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-structured report with quantified metrics, comparative context, and transparent classification logic; complete outputs.",
+  "assessment": "Comprehensive token report with live multi-source data, whale tracking, historical deltas, treasury monitoring, and clear verdict — well-structured and actionable.",
   "flags": [],
-  "avg_score": 4.13,
+  "avg_score": 4.11,
   "history": [
     {
       "date": "2026-06-12",
@@ -36,6 +36,10 @@
     },
     {
       "date": "2026-06-19",
+      "score": 4
+    },
+    {
+      "date": "2026-06-20",
       "score": 4
     }
   ]
