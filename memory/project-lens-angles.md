@@ -55,3 +55,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: EU AI Act's tamper-evident logging and human override requirements were written for persistent-server agents. A cron-based agent that commits every run to git inherits both properties as side effects of its design.
 - Title: The EU AI Act's Audit Trail Is Just a Commit History
 - Sources: artificialintelligenceact.eu (Articles 12+14), gibsondunn.com (Omnibus deferral), covasant.com, predictionguard.com, arxiv.org/2604.04604, github.com/aaronjmars/aeon
+
+## 2026-06-20
+- Angle: Contrarian take (cold starts are the enemy — or are they?)
+- Thesis: Platforms race to eliminate agent cold starts; a cron-based agent enforces them deliberately — and that forced reboot is what makes each run's state committed, independently verifiable, and revertable without a separate logging layer.
+- Title: Every Agent Platform Promises Faster Restarts. One Framework Made Them Mandatory.
+- Sources: inovabeing.com (27% compound failure rate), blaxel.ai (micro-VM <25ms resume), thenewstack.io (serverless failing agents), github.com/aaronjmars/aeon (aeon.yml, CLAUDE.md, memory/logs/, commit 9a97ae9)

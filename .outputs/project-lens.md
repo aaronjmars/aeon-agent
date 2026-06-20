@@ -1,5 +1,5 @@
-*New Article: The EU AI Act's Audit Trail Is Just a Commit History*
+*New Article: Every Agent Platform Promises Faster Restarts. One Framework Made Them Mandatory.*
 
-The EU AI Act's August 2 transparency deadline is forcing enterprises to confront what "tamper-evident logging" and "human override" actually require from autonomous agents — and the compliance industry has built an entire tooling market around adding those properties to persistent-server agents. The article's thesis: a cron-based agent that commits every run to git already satisfies both requirements as side effects of its design. Git's content-addressed SHA makes retroactive log modification structurally impossible; disabling a GitHub Actions workflow is the override mechanism. When skill files *are* the behavior spec, documentation and code can't drift — changing a skill is the same commit as updating its docs.
+The AI infrastructure industry has diagnosed a reliability crisis: only 27% of 8-step agent workflows complete correctly when each step has an 85% success rate. The proposed cure is micro-VMs that resume in under 25ms, preserving in-memory state across restarts. The contrarian argument: the compound failure problem is about state continuity, not cold-start latency — and an agent that mandates cold starts (via cron) and commits its state to git on every run sidesteps the problem entirely, producing auditability as a side effect.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-19.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-20.md
