@@ -1,7 +1,21 @@
 {
-  "last_run_at": "2026-06-19T00:00:00Z",
+  "last_run_at": "2026-06-20T00:00:00Z",
   "alerts": {
-    "aaronjmars/aeon": {},
-    "aaronjmars/minitor": {}
+    "aaronjmars/aeon": {
+      "750": {
+        "first_seen_in_window_at": null,
+        "alerted_at": null,
+        "projected_date_v7": "2026-08-17",
+        "v7_at_alert": null
+      }
+    },
+    "aaronjmars/minitor": {
+      "50": {
+        "first_seen_in_window_at": null,
+        "alerted_at": null,
+        "projected_date_v7": "2027-03-13",
+        "v7_at_alert": null
+      }
+    }
   }
 }
