@@ -1,12 +1,14 @@
-*Push Recap — 2026-06-20*
-aaronjmars/aeon — SHIPPING — Litebeam in MCP catalog, auth-secret one-click install unlocked
+*Push Recap — 2026-06-21*
+aaronjmars/aeon — SHIPPING — Charon policy pack in registry, MCP docs ship, Dependabot first run
 
 Shipped to users:
-• `bb7077b` — Litebeam added as first bearer-auth featured MCP; `McpCatalogEntry` gains `transport` + `authSecret` fields; `installFeatured()` now wires `Authorization: Bearer ${VAR}` headers and reads SSE vs HTTP from the catalog entry
-• `0d0fd15` — Litebeam's broken SVG logo swapped for X/Twitter 400x400 JPEG so it renders in the 36px catalog slot
-• `9a97ae9` — logbook (signedlogbook.com) self-listed in ECOSYSTEM.md by external contributor logbookbase
+• `25d2544` MCP server README lands — `./add-mcp` quickstart, `aeon-<slug>` tool naming, Claude Desktop config snippet, and `test_connection.py` round-trip now documented in `apps/mcp-server/README.md`
+• `1f08cd9` Charon policy pack joins the registry (external contributor) — `charon-setup` + `charon-policy`, repo-local policy enforcement, no secrets required, installable via `./install-skill-pack`
 
-Shape: 3 user-visible · 0 internal · 0 infra · 30 bot-filtered · 3 merged PRs
-Volume: 4 files, +24/−2 lines
+Under the hood:
+• Dependabot config shipped yesterday (#513) fired 12 PRs today — all merged, including TypeScript 5→6 on mcp-server and a2a-server with a one-line tsconfig fix (`types: ["node"]`); actions/checkout 4→7 and setup-node 5→6 also through
 
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-20.md
+Shape: 2 user-visible · 4 internal · 3 infra · 10 bot-filtered · 19 merged PRs (7 human + 12 dependabot)
+Volume: ~25 files, ~500 lines
+
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-21.md

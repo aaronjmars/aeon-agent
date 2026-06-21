@@ -1,0 +1,154 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-21",
+        "description": "aaronjmars/aeon — SHIPPING"
+      },
+      "children": [
+        "content_stack"
+      ]
+    },
+    "content_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_tagline",
+        "separator_1",
+        "heading_shipped",
+        "stack_shipped",
+        "separator_2",
+        "heading_under_hood",
+        "stack_under_hood",
+        "separator_3",
+        "heading_stats",
+        "text_shape",
+        "text_volume",
+        "separator_4",
+        "link_recap"
+      ]
+    },
+    "text_tagline": {
+      "type": "Text",
+      "props": {
+        "text": "SHIPPING — Charon policy pack in registry, MCP docs ship, Dependabot first run",
+        "variant": "lead"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h3"
+      }
+    },
+    "stack_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_mcp_readme",
+        "item_charon"
+      ]
+    },
+    "item_mcp_readme": {
+      "type": "Text",
+      "props": {
+        "text": "`25d2544` MCP server README lands — `./add-mcp` quickstart, `aeon-<slug>` tool naming, Claude Desktop config snippet, and `test_connection.py` round-trip now documented in `apps/mcp-server/README.md`",
+        "variant": "body"
+      }
+    },
+    "item_charon": {
+      "type": "Text",
+      "props": {
+        "text": "`1f08cd9` Charon policy pack joins the registry (external contributor) — `charon-setup` + `charon-policy`, repo-local policy enforcement, no secrets required, installable via `./install-skill-pack`",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_under_hood": {
+      "type": "Heading",
+      "props": {
+        "text": "Under the hood",
+        "level": "h3"
+      }
+    },
+    "stack_under_hood": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_dependabot"
+      ]
+    },
+    "item_dependabot": {
+      "type": "Text",
+      "props": {
+        "text": "Dependabot config shipped yesterday (#513) fired 12 PRs today — all merged, including TypeScript 5→6 on mcp-server and a2a-server with a one-line tsconfig fix (`types: [\"node\"]`); actions/checkout 4→7 and setup-node 5→6 also through",
+        "variant": "body"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_stats": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape & Volume",
+        "level": "h3"
+      }
+    },
+    "text_shape": {
+      "type": "Text",
+      "props": {
+        "text": "2 user-visible · 4 internal · 3 infra · 10 bot-filtered · 19 merged PRs (7 human + 12 dependabot)",
+        "variant": "body"
+      }
+    },
+    "text_volume": {
+      "type": "Text",
+      "props": {
+        "text": "~25 files, ~500 lines",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-21.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
