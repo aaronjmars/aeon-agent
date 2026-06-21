@@ -97,7 +97,7 @@ Message priority: Telegram > Discord > Slack (first message found wins per poll 
 
 ## Sandbox Limitations
 
-GitHub Actions runs Claude Code in a sandbox that may block outbound network from bash. Two patterns:
+GitHub Actions runs Claude Code in a non-interactive sandbox that may block outbound network from bash. Two network patterns, plus a command-shape rule:
 
 1. **Public APIs (no auth):** curl may fail intermittently. Always add a **WebFetch fallback** — WebFetch is a built-in Claude tool that bypasses the sandbox. Example: "If curl fails, use WebFetch for the same URL."
 
@@ -105,6 +105,8 @@ GitHub Actions runs Claude Code in a sandbox that may block outbound network fro
    - **Pre-fetch** (before Claude runs): Create `scripts/prefetch-{name}.sh`. The workflow runs all `scripts/prefetch-*.sh` before Claude starts, with full env access. Skills read cached data from `.xai-cache/` or similar.
    - **Post-process** (after Claude runs): Write request JSON to `.pending-{service}/`. Create `scripts/postprocess-{name}.sh` to process them. The workflow runs all `scripts/postprocess-*.sh` after Claude finishes. Used for: `.pending-replicate/`, `.pending-notify/`, etc.
    - **`gh` CLI**: For GitHub API, use `gh api` instead of curl — handles auth internally.
+
+3. **One operation per Bash call:** The non-interactive sandbox auto-denies **compound bash commands** — `;`, `&&`, `||`, and pipes (`|`) chained in one call are rejected *before* they run, burning a turn each. Split them into separate Bash calls (or write a script file and invoke that). The working directory persists across calls, so prefer absolute paths or a standalone `cd` over a `cd … && cmd` chain (which gets denied). Likewise, `$(...)` subshells and `$VAR` expansion are rejected in skill bash blocks — compute literal values in the prompt instead. (Observed: feature run 27617695161 lost 4 turns to denied `&&`/pipe chains.)
 
 When writing new skills, always include a "Sandbox note" section with the appropriate fallback pattern.
 
