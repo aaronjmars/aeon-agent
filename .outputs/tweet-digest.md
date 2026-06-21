@@ -1,9 +1,12 @@
-*Tweet Digest — 2026-06-20*
+Done. The tweet-digest ran cleanly:
 
-*Ecosystem momentum*
-@aeonframework: projects building with aeon rising "at an unbelievable pace" — the builder base is compounding ⭐ — [link](https://x.com/aeonframework/status/2068034567995289667)
+- Fetched 5 tweets from @aeonframework via the pre-fetched XAI cache
+- Deduped against the last 2 days of logs — 4 were already reported on 06-20
+- The only unseen tweet ("See you on the next one ser") is a low-substance sign-off
+- No notification sent — `TWEET_DIGEST_OK`
+- Logged to `memory/logs/2026-06-21.md`
 
-*Community events (Jun 19)*
-@aeonframework: double-session day — community call at 15UTC + bankrbot agent hour at 17UTC, best way to wrap up the week ⭐ — [link](https://x.com/aeonframework/status/2067891878381457563)
-@aeonframework: weekly community call live on Spaces ⭐ — [link](https://x.com/aeonframework/status/2067984577583313075)
-@aeonframework: @aaronjmars live at bankrbot agent hour — both aeon and miroshark on the table ⭐🦈 — [link](https://x.com/aeonframework/status/2068017299022315695)
+## Summary
+- **Skill ran**: tweet-digest for @aeonframework
+- **Outcome**: no notification — all substantive tweets were already in yesterday's digest, only a sign-off tweet was new
+- **Log updated**: `memory/logs/2026-06-21.md`
