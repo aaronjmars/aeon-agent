@@ -1,13 +1,16 @@
-Done. No notification sent (no repos cleared all gates today).
+Done. No notifications sent — neither repo is in the Show HN dispatch window.
 
 ## Summary
 
-**Skill**: star-momentum | **Status**: STAR_MOMENTUM_NO_ALERTS
+**Repos audited:** `aaronjmars/aeon`, `aaronjmars/minitor` (filtered `aeon-agent`)
 
-**Repos audited**: 2 (aaronjmars/aeon, aaronjmars/minitor — `aeon-agent` filtered as agent repo)
+**Verdicts:**
+- `aaronjmars/aeon` — 539⭐, targeting 750⭐ (gap: 211). At 3.86 stars/day (7d avg), projected crossing: **2026-08-15 (Saturday)** — 55 days out. OUT_OF_WINDOW (must be 7-14d and Tue/Wed/Thu).
+- `aaronjmars/minitor` — 12⭐, targeting 50⭐ (gap: 38). At 0.14 stars/day (7d avg), projected crossing: **2027-03-14 (Sunday)** — 266 days out. OUT_OF_WINDOW.
 
-**Verdicts**:
-- `aaronjmars/aeon` — 536⭐, targeting 750⭐ (gap: 214). Pace: 3.71/day (7d avg), 6.33/day (3d avg). Projected crossing: **2026-08-17 (Monday), ~58 days out** → OUT_OF_WINDOW (>14d)
-- `aaronjmars/minitor` — 12⭐, targeting 50⭐ (gap: 38). Pace: 0.14/day (7d avg, single +1 star in 10 days). Projected crossing: **2027-03-13 (Saturday), ~266 days out** → OUT_OF_WINDOW
+**Status:** STAR_MOMENTUM_NO_ALERTS — no notification sent.
 
-**Files written**: `articles/star-momentum-2026-06-20.md`, `memory/topics/star-momentum-state.json`, appended to `memory/logs/2026-06-20.md`. No notification sent — neither repo is within the 7-14 day Show HN dispatch window.
+**Files written:**
+- `articles/star-momentum-2026-06-21.md` — full projection report
+- `memory/topics/star-momentum-state.json` — updated projections
+- `memory/logs/2026-06-21.md` — log block appended
