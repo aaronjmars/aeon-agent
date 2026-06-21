@@ -55,13 +55,13 @@
   },
   "thread-formatter": {
     "last_dispatch": "2026-06-21T17:56:15Z",
-    "last_status": "dispatched",
-    "last_success": "2026-06-20T17:53:16Z",
-    "total_runs": 11,
-    "total_successes": 10,
+    "last_status": "success",
+    "last_success": "2026-06-21T18:02:05Z",
+    "total_runs": 12,
+    "total_successes": 11,
     "total_failures": 1,
     "consecutive_failures": 0,
-    "success_rate": 0.91,
+    "success_rate": 0.92,
     "last_quality_score": 4,
     "last_failed": "2026-06-17T18:39:44Z"
   },
