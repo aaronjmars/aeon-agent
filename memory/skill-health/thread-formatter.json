@@ -1,10 +1,10 @@
 {
   "skill": "thread-formatter",
-  "last_analyzed": "2026-06-20T17:51:48Z",
+  "last_analyzed": "2026-06-21T18:00:11Z",
   "quality_score": 4,
-  "assessment": "Substantive output with strategic topic selection, dedup logic, and clear narrative framing; well-structured with actionable files created",
+  "assessment": "Substantive formatter output — selected specific topic, performed dedup check, produced article, logged activity, sent notification with all work within constraints",
   "flags": [],
-  "avg_score": 4.1,
+  "avg_score": 4.09,
   "history": [
     {
       "date": "2026-06-11",
@@ -44,6 +44,10 @@
     },
     {
       "date": "2026-06-20",
+      "score": 4
+    },
+    {
+      "date": "2026-06-21",
       "score": 4
     }
   ]

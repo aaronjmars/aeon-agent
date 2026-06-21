@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-20*
-Topic: MCP server quickstart README (PR #512, aaronjmars/aeon)
+*Thread Draft — 2026-06-21*
+Topic: Dependabot config shipped → 13 PRs in 71 minutes, 6 major bumps, CI gap exposed
 
-1/ aeon has an MCP server. every skill in your instance becomes a Claude Desktop tool, named aeon-<slug>. it shipped with a full implementation and no README. PR #512 is the quickstart.
+1/ aeon shipped a dependabot config at 12:42. by 13:53, 13 dependency PRs were on main. six crossed a major version. the only CI gate on the riskiest one: a secret scanner. no test ran on any of them.
 
-2/ the mcp-server sub-app has been in the repo since the beginning. stdio transport, auto-discovery from skills.json, 10-minute budget per tool call, error handling built in. every aeon skill was already an mcp tool. no README, no way to know.
+2/ before PR #513, aaronjmars/aeon had zero dependency automation. every action was pinned to a mutable @v4/@v5 tag. supply chain exposure, invisible stale deps. the fix was obvious. the harder question: what runs when dependabot opens a PR?
 
-3/ PR #512 covers ./add-mcp quickstart, --desktop flag (writes the Claude Desktop config directly), direct npm path, all flags, tool naming via aeon-<slug>, the var contract for parameterized tools, test_connection.py round-trip. 99 insertions.
+3/ aeon has four CI workflows. all four path-filtered to skills/**, packs config, and capabilities docs. none watch apps/**. typescript 5.9→6.0 in apps/mcp-server merged with zero check-runs. not slow — literally zero.
 
-4/ aeon has two ways in — A2A for agents calling agents, MCP for humans calling aeon from Claude Desktop or any IDE plugin. both sub-apps existed. neither had a quickstart. now both do. the fork-ability gap just closed.
+4/ 186 forks inherit this dependabot.yml. "configure once, forget forever" is the pitch — and auto-merge is the obvious next step. but the safety net auto-merge assumes isn't wired. on any apps/** bump, the real test runs post-merge on Vercel. not at PR time.
 
-5/ PR #512 — MCP server quickstart for aaronjmars/aeon: https://github.com/aaronjmars/aeon/pull/512
+5/ PR #513 — Aeon's first dependabot config: https://github.com/aaronjmars/aeon/pull/513
 
-(article: articles/thread-2026-06-20.md)
+(article: articles/thread-2026-06-21.md)

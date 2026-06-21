@@ -1,0 +1,116 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Thread Draft — 2026-06-21",
+        "description": "Dependabot config shipped → 13 PRs in 71 minutes, 6 major bumps, CI gap exposed"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "para_1",
+        "para_2",
+        "para_3",
+        "para_4",
+        "sep_1",
+        "pr_section",
+        "sep_2",
+        "article_link"
+      ]
+    },
+    "para_1": {
+      "type": "Text",
+      "props": {
+        "text": "1/ aeon shipped a dependabot config at 12:42. by 13:53, 13 dependency PRs were on main. six crossed a major version. the only CI gate on the riskiest one: a secret scanner. no test ran on any of them.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "para_2": {
+      "type": "Text",
+      "props": {
+        "text": "2/ before PR #513, aaronjmars/aeon had zero dependency automation. every action was pinned to a mutable @v4/@v5 tag. supply chain exposure, invisible stale deps. the fix was obvious. the harder question: what runs when dependabot opens a PR?",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "para_3": {
+      "type": "Text",
+      "props": {
+        "text": "3/ aeon has four CI workflows. all four path-filtered to skills/**, packs config, and capabilities docs. none watch apps/**. typescript 5.9→6.0 in apps/mcp-server merged with zero check-runs. not slow — literally zero.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "para_4": {
+      "type": "Text",
+      "props": {
+        "text": "4/ 186 forks inherit this dependabot.yml. \"configure once, forget forever\" is the pitch — and auto-merge is the obvious next step. but the safety net auto-merge assumes isn't wired. on any apps/** bump, the real test runs post-merge on Vercel. not at PR time.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "pr_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr_heading",
+        "pr_link"
+      ]
+    },
+    "pr_heading": {
+      "type": "Text",
+      "props": {
+        "text": "5/ PR #513 — Aeon's first dependabot config:",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "github.com/aaronjmars/aeon/pull/513",
+        "href": "https://github.com/aaronjmars/aeon/pull/513",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "article: articles/thread-2026-06-21.md",
+        "href": "articles/thread-2026-06-21.md",
+        "source": "article"
+      },
+      "children": []
+    }
+  }
+}
