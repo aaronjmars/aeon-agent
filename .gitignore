@@ -28,6 +28,9 @@ tmp_*
 *.tmp
 .tmp-*
 .pending-*.sh
+
+# Per-run feature-build clones (cross-repo checkouts, never committed here)
+.feature-build-*/
 .run-*.sh
 .*-tmp.md
 .*-draft.md

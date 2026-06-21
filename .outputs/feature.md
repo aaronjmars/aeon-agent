@@ -1,20 +1,18 @@
-*Feature Built — 2026-06-20 — aaronjmars/aeon* ⭐
+*Feature Built — 2026-06-21 — aaronjmars/aeon* ⭐
 
-apps/mcp-server now has a README
+dependabot for the whole repo
+aeon now watches its own dependencies. added `.github/dependabot.yml` covering github actions plus all four npm apps — dashboard, mcp-server, a2a-server, webhook. one weekly pass, capped at 5 PRs per ecosystem, routed to the maintainer.
 
-the MCP server turns every aeon skill into an `aeon-<slug>` tool you can call from inside Claude Desktop or Claude Code — no cron, no CI, just run the skill the moment you want it. it shipped with working code, the `./add-mcp` installer, and example clients. but no README. so anyone landing on `apps/mcp-server/` hit raw TypeScript and had to reverse-engineer the wiring.
+why this matters:
+aeon runs autonomous code with operator secrets and runs community-pack skills on a cron. no dependabot meant npm vulns in the next.js/react stack and mutable-tag action hijacks piled up silently — no PRs, no audit trail. a maintained dep posture is exactly what forkers check before they adopt. repo-actions flagged the gap on 06-20: four npm workspaces, eight workflows on floating @v4/@v5, zero dependency automation.
 
-Why this matters:
-same gap we closed for the A2A gateway last week (#501) — entry-point doc missing on shipped ecosystem surface. it's action #4 from the 06-18 repo-actions pass. onboarding friction is a priority-zero fork bug: a dev evaluating aeon from Claude Desktop should go from "what is this folder" to "i ran a skill" without opening src.
+what was built:
+- .github/dependabot.yml (new): 5 update blocks — one github-actions (dir `/`) + four npm (each app dir). weekly monday, open-PR limit 5, assignee aaronjmars, conventional `chore(deps)` / `chore(deps-dev)` prefixes matching repo commit style.
 
-What was built:
-- apps/mcp-server/README.md (new): what-it-is, `./add-mcp` quickstart + every flag, requirements, the `aeon-<slug>` tool + `var` contract, Claude Desktop config snippet, the `test_connection.py` round-trip, and a how-it-works section
-- README.md: one-line pointer to the new doc under the MCP section, matching the existing A2A link
+how it works:
+dependabot reads the config on merge — no install, no token, github activates it natively. each block scopes to a directory with a package.json so the four independent apps each get their own update stream instead of one noisy queue. github actions block catches the floating tags across all 8 workflows. covered all four apps, not the three the scan suggested — webhook's wrangler dep was the easy one to miss.
 
-How it works:
-docs only, zero behavior change. every command, flag, env var, and path got verified against `apps/mcp-server/src/index.ts`, the root `add-mcp` script, and `examples/mcp/` before writing — so the quickstart actually runs. structure mirrors the a2a-server README so the two interop entry points read consistently: MCP for Claude clients, A2A for any framework over HTTP, both spawning the same `claude -p -` skill prompt.
+what's next:
+first weekly run lands monday. follow-on is SHA-pinning the action tags dependabot surfaces — that needs a workflows-scoped token the default GITHUB_TOKEN doesn't have.
 
-What's next:
-that clears the two big undocumented sub-apps. remaining 06-18 ideas are smaller root-script docs (`./new-from-template`, `./install-from-atrium`) and a SHOWCASE refresh.
-
-PR: https://github.com/aaronjmars/aeon/pull/512
+PR: https://github.com/aaronjmars/aeon/pull/513
