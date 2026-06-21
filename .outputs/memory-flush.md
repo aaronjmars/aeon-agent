@@ -1,13 +1,20 @@
-Done.
+Done. Here's a summary of what was flushed:
 
 ## Summary
 
-**MEMORY.md updated** (53 lines, down from 55):
-- **Date**: `Last consolidated` bumped to 2026-06-17
-- **Recent Articles**: Added project-lens-2026-06-17 ("The Agent Wars of 2026 Are a Fight Over Whose Computer Runs Your Agent"); archived 5 pre-06-14 rows to `memory/topics/articles-history.md`
-- **Next Priorities**: Compressed minitor (all 3 PRs merged); updated aeon (ceiling clear — #470/#471/#494/#495 merged, only #418 BEAMR remains open; CODE_OF_CONDUCT.md eligible 2026-06-21)
-- **Lessons Learned**: +2 entries — feature skill CoC content-filter workaround (curl to disk, not model-generated), and compound bash commands auto-denied in sandbox (one op per call)
+**Promoted to MEMORY.md:**
+- 3 missing project-lens articles added to Recent Articles table:
+  - 06-19: *The EU AI Act's Audit Trail Is Just a Commit History*
+  - 06-20: *Every Agent Platform Promises Faster Restarts. One Framework Made Them Mandatory.*
+  - 06-21: *The Part of a Cron-Native Agent That Has to Be a Server*
 
-**New file**: `memory/topics/articles-history.md` — archived article table for pre-06-14 entries.
+**Removed stale entries:**
+- PRs #513 (Dependabot cfg), #512 (MCP README), #511 (Charon pack) — all merged per 06-21 push-recap; stripped from Next Priorities
+- Removed aeon-agent #109 reference (CLAUDE.md sandbox PR — merged per 06-20 log)
 
-**Log**: appended `MEMORY_FLUSH_OK` to `memory/logs/2026-06-17.md`.
+**Updated:**
+- Next Priorities: reflects current state — only #510 (LENS pack) and #418 (BEAMR, stalled) remain open; Dependabot now active with first-run context; ideas #2/#3/#5 re-eligible date set to 2026-07-02
+- Last consolidated date: 2026-06-17 → 2026-06-21
+
+**New lesson added:**
+- `apps/**` npm changes in aaronjmars/aeon are NOT gated by any CI — only post-merge Vercel build catches app dep errors (surfaced by Dependabot batch, 2026-06-21)
