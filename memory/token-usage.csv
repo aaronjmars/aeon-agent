@@ -81,3 +81,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-20,tweet-digest,claude-sonnet-4-6,17,9178,903101,55796
 2026-06-20,thread-formatter,claude-sonnet-4-6,12,23264,703007,72778
 2026-06-20,heartbeat,claude-sonnet-4-6,10,9308,406465,66491
+2026-06-21,token-report,claude-sonnet-4-6,27,24086,1924184,80323
