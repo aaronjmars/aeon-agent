@@ -61,3 +61,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: Platforms race to eliminate agent cold starts; a cron-based agent enforces them deliberately — and that forced reboot is what makes each run's state committed, independently verifiable, and revertable without a separate logging layer.
 - Title: Every Agent Platform Promises Faster Restarts. One Framework Made Them Mandatory.
 - Sources: inovabeing.com (27% compound failure rate), blaxel.ai (micro-VM <25ms resume), thenewstack.io (serverless failing agents), github.com/aaronjmars/aeon (aeon.yml, CLAUDE.md, memory/logs/, commit 9a97ae9)
+
+## 2026-06-21
+- Angle: Technical deep-dive for non-technical readers (A2A protocol vs cron-native agent architecture — the in-memory task registry as the seam)
+- Thesis: Building an A2A interface for a cron-native agent requires exactly one persistent component — an in-memory task registry — revealing which reliability properties belong to the framework design and which come from committing every run to git.
+- Title: The Part of a Cron-Native Agent That Has to Be a Server
+- Sources: stellagent.ai (A2A v1.0 stable April 2026, 150+ orgs), onereach.ai (task lifecycle states, SSE streaming), agent2agent.info (Agent Card spec), github.com/aaronjmars/aeon (apps/a2a-server/src/index.ts, skills.json, 30-min TTL task registry)
