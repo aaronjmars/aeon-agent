@@ -1,0 +1,73 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-06-22"
+      },
+      "children": [
+        "tweet1-container",
+        "sep1",
+        "tweet2-container"
+      ]
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge1",
+        "tweetcard1"
+      ]
+    },
+    "badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "autonomy"
+      }
+    },
+    "tweetcard1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "the harness drives itself — calls out autonomy as the identity, not a feature — https://x.com/aeonframework/status/2068637028841873736 ⭐"
+      }
+    },
+    "tweet2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge2",
+        "tweetcard2"
+      ]
+    },
+    "badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "published"
+      }
+    },
+    "tweetcard2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "drops a full article on what part of a cron-native agent has to be a server — which reliability properties are framework design vs. runtime — https://x.com/aeonframework/status/2068764800381849706"
+      }
+    }
+  }
+}

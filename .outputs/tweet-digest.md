@@ -1,12 +1,7 @@
-Done. The tweet-digest ran cleanly:
+*Tweet Digest — 2026-06-22*
 
-- Fetched 5 tweets from @aeonframework via the pre-fetched XAI cache
-- Deduped against the last 2 days of logs — 4 were already reported on 06-20
-- The only unseen tweet ("See you on the next one ser") is a low-substance sign-off
-- No notification sent — `TWEET_DIGEST_OK`
-- Logged to `memory/logs/2026-06-21.md`
+*Theme: autonomy*
+@aeonframework: the harness drives itself — calls out autonomy as the identity, not a feature — [link](https://x.com/aeonframework/status/2068637028841873736) ⭐
 
-## Summary
-- **Skill ran**: tweet-digest for @aeonframework
-- **Outcome**: no notification — all substantive tweets were already in yesterday's digest, only a sign-off tweet was new
-- **Log updated**: `memory/logs/2026-06-21.md`
+*Theme: published*
+@aeonframework: drops a full article on what part of a cron-native agent has to be a server — which reliability properties are framework design vs. runtime — [link](https://x.com/aeonframework/status/2068764800381849706)
