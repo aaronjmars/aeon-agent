@@ -1,14 +1,16 @@
-*Push Recap — 2026-06-21*
-aaronjmars/aeon — SHIPPING — Charon policy pack in registry, MCP docs ship, Dependabot first run
+*Push Recap — 2026-06-22*
+aaronjmars/aeon + aeon-agent + minitor — SHIPPING — phylax-audit gates external skill installs; docs-sync auto-publishes changelogs
 
 Shipped to users:
-• `25d2544` MCP server README lands — `./add-mcp` quickstart, `aeon-<slug>` tool naming, Claude Desktop config snippet, and `test_connection.py` round-trip now documented in `apps/mcp-server/README.md`
-• `1f08cd9` Charon policy pack joins the registry (external contributor) — `charon-setup` + `charon-policy`, repo-local policy enforcement, no secrets required, installable via `./install-skill-pack`
+• phylax-audit (aeon #537): new skill from external contributor Phylax — takes any skill ref or URL, runs static prompt-injection scan + Base contract audit + x402 probe, returns ALLOW/WARN/DENY before ./add-skill runs
+• docs-sync (aeon-agent #110): new daily skill (08:00 UTC) — fetches merged PRs from the product repo, writes a changelog entry, opens a draft PR on the website repo; idempotent by PR number, bootstrap path creates the full /changelog surface on first run
 
 Under the hood:
-• Dependabot config shipped yesterday (#513) fired 12 PRs today — all merged, including TypeScript 5→6 on mcp-server and a2a-server with a one-line tsconfig fix (`types: ["node"]`); actions/checkout 4→7 and setup-node 5→6 also through
+• aeon: pruned dangling refs to 3 defunct skills across 15+ SKILL.md files (#531); README count fixed 182→183 (#530)
+• aeon-agent: git identity now --global so cross-repo commits don't fall back to unlinked email (#114); skill-runs --hours validated before reaching date arithmetic (#112)
+• minitor: 5 Grok columns now reject blank search queries with a clear error instead of an opaque API failure (#78)
 
-Shape: 2 user-visible · 4 internal · 3 infra · 10 bot-filtered · 19 merged PRs (7 human + 12 dependabot)
-Volume: ~25 files, ~500 lines
+Shape: 2 user-visible · 8 internal · 1 infra · 42 bot-filtered · 11 human merged PRs
+Volume: ~20 files, ~+600/−126 lines
 
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-21.md
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-22.md
