@@ -1,16 +1,18 @@
-Done. No notifications sent — neither repo is in the Show HN dispatch window.
-
 ## Summary
 
-**Repos audited:** `aaronjmars/aeon`, `aaronjmars/minitor` (filtered `aeon-agent`)
+**Star Momentum — 2026-06-22 — STAR_MOMENTUM_NO_ALERTS**
 
-**Verdicts:**
-- `aaronjmars/aeon` — 539⭐, targeting 750⭐ (gap: 211). At 3.86 stars/day (7d avg), projected crossing: **2026-08-15 (Saturday)** — 55 days out. OUT_OF_WINDOW (must be 7-14d and Tue/Wed/Thu).
-- `aaronjmars/minitor` — 12⭐, targeting 50⭐ (gap: 38). At 0.14 stars/day (7d avg), projected crossing: **2027-03-14 (Sunday)** — 266 days out. OUT_OF_WINDOW.
+Audited 2 repos (`aaronjmars/aeon`, `aaronjmars/minitor`). No alerts fired; no notification sent.
 
-**Status:** STAR_MOMENTUM_NO_ALERTS — no notification sent.
+**aaronjmars/aeon** — `OFF_DAY`
+- 539⭐ → 750⭐, gap 211, v7=3.86/day, v3=6.33/day
+- Projected crossing: 2026-08-16 (Sunday) — fails the Tue/Wed/Thu gate
+
+**aaronjmars/minitor** — `OUT_OF_WINDOW`
+- 12⭐ → 50⭐, gap 38, v7=0.14/day
+- Projected crossing: 2027-03-15 (~266 days) — far outside the 7-14d window
 
 **Files written:**
-- `articles/star-momentum-2026-06-21.md` — full projection report
+- `articles/star-momentum-2026-06-22.md` — full projection report
 - `memory/topics/star-momentum-state.json` — updated projections
-- `memory/logs/2026-06-21.md` — log block appended
+- `memory/logs/2026-06-22.md` — appended skill log block
