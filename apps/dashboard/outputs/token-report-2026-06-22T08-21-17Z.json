@@ -1,0 +1,148 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — DISTRIBUTING"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_narrative",
+        "sep1",
+        "grid_metrics",
+        "stack_metadata",
+        "sep2",
+        "link_chart"
+      ]
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Buy/sell ratio inverted to 0.65 (from 1.21 yesterday) as two whale sells totaling $2,975 hit into 0.31× avg volume — sellers distributing into thin order flow while price held flat.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol",
+        "stat_buys",
+        "stat_sells",
+        "stat_ratio"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002145",
+        "delta": "+0.0% 24h",
+        "trend": "neutral"
+      }
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1,039.1K",
+        "delta": "+2.4%",
+        "trend": "up"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$33.0K",
+        "delta": "0.31× 7d avg",
+        "trend": "neutral"
+      }
+    },
+    "stat_buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "55"
+      }
+    },
+    "stat_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "84"
+      }
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "0.65",
+        "delta": "from 1.21",
+        "trend": "down"
+      }
+    },
+    "stack_metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_whales",
+        "stat_treasury"
+      ]
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "5"
+      }
+    },
+    "stat_treasury": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury",
+        "value": "6.0000 ETH",
+        "delta": "±0.0000 24h",
+        "trend": "neutral"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_chart": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
