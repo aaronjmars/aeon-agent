@@ -1,5 +1,7 @@
-*Aeon Turned On Dependabot. 71 Minutes Later, 13 Bumps Shipped With No Test Behind Them.* ⭐
+*Aeon's Install-as-Commit Finally Got a Bouncer. A Stranger Built It.*
 
-dependabot went live at 12:42. by 13:53 all 13 of its first PRs were on main — six crossing a major version (checkout 4→7, typescript 6.0). the only PR-time gate on the riskiest one: a secret scan. all four ci workflows are path-filtered to skills/** — none watch apps/**, so no build, no test ran. turning it on was right. the gate that catches a break still runs *after* you merge.
+`./add-skill` drops a stranger's Markdown into an agent running with your keys. For months, no lock at the threshold. On 06-22 someone outside the project shipped one — PR #537, phylax-audit, a pre-install ALLOW/WARN/DENY gate. Not the maintainer. The ecosystem. The catch: it's opt-in, not wired into `./add-skill` yet.
 
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-21.md
+Thesis: the pre-install security gate for `./add-skill` was written by the ecosystem, not the maintainer — Phylax's external #537 covers what `skill-scan` deliberately won't.
+
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-22.md
