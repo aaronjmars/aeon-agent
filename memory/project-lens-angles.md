@@ -67,3 +67,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: Building an A2A interface for a cron-native agent requires exactly one persistent component — an in-memory task registry — revealing which reliability properties belong to the framework design and which come from committing every run to git.
 - Title: The Part of a Cron-Native Agent That Has to Be a Server
 - Sources: stellagent.ai (A2A v1.0 stable April 2026, 150+ orgs), onereach.ai (task lifecycle states, SSE streaming), agent2agent.info (Agent Card spec), github.com/aaronjmars/aeon (apps/a2a-server/src/index.ts, skills.json, 30-min TTL task registry)
+
+## 2026-06-22
+- Angle: Historical parallel (UUCP 1976 spool / store-and-forward ← credential isolation between model sandbox and shell environment)
+- Thesis: Aeon's `.pending-*` spool directories are UUCP's 1976 credential-isolation pattern re-implemented: separate message acceptance from delivery because they live in different authentication contexts — and they'll vanish the moment GitHub ships per-step secret scoping.
+- Title: The Forty-Year-Old Pattern Hiding Inside Modern AI Agent Sandboxes
+- Sources: hackaday.com (UUCP Jan 2025), hackernoon.com (reliable messaging/store-and-forward), github.com/roadmap/issues/821 (Actions outbound network control removed), nvidia.com (agentic sandbox security 2025), github.com/aaronjmars/aeon-agent (scripts/postprocess-replicate.sh, notify)
