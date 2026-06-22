@@ -91,4 +91,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-21,thread-formatter,claude-sonnet-4-6,12,14975,619106,57553
 2026-06-21,memory-flush,claude-sonnet-4-6,14,14009,574481,36394
 2026-06-21,heartbeat,claude-sonnet-4-6,12,9962,576252,49781
-2026-06-22,token-report,claude-sonnet-4-6,15,22029,1032089,92278
+2026-06-22,docs-sync,claude-sonnet-4-6,59,39512,6430901,120996
