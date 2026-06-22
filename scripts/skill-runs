@@ -32,6 +32,13 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+# Validate --hours is a positive integer before it reaches date arithmetic,
+# where a bad value (e.g. "abc" or "-5") fails with a cryptic GNU/BSD date error.
+if ! [[ "$HOURS" =~ ^[1-9][0-9]*$ ]]; then
+  echo "Invalid --hours: '${HOURS}' (expected a positive integer)" >&2
+  exit 1
+fi
+
 # Calculate date cutoff
 if date -u -d "now" +%Y 2>/dev/null | grep -q '^20'; then
   # GNU date
