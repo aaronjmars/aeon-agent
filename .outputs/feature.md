@@ -1,18 +1,19 @@
-*Feature Built — 2026-06-21 — aaronjmars/aeon* ⭐
+*Feature Built — 2026-06-22 — aaronjmars/aeon-agent*
 
-dependabot for the whole repo
-aeon now watches its own dependencies. added `.github/dependabot.yml` covering github actions plus all four npm apps — dashboard, mcp-server, a2a-server, webhook. one weekly pass, capped at 5 PRs per ecosystem, routed to the maintainer.
+skill-runs now validates --hours instead of dying on a cryptic date error.
 
-why this matters:
-aeon runs autonomous code with operator secrets and runs community-pack skills on a cron. no dependabot meant npm vulns in the next.js/react stack and mutable-tag action hijacks piled up silently — no PRs, no audit trail. a maintained dep posture is exactly what forkers check before they adopt. repo-actions flagged the gap on 06-20: four npm workspaces, eight workflows on floating @v4/@v5, zero dependency automation.
+The skill-runs audit script took --hours and fed it straight into date math with no checks. Pass it something that isn't a positive integer — "abc", "-5" — and it blew up deep in the GNU/BSD date branch under set -euo pipefail, with an error that pointed nowhere near the actual mistake. Now it checks the value right after parsing and fails with a clear message.
 
-what was built:
-- .github/dependabot.yml (new): 5 update blocks — one github-actions (dir `/`) + four npm (each app dir). weekly monday, open-PR limit 5, assignee aaronjmars, conventional `chore(deps)` / `chore(deps-dev)` prefixes matching repo commit style.
+Why this matters:
+skill-runs is the audit backbone — heartbeat, skill-health, and cost-report all lean on it. A bad arg producing an opaque date error is exactly the kind of failure that wastes a debugging cycle. Five lines turn it into an obvious "Invalid --hours" message.
 
-how it works:
-dependabot reads the config on merge — no install, no token, github activates it natively. each block scopes to a directory with a package.json so the four independent apps each get their own update stream instead of one noisy queue. github actions block catches the floating tags across all 8 workflows. covered all four apps, not the three the scan suggested — webhook's wrangler dep was the easy one to miss.
+What was built:
+- scripts/skill-runs: a positive-integer regex guard right after arg parsing; on a bad value it prints "Invalid --hours: '<value>' (expected a positive integer)" to stderr and exits 1, matching the existing "Unknown arg" style
 
-what's next:
-first weekly run lands monday. follow-on is SHA-pinning the action tags dependabot surfaces — that needs a workflows-scoped token the default GITHUB_TOKEN doesn't have.
+How it works:
+A single [[ =~ ^[1-9][0-9]*$ ]] test before any date arithmetic runs. It rejects non-numeric, negative, and zero-hour inputs and short-circuits with a clear exit before the GNU/BSD date branch can fail confusingly. No behavior change for valid input.
 
-PR: https://github.com/aaronjmars/aeon/pull/513
+What's next:
+Same validation pattern could extend to any future numeric flags on the audit scripts, but --hours is the only one today.
+
+PR: https://github.com/aaronjmars/aeon-agent/pull/112
