@@ -103,4 +103,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-06-23,docs-sync,claude-sonnet-4-6,27,10542,1396320,46737
 2026-06-23,repo-pulse,claude-sonnet-4-6,19,8141,1026251,50541
 2026-06-23,feature,claude-opus-4-8,3371,37442,6407349,123598
-2026-06-23,star-milestone,claude-sonnet-4-6,8,2579,227419,20983
+2026-06-23,push-recap,claude-sonnet-4-6,24,15803,1252870,53593

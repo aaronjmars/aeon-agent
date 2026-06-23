@@ -1,8 +1,8 @@
 {
   "skill": "push-recap",
-  "last_analyzed": "2026-06-22T16:05:28Z",
+  "last_analyzed": "2026-06-23T15:32:06Z",
   "quality_score": 4,
-  "assessment": "Substantive recap of shipped features with specific PRs, metrics, and technical depth; well-structured and actionable.",
+  "assessment": "Substantive multi-repo push recap with specific commits, intelligent bot filtering, clear categorization, and actionable user-visible changes.",
   "flags": [],
   "avg_score": 4.08,
   "history": [
@@ -52,6 +52,10 @@
     },
     {
       "date": "2026-06-22",
+      "score": 4
+    },
+    {
+      "date": "2026-06-23",
       "score": 4
     }
   ]
