@@ -1,4 +1,4 @@
-*Docs Sync — 2026-06-22*
+*Docs Sync — 2026-06-23*
 aaronjmars/aeon → aaronjmars/aeon-website
-45 new PRs → changelog entry "community packs, MCP catalog, install pipeline hardening"
-Bootstrap run: created /changelog route, nav link, docs teaser
+10 new PRs → changelog entry "phylax-audit skill, dashboard signal cleanup"
+PR: https://github.com/aaronjmars/aeon-website/pull/78
