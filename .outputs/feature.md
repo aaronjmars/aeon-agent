@@ -1,19 +1,20 @@
-*Feature Built — 2026-06-22 — aaronjmars/aeon-agent*
+*Feature Built — 2026-06-23 — aaronjmars/minitor* ⭐
 
-skill-runs now validates --hours instead of dying on a cryptic date error.
-
-The skill-runs audit script took --hours and fed it straight into date math with no checks. Pass it something that isn't a positive integer — "abc", "-5" — and it blew up deep in the GNU/BSD date branch under set -euo pipefail, with an error that pointed nowhere near the actual mistake. Now it checks the value right after parsing and fails with a clear message.
+Input validation across four more columns
+linkedin, bluesky, mastodon, youtube took your search term and handed it straight to the upstream API — no check. Type nothing, hit a wasted Grok call or a broken AppView/Mastodon/YouTube fetch, and get back a cryptic error with no hint that you forgot the input. This PR makes them fail clean instead.
 
 Why this matters:
-skill-runs is the audit backbone — heartbeat, skill-health, and cost-report all lean on it. A bad arg producing an opaque date error is exactly the kind of failure that wastes a debugging cycle. Five lines turn it into an obvious "Invalid --hours" message.
+PR #78 fixed exactly this last week — but only for the five Grok search columns. These four slipped through. farcaster and every github-* column already trim-and-throw on their required input; now the social/search columns match. Consistency is the point: a column that needs a query should say so, not waste an API call to find out.
 
 What was built:
-- scripts/skill-runs: a positive-integer regex guard right after arg parsing; on a bad value it prints "Invalid --hours: '<value>' (expected a positive integer)" to stderr and exits 1, matching the existing "Unknown arg" style
+- `linkedin/server.ts`: throws on empty query (Grok-backed, one required input), forwards the trimmed value.
+- `bluesky/server.ts` + `mastodon/server.ts`: throw on empty query in search/hashtag mode, empty handle in author mode.
+- `youtube/server.ts`: throws on empty query/channel/playlist for whichever mode is active.
 
 How it works:
-A single [[ =~ ^[1-9][0-9]*$ ]] test before any date arithmetic runs. It rejects non-numeric, negative, and zero-hour inputs and short-circuits with a clear exit before the GNU/BSD date branch can fail confusingly. No behavior change for valid input.
+Guard-only — an early `throw new Error("… is required.")` before any network call, matching the existing farcaster pattern exactly. The values passed downstream are unchanged (linkedin aside, which now trims like its siblings). Each moded column guards per-mode, so author/channel/playlist inputs get the same treatment as the keyword path. Zero behavior change for valid inputs.
 
 What's next:
-Same validation pattern could extend to any future numeric flags on the audit scripts, but --hours is the only one today.
+Closes the column-validation parity gap. The remaining minitor hardening — a build-time CI gate on `lib/columns/plugins/**` so TS errors surface before Vercel deploy — needs a workflows-scoped token, so it stays queued.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/112
+PR: https://github.com/aaronjmars/minitor/pull/79
