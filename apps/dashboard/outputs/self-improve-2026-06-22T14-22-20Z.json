@@ -1,0 +1,102 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "self-improve"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-action",
+        "text-problem",
+        "separator-1",
+        "alert-solution",
+        "separator-2",
+        "stat-rate",
+        "separator-3",
+        "text-sandbox-detail",
+        "separator-4",
+        "pr-link"
+      ]
+    },
+    "heading-action": {
+      "type": "Heading",
+      "props": {
+        "text": "Hardened feature skill against sandbox trap",
+        "level": "h2"
+      }
+    },
+    "text-problem": {
+      "type": "Text",
+      "props": {
+        "text": "The feature skill had the lowest success rate. Its temp-dir workflow invites 'cd /tmp/... && cmd' chains, which the sandbox auto-denies — the exact pattern in its last logged failure.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-solution": {
+      "type": "Alert",
+      "props": {
+        "title": "Solution Applied",
+        "message": "Added a Sandbox Note warning to the feature skill to prevent compound-bash sandbox traps",
+        "type": "success"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "Previous Success Rate",
+        "value": "0.85"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-sandbox-detail": {
+      "type": "Text",
+      "props": {
+        "text": "The non-interactive sandbox auto-denies compound bash commands (;, &&, ||, pipes). The feature skill's temp-dir workflow pattern directly triggered this limitation.",
+        "variant": "caption"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #115: Feature skill sandbox hardening",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/115",
+        "source": "GitHub"
+      }
+    }
+  }
+}

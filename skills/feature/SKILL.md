@@ -164,6 +164,11 @@ After iterating every repo, end with a `## Summary` listing each watched repo an
 
 All GitHub operations go through `gh` CLI — handles auth internally via `GITHUB_TOKEN`. No env-var-authenticated curl from bash. The `./notify` call uses the standard fan-out pattern.
 
+**No compound bash — one operation per call.** This skill works inside per-repo temp dirs, so the natural reflex is `cd /tmp/feature-build-x && git grep ...`. The non-interactive sandbox **auto-denies** any call chaining `&&`, `||`, `;`, or pipes (`|`) — it's rejected before it runs, burning a turn each (observed run 27617695161, 4 turns lost on a `cd … && git grep` chain). The working directory **persists across Bash calls**, so:
+- Run `cd /tmp/feature-build-${repo-name}` as its own call, then run each subsequent command separately.
+- Or skip `cd` entirely and pass the path directly: `git -C /tmp/feature-build-${repo-name} grep ...`, `gh repo clone owner/repo /tmp/feature-build-${repo-name}` followed by `gh ... -R owner/repo`.
+- `$(...)` subshells and `$VAR` expansion are also rejected in skill bash — compute literal values in the prompt instead.
+
 ## Environment Variables
 
 - `GH_TOKEN` / `GITHUB_TOKEN` — required. Cross-repo access (the token needs permission to fork/push/PR on every watched repo).
