@@ -1,0 +1,113 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING"
+      },
+      "children": [
+        "status_text",
+        "separator1",
+        "metrics_grid",
+        "separator2",
+        "chart_link"
+      ]
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "Price up +15.5% on 1.3× average volume — the strongest daily gain in over a week, but volume didn't clear the 2.0× threshold to call it a BREAKOUT.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol",
+        "stat_buysells",
+        "stat_whales",
+        "stat_treasury"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002477",
+        "delta": "+15.5%",
+        "trend": "up"
+      }
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1,119.5K",
+        "delta": "+7.7%",
+        "trend": "up"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$124.1K",
+        "delta": "1.3× 7d avg",
+        "trend": "neutral"
+      }
+    },
+    "stat_buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "154/150",
+        "delta": "Ratio 1.03",
+        "trend": "neutral"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "6"
+      }
+    },
+    "stat_treasury": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury",
+        "value": "6.0000 ETH",
+        "delta": "±0.0000 24h",
+        "trend": "neutral"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    }
+  }
+}
