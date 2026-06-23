@@ -1,0 +1,103 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "project-lens",
+        "description": "New Article: Every Principal-Agent Problem Has Two Solutions. AI Agents Defaulted to the Expensive One."
+      },
+      "children": [
+        "heading_title",
+        "para1",
+        "separator1",
+        "heading_mechanism",
+        "para2_mechanism",
+        "separator2",
+        "heading_prediction",
+        "para2_prediction",
+        "separator3",
+        "link_article"
+      ]
+    },
+    "heading_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Every Principal-Agent Problem Has Two Solutions. AI Agents Defaulted to the Expensive One.",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "para1": {
+      "type": "Text",
+      "props": {
+        "text": "The principal-agent problem — the economics of delegating work to someone with different incentives — has two solutions: monitor the agent at runtime, or write a contract specific enough that monitoring is unnecessary. The AI agent industry defaulted to approval loops and human-in-the-loop gates, which is monitoring. One framework bets on the contract instead: STRATEGY.md, soul files, and aeon.yml encode the operator's preferences so completely that runtime checkpoints become overhead, not safety.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_mechanism": {
+      "type": "Heading",
+      "props": {
+        "text": "The Concrete Mechanism",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "para2_mechanism": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon's CLAUDE.md imports @STRATEGY.md on every single run — before any skill executes — alongside soul files that encode voice and worldview, and aeon.yml that scopes the delegation.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_prediction": {
+      "type": "Heading",
+      "props": {
+        "text": "Falsifiable Prediction",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "para2_prediction": {
+      "type": "Text",
+      "props": {
+        "text": "Approval loops will migrate toward irreversible/novel actions and disappear from routine scheduled work within two years, for the same reason you don't need a supervisor approving a cron job once the job is well-written.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Every Principal-Agent Problem Has Two Solutions. AI Agents Defaulted to the Expensive One.",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/project-lens-2026-06-23.md",
+        "source": "Aeon Agent"
+      },
+      "children": []
+    }
+  }
+}

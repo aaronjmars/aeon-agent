@@ -73,3 +73,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: Aeon's `.pending-*` spool directories are UUCP's 1976 credential-isolation pattern re-implemented: separate message acceptance from delivery because they live in different authentication contexts — and they'll vanish the moment GitHub ships per-step secret scoping.
 - Title: The Forty-Year-Old Pattern Hiding Inside Modern AI Agent Sandboxes
 - Sources: hackaday.com (UUCP Jan 2025), hackernoon.com (reliable messaging/store-and-forward), github.com/roadmap/issues/821 (Actions outbound network control removed), nvidia.com (agentic sandbox security 2025), github.com/aaronjmars/aeon-agent (scripts/postprocess-replicate.sh, notify)
+
+## 2026-06-23
+- Angle: Philosophy / big ideas (principal-agent problem — monitoring vs. contract design as the two solutions to agent trust gaps)
+- Thesis: Approval loops in AI agents are a monitoring fix for under-specified preferences. When an operator encodes priorities, voice, and constraints in STRATEGY.md and soul files, runtime supervision is overhead — not safety.
+- Title: Every Principal-Agent Problem Has Two Solutions. AI Agents Defaulted to the Expensive One.
+- Sources: prosus.com (State of AI Agents 2026), cmr.berkeley.edu (principal-agent perspective, guided autonomy), vectoragents.ai (policy-as-code, junior employee quote), github.com/aaronjmars/aeon
