@@ -1,14 +1,14 @@
-*Thread Draft — 2026-06-22*
-Topic: Empty/whitespace search-query validation across 5 Grok-backed columns in minitor (PR #78)
+*Thread Draft — 2026-06-23*
+Topic: Aeon dashboard README shipped (PR #543)
 
-1/ five columns in minitor were silently wasting Grok API calls on empty search queries. x-search, news-search, facebook, instagram, google-news. PR #78 closes it.
+1/ 188 forks of aeon. every one of them hit the dashboard first and found nothing. the dashboard README shipped today in PR #543. ⭐
 
-2/ the columns pass config.query to Grok directly. no trim, no check. send an empty string — or a config with a blank query field — and you get a Grok call that returns an opaque error. two sibling columns (farcaster, bing) already threw on empty queries. the other five didn't.
+2/ a2a-server, mcp-server, webhook — every other aeon sub-app has a README. the dashboard ran undocumented. port 5555. six views. three config vars. the highest-traffic onboarding surface in the framework, and it had nothing in it.
 
-3/ PR #78 adds trim-and-throw to all five server.ts files. it's the kind of fix that means the column degrades cleanly instead of silently. before this, the error you got back depended on Grok's mood. now you get an immediate, explicit error at the config boundary.
+3/ the README documents what the dashboard actually does: real-time view of your agent's runs, skills, and config. six views: HQ, Packs, Strategy, Soul, MCP, Settings. remote access gate. quickstart in two commands. every fact verified against source.
 
-4/ minitor monitors the internet across seven column types. five route to Grok. empty query field — every cycle fires a wasted call and returns noise. silent failures compound in scheduled tasks. catching them at the config boundary is how autonomous tools stay clean.
+4/ documentation is the cheapest fork-friction fix there is. the first screen any forker sees is the dashboard. if that page tells them nothing, you've already lost them. at 543 stars and 188 forks — documentation is how that number compounds.
 
-5/ PR #78 on aaronjmars/minitor: https://github.com/aaronjmars/minitor/pull/78
+5/ aeon now documents every sub-app surface. A2A, MCP, webhook, and the dashboard you land on first when you fork. one more barrier gone: https://github.com/aaronjmars/aeon/pull/543
 
-(article: articles/thread-2026-06-22.md)
+(article: articles/thread-2026-06-23.md)
