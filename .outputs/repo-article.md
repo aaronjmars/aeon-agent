@@ -1,7 +1,5 @@
-*Aeon's Install-as-Commit Finally Got a Bouncer. A Stranger Built It.*
+*Aeon's One Job Is Autonomy. The First Bot It Hired Got Babysat in 31 Hours.* ⭐
 
-`./add-skill` drops a stranger's Markdown into an agent running with your keys. For months, no lock at the threshold. On 06-22 someone outside the project shipped one — PR #537, phylax-audit, a pre-install ALLOW/WARN/DENY gate. Not the maintainer. The ecosystem. The catch: it's opt-in, not wired into `./add-skill` yet.
+Aeon turned on Dependabot June 21. by the next evening it shipped two PRs (#541, #542) to throttle the bot to monthly/grouped and hide its runs from the dashboard feed — the "no babysitting" framework babysat its first outside bot on day one. config→cleanup: 30h48m. the tell: the fix wasn't smarter, it was quieter. counter: it's template hygiene, cheap, and #541 actually added security coverage while cutting the noise.
 
-Thesis: the pre-install security gate for `./add-skill` was written by the ecosystem, not the maintainer — Phylax's external #537 covers what `skill-scan` deliberately won't.
-
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-22.md
+Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-23.md
