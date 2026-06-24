@@ -137,9 +137,11 @@ For every candidate, compute:
 - ✅ No new third-party accounts or paid services
 - ✅ No cross-repo coordination
 - ✅ No legal/branding/security-policy decisions
+- ✅ Runtime boundary holds — a deterministic caller (bash script, CI step, Makefile) is NOT being asked to synchronously invoke an agentic, LLM-only skill (a `SKILL.md` with no executable entrypoint like `scan.sh`). Bash cannot call an LLM gate inline.
 - ❌ "Pick a license" (needs owner decision) → demote to MONITOR
 - ❌ "Migrate auth provider" (architectural) → demote to MONITOR
 - ❌ "Add Stripe integration" (account/keys) → demote to MONITOR
+- ❌ "Wire phylax-audit (agentic skill) into install-skill-pack (bash)" (no bash→LLM bridge) → demote to MONITOR, OR reframe as **agent-to-agent**: have an agentic skill (e.g. skill-triage) inline-invoke the other agentic skill — that path IS feasible. State the reframed target in the **How**.
 
 Ideas that fail implementability but are still worth surfacing go to a separate **Monitor** section (up to 3 items, not counted as one of the 5).
 
