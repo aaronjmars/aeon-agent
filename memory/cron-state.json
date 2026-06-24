@@ -32,8 +32,8 @@
     "last_quality_score": 4
   },
   "repo-article": {
-    "last_dispatch": "2026-06-23T16:19:51Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-24T16:32:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-23T16:26:18Z",
     "total_runs": 13,
     "total_successes": 13,
@@ -43,8 +43,8 @@
     "last_quality_score": 4
   },
   "project-lens": {
-    "last_dispatch": "2026-06-23T16:19:51Z",
-    "last_status": "success",
+    "last_dispatch": "2026-06-24T16:32:55Z",
+    "last_status": "dispatched",
     "last_success": "2026-06-23T16:30:28Z",
     "total_runs": 13,
     "total_successes": 13,
