@@ -1,0 +1,225 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Push Recap — 2026-06-24",
+        "description": "aaronjmars/aeon · aaronjmars/minitor · aaronjmars/aeon-agent"
+      },
+      "children": [
+        "header-status",
+        "sep-1",
+        "heading-shipped",
+        "stack-shipped",
+        "sep-2",
+        "heading-under",
+        "stack-under",
+        "sep-3",
+        "heading-shape",
+        "text-shape-1",
+        "text-shape-2",
+        "sep-4",
+        "link-recap"
+      ]
+    },
+    "header-status": {
+      "type": "Badge",
+      "props": {
+        "text": "SHIPPING — phylax security screen, dashboard docs, and minitor column guards"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped to users",
+        "level": "h2"
+      }
+    },
+    "stack-shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-shipped-1",
+        "item-shipped-2",
+        "item-shipped-3"
+      ]
+    },
+    "item-shipped-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-shipped-1",
+        "link-544"
+      ]
+    },
+    "text-shipped-1": {
+      "type": "Text",
+      "props": {
+        "text": "skill-triage now inline-runs phylax-audit's onchain + endpoint scan on any incoming skill that references a Base contract or payment endpoint — pure-prompt skills skip it, DENY → BLOCK in the triage receipt"
+      }
+    },
+    "link-544": {
+      "type": "Link",
+      "props": {
+        "label": "#544",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/544"
+      }
+    },
+    "item-shipped-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-shipped-2",
+        "link-543"
+      ]
+    },
+    "text-shipped-2": {
+      "type": "Text",
+      "props": {
+        "text": "apps/dashboard finally has a README: quickstart, six views, config, and the loopback security gate — the last sub-app doc gap closed"
+      }
+    },
+    "link-543": {
+      "type": "Link",
+      "props": {
+        "label": "#543",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/543"
+      }
+    },
+    "item-shipped-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-shipped-3",
+        "link-79",
+        "link-80"
+      ]
+    },
+    "text-shipped-3": {
+      "type": "Text",
+      "props": {
+        "text": "4 minitor social columns (linkedin, bluesky, mastodon, youtube) now throw a clear \"input required\" error before firing a wasted upstream call; template documents the pattern for future columns"
+      }
+    },
+    "link-79": {
+      "type": "Link",
+      "props": {
+        "label": "#79",
+        "href": "https://github.com/aaronjmars/minitor/pull/79"
+      }
+    },
+    "link-80": {
+      "type": "Link",
+      "props": {
+        "label": "#80",
+        "href": "https://github.com/aaronjmars/minitor/pull/80"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-under": {
+      "type": "Heading",
+      "props": {
+        "text": "Under the hood",
+        "level": "h2"
+      }
+    },
+    "stack-under": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "item-under-1"
+      ]
+    },
+    "item-under-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-under-1",
+        "link-115",
+        "link-116"
+      ]
+    },
+    "text-under-1": {
+      "type": "Text",
+      "props": {
+        "text": "feature skill and repo-actions skill both hardened against repeat failure modes — compound-bash trap documented in the skill most likely to hit it, and a runtime-boundary check stops infeasible bash→LLM-gate ideas from ranking as Top Pick"
+      }
+    },
+    "link-115": {
+      "type": "Link",
+      "props": {
+        "label": "#115",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/115"
+      }
+    },
+    "link-116": {
+      "type": "Link",
+      "props": {
+        "label": "#116",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/116"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-shape": {
+      "type": "Heading",
+      "props": {
+        "text": "Shape & Volume",
+        "level": "h2"
+      }
+    },
+    "text-shape-1": {
+      "type": "Text",
+      "props": {
+        "text": "Shape: 4 user-visible · 2 internal · 0 infra · ~52 bot-filtered · 6 merged PRs"
+      }
+    },
+    "text-shape-2": {
+      "type": "Text",
+      "props": {
+        "text": "Volume: 21 files, +409/-24 lines"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link-recap": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Recap",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-24.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

@@ -1,16 +1,15 @@
-*Push Recap — 2026-06-23*
-aaronjmars/aeon · aaronjmars/aeon-agent · aaronjmars/minitor — SHIPPING
+*Push Recap — 2026-06-24*
+aaronjmars/aeon · aaronjmars/minitor · aaronjmars/aeon-agent — SHIPPING — phylax security screen, dashboard docs, and minitor column guards
 
 Shipped to users:
-• `c024edb` aeon — dashboard panels now surface load failures with a Retry button instead of spinning forever; `PanelError` component added, all lazy-loaded views wired up
-• `764cd11` aeon — usephylax ships `phylax-audit`: pre-install ALLOW/WARN/DENY gate for external skills, deterministic score across static + onchain Base + x402 scans
-• `cdeeb56` aeon — runs feed switched from blocklist to allowlist of Aeon's own events; Dependabot's `dynamic` rows no longer flood FEED/RUNS tabs
-• `133ffc9` minitor — x-search, news-search, facebook, instagram, google-news columns now throw "Search query is required." on blank input instead of firing a wasted Grok call
+• skill-triage now inline-runs phylax-audit's onchain + endpoint scan on any incoming skill that references a Base contract or payment endpoint — pure-prompt skills skip it, DENY → BLOCK in the triage receipt (#544)
+• apps/dashboard finally has a README: quickstart, six views, config, and the loopback security gate — the last sub-app doc gap closed (#543)
+• 4 minitor social columns (linkedin, bluesky, mastodon, youtube) now throw a clear "input required" error before firing a wasted upstream call; template documents the pattern for future columns (#79, #80)
 
 Under the hood:
-• `c1a7930` aeon-agent — cross-repo git commits now always land as aeonframework@proton.me; freshly cloned repos no longer fall back to ad-hoc emails
+• feature skill and repo-actions skill both hardened against repeat failure modes — compound-bash trap documented in the skill most likely to hit it, and a runtime-boundary check stops infeasible bash→LLM-gate ideas from ranking as Top Pick (#115, #116)
 
-Shape: 4 user-visible · 4 internal · 2 infra · 55 bot-filtered · 15 merged PRs
-Volume: 42 files, +523/-96 lines
+Shape: 4 user-visible · 2 internal · 0 infra · ~52 bot-filtered · 6 merged PRs
+Volume: 21 files, +409/-24 lines
 
-Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-23.md
+Full recap: https://github.com/aaronjmars/aeon-agent/blob/main/articles/push-recap-2026-06-24.md
