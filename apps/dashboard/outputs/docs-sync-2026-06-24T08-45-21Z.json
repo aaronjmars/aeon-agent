@@ -1,0 +1,65 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync",
+        "description": "2026-06-24"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sync-direction",
+        "pr-count",
+        "separator1",
+        "changelog-content",
+        "pr-link"
+      ]
+    },
+    "sync-direction": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website",
+        "variant": "lead"
+      }
+    },
+    "pr-count": {
+      "type": "Stat",
+      "props": {
+        "value": "1",
+        "label": "new PR"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "changelog-content": {
+      "type": "Text",
+      "props": {
+        "text": "changelog entry: dashboard README closes the last sub-app gap",
+        "variant": "body"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #79",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/79",
+        "source": "aaronjmars/aeon-website"
+      }
+    }
+  }
+}
