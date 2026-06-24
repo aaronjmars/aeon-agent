@@ -1,20 +1,20 @@
-*Feature Built — 2026-06-23 — aaronjmars/minitor* ⭐
+*Feature Built — 2026-06-24 — aaronjmars/minitor*
 
-Input validation across four more columns
-linkedin, bluesky, mastodon, youtube took your search term and handed it straight to the upstream API — no check. Type nothing, hit a wasted Grok call or a broken AppView/Mastodon/YouTube fetch, and get back a cryptic error with no hint that you forgot the input. This PR makes them fail clean instead.
+Required-input validation, taught at the source
+
+minitor columns are plugins — copy _template/, rewrite three files, ship a new source. two recent PRs (#78/#79) added trim-and-throw guards so an empty search query throws "X is required." instead of firing a wasted upstream call. but the template every new column is copied from never taught the pattern. now it does.
 
 Why this matters:
-PR #78 fixed exactly this last week — but only for the five Grok search columns. These four slipped through. farcaster and every github-* column already trim-and-throw on their required input; now the social/search columns match. Consistency is the point: a column that needs a query should say so, not waste an API call to find out.
+the column-plugin model is minitor's whole contribution surface. the reference contributors copy from had a gap the maintainer just spent two PRs closing across existing columns. the Zod schema runs first — so the docs said config.foo is "present" — true, but z.string().default("") makes "present" include "". scaffold a new column, skip the guard, ship a column that fires empty-query calls returning opaque errors. fixing it at the copy-source means every future column gets it for free.
 
 What was built:
-- `linkedin/server.ts`: throws on empty query (Grok-backed, one required input), forwards the trimmed value.
-- `bluesky/server.ts` + `mastodon/server.ts`: throw on empty query in search/hashtag mode, empty handle in author mode.
-- `youtube/server.ts`: throws on empty query/channel/playlist for whichever mode is active.
+- lib/columns/plugins/_template/server.ts — documents the guard at the top of fetch, with the canonical config.query.trim() check. comment-only, template still runs as-is.
+- lib/columns/README.md — corrects step 4 ("present" is not "non-empty") and adds a "Validate required inputs" convention with the exact pattern.
 
 How it works:
-Guard-only — an early `throw new Error("… is required.")` before any network call, matching the existing farcaster pattern exactly. The values passed downstream are unchanged (linkedin aside, which now trims like its siblings). Each moded column guards per-mode, so author/channel/playlist inputs get the same treatment as the keyword path. Zero behavior change for valid inputs.
+a throw inside a fetcher is caught by the shared API route (app/api/columns/[type]/route.ts try/catch) and rendered as the column's error state — verified against the route, not assumed. no behavior change to any shipped column. template comment + contract docs only, so the build CI is untouched.
 
 What's next:
-Closes the column-validation parity gap. The remaining minitor hardening — a build-time CI gate on `lib/columns/plugins/**` so TS errors surface before Vercel deploy — needs a workflows-scoped token, so it stays queued.
+natural follow-up is a shared requireInput() helper to DRY the ~9 hand-rolled guards — held back to keep this PR focused on the contributor-facing teaching surface.
 
-PR: https://github.com/aaronjmars/minitor/pull/79
+PR: https://github.com/aaronjmars/minitor/pull/80
