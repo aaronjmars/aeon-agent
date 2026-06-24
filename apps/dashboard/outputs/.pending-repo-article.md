@@ -1,5 +1,0 @@
-*A "Forget Forever" Framework Spent Its Week on the Part You Read First*
-
-Thesis: Aeon's maintainer shipped no run-loop changes this week — 10 of his 25 merged PRs were pure docs, and every sub-app finally has a README.
-
-Read: https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-24.md

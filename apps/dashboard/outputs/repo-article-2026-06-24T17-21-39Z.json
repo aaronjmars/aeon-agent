@@ -1,0 +1,38 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "A \"Forget Forever\" Framework Spent Its Week on the Part You Read First"
+      },
+      "children": [
+        "thesis_text",
+        "separator1",
+        "article_link"
+      ]
+    },
+    "thesis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Aeon's maintainer shipped no run-loop changes this week — 10 of his 25 merged PRs were pure docs, and every sub-app finally has a README.",
+        "variant": "lead"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "article_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Read full article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/articles/repo-article-2026-06-24.md",
+        "source": "aeon-agent"
+      }
+    }
+  }
+}

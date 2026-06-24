@@ -1,0 +1,71 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-06-24"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_theme_1",
+        "tweet_1",
+        "separator_1",
+        "heading_theme_2",
+        "tweet_2",
+        "tweet_3"
+      ]
+    },
+    "heading_theme_1": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Token structure & transparency",
+        "level": "h3"
+      }
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "text": "B1 transparency filing goes live on Blockworks — 40/40 score, Aeon Inc's golden-share structure locks in token-holder buyout rights before any sale, trading fees route to treasury (we don't sell), and 50% of non-trading revenue hits buybacks — https://x.com/aeonframework/status/2069473683375005833"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_theme_2": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Shipping & agent payments",
+        "level": "h3"
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "text": "community call #5 recording drops — Miroshark consumer push, x402 endpoints, DAG executor updates, new Packs system, and a 1M GitHub stars milestone mention — https://x.com/aeonframework/status/2069384845235470828"
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "text": "blog post on letting your agent spend money autonomously, x402-native — https://x.com/aeonframework/status/2069391632982589659"
+      }
+    }
+  }
+}
