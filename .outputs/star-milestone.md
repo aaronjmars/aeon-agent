@@ -1,12 +1,8 @@
-Done. No milestone crossings detected this run:
-
-- **aaronjmars/aeon** (543 stars): Highest applicable threshold is 500, which was already recorded on 2026-06-11. No announcement.
-- **aaronjmars/minitor** (12 stars): Below the first threshold of 25. `STAR_MILESTONE_QUIET`.
-- **aaronjmars/aeon-agent**: Skipped (agent repo filter).
-
 ## Summary
 
-- Checked 2 active repos (filtered out `aeon-agent`)
-- No new milestone crossings found
-- No notifications sent, no `milestones.md` updates needed
-- Logged run results to `memory/logs/2026-06-23.md`
+No new milestone to announce today.
+
+- **`aaronjmars/aeon`** — 549 stars. Highest threshold ≤ 549 is 500, already recorded on 2026-06-11. Next unrecorded threshold: 750. Velocity is healthy (v7=35, baseline≈3.8/day).
+- **`aaronjmars/minitor`** — 12 stars, below the first threshold of 25. Quiet.
+- No notifications sent, no `milestones.md` updates needed, no dispatch triggered.
+- Log entry written to `memory/logs/2026-06-24.md`.
