@@ -79,3 +79,9 @@ Tracks angle categories and theses so they don't repeat within 14 days.
 - Thesis: Approval loops in AI agents are a monitoring fix for under-specified preferences. When an operator encodes priorities, voice, and constraints in STRATEGY.md and soul files, runtime supervision is overhead — not safety.
 - Title: Every Principal-Agent Problem Has Two Solutions. AI Agents Defaulted to the Expensive One.
 - Sources: prosus.com (State of AI Agents 2026), cmr.berkeley.edu (principal-agent perspective, guided autonomy), vectoragents.ai (policy-as-code, junior employee quote), github.com/aaronjmars/aeon
+
+## 2026-06-24
+- Angle: Industry comparison (LangGraph's Redis/Postgres checkpointing infrastructure vs. Aeon's commit-on-completion model)
+- Thesis: LangGraph's Redis and PostgreSQL checkpointing infrastructure exists to protect in-flight state from mid-run crashes. When each run either commits to git or dies cleanly, that failure mode doesn't exist — and neither does the infrastructure bill.
+- Title: Before You Call It a Production Agent, Count the Databases
+- Sources: azguards.com (write-amplification in LangGraph Postgres, 1.5MB/run, 150MB/sec WAL, 99.8% reduction), rapidclaw.dev (LangGraph production stack 2026), redis.io (LangGraph-Redis integration), github.com/aaronjmars/aeon (aeon.yml, memory/, .pending-notify/, commit 0346752)
