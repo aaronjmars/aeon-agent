@@ -1,10 +1,10 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-24T06:21:26Z",
+  "last_analyzed": "2026-06-25T06:44:36Z",
   "quality_score": 4,
-  "assessment": "Good — substantive output with multi-source data integration, clear methodology, quantified metrics, and proper artifact generation (article, logs, notification)",
+  "assessment": "Substantive report with specific metrics, whale trade analysis, and clear verdict; well-structured and actionable.",
   "flags": [],
-  "avg_score": 4.08,
+  "avg_score": 4.07,
   "history": [
     {
       "date": "2026-06-12",
@@ -56,6 +56,10 @@
     },
     {
       "date": "2026-06-24",
+      "score": 4
+    },
+    {
+      "date": "2026-06-25",
       "score": 4
     }
   ]
