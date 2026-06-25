@@ -1,13 +1,9 @@
 ## Summary
 
-**star-momentum** ran for 2026-06-24. No alerts fired.
+Ran `star-momentum` for 2026-06-25 across 2 watched repos (filtered out `aaronjmars/aeon-agent`):
 
-- **aaronjmars/aeon**: 543⭐, targeting 750⭐. 7-day avg pace 4.14/day → projected crossing 2026-08-13 (Thursday), **50 days out** — outside the 7–14d Show HN dispatch window. No action.
-- **aaronjmars/minitor**: 12⭐, targeting 50⭐. 7-day avg pace 0.14/day → projected crossing 2027-03-17 (Wednesday), **266 days out** — far outside the window. No action.
+**aaronjmars/aeon** — 549⭐, targeting 750⭐ (gap: 201). 7-day pace: 4.57/day, 3-day pace: 3.33/day. Projected crossing: 2026-08-08 (Saturday) — 44 days out. **OUT_OF_WINDOW** (> 14 days).
 
-Files written:
-- `articles/star-momentum-2026-06-24.md` — projection report
-- `memory/topics/star-momentum-state.json` — updated with current projections
-- `memory/logs/2026-06-24.md` — log entry appended
+**aaronjmars/minitor** — 12⭐, targeting 50⭐ (gap: 38). 7-day pace: 0.14/day (1 star gained across the whole window). Projected crossing: 2027-03-18 (Thursday) — 266 days out. **OUT_OF_WINDOW**.
 
-Status: `STAR_MOMENTUM_NO_ALERTS` — no notification sent.
+No alerts fired. Article written to `articles/star-momentum-2026-06-25.md`, state updated in `memory/topics/star-momentum-state.json`, log appended to `memory/logs/2026-06-25.md`. Status: `STAR_MOMENTUM_NO_ALERTS`.
