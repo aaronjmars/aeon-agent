@@ -1,0 +1,125 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-06-25"
+      },
+      "children": [
+        "media-heading",
+        "media-separator",
+        "tweet-1-stack",
+        "community-heading",
+        "community-separator",
+        "tweet-2-stack",
+        "tweet-3-stack"
+      ]
+    },
+    "media-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Media",
+        "level": "h2"
+      }
+    },
+    "media-separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1-card",
+        "tweet-1-link"
+      ]
+    },
+    "tweet-1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "aeon is on YouTube now — intro video dropped, subscribe link in the comments"
+      }
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2069789485513003469"
+      }
+    },
+    "community-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Ecosystem & Community",
+        "level": "h2"
+      }
+    },
+    "community-separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2-card",
+        "tweet-2-link"
+      ]
+    },
+    "tweet-2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "community call is Friday on X Spaces — 15-20min of updates/takes first, then eco project spotlights; founders can request a speaking slot"
+      }
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2069772054694343121"
+      }
+    },
+    "tweet-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3-card",
+        "tweet-3-link"
+      ]
+    },
+    "tweet-3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "quoted a Base sim tool shipping on the eco — \"our eco is blossoming by the day\""
+      }
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2069797792852181254"
+      }
+    }
+  }
+}
