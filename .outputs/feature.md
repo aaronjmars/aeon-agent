@@ -1,20 +1,21 @@
-*Feature Built — 2026-06-24 — aaronjmars/minitor*
+*Feature Built — 2026-06-25 — aaronjmars/aeon*
 
-Required-input validation, taught at the source
+shipped the validator config-validator was already trying to call ⭐
 
-minitor columns are plugins — copy _template/, rewrite three files, ship a new source. two recent PRs (#78/#79) added trim-and-throw guards so an empty search query throws "X is required." instead of firing a wasted upstream call. but the template every new column is copied from never taught the pattern. now it does.
+config-validator's SKILL.md tells the agent to run `node scripts/validate-config.js` as its "fast path." that script was never committed. so the fast path failed every single run and the skill quietly fell back to weaker inline checks — a dangling reference inside the skill whose whole job is catching dangling references. fixed it by shipping the missing script.
 
 Why this matters:
-the column-plugin model is minitor's whole contribution surface. the reference contributors copy from had a gap the maintainer just spent two PRs closing across existing columns. the Zod schema runs first — so the docs said config.foo is "present" — true, but z.string().default("") makes "present" include "". scaffold a new column, skip the guard, ship a column that fires empty-query calls returning opaque errors. fixing it at the copy-source means every future column gets it for free.
+the inline fallback only checked skills with `enabled: true` written in single-line `{ }` form. that's 1 of 183 configured skills right now. prune a skill but leave it behind in a disabled entry, a multi-line entry, or a chains: pipeline and nothing flags it — the scheduler just fires a phantom at cron time and the run dies. this is the exact deletion-cost gap that cost four cleanup PRs back on 06-19. self-repair is the moat; the config that guards the harness shouldn't have a hole in it.
 
 What was built:
-- lib/columns/plugins/_template/server.ts — documents the guard at the top of fetch, with the canonical config.query.trim() check. comment-only, template still runs as-is.
-- lib/columns/README.md — corrects step 4 ("present" is not "non-empty") and adds a "Validate required inputs" convention with the exact pattern.
+- scripts/validate-config.js: one-pass validator, three invariant checks (checkout ordering, duplicate skill keys, skill-reference integrity)
+- checks 1 & 2 mirror the SKILL.md logic verbatim — identical behavior to the fallback, zero new false positives
+- check 3 is strengthened: validates every skills: entry (enabled or not, inline or multi-line) AND every chains: parallel/skill/consume ref resolves to skills/<name>/SKILL.md
 
 How it works:
-a throw inside a fetcher is caught by the shared API route (app/api/columns/[type]/route.ts try/catch) and rendered as the column's error state — verified against the route, not assumed. no behavior change to any shipped column. template comment + contract docs only, so the build CI is untouched.
+pure node, no deps, reads local files only. it tracks the skills: and chains: blocks by top-level-key boundaries, pulls every reference, and checks skills/<name>/SKILL.md exists. exit 0 + PASS lines = clean, exit 1 + FAIL lines = issues — the exact contract config-validator already reads. ran clean against main (183 refs resolve, no dup keys, checkout ok) and unit-tested that it catches inline, multi-line, and chain phantoms without false-flagging real skills.
 
 What's next:
-natural follow-up is a shared requireInput() helper to DRY the ~9 hand-rolled guards — held back to keep this PR focused on the contributor-facing teaching surface.
+the SKILL.md also names a pre-merge workflow ci-config-validate.yml that doesn't exist yet — wiring this into CI needs a workflows-scoped token (same blocker as the SHA-pin work). script's built to drop straight in when that token lands.
 
-PR: https://github.com/aaronjmars/minitor/pull/80
+PR: https://github.com/aaronjmars/aeon/pull/546
