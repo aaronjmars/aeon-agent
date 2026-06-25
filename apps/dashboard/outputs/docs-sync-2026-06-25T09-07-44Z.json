@@ -1,0 +1,66 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync",
+        "description": "2026-06-25"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sync_header",
+        "separator_1",
+        "pr_info"
+      ]
+    },
+    "sync_header": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website",
+        "variant": "lead"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr_stat",
+        "changelog_badge"
+      ]
+    },
+    "pr_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs",
+        "value": "1"
+      }
+    },
+    "changelog_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-triage gets Phylax security pre-screen",
+        "variant": "outline"
+      }
+    }
+  }
+}
