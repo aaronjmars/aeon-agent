@@ -1,0 +1,199 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-06-26 · STEADY"
+      },
+      "children": [
+        "repo-link",
+        "sep1",
+        "stats-container",
+        "sep2",
+        "notable-section",
+        "sep3",
+        "other-section",
+        "sep4",
+        "source"
+      ]
+    },
+    "repo-link": {
+      "type": "Link",
+      "props": {
+        "label": "aaronjmars/aeon",
+        "href": "https://github.com/aaronjmars/aeon"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stats-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stars-stat",
+        "forks-stat"
+      ]
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "552",
+        "delta": "+2",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "forks-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "191",
+        "delta": "+0",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "kyle-card"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable New Stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "kyle-card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "kyle-name",
+        "kyle-location",
+        "kyle-repos",
+        "kyle-website",
+        "kyle-bio"
+      ]
+    },
+    "kyle-name": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/QuantumLeaper — Kyle Pierce",
+        "href": "https://github.com/QuantumLeaper"
+      },
+      "children": []
+    },
+    "kyle-location": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Brno, Czechia",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "kyle-repos": {
+      "type": "Text",
+      "props": {
+        "text": "58 repos",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "kyle-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 https://naplen.com",
+        "href": "https://naplen.com"
+      },
+      "children": []
+    },
+    "kyle-bio": {
+      "type": "Text",
+      "props": {
+        "text": "I'm a senior software engineer and technical founder with 8+ years building in Web3/fintech",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "other-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "other-heading",
+        "trelmitt-link"
+      ]
+    },
+    "other-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other New Stargazers",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "trelmitt-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/trelmitt",
+        "href": "https://github.com/trelmitt"
+      },
+      "children": []
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
