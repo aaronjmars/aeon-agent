@@ -1,8 +1,5 @@
-*Tweet Digest — 2026-06-25*
+*Tweet Digest — 2026-06-26*
 
-*Theme: Media*
-@aeonframework: aeon is on YouTube now — intro video dropped, subscribe link in the comments — [link](https://x.com/aeonframework/status/2069789485513003469)
-
-*Theme: Ecosystem & Community*
-@aeonframework: community call is Friday on X Spaces — 15-20min of updates/takes first, then eco project spotlights; founders can request a speaking slot — [link](https://x.com/aeonframework/status/2069772054694343121)
-@aeonframework: quoted a Base sim tool shipping on the eco — "our eco is blossoming by the day" — [link](https://x.com/aeonframework/status/2069797792852181254)
+*Theme: Media & Onboarding* ⭐
+@aeonframework: pitches the intro video as the fastest on-ramp for first-timers — "if you've not used our framework yet" + YouTube subscribe CTA — [link](https://x.com/aeonframework/status/2070134711737851917)
+@aeonframework: "The globe is part of aeon" — declarative ecosystem frame, no elaboration — [link](https://x.com/aeonframework/status/2069792572457775511)
