@@ -1,0 +1,89 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync — 2026-06-27"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repos_text",
+        "separator_1",
+        "prs_stat",
+        "changelog_section",
+        "separator_2",
+        "pr_link"
+      ]
+    },
+    "repos_text": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "prs_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs synced",
+        "value": "11"
+      }
+    },
+    "changelog_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "changelog_label",
+        "changelog_text"
+      ]
+    },
+    "changelog_label": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog entry:",
+        "variant": "caption"
+      }
+    },
+    "changelog_text": {
+      "type": "Text",
+      "props": {
+        "text": "hardening trilogy defaults on, chain and scanner fixes",
+        "variant": "lead"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #98",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/98",
+        "source": "aaronjmars/aeon-website"
+      }
+    }
+  }
+}
