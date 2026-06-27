@@ -1,9 +1,5 @@
-*Tweet Digest — 2026-06-20*
+*Tweet Digest — 2026-06-27*
 
-*Ecosystem momentum*
-@aeonframework: projects building with aeon rising "at an unbelievable pace" — the builder base is compounding ⭐ — [link](https://x.com/aeonframework/status/2068034567995289667)
-
-*Community events (Jun 19)*
-@aeonframework: double-session day — community call at 15UTC + bankrbot agent hour at 17UTC, best way to wrap up the week ⭐ — [link](https://x.com/aeonframework/status/2067891878381457563)
-@aeonframework: weekly community call live on Spaces ⭐ — [link](https://x.com/aeonframework/status/2067984577583313075)
-@aeonframework: @aaronjmars live at bankrbot agent hour — both aeon and miroshark on the table ⭐🦈 — [link](https://x.com/aeonframework/status/2068017299022315695)
+*Theme: Onboarding & Community*
+@aeonframework: dropped a two-minute intro video — "set it up very fast & very smoothly" — pitched at anyone who has not touched the framework yet ⭐ — [link](https://x.com/aeonframework/status/2070446296842826104)
+@aeonframework: live Twitter Space fired off — "our community call is about to begin" — called the aeon fam in real time ⭐ — [link](https://x.com/aeonframework/status/2070522948478267753)

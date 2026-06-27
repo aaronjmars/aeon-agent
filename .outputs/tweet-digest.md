@@ -1,5 +1,5 @@
-*Tweet Digest — 2026-06-26*
+*Tweet Digest — 2026-06-27*
 
-*Theme: Media & Onboarding* ⭐
-@aeonframework: pitches the intro video as the fastest on-ramp for first-timers — "if you've not used our framework yet" + YouTube subscribe CTA — [link](https://x.com/aeonframework/status/2070134711737851917)
-@aeonframework: "The globe is part of aeon" — declarative ecosystem frame, no elaboration — [link](https://x.com/aeonframework/status/2069792572457775511)
+*Theme: Onboarding & Community*
+@aeonframework: dropped a two-minute intro video — "set it up very fast & very smoothly" — pitched at anyone who has not touched the framework yet ⭐ — [link](https://x.com/aeonframework/status/2070446296842826104)
+@aeonframework: live Twitter Space fired off — "our community call is about to begin" — called the aeon fam in real time ⭐ — [link](https://x.com/aeonframework/status/2070522948478267753)
