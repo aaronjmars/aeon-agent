@@ -1,10 +1,10 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-27T06:12:14Z",
-  "quality_score": 5,
-  "assessment": "Excellent — substantive metrics with verified sources, insightful interpretation (volume-constrained consolidation), and continuity setup for delta tracking.",
+  "last_analyzed": "2026-06-28T06:44:51Z",
+  "quality_score": 4,
+  "assessment": "Substantive, well-structured token report with specific metrics, clear reasoning, and documented completion",
   "flags": [],
-  "avg_score": 4.13,
+  "avg_score": 4.12,
   "history": [
     {
       "date": "2026-06-12",
@@ -69,6 +69,10 @@
     {
       "date": "2026-06-27",
       "score": 5
+    },
+    {
+      "date": "2026-06-28",
+      "score": 4
     }
   ]
 }
