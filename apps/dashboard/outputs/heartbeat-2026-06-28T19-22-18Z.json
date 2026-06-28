@@ -1,0 +1,53 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_stalled",
+        "pr_list"
+      ]
+    },
+    "alert_stalled": {
+      "type": "Alert",
+      "props": {
+        "title": "🟡 STALLED",
+        "message": "Awaiting operator merge",
+        "type": "warning"
+      }
+    },
+    "pr_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_558",
+        "pr_559"
+      ]
+    },
+    "pr_558": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #558: vigil skill: 9→17 tools",
+        "href": "https://github.com/aaronjmars/aeon/pull/558",
+        "source": "aaronjmars/aeon",
+        "score": "open 37h"
+      }
+    },
+    "pr_559": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #559: phylax-audit hosted-engine fast path",
+        "href": "https://github.com/aaronjmars/aeon/pull/559",
+        "source": "aaronjmars/aeon",
+        "score": "open 27h"
+      }
+    }
+  }
+}
