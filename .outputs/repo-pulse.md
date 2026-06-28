@@ -1,11 +1,11 @@
-*Repo Pulse — 2026-06-26* — [STEADY]
-aaronjmars/aeon — stars 552 (+2) · forks 191 (+0)
+*Repo Pulse — 2026-06-28* — [STEADY]
+aaronjmars/aeon — stars 556 (+2)
 
 Notable new stargazers:
-github.com/QuantumLeaper — Kyle Pierce · 📍 Brno, Czechia · 58 repos · 🌐 https://naplen.com
-  "I'm a senior software engineer and technical founder with 8+ years building in Web3/fintech"
+github.com/JoeyBurzynski — Joey Burzynski · 📍 Miami Beach, Florida · 🏢 MarketKarma · 151 repos · 🌐 marketkarma.com · 🐦 @JoeyBurzynski · 95 followers
+  "SEO expert, full-stack developer, technophile. Founder & CTO of @MarketKarma in Miami Beach, Florida."
 
 Other new stargazers:
-github.com/trelmitt
+github.com/alexgutts
 
 Source: events

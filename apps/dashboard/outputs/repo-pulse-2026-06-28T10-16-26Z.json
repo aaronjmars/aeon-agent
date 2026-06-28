@@ -1,0 +1,190 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "header",
+        "repo-stat",
+        "sep1",
+        "notable-section",
+        "sep2",
+        "other-section",
+        "sep3",
+        "source"
+      ]
+    },
+    "header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "date",
+        "status"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-06-28"
+      }
+    },
+    "status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY"
+      }
+    },
+    "repo-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "aaronjmars/aeon",
+        "value": "556",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "notable-heading",
+        "joey"
+      ]
+    },
+    "notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers",
+        "level": "h3"
+      }
+    },
+    "joey": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "joey-profile",
+        "joey-bio"
+      ]
+    },
+    "joey-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "joey-github",
+        "joey-meta-text",
+        "joey-website",
+        "joey-twitter"
+      ]
+    },
+    "joey-github": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/JoeyBurzynski",
+        "href": "https://github.com/JoeyBurzynski"
+      }
+    },
+    "joey-meta-text": {
+      "type": "Text",
+      "props": {
+        "text": "— Joey Burzynski · 📍 Miami Beach, Florida · 🏢 MarketKarma · 151 repos",
+        "variant": "caption"
+      }
+    },
+    "joey-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 marketkarma.com",
+        "href": "https://marketkarma.com"
+      }
+    },
+    "joey-twitter": {
+      "type": "Text",
+      "props": {
+        "text": "🐦 @JoeyBurzynski · 95 followers",
+        "variant": "caption"
+      }
+    },
+    "joey-bio": {
+      "type": "Text",
+      "props": {
+        "text": "SEO expert, full-stack developer, technophile. Founder & CTO of @MarketKarma in Miami Beach, Florida."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "other-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "other-heading",
+        "alexgutts"
+      ]
+    },
+    "other-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h3"
+      }
+    },
+    "alexgutts": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/alexgutts",
+        "href": "https://github.com/alexgutts"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      }
+    }
+  }
+}
