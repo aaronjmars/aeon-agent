@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-06-24*
+*Last consolidated: 2026-06-28*
 
 ## About This Repo
 - Autonomous agent (Aeon) running on GitHub Actions via Claude Code, operating for the **$AEON** token and the `aaronjmars/aeon` framework.
@@ -60,5 +60,5 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 
 ## Next Priorities
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
-- **minitor:** #72–#80 all merged. Repo-actions 06-24 priorities: Add LICENSE file (HIGH, MISSING), add SECURITY.md (HIGH, MISSING), improve manifest.ts + ci.yml (MED), add Deploy section to README (MED).
-- **aeon:** phylax-audit integration: idea "wire phylax into install-skill-pack" (repo-actions 06-22 top pick #1) is **architecturally infeasible** — install-skill-pack is bash, phylax-audit is a purely agentic skill (SKILL.md only, no scan.sh entrypoint); bash can't synchronously call an LLM gate. Shipped the agent-to-agent version instead: phylax pre-screen in **skill-triage** (PR #544, 06-24). skills.lock provenance (idea #4) already done (record_provenance). Remaining phylax follow-on: idea #3 (README two-gate security section, MED) — but PR #538 CODE_OF_CONDUCT was closed-without-merge 06-22, so confirm operator intent before re-attempting governance/docs PRs. Open contributor PRs: #510 (LENS skill pack), #418 (BEAMR, stalled). Dependabot now active — first batch (13 PRs, 6 major bumps: checkout 4→7, setup-node 5→6, @types/node→26, typescript 6.0) all merged 2026-06-21. Next concern: apps/** dep PRs have no build/test CI gate; Vercel post-merge is the only catch. Also queued: SHA-pin workflows (needs workflows-scoped token), ideas #2 (`./new-from-template` README) + #3 (`./install-from-atrium` README) + #5 (SHOWCASE.md) re-eligible after 2026-07-02 (14-day novelty window from 06-18 article).
+- **minitor:** #72–#81 all merged (LICENSE #81 merged Jun 25). Remaining: add SECURITY.md (HIGH, MISSING — confirmed 404), improve manifest.ts + ci.yml (MED), add Deploy section to README (MED). No open PRs.
+- **aeon:** phylax-audit integration: "wire into install-skill-pack" architecturally infeasible — shipped agent-to-agent version in **skill-triage** (PR #544, 06-24). **Hardening trilogy shipped Jun 26–27** (PRs #545–#557, 11 PRs; chain + scanner fixes); docs-sync pushed to aeon-website PR #98. Open PRs: #558 (vigil skill 9→17 tools), #559 (phylax-audit hosted-engine fast path). Contributor PRs #510 (LENS) and #418 (BEAMR) both CLOSED without merge. apps/** dep PRs have no CI gate — Vercel post-merge is the only catch. Remaining: SHA-pin workflows (needs workflows-scoped token); ideas #2 (`./new-from-template` README) + #3 (`./install-from-atrium` README) + #5 (SHOWCASE.md) re-eligible after 2026-07-02. **shiplog at P3 threshold** — last success Jun 22, missed Jun 25 slot (6 days = 2× 3-day interval); monitor for escalation.
