@@ -1,5 +1,7 @@
-*Tweet Digest — 2026-06-27*
+## Summary
 
-*Theme: Onboarding & Community*
-@aeonframework: dropped a two-minute intro video — "set it up very fast & very smoothly" — pitched at anyone who has not touched the framework yet ⭐ — [link](https://x.com/aeonframework/status/2070446296842826104)
-@aeonframework: live Twitter Space fired off — "our community call is about to begin" — called the aeon fam in real time ⭐ — [link](https://x.com/aeonframework/status/2070522948478267753)
+- Read `memory/topics/tracked-accounts.yml`: one account tracked — `@aeonframework`
+- Read cached XAI data from `.xai-cache/tweet-digest-aeonframework.json`: 5 tweets fetched (Jun 25–28)
+- Dedup against Jun 26 and Jun 27 logs: 3 URLs already reported; 2 remaining tweets were thin content (a filler "See you later fam" and a bare YouTube URL)
+- **0 new notable tweets** — no notification sent
+- Appended `TWEET_DIGEST_OK` entry to `memory/logs/2026-06-28.md`
