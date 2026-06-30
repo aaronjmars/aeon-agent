@@ -1,11 +1,12 @@
-*Repo Pulse — 2026-06-28* — [STEADY]
-aaronjmars/aeon — stars 556 (+2)
-
-Notable new stargazers:
-github.com/JoeyBurzynski — Joey Burzynski · 📍 Miami Beach, Florida · 🏢 MarketKarma · 151 repos · 🌐 marketkarma.com · 🐦 @JoeyBurzynski · 95 followers
-  "SEO expert, full-stack developer, technophile. Founder & CTO of @MarketKarma in Miami Beach, Florida."
+*Repo Pulse — 2026-06-30* — [STEADY]
+aaronjmars/aeon — stars 560 (+1) · forks 196 (+2)
 
 Other new stargazers:
-github.com/alexgutts
+github.com/Jetsadaporn87
+
+New forks:
+github.com/freezerboi/aeon — freezer · 1 repo · 🐦 @freezer_boi
+  "designer dabbling w. front end dev"
+github.com/mntllcgames-blip/aeon
 
 Source: events

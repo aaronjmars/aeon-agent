@@ -1,0 +1,188 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-06-30"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status_badge",
+        "repo_stats",
+        "sep1",
+        "stargazers_section",
+        "sep2",
+        "forks_section",
+        "sep3",
+        "source"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      }
+    },
+    "repo_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_name",
+        "stats_row"
+      ]
+    },
+    "repo_name": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "lead"
+      }
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stars_stat",
+        "forks_stat"
+      ]
+    },
+    "stars_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "stars",
+        "value": "560",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "forks_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "forks",
+        "value": "196",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazer_1"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazer_1": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Jetsadaporn87",
+        "href": "https://github.com/Jetsadaporn87"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks_heading",
+        "fork_1",
+        "fork_2"
+      ]
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New Forks",
+        "level": "h3"
+      }
+    },
+    "fork_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork_1_link",
+        "fork_1_meta"
+      ]
+    },
+    "fork_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "freezerboi/aeon",
+        "href": "https://github.com/freezerboi/aeon",
+        "source": "freezer"
+      }
+    },
+    "fork_1_meta": {
+      "type": "Text",
+      "props": {
+        "text": "1 repo · 🐦 @freezer_boi — \"designer dabbling w. front end dev\"",
+        "variant": "caption"
+      }
+    },
+    "fork_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "mntllcgames-blip/aeon",
+        "href": "https://github.com/mntllcgames-blip/aeon"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      }
+    }
+  }
+}
