@@ -1,0 +1,56 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-06-30"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme_text",
+        "separator_1",
+        "tweet_card",
+        "link_tweet"
+      ]
+    },
+    "theme_text": {
+      "type": "Text",
+      "props": {
+        "text": "Theme: Ecosystem & Community",
+        "variant": "lead"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Community Call #6 recap — miroshark sim product is live, someone built an Aeon agent running a Vitalik soul.md, and three builders got spotlighted (@gitkernal, @vigilcodes, @aeoncityhub)."
+      }
+    },
+    "link_tweet": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2071571585912254810"
+      }
+    }
+  }
+}
