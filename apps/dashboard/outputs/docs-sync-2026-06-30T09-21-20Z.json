@@ -1,0 +1,67 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync",
+        "description": "2026-06-30"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sync-info",
+        "sep1",
+        "prs-stat",
+        "changelog-entry",
+        "sep2",
+        "pr-link"
+      ]
+    },
+    "sync-info": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "prs-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs",
+        "value": "9"
+      }
+    },
+    "changelog-entry": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog entry: 21 skills backported, vigil at 17 tools"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #103",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/103",
+        "source": "aeon-website"
+      }
+    }
+  }
+}
