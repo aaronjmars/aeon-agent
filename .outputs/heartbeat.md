@@ -1,10 +1,8 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+HEARTBEAT_OK · STATUS_PAGE=OK
 
-All checks complete:
+## Summary
 
-- **P0:** Clean — all 7 enabled skills healthy (100% success rate, 0 consecutive failures). Heartbeat self-check within 36h window.
-- **P1:** PR #559 (`phylax-audit` hosted-engine fast path) still open on `aaronjmars/aeon` at 3 days. Deduped from yesterday's log — no new notification sent.
-- **P2:** Clean — no new flagged memory items.
-- **P3:** Clean — all enabled skills within their schedule intervals.
-
-`docs/status.md` regenerated with updated token pulse (AEON $0.00002134, −5.0%, QUIET verdict) and current fleet health. Overall status: **🟡 WATCH** (stalled PR #559 keeps the page off green).
+- **P0–P3:** All clean. 7 enabled skills, all 100% success rate, 0 consecutive failures. Heartbeat self-check within 36h window.
+- **PRs:** Three new PRs (#580 dep bump, #581 skill consolidation, #582 verdikta-hunter) all opened today, none stalled. Prior watch item PR #559 no longer open.
+- **docs/status.md** regenerated: 🟢 OK, token pulse updated (AEON $0.0000182, -14.6%, CONSOLIDATING, $1.82M FDV from today's report).
+- Log entry appended to `memory/logs/2026-07-01.md`.
