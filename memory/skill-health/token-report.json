@@ -1,10 +1,10 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-06-30T06:39:14Z",
+  "last_analyzed": "2026-07-01T06:58:56Z",
   "quality_score": 4,
-  "assessment": "Good — substantive, well-sourced daily report with clear narrative (QUIET verdict) and complete artifact trail (article, logs, notification).",
+  "assessment": "Substantive report with real data, proper source validation, and complete execution (files created, notification sent).",
   "flags": [],
-  "avg_score": 4.11,
+  "avg_score": 4.1,
   "history": [
     {
       "date": "2026-06-12",
@@ -80,6 +80,10 @@
     },
     {
       "date": "2026-06-30",
+      "score": 4
+    },
+    {
+      "date": "2026-07-01",
       "score": 4
     }
   ]

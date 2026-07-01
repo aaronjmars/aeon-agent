@@ -1,9 +1,9 @@
-*$AEON — QUIET*
+*$AEON — CONSOLIDATING*
 
-Volume collapsed to 0.4× the 7d mean as price slid −5.0% on the lightest session this week — zero whale trades, buy/sell ratio down from 1.95 to 1.55.
+Dropped 14.6% to $0.00001823 on 1.36× average volume — distributed sellers, no whale prints, buyers still present (195 vs 164 sells).
 
-Price $0.00002134 (−5.0% 24h) | Liq $1,001.9K (−2.5%) | Vol $43.9K (0.4× 7d)
-Buys/Sells 99/64 (ratio 1.55) | Whales: 0
-Treasury: 6.0000 ETH (±0.00 24h)
+Price $0.00001823 (-14.6% 24h) | Liq $880.5K (-12.1%) | Vol $89.5K (1.36× 7d)
+Buys/Sells 195/164 (ratio 1.19) | Whales: 0
+Treasury: 6.0000 ETH (unchanged)
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
