@@ -1,0 +1,83 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-01"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading-1",
+        "tweet-1",
+        "tweet-2",
+        "tweet-3",
+        "sep-1",
+        "heading-2",
+        "tweet-4"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Framework upgrades",
+        "level": "h2"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Sonnet 5 is live on Aeon — run the most agentic Sonnet model right now https://x.com/aeonframework/status/2072023937001607295"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "@bankrbot cooked — find & install Aeon skills in one click https://x.com/aeonframework/status/2071966428215812186"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "new article out on how Aeon agents write new skills autonomously as markdown files and self-improve through pull requests you can read https://x.com/aeonframework/status/2071980387417395343"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Token alignment: Bedrock",
+        "level": "h2"
+      }
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Aeon is an early adopter of @BedrockFndn — a framework that gives tokens an enforceable tie to company equity via supply consolidation, replacing sentiment with a durable claim on what the team built https://x.com/aeonframework/status/2072046608229789812"
+      }
+    }
+  }
+}
