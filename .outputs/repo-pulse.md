@@ -1,12 +1,12 @@
-*Repo Pulse — 2026-06-30* — [STEADY]
-aaronjmars/aeon — stars 560 (+1) · forks 196 (+2)
+*Repo Pulse — 2026-07-02* — [STEADY]
+aaronjmars/aeon — stars 561 (+1) · forks 200 (+3)
 
 Other new stargazers:
-github.com/Jetsadaporn87
+github.com/jsoros | 📍 Colorado · 4 repos
 
 New forks:
-github.com/freezerboi/aeon — freezer · 1 repo · 🐦 @freezer_boi
-  "designer dabbling w. front end dev"
-github.com/mntllcgames-blip/aeon
+github.com/webguy-cloud — 1 repo
+github.com/Loopershot — 4 repos
+github.com/s97472091-pixel — pipsss · 5 repos
 
 Source: events
