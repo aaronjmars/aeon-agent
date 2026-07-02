@@ -1,0 +1,46 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest"
+      },
+      "children": [
+        "heading-date",
+        "text-theme",
+        "separator",
+        "tweet-1"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-07-02",
+        "level": "h2"
+      }
+    },
+    "text-theme": {
+      "type": "Text",
+      "props": {
+        "text": "Theme: Ecosystem / Partner gateways",
+        "variant": "muted"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Welcomed Venice.ai as a supported inference gateway on the autonomous framework — https://x.com/aeonframework/status/2072368935488414165"
+      }
+    }
+  }
+}
