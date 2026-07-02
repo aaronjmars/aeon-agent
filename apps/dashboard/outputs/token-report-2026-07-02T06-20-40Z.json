@@ -1,0 +1,121 @@
+{
+  "root": "card-token-report",
+  "state": {},
+  "elements": {
+    "card-token-report": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING"
+      },
+      "children": [
+        "narrative",
+        "key-metrics",
+        "separator-1",
+        "trade-metrics",
+        "treasury",
+        "chart"
+      ]
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price at $0.00001777 (−2.5% 24h) on 0.9× average volume — 8 whale trades hit both ways (4/4 buy/sell split), no directional edge. Liquidity edged up 1.2% to $891K despite the soft price. 7d trend still −30%.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "key-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001777",
+        "delta": "−2.5%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$891.1K",
+        "delta": "+1.2%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$71.5K",
+        "delta": "0.9× 7d avg"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "trade-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "buys-sells",
+        "whales"
+      ]
+    },
+    "buys-sells": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 109/105 (ratio 1.04)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale trades",
+        "value": "8"
+      },
+      "children": []
+    },
+    "treasury": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury",
+        "value": "6.0000 ETH",
+        "delta": "+0.00 24h"
+      },
+      "children": []
+    },
+    "chart": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GeckoTerminal Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      },
+      "children": []
+    }
+  }
+}
