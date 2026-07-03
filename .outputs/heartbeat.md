@@ -1,1 +1,5 @@
-🟡 WATCH — PR #582 stalled 25h (verdikta-hunter skill, s97472091-pixel): https://github.com/aaronjmars/aeon/pull/582 | Ideas #2/3/5 now re-eligible (./new-from-template README, ./install-from-atrium README, SHOWCASE.md — hold date 2026-07-02 passed)
+🟡 WATCH
+
+🔵 MEMORY: minitor SECURITY.md still MISSING (HIGH) — no PR opened yet. Confirmed 404 via MEMORY.md Next Priorities.
+
+P0/P1/P3 clean — all 7 enabled skills green, no open PRs.
