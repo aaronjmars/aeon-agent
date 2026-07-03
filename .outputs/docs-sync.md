@@ -1,4 +1,4 @@
-*Docs Sync — 2026-06-30*
+*Docs Sync — 2026-07-03*
 aaronjmars/aeon → aaronjmars/aeon-website
-9 new PRs → changelog entry "21 skills backported, vigil at 17 tools"
-PR: https://github.com/aaronjmars/aeon-website/pull/103
+12 new PRs → changelog entry "API-key audit, repair ledger, cadence-free shiplog"
+PR: https://github.com/aaronjmars/aeon-website/pull/117
