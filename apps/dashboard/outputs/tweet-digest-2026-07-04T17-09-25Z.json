@@ -1,0 +1,58 @@
+{
+  "root": "root_card",
+  "state": {},
+  "elements": {
+    "root_card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-04"
+      },
+      "children": [
+        "tweet1_heading",
+        "tweet1",
+        "sep1",
+        "tweet2_heading",
+        "tweet2"
+      ]
+    },
+    "tweet1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Governance & Corp Structure",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "Aeon is one of the first projects to fully incorporate under @BedrockFndn — live $AEON token, public treasury, and a constitution that ties the two together; transparency dashboard walkthrough at aeon.fun covers the B1 40/40 and buyout mechanics — [link](https://x.com/aeonframework/status/2073084496547647587)"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: New Integration",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "Grok Build by @xai now supported on Aeon — connect via X account or Grok subscription to use the autonomous agent framework — [link](https://x.com/aeonframework/status/2073078038221193561)"
+      },
+      "children": []
+    }
+  }
+}
