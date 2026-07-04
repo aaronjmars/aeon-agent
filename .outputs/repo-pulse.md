@@ -1,12 +1,10 @@
-*Repo Pulse — 2026-07-02* — [STEADY]
-aaronjmars/aeon — stars 561 (+1) · forks 200 (+3)
+*Repo Pulse — 2026-07-04* — [STEADY]
+aaronjmars/aeon — stars 565 (+2) · forks 201 (+0)
+
+Notable new stargazers:
+github.com/Saloframes — Saloframes · 29 repos · 27 followers
 
 Other new stargazers:
-github.com/jsoros | 📍 Colorado · 4 repos
-
-New forks:
-github.com/webguy-cloud — 1 repo
-github.com/Loopershot — 4 repos
-github.com/s97472091-pixel — pipsss · 5 repos
+github.com/btcneth
 
 Source: events

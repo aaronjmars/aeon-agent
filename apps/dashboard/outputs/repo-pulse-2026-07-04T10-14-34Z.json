@@ -1,0 +1,123 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-07-04"
+      },
+      "children": [
+        "badge_status",
+        "heading_repo",
+        "stack_metrics",
+        "separator_1",
+        "heading_notable",
+        "link_saloframes",
+        "separator_2",
+        "heading_other",
+        "link_btcneth",
+        "separator_3",
+        "text_source"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      }
+    },
+    "heading_repo": {
+      "type": "Heading",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "level": "h2"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "565",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "201",
+        "delta": "+0",
+        "trend": "neutral"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_notable": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers",
+        "level": "h3"
+      }
+    },
+    "link_saloframes": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Saloframes",
+        "href": "https://github.com/Saloframes",
+        "source": "29 repos · 27 followers"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h3"
+      }
+    },
+    "link_btcneth": {
+      "type": "StoryLink",
+      "props": {
+        "title": "btcneth",
+        "href": "https://github.com/btcneth"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      }
+    }
+  }
+}
