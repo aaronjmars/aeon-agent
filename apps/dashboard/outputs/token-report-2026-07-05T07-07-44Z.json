@@ -1,0 +1,127 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report"
+      },
+      "children": [
+        "status_text",
+        "narrative_text",
+        "separator1",
+        "price_stat",
+        "liq_stat",
+        "vol_stat",
+        "buysells_text",
+        "whales_stat",
+        "treasury_stat",
+        "separator2",
+        "spike_text",
+        "chart_link"
+      ]
+    },
+    "status_text": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "narrative_text": {
+      "type": "Text",
+      "props": {
+        "text": "Price off 3.9% on 0.88× average volume; an intraday spike to $0.000022891 at 03:33 UTC absorbed before close.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002093",
+        "delta": "−3.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "liq_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1,037.7K",
+        "delta": "−0.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$58.2K",
+        "delta": "0.88× 7d avg"
+      },
+      "children": []
+    },
+    "buysells_text": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 41/63 (ratio 0.65)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "whales_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "10"
+      },
+      "children": []
+    },
+    "treasury_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Treasury",
+        "value": "6.0000 ETH",
+        "delta": "0.0000 24h",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "spike_text": {
+      "type": "Text",
+      "props": {
+        "text": "Intraday spike: $0.000022891 at 03:33 UTC (absorbed before close)",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "View chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}
