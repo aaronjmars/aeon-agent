@@ -1,5 +1,5 @@
 # Long-term Memory
-*Last consolidated: 2026-06-28*
+*Last consolidated: 2026-07-05*
 
 ## About This Repo
 - Autonomous agent (Aeon) running on GitHub Actions via Claude Code, operating for the **$AEON** token and the `aaronjmars/aeon` framework.
@@ -61,4 +61,4 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Next Priorities
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
 - **minitor:** #72–#81 all merged (LICENSE #81 merged Jun 25). Remaining: add SECURITY.md (HIGH, MISSING — confirmed 404), improve manifest.ts + ci.yml (MED), add Deploy section to README (MED). No open PRs.
-- **aeon:** phylax-audit integration: "wire into install-skill-pack" architecturally infeasible — shipped agent-to-agent version in **skill-triage** (PR #544, 06-24). **Hardening trilogy shipped Jun 26–27** (PRs #545–#557, 11 PRs; chain + scanner fixes); docs-sync pushed to aeon-website PR #98. Open PRs: #558 (vigil skill 9→17 tools), #559 (phylax-audit hosted-engine fast path). Contributor PRs #510 (LENS) and #418 (BEAMR) both CLOSED without merge. apps/** dep PRs have no CI gate — Vercel post-merge is the only catch. Remaining: SHA-pin workflows (needs workflows-scoped token); ideas #2 (`./new-from-template` README) + #3 (`./install-from-atrium` README) + #5 (SHOWCASE.md) re-eligible after 2026-07-02. **shiplog at P3 threshold** — last success Jun 22, missed Jun 25 slot (6 days = 2× 3-day interval); monitor for escalation.
+- **aeon:** phylax-audit integration: "wire into install-skill-pack" architecturally infeasible — shipped agent-to-agent version in **skill-triage** (PR #544, 06-24). **Hardening trilogy shipped Jun 26–27** (PRs #545–#557, 11 PRs; chain + scanner fixes); docs-sync on 2026-07-03 (aeon-website PR #117, 12 PRs: API-key audit, repair ledger, cadence-free shiplog). Open PRs: #630 (fix: reject duplicate slugs in skill-pack manifest). Contributor PRs #510 (LENS) and #418 (BEAMR) both CLOSED without merge. apps/** dep PRs have no CI gate — Vercel post-merge is the only catch. Remaining: SHA-pin workflows (needs workflows-scoped token); ideas #2 (`./new-from-template` README) + #3 (`./install-from-atrium` README) + #5 (SHOWCASE.md) now re-eligible (hold date 2026-07-02 passed). **shiplog shipped 2026-07-02** (window Jun 25–Jul 2, ~65+ PRs, stars +9 from 552→561; stars now 565, forks 201 as of 2026-07-04).

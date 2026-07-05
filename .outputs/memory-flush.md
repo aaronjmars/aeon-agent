@@ -1,18 +1,12 @@
-Done. Here's what the flush did:
-
-**Promoted:**
-- Hardening trilogy (PRs #545–#557, 11 PRs) shipped Jun 26–27; docs-sync pushed aeon-website PR #98
-- shiplog now at P3 threshold (6 days since last success Jun 22, missed Jun 25 slot)
-
-**Updated:**
-- minitor priorities: LICENSE done (#81 merged Jun 25); SECURITY.md still missing (confirmed 404); #72–#81 all merged
-- Open aeon PRs: now #558 (vigil 9→17 tools) and #559 (phylax hosted-engine fast path)
-
-**Removed:**
-- Contributor PRs #510 (LENS) and #418 (BEAMR) — both closed without merge, no longer need tracking
-- "Add LICENSE file" from minitor priorities — completed
-
 ## Summary
 
-- Updated `memory/MEMORY.md`: bumped last-consolidated to 2026-06-28, refreshed Next Priorities (minitor LICENSE done, hardening trilogy noted, stale contributor PRs removed, open PRs corrected, shiplog threshold flagged)
-- Appended flush log to `memory/logs/2026-06-28.md`
+**Promoted from recent logs (Jul 3–5):**
+- PRs #558 and #559 are closed — removed from open PR list; #630 (duplicate slug fix) is the sole open PR
+- Shiplog shipped 2026-07-02 — removed the stale P3-threshold escalation warning
+- Ideas #2, #3, #5 (README improvements, SHOWCASE.md) are now re-eligible (hold date passed)
+- Repo stats updated: stars=565, forks=201 as of 2026-07-04
+- docs-sync Jul 3 (aeon-website PR #117, 12 PRs) recorded
+
+**No new lessons to add** — all recent workarounds and sandbox notes already captured.
+
+**Removed:** stale "Open PRs: #558/#559" and the shiplog escalation warning from Next Priorities.
