@@ -1,10 +1,10 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-07-05T07:07:44Z",
-  "quality_score": 5,
-  "assessment": "Excellent — substantive data with specific wallet addresses, time-of-day impact analysis, clear verdict reasoning (explains threshold logic for CONSOLIDATING vs SLIDING), well-sourced, actionable, and includes process documentation.",
+  "last_analyzed": "2026-07-06T06:16:20Z",
+  "quality_score": 4,
+  "assessment": "Substantive market analysis with well-reasoned verdict, specific metrics (liquidity -$79.5K, buy/sell flip), proper file/notification output, and correct classification logic",
   "flags": [],
-  "avg_score": 4.13,
+  "avg_score": 4.12,
   "history": [
     {
       "date": "2026-06-12",
@@ -101,6 +101,10 @@
     {
       "date": "2026-07-05",
       "score": 5
+    },
+    {
+      "date": "2026-07-06",
+      "score": 4
     }
   ]
 }
