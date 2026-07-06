@@ -1,10 +1,10 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-05T17:28:49Z",
-  "quality_score": 4,
-  "assessment": "Skill ran correctly with smart filtering — proper deduplication, identified non-substantive content, avoided false notifications, logged status.",
+  "last_analyzed": "2026-07-06T17:11:03Z",
+  "quality_score": 3,
+  "assessment": "Skill ran successfully with proper deduplication, filtering, and logging; however, output signal is low (1 new notable tweet from 5 cached).",
   "flags": [],
-  "avg_score": 4,
+  "avg_score": 3.95,
   "history": [
     {
       "date": "2026-06-16",
@@ -89,6 +89,10 @@
     {
       "date": "2026-07-05",
       "score": 4
+    },
+    {
+      "date": "2026-07-06",
+      "score": 3
     }
   ]
 }
