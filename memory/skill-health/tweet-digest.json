@@ -1,10 +1,10 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-06T17:11:03Z",
-  "quality_score": 3,
-  "assessment": "Skill ran successfully with proper deduplication, filtering, and logging; however, output signal is low (1 new notable tweet from 5 cached).",
+  "last_analyzed": "2026-07-07T17:04:15Z",
+  "quality_score": 4,
+  "assessment": "Completed successfully with substantive output — 2 specific tweets on Aeon ecosystem activity, proper deduplication logic, details included, notification and logging followed.",
   "flags": [],
-  "avg_score": 3.95,
+  "avg_score": 3.96,
   "history": [
     {
       "date": "2026-06-16",
@@ -93,6 +93,10 @@
     {
       "date": "2026-07-06",
       "score": 3
+    },
+    {
+      "date": "2026-07-07",
+      "score": 4
     }
   ]
 }
