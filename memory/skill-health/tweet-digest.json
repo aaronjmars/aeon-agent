@@ -1,8 +1,8 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-07T17:04:15Z",
+  "last_analyzed": "2026-07-08T17:36:09Z",
   "quality_score": 4,
-  "assessment": "Completed successfully with substantive output — 2 specific tweets on Aeon ecosystem activity, proper deduplication logic, details included, notification and logging followed.",
+  "assessment": "Skill ran successfully, found 2 substantive tweets related to framework ecosystem, integrated properly with memory/notification/logging systems",
   "flags": [],
   "avg_score": 3.96,
   "history": [
@@ -96,6 +96,10 @@
     },
     {
       "date": "2026-07-07",
+      "score": 4
+    },
+    {
+      "date": "2026-07-08",
       "score": 4
     }
   ]
