@@ -1,8 +1,8 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-07-07T07:05:04Z",
-  "quality_score": 5,
-  "assessment": "Insightful analysis with specific on-chain metrics, whale tracking, buy/sell ratio insight (2.61x despite flat price), and state preservation for tomorrow's deltas.",
+  "last_analyzed": "2026-07-08T06:54:57Z",
+  "quality_score": 4,
+  "assessment": "Substantive, well-structured report with specific metrics, whale trade analysis, cross-verification, and proper documentation trail.",
   "flags": [],
   "avg_score": 4.15,
   "history": [
@@ -109,6 +109,10 @@
     {
       "date": "2026-07-07",
       "score": 5
+    },
+    {
+      "date": "2026-07-08",
+      "score": 4
     }
   ]
 }
