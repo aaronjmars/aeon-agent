@@ -1,7 +1,11 @@
-*Repo Pulse — 2026-07-06* — [STEADY]
-aaronjmars/aeon — stars 568 (+1) · forks 201 (+0)
+*Repo Pulse — 2026-07-08* — [STEADY]
+aaronjmars/aeon — stars 571 (+1) · forks 205 (+2)
 
-Other new stargazers:
-github.com/RexHammack
+Notable new stargazers:
+github.com/Ambi93 — Amber Lewis · 📍 Port Macquarie, NSW Australia · 86 repos · 87 followers
+
+New forks:
+github.com/KingKaonix — 20 repos
+github.com/Aluma — Aluma · 62 repos
 
 Source: events

@@ -1,0 +1,230 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-07-08"
+      },
+      "children": [
+        "status_badge",
+        "repo_header",
+        "stats_section",
+        "sep1",
+        "stargazers_section",
+        "sep2",
+        "forks_section",
+        "source_text"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      }
+    },
+    "repo_header": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon",
+        "variant": "lead"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "571",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "205",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers_heading",
+        "stargazer_entry"
+      ]
+    },
+    "stargazers_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers",
+        "level": "h3"
+      }
+    },
+    "stargazer_entry": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stargazer_link",
+        "stargazer_name",
+        "stargazer_location",
+        "stargazer_stats"
+      ]
+    },
+    "stargazer_link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Ambi93",
+        "href": "https://github.com/Ambi93"
+      }
+    },
+    "stargazer_name": {
+      "type": "Text",
+      "props": {
+        "text": "Amber Lewis",
+        "variant": "body"
+      }
+    },
+    "stargazer_location": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Port Macquarie, NSW Australia",
+        "variant": "caption"
+      }
+    },
+    "stargazer_stats": {
+      "type": "Text",
+      "props": {
+        "text": "86 repos · 87 followers",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks_heading",
+        "forks_list"
+      ]
+    },
+    "forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1_entry",
+        "fork2_entry"
+      ]
+    },
+    "fork1_entry": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1_link",
+        "fork1_stats"
+      ]
+    },
+    "fork1_link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/KingKaonix",
+        "href": "https://github.com/KingKaonix"
+      }
+    },
+    "fork1_stats": {
+      "type": "Text",
+      "props": {
+        "text": "20 repos",
+        "variant": "caption"
+      }
+    },
+    "fork2_entry": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork2_link",
+        "fork2_name",
+        "fork2_stats"
+      ]
+    },
+    "fork2_link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Aluma",
+        "href": "https://github.com/Aluma"
+      }
+    },
+    "fork2_name": {
+      "type": "Text",
+      "props": {
+        "text": "Aluma",
+        "variant": "body"
+      }
+    },
+    "fork2_stats": {
+      "type": "Text",
+      "props": {
+        "text": "62 repos",
+        "variant": "caption"
+      }
+    },
+    "source_text": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      }
+    }
+  }
+}
