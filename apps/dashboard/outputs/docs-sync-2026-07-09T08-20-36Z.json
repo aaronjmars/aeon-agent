@@ -1,0 +1,115 @@
+{
+  "root": "card-docs-sync",
+  "state": {},
+  "elements": {
+    "card-docs-sync": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync",
+        "description": "2026-07-09"
+      },
+      "children": [
+        "stack-main",
+        "sep-final",
+        "story-pr"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-repos",
+        "stat-prs",
+        "sep-2",
+        "text-changelog",
+        "stack-features"
+      ]
+    },
+    "text-repos": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "new PRs",
+        "value": "49"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text-changelog": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog entry",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stack-features": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-secretcurl",
+        "badge-headless",
+        "badge-polish"
+      ]
+    },
+    "badge-secretcurl": {
+      "type": "Badge",
+      "props": {
+        "text": "secretcurl auth",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-headless": {
+      "type": "Badge",
+      "props": {
+        "text": "headless CLI",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "badge-polish": {
+      "type": "Badge",
+      "props": {
+        "text": "dashboard polish",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "sep-final": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "story-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #137",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/137",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}
