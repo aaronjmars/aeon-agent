@@ -1,5 +1,11 @@
-*Tweet Digest — 2026-07-08*
+*Tweet Digest — 2026-07-09*
 
-*what's shipping*
-@aeonframework: tx-explain drops as today's skill — reads any onchain tx and surfaces warning signs if something's wrong — [link](https://x.com/aeonframework/status/2074505874479943751)
-@aeonframework: @clawhuntersol ships an agentic job-market skill pack so agents can find and monitor earning opportunities based on their own working skills — [link](https://x.com/aeonframework/status/2074423658882253010)
+*Theme: Ecosystem & partnerships*
+@aeonframework: shouts out Sparkleware team, NFA tagged — builder community momentum — [link](https://x.com/aeonframework/status/2074777247349645428)
+@aeonframework: quick congrats on a community launch — ecosystem pulse, no details — [link](https://x.com/aeonframework/status/2074883773141831866)
+
+*Theme: Skills & tooling*
+@aeonframework: drops the clawhunter-pack repo link — new installable skill pack from the ecosystem — [link](https://x.com/aeonframework/status/2074423661872730237)
+
+*Theme: Content & reach*
+@aeonframework: YouTube channel push — shorts format, new distribution surface beyond X — [link](https://x.com/aeonframework/status/2074505876954619980)
