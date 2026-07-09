@@ -1,20 +1,25 @@
-aeon + miroshark shiplog ⭐🦈 july 2 → 6
+aeon + miroshark shiplog ⭐ jul 6 → jul 9
 
-shipped 82 PRs + 41 commits this window. the bytes:
+shipped ~95 PRs across repos + 30 commits. the bytes:
 
-- grok build harness: @xai grok is now a first-class harness on aeon. claude→grok compat layer so every skill runs unchanged. connect with your @X or @grok sub
-- telegram full control surface: buttons + force-reply across 16 skills, "run again / schedule weekly" on every notification, auto-register slash commands on token save
-- skill library pruned 102 → 69: 25 skills retired + community packs 24 → 10. leaner agent, cleaner fork
-- aeon is a company: incorporated under @BedrockFndn (one of the first Base projects). live transparency dashboard + constitution, 50% non-fee revenue → $aeon buybacks
-- miroshark x402 on @CTRL_automation: market sims trigger onchain automations. builder codes: integrators earn 50% net profit per sim
-- security: CVE-2025-71176 (pytest) in miroshark + terminal escape sanitization fix in baairon/torlink
+- secretcurl: ./secretcurl replaces the entire prefetch/postprocess pattern — skills now do auth'd API calls in-run. XAI, coingecko, alchemy, etherscan, github reads. prefetch-xai.sh retired. the sandbox "blocks env var expansion" myth is dead, and the docs say so now.
+- attestation: every skill execution now signs a Sigstore manifest. "your agent ran this" is cryptographically verifiable against the Rekor log. public traces + proof.
+- headless CLI: `aeon` CLI ships, non-interactive mode. scripts and CI can drive it without the browser.
+- langfuse: optional per-run tracing — every claude code tool call grouped in one Langfuse session. first-class observability with no per-skill work.
+- website wallet: buy $aeon directly from the site. privy auth (github/X/google/wallet), swap widget in the hero, 0x affiliate fee (1%), ERC-8021 attribution. first miroshark buyback done — 100% of x402 revenue.
+- dashboard copy pass: Team→Skills, Hire→Add, Assignment brief→Skill settings. the dashboard speaks english now.
+- security: chain-input injection (GHSA-h9v2/GHSA-cqvj) + Discord/Slack author allowlist nudge (GHSA-252cF5) — both fixed, both fork-safety relevant.
+- scheduler: missed-skill catch-up (exact-slot debt model), decoupled from messages, Issues-as-state backend live.
+- pack restructure: 59 skills, 6 packs. category == pack.
 
 traction:
-- aeon 568 ⭐ (~+7 this week)
+- aeon 571 ⭐ (+3 this window)
 - miroshark 1357 ⭐
-- featured by @Base_Insights (22k): "Leading" tier on the july base ecosystem tier list + top AI-on-base gainer 2 days running
-- orlix launched Mission Control powered by @aeonframework — real skill fleet, scored runs, self-heal loop
+- @Base_Insights (22k): aeon in "Leading" tier of July Base Ecosystem Tier List
+- tx-explain skill: 52 likes, 2590 views on @aeonframework
+- sparkleware using aeon skill packs as holographic registry — now tradeable on Robinhood
+- miroshark farcaster mini-app dropped
 
-⭐
+the harness is the model. ⭐🦈
 
-https://github.com/aaronjmars/aeon-agent/blob/main/articles/shiplog-2026-07-06.md
+https://github.com/aaronjmars/aeon-agent/blob/main/articles/shiplog-2026-07-09.md
