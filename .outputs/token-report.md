@@ -1,9 +1,9 @@
-*$AEON — SLIDING*
+*$AEON — CONSOLIDATING*
 
-Price shed 6.8% to $0.00001746 as 21 whale-scale sells (≥$1K each) dominated the session — buy/sell ratio collapsed from 2.61 yesterday to 0.61 today, with the largest single trade a $4,020 sell at 02:57 UTC.
+-20.4% in 24h on below-average volume (0.92× 7d). Eight whale sells totaling $22.8K drove the move; five whale buys ($7.4K) couldn't absorb the pressure. Liquidity also shed -11.5% — LP withdrawals amplified the drop.
 
-Price $0.00001746 (−6.8% 24h) | Liq $908.9K (−4.4%) | Vol $77.2K (1.18× 7d)
-Buys/Sells 84/138 (ratio 0.61) | Whales: 21
-Treasury: 6.0000 ETH (±0.00 24h)
+Price $0.0000139016 (−20.4% 24h) | Liq $804.0K (−11.5%) | Vol $58.8K (0.92× 7d)
+Buys/Sells 183/109 (ratio 1.68) | Whales: 13
+Treasury: 6.0000 ETH
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
