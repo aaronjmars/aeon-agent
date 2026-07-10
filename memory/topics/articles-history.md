@@ -1,3 +1,9 @@
+---
+type: Reference
+title: Articles Archive
+description: Older entries rotated out of MEMORY.md's Recent Articles table.
+---
+
 # Articles Archive
 
 Older entries rotated out of MEMORY.md's Recent Articles table.

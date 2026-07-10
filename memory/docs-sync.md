@@ -1,3 +1,9 @@
+---
+type: Reference
+title: Docs Sync config
+description: Config for the docs-sync skill — which product repo's merged PRs become the changelog, and which marketing-site repo to open the PR against.
+---
+
 # Docs Sync config
 
 Config for the `docs-sync` skill — which product repo's merged PRs become the
