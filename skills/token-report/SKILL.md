@@ -63,10 +63,10 @@ If DexScreener fails, continue with GT only (`ds=fail` in footer). Never abort o
 
 ### 2b. Treasury wallets (on-chain liquidity)
 
-If `.x402books/wallets.json` exists at the repo root, fetch native-ETH balance for each entry on Base. This file declares the project's protocol wallets (treasury, deployer, etc.) and was introduced 2026-05-29 — before this skill knew its own bank balance.
+If `memory/treasury-wallets.json` exists, fetch native-ETH balance for each entry on Base. This optional file declares the project's protocol wallets (treasury, deployer, etc.). If it's absent, skip this step (treasury reporting is off).
 
 ```bash
-WALLETS_FILE=".x402books/wallets.json"
+WALLETS_FILE="memory/treasury-wallets.json"
 [ -f "$WALLETS_FILE" ] && jq -c '.wallets[] | select(.chain=="base")' "$WALLETS_FILE" > /tmp/treasury-wallets.jsonl
 ```
 
@@ -100,7 +100,7 @@ Aggregate:
 - `treasury_eth_total` — sum across **role=treasury** wallets only (deployer wallets are operational, not protocol funds).
 - `treasury_low_alert` — `true` if `treasury_eth_total < 0.01` AND `treasury_eth_total > 0` (a zero balance is a config error, not a depletion; do not alarm).
 
-If `.x402books/wallets.json` is missing or contains no `chain=base` entries, set `treasury=skip` in the sources footer and OMIT the Treasury subsection from the article + notification. Do not invent the section.
+If `memory/treasury-wallets.json` is missing or contains no `chain=base` entries, set `treasury=skip` in the sources footer and OMIT the Treasury subsection from the article + notification. Do not invent the section.
 
 ### 3. Compute true deltas
 
