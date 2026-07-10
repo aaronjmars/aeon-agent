@@ -1,9 +1,9 @@
-*$AEON — CONSOLIDATING*
+*$aeon — SLIDING*
 
--20.4% in 24h on below-average volume (0.92× 7d). Eight whale sells totaling $22.8K drove the move; five whale buys ($7.4K) couldn't absorb the pressure. Liquidity also shed -11.5% — LP withdrawals amplified the drop.
+Five whale sells ($14.3K net) walked price from $0.0000148 to $0.0000129 before partial recovery — 37% below Jul 3's peak.
 
-Price $0.0000139016 (−20.4% 24h) | Liq $804.0K (−11.5%) | Vol $58.8K (0.92× 7d)
-Buys/Sells 183/109 (ratio 1.68) | Whales: 13
-Treasury: 6.0000 ETH
+Price $0.00001341 (−3.55% 24h) | Liq $780.4K (−2.94%) | Vol $62.1K (1.0× 7d)
+Buys/Sells 141/52 (ratio 2.71) | Whales: 7
+Treasury: 6.0000 ETH (+0.0000 24h)
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
