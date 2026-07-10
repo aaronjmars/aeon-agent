@@ -1,3 +1,9 @@
+---
+type: Metric
+title: Star Milestones
+description: Star-count milestones reached across watched repos.
+---
+
 # Star Milestones
 
 ## aaronjmars/aeon

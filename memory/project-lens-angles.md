@@ -1,3 +1,9 @@
+---
+type: Reference
+title: Project Lens — Angle History
+description: Angle categories and theses tracked to avoid repetition within 14 days.
+---
+
 # Project Lens — Angle History
 
 Tracks angle categories and theses so they don't repeat within 14 days.

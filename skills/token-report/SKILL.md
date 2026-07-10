@@ -1,8 +1,11 @@
 ---
+type: Skill
 name: token-report
+category: crypto
 description: Price performance report for the project's token — price, volume, liquidity, and context
 var: ""
 tags: [crypto]
+mode: write
 requires: [ALCHEMY_API_KEY?, XAI_API_KEY?, BASE_RPC_URL?]
 capabilities: [external_api]
 ---
@@ -79,13 +82,13 @@ For each wallet line, query Base in this fallback order:
 
    > Why not Etherscan here: the legacy per-chain `api.basescan.org/api` host (BaseScan V1) is deprecated, and the unified `api.etherscan.io/v2` endpoint gates Base (`chainid=8453`) behind a paid plan (`"Free API access is not supported for this chain"`). Neither works keyless, so a plain JSON-RPC `eth_getBalance` is the reliable keyless path — matching `wallet-profile`/`tx-explain`.
 
-2. **Alchemy (secondary, only if `ALCHEMY_API_KEY` is set AND the public RPC failed):**
+2. **Alchemy (secondary, only if `ALCHEMY_API_KEY` is set AND the public RPC failed):** use `./secretcurl` with the literal `{ALCHEMY_API_KEY}` placeholder (never `$ALCHEMY_API_KEY` — the permission layer blocks any command text containing a secret expansion, URL path included; see CLAUDE.md → Network & Secrets):
    ```bash
-   curl -m 10 -s -X POST "https://base-mainnet.g.alchemy.com/v2/$ALCHEMY_API_KEY" \
+   ./secretcurl -m 10 -s -X POST "https://base-mainnet.g.alchemy.com/v2/{ALCHEMY_API_KEY}" \
      -H "Content-Type: application/json" \
      -d '{"jsonrpc":"2.0","id":1,"method":"eth_getBalance","params":["ADDRESS","latest"]}'
    ```
-   Identical JSON-RPC shape and hex → decimal → ÷1e18 conversion as above. The key sits in the URL path (not a header), so curl envvar expansion is safe.
+   Identical JSON-RPC shape and hex → decimal → ÷1e18 conversion as above.
 
 3. **WebFetch fallback** (sandbox block on either curl): retry the same POST with **WebFetch** before declaring `fetch_fail`.
 
@@ -135,7 +138,7 @@ Do not freelance labels. The verdict drives the lede, the TL;DR, and the notific
 
 ### 5. Compile the report
 
-Save to `articles/token-report-${today}.md`:
+Save to `output/articles/token-report-${today}.md`:
 
 ```markdown
 # $TOKEN — ${today}
@@ -189,10 +192,12 @@ Save to `articles/token-report-${today}.md`:
 
 If `XAI_API_KEY` is set:
 
+Call it **in-run** with `./secretcurl` and the literal `{XAI_API_KEY}` placeholder (never `$XAI_API_KEY`; see CLAUDE.md → Network & Secrets):
+
 ```bash
-curl -s -X POST "https://api.x.ai/v1/responses" \
+./secretcurl -s -X POST "https://api.x.ai/v1/responses" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
+  -H "Authorization: Bearer {XAI_API_KEY}" \
   -d '{
     "model": "grok-4-1-fast",
     "input": [{"role": "user", "content": "Search X for $TOKEN_SYMBOL or CONTRACT_ADDRESS mentions in the last 24 hours with at least 10 likes. Return up to 5 notable tweets with @handle, engagement counts, and a one-line summary of the claim or vibe. Exclude obvious bots and generic shill posts."}],
@@ -204,7 +209,7 @@ If the response has fewer than 2 tweets that clear the engagement bar, skip the 
 
 ### 7. Save article
 
-Write the compiled report to `articles/token-report-${today}.md`.
+Write the compiled report to `output/articles/token-report-${today}.md`.
 
 ### 8. State log (powers tomorrow's deltas)
 
@@ -218,7 +223,7 @@ Append to `memory/logs/${today}.md`:
 - TREASURY_WALLET_STATE: addr=0xf1e9…158e role=treasury eth=X.XXXX
 - TREASURY_WALLET_STATE: addr=0x6797…e3a2 role=deployer eth=X.XXXX
 - 24h: ±X.X% | 7d: ±X.X% | 30d: ±X.X%
-- Article: articles/token-report-${today}.md
+- Article: output/articles/token-report-${today}.md
 - Sources: gt=ok ds=[ok|fail|divergent] xai=[ok|skip|fail] treasury=[ok|skip|fetch_fail]
 ```
 
@@ -255,7 +260,7 @@ The `Treasury:` line is included ONLY when step 2b populated treasury_eth_total 
 
 ## Sandbox note
 
-The sandbox may block outbound curl. For any URL fetch that fails, retry with **WebFetch** as a fallback — GeckoTerminal, DexScreener, the public Base RPC (`mainnet.base.org`), and api.x.ai are all public or token-auth'd via header, so no pre-fetch / post-process plumbing is needed. WebFetch accepts the JSON body for the `eth_getBalance` POST.
+Public reads (GeckoTerminal, DexScreener, the keyless Base RPC `mainnet.base.org`) use plain `curl`; on a real failure (non-2xx / timeout / empty), retry with **WebFetch** — it accepts the JSON body for the `eth_getBalance` POST. The two auth'd calls (Alchemy fallback, api.x.ai Social Pulse) run **in-run** via `./secretcurl` with `{ALCHEMY_API_KEY}` / `{XAI_API_KEY}` placeholders — no pre-fetch / post-process plumbing.
 
 The Alchemy fallback in step 2b uses `$ALCHEMY_API_KEY` in the URL path (not in a header), so curl envvar expansion is safe here. If Alchemy is unset, skip silently — the keyless public RPC + WebFetch are enough.
 

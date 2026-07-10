@@ -1,3 +1,9 @@
+---
+type: Reference
+title: Skill Spotlight — Rotation State
+description: Queue and history for the skill-spotlight picker (30-day dedup + blocklist).
+---
+
 # Skill Spotlight — Rotation State
 
 Queue + history for `skills/skill-spotlight/`. The picker reads top-down, skips anything covered in the last 30 days or in the blocklist.

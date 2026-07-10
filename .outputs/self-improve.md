@@ -1,1 +1,0 @@
-self-improve: repo-actions now gates out bash→LLM-gate ideas — its #1 Top Pick ("wire phylax-audit into install-skill-pack") was infeasible two cycles running because bash can't call an agentic skill. Added a Gate 3 runtime-boundary check + agent-to-agent reframe. PR: https://github.com/aaronjmars/aeon-agent/pull/116

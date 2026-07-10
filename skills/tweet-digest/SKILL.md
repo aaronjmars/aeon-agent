@@ -1,5 +1,7 @@
 ---
+type: Skill
 name: Tweet Digest
+category: basics
 description: Account-based digest of recent tweets from tracked X/Twitter accounts. Sibling to fetch-tweets (keyword) and tweet-roundup (topic).
 var: ""
 tags: [social]
@@ -46,21 +48,19 @@ Read `memory/MEMORY.md` for context and the last 2 days of `memory/logs/` to ded
 
 For each `handle` in the config (or just the one from `${var}` if set):
 
+Call Grok's `x_search` **in-run** with `./secretcurl` (the literal `{XAI_API_KEY}` placeholder — never `$XAI_API_KEY`; see CLAUDE.md → Network & Secrets). Capture the HTTP status and print `http=<code>` before parsing:
+
 ```bash
-curl -m 30 -s -X POST "https://api.x.ai/v1/responses" \
+PROMPT="Search X for the latest tweets from ${HANDLE} in the last 3 days. Return the 5 most interesting or substantive tweets. For each: full text, date, direct link (https://x.com/${HANDLE}/status/ID). Skip retweets of others."
+jq -n --arg p "$PROMPT" '{model:"grok-4-1-fast", input:[{role:"user",content:$p}], tools:[{type:"x_search"}]}' > /tmp/xai-td.json
+HTTP=$(./secretcurl -m 60 -s -o /tmp/xai-td-out.json -w '%{http_code}' -X POST "https://api.x.ai/v1/responses" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $XAI_API_KEY" \
-  -d '{
-    "model": "grok-4-1-fast",
-    "input": [{
-      "role": "user",
-      "content": "Search X for the latest tweets from:'"$HANDLE"' in the last 3 days. Return the 5 most interesting or substantive tweets. For each: full text, date, direct link (https://x.com/'"$HANDLE"'/status/ID). Skip retweets of others."
-    }],
-    "tools": [{"type": "x_search"}]
-  }'
+  -H "Authorization: Bearer {XAI_API_KEY}" \
+  -d @/tmp/xai-td.json)
+echo "http=$HTTP"
 ```
 
-If `XAI_API_KEY` is unset, log `TWEET_DIGEST_NO_KEY: skill requires XAI_API_KEY` and exit (no notification).
+Then parse `/tmp/xai-td-out.json` for the tweets. If `XAI_API_KEY` is unset, log `TWEET_DIGEST_NO_KEY: skill requires XAI_API_KEY` and exit (no notification). On a non-2xx `http`, a `--max-time` timeout, or a 200 with an empty body, record the real reason (`http-<code>` / `timeout` / `empty`) and skip that handle — never blame a "sandbox".
 
 **Dedup:** grep the last 2 days of `memory/logs/` for `https://x.com/` URLs already reported. Drop any candidate URL that's already been seen.
 
@@ -91,9 +91,9 @@ Send via `./notify` (under 4000 chars):
 
 Append to `memory/logs/${today}.md` with the tweet URLs reported (so the next run can dedup). If no notable tweets found across all tracked accounts: log `TWEET_DIGEST_OK` and end (no notification).
 
-## Sandbox Note
+## Fetching — in-run, no prefetch
 
-The X.AI API requires `Authorization: Bearer $XAI_API_KEY` — the sandbox blocks env-var expansion in curl headers. This skill uses the **pre-fetch pattern** (see CLAUDE.md): the `tweet-digest` case in `scripts/prefetch-xai.sh` loops the handles in `memory/topics/tracked-accounts.yml` and writes each account's tweets to `.xai-cache/tweet-digest-<handle>.json` before Claude runs (the workflow runs all `scripts/prefetch-*.sh` with `<skill> <var>` args). The skill reads cached JSON if present, falls back to live curl only when running outside the sandbox.
+Auth'd X.AI calls run **in-run** via `./secretcurl` with the literal `{XAI_API_KEY}` placeholder (see step 1 and CLAUDE.md → Network & Secrets). There is **no** prefetch/cache step — the retired `.xai-cache/` + `scripts/prefetch-xai.sh` pattern no longer exists; do not reference it.
 
 ## Environment Variables
 

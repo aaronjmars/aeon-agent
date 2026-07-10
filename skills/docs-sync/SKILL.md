@@ -1,8 +1,13 @@
 ---
+type: Skill
 name: Docs Sync
+category: dev
 description: Sync recently merged product PRs into the marketing website as a changelog — opens a PR on the website repo
 var: ""
 tags: [dev, content, build]
+mode: write
+commits: false
+permissions: [contents:write, pull-requests:write]
 requires: [GH_GLOBAL]
 ---
 > **${var}** — Optional override in `product_repo->website_repo` form (e.g. `aaronjmars/aeon->aaronjmars/aeon-website`). If empty, read config from `memory/docs-sync.md`.
