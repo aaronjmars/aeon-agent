@@ -19,6 +19,20 @@
 # plus .pending-notify-temp where skills stage notify bodies for `./notify -f`
 .pending-*/
 
+# Generated helper scripts — copied to the repo root at runtime from scripts/*.sh
+# and removed before the run commits. Ignored so a missed cleanup never commits them.
+/notify
+/notify-jsonrender
+/secretcurl
+
+# Legacy transient run artifacts (pre-v0.1.0 skills leaked these to the root).
+# The current engine no longer writes them; ignored defensively so they can't recur.
+.outputs/
+.notify-*.md
+.*-notify.md
+.tweet-digest-*.md
+.pending-*.md
+
 # Skill provenance lock (per-repo, not committed)
 skills.lock
 
