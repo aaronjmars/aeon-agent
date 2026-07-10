@@ -1,13 +1,10 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH (minitor SECURITY.md flag, deduped — no notification sent).
-
-**Ambient check complete** — fleet is healthy. All 7 enabled skills at 100% success rate, no PRs stalled, no open issues. The only open flag is the minitor SECURITY.md gap from `MEMORY.md`, already reported the past two days so deduped. `docs/status.md` regenerated at 🟡 WATCH.
+HEARTBEAT_OK · STATUS_PAGE=WATCH (🟡 minitor SECURITY.md P2 flag, deduped — no notification sent). `docs/status.md` regenerated with all 7 skills showing ✅ success and heartbeat row updated to 19:16 UTC.
 
 ## Summary
 
-- **P0**: Clean — all enabled skills healthy (shiplog, memory-flush, token-report, docs-sync, repo-pulse, tweet-digest, heartbeat all ✅)
-- **P1**: Clean — 0 open PRs, 0 open issues in this repo
-- **P2**: minitor SECURITY.md still missing — flagged but deduped (reported Jul 9 and Jul 10 morning, within 48h window)
-- **P3**: Clean — all skills within 2× their schedule intervals
-- **docs/status.md**: updated — 🟡 WATCH, token pulse AEON −3.55% SLIDING, heartbeat ⏳ dispatched (current run)
-- **memory/logs/2026-07-10.md**: appended `### heartbeat (19:00 UTC)` entry with `mode: ambient` discriminator
-- **Notification**: none sent (findings deduped)
+- **P0**: All 7 enabled skills healthy — 0 failures, 0 consecutive failures, 100% success rates.
+- **P1**: No open PRs, no open issues.
+- **P2**: minitor SECURITY.md still missing (HIGH) — deduped within 48h window, no notification.
+- **P3**: All skills within 2× their schedule intervals.
+- **Status page**: Updated `docs/status.md` → 🟡 WATCH, AEON token pulse SLIDING (−3.55%, $0.0000134), next run token-report at 06:00 UTC.
+- **Log**: Appended entry to `memory/logs/2026-07-10.md`.
