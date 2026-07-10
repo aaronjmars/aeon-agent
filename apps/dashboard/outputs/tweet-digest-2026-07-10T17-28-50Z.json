@@ -1,0 +1,80 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-10"
+      },
+      "children": [
+        "heading_theme1",
+        "stack_tweets1",
+        "separator1",
+        "heading_theme2",
+        "stack_tweets2"
+      ]
+    },
+    "heading_theme1": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Token infrastructure",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_tweets1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "Bedrock Foundation makes token M&A outcomes contractual — 30% premium over 7-day TWAP triggers automatically when any acquirer takes 30%+ of supply, with $AEON as one of their first integrations. — https://x.com/aeonframework/status/2075263165357543582"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_theme2": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Miroshark in the wild",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_tweets2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "Frames @miroshark_ as real-time public-sector intelligence — Police Nationale could run social clash simulations on large crowd events via x402 before they happen. — https://x.com/aeonframework/status/2075212635667149004"
+      },
+      "children": []
+    }
+  }
+}
