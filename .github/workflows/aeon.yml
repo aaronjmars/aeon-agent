@@ -1157,7 +1157,7 @@ jobs:
         run: |
           git config user.name "aeonframework"
           git config user.email "aeonframework@proton.me"
-          rm -f ./notify ./notify-jsonrender .notify-sent-hashes  # Remove generated notify scripts + dedup log before committing
+          rm -f ./notify ./notify-jsonrender ./secretcurl .notify-sent-hashes  # Remove generated helper scripts + dedup log before committing
 
           # Issues-as-state (hardening §3): cron-state.json was materialized from the
           # pinned Issue for this run's readers — it's a projection, not source of truth.
