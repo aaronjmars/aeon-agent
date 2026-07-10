@@ -26,10 +26,10 @@ _Source: `output/articles/token-report-2026-07-10.md` · verdict: SLIDING_
 
 | Skill | Last run | Status | Success rate | Consecutive failures |
 |-------|----------|--------|-------------:|---------------------:|
+| heartbeat | 2026-07-10 17:32 UTC | ⏳ dispatched | 100% | 0 |
 | tweet-digest | 2026-07-10 17:29 UTC | ✅ success | 100% | 0 |
 | repo-pulse | 2026-07-10 10:36 UTC | ✅ success | 100% | 0 |
 | token-report | 2026-07-10 07:08 UTC | ✅ success | 100% | 0 |
-| heartbeat | 2026-07-09 19:35 UTC | ✅ success | 100% | 0 |
 | shiplog | 2026-07-09 09:43 UTC | ✅ success | 100% | 0 |
 | docs-sync | 2026-07-09 08:21 UTC | ✅ success | 100% | 0 |
 | memory-flush | 2026-07-05 18:19 UTC | ✅ success | 100% | 0 |
