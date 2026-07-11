@@ -1,10 +1,10 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-07-10T07:07:30Z",
+  "last_analyzed": "2026-07-11T06:26:16Z",
   "quality_score": 4,
-  "assessment": "Substantive token analysis with specific metrics, whale behavior tracking, and proper workflow integration; truncated output limits full assessment",
+  "assessment": "Substantive market report with clear verdict, solid data coverage, transparent about skipped sources, and proper file/notification handling.",
   "flags": [],
-  "avg_score": 4.14,
+  "avg_score": 4.13,
   "history": [
     {
       "date": "2026-06-12",
@@ -120,6 +120,10 @@
     },
     {
       "date": "2026-07-10",
+      "score": 4
+    },
+    {
+      "date": "2026-07-11",
       "score": 4
     }
   ]

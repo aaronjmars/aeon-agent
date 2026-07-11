@@ -1,0 +1,162 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report — 2026-07-11"
+      },
+      "children": [
+        "status-section",
+        "sep1",
+        "metrics-section",
+        "sep2",
+        "activity-section",
+        "sep3",
+        "chart-section"
+      ]
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "status-badge",
+        "description"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CONSOLIDATING",
+        "variant": "outline"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "Down 10.2% on 0.91× the 7-day average volume — sellers met thin demand but capitulation-level volume wasn't there.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-section": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001204",
+        "delta": "−10.2%",
+        "trend": "down"
+      }
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$737.3K",
+        "delta": "−5.5%",
+        "trend": "down"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$42.2K",
+        "delta": "0.91× 7d avg"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "activity-section": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-buys",
+        "stat-sells",
+        "stat-ratio",
+        "stat-whales"
+      ]
+    },
+    "stat-buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "100"
+      }
+    },
+    "stat-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "111"
+      }
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "0.90",
+        "delta": "was 2.71 yest",
+        "trend": "down"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "9"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "chart-link"
+      ]
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
