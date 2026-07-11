@@ -1,0 +1,93 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-11"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "tweet1",
+        "tweet2"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "v0.1 launch ⭐",
+        "level": "h2"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "aeon v0.1 is live — first stable release, shaped by 70 partners, pitched as the framework for agents that self-evolve — [link](https://x.com/aeonframework/status/2075576813850403049)"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "the release thread: Grok harness support, Telegram instant mode + email, simplified codebase, OKF support, skill attestation (onchain & offchain), Langfuse observability opt-in — [link](https://x.com/aeonframework/status/2075576816665018716)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "tweet3",
+        "tweet4"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "Ecosystem",
+        "level": "h2"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "X login is live — one click to run agents free via your X subscription, X Search wired natively — [link](https://x.com/aeonframework/status/2075386764609364148)"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "@tryskopos spotlight — cross-chain DeFi fork: tx-explain + token-safety across 10 chains instead of base-only, market reads, x402 pulse skill — [link](https://x.com/aeonframework/status/2075556200184181152)"
+      }
+    }
+  }
+}
