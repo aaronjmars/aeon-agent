@@ -1,0 +1,49 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync",
+        "description": "2026-07-12"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repos-text",
+        "prs-summary",
+        "pr-link"
+      ]
+    },
+    "repos-text": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website",
+        "variant": "muted"
+      }
+    },
+    "prs-summary": {
+      "type": "Text",
+      "props": {
+        "text": "21 new PRs → changelog entry: README overhaul, optimize round 2, v0.1.0 changelog"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #145",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/145",
+        "source": "GitHub"
+      }
+    }
+  }
+}
