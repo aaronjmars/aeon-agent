@@ -1,10 +1,8 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
-
-Fleet is clean. All 7 enabled skills are at 100% success rate with zero consecutive failures. The only persistent flag is the minitor SECURITY.md gap from MEMORY.md — deduped (it's been in every heartbeat log since Jul 9), no notification sent. `docs/status.md` regenerated with today's AEON token pulse ($0.00001204, −10.2%, CONSOLIDATING) and updated timestamps.
+HEARTBEAT_OK · STATUS_PAGE=WATCH (minitor SECURITY.md P2 flag, deduped — no notification sent)
 
 ## Summary
 
-- **P0–P3 checks:** all CLEAN; one P2 flag (minitor SECURITY.md missing) deduped within 48h window
-- **No notification sent** — all findings already reported within the last 48 hours
-- **`docs/status.md` updated** — Overall: 🟡 WATCH, token pulse from today's report (CONSOLIDATING), all 7 skills healthy
-- **Log entry appended** to `memory/logs/2026-07-11.md`
+- **P0–P3**: All clean. 7 enabled skills all green (100% success rate, 0 consecutive failures, all within schedule intervals).
+- **P2 flag**: minitor SECURITY.md still missing (HIGH) — deduped within 48h window, no notification fired.
+- **Status page**: Updated `docs/status.md` to 🟡 WATCH. Token pulse: AEON $0.00001069 / −11.2% / CONSOLIDATING (today's report).
+- **Log**: Appended `### heartbeat` entry to `memory/logs/2026-07-12.md`.
