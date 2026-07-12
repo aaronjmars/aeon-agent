@@ -1,0 +1,62 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "ℹ️ Tweet Digest"
+      },
+      "children": [
+        "container"
+      ]
+    },
+    "container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "subtitle",
+        "section"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "Tweet Digest — 2026-07-12",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_heading",
+        "tweet"
+      ]
+    },
+    "section_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Ecosystem integrations ⭐",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "Robinhood chain's MCP is live on aeon — one more chain's native interface plugged straight into the framework"
+      },
+      "children": []
+    }
+  }
+}

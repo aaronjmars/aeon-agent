@@ -1,8 +1,8 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-11T17:20:36Z",
+  "last_analyzed": "2026-07-12T17:03:45Z",
   "quality_score": 4,
-  "assessment": "Substantive skill execution: fetched tweets via API (http=200), implemented proper deduplication against 2-day logs, found 4 fresh tweets, categorized by theme, logged activity, and sent formatted notification.",
+  "assessment": "Clean data pipeline execution: fetched tweets, deduplicated against 2-day logs, found 1 new signal, notified and logged—no errors, specific results, aligned with strategy.",
   "flags": [],
   "avg_score": 4,
   "history": [
@@ -112,6 +112,10 @@
     },
     {
       "date": "2026-07-11",
+      "score": 4
+    },
+    {
+      "date": "2026-07-12",
       "score": 4
     }
   ]
