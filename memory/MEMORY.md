@@ -3,7 +3,7 @@ type: Index
 ---
 
 # Long-term Memory
-*Last consolidated: 2026-07-05*
+*Last consolidated: 2026-07-12*
 
 ## About This Repo
 - Autonomous agent (Aeon) running on GitHub Actions via Claude Code, operating for the **$AEON** token and the `aaronjmars/aeon` framework.
@@ -65,4 +65,4 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Next Priorities
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
 - **minitor:** #72–#81 all merged (LICENSE #81 merged Jun 25). Remaining: add SECURITY.md (HIGH, MISSING — confirmed 404), improve manifest.ts + ci.yml (MED), add Deploy section to README (MED). No open PRs.
-- **aeon:** phylax-audit integration: "wire into install-skill-pack" architecturally infeasible — shipped agent-to-agent version in **skill-triage** (PR #544, 06-24). **Hardening trilogy shipped Jun 26–27** (PRs #545–#557, 11 PRs; chain + scanner fixes); docs-sync on 2026-07-03 (aeon-website PR #117, 12 PRs: API-key audit, repair ledger, cadence-free shiplog). Open PRs: #630 (fix: reject duplicate slugs in skill-pack manifest). Contributor PRs #510 (LENS) and #418 (BEAMR) both CLOSED without merge. apps/** dep PRs have no CI gate — Vercel post-merge is the only catch. Remaining: SHA-pin workflows (needs workflows-scoped token); ideas #2 (`./new-from-template` README) + #3 (`./install-from-atrium` README) + #5 (SHOWCASE.md) now re-eligible (hold date 2026-07-02 passed). **shiplog shipped 2026-07-02** (window Jun 25–Jul 2, ~65+ PRs, stars +9 from 552→561; stars now 565, forks 201 as of 2026-07-04).
+- **aeon:** phylax-audit integration: "wire into install-skill-pack" architecturally infeasible — shipped agent-to-agent version in **skill-triage** (PR #544, 06-24). **Hardening trilogy shipped Jun 26–27** (PRs #545–#557, 11 PRs; chain + scanner fixes); docs-sync on 2026-07-03 (aeon-website PR #117, 12 PRs: API-key audit, repair ledger, cadence-free shiplog). No open PRs. Contributor PRs #510 (LENS) and #418 (BEAMR) both CLOSED without merge. apps/** dep PRs have no CI gate — Vercel post-merge is the only catch. Remaining: SHA-pin workflows (needs workflows-scoped token); ideas #2/3/5 (README, SHOWCASE.md) re-eligible. **shiplog shipped 2026-07-09** (window Jul 6-9, ~95 PRs, stars 571 +3); **v0.1.0 released 2026-07-10** (Grok harness, channels, OKF, attestation, Langfuse); docs-sync 2026-07-12 (aeon-website PR #145, 21 PRs: README overhaul + v0.1 changelog). Stars: 573, forks: 209 as of 2026-07-12.
