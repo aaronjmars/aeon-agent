@@ -1,0 +1,168 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING",
+        "description": "Price slid -16.2% on below-average volume (0.69× 7d mean) — four whale sells totaling $7.2K drove the move without triggering a broader volume surge."
+      },
+      "children": [
+        "metrics-stack",
+        "separator1",
+        "activity-stack",
+        "separator2",
+        "chart-link"
+      ]
+    },
+    "metrics-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "liq-stat",
+        "vol-stat"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.0000090",
+        "delta": "-16.2%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "liq-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$632.3K",
+        "delta": "-8.2%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "vol-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$39.4K",
+        "delta": "0.69× 7d avg",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "activity-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "ratio-section",
+        "whale-section"
+      ]
+    },
+    "ratio-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "ratio-label",
+        "ratio-value"
+      ]
+    },
+    "ratio-label": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "ratio-value": {
+      "type": "Text",
+      "props": {
+        "text": "76 / 63 (ratio 1.21, yesterday 0.79)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "whale-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "whale-label",
+        "whale-content"
+      ]
+    },
+    "whale-label": {
+      "type": "Text",
+      "props": {
+        "text": "Whale Activity",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "whale-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "whale-badge",
+        "whale-amount"
+      ]
+    },
+    "whale-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "4 sells",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "whale-amount": {
+      "type": "Text",
+      "props": {
+        "text": "totaling $7.2K",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart (GeckoTerminal)",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}
