@@ -1,0 +1,91 @@
+{
+  "root": "card_digest",
+  "state": {},
+  "elements": {
+    "card_digest": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-13"
+      },
+      "children": [
+        "theme",
+        "tweets_stack"
+      ]
+    },
+    "theme": {
+      "type": "Text",
+      "props": {
+        "text": "Theme: Background intelligence & docs",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "tweets_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet1_section",
+        "tweet2_section"
+      ]
+    },
+    "tweet1_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "Frames aeon as a personal clone that runs while you sleep — the \"before you think\" autonomy pitch, with video"
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/aeonframework/status/2076677696415830283"
+      },
+      "children": []
+    },
+    "tweet2_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "Announced a new blog post on tracking agent runs via GitHub Actions' built-in tab — link in comments"
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on Twitter",
+        "href": "https://x.com/aeonframework/status/2076666546965913800"
+      },
+      "children": []
+    }
+  }
+}
