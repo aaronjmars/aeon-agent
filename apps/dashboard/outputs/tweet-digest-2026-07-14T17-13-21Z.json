@@ -1,0 +1,52 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-07-14"
+      },
+      "children": [
+        "theme_badge",
+        "separator",
+        "tweet1",
+        "tweet2"
+      ]
+    },
+    "theme_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Ecosystem consolidation",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "The aeon GitHub org goes live and folds OpenDia, soul.md, and minitor's IP under the $AEON token address on Base — the whole ecosystem, one address. — [link](https://x.com/aeonframework/status/2077028299369304148)"
+      },
+      "children": []
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Minitor now works as a front-end for Aeon runs — the internet monitor becomes a live dashboard for what your agent's been doing. — [link](https://x.com/aeonframework/status/2076726367509512681)"
+      },
+      "children": []
+    }
+  }
+}

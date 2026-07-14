@@ -1,5 +1,5 @@
-**Tweet Digest — 2026-07-13**
+*Tweet Digest — 2026-07-14*
 
-**Theme: Background intelligence & docs**
-@aeonframework: Frames aeon as a personal clone that runs while you sleep — the "before you think" autonomy pitch, with video — [link](https://x.com/aeonframework/status/2076677696415830283)
-@aeonframework: Announced a new blog post on tracking agent runs via GitHub Actions' built-in tab — link in comments — [link](https://x.com/aeonframework/status/2076666546965913800)
+*Theme: Ecosystem consolidation*
+@aeonframework: The aeon GitHub org goes live and folds OpenDia, soul.md, and minitor's IP under the $AEON token address on Base — the whole ecosystem, one address. — [link](https://x.com/aeonframework/status/2077028299369304148)
+@aeonframework: Minitor now works as a front-end for Aeon runs — the internet monitor becomes a live dashboard for what your agent's been doing. — [link](https://x.com/aeonframework/status/2076726367509512681)
