@@ -1,0 +1,183 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING",
+        "description": "Down 11.7% on 0.42× volume — three whale sells from one address at open, not broad market pressure."
+      },
+      "children": [
+        "separator_1",
+        "stack_price_metrics",
+        "separator_2",
+        "stack_trading",
+        "separator_3",
+        "heading_whale_cluster",
+        "text_whale_details",
+        "table_whales",
+        "separator_4",
+        "stack_longer_term",
+        "separator_5",
+        "link_chart"
+      ]
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_price_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000007907",
+        "delta": "−11.7%",
+        "trend": "down"
+      }
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$587.7K",
+        "delta": "−7.1%",
+        "trend": "down"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$24.2K",
+        "delta": "0.42× 7d avg",
+        "trend": "down"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_trading": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_ratio",
+        "stat_whales"
+      ]
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "49/50",
+        "delta": "ratio: 0.98"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Activity",
+        "value": "3 sells"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_whale_cluster": {
+      "type": "Heading",
+      "props": {
+        "text": "Whale Cluster",
+        "level": "h3"
+      }
+    },
+    "text_whale_details": {
+      "type": "Text",
+      "props": {
+        "text": "05:28–05:29 UTC | Address: 0xd826…c9c4 | Type: Sell",
+        "variant": "caption"
+      }
+    },
+    "table_whales": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Amount",
+          "Price"
+        ],
+        "rows": [
+          [
+            "$1,528",
+            "$0.0000081"
+          ],
+          [
+            "$1,284",
+            "$0.0000083"
+          ],
+          [
+            "$1,106",
+            "$0.0000085"
+          ]
+        ]
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stack_longer_term": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_7d",
+        "stat_30d"
+      ]
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7-day change",
+        "value": "−57.8%",
+        "trend": "down"
+      }
+    },
+    "stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30-day change",
+        "value": "−72.8%",
+        "trend": "down"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-07-13T07:26:46Z",
+  "last_analyzed": "2026-07-14T06:08:40Z",
   "quality_score": 4,
-  "assessment": "Substantive analysis with concrete data points, cross-exchange validation, whale tracking, and clear methodology — well-structured and actionable for tracking $AEON momentum",
+  "assessment": "Substantive analysis with specific whale trades identified, clear metrics, structured output, and proper source status reporting.",
   "flags": [],
   "avg_score": 4.13,
   "history": [
-    {
-      "date": "2026-06-14",
-      "score": 4
-    },
     {
       "date": "2026-06-15",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-07-13",
+      "score": 4
+    },
+    {
+      "date": "2026-07-14",
       "score": 4
     }
   ]
