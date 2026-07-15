@@ -1,17 +1,16 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH (🟡 minitor SECURITY.md P2 flag persists, deduped — no notification sent).
-
-**Checks complete:**
-- **P0:** Clean — all 6 enabled skills succeeding, 0 consecutive failures, heartbeat self-check within 36h window.
-- **P1:** Clean — no open PRs, no open issues.
-- **P2:** minitor SECURITY.md still missing (HIGH), but appeared in yesterday's log → deduped, no re-notification.
-- **P3:** Clean — all skills within 2× their schedule intervals.
-
-Status page updated at `docs/status.md` with today's token pulse ($0.000007907, −11.7%, CONSOLIDATING) and current skill health. Log appended to `memory/logs/2026-07-14.md`.
+Heartbeat complete. No notification sent — all findings deduped within the 48h window.
 
 ## Summary
 
-- Ran ambient heartbeat fleet check for 2026-07-14.
-- All 6 enabled skills (token-report, tweet-digest, shiplog, docs-sync, memory-flush, heartbeat) healthy.
-- No new findings — the only flag (minitor SECURITY.md missing) is deduped within 48h; no notification sent.
-- Rewrote `docs/status.md` (🟡 WATCH) with fresh token pulse from today's report.
-- Appended `### heartbeat` entry to `memory/logs/2026-07-14.md`.
+**Ambient check — 2026-07-15**
+
+- **P0 (Failed/Stuck):** CLEAN — all 6 enabled skills at 100% success rate, 0 consecutive failures. Heartbeat self-check: last success 23.4h ago, within the 36h window.
+- **P1 (PRs/Issues):** CLEAN — no open PRs, no urgent/open GitHub issues.
+- **P2 (Memory flags):** minitor SECURITY.md still missing (HIGH) — deduped (appeared in 2026-07-14 log, within 48h window), no re-notification.
+- **P3 (Missing skills):** CLEAN — all 6 enabled skills within 2× their schedule intervals.
+
+**Status page verdict: 🟡 WATCH** (P2 flag persists). Token pulse updated: AEON $0.000008958, +13.3%, CONSOLIDATING.
+
+**Files modified:**
+- `docs/status.md` — overwritten with current fleet state and today's token pulse
+- `memory/logs/2026-07-15.md` — heartbeat entry appended
