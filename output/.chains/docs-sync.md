@@ -1,4 +1,4 @@
-*Docs Sync — 2026-07-12*
+*Docs Sync — 2026-07-15*
 aaronjmars/aeon → aaronjmars/aeon-website
-21 new PRs → changelog entry "README overhaul, optimize round 2, v0.1.0 changelog"
-[PR #145](https://github.com/aaronjmars/aeon-website/pull/145)
+3 new PRs → changelog entry "aeonfun org transfer, all links updated"
+PR: https://github.com/aaronjmars/aeon-website/pull/153

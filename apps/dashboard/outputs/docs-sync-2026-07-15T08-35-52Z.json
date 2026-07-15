@@ -1,0 +1,73 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date-text",
+        "repo-text",
+        "action-text",
+        "pr-link"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-15",
+        "variant": "caption"
+      }
+    },
+    "repo-text": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website"
+      }
+    },
+    "action-text": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-count-text",
+        "changelog-description"
+      ]
+    },
+    "pr-count-text": {
+      "type": "Text",
+      "props": {
+        "text": "3 new PRs created"
+      }
+    },
+    "changelog-description": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog: aeonfun org transfer, all links updated",
+        "variant": "muted"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #153",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/153",
+        "source": "aaronjmars/aeon-website"
+      }
+    }
+  }
+}
