@@ -1,15 +1,8 @@
 *$AEON — CONSOLIDATING*
 
-Down 11.7% on 0.42× volume — three whale sells from one address at open, not broad market pressure.
++13.3% price recovery on 1.93× volume — whale buyers outpacing sellers 15:9 — one tick below breakout threshold. The buy/sell ratio flipped from 0.98 to 2.14. v0.1.0 + GitHub org IP transfer this week.
 
-Price $0.000007907 (−11.7% 24h) | Liq $587.7K (−7.1%) | Vol $24.2K (0.42× 7d)
-Buys/Sells 49/50 (ratio 0.98) | Whales: 3
-
-Whale cluster (05:28–05:29 UTC, single address 0xd826…c9c4):
-- sell $1,528 @ $0.0000081
-- sell $1,284 @ $0.0000083
-- sell $1,106 @ $0.0000085
-
-7d: −57.8% | 30d: −72.8%
+Price $0.000008958 (+13.3% 24h) | Liq $645.7K (+9.9%) | Vol $97.8K (1.93× 7d)
+Buys/Sells 227/106 (ratio 2.14) | Whales: 24
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
