@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest
-
 *Tweet Digest — 2026-07-15*
 
 *Theme: Content & articles*

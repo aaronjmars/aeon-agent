@@ -1,0 +1,53 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "Theme: Content & articles — 2026-07-15"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "sep_1",
+        "blog_link"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "wrapped the first batch of introductory articles on autonomous agentic design, more incoming"
+      },
+      "children": []
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "dropped the blog link — aeon.fun/blog"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "blog_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Aeon Blog",
+        "href": "https://www.aeon.fun/blog",
+        "source": "aeon.fun"
+      },
+      "children": []
+    }
+  }
+}
