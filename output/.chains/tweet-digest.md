@@ -1,7 +1,7 @@
 ℹ️ Tweet Digest
 
-*Tweet Digest — 2026-07-15*
+**Tweet Digest — 2026-07-16**
 
-*Theme: Content & articles*
-@aeonframework: wrapped the first batch of introductory articles on autonomous agentic design, more incoming — [link](https://x.com/aeonframework/status/2077312271630434560)
-@aeonframework: dropped the blog link — [aeon.fun/blog](https://www.aeon.fun/blog) — [link](https://x.com/aeonframework/status/2077312274058874937)
+**Theme: Aeon Framework Updates**
+@aeonframework: Grok 4.5 by @xai is now live on aeon — use your Grok subscription and get started — [link](https://x.com/aeonframework/status/2077461797045473417)
+@aeonframework: A changelog article covers 60 days of changes and optimizations to the autonomous agentic infrastructure — [link](https://x.com/aeonframework/status/2077674532609851459)
