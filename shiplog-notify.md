@@ -1,20 +1,20 @@
-aeon shiplog ⭐ jul 9 → jul 13
+aeon ⭐ shiplog — Jul 13 → Jul 16
 
-v0.1.0 is out. first stable release after 70 partners gave feedback. 47 PRs across 5 repos. the bytes:
+30 PRs + 11 commits this window. the bytes:
 
-- **v0.1.0 stable**: Grok harness, X login via X sub (free agents), OKF, attestation, Langfuse observability. [release](https://github.com/aaronjmars/aeon/releases/tag/v0.1.0)
-- **README overhaul**: 733 → 596 lines. fork decision optimized. 10 PRs.
-- **irreversible sends in-run**: no more detached postprocess — failures surface immediately
-- **transient writes → /tmp**: skills stop polluting the repo root (#713)
-- **minitor**: SSRF fix + one-click Docker/Railway hosting + password auth wall (#98–#102)
-- **agent-readiness layer**: llms.txt, agents.md, trust pages + schema on aeon-website (#144)
-- both automation instances migrated to v0.1 template
+- **aeonfun org live**: aeon, minitor, soul.md, opendia all under the org. IP of OpenDia (1.8k ⭐, forked by the claude code creator), soul.md (adopted by Ribbonfarm), minitor — now under $AEON on base.
+- **MCP OAuth**: durable one-click auth for OAuth-gated MCP servers — glim wired first, rotating-token refresh handled, Robinhood in the catalog. the plumbing is in.
+- **Grok 4.5**: live on aeon ⭐. deprecated x_search migrated to grok-4.3 in the same PR.
+- **Minitor front-end**: Minitor now shows aeon skill run output live. Aeon runs → you can see it.
+- **60 Days of aeon**: changelog article shipped at aeon.fun/blog — first batch of intro articles done.
+- **vuln scanner**: high severity found + reported to HackerOne. already secured software from google, vercel, alibaba & more. not simulated.
 
 traction:
-- aeon 574 ⭐ (+3) · MiroShark 1360 ⭐ (+3)
-- @Base_Insights (22k) ranked aeon **"Leading"** in their Base ecosystem tier list
-- v0.1 launch thread: 69 likes · 11 RTs
+- aeon 576 ⭐ (+2 this window)
+- MiroShark 1365 ⭐ (+5 this window)
+- x.com/Base_Insights (21.9k followers) listed x.com/miroshark_ "Early" tier (Jul 15)
+- top post: "found a high severity issue using aeon, reporting it on hackerone" — 45 likes, 3 RTs
 
 ⭐
 
-https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-13.md
+https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-16.md

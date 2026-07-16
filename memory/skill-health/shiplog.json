@@ -1,10 +1,10 @@
 {
   "skill": "shiplog",
-  "last_analyzed": "2026-07-13T09:51:21Z",
-  "quality_score": 4,
-  "assessment": "Substantive multi-source aggregation with clear ships, concrete metrics, and actionable output artifacts — well-executed reporting that directly serves the operator and public audience.",
+  "last_analyzed": "2026-07-16T09:35:46Z",
+  "quality_score": 5,
+  "assessment": "Comprehensive shiplog with quantified metrics (star deltas, PR counts, 6 documented ships), all data sources queried successfully (200 OK on API calls), ready-to-post content generated, automation state properly advanced.",
   "flags": [],
-  "avg_score": 4,
+  "avg_score": 4.13,
   "history": [
     {
       "date": "2026-06-15",
@@ -33,6 +33,10 @@
     {
       "date": "2026-07-13",
       "score": 4
+    },
+    {
+      "date": "2026-07-16",
+      "score": 5
     }
   ]
 }
