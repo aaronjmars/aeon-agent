@@ -1,0 +1,242 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-17"
+      },
+      "children": [
+        "theme_1",
+        "sep_1",
+        "theme_2",
+        "sep_2",
+        "theme_3",
+        "sep_3",
+        "theme_4"
+      ]
+    },
+    "theme_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_1",
+        "tweet_1_stack"
+      ]
+    },
+    "heading_1": {
+      "type": "Heading",
+      "props": {
+        "text": "New Launch — ADK",
+        "level": "h3"
+      }
+    },
+    "tweet_1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "Introduces ADK (Aeon Development Kit) — lets any website embed 1-click self-hosted Aeon instances, with skill imports and scheduling running directly from the site"
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2078150767836381517"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_2",
+        "tweet_2_stack"
+      ]
+    },
+    "heading_2": {
+      "type": "Heading",
+      "props": {
+        "text": "Security in Action",
+        "level": "h3"
+      }
+    },
+    "tweet_2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "Ran the vuln-scanner on SpaceXAI's freshly open-sourced grok build code the moment it dropped — found a vulnerability immediately"
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2078093996971164134"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_3",
+        "tweet_3_stack",
+        "tweet_4_stack"
+      ]
+    },
+    "heading_3": {
+      "type": "Heading",
+      "props": {
+        "text": "Framework Updates",
+        "level": "h3"
+      }
+    },
+    "tweet_3_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3",
+        "link_3"
+      ]
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "Grok 4.5 support added"
+      }
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2078093989580837264"
+      }
+    },
+    "tweet_4_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_4",
+        "link_4"
+      ]
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "60-day changelog article out — full list of improvements shipped on the framework"
+      }
+    },
+    "link_4": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2078093994383302751"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_4",
+        "tweet_5_stack"
+      ]
+    },
+    "heading_4": {
+      "type": "Heading",
+      "props": {
+        "text": "Community",
+        "level": "h3"
+      }
+    },
+    "tweet_5_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_5",
+        "link_5"
+      ]
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "Called out @blknoiz06 as running the coldest agent breathing"
+      }
+    },
+    "link_5": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2078119536939684272"
+      }
+    }
+  }
+}

@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest — 2026-07-17
-
 **Tweet Digest — 2026-07-17**
 
 **Theme: New Launch — ADK**
