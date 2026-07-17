@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-17T17:11:48Z",
-  "quality_score": 5,
-  "assessment": "Successful execution with substantive, specific content: fetched tweets via working API, deduped against memory, found 5 new tweets across 4 themes with concrete examples, notified, and logged properly.",
+  "last_analyzed": "2026-07-17T17:35:59Z",
+  "quality_score": 4,
+  "assessment": "Good execution — fetched tweets, properly deduplicated against recent history, identified 1 new item, sent notification, and logged for future runs following best practices",
   "flags": [],
   "avg_score": 4.03,
   "history": [
-    {
-      "date": "2026-06-18",
-      "score": 4
-    },
     {
       "date": "2026-06-19",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-07-17",
       "score": 5
+    },
+    {
+      "date": "2026-07-17",
+      "score": 4
     }
   ]
 }

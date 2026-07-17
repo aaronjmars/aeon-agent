@@ -1,0 +1,68 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest"
+      },
+      "children": [
+        "metadata",
+        "separator1",
+        "tweet-card",
+        "tweet-link"
+      ]
+    },
+    "metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "date",
+        "theme"
+      ]
+    },
+    "date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-17",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "theme": {
+      "type": "Badge",
+      "props": {
+        "text": "Framework Documentation"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "blog post covering the 60-day changelog — all the innovations and improvements shipped to the Aeon framework"
+      },
+      "children": []
+    },
+    "tweet-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2078093991942168783"
+      },
+      "children": []
+    }
+  }
+}
