@@ -3,6 +3,9 @@
   "last_analyzed": "2026-07-17T17:35:59Z",
   "quality_score": 4,
   "assessment": "Good execution — fetched tweets, properly deduplicated against recent history, identified 1 new item, sent notification, and logged for future runs following best practices",
+  "last_analyzed": "2026-07-17T17:38:00Z",
+  "quality_score": 4,
+  "assessment": "Substantive digest with 5 concrete tweets, proper deduplication logic, and thematic categorization; executed cleanly with clear status reporting",
   "flags": [],
   "avg_score": 4.03,
   "history": [
