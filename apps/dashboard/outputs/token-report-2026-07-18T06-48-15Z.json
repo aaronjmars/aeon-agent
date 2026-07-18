@@ -1,0 +1,107 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING"
+      },
+      "children": [
+        "text-narrative",
+        "separator-1",
+        "stats-stack",
+        "separator-2",
+        "link-chart"
+      ]
+    },
+    "text-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price up +7.5% but volume ran 0.82× the 7-day average — no follow-through. The session's biggest trade was a $5,030 sell at 19:46 UTC, absorbing the morning's whale-driven recovery.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol",
+        "stat-ratio",
+        "stat-whales"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.000007840",
+        "delta": "+7.5%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$588.8K",
+        "delta": "+2.5%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$48.2K",
+        "delta": "0.82× 7d avg",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "0.90",
+        "delta": "100/111 trades"
+      },
+      "children": []
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Transactions",
+        "value": "12"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "link-chart": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Price Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      },
+      "children": []
+    }
+  }
+}
