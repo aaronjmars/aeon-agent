@@ -1,0 +1,45 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "✅ Docs Sync"
+      },
+      "children": [
+        "date-text",
+        "sync-direction",
+        "pr-summary",
+        "pr-link"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-07-18",
+        "variant": "muted"
+      }
+    },
+    "sync-direction": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon → aaronjmars/aeon-website"
+      }
+    },
+    "pr-summary": {
+      "type": "Text",
+      "props": {
+        "text": "4 new PRs → changelog entry \"Integrate Aeon image, support section, count sync\""
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #162",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/162",
+        "source": "aeon-website"
+      }
+    }
+  }
+}
