@@ -134,7 +134,7 @@ skills:
   # --- Custom skills (this instance; ported in the v0.1.0 template migration) ---
   token-report: { enabled: true, schedule: "0 6 * * *" } # daily 06:00 UTC — price/volume/liquidity report for the tracked token (memory/MEMORY.md "Tracked Token" + treasury from optional memory/treasury-wallets.json) → article in output/articles/. Optional ALCHEMY_API_KEY/XAI_API_KEY/BASE_RPC_URL (keyless-capable).
   docs-sync: { enabled: true, schedule: "0 8 */3 * *", var: "" } # every 3 days 08:00 UTC — turn the product repo's newly-merged PRs into a changelog entry on the marketing site via a draft PR on the website repo. Config (product_repo/website_repo) in memory/docs-sync.md; override with var "product->website". Requires GH_GLOBAL (cross-repo write).
-  repo-pulse: { enabled: false, schedule: "0 10 */2 * *" } # every 2 days 10:00 UTC — new stars/forks/releases for watched repos (memory/watched-repos.md) with stargazer/forker profile enrichment + growth verdict.
+  repo-pulse: { enabled: true, schedule: "0 10 * * 1" } # weekly Mon 10:00 UTC — new stars/forks/releases for watched repos (memory/watched-repos.md) with stargazer/forker profile enrichment + growth verdict.
   tweet-digest: { enabled: true, schedule: "0 17 * * *", var: "" } # daily 17:00 UTC — account-based digest of tracked X accounts (memory/topics/tracked-accounts.yml); sibling to fetch-tweets/tweet-roundup. Requires XAI_API_KEY.
   # --- Fallback (must be last) ---
   heartbeat: { enabled: true, schedule: "0 19 * * *", var: "" } # ambient fleet-health check (default) — surfaces anything worth attention. var: empty=ambient check | <area>=ambient focused on that area | brief[:<area>]=priority brief (3 things to focus on, why now, what moved; folds in priority-brief)
