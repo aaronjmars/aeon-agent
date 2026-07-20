@@ -1,13 +1,11 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH (🟡)
+HEARTBEAT_OK · STATUS_PAGE=WATCH (🟡 minitor SECURITY.md P2 persists)
 
-## Summary
+---
 
-**Ambient heartbeat check — 2026-07-19**
+**Ambient check complete — 2026-07-20 19:00 UTC**
 
-- **P0 CLEAN** — All 6 enabled skills (heartbeat, token-report, tweet-digest, docs-sync, shiplog, memory-flush) at 100% success rate, 0 consecutive failures.
-- **P1 CLEAN** — No open PRs, no open issues.
-- **P2 FLAG (deduped)** — minitor SECURITY.md still missing, flagged in Next Priorities. Last reported within 48h (2026-07-18 heartbeat log) — no notification sent.
-- **P3 CLEAN** — All skills within 2× their schedule intervals.
-- **No notification sent** — all findings within dedup window.
-- **docs/status.md regenerated** — 🟡 WATCH, token pulse updated (AEON $0.000008703 +11.0% CONSOLIDATING, from today's token report).
-- **Log appended** — `memory/logs/2026-07-19.md` under `### heartbeat`.
+- **P0:** Clean — all 6 enabled skills at 100% success rate, zero consecutive failures. Heartbeat self-check within 36h window.
+- **P1:** Clean — no open PRs, no open GitHub issues.
+- **P2:** Flag (deduped) — minitor SECURITY.md still missing. Last appeared in both Jul 18 and Jul 19 logs; within 48h dedup window, no notification sent.
+- **P3:** Clean — all skills within 2× their schedule intervals. Next run: token-report Jul 21 06:00 UTC.
+- **Status page:** Updated `docs/status.md` to 🟡 WATCH with fresh token pulse (AEON $0.00000852, −2.1%, DISTRIBUTING).
