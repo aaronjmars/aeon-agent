@@ -3,6 +3,7 @@ type: Reference
 ---
 
 # Watched Repos
-- aaronjmars/aeon
-- aaronjmars/aeon-agent
-- aaronjmars/minitor
+- aeonfun/aeon
+- aeonfun/minitor
+- aeonfun/opendia
+- aeonfun/soul.md
