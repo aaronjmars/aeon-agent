@@ -1,0 +1,247 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse: aaronjmars/minitor",
+        "description": "2026-07-20"
+      },
+      "children": [
+        "surge_badge",
+        "stats_section",
+        "sep1",
+        "stargazers_section",
+        "sep2",
+        "forks_section",
+        "source_text"
+      ]
+    },
+    "surge_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SURGE",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_stars",
+        "stat_forks"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "14",
+        "delta": "+2",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "3",
+        "delta": "+1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stargazers_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stargazers_title",
+        "stargazers_list"
+      ]
+    },
+    "stargazers_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stargazers_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sg1",
+        "sg2"
+      ]
+    },
+    "sg1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg1_github",
+        "sg1_info",
+        "sg1_website",
+        "sg1_twitter",
+        "sg1_bio"
+      ]
+    },
+    "sg1_github": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/enuno",
+        "href": "https://github.com/enuno"
+      },
+      "children": []
+    },
+    "sg1_info": {
+      "type": "Text",
+      "props": {
+        "text": "Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 114 followers"
+      },
+      "children": []
+    },
+    "sg1_website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 https://enuno.github.io/DynamicCareerCanvas",
+        "href": "https://enuno.github.io/DynamicCareerCanvas"
+      },
+      "children": []
+    },
+    "sg1_twitter": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @NunoElvis",
+        "href": "https://twitter.com/NunoElvis"
+      },
+      "children": []
+    },
+    "sg1_bio": {
+      "type": "Text",
+      "props": {
+        "text": "Digital Nomad, Blockchain Evangel, and Digital Solutions Architect. Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services.",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sg2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg2_github",
+        "sg2_info"
+      ]
+    },
+    "sg2_github": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Ditto190",
+        "href": "https://github.com/Ditto190"
+      },
+      "children": []
+    },
+    "sg2_info": {
+      "type": "Text",
+      "props": {
+        "text": "DT · 🏢 ModifyMe · 313 repos"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "forks_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "forks_title",
+        "forks_list"
+      ]
+    },
+    "forks_title": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "forks_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork1"
+      ]
+    },
+    "fork1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork1_link",
+        "fork1_info"
+      ]
+    },
+    "fork1_link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Ditto190/minitor",
+        "href": "https://github.com/Ditto190/minitor"
+      },
+      "children": []
+    },
+    "fork1_info": {
+      "type": "Text",
+      "props": {
+        "text": "DT · 🏢 ModifyMe · 313 repos"
+      },
+      "children": []
+    },
+    "source_text": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}

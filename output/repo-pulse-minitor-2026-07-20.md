@@ -1,5 +1,3 @@
-ℹ️ Repo Pulse: aaronjmars/minitor
-
 *Repo Pulse — 2026-07-20* — [SURGE]
 aaronjmars/minitor — stars 14 (+2) · forks 3 (+1)
 
