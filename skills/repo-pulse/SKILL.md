@@ -180,7 +180,10 @@ Rules:
 - **Always show the bio line** when the actor has one — it's the field the operator actually wants. **Hide the follower count** when it's 0 or low (< 10): never print `0 followers`; show it (rounded: `<1000` → raw, `1000+` → `1.2k`) only at 10+.
 - Omit `Notable new stargazers`, `Other new stargazers`, `New forks`, `New releases`, or `Source` lines if they would be empty.
 - **Never include traffic, watchers, or open issues** — they don't belong in a pulse.
-- **The at-a-glance table lists every watched repo**, including `QUIET` ones — that's the proof-of-check. Use the bare repo name (`opendia`, not `aeonfun/opendia`) in the table to keep it narrow; use the full `owner/repo` in the per-repo detail headers. Render `—` for a zero delta, never `+0`.
+- **The at-a-glance table lists every watched repo**, including `QUIET` ones — that's the proof-of-check. Use the bare repo name (`opendia`, not `aeonfun/opendia`) in the table to keep it narrow; use the full `owner/repo` in the per-repo detail headers.
+- **The table's five columns are fixed and mandatory — `Repo | Stars | Forks | Rel | Verdict`, in that order.** Reproduce the header row verbatim. Do not rename them (`New Stars`), do not drop `Rel`, and do not add columns. Consistent shape is what makes the pulse skimmable week over week.
+- **Stars and Forks cells carry the absolute count AND the delta: `577 (+4)`.** Never the delta alone (`+4`) — the absolute is the "how big is this repo" context that makes a delta mean anything, and a reader comparing `+7` on a 1849-star repo against `+7` on a 14-star one needs both numbers in front of them. `Rel` is delta-only (`+1`), since a release count has no meaningful running total.
+- Render `—` for a zero delta, never `+0`: `65 (—)` for stars/forks, bare `—` for `Rel`.
 - **The header verdict is the highest across repos** (`SURGE` > `ACTIVE` > `STEADY` > `QUIET`), so the one-line summary reflects the loudest thing that happened.
 - **Detail sections only for repos with activity.** A `QUIET` repo appears in the table and in the trailing `Source:` line, and gets no section of its own.
 - `./notify` chunks at ~3900 chars with `[i/N]` markers — long is safe, it will not truncate. Still, prefer signal density: the profile-card budget below is what keeps a 4-repo pulse to one or two chunks.
