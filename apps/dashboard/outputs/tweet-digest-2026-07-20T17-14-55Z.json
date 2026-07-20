@@ -1,0 +1,59 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-20"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme_section",
+        "tweet_card"
+      ]
+    },
+    "theme_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_theme_label",
+        "badge_shipping"
+      ]
+    },
+    "text_theme_label": {
+      "type": "Text",
+      "props": {
+        "text": "Theme:",
+        "variant": "caption"
+      }
+    },
+    "badge_shipping": {
+      "type": "Badge",
+      "props": {
+        "text": "Shipping",
+        "variant": "default"
+      }
+    },
+    "tweet_card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Dropped the latest Aeon + Miroshark shiplog — https://x.com/aeonframework/status/2079168764856119619"
+      }
+    }
+  }
+}
