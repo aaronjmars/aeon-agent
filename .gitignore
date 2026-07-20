@@ -62,3 +62,6 @@ node_modules/
 # Stale artifacts
 .external-work
 .vuln-scan/
+
+# Shiplog skill temp XAI payloads and response files
+xai-shiplog-*.json

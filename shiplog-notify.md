@@ -1,20 +1,18 @@
-aeon ⭐ shiplog — Jul 13 → Jul 16
+aeon ⭐ + miroshark 🦈 shiplog · Jul 16 → Jul 20
 
-30 PRs + 11 commits this window. the bytes:
+shipped 26 PRs + 18 commits. the bytes:
 
-- **aeonfun org live**: aeon, minitor, soul.md, opendia all under the org. IP of OpenDia (1.8k ⭐, forked by the claude code creator), soul.md (adopted by Ribbonfarm), minitor — now under $AEON on base.
-- **MCP OAuth**: durable one-click auth for OAuth-gated MCP servers — glim wired first, rotating-token refresh handled, Robinhood in the catalog. the plumbing is in.
-- **Grok 4.5**: live on aeon ⭐. deprecated x_search migrated to grok-4.3 in the same PR.
-- **Minitor front-end**: Minitor now shows aeon skill run output live. Aeon runs → you can see it.
-- **60 Days of aeon**: changelog article shipped at aeon.fun/blog — first batch of intro articles done.
-- **vuln scanner**: high severity found + reported to HackerOne. already secured software from google, vercel, alibaba & more. not simulated.
+- **defi-llama**: aeon, miroshark + miroshark-x402 all got fees adapters merged into DefiLlama/dimension-adapters. protocol-grade tracking, live.
+- **ADK**: aeon developer kit formally shipped — GitHub App + API + skill packs. now there's a real "build on aeon" path without forking.
+- **mcp**: robinhood-mcp, glim-mcp, executor-mcp (Executor Cloud) added to the catalog.
+- **model training**: fine-tuning Qwen3.5-9B for miroshark sim agents. curation > volume. first SFT pass: ~50% quality jump.
+- **soul.md**: @blknoiz06 example shipped into the catalog.
 
 traction:
-- aeon 576 ⭐ (+2 this window)
-- MiroShark 1365 ⭐ (+5 this window)
-- x.com/Base_Insights (21.9k followers) listed x.com/miroshark_ "Early" tier (Jul 15)
-- top post: "found a high severity issue using aeon, reporting it on hackerone" — 45 likes, 3 RTs
+- aeon 577 ⭐ (+1) · miroshark 1,394 ⭐ (+29)
+- minitor dashboard demo: 34 likes, 4 RTs on @aeonframework
+- ecosystem scouts: nothing this window
 
-⭐
+the harness is the model / the harness is the model / the harness is the model ⭐🦈
 
-https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-16.md
+https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-20.md

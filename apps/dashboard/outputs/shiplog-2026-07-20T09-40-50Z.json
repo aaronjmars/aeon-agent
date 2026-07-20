@@ -1,0 +1,172 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "aeon ⭐ + miroshark 🦈 shiplog",
+        "description": "Jul 16 → Jul 20"
+      },
+      "children": [
+        "commits-stat",
+        "separator1",
+        "shipped-section",
+        "separator2",
+        "traction-section",
+        "separator3",
+        "quote",
+        "article-link"
+      ]
+    },
+    "commits-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Shipped",
+        "value": "26 PRs + 18 commits"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "shipped-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped-heading",
+        "item-defi",
+        "item-adk",
+        "item-mcp",
+        "item-model",
+        "item-soul"
+      ]
+    },
+    "shipped-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h3"
+      }
+    },
+    "item-defi": {
+      "type": "Text",
+      "props": {
+        "text": "**defi-llama**: aeon, miroshark + miroshark-x402 all got fees adapters merged into DefiLlama/dimension-adapters. protocol-grade tracking, live.",
+        "variant": "body"
+      }
+    },
+    "item-adk": {
+      "type": "Text",
+      "props": {
+        "text": "**ADK**: aeon developer kit formally shipped — GitHub App + API + skill packs. now there's a real \"build on aeon\" path without forking.",
+        "variant": "body"
+      }
+    },
+    "item-mcp": {
+      "type": "Text",
+      "props": {
+        "text": "**mcp**: robinhood-mcp, glim-mcp, executor-mcp (Executor Cloud) added to the catalog.",
+        "variant": "body"
+      }
+    },
+    "item-model": {
+      "type": "Text",
+      "props": {
+        "text": "**model training**: fine-tuning Qwen3.5-9B for miroshark sim agents. curation > volume. first SFT pass: ~50% quality jump.",
+        "variant": "body"
+      }
+    },
+    "item-soul": {
+      "type": "Text",
+      "props": {
+        "text": "**soul.md**: @blknoiz06 example shipped into the catalog.",
+        "variant": "body"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "traction-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "traction-heading",
+        "aeon-stars",
+        "miroshark-stars",
+        "minitor-demo",
+        "ecosystem-scouts"
+      ]
+    },
+    "traction-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Traction",
+        "level": "h3"
+      }
+    },
+    "aeon-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon",
+        "value": "577 ⭐",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "miroshark-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "miroshark",
+        "value": "1,394 ⭐",
+        "delta": "+29",
+        "trend": "up"
+      }
+    },
+    "minitor-demo": {
+      "type": "Text",
+      "props": {
+        "text": "**minitor dashboard demo**: 34 likes, 4 RTs on @aeonframework",
+        "variant": "body"
+      }
+    },
+    "ecosystem-scouts": {
+      "type": "Text",
+      "props": {
+        "text": "**ecosystem scouts**: nothing this window",
+        "variant": "muted"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "quote": {
+      "type": "Text",
+      "props": {
+        "text": "the harness is the model / the harness is the model / the harness is the model ⭐🦈",
+        "variant": "lead"
+      }
+    },
+    "article-link": {
+      "type": "Link",
+      "props": {
+        "label": "View full shiplog",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-20.md"
+      }
+    }
+  }
+}
