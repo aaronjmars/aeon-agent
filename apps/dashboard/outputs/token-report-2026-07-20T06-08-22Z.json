@@ -1,0 +1,112 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — DISTRIBUTING"
+      },
+      "children": [
+        "narrative",
+        "sep1",
+        "metrics_group1",
+        "metrics_group2",
+        "sep2",
+        "chart"
+      ]
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Sell-side imbalance with B/S ratio 0.70 (vs 1.26 yesterday) on the thinnest volume in recent days — two whale exits ($1,526 + $1,436) faced off against a $5,522 buy, with the broader session finishing sell-weighted.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_group1": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liq_stat",
+        "vol_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00000852",
+        "delta": "−2.1%",
+        "trend": "down"
+      }
+    },
+    "liq_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$624.3K",
+        "delta": "−1.5%",
+        "trend": "down"
+      }
+    },
+    "vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$11.2K",
+        "delta": "0.21× 7d avg",
+        "trend": "down"
+      }
+    },
+    "metrics_group2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "ratio_stat",
+        "whales_stat"
+      ]
+    },
+    "ratio_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys (32) / Sells (46)",
+        "value": "0.70",
+        "delta": "vs 1.26 yesterday",
+        "trend": "down"
+      }
+    },
+    "whales_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "3"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart": {
+      "type": "Link",
+      "props": {
+        "label": "Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
