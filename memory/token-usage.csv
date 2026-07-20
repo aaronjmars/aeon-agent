@@ -232,4 +232,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-20,tweet-digest,claude-sonnet-4-6,21,4940,1059377,64612
 2026-07-20,heartbeat,claude-sonnet-4-6,2723,9315,477384,45683
 2026-07-20,repo-pulse,claude-sonnet-4-6,17,16463,893434,62731
-2026-07-20,repo-pulse,claude-sonnet-4-6,16,30718,906268,79153
+2026-07-20,repo-pulse,claude-sonnet-4-6,17,32221,859013,118239

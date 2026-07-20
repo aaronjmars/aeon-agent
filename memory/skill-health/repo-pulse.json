@@ -3,6 +3,9 @@
   "last_analyzed": "2026-07-20T23:02:43Z",
   "quality_score": 4,
   "assessment": "Good — substantive metrics, meaningful pattern detection (Ditto190 ecosystem sweep), and profiled forkers with context; complete workflow (fetch, analyze, notify, log)",
+  "last_analyzed": "2026-07-20T23:14:32Z",
+  "quality_score": 4,
+  "assessment": "Solid execution with structured metrics, enriched actor profiles, and proper constraint management; ready for trend analysis in future runs",
   "flags": [],
   "avg_score": 3.93,
   "history": [

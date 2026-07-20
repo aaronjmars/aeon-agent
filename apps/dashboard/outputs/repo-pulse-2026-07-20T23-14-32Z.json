@@ -1,0 +1,892 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-07-20"
+      },
+      "children": [
+        "header_section",
+        "summary_table",
+        "repos_section",
+        "source_section"
+      ]
+    },
+    "header_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "header_title",
+        "status_badge"
+      ]
+    },
+    "header_title": {
+      "type": "Heading",
+      "props": {
+        "text": "Repo Pulse — 2026-07-20",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "summary_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "soul.md",
+            "621 (+10)",
+            "65 (+2)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1849 (+7)",
+            "149 (+2)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "aeon",
+            "577 (+4)",
+            "210 (+3)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "14 (+2)",
+            "3 (+1)",
+            "—",
+            "STEADY"
+          ]
+        ]
+      },
+      "children": []
+    },
+    "repos_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo_soul",
+        "sep1",
+        "repo_opendia",
+        "sep2",
+        "repo_aeon",
+        "sep3",
+        "repo_minitor"
+      ]
+    },
+    "repo_soul": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul_header",
+        "soul_status",
+        "soul_sg_heading",
+        "soul_sg_1",
+        "soul_sg_2",
+        "soul_sg_3",
+        "soul_sg_4",
+        "soul_sg_5",
+        "soul_sg_other",
+        "soul_forks_heading",
+        "soul_forks_1",
+        "soul_forks_2"
+      ]
+    },
+    "soul_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeonfun/soul.md",
+        "href": "https://github.com/aeonfun/soul.md"
+      },
+      "children": []
+    },
+    "soul_status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w=7)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "soul_sg_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "soul_sg_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_sg_1_link",
+        "soul_sg_1_desc"
+      ]
+    },
+    "soul_sg_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "botzrDev",
+        "href": "https://github.com/botzrDev"
+      },
+      "children": []
+    },
+    "soul_sg_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Phillip Austin Green · 📍 Oklahoma · 🏢 @botzr · 21 repos · 🌐 dreamd.dev · 🐦 @wgi_dev — \"Research Engineer | Benchmarking AI Memory (dreamd) on botzr-AEGIS - the secure execution layer that sits underneath AI agent frameworks\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "soul_sg_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_sg_2_link",
+        "soul_sg_2_desc"
+      ]
+    },
+    "soul_sg_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "jet-c-21",
+        "href": "https://github.com/jet-c-21"
+      },
+      "children": []
+    },
+    "soul_sg_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Jet (Ta-Wei Chien) · 📍 Taipei, Taiwan · 🏢 iCHASE · 108 repos · 🌐 https://jet-c-21.github.io/ — \"Computer Vision x AI x Dreams\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "soul_sg_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_sg_3_link",
+        "soul_sg_3_desc"
+      ]
+    },
+    "soul_sg_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "Ambi93",
+        "href": "https://github.com/Ambi93"
+      },
+      "children": []
+    },
+    "soul_sg_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Amber Lewis · 📍 Port Macquarie, NSW Australia · 86 repos · 88 followers",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "soul_sg_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_sg_4_link",
+        "soul_sg_4_desc"
+      ]
+    },
+    "soul_sg_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "Ditto190",
+        "href": "https://github.com/Ditto190"
+      },
+      "children": []
+    },
+    "soul_sg_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DT · 🏢 ModifyMe · 313 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "soul_sg_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_sg_5_link",
+        "soul_sg_5_desc"
+      ]
+    },
+    "soul_sg_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "enuno",
+        "href": "https://github.com/enuno"
+      },
+      "children": []
+    },
+    "soul_sg_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🌐 https://enuno.github.io/DynamicCareerCanvas · 🐦 @NunoElvis · 114 followers — \"Digital Nomad, Blockchain Evangel, and Digital Solutions Architect. Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services.\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "soul_sg_other": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers: qdon314, cabbagecachekid, edualse, mcclonkster",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "soul_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "soul_forks_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_forks_1_link",
+        "soul_forks_1_desc"
+      ]
+    },
+    "soul_forks_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "yazdanctx",
+        "href": "https://github.com/yazdanctx"
+      },
+      "children": []
+    },
+    "soul_forks_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Yazdan Fathali · 139 repos · 🌐 https://yazdan.me · 181 followers — \"security researcher / engineer\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "soul_forks_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_forks_2_link",
+        "soul_forks_2_desc"
+      ]
+    },
+    "soul_forks_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "grahaminman",
+        "href": "https://github.com/grahaminman"
+      },
+      "children": []
+    },
+    "soul_forks_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Graham Inman · 📍 UK · 8 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "repo_opendia": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia_header",
+        "opendia_status",
+        "opendia_sg_heading",
+        "opendia_sg_1",
+        "opendia_sg_2",
+        "opendia_sg_other",
+        "opendia_forks_heading",
+        "opendia_forks_1",
+        "opendia_forks_2"
+      ]
+    },
+    "opendia_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeonfun/opendia",
+        "href": "https://github.com/aeonfun/opendia"
+      },
+      "children": []
+    },
+    "opendia_status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w=7)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "opendia_sg_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "opendia_sg_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia_sg_1_link",
+        "opendia_sg_1_desc"
+      ]
+    },
+    "opendia_sg_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "Ditto190",
+        "href": "https://github.com/Ditto190"
+      },
+      "children": []
+    },
+    "opendia_sg_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DT · 🏢 ModifyMe · 313 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "opendia_sg_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia_sg_2_link",
+        "opendia_sg_2_desc"
+      ]
+    },
+    "opendia_sg_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "LiamVisionary",
+        "href": "https://github.com/LiamVisionary"
+      },
+      "children": []
+    },
+    "opendia_sg_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "34 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "opendia_sg_other": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers: SameerGadge, qxlsh, xiaoninnychrest, Kwonmo-sung",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "opendia_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "opendia_forks_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia_forks_1_link",
+        "opendia_forks_1_desc"
+      ]
+    },
+    "opendia_forks_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "MatrixNeoKozak",
+        "href": "https://github.com/MatrixNeoKozak"
+      },
+      "children": []
+    },
+    "opendia_forks_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "KozakLordOfMatrix · 246 repos — \"Hello World!\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "opendia_forks_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia_forks_2_link",
+        "opendia_forks_2_desc"
+      ]
+    },
+    "opendia_forks_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "rootzeeftw",
+        "href": "https://github.com/rootzeeftw"
+      },
+      "children": []
+    },
+    "opendia_forks_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "UnknownAvax · 📍 worldwide maybe · 🏢 FSNV Studio · 176 repos · 🐦 @rootzeeftw — \"GENIUS CUBE OS\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "repo_aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_header",
+        "aeon_status",
+        "aeon_sg_heading",
+        "aeon_sg_1",
+        "aeon_sg_2",
+        "aeon_sg_3",
+        "aeon_sg_4",
+        "aeon_forks_heading",
+        "aeon_forks_1",
+        "aeon_forks_2",
+        "aeon_forks_3"
+      ]
+    },
+    "aeon_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeonfun/aeon",
+        "href": "https://github.com/aeonfun/aeon"
+      },
+      "children": []
+    },
+    "aeon_status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w=7)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "aeon_sg_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "aeon_sg_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_sg_1_link",
+        "aeon_sg_1_desc"
+      ]
+    },
+    "aeon_sg_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "normalsimple",
+        "href": "https://github.com/normalsimple"
+      },
+      "children": []
+    },
+    "aeon_sg_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "namnvh · 319 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aeon_sg_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_sg_2_link",
+        "aeon_sg_2_desc"
+      ]
+    },
+    "aeon_sg_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "lajarre",
+        "href": "https://github.com/lajarre"
+      },
+      "children": []
+    },
+    "aeon_sg_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "74 repos · 🐦 @lajarre · 51 followers",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aeon_sg_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_sg_3_link",
+        "aeon_sg_3_desc"
+      ]
+    },
+    "aeon_sg_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "Rizkijack",
+        "href": "https://github.com/Rizkijack"
+      },
+      "children": []
+    },
+    "aeon_sg_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "0xJustshrimp · 📍 Jakarta · 30 repos — \"WEB3 Dev\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aeon_sg_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_sg_4_link",
+        "aeon_sg_4_desc"
+      ]
+    },
+    "aeon_sg_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "Ditto190",
+        "href": "https://github.com/Ditto190"
+      },
+      "children": []
+    },
+    "aeon_sg_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DT · 🏢 ModifyMe · 313 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aeon_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "aeon_forks_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_forks_1_link",
+        "aeon_forks_1_desc"
+      ]
+    },
+    "aeon_forks_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "enuno",
+        "href": "https://github.com/enuno"
+      },
+      "children": []
+    },
+    "aeon_forks_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🌐 https://enuno.github.io/DynamicCareerCanvas · 🐦 @NunoElvis · 114 followers — \"Digital Nomad, Blockchain Evangel, and Digital Solutions Architect. Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services.\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aeon_forks_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_forks_2_link",
+        "aeon_forks_2_desc"
+      ]
+    },
+    "aeon_forks_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "victordlp8",
+        "href": "https://github.com/victordlp8"
+      },
+      "children": []
+    },
+    "aeon_forks_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Victor De Lomas · 16 repos · 🌐 https://ko-fi.com/victordlp8 · 11 followers",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "aeon_forks_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_forks_3_link",
+        "aeon_forks_3_desc"
+      ]
+    },
+    "aeon_forks_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "Sauken-69",
+        "href": "https://github.com/Sauken-69"
+      },
+      "children": []
+    },
+    "aeon_forks_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "2 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "repo_minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor_header",
+        "minitor_status",
+        "minitor_sg_heading",
+        "minitor_sg_1",
+        "minitor_forks_heading",
+        "minitor_forks_1"
+      ]
+    },
+    "minitor_header": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeonfun/minitor",
+        "href": "https://github.com/aeonfun/minitor"
+      },
+      "children": []
+    },
+    "minitor_status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w=7)",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "minitor_sg_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "minitor_sg_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor_sg_1_link",
+        "minitor_sg_1_desc"
+      ]
+    },
+    "minitor_sg_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "enuno",
+        "href": "https://github.com/enuno"
+      },
+      "children": []
+    },
+    "minitor_sg_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🌐 https://enuno.github.io/DynamicCareerCanvas · 🐦 @NunoElvis · 114 followers — \"Digital Nomad, Blockchain Evangel, and Digital Solutions Architect. Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services.\"",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "minitor_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "minitor_forks_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor_forks_1_link",
+        "minitor_forks_1_desc"
+      ]
+    },
+    "minitor_forks_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "Ditto190",
+        "href": "https://github.com/Ditto190"
+      },
+      "children": []
+    },
+    "minitor_forks_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DT · 🏢 ModifyMe · 313 repos",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "source_section": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events · first run for aeonfun org (avg4w=7 default)",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
