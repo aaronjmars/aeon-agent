@@ -1,6 +1,5 @@
-ℹ️ Tweet Digest — 2026-07-20
+*Tweet Digest — 2026-07-21*
 
-*Tweet Digest — 2026-07-20*
-
-*Theme: Shipping*
-@aeonframework: Dropped the latest Aeon + Miroshark shiplog — [link](https://x.com/aeonframework/status/2079168764856119619)
+*Theme: Shipping ⭐*
+@aeonframework: attestation system article is out — how aeon makes every skill-execution verifiable — [link](https://x.com/aeonframework/status/2079485814958948757)
+@aeonframework: ADK walkthrough with @0xNurstar — wire aeon agents into any product or workflow in minutes — [link](https://x.com/aeonframework/status/2079521415791812821)

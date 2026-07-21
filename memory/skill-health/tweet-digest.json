@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-20T17:14:54Z",
+  "last_analyzed": "2026-07-21T17:06:55Z",
   "quality_score": 4,
-  "assessment": "Well-executed digest task: fetched tweets, deduped 4 prior items, identified 1 new result with link/ID, proper logging and notification sent.",
+  "assessment": "Completed tweet digest successfully — fetched 2 new @aeonframework tweets with proper deduplication, notification, and memory logging",
   "flags": [],
   "avg_score": 4,
   "history": [
-    {
-      "date": "2026-06-22",
-      "score": 4
-    },
     {
       "date": "2026-06-23",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-07-20",
+      "score": 4
+    },
+    {
+      "date": "2026-07-21",
       "score": 4
     }
   ]

@@ -1,0 +1,51 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-21"
+      },
+      "children": [
+        "theme-heading",
+        "separator-1",
+        "tweet-1",
+        "tweet-2"
+      ]
+    },
+    "theme-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipping ⭐",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "attestation system article is out — how aeon makes every skill-execution verifiable",
+        "href": "https://x.com/aeonframework/status/2079485814958948757",
+        "source": "@aeonframework"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ADK walkthrough with @0xNurstar — wire aeon agents into any product or workflow in minutes",
+        "href": "https://x.com/aeonframework/status/2079521415791812821",
+        "source": "@aeonframework"
+      },
+      "children": []
+    }
+  }
+}
