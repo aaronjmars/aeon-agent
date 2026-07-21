@@ -1,0 +1,55 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync",
+        "description": "2026-07-21"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-flow",
+        "pr-stat",
+        "changelog-entry",
+        "pr-link"
+      ]
+    },
+    "repo-flow": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website"
+      }
+    },
+    "pr-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs",
+        "value": "10"
+      }
+    },
+    "changelog-entry": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog: App CI gating, config fixes, test expansion"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #166",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/166"
+      }
+    }
+  }
+}

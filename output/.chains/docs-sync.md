@@ -1,6 +1,4 @@
-✅ Docs Sync
-
-*Docs Sync — 2026-07-18*
-aeonfun/aeon → aaronjmars/aeon-website
-4 new PRs → changelog entry "Integrate Aeon image, support section, count sync"
-[PR #162](https://github.com/aaronjmars/aeon-website/pull/162)
+*Docs Sync — 2026-07-21*
+aaronjmars/aeon → aaronjmars/aeon-website
+10 new PRs → changelog entry "App CI gating, config fixes, test expansion"
+PR: https://github.com/aaronjmars/aeon-website/pull/166
