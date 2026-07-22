@@ -240,3 +240,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-22,token-report,claude-sonnet-4-6,22,16893,1284115,67998
 2026-07-22,secured-watch,claude-sonnet-4-6,18,5943,900901,46074
 2026-07-22,secured-watch,claude-sonnet-4-6,16,5762,658718,32727
+2026-07-22,tweet-digest,claude-sonnet-4-6,20,5512,1076924,50072

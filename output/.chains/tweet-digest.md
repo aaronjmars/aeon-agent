@@ -1,5 +1,7 @@
-*Tweet Digest — 2026-07-21*
+ℹ️ Tweet Digest
 
-*Theme: Shipping ⭐*
-@aeonframework: attestation system article is out — how aeon makes every skill-execution verifiable — [link](https://x.com/aeonframework/status/2079485814958948757)
-@aeonframework: ADK walkthrough with @0xNurstar — wire aeon agents into any product or workflow in minutes — [link](https://x.com/aeonframework/status/2079521415791812821)
+*Tweet Digest — 2026-07-22*
+
+*Theme: Framework positioning*
+@aeonframework: puts the question out in the open — which agentic framework actually wins on autonomous agents? — [link](https://x.com/aeonframework/status/2079906939849322958)
+@aeonframework: transparency as a load-bearing pillar — community-backed, building it in the open ⭐ — [link](https://x.com/aeonframework/status/2079839841571770651)

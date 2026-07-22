@@ -1,0 +1,33 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-07-22 | Theme: Framework positioning"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "puts the question out in the open — which agentic framework actually wins on autonomous agents? — [link](https://x.com/aeonframework/status/2079906939849322958)"
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "transparency as a load-bearing pillar — community-backed, building it in the open ⭐ — [link](https://x.com/aeonframework/status/2079839841571770651)"
+      }
+    }
+  }
+}
