@@ -1,0 +1,14 @@
+{
+  "skill": "secured-watch",
+  "last_analyzed": "2026-07-22T14:17:45Z",
+  "quality_score": 4,
+  "assessment": "First-run baseline correctly established; watch is live and ready to produce diffs on subsequent runs.",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-07-22",
+      "score": 4
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured Repos Watch"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars",
+        "link_view",
+        "separator",
+        "text_update"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Secured Repos Tracked",
+        "value": "58"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total Stars",
+        "value": "1,745,746"
+      }
+    },
+    "link_view": {
+      "type": "Link",
+      "props": {
+        "label": "View on aeon.fun/security",
+        "href": "https://aeon.fun/security"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_update": {
+      "type": "Text",
+      "props": {
+        "text": "New additions reported from the next run. ⭐",
+        "variant": "caption"
+      }
+    }
+  }
+}
