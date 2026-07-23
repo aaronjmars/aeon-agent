@@ -3,7 +3,7 @@ TODAY = datetime.date.today().isoformat()
 var = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
 dry = var == "dry-run"; full = var == "full"
 STATE = "memory/state/secured-repos.json"
-html = open('memory/state/security.html', encoding='utf-8', errors='replace').read()
+html = open('memory/state/security-tmp.html', encoding='utf-8', errors='replace').read()
 
 # --- parse every secured-repo row ---
 rows = {}
@@ -95,6 +95,6 @@ else:
         L.append("")
 if gone:
     L.append(f"_Dropped from board: {', '.join(sorted(gone))}_")
-open('memory/state/report.md', 'w').write("\n".join(L).rstrip() + "\n")
+open('memory/state/sw-report.md', 'w').write("\n".join(L).rstrip() + "\n")
 print("NOTIFY")
 print(f"new={len(new)} changed={len(changed)} gone={len(gone)} repos={len(rows)}")
