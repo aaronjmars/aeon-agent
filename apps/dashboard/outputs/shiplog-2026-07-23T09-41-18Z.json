@@ -1,0 +1,343 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon shiplog Jul 20–23",
+        "description": "aeon ⭐🦈 shiplog · Jul 20 → Jul 23"
+      },
+      "children": [
+        "summary_text",
+        "stats_stack",
+        "sep1",
+        "security_stack",
+        "sep2",
+        "cleanup_stack",
+        "sep3",
+        "watch_stack",
+        "sep4",
+        "miroshark_stack",
+        "sep5",
+        "soul_stack",
+        "sep6",
+        "minitor_stack",
+        "sep7",
+        "adk_stack",
+        "sep8",
+        "stars_stack",
+        "sep9",
+        "link_article"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "38 merged PRs, 17 commits, 3 days. the bytes:"
+      }
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_prs",
+        "stat_commits",
+        "stat_days"
+      ]
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged PRs",
+        "value": "38"
+      }
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "17"
+      }
+    },
+    "stat_days": {
+      "type": "Stat",
+      "props": {
+        "label": "Days",
+        "value": "3"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "security_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "security_heading",
+        "security_text"
+      ]
+    },
+    "security_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "security sweep",
+        "level": "h3"
+      }
+    },
+    "security_text": {
+      "type": "Text",
+      "props": {
+        "text": "10+ CVEs closed across the stack — dashboard (sharp/libvips), MiroShark MCP (CVE-2026-59950, CVE-2026-13311), opendia loopback auth bypass, tweazy deps, agent-credit safety-check bypasses. all self-found."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "cleanup_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "cleanup_heading",
+        "cleanup_text"
+      ]
+    },
+    "cleanup_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon cleanup",
+        "level": "h3"
+      }
+    },
+    "cleanup_text": {
+      "type": "Text",
+      "props": {
+        "text": "repo-wide 8-dimension pass (#757), CI now gates apps/** (#752), config fix for missing aeon.yml entry (#754). CI is now the compiler."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "watch_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "watch_heading",
+        "watch_text"
+      ]
+    },
+    "watch_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "secured-watch",
+        "level": "h3"
+      }
+    },
+    "watch_text": {
+      "type": "Text",
+      "props": {
+        "text": "new skill watches aeon.fun/security every 2 days. 58 repos, 1.7M stars tracked. Aeon monitors its own security page."
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "miroshark_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "miroshark_heading",
+        "miroshark_text"
+      ]
+    },
+    "miroshark_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "miroshark 🦈",
+        "level": "h3"
+      }
+    },
+    "miroshark_text": {
+      "type": "Text",
+      "props": {
+        "text": "dead code pass, dep CVEs closed, +21 ⭐ this window (1415 total)"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "soul_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_heading",
+        "soul_text"
+      ]
+    },
+    "soul_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "soul.md",
+        "level": "h3"
+      }
+    },
+    "soul_text": {
+      "type": "Text",
+      "props": {
+        "text": "corpus corruption fixed, CI link check real now"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "minitor_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor_heading",
+        "minitor_text"
+      ]
+    },
+    "minitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor",
+        "level": "h3"
+      }
+    },
+    "minitor_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 PRs — Node 22 toolchain, hooks fixed, test coverage expanded"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "adk_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "adk_heading",
+        "adk_text"
+      ]
+    },
+    "adk_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "adk",
+        "level": "h3"
+      }
+    },
+    "adk_text": {
+      "type": "Text",
+      "props": {
+        "text": "@0xNurstar walkthrough video dropped → 48 likes, 5 RT in 24h"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stars_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stars_heading",
+        "stars_grid"
+      ]
+    },
+    "stars_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "stars",
+        "level": "h3"
+      }
+    },
+    "stars_grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "star_aeon",
+        "star_miroshark",
+        "star_soul"
+      ]
+    },
+    "star_aeon": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon",
+        "value": "578",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "star_miroshark": {
+      "type": "Stat",
+      "props": {
+        "label": "MiroShark",
+        "value": "1415",
+        "delta": "+21",
+        "trend": "up"
+      }
+    },
+    "star_soul": {
+      "type": "Stat",
+      "props": {
+        "label": "soul.md",
+        "value": "623",
+        "delta": "+3",
+        "trend": "up"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full shiplog article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-23.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

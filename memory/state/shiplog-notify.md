@@ -1,5 +1,3 @@
-✅ aeon shiplog Jul 20–23
-
 aeon ⭐🦈 shiplog · Jul 20 → Jul 23
 
 38 merged PRs, 17 commits, 3 days. the bytes:
