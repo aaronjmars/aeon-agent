@@ -1,7 +1,6 @@
-ℹ️ Tweet Digest
+## Summary
 
-*Tweet Digest — 2026-07-22*
-
-*Theme: Framework positioning*
-@aeonframework: puts the question out in the open — which agentic framework actually wins on autonomous agents? — [link](https://x.com/aeonframework/status/2079906939849322958)
-@aeonframework: transparency as a load-bearing pillar — community-backed, building it in the open ⭐ — [link](https://x.com/aeonframework/status/2079839841571770651)
+- **Fetched** latest tweets from @aeonframework via Grok x_search (http=200, 5 tweets returned).
+- **Deduped** all 5 against the last 2 days of logs — every tweet had already been reported (Jul 20–22 runs).
+- **No notification sent** — no new content.
+- **Logged** `TWEET_DIGEST_OK` to `memory/logs/2026-07-23.md`.
