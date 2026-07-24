@@ -1,0 +1,144 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING"
+      },
+      "children": [
+        "text-narrative",
+        "separator-1",
+        "heading-metrics",
+        "grid-metrics",
+        "separator-2",
+        "heading-activity",
+        "stack-activity",
+        "separator-3",
+        "link-chart"
+      ]
+    },
+    "text-narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price -10.9% on 0.3× volume — buyers stepped in (68 buys vs 38 sells, ratio 1.79), but one $2.9K whale sell at 02:57 UTC drove the dip with no whale buying to offset it.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Metrics",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.0000069",
+        "delta": "-10.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$569.9K",
+        "delta": "-5.5%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$9.8K",
+        "delta": "0.3× 7d avg"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-activity": {
+      "type": "Heading",
+      "props": {
+        "text": "Buy/Sell Activity",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "stack-activity": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-buys-sells",
+        "text-whales"
+      ]
+    },
+    "text-buys-sells": {
+      "type": "Text",
+      "props": {
+        "text": "Buys: 68 | Sells: 38 | Ratio: 1.79",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "text-whales": {
+      "type": "Text",
+      "props": {
+        "text": "Whales: 1 ($2.9K sell at 02:57 UTC, no whale buy offset)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}
