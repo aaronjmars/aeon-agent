@@ -1,0 +1,55 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Docs Sync — 2026-07-24"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_sync",
+        "separator_1",
+        "text_action",
+        "storylink_pr"
+      ]
+    },
+    "text_sync": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon → aaronjmars/aeon-website"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_action": {
+      "type": "Text",
+      "props": {
+        "text": "1 new PR",
+        "variant": "caption"
+      }
+    },
+    "storylink_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "In-repo docs catch up to harness batch",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/189",
+        "source": "PR #189"
+      }
+    }
+  }
+}
