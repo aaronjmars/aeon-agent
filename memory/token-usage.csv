@@ -249,3 +249,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-23,heartbeat,claude-sonnet-4-6,12,8549,540679,44257
 2026-07-24,token-report,claude-sonnet-4-6,19,15303,1043583,53033
 2026-07-24,docs-sync,claude-sonnet-4-6,38,13050,2688069,70621
+2026-07-24,secured-watch,claude-sonnet-4-6,21,13471,893775,46463

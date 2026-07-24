@@ -1,0 +1,504 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon - new since last check"
+      },
+      "children": [
+        "summary-stats",
+        "separator-1",
+        "newly-secured-heading",
+        "repo1",
+        "repo2",
+        "repo3",
+        "repo4",
+        "repo5",
+        "repo6",
+        "repo7"
+      ]
+    },
+    "summary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "repos-stat",
+        "stars-stat"
+      ]
+    },
+    "repos-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "65",
+        "delta": "+7",
+        "trend": "up"
+      }
+    },
+    "stars-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "1,881,379",
+        "delta": "+135,633",
+        "trend": "up"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "newly-secured-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Newly secured (7)",
+        "level": "h3"
+      }
+    },
+    "repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1-header",
+        "repo1-desc",
+        "repo1-fix"
+      ]
+    },
+    "repo1-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo1-link",
+        "repo1-badge",
+        "repo1-stars"
+      ]
+    },
+    "repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "tinyhumansai/openhuman",
+        "href": "https://github.com/tinyhumansai/openhuman/security/advisories/GHSA-c4m9-hw7m-vv3m",
+        "source": "GitHub"
+      }
+    },
+    "repo1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo1-stars": {
+      "type": "Text",
+      "props": {
+        "text": "35,247 stars",
+        "variant": "caption"
+      }
+    },
+    "repo1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fetch-metadata CSRF gate on /auth/telegram closes CSRF → session implantation — our exact recommended guard, 7 days after filing (CWE-352/384).",
+        "variant": "body"
+      }
+    },
+    "repo1-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream May 21, 2026",
+        "variant": "muted"
+      }
+    },
+    "repo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2-header",
+        "repo2-desc",
+        "repo2-fix"
+      ]
+    },
+    "repo2-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo2-link",
+        "repo2-badge",
+        "repo2-stars"
+      ]
+    },
+    "repo2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "davila7/claude-code-templates",
+        "href": "https://github.com/davila7/claude-code-templates/security/advisories/GHSA-966p-38c9-q2p7",
+        "source": "GitHub"
+      }
+    },
+    "repo2-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo2-stars": {
+      "type": "Text",
+      "props": {
+        "text": "29,849 stars",
+        "variant": "caption"
+      }
+    },
+    "repo2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-server host RCE + CSRF + wildcard-CORS fixed: argv-style spawn, exact-match CORS allowlist, loopback bind (CWE-78/352/942).",
+        "variant": "body"
+      }
+    },
+    "repo2-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 14, 2026",
+        "variant": "muted"
+      }
+    },
+    "repo3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo3-header",
+        "repo3-desc",
+        "repo3-fix"
+      ]
+    },
+    "repo3-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo3-link",
+        "repo3-badge",
+        "repo3-stars"
+      ]
+    },
+    "repo3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "xai-org/grok-build",
+        "href": "https://hackerone.com/x",
+        "source": "HackerOne"
+      }
+    },
+    "repo3-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo3-stars": {
+      "type": "Text",
+      "props": {
+        "text": "21,990 stars",
+        "variant": "caption"
+      }
+    },
+    "repo3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Argument injection in the plugin-marketplace git clone/fetch path — --upload-pack + file:// allows host RCE before any plugin is staged (CWE-88/78).",
+        "variant": "body"
+      }
+    },
+    "repo3-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 16, 2026",
+        "variant": "muted"
+      }
+    },
+    "repo4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo4-header",
+        "repo4-desc",
+        "repo4-fix"
+      ]
+    },
+    "repo4-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo4-link",
+        "repo4-badge",
+        "repo4-stars"
+      ]
+    },
+    "repo4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "fuma-nama/fumadocs",
+        "href": "https://github.com/fuma-nama/fumadocs/security/advisories/GHSA-7r23-3v7p-56ff",
+        "source": "GitHub"
+      }
+    },
+    "repo4-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "repo4-stars": {
+      "type": "Text",
+      "props": {
+        "text": "12,650 stars",
+        "variant": "caption"
+      }
+    },
+    "repo4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "createProxy() open-proxy SSRF fixed: deny-by-default allowlist + per-hop redirect origin re-validation (fumadocs-openapi@11.2.2, CWE-918).",
+        "variant": "body"
+      }
+    },
+    "repo4-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 16, 2026",
+        "variant": "muted"
+      }
+    },
+    "repo5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo5-header",
+        "repo5-desc",
+        "repo5-fix"
+      ]
+    },
+    "repo5-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo5-link",
+        "repo5-badge",
+        "repo5-stars"
+      ]
+    },
+    "repo5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "TencentCloud/CubeSandbox",
+        "href": "https://github.com/TencentCloud/CubeSandbox/security/advisories/GHSA-8frp-jfpv-5vhv",
+        "source": "GitHub"
+      }
+    },
+    "repo5-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CRITICAL",
+        "variant": "destructive"
+      }
+    },
+    "repo5-stars": {
+      "type": "Text",
+      "props": {
+        "text": "10,616 stars",
+        "variant": "caption"
+      }
+    },
+    "repo5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "validateHostPath() + configurable prefix allowlist closes unrestricted host-dir bind-mount → microVM escape / host-root RCE / cross-tenant (CWE-284/22/269).",
+        "variant": "body"
+      }
+    },
+    "repo5-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 5, 2026",
+        "variant": "muted"
+      }
+    },
+    "repo6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo6-header",
+        "repo6-desc",
+        "repo6-fix"
+      ]
+    },
+    "repo6-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo6-link",
+        "repo6-badge",
+        "repo6-stars"
+      ]
+    },
+    "repo6-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "baairon/torlink",
+        "href": "https://github.com/baairon/torlink/pull/44",
+        "source": "GitHub"
+      }
+    },
+    "repo6-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW",
+        "variant": "outline"
+      }
+    },
+    "repo6-stars": {
+      "type": "Text",
+      "props": {
+        "text": "3,778 stars",
+        "variant": "caption"
+      }
+    },
+    "repo6-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sanitize terminal escape sequences in the result detail view to prevent clipboard hijacking via OSC-52 (CWE-150/116).",
+        "variant": "body"
+      }
+    },
+    "repo6-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fix merged Jul 5, 2026",
+        "variant": "muted"
+      }
+    },
+    "repo7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo7-header",
+        "repo7-desc",
+        "repo7-fix"
+      ]
+    },
+    "repo7-header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo7-link",
+        "repo7-badges",
+        "repo7-stars"
+      ]
+    },
+    "repo7-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "music-assistant/server",
+        "href": "https://github.com/music-assistant/server/security/advisories/GHSA-5cv4-xxvj-mpvc",
+        "source": "GitHub"
+      }
+    },
+    "repo7-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo7-badge-high",
+        "repo7-badge-medium"
+      ]
+    },
+    "repo7-badge-high": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo7-badge-medium": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "repo7-stars": {
+      "type": "Text",
+      "props": {
+        "text": "2,886 stars",
+        "variant": "caption"
+      }
+    },
+    "repo7-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Removed unauth /imageproxy file-read, scoped config-secret endpoint, fixed OAuth-callback reflected XSS → session takeover (CWE-22/862/79).",
+        "variant": "body"
+      }
+    },
+    "repo7-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 14, 2026",
+        "variant": "muted"
+      }
+    }
+  }
+}
