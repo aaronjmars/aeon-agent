@@ -1,0 +1,53 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-24"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_theme",
+        "tweet_1",
+        "tweet_2"
+      ]
+    },
+    "text_theme": {
+      "type": "Text",
+      "props": {
+        "text": "Theme: Aeon Framework",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "skill install is three paths — pick your depth — https://x.com/aeonframework/status/2080249549231206847"
+      },
+      "children": []
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "dropped a long-form X article — https://x.com/aeonframework/status/2080218239498400142"
+      },
+      "children": []
+    }
+  }
+}
