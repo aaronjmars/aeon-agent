@@ -1,0 +1,126 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING"
+      },
+      "children": [
+        "narrative",
+        "separator-1",
+        "metrics-grid",
+        "separator-2",
+        "trading-stack",
+        "separator-3",
+        "chart-link"
+      ]
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Down −10.2% from $0.000006937 to $0.000006228 — whale dumped $5.3K at 23:15 UTC, but volume stayed at 0.81× the 7d average. No volume confirmation = not a breakdown.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000006228",
+        "delta": "−10.2%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$536.5K",
+        "delta": "−5.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$21.3K",
+        "delta": "0.81× 7d avg"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "trading-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "buys-sells-text",
+        "whale-badge"
+      ]
+    },
+    "buys-sells-text": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 128/44 (ratio 2.91, was 1.79)",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "whale-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "1 whale sell",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}
