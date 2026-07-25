@@ -1,11 +1,16 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH (🟡 minitor SECURITY.md P2 flag persists)
+Done. Here's the run summary:
 
 ## Summary
 
-- **P0:** Clean — all 8 enabled skills healthy, zero consecutive failures, 100% success rates
-- **P1:** Clean — no open PRs, no open GitHub issues
-- **P2:** minitor SECURITY.md flag persists, deduped within 48h window — no re-notification sent
-- **P3:** Clean — all enabled skills within 2× their schedule intervals
-- **Token pulse:** AEON $0.000006937 (-10.9% 24h, CONSOLIDATING) — today's report used
-- **docs/status.md** regenerated with 🟡 WATCH verdict, updated timestamp, and fresh token figures
-- **memory/logs/2026-07-24.md** appended with heartbeat entry
+**Heartbeat — ambient check — 2026-07-25**
+
+- **P0 (Failed/stuck):** CLEAN — all 8 enabled skills at 100% success rate, 0 consecutive failures. Heartbeat self-check: last success ~24h ago, within the 36h window.
+- **P1 (PRs/issues):** CLEAN — no open PRs, no urgent issues.
+- **P2 (Memory flags):** minitor SECURITY.md still missing (HIGH) — deduped, last reported in the Jul 24 log (within 48h). No re-notification.
+- **P3 (Schedule gaps):** CLEAN — all enabled skills within 2× their schedule intervals.
+
+**Overall status:** 🟡 WATCH (P2 flag persists)  
+**No notification sent** — all findings within the 48h dedup window.
+
+**Status page updated:** `docs/status.md` — token pulse refreshed to today's AEON report ($0.000006228, -10.2%, CONSOLIDATING), skill health table updated with today's runs (tweet-digest, secured-watch, token-report all ✅ today).  
+**Log appended:** `memory/logs/2026-07-25.md` under `### heartbeat`.
