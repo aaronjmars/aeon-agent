@@ -1,0 +1,149 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "Tweet Digest — 2026-07-25"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme1-heading",
+        "tweets-theme1",
+        "separator1",
+        "theme2-heading",
+        "tweets-theme2"
+      ]
+    },
+    "theme1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New capabilities & upgrades",
+        "level": "h3"
+      }
+    },
+    "tweets-theme1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet-group-1",
+        "tweet-group-2"
+      ]
+    },
+    "tweet-group-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Claude Opus 5 is now live on aeon — most powerful Anthropic model, skill scheduling now available."
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/aeonframework/status/2080749163650674787",
+        "href": "https://x.com/aeonframework/status/2080749163650674787"
+      }
+    },
+    "tweet-group-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "A new integration for aeon autonomous agents is being built live."
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/aeonframework/status/2080935992366690649",
+        "href": "https://x.com/aeonframework/status/2080935992366690649"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Framework positioning",
+        "level": "h3"
+      }
+    },
+    "tweets-theme2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet-group-3"
+      ]
+    },
+    "tweet-group-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Poses the question of which agentic framework actually wins at running autonomous agents — framing aeon as the answer."
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "x.com/aeonframework/status/2079906939849322958",
+        "href": "https://x.com/aeonframework/status/2079906939849322958"
+      }
+    }
+  }
+}

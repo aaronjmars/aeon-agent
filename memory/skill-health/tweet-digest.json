@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-24T17:08:39Z",
+  "last_analyzed": "2026-07-25T17:12:57Z",
   "quality_score": 4,
-  "assessment": "Well-executed digest task — clean API calls, proper deduplication logic, specific tweet IDs and links, integrated with Aeon's notification and logging systems.",
+  "assessment": "Well-executed skill — fetched tweets cleanly, properly deduped against prior runs, organized findings into actionable themes, and completed all follow-up actions (notify + log).",
   "flags": [],
   "avg_score": 3.97,
   "history": [
-    {
-      "date": "2026-06-26",
-      "score": 4
-    },
     {
       "date": "2026-06-27",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-07-24",
+      "score": 4
+    },
+    {
+      "date": "2026-07-25",
       "score": 4
     }
   ]
