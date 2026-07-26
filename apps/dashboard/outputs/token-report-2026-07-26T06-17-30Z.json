@@ -1,0 +1,125 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — QUIET"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_narrative",
+        "sep_1",
+        "grid_stats",
+        "sep_2",
+        "link_chart"
+      ]
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price edged +2.39% off yesterday's low but volume fell to just $11.7K — 0.46× the 7-day average — with no single trade clearing $1K. Buy/sell ratio flipped from yesterday's bullish 2.91 to 0.836.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol",
+        "stat_buys",
+        "stat_sells",
+        "stat_ratio",
+        "stat_whales"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.000006376",
+        "delta": "+2.39%",
+        "trend": "up"
+      }
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$546.5K",
+        "delta": "+1.87%",
+        "trend": "up"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (0.46× 7d avg)",
+        "value": "$11.7K"
+      }
+    },
+    "stat_buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "76"
+      }
+    },
+    "stat_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "91"
+      }
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell ratio (was 2.91)",
+        "value": "0.836"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "0"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_chart": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GeckoTerminal Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    }
+  }
+}
