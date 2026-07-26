@@ -1,0 +1,84 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-26"
+      },
+      "children": [
+        "heading-theme1",
+        "stack-theme1",
+        "separator1",
+        "heading-theme2",
+        "stack-theme2"
+      ]
+    },
+    "heading-theme1": {
+      "type": "Heading",
+      "props": {
+        "text": "Framework positioning",
+        "level": "h2"
+      }
+    },
+    "stack-theme1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "Aeon published a framework tierlist making the case it's the top autonomous-agent runtime — https://x.com/aeonframework/status/2080630127554088992"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "Repo link dropped alongside the Opus 5 announcement thread — organic reach signal — https://x.com/aeonframework/status/2080749200187240598"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-theme2": {
+      "type": "Heading",
+      "props": {
+        "text": "Developer UX",
+        "level": "h2"
+      }
+    },
+    "stack-theme2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "Aeon is pitching frictionless skill installation as the core onboarding hook for new forks — https://x.com/aeonframework/status/2080630132323025211"
+      }
+    }
+  }
+}

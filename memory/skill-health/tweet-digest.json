@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-07-25T17:12:57Z",
+  "last_analyzed": "2026-07-26T17:22:26Z",
   "quality_score": 4,
-  "assessment": "Well-executed skill — fetched tweets cleanly, properly deduped against prior runs, organized findings into actionable themes, and completed all follow-up actions (notify + log).",
+  "assessment": "Substantive execution: fetched 3 new tweets, deduplicated against prior reports, organized into themes, sent notification, logged results. Completed task end-to-end with proper protocol adherence.",
   "flags": [],
   "avg_score": 3.97,
   "history": [
-    {
-      "date": "2026-06-27",
-      "score": 4
-    },
     {
       "date": "2026-06-28",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-07-25",
+      "score": 4
+    },
+    {
+      "date": "2026-07-26",
       "score": 4
     }
   ]
