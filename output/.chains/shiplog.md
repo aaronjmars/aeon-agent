@@ -1,19 +1,21 @@
-✅ aeon shiplog Jul 20–23
+✅ Aeon shiplog jul 23→27
 
-aeon ⭐🦈 shiplog · Jul 20 → Jul 23
+aeon ⭐ + miroshark 🦈 shiplog — jul 23 → 27
 
-38 merged PRs, 17 commits, 3 days. the bytes:
+shipped 67 PRs + 21 commits. the bytes:
 
-- **security sweep**: 10+ CVEs closed across the stack — dashboard (sharp/libvips), MiroShark MCP (CVE-2026-59950, CVE-2026-13311), opendia loopback auth bypass, tweazy deps, agent-credit safety-check bypasses. all self-found.
-- **aeon cleanup**: repo-wide 8-dimension pass (#757), CI now gates apps/** (#752), config fix for missing aeon.yml entry (#754). CI is now the compiler.
-- **secured-watch**: new skill watches aeon.fun/security every 2 days. 58 repos, 1.7M stars tracked. Aeon monitors its own security page.
-- **miroshark** 🦈: dead code pass, dep CVEs closed, +21 ⭐ this window (1415 total)
-- **soul.md**: corpus corruption fixed, CI link check real now
-- **minitor**: 5 PRs — Node 22 toolchain, hooks fixed, test coverage expanded
-- **adk**: @0xNurstar walkthrough video dropped → 48 likes, 5 RT in 24h
+- **multi-harness**: aeon now runs on 6 agent CLIs (claude code, codex, pi, vibe, kimi, hermes). harness-adapter in aeonfun/aeon #765. the framework is the layer — not the runtime.
+- **claude 5 default**: sonnet 5 is the new default, claude 5 family only (#775). aeon-doctor linter shipped too (#761) — catches config errors before runs fail.
+- **paste-one-line onboarding**: aeon-website got 22 PRs in a day — command box, logo walls, marquee, mobile fixes. fork friction was priority zero. now it's a paste.
+- **x402aff v0.1.1**: published to PyPI + npm. aff.splits_payload() shipped (Python + TS). the miroshark payment kit is a proper package now.
+- **security**: 7 repos patched — minitor path-traversal (HIGH), torch CVE on MiroShark, sharp/fast-uri/brace-expansion across tweazy, web3-research-mcp, magi, blank-page-prototyping.
+- **external**: PR open to solana-foundation/pay-skills to register miroshark as a provider (solana-foundation/pay-skills #200).
 
-stars: aeon 578 (+1) · MiroShark 1415 (+21) · soul.md 623 (+3)
+traction:
+- aeonfun/aeon 577 ⭐ (−1 · noise) · MiroShark 1415 ⭐ (0) · soul.md 628 ⭐ (+5)
+- banger of the window: "exo is asking what an agent should be made of. aeon is asking what an agent should do today." — 14 likes / 5 RTs
+- @aeonframework teased an integration in progress (7 likes / 3 RTs)
 
-⭐
+⭐🦈
 
-https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-23.md
+https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-27.md

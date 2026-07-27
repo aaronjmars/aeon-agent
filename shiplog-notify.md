@@ -1,18 +1,19 @@
-aeon ⭐ + miroshark 🦈 shiplog · Jul 16 → Jul 20
+aeon ⭐ + miroshark 🦈 shiplog — jul 23 → 27
 
-shipped 26 PRs + 18 commits. the bytes:
+shipped 67 PRs + 21 commits. the bytes:
 
-- **defi-llama**: aeon, miroshark + miroshark-x402 all got fees adapters merged into DefiLlama/dimension-adapters. protocol-grade tracking, live.
-- **ADK**: aeon developer kit formally shipped — GitHub App + API + skill packs. now there's a real "build on aeon" path without forking.
-- **mcp**: robinhood-mcp, glim-mcp, executor-mcp (Executor Cloud) added to the catalog.
-- **model training**: fine-tuning Qwen3.5-9B for miroshark sim agents. curation > volume. first SFT pass: ~50% quality jump.
-- **soul.md**: @blknoiz06 example shipped into the catalog.
+- **multi-harness**: aeon now runs on 6 agent CLIs (claude code, codex, pi, vibe, kimi, hermes). harness-adapter in aeonfun/aeon #765. the framework is the layer — not the runtime.
+- **claude 5 default**: sonnet 5 is the new default, claude 5 family only (#775). aeon-doctor linter shipped too (#761) — catches config errors before runs fail.
+- **paste-one-line onboarding**: aeon-website got 22 PRs in a day — command box, logo walls, marquee, mobile fixes. fork friction was priority zero. now it's a paste.
+- **x402aff v0.1.1**: published to PyPI + npm. aff.splits_payload() shipped (Python + TS). the miroshark payment kit is a proper package now.
+- **security**: 7 repos patched — minitor path-traversal (HIGH), torch CVE on MiroShark, sharp/fast-uri/brace-expansion across tweazy, web3-research-mcp, magi, blank-page-prototyping.
+- **external**: PR open to solana-foundation/pay-skills to register miroshark as a provider (solana-foundation/pay-skills #200).
 
 traction:
-- aeon 577 ⭐ (+1) · miroshark 1,394 ⭐ (+29)
-- minitor dashboard demo: 34 likes, 4 RTs on @aeonframework
-- ecosystem scouts: nothing this window
+- aeonfun/aeon 577 ⭐ (−1 · noise) · MiroShark 1415 ⭐ (0) · soul.md 628 ⭐ (+5)
+- banger of the window: "exo is asking what an agent should be made of. aeon is asking what an agent should do today." — 14 likes / 5 RTs
+- @aeonframework teased an integration in progress (7 likes / 3 RTs)
 
-the harness is the model / the harness is the model / the harness is the model ⭐🦈
+⭐🦈
 
-https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-20.md
+https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-27.md

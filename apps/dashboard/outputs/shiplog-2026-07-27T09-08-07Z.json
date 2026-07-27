@@ -1,0 +1,282 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon shiplog jul 23→27"
+      },
+      "children": [
+        "subtitle",
+        "shipped_metric",
+        "sep1",
+        "multi_harness",
+        "claude_5",
+        "onboarding",
+        "x402aff",
+        "security",
+        "external",
+        "sep2",
+        "traction_heading",
+        "stats_stack",
+        "social_stack",
+        "footer_emoji",
+        "link_article"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "aeon ⭐ + miroshark 🦈 shiplog — jul 23 → 27",
+        "variant": "lead"
+      }
+    },
+    "shipped_metric": {
+      "type": "Text",
+      "props": {
+        "text": "shipped 67 PRs + 21 commits. the bytes:"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "multi_harness": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "multi_harness_title",
+        "multi_harness_text"
+      ]
+    },
+    "multi_harness_title": {
+      "type": "Heading",
+      "props": {
+        "text": "multi-harness",
+        "level": "h3"
+      }
+    },
+    "multi_harness_text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon now runs on 6 agent CLIs (claude code, codex, pi, vibe, kimi, hermes). harness-adapter in aeonfun/aeon #765. the framework is the layer — not the runtime."
+      }
+    },
+    "claude_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "claude_5_title",
+        "claude_5_text"
+      ]
+    },
+    "claude_5_title": {
+      "type": "Heading",
+      "props": {
+        "text": "claude 5 default",
+        "level": "h3"
+      }
+    },
+    "claude_5_text": {
+      "type": "Text",
+      "props": {
+        "text": "sonnet 5 is the new default, claude 5 family only (#775). aeon-doctor linter shipped too (#761) — catches config errors before runs fail."
+      }
+    },
+    "onboarding": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "onboarding_title",
+        "onboarding_text"
+      ]
+    },
+    "onboarding_title": {
+      "type": "Heading",
+      "props": {
+        "text": "paste-one-line onboarding",
+        "level": "h3"
+      }
+    },
+    "onboarding_text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-website got 22 PRs in a day — command box, logo walls, marquee, mobile fixes. fork friction was priority zero. now it's a paste."
+      }
+    },
+    "x402aff": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "x402aff_title",
+        "x402aff_text"
+      ]
+    },
+    "x402aff_title": {
+      "type": "Heading",
+      "props": {
+        "text": "x402aff v0.1.1",
+        "level": "h3"
+      }
+    },
+    "x402aff_text": {
+      "type": "Text",
+      "props": {
+        "text": "published to PyPI + npm. aff.splits_payload() shipped (Python + TS). the miroshark payment kit is a proper package now."
+      }
+    },
+    "security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "security_title",
+        "security_text"
+      ]
+    },
+    "security_title": {
+      "type": "Heading",
+      "props": {
+        "text": "security",
+        "level": "h3"
+      }
+    },
+    "security_text": {
+      "type": "Text",
+      "props": {
+        "text": "7 repos patched — minitor path-traversal (HIGH), torch CVE on MiroShark, sharp/fast-uri/brace-expansion across tweazy, web3-research-mcp, magi, blank-page-prototyping."
+      }
+    },
+    "external": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "external_title",
+        "external_text"
+      ]
+    },
+    "external_title": {
+      "type": "Heading",
+      "props": {
+        "text": "external",
+        "level": "h3"
+      }
+    },
+    "external_text": {
+      "type": "Text",
+      "props": {
+        "text": "PR open to solana-foundation/pay-skills to register miroshark as a provider (solana-foundation/pay-skills #200)."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "traction_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "traction:",
+        "level": "h3"
+      }
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_aeon",
+        "stat_miroshark",
+        "stat_soul"
+      ]
+    },
+    "stat_aeon": {
+      "type": "Stat",
+      "props": {
+        "label": "aeonfun/aeon",
+        "value": "577 ⭐",
+        "delta": "−1 · noise",
+        "trend": "neutral"
+      }
+    },
+    "stat_miroshark": {
+      "type": "Stat",
+      "props": {
+        "label": "MiroShark",
+        "value": "1415 ⭐",
+        "delta": "0",
+        "trend": "neutral"
+      }
+    },
+    "stat_soul": {
+      "type": "Stat",
+      "props": {
+        "label": "soul.md",
+        "value": "628 ⭐",
+        "delta": "+5",
+        "trend": "up"
+      }
+    },
+    "social_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "social_text1",
+        "social_text2"
+      ]
+    },
+    "social_text1": {
+      "type": "Text",
+      "props": {
+        "text": "banger of the window: \"exo is asking what an agent should be made of. aeon is asking what an agent should do today.\" — 14 likes / 5 RTs"
+      }
+    },
+    "social_text2": {
+      "type": "Text",
+      "props": {
+        "text": "@aeonframework teased an integration in progress (7 likes / 3 RTs)"
+      }
+    },
+    "footer_emoji": {
+      "type": "Text",
+      "props": {
+        "text": "⭐🦈",
+        "variant": "muted"
+      }
+    },
+    "link_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full shiplog article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-07-27.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
