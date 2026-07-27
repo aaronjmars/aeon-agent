@@ -1,7 +1,10 @@
-HEARTBEAT_OK · STATUS_PAGE=WATCH
+HEARTBEAT_OK · STATUS_PAGE=WATCH (🟡 — P2 flag: minitor SECURITY.md persists in MEMORY.md)
 
-**Summary:**
-- **P0–P3:** All clean. 8 enabled skills are healthy — 0 failures, 0 consecutive failures, all at 100% success rate.
-- **P2 flag:** minitor SECURITY.md still missing (HIGH), but deduped from yesterday's log — no notification sent.
-- **Status page** (`docs/status.md`) regenerated: 🟡 WATCH, token pulse updated (AEON $0.000006376 +2.39% QUIET from today's token-report).
-- **Log** appended to `memory/logs/2026-07-26.md` under `### heartbeat`.
+## Summary
+
+- **P0:** All 8 enabled skills clean — 100% success rates, 0 consecutive failures
+- **P1:** No open PRs, no urgent issues
+- **P2:** minitor SECURITY.md flag persists but was logged yesterday (within 48h dedup window) — no re-notification sent
+- **P3:** All enabled skills ran within their schedule intervals
+- **Status page:** Updated `docs/status.md` to 🟡 WATCH. Token pulse updated: AEON +13.9% BREAKOUT on 4.2× volume ($88.5K), whale activity at 03:00 UTC
+- **Log:** Appended `### heartbeat` entry to `memory/logs/2026-07-27.md`
