@@ -1,118 +1,36 @@
-ℹ️ Repo Pulse 2026-07-20
+ℹ️ Repo Pulse
 
-*Repo Pulse — 2026-07-20* — [STEADY]
+*Repo Pulse — 2026-07-27* — [STEADY]
 
 | Repo | Stars | Forks | Rel | Verdict |
 |---|---|---|---|---|
-| soul.md | 621 (+10) | 65 (+2) | — | STEADY |
-| opendia | 1849 (+7) | 149 (+2) | — | STEADY |
-| aeon | 577 (+4) | 210 (+4) | — | STEADY |
-| minitor | 14 (+2) | 3 (+1) | — | STEADY |
+| soul.md | 628 (+7) | 66 (+1) | — | STEADY |
+| aeon | 577 (—) | 210 (—) | — | STEADY |
+| opendia | 1849 (—) | 149 (—) | — | STEADY |
+| minitor | 14 (—) | 3 (—) | — | QUIET |
 
-**aeonfun/soul.md** — STEADY (avg4w≈7)
-Notable new stargazers (enriched 6 of 10):
-github.com/yazdanctx — Yazdan Fathali · 139 repos · 🌐 yazdan.me · 181 followers
-  "security researcher / engineer"
-github.com/jet-c-21 — Jet (Ta-Wei Chien) · 📍 Taipei, Taiwan · 🏢 iCHASE · 108 repos · 🌐 jet-c-21.github.io · 19 followers
-  "Computer Vision x AI x Dreams"
-github.com/Ambi93 — Amber Lewis · 📍 Port Macquarie, NSW Australia · 86 repos · 88 followers
-github.com/botzrDev — Phillip Austin Green · 📍 Oklahoma · 🏢 @botzr · 21 repos · 🌐 dreamd.dev · 🐦 @wgi_dev
-  "Research Engineer | Benchmarking AI Memory (dreamd) on botzr-AEGIS - the secure execution layer that sits underneath AI agent frameworks"
-| aeon | 577 (+4) | 210 (+3) | — | STEADY |
-| minitor | 14 (+2) | 3 (+1) | — | STEADY |
-
-**aeonfun/soul.md** — STEADY (avg4w=7)
+**aeonfun/soul.md** — STEADY (avg4w ≈ 7)
 Notable new stargazers:
-github.com/botzrDev — Phillip Austin Green · 📍 Oklahoma · 🏢 @botzr · 21 repos · 🌐 dreamd.dev · 🐦 @wgi_dev
-  "Research Engineer | Benchmarking AI Memory (dreamd) on botzr-AEGIS - the secure execution layer that sits underneath AI agent frameworks"
-github.com/jet-c-21 — Jet (Ta-Wei Chien) · 📍 Taipei, Taiwan · 🏢 iCHASE · 108 repos · 🌐 https://jet-c-21.github.io/
-  "Computer Vision x AI x Dreams"
-github.com/Ambi93 — Amber Lewis · 📍 Port Macquarie, NSW Australia · 86 repos · 88 followers
-github.com/Ditto190 — DT · 🏢 ModifyMe · 313 repos
-github.com/enuno — Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🌐 https://enuno.github.io/DynamicCareerCanvas · 🐦 @NunoElvis · 114 followers
-  "Digital Nomad, Blockchain Evangel, and Digital Solutions Architect.  Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services."
+github.com/23maverick23 — Ryan Morrissey · 📍 Denver, USA · 50 repos · 🌐 rymo.io · 24 followers
+
 Other new stargazers:
-github.com/qdon314 | github.com/cabbagecachekid | github.com/edualse | github.com/mcclonkster
-New forks:
-github.com/yazdanctx — Yazdan Fathali · 139 repos · 🌐 https://yazdan.me · 181 followers
-  "security researcher / engineer"
-github.com/grahaminman — Graham Inman · 📍 UK · 8 repos
+github.com/qdon314 | github.com/shamstarek | github.com/kaxonomy | github.com/jstxn | github.com/tomslikk | github.com/jofury
 
-**aeonfun/opendia** — STEADY (avg4w=7)
-Notable new stargazers:
-github.com/Ditto190 — DT · 🏢 ModifyMe · 313 repos
-github.com/LiamVisionary — 34 repos
+New forks:
+github.com/BadlanderDigital — Badlander Digital · 📍 Montana · 🏢 Badlander Digital · 18 repos · 🌐 badlanderdigital.dev
+github.com/Jekeer — 1572 repos · 13 followers
+github.com/NurstarK — Nurstar · 5 repos
+
+**aeonfun/aeon** — STEADY (avg4w ≈ 7)
 Other new stargazers:
-github.com/SameerGadge | github.com/qxlsh | github.com/xiaoninnychrest | github.com/Kwonmo-sung
-New forks:
-github.com/MatrixNeoKozak — KozakLordOfMatrix · 246 repos
-  "Hello World!"
-github.com/rootzeeftw — UnknownAvax · 📍 worldwide maybe · 🏢 FSNV Studio · 176 repos · 🐦 @rootzeeftw
-  "GENIUS CUBE OS"
+github.com/fungifrankonia | github.com/AlexMills0 | github.com/dummy-account007
 
-**aeonfun/aeon** — STEADY (avg4w=7)
-Notable new stargazers:
-github.com/normalsimple — namnvh · 319 repos
-github.com/lajarre — 74 repos · 🐦 @lajarre · 51 followers
-github.com/Rizkijack — 0xJustshrimp · 📍 Jakarta · 30 repos
-  "WEB3 Dev"
-github.com/Ditto190 — DT · 🏢 ModifyMe · 313 repos
 New forks:
-github.com/enuno — Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🌐 https://enuno.github.io/DynamicCareerCanvas · 🐦 @NunoElvis · 114 followers
-  "Digital Nomad, Blockchain Evangel, and Digital Solutions Architect.  Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services."
-github.com/victordlp8 — Victor De Lomas · 16 repos · 🌐 https://ko-fi.com/victordlp8 · 11 followers
-github.com/Sauken-69 — 2 repos
+github.com/amir-rezaei — 142 repos
+github.com/mirkosalvato1-ctrl — 3395 repos
 
-**aeonfun/minitor** — STEADY (avg4w=7)
-Notable new stargazers:
-github.com/enuno — Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🌐 https://enuno.github.io/DynamicCareerCanvas · 🐦 @NunoElvis · 114 followers
-  "Digital Nomad, Blockchain Evangel, and Digital Solutions Architect.  Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services."
-New forks:
-github.com/Ditto190 — DT · 🏢 ModifyMe · 313 repos
-github.com/enuno — Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🐦 @NunoElvis · 114 followers
-  "Digital Nomad, Blockchain Evangel, and Digital Solutions Architect. Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services."
+**aeonfun/opendia** — STEADY (avg4w ≈ 7)
 Other new stargazers:
-github.com/qdon314 | github.com/cabbagecachekid | github.com/edualse | github.com/mcclonkster
-New forks:
-github.com/yazdanctx/soul.md — Yazdan Fathali · 139 repos · 🌐 yazdan.me · 181 followers
-  "security researcher / engineer"
-github.com/grahaminman/soul.md — Graham Inman · 📍 UK · 8 repos
+github.com/jonathanlaniado
 
-**aeonfun/opendia** — STEADY (avg4w≈7)
-Notable new stargazers (enriched 3 of 7):
-github.com/Ditto190 — DT · 🏢 ModifyMe · 313 repos
-github.com/rootzeeftw — UnknownAvax · 📍 worldwide maybe · 🏢 FSNV Studio · 176 repos · 🐦 @rootzeeftw
-  "GENIUS CUBE OS"
-github.com/LiamVisionary · 34 repos
-Other new stargazers:
-github.com/SameerGadge | github.com/qxlsh | github.com/xiaoninnychrest | github.com/Kwonmo-sung
-New forks:
-github.com/MatrixNeoKozak/opendia — KozakLordOfMatrix · 246 repos
-  "Hello World!"
-github.com/rootzeeftw/opendia — UnknownAvax · 📍 worldwide maybe · 🏢 FSNV Studio · 176 repos · 🐦 @rootzeeftw
-  "GENIUS CUBE OS"
-
-**aeonfun/aeon** — STEADY (avg4w≈7.7)
-Notable new stargazers (enriched 4 of 4):
-github.com/normalsimple — namnvh · 319 repos
-github.com/lajarre · 74 repos · 🐦 @lajarre · 51 followers
-github.com/Rizkijack — 0xJustshrimp · 📍 Jakarta · 30 repos
-  "WEB3 Dev"
-github.com/Ditto190 — DT · 🏢 ModifyMe · 313 repos
-New forks:
-github.com/enuno/aeon — Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🐦 @NunoElvis · 114 followers
-  "Digital Nomad, Blockchain Evangel, and Digital Solutions Architect. Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services."
-github.com/victordlp8/aeon — Victor De Lomas · 16 repos · 11 followers
-github.com/Sauken-69/aeon · 2 repos
-(+aaronjmars self-fork, org transfer)
-
-**aeonfun/minitor** — STEADY (avg4w≈7)
-Notable new stargazers (enriched 2 of 2):
-github.com/Ditto190 — DT · 🏢 ModifyMe · 313 repos
-github.com/enuno — Elvis Nuno · 📍 United States · 🏢 Ryno Crypto Mining Services · 49 repos · 🐦 @NunoElvis · 114 followers
-  "Digital Nomad, Blockchain Evangel, and Digital Solutions Architect. Creator of TerraHash Stack. CEO of Ryno Crypto Mining Services."
-New forks:
-github.com/Ditto190/minitor — DT · 🏢 ModifyMe · 313 repos
-
-Source: events · first run for aeonfun/opendia, aeonfun/soul.md
-Source: events · first run for aeonfun org (avg4w=7 default)
+Source: events · minitor QUIET (no activity)

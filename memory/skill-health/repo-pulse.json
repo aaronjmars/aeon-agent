@@ -1,11 +1,8 @@
 {
   "skill": "repo-pulse",
-  "last_analyzed": "2026-07-20T23:02:43Z",
+  "last_analyzed": "2026-07-27T10:32:35Z",
   "quality_score": 4,
-  "assessment": "Good — substantive metrics, meaningful pattern detection (Ditto190 ecosystem sweep), and profiled forkers with context; complete workflow (fetch, analyze, notify, log)",
-  "last_analyzed": "2026-07-20T23:14:32Z",
-  "quality_score": 4,
-  "assessment": "Solid execution with structured metrics, enriched actor profiles, and proper constraint management; ready for trend analysis in future runs",
+  "assessment": "Substantive, well-structured report with specific metrics, verified data, and actionable insights on repo momentum across 4 watched repos.",
   "flags": [],
   "avg_score": 3.93,
   "history": [
@@ -119,6 +116,10 @@
     },
     {
       "date": "2026-07-20",
+      "score": 4
+    },
+    {
+      "date": "2026-07-27",
       "score": 4
     }
   ]

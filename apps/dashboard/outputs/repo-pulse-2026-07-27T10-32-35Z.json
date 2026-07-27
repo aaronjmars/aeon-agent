@@ -1,0 +1,566 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-07-27"
+      },
+      "children": [
+        "status-badge",
+        "repos-table",
+        "sep1",
+        "soul-md",
+        "aeon",
+        "opendia",
+        "minitor",
+        "sep2",
+        "source-note"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      }
+    },
+    "repos-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "soul.md",
+            "628 (+7)",
+            "66 (+1)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "aeon",
+            "577 (—)",
+            "210 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1849 (—)",
+            "149 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "14 (—)",
+            "3 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "soul-md": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul-heading",
+        "soul-status-text",
+        "soul-notable-section",
+        "soul-other-section",
+        "soul-forks-section"
+      ]
+    },
+    "soul-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h3"
+      }
+    },
+    "soul-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 7)",
+        "variant": "muted"
+      }
+    },
+    "soul-notable-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-notable-label",
+        "soul-ryan-card"
+      ]
+    },
+    "soul-notable-label": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers:",
+        "variant": "lead"
+      }
+    },
+    "soul-ryan-card": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-ryan-link",
+        "soul-ryan-info"
+      ]
+    },
+    "soul-ryan-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/23maverick23",
+        "href": "https://github.com/23maverick23"
+      }
+    },
+    "soul-ryan-info": {
+      "type": "Text",
+      "props": {
+        "text": "Ryan Morrissey · 📍 Denver, USA · 50 repos · 🌐 rymo.io · 24 followers"
+      }
+    },
+    "soul-other-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-other-label",
+        "soul-other-links"
+      ]
+    },
+    "soul-other-label": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:",
+        "variant": "lead"
+      }
+    },
+    "soul-other-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-qdon314-link",
+        "soul-shamstarek-link",
+        "soul-kaxonomy-link",
+        "soul-jstxn-link",
+        "soul-tomslikk-link",
+        "soul-jofury-link"
+      ]
+    },
+    "soul-qdon314-link": {
+      "type": "Link",
+      "props": {
+        "label": "qdon314",
+        "href": "https://github.com/qdon314"
+      }
+    },
+    "soul-shamstarek-link": {
+      "type": "Link",
+      "props": {
+        "label": "shamstarek",
+        "href": "https://github.com/shamstarek"
+      }
+    },
+    "soul-kaxonomy-link": {
+      "type": "Link",
+      "props": {
+        "label": "kaxonomy",
+        "href": "https://github.com/kaxonomy"
+      }
+    },
+    "soul-jstxn-link": {
+      "type": "Link",
+      "props": {
+        "label": "jstxn",
+        "href": "https://github.com/jstxn"
+      }
+    },
+    "soul-tomslikk-link": {
+      "type": "Link",
+      "props": {
+        "label": "tomslikk",
+        "href": "https://github.com/tomslikk"
+      }
+    },
+    "soul-jofury-link": {
+      "type": "Link",
+      "props": {
+        "label": "jofury",
+        "href": "https://github.com/jofury"
+      }
+    },
+    "soul-forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-forks-label",
+        "soul-forks-content"
+      ]
+    },
+    "soul-forks-label": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      }
+    },
+    "soul-forks-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-fork-badlander",
+        "soul-fork-jekeer",
+        "soul-fork-nurstar"
+      ]
+    },
+    "soul-fork-badlander": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-badlander-link",
+        "soul-badlander-info"
+      ]
+    },
+    "soul-badlander-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/BadlanderDigital",
+        "href": "https://github.com/BadlanderDigital"
+      }
+    },
+    "soul-badlander-info": {
+      "type": "Text",
+      "props": {
+        "text": "Badlander Digital · 📍 Montana · 🏢 Badlander Digital · 18 repos · 🌐 badlanderdigital.dev"
+      }
+    },
+    "soul-fork-jekeer": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-jekeer-link",
+        "soul-jekeer-info"
+      ]
+    },
+    "soul-jekeer-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Jekeer",
+        "href": "https://github.com/Jekeer"
+      }
+    },
+    "soul-jekeer-info": {
+      "type": "Text",
+      "props": {
+        "text": "1572 repos · 13 followers"
+      }
+    },
+    "soul-fork-nurstar": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-nurstar-link",
+        "soul-nurstar-info"
+      ]
+    },
+    "soul-nurstar-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/NurstarK",
+        "href": "https://github.com/NurstarK"
+      }
+    },
+    "soul-nurstar-info": {
+      "type": "Text",
+      "props": {
+        "text": "Nurstar · 5 repos"
+      }
+    },
+    "aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-status-text",
+        "aeon-other-section",
+        "aeon-forks-section"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h3"
+      }
+    },
+    "aeon-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 7)",
+        "variant": "muted"
+      }
+    },
+    "aeon-other-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-other-label",
+        "aeon-other-links"
+      ]
+    },
+    "aeon-other-label": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:",
+        "variant": "lead"
+      }
+    },
+    "aeon-other-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fungif-link",
+        "aeon-alexmills-link",
+        "aeon-dummy-link"
+      ]
+    },
+    "aeon-fungif-link": {
+      "type": "Link",
+      "props": {
+        "label": "fungifrankonia",
+        "href": "https://github.com/fungifrankonia"
+      }
+    },
+    "aeon-alexmills-link": {
+      "type": "Link",
+      "props": {
+        "label": "AlexMills0",
+        "href": "https://github.com/AlexMills0"
+      }
+    },
+    "aeon-dummy-link": {
+      "type": "Link",
+      "props": {
+        "label": "dummy-account007",
+        "href": "https://github.com/dummy-account007"
+      }
+    },
+    "aeon-forks-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-forks-label",
+        "aeon-forks-content"
+      ]
+    },
+    "aeon-forks-label": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      }
+    },
+    "aeon-forks-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-amir",
+        "aeon-fork-mirko"
+      ]
+    },
+    "aeon-fork-amir": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-amir-link",
+        "aeon-amir-info"
+      ]
+    },
+    "aeon-amir-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/amir-rezaei",
+        "href": "https://github.com/amir-rezaei"
+      }
+    },
+    "aeon-amir-info": {
+      "type": "Text",
+      "props": {
+        "text": "142 repos"
+      }
+    },
+    "aeon-fork-mirko": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-mirko-link",
+        "aeon-mirko-info"
+      ]
+    },
+    "aeon-mirko-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/mirkosalvato1-ctrl",
+        "href": "https://github.com/mirkosalvato1-ctrl"
+      }
+    },
+    "aeon-mirko-info": {
+      "type": "Text",
+      "props": {
+        "text": "3395 repos"
+      }
+    },
+    "opendia": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia-heading",
+        "opendia-status-text",
+        "opendia-other-section"
+      ]
+    },
+    "opendia-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h3"
+      }
+    },
+    "opendia-status-text": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 7)",
+        "variant": "muted"
+      }
+    },
+    "opendia-other-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-other-label",
+        "opendia-jonathan-link"
+      ]
+    },
+    "opendia-other-label": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:",
+        "variant": "lead"
+      }
+    },
+    "opendia-jonathan-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/jonathanlaniado",
+        "href": "https://github.com/jonathanlaniado"
+      }
+    },
+    "minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor-heading",
+        "minitor-status-badge"
+      ]
+    },
+    "minitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor",
+        "level": "h3"
+      }
+    },
+    "minitor-status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "QUIET (no activity)",
+        "variant": "secondary"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "source-note": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "caption"
+      }
+    }
+  }
+}
