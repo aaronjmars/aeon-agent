@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest — 2026-07-27
-
 **Tweet Digest — 2026-07-27**
 
 **Security & self-scanning ⭐**
