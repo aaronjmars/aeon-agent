@@ -43,7 +43,12 @@ skills:
   # --- Repo intelligence (3 PM UTC) ---
 
   # --- Late afternoon (4 PM UTC) ---
-  changelog: { enabled: false, schedule: "0 16 * * *", var: "" } # changelog from recent commits/PRs. var: empty/owner/repo=in-repo | push-to:owner/website-repo=cross-repo changelog PR (needs GH_GLOBAL)
+  changelog:
+    {
+      enabled: true,
+      schedule: "0 8 */3 * *",
+      var: "push-to:aaronjmars/aeon-website"
+    } # (was docs-sync) every 3 days 08:00 UTC — cross-repo changelog PR: product=aaronjmars/aeon (from memory/docs-sync.md) -> website=aaronjmars/aeon-website. Runs silently (no notification). needs GH_GLOBAL. var: empty/owner/repo=in-repo mode instead
   vuln-scanner: { enabled: false, schedule: "0 16 * * 6", var: "" } # security scan + disclose. var: empty/owner/repo=scan | resubmit[:owner/repo]=PVR re-submit | disclose=queue armed emails (folds in pvr-watchlist/disclosure-emailer). RESEND_* for email.
   deploy-prototype: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — build app and deploy to Vercel
   base-mcp: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — Base Account access via the Base MCP server (mcp.base.org)
@@ -133,7 +138,6 @@ skills:
 
   # --- Custom skills (this instance; ported in the v0.1.0 template migration) ---
   token-report: { enabled: true, schedule: "0 6 * * *" } # daily 06:00 UTC — price/volume/liquidity report for the tracked token (memory/MEMORY.md "Tracked Token" + treasury from optional memory/treasury-wallets.json) → article in output/articles/. Optional ALCHEMY_API_KEY/XAI_API_KEY/BASE_RPC_URL (keyless-capable).
-  docs-sync: { enabled: true, schedule: "0 8 */3 * *", var: "" } # every 3 days 08:00 UTC — turn the product repo's newly-merged PRs into a changelog entry on the marketing site via a draft PR on the website repo. Config (product_repo/website_repo) in memory/docs-sync.md; override with var "product->website". Requires GH_GLOBAL (cross-repo write).
   repo-pulse: { enabled: true, schedule: "0 10 * * 1" } # weekly Mon 10:00 UTC — new stars/forks/releases for watched repos (memory/watched-repos.md) with stargazer/forker profile enrichment + growth verdict.
   tweet-digest: { enabled: true, schedule: "0 17 * * *", var: "" } # daily 17:00 UTC — account-based digest of tracked X accounts (memory/topics/tracked-accounts.yml); sibling to fetch-tweets/tweet-roundup. Requires XAI_API_KEY.
   secured-watch: { enabled: true, schedule: "0 12 * * *", var: "" } # daily 12:00 UTC = 08:00 ET (summer/EDT; 07:00 ET in winter/EST) — watch the public "Secured by Aeon" leaderboard (aeon.fun/security) and report only newly secured repos + changed fix/severity since last run (state in memory/state/secured-repos.json). var: empty=diff | full=whole board | dry-run. No API key.
