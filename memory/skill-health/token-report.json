@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-07-26T06:17:30Z",
+  "last_analyzed": "2026-07-27T06:42:43Z",
   "quality_score": 4,
-  "assessment": "Solid execution—fetched real data, computed meaningful deltas, classified state, produced article and logged state for continuity; lacks exceptional insight but shows complete methodology and no errors.",
+  "assessment": "Substantive market report with specific metrics, clear verdict, and appropriate caveats about confirmation signals.",
   "flags": [],
-  "avg_score": 4.1,
+  "avg_score": 4.07,
   "history": [
-    {
-      "date": "2026-06-27",
-      "score": 5
-    },
     {
       "date": "2026-06-28",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-07-26",
+      "score": 4
+    },
+    {
+      "date": "2026-07-27",
       "score": 4
     }
   ]

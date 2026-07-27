@@ -1,0 +1,181 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "✅ AEON Token Report 2026-07-27"
+      },
+      "children": [
+        "heading_breakout",
+        "separator_1",
+        "text_narrative",
+        "separator_2",
+        "heading_metrics",
+        "grid_main_stats",
+        "separator_3",
+        "heading_trades",
+        "table_trades",
+        "separator_4",
+        "heading_whales",
+        "text_whale_details",
+        "separator_5",
+        "heading_chart",
+        "link_chart"
+      ]
+    },
+    "heading_breakout": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — BREAKOUT",
+        "level": "h3"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price broke +13.9% on 4.2× average volume, flipping the buy/sell ratio from 0.84 to 1.24 in the first buy-dominated session in over a week. A whale cluster at 03:00–03:30 UTC (22 trades ≥$1k, largest: sell $6.7K) drove the move — contested, not clean.",
+        "variant": "body"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Metrics",
+        "level": "h4"
+      }
+    },
+    "grid_main_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liquidity",
+        "stat_volume"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00000726",
+        "delta": "+13.9%",
+        "trend": "up"
+      }
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$593.2K",
+        "delta": "+8.5%",
+        "trend": "up"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$88.5K",
+        "delta": "4.2× 7d avg",
+        "trend": "up"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_trades": {
+      "type": "Heading",
+      "props": {
+        "text": "Trade Activity",
+        "level": "h4"
+      }
+    },
+    "table_trades": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Metric",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Buys",
+            "184"
+          ],
+          [
+            "Sells",
+            "148"
+          ],
+          [
+            "Buy/Sell Ratio",
+            "1.24"
+          ],
+          [
+            "Ratio Change",
+            "0.84 → 1.24"
+          ]
+        ]
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_whales": {
+      "type": "Heading",
+      "props": {
+        "text": "Whale Activity",
+        "level": "h4"
+      }
+    },
+    "text_whale_details": {
+      "type": "Text",
+      "props": {
+        "text": "22 trades ≥$1K between 03:00–03:30 UTC | Largest trade: $6.7K sell | Assessment: contested, not clean",
+        "variant": "body"
+      }
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_chart": {
+      "type": "Heading",
+      "props": {
+        "text": "Chart",
+        "level": "h4"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "GeckoTerminal - $AEON on Base",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
