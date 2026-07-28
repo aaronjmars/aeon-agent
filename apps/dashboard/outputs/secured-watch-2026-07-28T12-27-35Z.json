@@ -1,0 +1,136 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon",
+        "description": "new since last check"
+      },
+      "children": [
+        "stats_section",
+        "separator1",
+        "heading_newly",
+        "repos_list",
+        "separator2",
+        "dropped_section"
+      ]
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_total"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "65",
+        "delta": "0"
+      }
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "1,884,960",
+        "delta": "+3,581",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_newly": {
+      "type": "Heading",
+      "props": {
+        "text": "Newly secured (1)",
+        "level": "h3"
+      }
+    },
+    "repos_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo_entry_1"
+      ]
+    },
+    "repo_entry_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_link",
+        "repo_meta",
+        "repo_desc"
+      ]
+    },
+    "repo_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "odysseus-dev/odysseus",
+        "href": "https://github.com/pewdiepie-archdaemon/odysseus/pull/347"
+      }
+    },
+    "repo_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "severity_badge",
+        "stars_badge"
+      ]
+    },
+    "severity_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "destructive"
+      }
+    },
+    "stars_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "⭐ 62,181"
+      }
+    },
+    "repo_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Closed a DNS-rebinding hole on diffusion_server (wildcard CORS + missing Host check). (fix merged Jun 6, 2026)",
+        "variant": "body"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dropped_section": {
+      "type": "Alert",
+      "props": {
+        "title": "Dropped from board",
+        "message": "pewdiepie-archdaemon/odysseus",
+        "type": "info"
+      }
+    }
+  }
+}

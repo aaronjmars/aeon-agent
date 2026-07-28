@@ -3,7 +3,7 @@ TODAY = datetime.date.today().isoformat()
 var = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
 dry = var == "dry-run"; full = var == "full"
 STATE = "memory/state/secured-repos.json"
-html = open('/tmp/security.html', encoding='utf-8', errors='replace').read()
+html = open('memory/state/security.html', encoding='utf-8', errors='replace').read()
 
 rows = {}
 for c in re.split(r'(?=<a class="page_row)', html):
