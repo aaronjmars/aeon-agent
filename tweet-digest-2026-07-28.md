@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest 2026-07-28
-
 *Tweet Digest — 2026-07-28*
 
 *Theme: soul.md — AI agent personality*
