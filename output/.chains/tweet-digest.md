@@ -1,7 +1,12 @@
-ℹ️ Tweet Digest 2026-07-28
+ℹ️ Tweet Digest 2026-07-29
 
-*Tweet Digest — 2026-07-28*
+*Tweet Digest — 2026-07-29*
 
-*Theme: soul.md — AI agent personality*
-@aeonframework: New YouTube video drops showing how to custom-tailor a soul for any AI agent — including a live Elon Musk persona demo — [link](https://x.com/aeonframework/status/2082092292261781932)
-@aeonframework: Subscribe link for the full video — [link](https://x.com/aeonframework/status/2082092296326066330) ([youtube](https://www.youtube.com/watch?v=8nkvjKlj1Yc))
+*Theme: OpenAI Codex integration*
+@aeonframework: Aeon now supports OpenAI Codex — same skills, schedules, and Telegram control, new brain. — [link](https://x.com/aeonframework/status/2082511576981016784)
+
+*Theme: Agent reliability*
+@aeonframework: Autonomous agents fail differently than traditional software — a web server crashes with a clear stack trace, agents don't. — [link](https://x.com/aeonframework/status/2082384915409031559)
+
+*Theme: soul.md / agent identity*
+@aeonframework: The soul.md tutorial — five pieces of agent identity, three build paths, and a live Elon Musk soul built and tested against an Economist interview. — [link](https://x.com/aeonframework/status/2082360474658857378)

@@ -1,5 +1,10 @@
-*Tweet Digest — 2026-07-15*
+*Tweet Digest — 2026-07-29*
 
-*Theme: Content & articles*
-@aeonframework: wrapped the first batch of introductory articles on autonomous agentic design, more incoming — [link](https://x.com/aeonframework/status/2077312271630434560)
-@aeonframework: dropped the blog link — [aeon.fun/blog](https://www.aeon.fun/blog) — [link](https://x.com/aeonframework/status/2077312274058874937)
+*Theme: OpenAI Codex integration*
+@aeonframework: Aeon now supports OpenAI Codex — same skills, schedules, and Telegram control, new brain. — [link](https://x.com/aeonframework/status/2082511576981016784)
+
+*Theme: Agent reliability*
+@aeonframework: Autonomous agents fail differently than traditional software — a web server crashes with a clear stack trace, agents don't. — [link](https://x.com/aeonframework/status/2082384915409031559)
+
+*Theme: soul.md / agent identity*
+@aeonframework: The soul.md tutorial — five pieces of agent identity, three build paths, and a live Elon Musk soul built and tested against an Economist interview. — [link](https://x.com/aeonframework/status/2082360474658857378)

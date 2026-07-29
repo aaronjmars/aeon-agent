@@ -1,0 +1,116 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest 2026-07-29"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1_container",
+        "sep1",
+        "tweet2_container",
+        "sep2",
+        "tweet3_container"
+      ]
+    },
+    "tweet1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme1",
+        "tweet1"
+      ]
+    },
+    "theme1": {
+      "type": "Badge",
+      "props": {
+        "text": "OpenAI Codex integration"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "Aeon now supports OpenAI Codex — same skills, schedules, and Telegram control, new brain. — [link](https://x.com/aeonframework/status/2082511576981016784)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme2",
+        "tweet2"
+      ]
+    },
+    "theme2": {
+      "type": "Badge",
+      "props": {
+        "text": "Agent reliability"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "Autonomous agents fail differently than traditional software — a web server crashes with a clear stack trace, agents don't. — [link](https://x.com/aeonframework/status/2082384915409031559)"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet3_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme3",
+        "tweet3"
+      ]
+    },
+    "theme3": {
+      "type": "Badge",
+      "props": {
+        "text": "soul.md / agent identity"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon",
+        "handle": "aeonframework",
+        "text": "The soul.md tutorial — five pieces of agent identity, three build paths, and a live Elon Musk soul built and tested against an Economist interview. — [link](https://x.com/aeonframework/status/2082360474658857378)"
+      }
+    }
+  }
+}
