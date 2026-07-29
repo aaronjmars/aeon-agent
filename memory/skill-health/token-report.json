@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-07-28T06:31:19Z",
-  "quality_score": 5,
-  "assessment": "Excellent output — substantive analysis of $AEON price movement with specific metrics, whale-trade context, and clear narrative connecting breakout-to-reversal pattern. Well-structured, actionable, and fully delivered (article written, logs updated, notification sent).",
+  "last_analyzed": "2026-07-29T06:46:17Z",
+  "quality_score": 4,
+  "assessment": "Substantive token report with multi-source data (GeckoTerminal, DexScreener, X), specific deltas tracked vs. stored state, actionable verdict, and persistent state logging.",
   "flags": [],
   "avg_score": 4.1,
   "history": [
-    {
-      "date": "2026-06-29",
-      "score": 4
-    },
     {
       "date": "2026-06-30",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-07-28",
       "score": 5
+    },
+    {
+      "date": "2026-07-29",
+      "score": 4
     }
   ]
 }
