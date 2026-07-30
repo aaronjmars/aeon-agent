@@ -1,0 +1,25 @@
+{
+  "root": "card_holdings",
+  "state": {},
+  "elements": {
+    "card_holdings": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Holdings",
+        "description": "12.82% of supply"
+      },
+      "children": [
+        "stat_holdings"
+      ]
+    },
+    "stat_holdings": {
+      "type": "Stat",
+      "props": {
+        "label": "Holdings",
+        "value": "12.82B",
+        "delta": "0%",
+        "trend": "neutral"
+      }
+    }
+  }
+}
