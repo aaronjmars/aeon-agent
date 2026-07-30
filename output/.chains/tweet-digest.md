@@ -1,12 +1,10 @@
-ℹ️ Tweet Digest 2026-07-29
+ℹ️ Tweet Digest — 2026-07-30
 
-*Tweet Digest — 2026-07-29*
+**Tweet Digest — 2026-07-30**
 
-*Theme: OpenAI Codex integration*
-@aeonframework: Aeon now supports OpenAI Codex — same skills, schedules, and Telegram control, new brain. — [link](https://x.com/aeonframework/status/2082511576981016784)
+**Multi-LLM expansion**
+@aeonframework: Aeon now supports Kimi Moonshot — same agent, same skills/schedules/Telegram control, just a new model in the rotation — [link](https://x.com/aeonframework/status/2082801981467373635)
 
-*Theme: Agent reliability*
-@aeonframework: Autonomous agents fail differently than traditional software — a web server crashes with a clear stack trace, agents don't. — [link](https://x.com/aeonframework/status/2082384915409031559)
-
-*Theme: soul.md / agent identity*
-@aeonframework: The soul.md tutorial — five pieces of agent identity, three build paths, and a live Elon Musk soul built and tested against an Economist interview. — [link](https://x.com/aeonframework/status/2082360474658857378)
+**Framework onboarding**
+@aeonframework: Pointing builders to aeon.fun — [link](https://x.com/aeonframework/status/2082511581137482179)
+@aeonframework: Direct CTA for new users to check the repo on aeon.fun — [link](https://x.com/aeonframework/status/2082801985749705181)

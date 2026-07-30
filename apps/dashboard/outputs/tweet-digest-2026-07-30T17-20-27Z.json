@@ -1,0 +1,117 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-07-30"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-multi-llm",
+        "tweet-moonshot",
+        "link-moonshot",
+        "separator-1",
+        "heading-framework",
+        "stack-framework"
+      ]
+    },
+    "heading-multi-llm": {
+      "type": "Heading",
+      "props": {
+        "text": "Multi-LLM expansion",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet-moonshot": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Aeon now supports Kimi Moonshot — same agent, same skills/schedules/Telegram control, just a new model in the rotation"
+      },
+      "children": []
+    },
+    "link-moonshot": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2082801981467373635"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-framework": {
+      "type": "Heading",
+      "props": {
+        "text": "Framework onboarding",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-framework": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-aeon-fun-1",
+        "link-aeon-fun-1",
+        "tweet-aeon-fun-2",
+        "link-aeon-fun-2"
+      ]
+    },
+    "tweet-aeon-fun-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Pointing builders to aeon.fun"
+      },
+      "children": []
+    },
+    "link-aeon-fun-1": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2082511581137482179"
+      },
+      "children": []
+    },
+    "tweet-aeon-fun-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Direct CTA for new users to check the repo on aeon.fun"
+      },
+      "children": []
+    },
+    "link-aeon-fun-2": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2082801985749705181"
+      },
+      "children": []
+    }
+  }
+}
