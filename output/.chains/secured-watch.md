@@ -1,12 +1,9 @@
-The `rm` command is blocked by the sandbox. The script is a harmless utility in `scripts/` — I'll leave it rather than force-clearing it.
+Run complete. The board is unchanged from yesterday's snapshot: 65 repos, 1,884,960★, zero new or changed entries. No notification sent (skill rule: silence on no change). State advanced to 2026-07-30, log appended.
 
 ## Summary
-
-**secured-watch — 2026-07-29 — NO_CHANGE**
-
-- Fetched `aeon.fun/security` (http=200, 209 KB)
-- Parsed **65 rows** — identical to last run (2026-07-28)
-- Diff: new=0, changed=0, dropped=0 · 1,884,960★ total (±0)
-- State file `memory/state/secured-repos.json` advanced to today's date
-- **No notification sent** (board unchanged)
-- Log appended to `memory/logs/2026-07-29.md` under `### secured-watch`
+- **Fetched** `aeon.fun/security` — 200 OK, 209KB
+- **Parsed** 65 secured-repo rows (selector intact)
+- **Diff** vs 2026-07-29 snapshot: 0 new, 0 changed, 0 dropped
+- **Notification**: suppressed (NO_CHANGE)
+- **State** advanced in `memory/state/secured-repos.json`
+- **Log** appended to `memory/logs/2026-07-30.md`
