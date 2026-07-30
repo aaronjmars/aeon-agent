@@ -1,0 +1,34 @@
+{
+  "root": "card_holdings",
+  "state": {},
+  "elements": {
+    "card_holdings": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_holdings"
+      ]
+    },
+    "stat_holdings": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON Holdings",
+        "value": "12.82B",
+        "delta": "12.82% of supply",
+        "trend": "neutral"
+      }
+    }
+  }
+}
