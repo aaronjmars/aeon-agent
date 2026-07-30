@@ -1,0 +1,115 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings"
+      },
+      "children": [
+        "stat_total",
+        "sep1",
+        "aeon_section",
+        "sep2",
+        "miroshark_section"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "value": "$90,155.48"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "aeon_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_title_line",
+        "aeon_badges"
+      ]
+    },
+    "aeon_title_line": {
+      "type": "Text",
+      "props": {
+        "text": "aeon: 12.82B · 12.82% of supply · $71,952.93",
+        "variant": "lead"
+      }
+    },
+    "aeon_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_badge_7d",
+        "aeon_badge_30d"
+      ]
+    },
+    "aeon_badge_7d": {
+      "type": "Badge",
+      "props": {
+        "text": "7d building"
+      }
+    },
+    "aeon_badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d building"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "miroshark_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "miroshark_title_line",
+        "miroshark_badges"
+      ]
+    },
+    "miroshark_title_line": {
+      "type": "Text",
+      "props": {
+        "text": "MiroShark: 10.70B · 10.70% of supply · $18,202.55",
+        "variant": "lead"
+      }
+    },
+    "miroshark_badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "miroshark_badge_7d",
+        "miroshark_badge_30d"
+      ]
+    },
+    "miroshark_badge_7d": {
+      "type": "Badge",
+      "props": {
+        "text": "7d building"
+      }
+    },
+    "miroshark_badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d building"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "skill": "holdings",
+  "last_analyzed": "2026-07-30T20:11:18Z",
+  "quality_score": 4,
+  "assessment": "Solid first run — fetched holdings data cleanly, presented in clear table format with context, properly documented files and expectations for future runs.",
+  "flags": [],
+  "avg_score": 4,
+  "history": [
+    {
+      "date": "2026-07-30",
+      "score": 4
+    }
+  ]
+}
