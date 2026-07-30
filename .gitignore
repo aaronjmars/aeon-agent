@@ -65,3 +65,24 @@ node_modules/
 
 # Shiplog skill temp XAI payloads and response files
 xai-shiplog-*.json
+
+# --- Leaked skill-run scratch (root-anchored; real leaks have NO leading dot) ---
+# Skill runs must write scratch to /tmp; these got committed to the repo root.
+# Root-anchored so legit copies under memory/, scripts/, output/ are unaffected.
+/xai-*.json
+/xai-*.py
+/parse_xai.py
+/tmp-*
+/tweet-digest-*.md
+/notify-digest.md
+/notify-tweet-digest.md
+/shiplog-notify.md
+/*-payload.json
+/*-result.json
+/*-out.json
+# Accidental embedded-repo gitlinks from docs-sync runs
+/docs-sync-work/
+/tmp-docs-sync/
+# json-render staging file (canon parity)
+.pending-*.md
+apps/dashboard/outputs/.pending-*.md
