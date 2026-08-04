@@ -1,0 +1,50 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings — aeon"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_main",
+        "text_supply",
+        "badge_status"
+      ]
+    },
+    "stat_main": {
+      "type": "Stat",
+      "props": {
+        "label": "Holdings",
+        "value": "13.23B",
+        "delta": "+408.53M (+3.2%)",
+        "trend": "up"
+      }
+    },
+    "text_supply": {
+      "type": "Text",
+      "props": {
+        "text": "13.23% of supply",
+        "variant": "muted"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "30d building",
+        "variant": "outline"
+      }
+    }
+  }
+}

@@ -283,3 +283,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-30,holdings,claude-sonnet-4-6,4217,4648,472851,28591
 2026-07-30,holdings,claude-sonnet-4-6,15,6726,583126,33298
 2026-07-30,holdings,claude-sonnet-4-6,4436,3642,463517,27276
+2026-08-04,holdings,claude-sonnet-5,2106,3572,683813,29126

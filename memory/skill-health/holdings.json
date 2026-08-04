@@ -1,10 +1,10 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-07-30T20:37:26Z",
-  "quality_score": 3,
-  "assessment": "Task completed successfully — fetched live holdings data, logged output, notified — but output is basic (flat report) and growth metrics still building; no errors, adequate execution.",
+  "last_analyzed": "2026-08-04T15:12:15Z",
+  "quality_score": 4,
+  "assessment": "Substantive, well-executed holdings report with real live data, proper methodology for growth tracking, structured outputs, and OKF validation — minor gap is 30d metric still building.",
   "flags": [],
-  "avg_score": 3.67,
+  "avg_score": 3.75,
   "history": [
     {
       "date": "2026-07-30",
@@ -17,6 +17,10 @@
     {
       "date": "2026-07-30",
       "score": 3
+    },
+    {
+      "date": "2026-08-04",
+      "score": 4
     }
   ]
 }
