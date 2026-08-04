@@ -1,0 +1,103 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-04",
+        "description": "Aeon framework updates"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading1",
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "heading1": {
+      "type": "Heading",
+      "props": {
+        "text": "vuln-scanner momentum",
+        "level": "h2"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "new video — vuln-scanner caught a critical bug in a Tencent repo, patched it in 3.5 hours, no credit given; 2M stars secured across repos so far — [link](https://x.com/aeonframework/status/2084251610906022178)"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner is actively working through major open-source repos right now — [link](https://x.com/aeonframework/status/2084320442639163712)"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "fork the repo, point vuln-scanner at any codebase, keep the bug bounty it finds — [link](https://x.com/aeonframework/status/2084618749525553171)"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading2",
+        "tweet4",
+        "tweet5"
+      ]
+    },
+    "heading2": {
+      "type": "Heading",
+      "props": {
+        "text": "ecosystem & framework",
+        "level": "h2"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "partnering with @0xprogrammable to build out hook-skills — [link](https://x.com/aeonframework/status/2084675898335252987)"
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "long-form post teasing memory as \"something different\" from typical agent memory — [link](https://x.com/aeonframework/status/2084571645927162283)"
+      }
+    }
+  }
+}
