@@ -1,12 +1,11 @@
-Done. All checks clean, no notification needed.
+⚠️ Heartbeat: fleet DEGRADED (Actions outage, recovering)
 
-## Summary
+🔴 STUCK: 6 skills never completed since a ~44h GitHub Actions outage (2026-08-02 19:20 UTC → 2026-08-04 14:46 UTC). Every "Aeon · Skill Runner" dispatch in that window returned `action_required` with 0 jobs run (signature of an Actions spending-limit gate, not a code bug) — token-report (stuck 13h), secured-watch (7h), changelog (35h), repo-pulse (33h), shiplog (33h), memory-flush (49h).
+- Recovered as of 14:57 UTC today: holdings (×3) and tweet-digest already completed normally; this heartbeat run is proof the runner is back.
+- No action needed from me — each stuck skill self-heals at its next scheduled dispatch (soonest: token-report tomorrow 06:00 UTC). Worth a human glance at Settings → Billing if the outage recurs.
 
-- **P0**: All 8 enabled skills healthy — 100% success rates, zero consecutive failures, no stuck or failed skills. Heartbeat self-check passes (last_success 24h ago, within 36h window).
-- **P1**: No open PRs, no urgent issues.
-- **P2**: minitor SECURITY.md missing flag persists (from MEMORY.md), but was logged in yesterday's heartbeat — within 48h dedup window, no re-notification sent.
-- **P3**: All skills within 2× their schedule intervals.
-- **Status page**: Updated `docs/status.md` → 🟡 WATCH (P2 flag ongoing). Token pulse updated: AEON $0.000005796 +4.9% 24h, CONSOLIDATING verdict.
-- **Log**: Appended `### heartbeat` entry to `memory/logs/2026-07-30.md` with `mode: ambient` discriminator.
+🟡 WATCH: heartbeat's own last success is 2026-07-30 19:34 UTC (same outage) — should clear once this run lands.
 
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+🔵 MEMORY: minitor SECURITY.md still missing (HIGH, unresolved since first flagged).
+
+P1: clean — no stalled PRs, no urgent issues.

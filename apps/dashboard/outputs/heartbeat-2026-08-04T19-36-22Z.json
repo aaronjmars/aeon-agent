@@ -1,0 +1,194 @@
+{
+  "root": "card-heartbeat",
+  "state": {},
+  "elements": {
+    "card-heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat: Fleet Status",
+        "description": "Actions outage recovery report"
+      },
+      "children": [
+        "status-alert",
+        "sep-1",
+        "stuck-section",
+        "sep-2",
+        "watch-section",
+        "sep-3",
+        "memory-section",
+        "sep-4",
+        "p1-section"
+      ]
+    },
+    "status-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Fleet Status",
+        "message": "DEGRADED — Actions outage, recovering",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stuck-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stuck-heading",
+        "stuck-summary",
+        "stuck-table",
+        "recovery-note",
+        "action-note"
+      ]
+    },
+    "stuck-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 STUCK: 6 Skills Never Completed",
+        "level": "h3"
+      }
+    },
+    "stuck-summary": {
+      "type": "Text",
+      "props": {
+        "text": "GitHub Actions outage: 2026-08-02 19:20 UTC → 2026-08-04 14:46 UTC (~44 hours). Every \"Aeon · Skill Runner\" dispatch in that window returned action_required with 0 jobs run — signature of an Actions spending-limit gate, not a code bug.",
+        "variant": "body"
+      }
+    },
+    "stuck-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Stuck Duration"
+        ],
+        "rows": [
+          [
+            "token-report",
+            "13h"
+          ],
+          [
+            "secured-watch",
+            "7h"
+          ],
+          [
+            "changelog",
+            "35h"
+          ],
+          [
+            "repo-pulse",
+            "33h"
+          ],
+          [
+            "shiplog",
+            "33h"
+          ],
+          [
+            "memory-flush",
+            "49h"
+          ]
+        ]
+      }
+    },
+    "recovery-note": {
+      "type": "Text",
+      "props": {
+        "text": "✓ Recovered as of 14:57 UTC today (2026-08-04): holdings (×3) and tweet-digest already completed normally; this heartbeat run is proof the runner is back.",
+        "variant": "body"
+      }
+    },
+    "action-note": {
+      "type": "Alert",
+      "props": {
+        "title": "Next steps",
+        "message": "No action needed from me — each stuck skill self-heals at its next scheduled dispatch (soonest: token-report tomorrow 06:00 UTC). Worth a human glance at Settings → Billing if the outage recurs.",
+        "type": "info"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "watch-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "watch-heading",
+        "watch-alert"
+      ]
+    },
+    "watch-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 WATCH: Heartbeat Status",
+        "level": "h3"
+      }
+    },
+    "watch-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Last success",
+        "message": "Heartbeat last completed 2026-07-30 19:34 UTC (same outage window) — should clear once this run lands.",
+        "type": "warning"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "memory-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "memory-heading",
+        "memory-alert"
+      ]
+    },
+    "memory-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔵 MEMORY: Documentation",
+        "level": "h3"
+      }
+    },
+    "memory-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "SECURITY.md missing",
+        "message": "Priority: HIGH. Status: unresolved since first flagged. Minitor SECURITY.md still missing.",
+        "type": "warning"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "p1-section": {
+      "type": "Alert",
+      "props": {
+        "title": "P1 Status",
+        "message": "Clean — no stalled PRs, no urgent issues.",
+        "type": "success"
+      }
+    }
+  }
+}

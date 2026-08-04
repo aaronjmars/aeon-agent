@@ -285,3 +285,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-07-30,holdings,claude-sonnet-4-6,4436,3642,463517,27276
 2026-08-04,holdings,claude-sonnet-5,2106,3572,683813,29126
 2026-08-04,tweet-digest,claude-sonnet-5,2304,7365,1855669,90842
+2026-08-04,heartbeat,claude-sonnet-5,2390,25193,2159435,78621
