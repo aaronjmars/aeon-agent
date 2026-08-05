@@ -1,9 +1,13 @@
-Run complete. The board is unchanged from yesterday's snapshot: 65 repos, 1,884,960★, zero new or changed entries. No notification sent (skill rule: silence on no change). State advanced to 2026-07-30, log appended.
+ℹ️ Secured by Aeon
 
-## Summary
-- **Fetched** `aeon.fun/security` — 200 OK, 209KB
-- **Parsed** 65 secured-repo rows (selector intact)
-- **Diff** vs 2026-07-29 snapshot: 0 new, 0 changed, 0 dropped
-- **Notification**: suppressed (NO_CHANGE)
-- **State** advanced in `memory/state/secured-repos.json`
-- **Log** appended to `memory/logs/2026-07-30.md`
+## Secured by Aeon — new since last check
+**69 repos** secured (+4) · **2,046,091★** total (+161,131)
+
+### 🆕 Newly secured (4)
+- **[koala73/worldmonitor](https://github.com/koala73/worldmonitor/pull/5477)** — `HIGH` · 78,331★ — Bump sharp to >=0.35.0 in blog-site to patch four inherited libvips CVEs (GHSA-f88m-g3jw-g9cj). (fix merged Aug 1, 2026)
+- **[InsForge/InsForge](https://github.com/InsForge/InsForge/pull/1759)** — `HIGH` · 12,641★ — Dep-bump multer ≥2.2.0 and nodemailer ≥9.0.3 — closes DoS (GHSA-72gw), CRLF injection (GHSA-268h), and OAuth TLS advisories. (fixed upstream Jul 20, 2026)
+- **[katanemo/plano](https://github.com/katanemo/plano/pull/1001)** — `HIGH+MEDIUM` · 6,926★ — Dep-bump serde_with, tokio-postgres, turbo, undici, and next to patch CVEs across the Rust and JS stacks. (fix merged Jul 27, 2026)
+- **[makecindy/cindy](https://github.com/makecindy/cindy/pull/1116)** — `HIGH` · 1,581★ — Pinned builder-util-runtime to >=9.7.0, patching an Electron auto-updater dependency vulnerability (GHSA-p2f4-r6v6-j797). (fix merged Jul 31, 2026)
+
+### 🔁 Updated fix / severity (1)
+- **[DeusData/codebase-memory-mcp](https://github.com/DeusData/codebase-memory-mcp/pull/941)** — `CRITICAL+HIGH` · 37,211★ — Integer-truncation heap overflow in zstd artifact decompression (CWE-681/787) — fixed in v0.9.0. (fixed upstream Jul 7, 2026) _(severity HIGH → CRITICAL+HIGH)_

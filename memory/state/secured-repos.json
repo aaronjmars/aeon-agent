@@ -1,395 +1,419 @@
 {
-  "updated_at": "2026-07-30",
-  "total_repos": 65,
-  "total_stars": 1884960,
+  "updated_at": "2026-08-05",
+  "total_repos": 69,
+  "total_stars": 2046091,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
-      "stars": 261858,
+      "stars": 265441,
       "fix_url": "https://github.com/obra/superpowers/pull/1553",
       "note": "Per-session capability-key gate on the dev server to block DNS rebinding. (fixed upstream Jun 17, 2026)"
     },
     "affaan-m/ECC": {
       "severity": "HIGH",
-      "stars": 233833,
+      "stars": 237199,
       "fix_url": "https://github.com/affaan-m/ECC/pull/2185",
       "note": "Host/Origin allowlist + validated git refs + quoted workflow input (CWE-352 + 78 + 918). (fix merged Jun 15, 2026)"
     },
     "ruvnet/RuView": {
       "severity": "HIGH",
-      "stars": 86786,
+      "stars": 88301,
       "fix_url": "https://github.com/ruvnet/RuView/pull/580",
       "note": "Host-header allowlist on the sensing-server HTTP + WS (DNS rebinding). (fix merged May 17, 2026)"
     },
+    "odysseus-dev/odysseus": {
+      "severity": "MEDIUM",
+      "stars": 84598,
+      "fix_url": "https://github.com/pewdiepie-archdaemon/odysseus/pull/347",
+      "note": "Closed a DNS-rebinding hole on diffusion_server (wildcard CORS + missing Host check). (fix merged Jun 6, 2026)"
+    },
     "nexu-io/open-design": {
       "severity": "HIGH+MEDIUM",
-      "stars": 81866,
+      "stars": 83318,
       "fix_url": "https://github.com/nexu-io/open-design/pull/1176",
       "note": "Resolve hostnames before approving external API base URLs (DNS bypass) + closed an FQDN SSRF bypass. (fix merged May 15, 2026)"
     },
+    "koala73/worldmonitor": {
+      "severity": "HIGH",
+      "stars": 78331,
+      "fix_url": "https://github.com/koala73/worldmonitor/pull/5477",
+      "note": "Bump sharp to &gt;=0.35.0 in blog-site to patch four inherited libvips CVEs (GHSA-f88m-g3jw-g9cj). (fix merged Aug 1, 2026)"
+    },
     "ruvnet/ruflo": {
       "severity": "MEDIUM",
-      "stars": 66201,
+      "stars": 66906,
       "fix_url": "https://github.com/ruvnet/ruflo/pull/2060",
       "note": "Verify the plugin-registry Ed25519 signature properly (CWE-347). (fix merged May 19, 2026)"
     },
+    "Panniantong/Agent-Reach": {
+      "severity": "MEDIUM",
+      "stars": 65276,
+      "fix_url": "https://github.com/Panniantong/Agent-Reach/pull/350",
+      "note": "Create credential files atomically with 0o600 (CWE-732 TOCTOU) - 0-day turnaround. (fix merged Jun 10, 2026)"
+    },
     "colbymchenry/codegraph": {
       "severity": "MEDIUM",
-      "stars": 62726,
+      "stars": 64205,
       "fix_url": "https://github.com/colbymchenry/codegraph/pull/280",
       "note": "Refuse to follow symlinks when writing the /tmp session marker (CWE-59 + 732). (fix merged May 21, 2026)"
     },
     "headroomlabs-ai/headroom": {
       "severity": "HIGH",
-      "stars": 62699,
+      "stars": 64179,
       "fix_url": "https://github.com/headroomlabs-ai/headroom/pull/605",
       "note": "Reject non-loopback Host on /debug + /stats/reset (DNS rebinding). (fix merged Jun 11, 2026)"
     },
-    "odysseus-dev/odysseus": {
-      "severity": "MEDIUM",
-      "stars": 62181,
-      "fix_url": "https://github.com/pewdiepie-archdaemon/odysseus/pull/347",
-      "note": "Closed a DNS-rebinding hole on diffusion_server (wildcard CORS + missing Host check). (fix merged Jun 6, 2026)"
-    },
     "santifer/career-ops": {
       "severity": "HIGH",
-      "stars": 61775,
+      "stars": 62594,
       "fix_url": "https://github.com/santifer/career-ops/pull/917",
       "note": "Closed SSRF guard bypasses in the liveness-browser. (fix merged Jun 11, 2026)"
     },
-    "Panniantong/Agent-Reach": {
-      "severity": "MEDIUM",
-      "stars": 61147,
-      "fix_url": "https://github.com/Panniantong/Agent-Reach/pull/350",
-      "note": "Create credential files atomically with 0o600 (CWE-732 TOCTOU) - 0-day turnaround. (fix merged Jun 10, 2026)"
-    },
     "ZhuLinsen/daily_stock_analysis": {
       "severity": "HIGH",
-      "stars": 59184,
+      "stars": 59919,
       "fix_url": "https://github.com/ZhuLinsen/daily_stock_analysis/pull/1160",
       "note": "Block path traversal in the SPA fallback route. (fix merged Apr 30, 2026)"
     },
     "mvanhorn/last30days-skill": {
       "severity": "HIGH",
-      "stars": 53928,
+      "stars": 57096,
       "fix_url": "https://github.com/mvanhorn/last30days-skill/pull/518",
       "note": "Allowlist link URL schemes in the HTML report renderer (CWE-79 + 80 stored XSS). (fix merged Jun 17, 2026)"
     },
     "HKUDS/CLI-Anything": {
       "severity": "MEDIUM",
-      "stars": 46167,
+      "stars": 46548,
       "fix_url": "https://github.com/HKUDS/CLI-Anything/pull/296",
       "note": "defusedxml for untrusted XML inputs (XXE / billion-laughs, CWE-776 + 611). (fix merged May 20, 2026)"
     },
     "abhigyanpatwari/GitNexus": {
       "severity": "HIGH",
-      "stars": 44675,
+      "stars": 44966,
       "fix_url": "https://github.com/abhigyanpatwari/GitNexus/pull/1148",
       "note": "Block IPv4-compatible IPv6 and NAT64 SSRF bypasses. (fix merged May 4, 2026)"
     },
     "Alishahryar1/free-claude-code": {
       "severity": "MEDIUM",
-      "stars": 42463,
+      "stars": 43818,
       "fix_url": "https://github.com/Alishahryar1/free-claude-code/pull/262",
       "note": "Constant-time comparison for ANTHROPIC_AUTH_TOKEN. (fix merged Apr 29, 2026)"
     },
+    "DeusData/codebase-memory-mcp": {
+      "severity": "CRITICAL+HIGH",
+      "stars": 37211,
+      "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
+      "note": "Integer-truncation heap overflow in zstd artifact decompression (CWE-681/787) \u2014 fixed in v0.9.0. (fixed upstream Jul 7, 2026)"
+    },
     "lfnovo/open-notebook": {
       "severity": "MEDIUM",
-      "stars": 36076,
+      "stars": 36288,
       "fix_url": "https://github.com/lfnovo/open-notebook/pull/859",
       "note": "Bump starlette to patch CVE-2026-48710 (BadHost) auth-bypass. (fix merged Jun 13, 2026)"
     },
     "soxoj/maigret": {
       "severity": "HIGH+LOW",
-      "stars": 35829,
+      "stars": 36093,
       "fix_url": "https://github.com/soxoj/maigret/pull/2635",
       "note": "Jinja2 autoescape=True + MarkupSafe link escaping to close stored XSS (CWE-79); send_from_directory to close path traversal (CWE-22). (fixed upstream Jun 17, 2026)"
     },
-    "DeusData/codebase-memory-mcp": {
-      "severity": "HIGH",
-      "stars": 35777,
-      "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
-      "note": "Integer-truncation heap overflow in zstd artifact decompression (CWE-681/787) \u2014 fixed in v0.9.0. (fixed upstream Jul 7, 2026)"
-    },
     "tinyhumansai/openhuman": {
       "severity": "HIGH",
-      "stars": 35494,
+      "stars": 35885,
       "fix_url": "https://github.com/tinyhumansai/openhuman/security/advisories/GHSA-c4m9-hw7m-vv3m",
       "note": "Fetch-metadata CSRF gate on /auth/telegram closes CSRF \u2192 session implantation \u2014 our exact recommended guard, 7 days after filing (CWE-352/384). (fixed upstream May 21, 2026)"
     },
     "davila7/claude-code-templates": {
       "severity": "HIGH",
-      "stars": 29934,
+      "stars": 30075,
       "fix_url": "https://github.com/davila7/claude-code-templates/security/advisories/GHSA-966p-38c9-q2p7",
       "note": "Sandbox-server host RCE + CSRF + wildcard-CORS fixed: argv-style spawn, exact-match CORS allowlist, loopback bind (CWE-78/352/942). (fixed upstream Jul 14, 2026)"
     },
     "CloakHQ/CloakBrowser": {
       "severity": "HIGH\u00d72",
-      "stars": 29237,
+      "stars": 29552,
       "fix_url": "https://github.com/CloakHQ/CloakBrowser/pull/222",
       "note": "Bumped tar 7.5.9\u21927.5.15 (2\u00d7 linkpath-traversal CVEs) + isolated workflow_dispatch input to block GHA shell injection. (fix merged May 12, 2026)"
     },
-    "supermemoryai/supermemory": {
-      "severity": "CRITICAL",
-      "stars": 28646,
-      "fix_url": "https://github.com/supermemoryai/supermemory/pull/1082",
-      "note": "Critical dependency-CVE bump - merged silently in 7 days. (fix merged Jun 17, 2026)"
-    },
     "HKUDS/Vibe-Trading": {
       "severity": "MEDIUM",
-      "stars": 27966,
+      "stars": 29400,
       "fix_url": "https://github.com/HKUDS/Vibe-Trading/pull/390",
       "note": "Bump Pillow + langchain to patch dependency CVEs. (fix merged Jul 5, 2026)"
     },
+    "supermemoryai/supermemory": {
+      "severity": "CRITICAL",
+      "stars": 28760,
+      "fix_url": "https://github.com/supermemoryai/supermemory/pull/1082",
+      "note": "Critical dependency-CVE bump - merged silently in 7 days. (fix merged Jun 17, 2026)"
+    },
     "karakeep-app/karakeep": {
       "severity": "MEDIUM",
-      "stars": 27788,
+      "stars": 28050,
       "fix_url": "https://github.com/karakeep-app/karakeep/pull/2945",
       "note": "createPinnedLookup() pins the socket to pre-validated IPs to close DNS-rebinding / TOCTOU SSRF (CWE-918/367). (fixed upstream Jul 12, 2026)"
     },
     "rohitg00/agentmemory": {
       "severity": "HIGH",
-      "stars": 25850,
+      "stars": 26424,
       "fix_url": "https://github.com/rohitg00/agentmemory/pull/294",
       "note": "Reject non-loopback Host headers in the viewer server (DNS rebinding, CWE-350). (fix merged May 17, 2026)"
     },
     "decolua/9router": {
       "severity": "HIGH",
-      "stars": 23707,
+      "stars": 24527,
       "fix_url": "https://github.com/decolua/9router/pull/998",
       "note": "Scope the OAuth-callback postMessage + re-enable TLS on DNS-bypass fetches. (fix merged May 10, 2026)"
     },
     "xai-org/grok-build": {
       "severity": "HIGH",
-      "stars": 22908,
+      "stars": 23982,
       "fix_url": "https://hackerone.com/x",
       "note": "Argument injection in the plugin-marketplace git clone/fetch path \u2014 --upload-pack + file:// allows host RCE before any plugin is staged (CWE-88/78). (fixed upstream Jul 16, 2026)"
     },
     "HKUDS/AI-Trader": {
       "severity": "HIGH",
-      "stars": 21056,
+      "stars": 21142,
       "fix_url": "https://github.com/HKUDS/AI-Trader/pull/204",
       "note": "Rate-limit + CSPRNG + constant-time for user verification (CWE-307 / 330 / 208). (fix merged May 13, 2026)"
     },
     "mksglu/context-mode": {
       "severity": "MEDIUM",
-      "stars": 19359,
+      "stars": 19582,
       "fix_url": "https://github.com/mksglu/context-mode/pull/476",
       "note": "Closed a DNS-rebinding gap in the ctx_fetch_and_index SSRF guard. (fix merged May 9, 2026)"
     },
+    "alibaba/open-code-review": {
+      "severity": "HIGH",
+      "stars": 18224,
+      "fix_url": "https://github.com/alibaba/open-code-review/pull/10",
+      "note": "Added a Host-header allowlist to the viewer to block DNS rebinding. (fix merged Jul 29, 2026)"
+    },
     "tashfeenahmed/freellmapi": {
       "severity": "HIGH",
-      "stars": 17139,
+      "stars": 17588,
       "fix_url": "https://github.com/tashfeenahmed/freellmapi/pull/284",
       "note": "Pin AES-256-GCM authTag length to 16 bytes on decrypt (CWE-347). (fix merged Jun 12, 2026)"
     },
     "rowboatlabs/rowboat": {
       "severity": "HIGH",
-      "stars": 16842,
+      "stars": 16959,
       "fix_url": "https://github.com/rowboatlabs/rowboat/pull/550",
       "note": "Closed an &amp; (background) command-executor allowlist bypass (CWE-78 / 88) - 46-day turnaround. (fix merged Jun 25, 2026)"
     },
-    "alibaba/open-code-review": {
-      "severity": "HIGH",
-      "stars": 14336,
-      "fix_url": "https://github.com/alibaba/open-code-review/pull/10",
-      "note": "Added a Host-header allowlist to the viewer to block DNS rebinding. (fix merged Jun 3, 2026)"
-    },
     "fuma-nama/fumadocs": {
       "severity": "MEDIUM",
-      "stars": 12698,
+      "stars": 12778,
       "fix_url": "https://github.com/fuma-nama/fumadocs/security/advisories/GHSA-7r23-3v7p-56ff",
       "note": "createProxy() open-proxy SSRF fixed: deny-by-default allowlist + per-hop redirect origin re-validation (fumadocs-openapi@11.2.2, CWE-918). (fixed upstream Jul 16, 2026)"
     },
+    "InsForge/InsForge": {
+      "severity": "HIGH",
+      "stars": 12641,
+      "fix_url": "https://github.com/InsForge/InsForge/pull/1759",
+      "note": "Dep-bump multer \u22652.2.0 and nodemailer \u22659.0.3 \u2014 closes DoS (GHSA-72gw), CRLF injection (GHSA-268h), and OAuth TLS advisories. (fixed upstream Jul 20, 2026)"
+    },
     "cocoindex-io/cocoindex": {
       "severity": "MEDIUM",
-      "stars": 11070,
+      "stars": 11164,
       "fix_url": "https://github.com/cocoindex-io/cocoindex/pull/1947",
-      "note": "Validate SQL identifiers in the postgres/sqlite connectors. (fix merged May 9, 2026)"
+      "note": "Validate SQL identifiers in the postgres/sqlite connectors. (fix merged Jul 26, 2026)"
     },
     "TencentCloud/CubeSandbox": {
       "severity": "CRITICAL",
-      "stars": 10714,
+      "stars": 10848,
       "fix_url": "https://github.com/TencentCloud/CubeSandbox/security/advisories/GHSA-8frp-jfpv-5vhv",
       "note": "validateHostPath() + configurable prefix allowlist closes unrestricted host-dir bind-mount \u2192 microVM escape / host-root RCE / cross-tenant (CWE-284/22/269). (fixed upstream Jul 5, 2026)"
     },
     "BigBodyCobain/Shadowbroker": {
       "severity": "MEDIUM",
-      "stars": 9909,
+      "stars": 10487,
       "fix_url": "https://github.com/BigBodyCobain/Shadowbroker/pull/259",
       "note": "defusedxml hardening (XXE / billion-laughs in the OpenClaw skill, CWE-776 + 611). (fix merged May 21, 2026)"
     },
     "presenton/presenton": {
       "severity": "HIGH",
-      "stars": 9191,
+      "stars": 9293,
       "fix_url": "https://github.com/presenton/presenton/pull/630",
       "note": "Closed an nginx /static alias path traversal. (fix merged Jun 3, 2026)"
     },
     "Universal-Debloater-Alliance/universal-android-debloater-next-generation": {
       "severity": "LOW",
-      "stars": 8612,
+      "stars": 8666,
       "fix_url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/pull/1424",
       "note": "Validate the package-name charset in request_builder to block malformed entries. (fix merged Jun 26, 2026)"
     },
     "nexu-io/html-anything": {
       "severity": "HIGH",
-      "stars": 7975,
+      "stars": 8060,
       "fix_url": "https://github.com/nexu-io/html-anything/pull/61",
       "note": "Validate the Host header on /api/* to block DNS rebinding (CWE-350 + 352). (fix merged May 29, 2026)"
     },
     "omnigent-ai/omnigent": {
       "severity": "HIGH",
-      "stars": 7798,
+      "stars": 8059,
       "fix_url": "https://github.com/omnigent-ai/omnigent/security/advisories/GHSA-7mqg-cx4g-x2rf",
       "note": "Shell-command parser no longer fails open on unrecognized gated commands \u2014 policy-bypass leading to sandbox escape (CWE-184). (advisory published Jun 29, 2026)"
     },
     "reconurge/flowsint": {
       "severity": "MEDIUM",
-      "stars": 7466,
+      "stars": 7538,
       "fix_url": "https://github.com/reconurge/flowsint/pull/178",
       "note": "WebSocket origin/Host validation + CORS hardening (CWE-350 + 352 + 1021). (fix merged Jun 22, 2026)"
     },
+    "katanemo/plano": {
+      "severity": "HIGH+MEDIUM",
+      "stars": 6926,
+      "fix_url": "https://github.com/katanemo/plano/pull/1001",
+      "note": "Dep-bump serde_with, tokio-postgres, turbo, undici, and next to patch CVEs across the Rust and JS stacks. (fix merged Jul 27, 2026)"
+    },
     "dograh-hq/dograh": {
       "severity": "HIGH",
-      "stars": 5037,
+      "stars": 5113,
       "fix_url": "https://github.com/dograh-hq/dograh/pull/332",
       "note": "Bumped python-multipart 0.0.20\u21920.0.27 (GHSA-wp53-j4wj-2cfg + 2 more CVEs). (fix merged May 21, 2026)"
     },
     "CJackHwang/ds2api": {
       "severity": "LOW",
-      "stars": 4765,
+      "stars": 4761,
       "fix_url": "https://github.com/CJackHwang/ds2api/security/advisories/GHSA-rf34-c5jc-4ffw",
       "note": "CWE-22 prefix path traversal + CWE-598 key leak in query params - published advisory. (advisory published May 10, 2026)"
     },
-    "Open-Legal-Products/mike": {
-      "severity": "HIGH",
-      "stars": 4017,
-      "fix_url": "https://github.com/Open-Legal-Products/mike/pull/51",
-      "note": "filterAccessibleDocumentIds - closed a tabular IDOR at 4 entry points. (fix merged May 10, 2026)"
-    },
     "basketikun/infinite-canvas": {
       "severity": "MEDIUM",
-      "stars": 4008,
+      "stars": 4413,
       "fix_url": "https://github.com/basketikun/infinite-canvas/pull/20",
       "note": "CWE-601 open redirect - startsWith(&quot;/&quot;) bypass in both the Go backend and TS frontend. (fix merged Jun 1, 2026)"
     },
+    "Open-Legal-Products/mike": {
+      "severity": "HIGH",
+      "stars": 4057,
+      "fix_url": "https://github.com/Open-Legal-Products/mike/pull/51",
+      "note": "filterAccessibleDocumentIds - closed a tabular IDOR at 4 entry points. (fix merged May 10, 2026)"
+    },
     "baairon/torlink": {
       "severity": "LOW",
-      "stars": 3871,
+      "stars": 3967,
       "fix_url": "https://github.com/baairon/torlink/pull/44",
       "note": "Sanitize terminal escape sequences in the result detail view to prevent clipboard hijacking via OSC-52 (CWE-150/116). (fix merged Jul 5, 2026)"
     },
     "Gloridust/WechatOnCloud": {
       "severity": "MEDIUM",
-      "stars": 3513,
+      "stars": 3539,
       "fix_url": "https://github.com/Gloridust/WechatOnCloud/pull/13",
       "note": "Gate the panel Host header to block DNS rebinding. (fix merged Jun 4, 2026)"
     },
     "Waishnav/devspace": {
       "severity": "HIGH",
-      "stars": 3384,
+      "stars": 3506,
       "fix_url": "https://github.com/Waishnav/devspace/pull/33",
       "note": "Patched undici, ws &amp; protobufjs dep advisories (npm audit 4 HIGH \u2192 0). (fix merged Jun 23, 2026)"
     },
     "strukto-ai/mirage": {
       "severity": "HIGH",
-      "stars": 3359,
+      "stars": 3378,
       "fix_url": "https://github.com/strukto-ai/mirage/pull/58",
       "note": "DNS rebinding on the FastAPI VFS daemon - Host-header allowlist (CWE-346 + 350). (fix merged May 17, 2026)"
     },
     "vercel-labs/wterm": {
       "severity": "MEDIUM",
-      "stars": 3332,
+      "stars": 3356,
       "fix_url": "https://github.com/vercel-labs/wterm/pull/33",
       "note": "Strip ESC bytes from bracketed paste to prevent terminal escape-sequence injection (CWE-150). (fix merged Apr 19, 2026)"
     },
     "cpaczek/skylight": {
       "severity": "HIGH",
-      "stars": 3126,
+      "stars": 3153,
       "fix_url": "https://github.com/cpaczek/skylight/pull/7",
       "note": "Validate Host/Origin headers on REST + WebSocket (CWE-1385 + 350 DNS rebinding). (fix merged Jun 7, 2026)"
     },
     "cosmicstack-labs/mercury-agent": {
       "severity": "CRITICAL",
-      "stars": 2962,
+      "stars": 2972,
       "fix_url": "https://github.com/cosmicstack-labs/mercury-agent/pull/48",
       "note": "Per-segment shell-pattern check to close a CWE-78 + 184 chaining bypass. (fix merged May 20, 2026)"
     },
     "music-assistant/server": {
       "severity": "HIGH+MEDIUM",
-      "stars": 2893,
+      "stars": 2915,
       "fix_url": "https://github.com/music-assistant/server/security/advisories/GHSA-5cv4-xxvj-mpvc",
       "note": "Removed unauth /imageproxy file-read, scoped config-secret endpoint, fixed OAuth-callback reflected XSS \u2192 session takeover (CWE-22/862/79). (fixed upstream Jul 14, 2026)"
     },
     "butterbase-ai/butterbase": {
       "severity": "MEDIUM",
-      "stars": 2859,
+      "stars": 2894,
       "fix_url": "https://github.com/butterbase-ai/butterbase/pull/30",
       "note": "Pin AES-256-GCM auth tag length to 16 bytes on decrypt. (fix merged Jun 2, 2026)"
     },
-    "shy3130/tickflow-stock-panel": {
-      "severity": "HIGH",
-      "stars": 2382,
-      "fix_url": "https://github.com/shy3130/tickflow-stock-panel/pull/122",
-      "note": "Three-layer strategy-code RCE fix: unconditional AST validation, dunder/subscript block, and pre-exec re-validate (CWE-94/95/284). (fixed upstream Jul 14, 2026)"
-    },
     "Sophomoresty/gemini-web2api": {
       "severity": "HIGH",
-      "stars": 2155,
+      "stars": 2499,
       "fix_url": "https://github.com/Sophomoresty/gemini-web2api/pull/23",
       "note": "Honor api_keys auth in the monolithic gemini_web2api.py. (fix merged Jun 2, 2026)"
     },
+    "shy3130/tickflow-stock-panel": {
+      "severity": "HIGH",
+      "stars": 2480,
+      "fix_url": "https://github.com/shy3130/tickflow-stock-panel/pull/122",
+      "note": "Three-layer strategy-code RCE fix: unconditional AST validation, dunder/subscript block, and pre-exec re-validate (CWE-94/95/284). (fixed upstream Jul 14, 2026)"
+    },
     "zarazhangrui/lark-coding-agent-bridge": {
       "severity": "HIGH",
-      "stars": 2011,
+      "stars": 2102,
       "fix_url": "https://github.com/zarazhangrui/feishu-claude-code-bridge/pull/48",
       "note": "Gate cloud-doc comment mentions to an allowlist (CWE-862). (fixed upstream Jun 3, 2026)"
     },
     "Doorman11991/smallcode": {
       "severity": "HIGH",
-      "stars": 1998,
+      "stars": 1996,
       "fix_url": "https://github.com/Doorman11991/smallcode/pull/39",
       "note": "Closed SSRF guard bypasses (IPv4-mapped IPv6 + browser redirects) - 0-day turnaround. (fix merged May 23, 2026)"
     },
+    "makecindy/cindy": {
+      "severity": "HIGH",
+      "stars": 1581,
+      "fix_url": "https://github.com/makecindy/cindy/pull/1116",
+      "note": "Pinned builder-util-runtime to &gt;=9.7.0, patching an Electron auto-updater dependency vulnerability (GHSA-p2f4-r6v6-j797). (fix merged Jul 31, 2026)"
+    },
     "future-agi/future-agi": {
       "severity": "MEDIUM",
-      "stars": 1508,
+      "stars": 1574,
       "fix_url": "https://github.com/future-agi/future-agi/pull/405",
       "note": "Bundle of 4: XSS + TLS-off Vapi + CSV formula injection + GHA shell injection. (fix merged May 20, 2026)"
     },
     "haydenbleasel/files-sdk": {
       "severity": "MEDIUM",
-      "stars": 1477,
+      "stars": 1483,
       "fix_url": "https://github.com/haydenbleasel/files-sdk/pull/35",
       "note": "Reject .meta.json sidecar namespace collisions (CWE-73 + 345). (fix merged May 21, 2026)"
     },
     "run-liyi/wechatpay": {
       "severity": "HIGH",
-      "stars": 1446,
+      "stars": 1443,
       "fix_url": "https://github.com/run-liyi/wechatpay/pull/1",
       "note": "Electron stored-XSS \u2192 RCE via a malicious bill spreadsheet (CWE-79 + 94). (fixed upstream Jun 1, 2026)"
     },
     "ClaudioDrews/memory-os": {
       "severity": "MEDIUM",
-      "stars": 1300,
+      "stars": 1313,
       "fix_url": "https://github.com/ClaudioDrews/memory-os/pull/26",
       "note": "Path.is_relative_to for WIKI_PATH containment in ingest_file (CWE-22). (fix merged Jun 10, 2026)"
     },
     "sybil-solutions/codex-shim": {
       "severity": "HIGH",
-      "stars": 1044,
+      "stars": 1045,
       "fix_url": "https://github.com/0xSero/codex-shim/pull/14",
       "note": "Validate the Host header to block DNS rebinding. (fix merged May 27, 2026)"
     },
     "ComposioHQ/trustclaw": {
       "severity": "MEDIUM",
-      "stars": 868,
+      "stars": 872,
       "fix_url": "https://github.com/ComposioHQ/trustclaw/pull/31",
       "note": "Timing-safe comparison for API-token auth (CWE-208). (fix merged Jun 3, 2026)"
     },
     "openclaw/clawpatch": {
       "severity": "HIGH",
-      "stars": 779,
+      "stars": 782,
       "fix_url": "https://github.com/openclaw/clawpatch/pull/112",
       "note": "Mapper-generator command-injection coverage (CWE-78 + 88) - fix landed in #111. (fixed upstream May 30, 2026)"
     }

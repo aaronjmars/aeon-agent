@@ -1,0 +1,388 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon",
+        "description": "new since last check"
+      },
+      "children": [
+        "stats-section",
+        "separator-1",
+        "newly-secured-section",
+        "separator-2",
+        "updated-section"
+      ]
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-repos",
+        "stat-stars"
+      ]
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "repos secured",
+        "value": "69",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "2,046,091",
+        "delta": "+161,131",
+        "trend": "up"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "newly-secured-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "newly-secured-heading",
+        "repos-newly-secured"
+      ]
+    },
+    "newly-secured-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (4)",
+        "level": "h2"
+      }
+    },
+    "repos-newly-secured": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo1",
+        "repo2",
+        "repo3",
+        "repo4"
+      ]
+    },
+    "repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1-link",
+        "repo1-meta",
+        "repo1-desc"
+      ]
+    },
+    "repo1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "koala73/worldmonitor",
+        "href": "https://github.com/koala73/worldmonitor/pull/5477",
+        "source": "GitHub"
+      }
+    },
+    "repo1-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1-severity",
+        "repo1-stars"
+      ]
+    },
+    "repo1-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo1-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "78,331★",
+        "variant": "default"
+      }
+    },
+    "repo1-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bump sharp to >=0.35.0 in blog-site to patch four inherited libvips CVEs (GHSA-f88m-g3jw-g9cj). (fix merged Aug 1, 2026)",
+        "variant": "body"
+      }
+    },
+    "repo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2-link",
+        "repo2-meta",
+        "repo2-desc"
+      ]
+    },
+    "repo2-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "InsForge/InsForge",
+        "href": "https://github.com/InsForge/InsForge/pull/1759",
+        "source": "GitHub"
+      }
+    },
+    "repo2-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2-severity",
+        "repo2-stars"
+      ]
+    },
+    "repo2-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo2-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "12,641★",
+        "variant": "default"
+      }
+    },
+    "repo2-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Dep-bump multer ≥2.2.0 and nodemailer ≥9.0.3 — closes DoS (GHSA-72gw), CRLF injection (GHSA-268h), and OAuth TLS advisories. (fixed upstream Jul 20, 2026)",
+        "variant": "body"
+      }
+    },
+    "repo3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo3-link",
+        "repo3-meta",
+        "repo3-desc"
+      ]
+    },
+    "repo3-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "katanemo/plano",
+        "href": "https://github.com/katanemo/plano/pull/1001",
+        "source": "GitHub"
+      }
+    },
+    "repo3-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo3-severity",
+        "repo3-stars"
+      ]
+    },
+    "repo3-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM",
+        "variant": "destructive"
+      }
+    },
+    "repo3-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "6,926★",
+        "variant": "default"
+      }
+    },
+    "repo3-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Dep-bump serde_with, tokio-postgres, turbo, undici, and next to patch CVEs across the Rust and JS stacks. (fix merged Jul 27, 2026)",
+        "variant": "body"
+      }
+    },
+    "repo4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo4-link",
+        "repo4-meta",
+        "repo4-desc"
+      ]
+    },
+    "repo4-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "makecindy/cindy",
+        "href": "https://github.com/makecindy/cindy/pull/1116",
+        "source": "GitHub"
+      }
+    },
+    "repo4-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo4-severity",
+        "repo4-stars"
+      ]
+    },
+    "repo4-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo4-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "1,581★",
+        "variant": "default"
+      }
+    },
+    "repo4-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Pinned builder-util-runtime to >=9.7.0, patching an Electron auto-updater dependency vulnerability (GHSA-p2f4-r6v6-j797). (fix merged Jul 31, 2026)",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "updated-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updated-heading",
+        "repos-updated"
+      ]
+    },
+    "updated-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔁 Updated fix / severity (1)",
+        "level": "h2"
+      }
+    },
+    "repos-updated": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo5"
+      ]
+    },
+    "repo5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo5-link",
+        "repo5-meta",
+        "repo5-desc",
+        "repo5-severity-note"
+      ]
+    },
+    "repo5-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "DeusData/codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
+        "source": "GitHub"
+      }
+    },
+    "repo5-meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo5-severity",
+        "repo5-stars"
+      ]
+    },
+    "repo5-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "CRITICAL+HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo5-stars": {
+      "type": "Badge",
+      "props": {
+        "text": "37,211★",
+        "variant": "default"
+      }
+    },
+    "repo5-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Integer-truncation heap overflow in zstd artifact decompression (CWE-681/787) — fixed in v0.9.0. (fixed upstream Jul 7, 2026)",
+        "variant": "body"
+      }
+    },
+    "repo5-severity-note": {
+      "type": "Text",
+      "props": {
+        "text": "severity HIGH → CRITICAL+HIGH",
+        "variant": "muted"
+      }
+    }
+  }
+}
