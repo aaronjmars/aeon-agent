@@ -1,0 +1,138 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report",
+        "description": "$AEON — ACCUMULATING"
+      },
+      "children": [
+        "status",
+        "narrative",
+        "sep1",
+        "stats-stack",
+        "sep2",
+        "chart",
+        "footnote"
+      ]
+    },
+    "status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCUMULATING",
+        "variant": "secondary"
+      }
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Round-tripped hard this week — spiked from $0.0000064 to a $0.0000207 high on Aug 2, faded back to $0.0000148. Flat over the trailing 24h; buyers outnumber sellers 1.48:1 but the three biggest single trades were all whale sells.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price",
+        "liq",
+        "vol",
+        "buysells",
+        "whales",
+        "7d",
+        "30d"
+      ]
+    },
+    "price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001481",
+        "delta": "-1.0%",
+        "trend": "down"
+      }
+    },
+    "liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity (6d-old baseline)",
+        "value": "$554.0K",
+        "delta": "+4.3%",
+        "trend": "up"
+      }
+    },
+    "vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (2.5× 7d average)",
+        "value": "$230.5K",
+        "trend": "neutral"
+      }
+    },
+    "buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio (9.6h window)",
+        "value": "1.48:1",
+        "delta": "179 buys / 121 sells",
+        "trend": "up"
+      }
+    },
+    "whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Activity",
+        "value": "19 whales",
+        "delta": "6 buying / 13 selling",
+        "trend": "down"
+      }
+    },
+    "7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7-day Performance",
+        "value": "+140.8%",
+        "trend": "up"
+      }
+    },
+    "30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30-day Performance",
+        "value": "-22.9%",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart": {
+      "type": "Link",
+      "props": {
+        "label": "Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    },
+    "footnote": {
+      "type": "Text",
+      "props": {
+        "text": "7-day price range: $0.0000064 (low) → $0.0000207 (high) → $0.0000148 (current)",
+        "variant": "caption"
+      }
+    }
+  }
+}
