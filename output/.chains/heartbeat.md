@@ -1,11 +1,9 @@
-⚠️ Heartbeat: fleet DEGRADED (Actions outage, recovering)
+⚠️ Heartbeat — 4 skills stuck since outage, weekly cadence delaying self-heal
 
-🔴 STUCK: 6 skills never completed since a ~44h GitHub Actions outage (2026-08-02 19:20 UTC → 2026-08-04 14:46 UTC). Every "Aeon · Skill Runner" dispatch in that window returned `action_required` with 0 jobs run (signature of an Actions spending-limit gate, not a code bug) — token-report (stuck 13h), secured-watch (7h), changelog (35h), repo-pulse (33h), shiplog (33h), memory-flush (49h).
-- Recovered as of 14:57 UTC today: holdings (×3) and tweet-digest already completed normally; this heartbeat run is proof the runner is back.
-- No action needed from me — each stuck skill self-heals at its next scheduled dispatch (soonest: token-report tomorrow 06:00 UTC). Worth a human glance at Settings → Billing if the outage recurs.
+🔴 STUCK (update, not new): 4 skills dispatched during the Aug 2–4 GH Actions outage never completed and were never redispatched — repo-pulse (dispatched Aug 3, 10:00 UTC), shiplog (Aug 3, 10:00 UTC), changelog (Aug 3, 08:37 UTC), memory-flush (Aug 2, 18:01 UTC). Yesterday's heartbeat expected these to "self-heal" like token-report/secured-watch/holdings did — they didn't. Root cause: all four are weekly-cadence skills, so the scheduler won't re-fire them until their next natural cron tick (memory-flush: Sun Aug 9 18:00 UTC; changelog/shiplog/repo-pulse: Mon Aug 10). Each is 9–10 days past its last real success. Manual re-trigger (workflow_dispatch) recommended if the operator doesn't want to wait until next week.
 
-🟡 WATCH: heartbeat's own last success is 2026-07-30 19:34 UTC (same outage) — should clear once this run lands.
+🟢 CLEAR: heartbeat self-check — last success 2026-08-04 19:36 UTC (<24h), no longer stale.
 
-🔵 MEMORY: minitor SECURITY.md still missing (HIGH, unresolved since first flagged).
+🟢 CLEAR: 0 open PRs, 0 issues, GH Actions scheduler running normally since recovery (Aug 4 14:46 UTC).
 
-P1: clean — no stalled PRs, no urgent issues.
+Status page: 🔴 DEGRADED (unchanged from yesterday, same root cause — 4 skills still stuck, not new breakage).

@@ -1,0 +1,138 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "4 skills stuck since outage, weekly cadence delaying self-heal"
+      },
+      "children": [
+        "alert_stuck",
+        "sep1",
+        "stuck_details",
+        "sep2",
+        "clear_1",
+        "clear_2",
+        "sep3",
+        "status_page"
+      ]
+    },
+    "alert_stuck": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "🔴 STUCK (update, not new)",
+        "message": "4 skills dispatched during the Aug 2–4 GH Actions outage never completed and were never redispatched"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "stuck_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stuck_heading",
+        "stuck_list",
+        "stuck_analysis",
+        "stuck_recommendation"
+      ]
+    },
+    "stuck_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Stuck Skills",
+        "level": "h3"
+      }
+    },
+    "stuck_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stuck_item_1",
+        "stuck_item_2",
+        "stuck_item_3",
+        "stuck_item_4"
+      ]
+    },
+    "stuck_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "repo-pulse (dispatched Aug 3, 10:00 UTC)"
+      }
+    },
+    "stuck_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "shiplog (dispatched Aug 3, 10:00 UTC)"
+      }
+    },
+    "stuck_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "changelog (dispatched Aug 3, 08:37 UTC)"
+      }
+    },
+    "stuck_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "memory-flush (dispatched Aug 2, 18:01 UTC)"
+      }
+    },
+    "stuck_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: all four are weekly-cadence skills, so the scheduler won't re-fire them until their next natural cron tick. memory-flush: Sun Aug 9 18:00 UTC; changelog/shiplog/repo-pulse: Mon Aug 10. Each is 9–10 days past its last real success. Yesterday's heartbeat expected these to \"self-heal\" like token-report/secured-watch/holdings did — they didn't.",
+        "variant": "body"
+      }
+    },
+    "stuck_recommendation": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Manual re-trigger (workflow_dispatch) recommended if the operator doesn't want to wait until next week."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "clear_1": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "🟢 CLEAR: heartbeat self-check",
+        "message": "Last success 2026-08-04 19:36 UTC (<24h), no longer stale."
+      }
+    },
+    "clear_2": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "🟢 CLEAR: scheduler status",
+        "message": "0 open PRs, 0 issues, GH Actions scheduler running normally since recovery (Aug 4 14:46 UTC)."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_page": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Status page: 🔴 DEGRADED",
+        "message": "Unchanged from yesterday, same root cause — 4 skills still stuck, not new breakage."
+      }
+    }
+  }
+}
