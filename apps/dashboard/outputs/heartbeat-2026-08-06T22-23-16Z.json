@@ -1,0 +1,114 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "2026-08-06"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "memory-item"
+      ]
+    },
+    "memory-item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "label-row",
+        "alert-security",
+        "details-stack"
+      ]
+    },
+    "label-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-memory",
+        "badge-high"
+      ]
+    },
+    "badge-memory": {
+      "type": "Badge",
+      "props": {
+        "text": "MEMORY",
+        "variant": "outline"
+      }
+    },
+    "badge-high": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "alert-security": {
+      "type": "Alert",
+      "props": {
+        "title": "SECURITY.md still missing",
+        "type": "warning"
+      }
+    },
+    "details-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "detail-1",
+        "detail-2",
+        "detail-3",
+        "detail-4",
+        "detail-5"
+      ]
+    },
+    "detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "Flagged again, >48h since last notice (2026-08-04)"
+      }
+    },
+    "detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "No open PRs/issues"
+      }
+    },
+    "detail-3": {
+      "type": "Text",
+      "props": {
+        "text": "4 skills remain stuck since Aug 2-4 Actions outage: repo-pulse, shiplog, changelog, memory-flush"
+      }
+    },
+    "detail-4": {
+      "type": "Text",
+      "props": {
+        "text": "Unchanged since yesterday"
+      }
+    },
+    "detail-5": {
+      "type": "Text",
+      "props": {
+        "text": "Next natural cron tick: Mon 08-10 (repo-pulse/shiplog/changelog) or Sun 08-09 (memory-flush)"
+      }
+    }
+  }
+}
