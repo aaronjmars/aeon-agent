@@ -35,6 +35,7 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Recent Digests
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-06 | tweet-digest | Uniswap v4 hooks pipeline, posthog-errors skill, eyebrowCC security partnership |
 | 2026-08-05 | tweet-digest | Finance District wallet integration, SEO skill, Uniswap v4 hooks video |
 | 2026-07-26 | tweet-digest | framework tierlist, developer UX |
 | 2026-07-25 | tweet-digest | Claude Opus 5 live, new integration tease, framework positioning |
