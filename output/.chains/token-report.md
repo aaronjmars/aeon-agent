@@ -1,11 +1,10 @@
 ℹ️ AEON Token Report
 
-*$AEON — ACCUMULATING*
+**$AEON — CONSOLIDATING**
 
-Round-tripped hard this week — spiked from $0.0000064 to a $0.0000207 high on Aug 2, faded back to $0.0000148. Flat over the trailing 24h; buyers outnumber sellers 1.48:1 but the three biggest single trades were all whale sells.
+Price fell 18.2% but volume ran just 0.4× a spike-skewed 7d average — no confirming flow, so it's a fade not a breakdown.
 
-Price $0.00001481 (−1.0% 24h) | Liq $554.0K (+4.3% vs 6d-old snapshot) | Vol $230.5K (2.5× 7d avg)
-Buys/Sells 179/121 (ratio 1.48, ~9.6h window) | Whales: 19 (6 buy / 13 sell)
-7d +140.8% | 30d −22.9%
+Price $0.00001212 (−18.2% 24h) | Liq $817.7K (+47.6%) | Vol $190.7K (0.4× 7d)
+Buys/Sells 444/289 (ratio 1.54) | Whales: 14 (6 buy / 8 sell)
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
