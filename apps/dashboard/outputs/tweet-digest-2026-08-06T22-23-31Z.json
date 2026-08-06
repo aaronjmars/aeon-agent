@@ -1,0 +1,130 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "ℹ️ Tweet Digest",
+        "description": "2026-08-06"
+      },
+      "children": [
+        "content"
+      ]
+    },
+    "content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "tweet1-section",
+        "tweet2-section",
+        "tweet3-section"
+      ]
+    },
+    "tweet1-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme1",
+        "tweet1",
+        "link1"
+      ]
+    },
+    "theme1": {
+      "type": "Badge",
+      "props": {
+        "text": "Uniswap v4 hooks pipeline",
+        "variant": "secondary"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "aeon agents now deploy Uni v4 hooks — ten contracts, zero humans, three skills / three gates, cites Cork & Bunni as why audited hooks still die, lands on a \"triple mainnet lock\""
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2085352654394322947"
+      }
+    },
+    "tweet2-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme2",
+        "tweet2",
+        "link2"
+      ]
+    },
+    "theme2": {
+      "type": "Badge",
+      "props": {
+        "text": "New skill shipped",
+        "variant": "secondary"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "new skill posthog-errors reads your PostHog errors weekly, ranks what's actually hurting users, then the same agent that finds the bug works the fix"
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2085355670866456775"
+      }
+    },
+    "tweet3-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme3",
+        "tweet3",
+        "link3"
+      ]
+    },
+    "theme3": {
+      "type": "Badge",
+      "props": {
+        "text": "Ecosystem / security",
+        "variant": "secondary"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "thanks @eyebrowCC for helping forge safe skills — security comes first"
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2085404295726321872"
+      }
+    }
+  }
+}

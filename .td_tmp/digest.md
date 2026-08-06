@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest
-
 *Tweet Digest — 2026-08-06*
 
 *Theme: Uniswap v4 hooks pipeline*
