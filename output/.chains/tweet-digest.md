@@ -1,12 +1,12 @@
-ℹ️ Tweet Digest
+ℹ️ Tweet Digest — 2026-08-07
 
-*Tweet Digest — 2026-08-06*
+*Tweet Digest — 2026-08-07*
 
-*Theme: Uniswap v4 hooks pipeline*
-@aeonframework: aeon agents now deploy Uni v4 hooks — ten contracts, zero humans, three skills / three gates, cites Cork & Bunni as why audited hooks still die, lands on a "triple mainnet lock" — [link](https://x.com/aeonframework/status/2085352654394322947)
+*Theme: framework philosophy*
+@aeonframework: "run it and forget it" is a design goal with prerequisites, not a default — [link](https://x.com/aeonframework/status/2085732492095508520)
 
-*Theme: New skill shipped*
-@aeonframework: new skill posthog-errors reads your PostHog errors weekly, ranks what's actually hurting users, then the same agent that finds the bug works the fix — [link](https://x.com/aeonframework/status/2085355670866456775)
+*Theme: ecosystem growth*
+@aeonframework: you.com contributed its own skill to aeon — you-web-search wires their Search API straight into the agent — [link](https://x.com/aeonframework/status/2085717364893478994)
 
-*Theme: Ecosystem / security*
-@aeonframework: thanks @eyebrowCC for helping forge safe skills — security comes first — [link](https://x.com/aeonframework/status/2085404295726321872)
+*Theme: miroshark distribution*
+@aeonframework: miroshark's endpoint is now live on the x402 agent marketplace — [link](https://x.com/aeonframework/status/2085639661162991954)

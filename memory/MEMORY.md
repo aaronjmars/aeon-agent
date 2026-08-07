@@ -35,6 +35,7 @@ See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `a
 ## Recent Digests
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-07 | tweet-digest | "run it and forget it" philosophy piece, you.com contributed skill, miroshark x402 listing |
 | 2026-08-06 | tweet-digest | Uniswap v4 hooks pipeline, posthog-errors skill, eyebrowCC security partnership |
 | 2026-08-05 | tweet-digest | Finance District wallet integration, SEO skill, Uniswap v4 hooks video |
 | 2026-07-26 | tweet-digest | framework tierlist, developer UX |

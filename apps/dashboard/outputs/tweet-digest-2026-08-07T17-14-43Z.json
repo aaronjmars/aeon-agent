@@ -1,0 +1,79 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-07"
+      },
+      "children": [
+        "theme1",
+        "tweet1",
+        "sep1",
+        "theme2",
+        "tweet2",
+        "sep2",
+        "theme3",
+        "tweet3"
+      ]
+    },
+    "theme1": {
+      "type": "Badge",
+      "props": {
+        "text": "framework philosophy",
+        "variant": "secondary"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "\"run it and forget it\" is a design goal with prerequisites, not a default — https://x.com/aeonframework/status/2085732492095508520"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme2": {
+      "type": "Badge",
+      "props": {
+        "text": "ecosystem growth",
+        "variant": "secondary"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "you.com contributed its own skill to aeon — you-web-search wires their Search API straight into the agent — https://x.com/aeonframework/status/2085717364893478994"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme3": {
+      "type": "Badge",
+      "props": {
+        "text": "miroshark distribution",
+        "variant": "secondary"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "miroshark's endpoint is now live on the x402 agent marketplace — https://x.com/aeonframework/status/2085639661162991954"
+      }
+    }
+  }
+}
