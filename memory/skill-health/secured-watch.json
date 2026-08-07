@@ -1,8 +1,8 @@
 {
   "skill": "secured-watch",
-  "last_analyzed": "2026-08-06T12:31:51Z",
+  "last_analyzed": "2026-08-07T12:09:54Z",
   "quality_score": 4,
-  "assessment": "Well-executed monitoring task: fetched data successfully (http=200), diffed correctly, properly applied no-notification-on-no-change rule, and maintained state with timestamp advancement.",
+  "assessment": "Good — substantive monitoring run that found and reported a new security finding with proper state advancement and metrics tracking.",
   "flags": [],
   "avg_score": 3.92,
   "history": [
@@ -52,6 +52,10 @@
     },
     {
       "date": "2026-08-06",
+      "score": 4
+    },
+    {
+      "date": "2026-08-07",
       "score": 4
     }
   ]

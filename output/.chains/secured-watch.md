@@ -1,15 +1,7 @@
-The `.sw_tmp/` scratch dir is untracked and harmless (not part of the repo); leaving it doesn't affect anything since only `memory/` changes matter here.
+ℹ️ Secured by Aeon
 
-## Summary
+## Secured by Aeon ⭐ — one more patched
+**70 repos** secured (+1) · **2,070,773★** total (+24,682)
 
-Ran the **secured-watch** skill (`var=""`, default diff mode):
-
-- Fetched `https://www.aeon.fun/security` (http=200, 220KB), parsed 69 secured-repo rows.
-- Diffed against `memory/state/secured-repos.json` (last updated 2026-08-05): **no new entries, no changed entries, no dropped entries** — totals unchanged at 69 repos / 2,046,091★.
-- Per skill rules, a `NO_CHANGE` result sends **no notification**.
-
-**Files modified:**
-- `memory/state/secured-repos.json` — `updated_at` advanced to 2026-08-06 (state must advance every real run, even a quiet one).
-- `memory/logs/2026-08-06.md` — appended `### secured-watch` log entry.
-
-No follow-up needed; next run will pick up from this baseline.
+### 🆕 Newly secured (1)
+- **[usekaneo/kaneo](https://github.com/usekaneo/kaneo/pull/1457)** — `HIGH` · 7,510★ — Fixed a Gitea-token leak + SSRF among 6 code findings (release 2.13.0); also bumped next to 15.5.21 for 8 disclosed advisories incl. 3 HIGH SSRF/DoS. (fixed upstream Aug 5, 2026)

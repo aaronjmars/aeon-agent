@@ -1,0 +1,130 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon ⭐",
+        "description": "one more patched"
+      },
+      "children": [
+        "stats-section",
+        "sep-1",
+        "newly-section"
+      ]
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-repos",
+        "stat-stars"
+      ]
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "repos secured",
+        "value": "70",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "2,070,773",
+        "delta": "+24,682",
+        "trend": "up"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "newly-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-newly",
+        "item-1"
+      ]
+    },
+    "heading-newly": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (1)",
+        "level": "h3"
+      }
+    },
+    "item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-repo",
+        "metadata-row",
+        "desc-fix",
+        "desc-fixed"
+      ]
+    },
+    "link-repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "usekaneo/kaneo",
+        "href": "https://github.com/usekaneo/kaneo/pull/1457"
+      }
+    },
+    "metadata-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-severity",
+        "text-stars"
+      ]
+    },
+    "badge-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "text-stars": {
+      "type": "Text",
+      "props": {
+        "text": "7,510★",
+        "variant": "body"
+      }
+    },
+    "desc-fix": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed Gitea-token leak + SSRF among 6 code findings (release 2.13.0); also bumped next to 15.5.21 for 8 disclosed advisories incl. 3 HIGH SSRF/DoS.",
+        "variant": "body"
+      }
+    },
+    "desc-fixed": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Aug 5, 2026",
+        "variant": "caption"
+      }
+    }
+  }
+}
