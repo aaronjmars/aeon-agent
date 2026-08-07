@@ -1,0 +1,188 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat — fleet check"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "alert-stuck",
+        "details-section",
+        "separator-1",
+        "status-ok-section"
+      ]
+    },
+    "alert-stuck": {
+      "type": "Alert",
+      "props": {
+        "title": "🔴 STUCK (update)",
+        "message": "repo-pulse, shiplog, changelog, memory-flush hung since Aug 2-4 Actions outage — dispatch timestamps unchanged from last 2 reports",
+        "type": "error"
+      }
+    },
+    "details-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "details-heading",
+        "stuck-list",
+        "recovery-info"
+      ]
+    },
+    "details-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Days Since Last Success",
+        "level": "h3"
+      }
+    },
+    "stuck-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat-repo-pulse",
+        "stat-shiplog",
+        "stat-changelog",
+        "stat-memory-flush"
+      ]
+    },
+    "stat-repo-pulse": {
+      "type": "Stat",
+      "props": {
+        "label": "repo-pulse",
+        "value": "11.4 days",
+        "trend": "down"
+      }
+    },
+    "stat-shiplog": {
+      "type": "Stat",
+      "props": {
+        "label": "shiplog",
+        "value": "11.4 days",
+        "trend": "down"
+      }
+    },
+    "stat-changelog": {
+      "type": "Stat",
+      "props": {
+        "label": "changelog",
+        "value": "11.2 days",
+        "trend": "down"
+      }
+    },
+    "stat-memory-flush": {
+      "type": "Stat",
+      "props": {
+        "label": "memory-flush",
+        "value": "12.0 days",
+        "trend": "down"
+      }
+    },
+    "recovery-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "recovery-title",
+        "recovery-line-1",
+        "recovery-line-2"
+      ]
+    },
+    "recovery-title": {
+      "type": "Text",
+      "props": {
+        "text": "Expected recovery (next natural cron tick):",
+        "variant": "lead"
+      }
+    },
+    "recovery-line-1": {
+      "type": "Text",
+      "props": {
+        "text": "• memory-flush: Sun 08-09 18:00 UTC"
+      }
+    },
+    "recovery-line-2": {
+      "type": "Text",
+      "props": {
+        "text": "• changelog/shiplog/repo-pulse: Mon 08-10"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-ok-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-heading",
+        "status-badges"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟢 Self-check Clear",
+        "level": "h3"
+      }
+    },
+    "status-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-prs",
+        "badge-issues",
+        "badge-threshold"
+      ]
+    },
+    "badge-prs": {
+      "type": "Badge",
+      "props": {
+        "text": "0 open PRs",
+        "variant": "secondary"
+      }
+    },
+    "badge-issues": {
+      "type": "Badge",
+      "props": {
+        "text": "0 urgent issues",
+        "variant": "secondary"
+      }
+    },
+    "badge-threshold": {
+      "type": "Badge",
+      "props": {
+        "text": "0 skills past 2x-schedule threshold",
+        "variant": "secondary"
+      }
+    }
+  }
+}
