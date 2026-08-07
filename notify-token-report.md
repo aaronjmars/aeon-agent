@@ -1,5 +1,3 @@
-ℹ️ AEON Token Report
-
 *$AEON — CONSOLIDATING*
 
 Price down 15.4% to $0.00001026 on unconfirmed volume (1.16x 7d avg) — no breakdown signal, just the 08-02 hooks-buyback spike unwinding.
