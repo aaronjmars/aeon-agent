@@ -1,0 +1,117 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report — 2026-08-08"
+      },
+      "children": [
+        "status_badge",
+        "context_text",
+        "separator1",
+        "stats_section",
+        "separator2",
+        "market_details_section"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CONSOLIDATING",
+        "variant": "outline"
+      }
+    },
+    "context_text": {
+      "type": "Text",
+      "props": {
+        "text": "Price fell 8.7% but volume ran just 0.15× the 7d average — no confirming flow, so no breakdown call yet.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liquidity_stat",
+        "volume_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000009366",
+        "delta": "−8.7%",
+        "trend": "down"
+      }
+    },
+    "liquidity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$706.0K",
+        "delta": "−4.2%",
+        "trend": "down"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$65.2K",
+        "delta": "0.15× 7d avg"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "market_details_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "buys_sells_text",
+        "whales_text",
+        "chart_link"
+      ]
+    },
+    "buys_sells_text": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 169/131 (ratio 1.29)",
+        "variant": "body"
+      }
+    },
+    "whales_text": {
+      "type": "Text",
+      "props": {
+        "text": "Whales: 14 (3 buy / 11 sell)",
+        "variant": "body"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
