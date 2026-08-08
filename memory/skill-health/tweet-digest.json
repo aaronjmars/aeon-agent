@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-07T17:14:43Z",
+  "last_analyzed": "2026-08-08T17:07:07Z",
   "quality_score": 4,
-  "assessment": "Substantive execution: fetched 5 tweets, deduped 2 prior-reported items, grouped 3 into themed findings, logged and notified cleanly with no errors.",
+  "assessment": "Well-executed skill with proper deduplication, clear logging, and transparent reporting; thin content day is operational reality, not a failure.",
   "flags": [],
-  "avg_score": 3.97,
+  "avg_score": 4,
   "history": [
-    {
-      "date": "2026-07-06",
-      "score": 3
-    },
     {
       "date": "2026-07-07",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-07",
+      "score": 4
+    },
+    {
+      "date": "2026-08-08",
       "score": 4
     }
   ]

@@ -1,12 +1,10 @@
-ℹ️ Tweet Digest — 2026-08-07
+ℹ️ Tweet Digest
 
-*Tweet Digest — 2026-08-07*
+*Tweet Digest — 2026-08-08*
 
-*Theme: framework philosophy*
-@aeonframework: "run it and forget it" is a design goal with prerequisites, not a default — [link](https://x.com/aeonframework/status/2085732492095508520)
+*Theme: New skills shipped*
+@aeonframework: Rolled out Error Digest, part 2 of the "new skills we baked" series — [link](https://x.com/aeonframework/status/2085639659283964007)
 
-*Theme: ecosystem growth*
-@aeonframework: you.com contributed its own skill to aeon — you-web-search wires their Search API straight into the agent — [link](https://x.com/aeonframework/status/2085717364893478994)
-
-*Theme: miroshark distribution*
-@aeonframework: miroshark's endpoint is now live on the x402 agent marketplace — [link](https://x.com/aeonframework/status/2085639661162991954)
+*Theme: Community & engagement*
+@aeonframework: Summer gm to the community, pointing to the YouTube playlist for anyone catching up on Aeon — [link](https://x.com/aeonframework/status/2086107485945962536)
+@aeonframework: Closes out the week's recap, asks followers to star the repo — [link](https://x.com/aeonframework/status/2085639663159566580)
