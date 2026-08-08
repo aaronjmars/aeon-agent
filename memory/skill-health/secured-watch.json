@@ -1,10 +1,10 @@
 {
   "skill": "secured-watch",
-  "last_analyzed": "2026-08-07T12:09:54Z",
+  "last_analyzed": "2026-08-08T12:04:18Z",
   "quality_score": 4,
-  "assessment": "Good — substantive monitoring run that found and reported a new security finding with proper state advancement and metrics tracking.",
+  "assessment": "Monitoring skill executed correctly; fetched data successfully, diffed state properly, logged activity, and appropriately applied silence rule on no-change run.",
   "flags": [],
-  "avg_score": 3.92,
+  "avg_score": 3.93,
   "history": [
     {
       "date": "2026-07-22",
@@ -56,6 +56,10 @@
     },
     {
       "date": "2026-08-07",
+      "score": 4
+    },
+    {
+      "date": "2026-08-08",
       "score": 4
     }
   ]

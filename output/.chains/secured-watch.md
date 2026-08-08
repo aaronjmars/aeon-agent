@@ -1,7 +1,9 @@
-ℹ️ Secured by Aeon
+Ran `secured-watch`: fetched aeon.fun/security (200, 70 rows parsed), diffed against the prior snapshot — no new or changed entries, totals unchanged (70 repos, 2,070,773★). Per the skill's silence rule, sent no notification; state and log were still updated.
 
-## Secured by Aeon ⭐ — one more patched
-**70 repos** secured (+1) · **2,070,773★** total (+24,682)
-
-### 🆕 Newly secured (1)
-- **[usekaneo/kaneo](https://github.com/usekaneo/kaneo/pull/1457)** — `HIGH` · 7,510★ — Fixed a Gitea-token leak + SSRF among 6 code findings (release 2.13.0); also bumped next to 15.5.21 for 8 disclosed advisories incl. 3 HIGH SSRF/DoS. (fixed upstream Aug 5, 2026)
+## Summary
+- Fetched and parsed https://www.aeon.fun/security (70 rows, http=200)
+- Diffed against `memory/state/secured-repos.json` — result: `NO_CHANGE` (no new/changed/dropped repos)
+- Updated `memory/state/secured-repos.json` (advanced `updated_at` to 2026-08-08, totals unchanged)
+- Appended `### secured-watch` entry to `memory/logs/2026-08-08.md`
+- No notification sent (per skill spec — quiet runs are silent)
+- Follow-up: none needed; next run will pick up any new/changed board entries automatically
