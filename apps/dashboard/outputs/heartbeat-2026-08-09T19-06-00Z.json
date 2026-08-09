@@ -1,0 +1,78 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat — 2026-08-09"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section_security",
+        "separator",
+        "section_p0"
+      ]
+    },
+    "section_security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alert_security",
+        "repo_link"
+      ]
+    },
+    "alert_security": {
+      "type": "Alert",
+      "props": {
+        "title": "minitor: Missing SECURITY.md",
+        "message": "Severity: HIGH | Status: Confirmed 404 | Flagged since: 07-30 | Action: No PR yet",
+        "type": "error"
+      }
+    },
+    "repo_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/minitor",
+        "href": "https://github.com/aaronjmars/minitor",
+        "source": "GitHub"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_p0": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "alert_p0"
+      ]
+    },
+    "alert_p0": {
+      "type": "Alert",
+      "props": {
+        "title": "No New P0 Items",
+        "message": "repo-pulse, shiplog, changelog remain stuck since Aug 2-4 Actions outage (unchanged). Next check: Mon 08-10",
+        "type": "info"
+      }
+    }
+  }
+}
