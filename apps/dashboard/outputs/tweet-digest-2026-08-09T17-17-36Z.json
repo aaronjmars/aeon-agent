@@ -1,0 +1,24 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-08-09 • Theme: Ecosystem recognition"
+      },
+      "children": [
+        "storylink-1"
+      ]
+    },
+    "storylink-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Aeon thanks Jesse Pollak for calling out Aeon's work in the Base agentic ecosystem",
+        "href": "https://x.com/aeonframework/status/2086474224504336621",
+        "source": "@aeonframework"
+      }
+    }
+  }
+}
