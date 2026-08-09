@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-08T06:26:06Z",
+  "last_analyzed": "2026-08-09T06:11:58Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-structured token analysis with clear verdict, multi-dimensional data (price/volume/liquidity/whale trades/social), transparent handling of data gaps, and proper OKF artifacts.",
+  "assessment": "Substantive, well-sourced token metrics with clear verdict (ACCUMULATING) backed by specific data (whale buy, buy/sell ratio climb). All outputs generated and committed; transparent about data sources and gaps.",
   "flags": [],
-  "avg_score": 4.13,
+  "avg_score": 4.1,
   "history": [
-    {
-      "date": "2026-07-05",
-      "score": 5
-    },
     {
       "date": "2026-07-06",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-08",
+      "score": 4
+    },
+    {
+      "date": "2026-08-09",
       "score": 4
     }
   ]

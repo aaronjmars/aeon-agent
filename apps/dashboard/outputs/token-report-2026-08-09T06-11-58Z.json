@@ -1,0 +1,111 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report"
+      },
+      "children": [
+        "status-badge",
+        "narrative-text",
+        "separator-1",
+        "metrics-grid",
+        "separator-2",
+        "whale-info",
+        "chart-link"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$AEON — ACCUMULATING",
+        "variant": "default"
+      }
+    },
+    "narrative-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price held flat (+2.1% 24h) while volume dried up to 0.19× the 7-day average — but buy/sell ratio climbed to 1.34 and a lone whale buy landed, tipping the read toward quiet accumulation.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "liq-stat",
+        "vol-stat",
+        "buys-sells-stat"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.000009562",
+        "delta": "+2.1%",
+        "trend": "up"
+      }
+    },
+    "liq-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$717.5K",
+        "delta": "+1.6%",
+        "trend": "up"
+      }
+    },
+    "vol-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$31.6K",
+        "delta": "0.19× 7d avg",
+        "trend": "down"
+      }
+    },
+    "buys-sells-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "1.34",
+        "delta": "115/86",
+        "trend": "up"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "whale-info": {
+      "type": "Text",
+      "props": {
+        "text": "Whales: 2 (1 buy / 1 sell)",
+        "variant": "caption"
+      }
+    },
+    "chart-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Price Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    }
+  }
+}
