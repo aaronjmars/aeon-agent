@@ -1,0 +1,428 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-08-10 — [SURGE]"
+      },
+      "children": [
+        "summary_table",
+        "warning_alert",
+        "sep1",
+        "aeon_section",
+        "sep2",
+        "soul_section",
+        "opendia_section",
+        "minitor_section",
+        "sep3",
+        "source_note"
+      ]
+    },
+    "summary_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "641 (+49)",
+            "226 (+12)",
+            "—",
+            "SURGE"
+          ],
+          [
+            "opendia",
+            "1907 (+5)",
+            "159 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "640 (+7)",
+            "68 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "16 (—)",
+            "4 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "warning_alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "First run since the Aug 2-4 Actions outage unstuck (last data point 2026-07-27) — this window still covers the intended 7 days (cutoff computed fresh), but repo totals also carry ~2 weeks of untracked drift from the gap."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeon_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_heading",
+        "aeon_verdict",
+        "aeon_truncation_note",
+        "aeon_notable_heading",
+        "aeon_notable_stack",
+        "aeon_other_heading",
+        "aeon_other_text",
+        "aeon_forks_heading",
+        "aeon_forks_stack"
+      ]
+    },
+    "aeon_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h2"
+      }
+    },
+    "aeon_verdict": {
+      "type": "Badge",
+      "props": {
+        "text": "SURGE (avg4w ≈ 3.5, rule=week_stars>3×avg4w)",
+        "variant": "default"
+      }
+    },
+    "aeon_truncation_note": {
+      "type": "Text",
+      "props": {
+        "text": "events truncated (repo hit GitHub's 300-event cap ~6 days back, not the full 7d window; real total likely higher than 49)",
+        "variant": "caption"
+      }
+    },
+    "aeon_notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 8 of 49)",
+        "level": "h3"
+      }
+    },
+    "aeon_notable_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_jayaram",
+        "aeon_sukarth"
+      ]
+    },
+    "aeon_jayaram": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Jayaram Krishnaswamy",
+        "href": "https://github.com/jayaramcloud",
+        "source": "📍 Calgary · 34 repos · 🐦 @jayaram26"
+      }
+    },
+    "aeon_sukarth": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Sukarth",
+        "href": "https://github.com/Sukarth",
+        "source": "📍 Espoo, Finland · 73 repos · 27 followers · 'Vibin''"
+      }
+    },
+    "aeon_other_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h3"
+      }
+    },
+    "aeon_other_text": {
+      "type": "Text",
+      "props": {
+        "text": "Marr554, Bessieres, Shgarrett, chrismartinwc, likewater9, belikh, angelside, eldarush, mumarbuilds, goldengit, robertociommo-ux, prasairaul-del, angry-analyst, rowlesintelligencesystems, donbing, syauqisabili, chenli1989, SanchitoDev, liransmartlighthouse, 404UID4, AbdulSamadMalik, Vibi-007, manderson240, LuminairPrime, aditybdev, zadoyngx, mattrebelskey, edragrey, Absolute-Martial, wildnet, ms00l, chileanman, mikzero, ShadowAUS, SMbTyj, Piuliss, elimorals, askmetoo, bigcoster, realz99, Yavmarto, jygastaud, JekaJeka1627, mike1858, CriptoNuno2024",
+        "variant": "body"
+      }
+    },
+    "aeon_forks_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks (enriched 12 of 12)",
+        "level": "h3"
+      }
+    },
+    "aeon_forks_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork_edson",
+        "fork_vloddos",
+        "fork_lukes",
+        "fork_olanotolu",
+        "fork_hatari",
+        "fork_jessie",
+        "fork_nickmimic",
+        "fork_kairune",
+        "fork_autonomy",
+        "fork_pray",
+        "fork_martin",
+        "fork_memix"
+      ]
+    },
+    "fork_edson": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Edson Martins",
+        "href": "https://github.com/edsonmartins",
+        "source": "📍 Maringá-PR · 🏢 Integrall.tech · 801 repos · 🌐 https://www.integrall.tech · 22 followers · Arquiteto & Founder @ IntegrAllTech. Criador do Archbase (Maven Central · npm · pub.dev). IA aplicada ao B2B brasileiro. Software desde 1989…"
+      }
+    },
+    "fork_vloddos": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vloddos",
+        "href": "https://github.com/vloddos",
+        "source": "102 repos · 34 followers"
+      }
+    },
+    "fork_lukes": {
+      "type": "StoryLink",
+      "props": {
+        "title": "clinton lele",
+        "href": "https://github.com/LUKES254",
+        "source": "114 repos"
+      }
+    },
+    "fork_olanotolu": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Olaoluwasubomi",
+        "href": "https://github.com/olanotolu",
+        "source": "📍 New York · 59 repos · 🌐 www.olaoluwasubomi.com · 🐦 @olanotolu · 11 followers · Building: i@olaoluwasubomi.com"
+      }
+    },
+    "fork_hatari": {
+      "type": "StoryLink",
+      "props": {
+        "title": "hatari07",
+        "href": "https://github.com/hatari07",
+        "source": "63 repos"
+      }
+    },
+    "fork_jessie": {
+      "type": "StoryLink",
+      "props": {
+        "title": "JessieJanie",
+        "href": "https://github.com/JessieJanie",
+        "source": "20 repos"
+      }
+    },
+    "fork_nickmimic": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Nick",
+        "href": "https://github.com/nickmimic",
+        "source": "9 repos"
+      }
+    },
+    "fork_kairune": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kairune",
+        "href": "https://github.com/kairunedev",
+        "source": "3 repos"
+      }
+    },
+    "fork_autonomy": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Autonomy-Labs-Tech",
+        "href": "https://github.com/Autonomy-Labs-Tech",
+        "source": "13 repos"
+      }
+    },
+    "fork_pray": {
+      "type": "StoryLink",
+      "props": {
+        "title": "prayItCompiles",
+        "href": "https://github.com/prayItCompiles",
+        "source": "7 repos"
+      }
+    },
+    "fork_martin": {
+      "type": "StoryLink",
+      "props": {
+        "title": "martinbtalo",
+        "href": "https://github.com/martinbtalo",
+        "source": "1 repos"
+      }
+    },
+    "fork_memix": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MEMIX-AI",
+        "href": "https://github.com/MEMIX-AI",
+        "source": "2 repos"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "soul_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul_heading",
+        "soul_verdict",
+        "soul_notable_heading",
+        "soul_notable_stack",
+        "soul_other_text"
+      ]
+    },
+    "soul_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h2"
+      }
+    },
+    "soul_verdict": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY (avg4w ≈ 9)",
+        "variant": "default"
+      }
+    },
+    "soul_notable_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 2 of 7)",
+        "level": "h3"
+      }
+    },
+    "soul_notable_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_yordle"
+      ]
+    },
+    "soul_yordle": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Yordle",
+        "href": "https://github.com/Yordle97",
+        "source": "40 repos"
+      }
+    },
+    "soul_other_text": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers: fakckks, arsitekberotot, alittlelittlepanda, mhm4life-APAI, Rewewe, elliottperl",
+        "variant": "caption"
+      }
+    },
+    "opendia_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia_heading",
+        "opendia_verdict",
+        "opendia_stargazers_text"
+      ]
+    },
+    "opendia_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h2"
+      }
+    },
+    "opendia_verdict": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY (avg4w ≈ 4)",
+        "variant": "default"
+      }
+    },
+    "opendia_stargazers_text": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers (enriched 2 of 5, none notable): loong-gif, claudedevlopers, gilisaacgabriel, MX48Live, nine0703",
+        "variant": "caption"
+      }
+    },
+    "minitor_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor_heading",
+        "minitor_verdict"
+      ]
+    },
+    "minitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor",
+        "level": "h2"
+      }
+    },
+    "minitor_verdict": {
+      "type": "Badge",
+      "props": {
+        "text": "QUIET (no activity)",
+        "variant": "default"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "source_note": {
+      "type": "Text",
+      "props": {
+        "text": "Source: GitHub events",
+        "variant": "muted"
+      }
+    }
+  }
+}
