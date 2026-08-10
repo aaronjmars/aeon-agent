@@ -1,0 +1,106 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status-heading",
+        "consolidation-text",
+        "metrics-stack",
+        "details-stack",
+        "chart-link"
+      ]
+    },
+    "status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "level": "h3"
+      }
+    },
+    "consolidation-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price up 6.5% but volume ran at just 0.21× the 7-day average — too thin to call it a rally, and buy/sell flow actually flipped bearish under the gain.",
+        "variant": "body"
+      }
+    },
+    "metrics-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001018",
+        "delta": "+6.5%",
+        "trend": "up"
+      }
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$740.6K",
+        "delta": "+3.2%",
+        "trend": "up"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$37.9K",
+        "delta": "0.21× 7d",
+        "trend": "down"
+      }
+    },
+    "details-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-buysell",
+        "stat-whales"
+      ]
+    },
+    "stat-buysell": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "101/116",
+        "delta": "0.87 ratio",
+        "trend": "down"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "5"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on Gecko Terminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
