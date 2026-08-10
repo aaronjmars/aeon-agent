@@ -311,3 +311,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-10,shiplog,claude-sonnet-5,2827,33702,4412333,114458
 2026-08-10,repo-pulse,claude-sonnet-5,2795,34864,2722298,236529
 2026-08-10,secured-watch,claude-sonnet-5,2259,7385,972082,67938
+2026-08-10,tweet-digest,claude-sonnet-5,2386,7383,1435073,44123

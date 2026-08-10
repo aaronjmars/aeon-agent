@@ -1,0 +1,111 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest"
+      },
+      "children": [
+        "heading-date",
+        "sep-1",
+        "stack-tweet1",
+        "sep-2",
+        "stack-tweet2"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-08-10",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stack-tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-theme1",
+        "tweet-card-1",
+        "link-1"
+      ]
+    },
+    "badge-theme1": {
+      "type": "Badge",
+      "props": {
+        "text": "Ecosystem momentum",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "tweet-card-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "shiplog recap — aeon and @miroshark_ both stacking stars and PRs daily over the past ten days"
+      },
+      "children": []
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2086813421807231311"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {},
+      "children": []
+    },
+    "stack-tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-theme2",
+        "tweet-card-2",
+        "link-2"
+      ]
+    },
+    "badge-theme2": {
+      "type": "Badge",
+      "props": {
+        "text": "Agent design philosophy",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "tweet-card-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "most agentic workflows start simple and pile on orchestration layer by layer until nobody can explain why the graph looks the way it does"
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2086797939435782519"
+      },
+      "children": []
+    }
+  }
+}
