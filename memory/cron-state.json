@@ -166,7 +166,7 @@
     "last_quality_score": 4
   },
   "tweet-digest": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-08-09T17:18:30Z",
     "total_runs": 54,
     "total_successes": 54,
@@ -174,7 +174,7 @@
     "consecutive_failures": 0,
     "success_rate": 1,
     "last_quality_score": 4,
-    "last_dispatch": "2026-08-09T17:13:49Z"
+    "last_dispatch": "2026-08-10T17:04:16Z"
   },
   "docs-sync": {
     "last_dispatch": "2026-07-27T09:01:18Z",
