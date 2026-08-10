@@ -1,0 +1,106 @@
+{
+  "root": "card_heartbeat",
+  "state": {},
+  "elements": {
+    "card_heartbeat": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_stalled_pr",
+        "link_pr",
+        "separator1",
+        "status_section",
+        "separator2",
+        "status_page_section"
+      ]
+    },
+    "alert_stalled_pr": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "PR #865 Stalled",
+        "message": "feat: taskmarket-delegate skill open ~37h on aeonfun/aeon, no review activity"
+      },
+      "children": []
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #865",
+        "href": "https://github.com/aeonfun/aeon/pull/865",
+        "source": "aeonfun/aeon"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fleet",
+        "text_fleet_status"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "P0 Fleet Check",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_fleet_status": {
+      "type": "Text",
+      "props": {
+        "text": "✓ Clean — all 9 enabled skills green",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "status_page_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_watch",
+        "text_status_page"
+      ]
+    },
+    "badge_watch": {
+      "type": "Badge",
+      "props": {
+        "text": "WATCH",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "text_status_page": {
+      "type": "Text",
+      "props": {
+        "text": "docs/status.md updated",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

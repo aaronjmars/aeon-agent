@@ -1,3 +1,6 @@
-⚠️ Heartbeat — 2026-08-09
+⚠️ Heartbeat
 
-🔵 MEMORY: minitor still missing SECURITY.md (HIGH, confirmed 404 at aaronjmars/minitor) — flagged repeatedly since 07-30, no PR yet. No new P0 items (repo-pulse/shiplog/changelog remain stuck since the Aug 2-4 Actions outage, unchanged, next cron tick Mon 08-10).
+🟡 STALLED: PR #865 (feat: taskmarket-delegate skill) open ~37h on aeonfun/aeon, no review activity — https://github.com/aeonfun/aeon/pull/865
+
+P0 fleet check: clean, all 9 enabled skills green.
+STATUS_PAGE=WATCH — docs/status.md updated.
