@@ -1,6 +1,4 @@
-⚠️ Heartbeat
+ℹ️ Heartbeat — 2026-08-11
 
-🟡 STALLED: PR #865 (feat: taskmarket-delegate skill) open ~37h on aeonfun/aeon, no review activity — https://github.com/aeonfun/aeon/pull/865
-
-P0 fleet check: clean, all 9 enabled skills green.
-STATUS_PAGE=WATCH — docs/status.md updated.
+🟢 P0 CLEAR — all 9 skills healthy (100% success, 0 consecutive failures)
+🔵 MEMORY: minitor SECURITY.md still missing (HIGH, confirmed 404) — unresolved, re-flagging (no action taken since 08-09)

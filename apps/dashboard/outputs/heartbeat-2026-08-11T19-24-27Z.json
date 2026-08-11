@@ -1,0 +1,61 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "2026-08-11"
+      },
+      "children": [
+        "status-box",
+        "separator",
+        "memory-alert"
+      ]
+    },
+    "status-box": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-p0",
+        "text-health"
+      ]
+    },
+    "badge-p0": {
+      "type": "Badge",
+      "props": {
+        "text": "P0 CLEAR",
+        "variant": "default"
+      },
+      "children": []
+    },
+    "text-health": {
+      "type": "Text",
+      "props": {
+        "text": "all 9 skills healthy (100% success, 0 consecutive failures)",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "memory-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "MEMORY: minitor SECURITY.md still missing",
+        "message": "HIGH priority, confirmed 404 — unresolved, re-flagging (no action taken since 08-09)",
+        "type": "warning"
+      },
+      "children": []
+    }
+  }
+}
