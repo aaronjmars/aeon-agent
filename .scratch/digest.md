@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest — 2026-08-11
-
 *Tweet Digest — 2026-08-11*
 
 *Theme: Shipped*

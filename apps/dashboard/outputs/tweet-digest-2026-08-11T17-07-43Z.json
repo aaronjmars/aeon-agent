@@ -1,0 +1,65 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-11"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-shipped",
+        "tweet-1",
+        "sep-1",
+        "heading-dist",
+        "tweet-2"
+      ]
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Shipped",
+        "level": "h3"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "an aeon agent designed a Uniswap v4 hook that adjusts fees dynamically — \"let's make those fees breathe\" — [link](https://x.com/aeonframework/status/2087181769124589960)"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-dist": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Distribution",
+        "level": "h3"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "posted a full Hacker News digest (AI/agents, infra, security, science) as a live example of an aeon agent in daily workflow use — [link](https://x.com/aeonframework/status/2086862381305540740)"
+      }
+    }
+  }
+}
