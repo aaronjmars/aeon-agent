@@ -83,7 +83,14 @@ xai-shiplog-*.json
 /*-out.json
 # Accidental embedded-repo gitlinks from docs-sync runs
 /docs-sync-work/
+/.docs-sync-work/
 /tmp-docs-sync/
+# Leading-dot scratch variants some skills stage at the repo root
+# (the "no leading dot" note above did not hold: these all leaked WITH a dot)
+/.scratch/
+/.aeon-tmp/
+/.*_tmp/
+/.tmp_*/
 # json-render staging file (canon parity)
 .pending-*.md
 apps/dashboard/outputs/.pending-*.md
