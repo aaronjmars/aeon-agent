@@ -1,0 +1,218 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon",
+        "description": "Vulnerability monitoring and remediation"
+      },
+      "children": [
+        "heading_main",
+        "summary_stack",
+        "sep1",
+        "section_new",
+        "repos_stack"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Secured by Aeon — new since last check ⭐",
+        "level": "h2"
+      }
+    },
+    "summary_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_summary",
+        "stats_row"
+      ]
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "2 more repos just got the vuln-scanner treatment.",
+        "variant": "lead"
+      }
+    },
+    "stats_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "72",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "2,144,668",
+        "delta": "+73,895",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_new": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (2)",
+        "level": "h3"
+      }
+    },
+    "repos_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "repo1_container",
+        "repo2_container"
+      ]
+    },
+    "repo1_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1_link",
+        "repo1_meta",
+        "repo1_desc"
+      ]
+    },
+    "repo1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "HKUDS/nanobot",
+        "href": "https://github.com/HKUDS/nanobot/security/advisories/GHSA-68pq-qxvf-p68w",
+        "source": "GitHub Security Advisory"
+      }
+    },
+    "repo1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo1_severity",
+        "repo1_stars",
+        "repo1_date"
+      ]
+    },
+    "repo1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "46,821★",
+        "variant": "caption"
+      }
+    },
+    "repo1_date": {
+      "type": "Text",
+      "props": {
+        "text": "fixed upstream Jul 8, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DNS-rebinding let attackers mint a WebUI gateway token and reach agent RCE (no Host/Origin check).",
+        "variant": "body"
+      }
+    },
+    "repo2_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2_link",
+        "repo2_meta",
+        "repo2_desc"
+      ]
+    },
+    "repo2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NomaDamas/k-skill",
+        "href": "https://github.com/NomaDamas/k-skill/pull/547",
+        "source": "GitHub Pull Request"
+      }
+    },
+    "repo2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo2_severity",
+        "repo2_stars",
+        "repo2_date"
+      ]
+    },
+    "repo2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM",
+        "variant": "destructive"
+      }
+    },
+    "repo2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "7,068★",
+        "variant": "caption"
+      }
+    },
+    "repo2_date": {
+      "type": "Text",
+      "props": {
+        "text": "fixed upstream Aug 8, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Dep-bump fast-uri + find-my-way to patch inherited Fastify transitive advisories.",
+        "variant": "body"
+      }
+    }
+  }
+}

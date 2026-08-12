@@ -1,5 +1,3 @@
-ℹ️ Secured by Aeon
-
 ## Secured by Aeon — new since last check ⭐
 2 more repos just got the vuln-scanner treatment. **72 repos** secured (+2) · **2,144,668★** total (+73,895)
 
