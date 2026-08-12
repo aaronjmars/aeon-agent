@@ -1,10 +1,10 @@
-ℹ️ $AEON Daily Report
+ℹ️ $AEON — CONSOLIDATING
 
 *$AEON — CONSOLIDATING*
 
-Price fell 6.3% on 0.28× normal volume — too thin to call it a real slide; buy/sell ratio actually improved to 0.92 (from 0.87).
+Price down 11.8% but volume ran at just 0.78× the 7-day average, too thin to confirm a breakdown.
 
-Price $0.00000955 (−6.3% 24h) | Liq $706.7K (−4.6%) | Vol $33.3K (0.28× 7d)
-Buys/Sells 86/93 (ratio 0.92) | Whales: 8
+Price $0.00000842 (−11.8% 24h) | Liq $666.1K (−5.7%) | Vol $69.7K (0.78× 7d)
+Buys/Sells 129/115 (ratio 1.12) | Whales: 19 (7 buy / 12 sell)
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
