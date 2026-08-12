@@ -1,0 +1,97 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest"
+      },
+      "children": [
+        "heading-date",
+        "sep1",
+        "heading-skill-drops",
+        "tweet1",
+        "tweet2",
+        "sep2",
+        "heading-growth",
+        "tweet3",
+        "tweet4",
+        "tweet5"
+      ]
+    },
+    "heading-date": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-08-12",
+        "level": "h4"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-skill-drops": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Drops",
+        "level": "h3"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "skill spotlight — monitor competitors, feed your aeon a rival's site and get a daily/weekly digest on their pricing & moves — https://x.com/aeonframework/status/2087513144696385636"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "skill spotlight — higgsfield mcp, your aeon now generates images/video/infographics, banner example included (mbma: made by my aeon) — https://x.com/aeonframework/status/2087422762495201330"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-growth": {
+      "type": "Heading",
+      "props": {
+        "text": "Growth / Shipping",
+        "level": "h3"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "youtube drop — \"you've been building AI agents wrong, here's how you should do it\" — https://x.com/aeonframework/status/2087557575633936724"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "new blog article live — https://x.com/aeonframework/status/2087531287565250900"
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "\"there is a billion dollars stuck inside your aeon agent, you just need to press the right buttons to get it out\" — https://x.com/aeonframework/status/2087302269448421608"
+      }
+    }
+  }
+}
