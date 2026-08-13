@@ -1,0 +1,90 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat — 2026-08-13"
+      },
+      "children": [
+        "alert",
+        "separator",
+        "fleet_section"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "minitor: SECURITY.md Missing (HIGH)",
+        "message": "Confirmed 404 via GitHub API. Flagged since 2026-06-25, no open PR addressing it."
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "fleet_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet_heading",
+        "fleet_grid"
+      ]
+    },
+    "fleet_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status — All Green",
+        "level": "h3"
+      }
+    },
+    "fleet_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat_failed",
+        "stat_stalled",
+        "stat_urgent",
+        "stat_enabled"
+      ]
+    },
+    "stat_failed": {
+      "type": "Stat",
+      "props": {
+        "label": "Failed/Stuck Skills",
+        "value": "0"
+      }
+    },
+    "stat_stalled": {
+      "type": "Stat",
+      "props": {
+        "label": "Stalled PRs",
+        "value": "0"
+      }
+    },
+    "stat_urgent": {
+      "type": "Stat",
+      "props": {
+        "label": "Urgent Issues",
+        "value": "0"
+      }
+    },
+    "stat_enabled": {
+      "type": "Stat",
+      "props": {
+        "label": "Enabled Skills on Schedule",
+        "value": "9"
+      }
+    }
+  }
+}
