@@ -1,12 +1,10 @@
-ℹ️ Tweet Digest
+ℹ️ Tweet Digest — 2026-08-13
 
-*Tweet Digest — 2026-08-12*
+*Tweet Digest — 2026-08-13*
 
 *Theme: Skill Drops*
-@aeonframework: skill spotlight — monitor competitors, feed your aeon a rival's site and get a daily/weekly digest on their pricing & moves — [link](https://x.com/aeonframework/status/2087513144696385636)
-@aeonframework: skill spotlight — higgsfield mcp, your aeon now generates images/video/infographics, banner example included (mbma: made by my aeon) — [link](https://x.com/aeonframework/status/2087422762495201330)
+@aeonframework: hooks series continues — NoOp, the Uniswap hook that does nothing, on purpose 🪝 — [link](https://x.com/aeonframework/status/2087902433552842892)
+@aeonframework: skill spotlight — Base-MCP, plug your agent straight into Base ⭐ — [link](https://x.com/aeonframework/status/2087810010780717239)
 
-*Theme: Growth / Shipping*
-@aeonframework: youtube drop — "you've been building AI agents wrong, here's how you should do it" — [link](https://x.com/aeonframework/status/2087557575633936724)
-@aeonframework: new blog article live — [link](https://x.com/aeonframework/status/2087531287565250900)
-@aeonframework: "there is a billion dollars stuck inside your aeon agent, you just need to press the right buttons to get it out" — [link](https://x.com/aeonframework/status/2087302269448421608)
+*Theme: Distribution*
+@aeonframework: new video — "A new way to run a Web3 Company," the $aeon model ⭐ — [link](https://x.com/aeonframework/status/2087805980536930509)

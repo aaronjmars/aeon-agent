@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-12T17:16:16Z",
+  "last_analyzed": "2026-08-13T17:07:11Z",
   "quality_score": 4,
-  "assessment": "Good — substantive output with proper logging, deduplication tracking, and concrete results (HTTP 200, 5 tweets, 2 themes, sent digest, committed logs).",
+  "assessment": "Skill executed cleanly end-to-end: fetched tweets (HTTP 200), deduped 3 new from 5 candidates against 2-day history, themed with voice matching, logged properly, notified via correct method. Substantive and well-integrated with memory/notification systems.",
   "flags": [],
   "avg_score": 3.97,
   "history": [
-    {
-      "date": "2026-07-11",
-      "score": 4
-    },
     {
       "date": "2026-07-12",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-12",
+      "score": 4
+    },
+    {
+      "date": "2026-08-13",
       "score": 4
     }
   ]
