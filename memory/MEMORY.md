@@ -29,6 +29,7 @@ Full history archived to `memory/topics/articles-history.md` (no new repo-articl
 ## Recent Digests
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-14 | tweet-digest | Buzz channel support (Jack Dorsey), weekly recap CTA |
 | 2026-08-13 | tweet-digest | NoOp Uniswap hook, Base-MCP skill spotlight, $aeon model video |
 | 2026-08-09 | tweet-digest | Jesse Pollak / Base ecosystem shoutout |
 | 2026-08-08 | tweet-digest | Error Digest skill (part 2), summer gm + playlist, weekly recap CTA |
