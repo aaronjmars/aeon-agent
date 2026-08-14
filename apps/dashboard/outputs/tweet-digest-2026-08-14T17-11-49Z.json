@@ -1,0 +1,92 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-08-14"
+      },
+      "children": [
+        "theme1-stack",
+        "separator1",
+        "theme2-stack"
+      ]
+    },
+    "theme1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme1-heading",
+        "theme1-tweet",
+        "theme1-link"
+      ]
+    },
+    "theme1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: New integration",
+        "level": "h3"
+      }
+    },
+    "theme1-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "aeon now supports Buzz, Jack Dorsey's open-source group chat/collab workspace, as a channel"
+      }
+    },
+    "theme1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2088225133529882938"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme2-heading",
+        "theme2-tweet",
+        "theme2-link"
+      ]
+    },
+    "theme2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Distribution",
+        "level": "h3"
+      }
+    },
+    "theme2-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "closes the week with a follow-and-star nudge pointing to aeon.fun"
+      }
+    },
+    "theme2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2088249693033595362"
+      }
+    }
+  }
+}
