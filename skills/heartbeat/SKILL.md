@@ -80,6 +80,8 @@ Flag these conditions:
 
 - [ ] Anything flagged in memory/MEMORY.md that needs follow-up?
 
+**Re-verify before re-flagging.** A flagged item is a claim from a past run, not ground truth — confirm it still holds before surfacing it again, or you will re-notify a stale finding every dedup window. In particular, community-health files (`SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `FUNDING.yml`) resolve from **any** of the repo root, `.github/`, or `docs/` — a 404 at `contents/SECURITY.md` alone does **not** mean the policy is missing. Check all three paths (or `gh api repos/{o}/{r}/community/profile`, whose `files.security` field resolves the location for you) before reporting one absent, and if the flag no longer holds, note the resolution in the log and treat MEMORY.md as needing a follow-up edit rather than re-notifying.
+
 #### P3 — Missing scheduled skills
 
 Read `aeon.yml` for enabled skills with schedules. Cross-reference with `memory/cron-state.json`:
