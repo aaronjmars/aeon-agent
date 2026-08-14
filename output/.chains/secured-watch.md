@@ -1,9 +1,13 @@
+Good, `.tmp-sw/` is gitignored, so it won't pollute the diff. Only `memory/logs/` and `memory/state/` changed, as expected.
+
 ## Summary
 
-Ran the `secured-watch` skill: fetched `aeon.fun/security` (HTTP 200, 72 rows parsed), diffed against the prior snapshot (2026-08-12), and found **no new or changed entries** — board holds at 72 repos / 2,144,668★, identical to last run.
+Ran `secured-watch`: fetched `aeon.fun/security` (http=200), parsed all 72 secured-repo rows, and diffed against the last-seen state (`memory/state/secured-repos.json`, previously updated 2026-08-13).
 
-Per the skill's silence rule, sent **no notification**. Files touched:
-- `memory/state/secured-repos.json` — `updated_at` advanced to 2026-08-13 (content unchanged)
-- `memory/logs/2026-08-13.md` — appended `### secured-watch` log entry
+- **Result:** `NO_CHANGE` — 72 repos (±0), 2,144,668★ total (±0). No new entries, no changed fix links/severities, none dropped.
+- **Notification:** none sent, per the skill's silence-on-no-change rule.
+- **Files modified:**
+  - `memory/state/secured-repos.json` — advanced `updated_at` to 2026-08-14 (state must advance every real run, even a quiet one).
+  - `memory/logs/2026-08-14.md` — appended a `### secured-watch` log entry.
 
-No follow-up needed; next run will pick up from this baseline.
+No follow-up actions needed; next run will pick up from this baseline.

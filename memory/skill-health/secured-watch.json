@@ -1,8 +1,8 @@
 {
   "skill": "secured-watch",
-  "last_analyzed": "2026-08-13T12:03:16Z",
+  "last_analyzed": "2026-08-14T12:04:31Z",
   "quality_score": 4,
-  "assessment": "Complete, well-documented monitoring run with proper baseline tracking and correct silence handling.",
+  "assessment": "Well-executed monitoring run with clear metrics, proper state advancement, and correct silence-on-no-change decision",
   "flags": [],
   "avg_score": 3.95,
   "history": [
@@ -80,6 +80,10 @@
     },
     {
       "date": "2026-08-13",
+      "score": 4
+    },
+    {
+      "date": "2026-08-14",
       "score": 4
     }
   ]
