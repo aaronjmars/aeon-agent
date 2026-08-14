@@ -1,0 +1,98 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — RALLYING"
+      },
+      "children": [
+        "summary-text",
+        "separator-1",
+        "price-stat",
+        "liquidity-stat",
+        "volume-stat",
+        "separator-2",
+        "buys-sells-stat",
+        "whale-text",
+        "separator-3",
+        "chart-link"
+      ]
+    },
+    "summary-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price up 9.7% to $0.00000980 on 1.4x average volume, order flow flipping net-buy (479/468, ratio 1.02 vs yesterday's 0.89).",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00000980",
+        "delta": "+9.7%",
+        "trend": "up"
+      }
+    },
+    "liquidity-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$719.8K",
+        "delta": "+4.4%",
+        "trend": "up"
+      }
+    },
+    "volume-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (7d avg)",
+        "value": "$90.1K",
+        "delta": "1.4x"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "buys-sells-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "479/468",
+        "delta": "1.02 ratio (↑ from 0.89)",
+        "trend": "up"
+      }
+    },
+    "whale-text": {
+      "type": "Text",
+      "props": {
+        "text": "Whales: 12 (6 buy / 6 sell)",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

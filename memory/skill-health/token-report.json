@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-13T06:12:16Z",
+  "last_analyzed": "2026-08-14T06:09:07Z",
   "quality_score": 4,
-  "assessment": "Substantive token analysis with multi-source data, cross-validation, computed deltas, reasoned verdict, proper state management, and clean notification delivery.",
+  "assessment": "Substantive daily report with specific metrics, multi-source verification, and proper uncertainty flagging; routine but well-executed",
   "flags": [],
   "avg_score": 4.07,
   "history": [
-    {
-      "date": "2026-07-10",
-      "score": 4
-    },
     {
       "date": "2026-07-11",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-13",
+      "score": 4
+    },
+    {
+      "date": "2026-08-14",
       "score": 4
     }
   ]
