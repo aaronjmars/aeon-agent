@@ -1,0 +1,175 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_status",
+        "text_summary",
+        "sep1",
+        "heading_metrics",
+        "stack_metrics",
+        "sep2",
+        "heading_trades",
+        "stack_trades",
+        "sep3",
+        "link_chart"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "variant": "outline"
+      }
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "Price down 9.5% but on just 0.3× the 7-day average volume — too thin to call it a slide.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Market Metrics",
+        "level": "h3"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_price",
+        "stat_liquidity",
+        "stat_volume"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00000888",
+        "delta": "−9.5%",
+        "trend": "down"
+      }
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$684.0K",
+        "delta": "−5.0%",
+        "trend": "down"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$14.4K",
+        "delta": "0.3× 7d avg",
+        "trend": "neutral"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_trades": {
+      "type": "Heading",
+      "props": {
+        "text": "Trade Activity & Whales",
+        "level": "h3"
+      }
+    },
+    "stack_trades": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_buys",
+        "stat_sells",
+        "stat_ratio",
+        "stat_whales_total",
+        "stat_whales_breakdown"
+      ]
+    },
+    "stat_buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "30"
+      }
+    },
+    "stat_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "43"
+      }
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "0.70"
+      }
+    },
+    "stat_whales_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales Active",
+        "value": "4"
+      }
+    },
+    "stat_whales_breakdown": {
+      "type": "Text",
+      "props": {
+        "text": "Whale breakdown: 0 buying, 4 selling",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
