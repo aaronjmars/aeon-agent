@@ -1,0 +1,71 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "ℹ️ Tweet Digest — 2026-08-15"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme-text",
+        "separator-1",
+        "tweets-stack"
+      ]
+    },
+    "theme-text": {
+      "type": "Text",
+      "props": {
+        "text": "Theme: Skill Spotlight — aeon-update",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweets-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "new skill spotlight, aeon-update — auto-syncs your instance straight from the official repo ⭐ — [link](https://x.com/aeonframework/status/2088653092648595819)"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "points to aeon.fun for the full skill list — [link](https://x.com/aeonframework/status/2088653096427667693)"
+      },
+      "children": []
+    }
+  }
+}

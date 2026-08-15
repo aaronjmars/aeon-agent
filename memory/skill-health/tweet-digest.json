@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-14T17:11:49Z",
+  "last_analyzed": "2026-08-15T17:03:08Z",
   "quality_score": 4,
-  "assessment": "Well-executed skill run with proper deduplication, clean API success (http=200), correct theming of results, and proper memory/git workflow—produced actionable digest output.",
+  "assessment": "Well-executed digest task: successfully fetched, deduped against prior logs, notified 2 new tweets, logged to memory, and committed appropriately.",
   "flags": [],
   "avg_score": 3.97,
   "history": [
-    {
-      "date": "2026-07-13",
-      "score": 4
-    },
     {
       "date": "2026-07-14",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-14",
+      "score": 4
+    },
+    {
+      "date": "2026-08-15",
       "score": 4
     }
   ]

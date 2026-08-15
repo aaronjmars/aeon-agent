@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest — 2026-08-15
-
 *Tweet Digest — 2026-08-15*
 
 *Theme: Skill Spotlight — aeon-update*
