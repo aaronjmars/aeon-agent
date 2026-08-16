@@ -1,19 +1,19 @@
-All changes are local file edits under `memory/` — no code changes, no PR needed for this skill (memory-flush only touches memory files).
-
 ## Summary
 
-Ran the memory-flush skill, catching up a 13-day gap (last flush was 2026-07-26; the skill itself was stuck in the Aug 2–4 GitHub Actions outage until today's cron tick).
+Ran the memory-flush skill against the full gap since last consolidation (2026-08-09 → 2026-08-16, since memory-flush runs weekly):
 
-**Promoted to MEMORY.md:**
-- New `holdings` skill (built 2026-07-30) added to the Skills Built table.
-- New lesson: a GitHub Actions spending-limit gate mimics a stuck dispatch (`action_required` + 0 jobs) rather than a code regression — confirm via `gh run list`/`gh run view`.
-- Next Priorities refreshed: docs-sync date, stars/forks counts, and a note that `repo-pulse`/`shiplog`/`changelog` are still stuck post-outage (next cron tick 08-10).
-- Fixed a stale fact: "About This Repo" named `aaronjmars/aeon`, corrected to `aeonfun/aeon`.
+**Promoted:**
+- 5 missing tweet-digest rows (08-10, 08-11, 08-12, 08-15, 08-16) into MEMORY.md's Recent Digests table
 
-**Pruned:**
-- Recent Articles table trimmed from 11 rows to 1 (no new repo-article/project-lens pieces since 06-24); 9 rows archived to `memory/topics/articles-history.md`.
-- Confirmed 0 open PRs — no Open Improvement PRs section needed.
+**Pruned (stale/resolved content):**
+- Archived 12 older Recent Digests rows (07-17 → 08-09) to a new `memory/topics/digests-history.md`
+- Removed the resolved "Stuck skills (Aug 2-4 outage)" bullet from Next Priorities — fully confirmed recovered, and the diagnostic lesson is already captured elsewhere in Lessons Learned
+- Updated a stale Lesson Learned that told skills to use a `scripts/prefetch-*.sh` cache-file workaround for auth'd curls — that pattern is now explicitly retired per CLAUDE.md; repointed it to `./secretcurl`
+- Tightened the verbose minitor and aeon Next Priorities bullets (dropped resolved historical narrative, kept actionable state)
 
-**Files changed:** `memory/MEMORY.md`, `memory/topics/articles-history.md`, `memory/logs/2026-08-09.md`. Logged the flush summary under `### memory-flush` in today's log.
+**Verified, no action needed:**
+- No open "improve:" PRs (no section to prune)
+- PR #872 (external contributor fix) closed unmerged 08-16 — no follow-up
+- No new skills built this window
 
-**Follow-up:** repo-pulse, shiplog, and changelog remain stuck since the Aug 2–4 outage — worth a manual re-dispatch if they haven't recovered by their next scheduled tick (Monday 08-10).
+**Files changed:** `memory/MEMORY.md` (72 → 66 lines, last-consolidated bumped to 2026-08-16), `memory/topics/digests-history.md` (new), `memory/logs/2026-08-16.md` (logged the flush).
