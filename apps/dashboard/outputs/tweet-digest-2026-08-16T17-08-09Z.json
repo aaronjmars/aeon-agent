@@ -1,0 +1,34 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-16",
+        "description": "Theme: Agent identity / soul system"
+      },
+      "children": [
+        "stack-tweets"
+      ]
+    },
+    "stack-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-aeon"
+      ]
+    },
+    "tweet-aeon": {
+      "type": "StoryLink",
+      "props": {
+        "title": "drops a video explainer on why your agent needs a soul, pointing at aeon's persona/voice layer",
+        "href": "https://x.com/aeonframework/status/2088906077316206752",
+        "source": "@aeonframework"
+      }
+    }
+  }
+}
