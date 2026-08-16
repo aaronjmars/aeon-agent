@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-15T06:14:49Z",
+  "last_analyzed": "2026-08-16T06:14:02Z",
   "quality_score": 4,
-  "assessment": "Substantive multi-source report with reasoned classification logic, full structured output (article + state log), OKF compliance verified, transparent about limitations.",
+  "assessment": "Substantive token report with specific metrics, clear verdict logic, and proactive strategy compliance; well-structured and useful for tracking momentum.",
   "flags": [],
   "avg_score": 4.07,
   "history": [
-    {
-      "date": "2026-07-12",
-      "score": 4
-    },
     {
       "date": "2026-07-13",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-15",
+      "score": 4
+    },
+    {
+      "date": "2026-08-16",
       "score": 4
     }
   ]
