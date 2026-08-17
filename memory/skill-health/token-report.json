@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-16T06:14:02Z",
+  "last_analyzed": "2026-08-17T06:08:41Z",
   "quality_score": 4,
-  "assessment": "Substantive token report with specific metrics, clear verdict logic, and proactive strategy compliance; well-structured and useful for tracking momentum.",
+  "assessment": "Substantive market report with specific quantified data (price deltas, liquidity, volume ratio), cross-validated across multiple sources (GeckoTerminal/DexScreener), classified per defined thresholds, with proper state logging for continuity.",
   "flags": [],
   "avg_score": 4.07,
   "history": [
-    {
-      "date": "2026-07-13",
-      "score": 4
-    },
     {
       "date": "2026-07-14",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-16",
+      "score": 4
+    },
+    {
+      "date": "2026-08-17",
       "score": 4
     }
   ]
