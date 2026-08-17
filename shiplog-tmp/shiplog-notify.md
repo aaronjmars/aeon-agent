@@ -1,5 +1,3 @@
-✅ Aeon Shiplog: Aug 10 → Aug 17
-
 aeon ⭐ shiplog — aug 10 → aug 17
 
 shipped 56 PRs across the ecosystem this window (18 merged). the bytes:

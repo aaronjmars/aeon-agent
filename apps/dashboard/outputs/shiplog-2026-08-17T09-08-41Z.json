@@ -1,0 +1,153 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Shiplog: Aug 10 → Aug 17"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_intro",
+        "stack_bullets",
+        "sep1",
+        "heading_traction",
+        "stack_stats",
+        "text_base_insights",
+        "sep2",
+        "story_link"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "shipped 56 PRs across the ecosystem this window (18 merged). the bytes:",
+        "variant": "lead"
+      }
+    },
+    "stack_bullets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "bullet_addskill",
+        "bullet_taskmarket",
+        "bullet_cve",
+        "bullet_heartbeat",
+        "bullet_discovery",
+        "text_security"
+      ]
+    },
+    "bullet_addskill": {
+      "type": "Text",
+      "props": {
+        "text": "add-skill was broken for every fork: discovery only searched 2 dirs deep, skills/<slug>/SKILL.md sits 3 deep. every one of the 74 skills in the repo was uninstallable via the CLI. fixed + verified against a real community fork (#866)."
+      }
+    },
+    "bullet_taskmarket": {
+      "type": "Text",
+      "props": {
+        "text": "taskmarket-delegate shipped: the agent can now offload low-confidence work to an agent-worker market instead of burning inference on it (#865)"
+      }
+    },
+    "bullet_cve": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-wide nanoid CVE patched same-day across 6 repos: aeon, aeon-agent, miroshark-aeon, miroshark, aeon-website + 2 side projects"
+      }
+    },
+    "bullet_heartbeat": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat stopped re-flagging its own false positive — added a re-verify step before reporting a security file \"missing\" (#174)"
+      }
+    },
+    "bullet_discovery": {
+      "type": "Text",
+      "props": {
+        "text": "discoverability blitz: ~38 \"add aeon\" PRs to awesome-lists in one day, already merged into remotion (56.5k⭐), abordage/awesome-mcp, milisp/awesome-codex-cli"
+      }
+    },
+    "text_security": {
+      "type": "Text",
+      "props": {
+        "text": "security: no external flex this window — the CVE fixes all stayed inside our own fleet",
+        "variant": "muted"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_traction": {
+      "type": "Heading",
+      "props": {
+        "text": "Traction",
+        "level": "h3"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_aeon",
+        "stat_miroshark"
+      ]
+    },
+    "stat_aeon": {
+      "type": "Stat",
+      "props": {
+        "label": "aeonfun/aeon",
+        "value": "666 ⭐",
+        "delta": "+26",
+        "trend": "up"
+      }
+    },
+    "stat_miroshark": {
+      "type": "Stat",
+      "props": {
+        "label": "miroshark",
+        "value": "1430 ⭐",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "text_base_insights": {
+      "type": "Text",
+      "props": {
+        "text": "@Base_Insights (21.9k) put @aeonframework in \"Leading\" tier, @miroshark_ in \"Early\" tier of their base ecosystem list"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "story_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Shiplog Article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-08-17.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
