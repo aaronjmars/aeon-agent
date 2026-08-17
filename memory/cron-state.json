@@ -199,8 +199,8 @@
     "last_dispatch": "2026-08-16T12:06:13Z"
   },
   "changelog": {
-    "last_dispatch": "2026-08-10T08:00:46Z",
-    "last_status": "success",
+    "last_dispatch": "2026-08-17T08:05:38Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-10T08:09:16Z",
     "total_runs": 2,
     "total_successes": 2,
@@ -210,7 +210,7 @@
     "last_quality_score": 4
   },
   "holdings": {
-    "last_status": "success",
+    "last_status": "dispatched",
     "last_success": "2026-08-10T08:03:11Z",
     "total_runs": 5,
     "total_successes": 5,
@@ -218,6 +218,6 @@
     "consecutive_failures": 0,
     "success_rate": 1,
     "last_quality_score": 4,
-    "last_dispatch": "2026-08-10T08:00:46Z"
+    "last_dispatch": "2026-08-17T08:05:38Z"
   }
 }
