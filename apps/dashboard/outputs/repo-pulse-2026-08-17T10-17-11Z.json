@@ -1,0 +1,744 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-08-17 • [SURGE]"
+      },
+      "children": [
+        "table-repos",
+        "sep-1",
+        "section-aeon",
+        "sep-2",
+        "section-soul",
+        "sep-3",
+        "section-opendia",
+        "sep-4",
+        "section-minitor"
+      ]
+    },
+    "table-repos": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "666 (+31)",
+            "238 (+14)",
+            "—",
+            "SURGE"
+          ],
+          [
+            "opendia",
+            "1911 (+4)",
+            "159 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "644 (+5)",
+            "68 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "16 (—)",
+            "4 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-aeon",
+        "badge-aeon",
+        "stat-aeon",
+        "h-aeon-forks",
+        "forks-grid"
+      ]
+    },
+    "h-aeon": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h2"
+      }
+    },
+    "badge-aeon": {
+      "type": "Badge",
+      "props": {
+        "text": "SURGE",
+        "variant": "secondary"
+      }
+    },
+    "stat-aeon": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w=7, week_stars=31 > 3×avg4w",
+        "variant": "muted"
+      }
+    },
+    "h-aeon-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks (14)",
+        "level": "h3"
+      }
+    },
+    "forks-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-pablorq",
+        "fork-cristian35s",
+        "fork-belikh",
+        "fork-robertluciu",
+        "fork-yghffhgx",
+        "fork-akshmit",
+        "fork-kdegeek",
+        "fork-evrimulgen",
+        "fork-thisless",
+        "fork-carsam2021",
+        "fork-dacode",
+        "fork-raul1st",
+        "fork-sysvhurtstop",
+        "fork-amritmirch",
+        "forks-stargazers-section"
+      ]
+    },
+    "fork-pablorq": {
+      "type": "Link",
+      "props": {
+        "label": "pablorq — Pablo ROMERO QUINTEROS · 📍 Tarragona, Spain · 7 repos",
+        "href": "https://github.com/pablorq"
+      }
+    },
+    "fork-cristian35s": {
+      "type": "Link",
+      "props": {
+        "label": "Cristian35s · 9 repos",
+        "href": "https://github.com/Cristian35s"
+      }
+    },
+    "fork-belikh": {
+      "type": "Link",
+      "props": {
+        "label": "belikh — Jupiter Belic · 📍 Australia · 🏢 Jupiter Systems · 6 repos · gay nerd from australia. into retro computing, dos, old unix, linux, python, home automation",
+        "href": "https://github.com/belikh"
+      }
+    },
+    "fork-robertluciu": {
+      "type": "Link",
+      "props": {
+        "label": "robertluciu-wq · 2 repos",
+        "href": "https://github.com/robertluciu-wq"
+      }
+    },
+    "fork-yghffhgx": {
+      "type": "Link",
+      "props": {
+        "label": "yghffhgx — Elias Neumann · 4 repos",
+        "href": "https://github.com/yghffhgx"
+      }
+    },
+    "fork-akshmit": {
+      "type": "Link",
+      "props": {
+        "label": "Akshmit · 48 repos",
+        "href": "https://github.com/Akshmit"
+      }
+    },
+    "fork-kdegeek": {
+      "type": "Link",
+      "props": {
+        "label": "kdegeek — Nate C · 63 repos",
+        "href": "https://github.com/kdegeek"
+      }
+    },
+    "fork-evrimulgen": {
+      "type": "Link",
+      "props": {
+        "label": "evrimulgen — Evrim ÜLGEN · 🏢 @evrimulgen · 2346 repos · 69 followers",
+        "href": "https://github.com/evrimulgen"
+      }
+    },
+    "fork-thisless": {
+      "type": "Link",
+      "props": {
+        "label": "thisless — x▲ᖴ丅ᗴᖇx · 🏢 DGAF · 30 repos · 26 followers · manicpixel memeboi n search of teh ever elusive tho always available #DGAF",
+        "href": "https://github.com/thisless"
+      }
+    },
+    "fork-carsam2021": {
+      "type": "Link",
+      "props": {
+        "label": "carsam2021 — Carmen Samson · 105 repos · cyber security researcher",
+        "href": "https://github.com/carsam2021"
+      }
+    },
+    "fork-dacode": {
+      "type": "Link",
+      "props": {
+        "label": "dacode-dev · 11 repos",
+        "href": "https://github.com/dacode-dev"
+      }
+    },
+    "fork-raul1st": {
+      "type": "Link",
+      "props": {
+        "label": "raul1stdigital · 1 repo",
+        "href": "https://github.com/raul1stdigital"
+      }
+    },
+    "fork-sysvhurtstop": {
+      "type": "Link",
+      "props": {
+        "label": "sysvhurtstop · 1 repo",
+        "href": "https://github.com/sysvhurtstop"
+      }
+    },
+    "fork-amritmirch": {
+      "type": "Link",
+      "props": {
+        "label": "amritmirch · 3 repos",
+        "href": "https://github.com/amritmirch"
+      }
+    },
+    "forks-stargazers-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-sg-header",
+        "sg-grid"
+      ]
+    },
+    "text-sg-header": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers (enriched 6 of 31, 0 notable):",
+        "variant": "caption"
+      }
+    },
+    "sg-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "sg-ubgdeveloper",
+        "sg-kimstitute",
+        "sg-trey",
+        "sg-unifirer",
+        "sg-simbot912",
+        "sg-stjepan",
+        "sg-jvenice",
+        "sg-monichre",
+        "sg-abenosman",
+        "sg-nilhemdot",
+        "sg-promptrotator",
+        "sg-imusman",
+        "sg-arhat",
+        "sg-lixn0",
+        "sg-juan",
+        "sg-nacke81",
+        "sg-ledawg",
+        "sg-cosmosuite",
+        "sg-a110",
+        "sg-schlos",
+        "sg-bermes",
+        "sg-rashee",
+        "sg-cian",
+        "sg-s1dc",
+        "sg-akshmit2",
+        "sg-evrim2",
+        "sg-apostolis",
+        "sg-beard",
+        "sg-thisless2",
+        "sg-supratim",
+        "sg-marr554"
+      ]
+    },
+    "sg-ubgdeveloper": {
+      "type": "Link",
+      "props": {
+        "label": "ubgdeveloper",
+        "href": "https://github.com/ubgdeveloper"
+      }
+    },
+    "sg-kimstitute": {
+      "type": "Link",
+      "props": {
+        "label": "kimstitute",
+        "href": "https://github.com/kimstitute"
+      }
+    },
+    "sg-trey": {
+      "type": "Link",
+      "props": {
+        "label": "Trey-Gaines",
+        "href": "https://github.com/Trey-Gaines"
+      }
+    },
+    "sg-unifirer": {
+      "type": "Link",
+      "props": {
+        "label": "unifirer",
+        "href": "https://github.com/unifirer"
+      }
+    },
+    "sg-simbot912": {
+      "type": "Link",
+      "props": {
+        "label": "simbot912",
+        "href": "https://github.com/simbot912"
+      }
+    },
+    "sg-stjepan": {
+      "type": "Link",
+      "props": {
+        "label": "stjepanvrbic",
+        "href": "https://github.com/stjepanvrbic"
+      }
+    },
+    "sg-jvenice": {
+      "type": "Link",
+      "props": {
+        "label": "JVenice",
+        "href": "https://github.com/JVenice"
+      }
+    },
+    "sg-monichre": {
+      "type": "Link",
+      "props": {
+        "label": "Monichre",
+        "href": "https://github.com/Monichre"
+      }
+    },
+    "sg-abenosman": {
+      "type": "Link",
+      "props": {
+        "label": "abenosman",
+        "href": "https://github.com/abenosman"
+      }
+    },
+    "sg-nilhemdot": {
+      "type": "Link",
+      "props": {
+        "label": "nilhemdot",
+        "href": "https://github.com/nilhemdot"
+      }
+    },
+    "sg-promptrotator": {
+      "type": "Link",
+      "props": {
+        "label": "promptrotator",
+        "href": "https://github.com/promptrotator"
+      }
+    },
+    "sg-imusman": {
+      "type": "Link",
+      "props": {
+        "label": "IMUSMAN590",
+        "href": "https://github.com/IMUSMAN590"
+      }
+    },
+    "sg-arhat": {
+      "type": "Link",
+      "props": {
+        "label": "arhatbhagwatkar",
+        "href": "https://github.com/arhatbhagwatkar"
+      }
+    },
+    "sg-lixn0": {
+      "type": "Link",
+      "props": {
+        "label": "lixn0",
+        "href": "https://github.com/lixn0"
+      }
+    },
+    "sg-juan": {
+      "type": "Link",
+      "props": {
+        "label": "juanmartitegui",
+        "href": "https://github.com/juanmartitegui"
+      }
+    },
+    "sg-nacke81": {
+      "type": "Link",
+      "props": {
+        "label": "nacke81",
+        "href": "https://github.com/nacke81"
+      }
+    },
+    "sg-ledawg": {
+      "type": "Link",
+      "props": {
+        "label": "le-dawg",
+        "href": "https://github.com/le-dawg"
+      }
+    },
+    "sg-cosmosuite": {
+      "type": "Link",
+      "props": {
+        "label": "cosmosuite",
+        "href": "https://github.com/cosmosuite"
+      }
+    },
+    "sg-a110": {
+      "type": "Link",
+      "props": {
+        "label": "a1102756981",
+        "href": "https://github.com/a1102756981"
+      }
+    },
+    "sg-schlos": {
+      "type": "Link",
+      "props": {
+        "label": "schlos",
+        "href": "https://github.com/schlos"
+      }
+    },
+    "sg-bermes": {
+      "type": "Link",
+      "props": {
+        "label": "bermespython",
+        "href": "https://github.com/bermespython"
+      }
+    },
+    "sg-rashee": {
+      "type": "Link",
+      "props": {
+        "label": "rashee1997",
+        "href": "https://github.com/rashee1997"
+      }
+    },
+    "sg-cian": {
+      "type": "Link",
+      "props": {
+        "label": "cian-omalley",
+        "href": "https://github.com/cian-omalley"
+      }
+    },
+    "sg-s1dc": {
+      "type": "Link",
+      "props": {
+        "label": "s1dc0des",
+        "href": "https://github.com/s1dc0des"
+      }
+    },
+    "sg-akshmit2": {
+      "type": "Link",
+      "props": {
+        "label": "Akshmit",
+        "href": "https://github.com/Akshmit"
+      }
+    },
+    "sg-evrim2": {
+      "type": "Link",
+      "props": {
+        "label": "evrimulgen",
+        "href": "https://github.com/evrimulgen"
+      }
+    },
+    "sg-apostolis": {
+      "type": "Link",
+      "props": {
+        "label": "ApostolisKala",
+        "href": "https://github.com/ApostolisKala"
+      }
+    },
+    "sg-beard": {
+      "type": "Link",
+      "props": {
+        "label": "beardthelion",
+        "href": "https://github.com/beardthelion"
+      }
+    },
+    "sg-thisless2": {
+      "type": "Link",
+      "props": {
+        "label": "thisless",
+        "href": "https://github.com/thisless"
+      }
+    },
+    "sg-supratim": {
+      "type": "Link",
+      "props": {
+        "label": "supratimsd",
+        "href": "https://github.com/supratimsd"
+      }
+    },
+    "sg-marr554": {
+      "type": "Link",
+      "props": {
+        "label": "Marr554",
+        "href": "https://github.com/Marr554"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-soul": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-soul",
+        "badge-soul",
+        "stat-soul",
+        "h-soul-sg",
+        "soul-sg-list"
+      ]
+    },
+    "h-soul": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h2"
+      }
+    },
+    "badge-soul": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "secondary"
+      }
+    },
+    "stat-soul": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w=7, ≥1 new star",
+        "variant": "muted"
+      }
+    },
+    "h-soul-sg": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers (5)",
+        "level": "h3"
+      }
+    },
+    "soul-sg-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-sg-abhishek",
+        "soul-sg-geoffrey",
+        "soul-sg-nazareth",
+        "soul-sg-nick",
+        "soul-sg-hamoon"
+      ]
+    },
+    "soul-sg-abhishek": {
+      "type": "Link",
+      "props": {
+        "label": "iabhishekbalani",
+        "href": "https://github.com/iabhishekbalani"
+      }
+    },
+    "soul-sg-geoffrey": {
+      "type": "Link",
+      "props": {
+        "label": "geoffreybyers",
+        "href": "https://github.com/geoffreybyers"
+      }
+    },
+    "soul-sg-nazareth": {
+      "type": "Link",
+      "props": {
+        "label": "nazareth6971",
+        "href": "https://github.com/nazareth6971"
+      }
+    },
+    "soul-sg-nick": {
+      "type": "Link",
+      "props": {
+        "label": "nickcavuoto",
+        "href": "https://github.com/nickcavuoto"
+      }
+    },
+    "soul-sg-hamoon": {
+      "type": "Link",
+      "props": {
+        "label": "0xhamoon",
+        "href": "https://github.com/0xhamoon"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-opendia": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-opendia",
+        "badge-opendia",
+        "stat-opendia",
+        "h-opendia-sg",
+        "opendia-sg-list"
+      ]
+    },
+    "h-opendia": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h2"
+      }
+    },
+    "badge-opendia": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "secondary"
+      }
+    },
+    "stat-opendia": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w=7, ≥1 new star",
+        "variant": "muted"
+      }
+    },
+    "h-opendia-sg": {
+      "type": "Heading",
+      "props": {
+        "text": "New stargazers (4)",
+        "level": "h3"
+      }
+    },
+    "opendia-sg-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-sg-notable-header",
+        "opendia-sg-mlunax",
+        "opendia-sg-cian",
+        "opendia-sg-smiiiles",
+        "opendia-sg-hamoon2"
+      ]
+    },
+    "opendia-sg-notable-header": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers:",
+        "variant": "caption"
+      }
+    },
+    "opendia-sg-mlunax": {
+      "type": "Link",
+      "props": {
+        "label": "mlunax — lunax · 74 repos · 40 followers · https://git.lunax.dev/lunax",
+        "href": "https://github.com/mlunax"
+      }
+    },
+    "opendia-sg-cian": {
+      "type": "Link",
+      "props": {
+        "label": "cian-omalley",
+        "href": "https://github.com/cian-omalley"
+      }
+    },
+    "opendia-sg-smiiiles": {
+      "type": "Link",
+      "props": {
+        "label": "Smiiiles",
+        "href": "https://github.com/Smiiiles"
+      }
+    },
+    "opendia-sg-hamoon2": {
+      "type": "Link",
+      "props": {
+        "label": "0xhamoon",
+        "href": "https://github.com/0xhamoon"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-minitor",
+        "badge-minitor",
+        "stat-minitor"
+      ]
+    },
+    "h-minitor": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/minitor",
+        "level": "h2"
+      }
+    },
+    "badge-minitor": {
+      "type": "Badge",
+      "props": {
+        "text": "QUIET",
+        "variant": "secondary"
+      }
+    },
+    "stat-minitor": {
+      "type": "Text",
+      "props": {
+        "text": "No activity",
+        "variant": "muted"
+      }
+    }
+  }
+}
