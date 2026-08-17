@@ -1,12 +1,11 @@
-State snapshot advanced correctly to today's board (72 repos, 2,159,466★). No `rm` needed for `tmp/sw` — it's gitignored scratch and won't be committed.
+Good — `.sw_tmp/` is gitignored, no stray untracked files. Since this run resulted in `NO_CHANGE`, no notification is sent, per the skill's explicit "silence on no change" rule.
 
 ## Summary
 
-Ran `secured-watch` for 2026-08-16:
-- Fetched `aeon.fun/security` (http=200, 227KB), parsed 72 rows successfully
-- Diffed against yesterday's state (2026-08-15, 72 repos, 2,144,668★): **no new repos, no changed entries, none dropped** — only a star-count drift (+14,798)
-- This is a `NO_CHANGE` run, so per skill rules: **no notification sent**
-- State snapshot (`memory/state/secured-repos.json`) advanced to today's totals (72 repos, 2,159,466★)
-- Logged the run under `### secured-watch` in `memory/logs/2026-08-16.md`
+Ran `secured-watch`: fetched `aeon.fun/security` (http=200), parsed all 72 rows successfully, and diffed against the prior snapshot (2026-08-16). Result: **no new repos, no changed entries, no drops** — board is unchanged at 72 repos / 2,159,466★.
 
-Files modified: `memory/state/secured-repos.json`, `memory/logs/2026-08-16.md`. No follow-up needed — next run will diff against today's snapshot.
+- Updated `memory/state/secured-repos.json` (refreshed `updated_at` to 2026-08-17; repo data unchanged)
+- Appended a `### secured-watch` entry to `memory/logs/2026-08-17.md`
+- No notification sent (per skill rules: `NO_CHANGE` runs stay silent)
+
+No follow-up needed.
