@@ -1,0 +1,85 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings — aeon"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "stack_supply",
+        "separator1",
+        "stack_changes"
+      ]
+    },
+    "stack_supply": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_holdings",
+        "stat_supply_pct"
+      ]
+    },
+    "stat_holdings": {
+      "type": "Stat",
+      "props": {
+        "label": "Holdings",
+        "value": "13.59B"
+      }
+    },
+    "stat_supply_pct": {
+      "type": "Stat",
+      "props": {
+        "label": "% of Supply",
+        "value": "13.59%"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_7d_change",
+        "badge_30d"
+      ]
+    },
+    "stat_7d_change": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "+100.08M",
+        "delta": "+0.74%",
+        "trend": "up"
+      }
+    },
+    "badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d: building",
+        "variant": "secondary"
+      }
+    }
+  }
+}
