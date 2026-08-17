@@ -8,7 +8,7 @@ permalink: /status/
 # Agent Status
 
 **Overall:** 🟢 OK
-**Updated:** 2026-08-17 19:09 UTC
+**Updated:** 2026-08-17 20:04 UTC
 **Open issues:** 0
 **Next scheduled run:** token-report at 06:00 UTC
 
@@ -26,6 +26,7 @@ _Source: `output/articles/token-report-2026-08-17.md` · verdict: CONSOLIDATING_
 
 | Skill | Last run | Status | Success rate | Consecutive failures |
 |-------|----------|--------|-------------:|---------------------:|
+| heartbeat | 2026-08-17 19:10 UTC | ✅ success | 100% | 0 |
 | tweet-digest | 2026-08-17 17:07 UTC | ✅ success | 100% | 0 |
 | secured-watch | 2026-08-17 12:11 UTC | ✅ success | 100% | 0 |
 | repo-pulse | 2026-08-17 10:18 UTC | ✅ success | 100% | 0 |
@@ -33,7 +34,6 @@ _Source: `output/articles/token-report-2026-08-17.md` · verdict: CONSOLIDATING_
 | changelog | 2026-08-17 08:11 UTC | ✅ success | 100% | 0 |
 | holdings | 2026-08-17 08:07 UTC | ✅ success | 100% | 0 |
 | token-report | 2026-08-17 06:09 UTC | ✅ success | 100% | 0 |
-| heartbeat | 2026-08-16 19:03 UTC | ✅ success | 100% | 0 |
 | memory-flush | 2026-08-16 18:04 UTC | ✅ success | 100% | 0 |
 
 ## Open issues

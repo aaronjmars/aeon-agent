@@ -1,0 +1,1 @@
+{"request_id":"run_32063707028-1","sent_at":"2026-08-17T20:05:01Z","model":"claude-sonnet-5","agent":"heartbeat","session":"32063707028-1","target_id":"anthropic/direct","status":200,"usage":{"input_tokens":2267,"cache_read_input_tokens":1355753,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":52972}}}
