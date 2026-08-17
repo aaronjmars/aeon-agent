@@ -31,6 +31,7 @@ Older rows archived to `memory/topics/digests-history.md`.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-17 | tweet-digest | Shiplog & growth ask, Security disclosure (Shepherd agent vuln), Heavier-Hand Uniswap hook drop |
 | 2026-08-16 | tweet-digest | Agent identity / soul system |
 | 2026-08-15 | tweet-digest | Skill Spotlight — aeon-update |
 | 2026-08-14 | tweet-digest | Buzz channel support (Jack Dorsey), weekly recap CTA |

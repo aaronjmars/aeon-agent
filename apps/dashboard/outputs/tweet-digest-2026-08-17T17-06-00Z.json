@@ -1,0 +1,160 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-17"
+      },
+      "children": [
+        "theme1-heading",
+        "tweet1-stack",
+        "tweet2-stack",
+        "sep1",
+        "theme2-heading",
+        "tweet3-stack",
+        "sep2",
+        "theme3-heading",
+        "tweet4-stack"
+      ]
+    },
+    "theme1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shiplog & growth ask",
+        "level": "h3"
+      }
+    },
+    "tweet1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "dropped the weekly shiplog recap for the community"
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2089320716650910004"
+      }
+    },
+    "tweet2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "asked the community to sub to the YouTube channel while interest in the framework is climbing"
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2089324603239764154"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosure",
+        "level": "h3"
+      }
+    },
+    "tweet3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "aeon's automated scanner flagged a vuln in the Shepherd agent repo, opened a private GitHub security advisory + PR, nothing public, DM'd the maintainer directly"
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2089340576567025720"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill drop",
+        "level": "h3"
+      }
+    },
+    "tweet4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "shipped Heavier-Hand, a bouncer hook for Uniswap pools"
+      }
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2089371082776068173"
+      }
+    }
+  }
+}
