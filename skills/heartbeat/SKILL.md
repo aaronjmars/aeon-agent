@@ -1,11 +1,14 @@
 ---
-type: Skill
-name: Heartbeat
-category: core
+name: heartbeat
 description: Ambient fleet-health check that surfaces anything worth attention (default), or an on-demand priority brief - the 3 things to focus on, why now, and what moved (var=brief)
-var: ""  # ""=ambient fleet check (LIVE scheduled path, unchanged); "brief"/"brief:<area>"=priority brief; any other value=ambient check focused on that area
-tags: [meta]
-requires: [RESEND_API_KEY?]
+metadata:
+  title: Heartbeat
+  category: core
+  var: ""  # ""=ambient fleet check (LIVE scheduled path, unchanged); "brief"/"brief:<area>"=priority brief; any other value=ambient check focused on that area
+  tags:
+    - meta
+  requires:
+    - RESEND_API_KEY?
 ---
 > **${var}** — selector. **Empty (default)** = the ambient fleet check — the live path a cron runs once a day; leave it empty for the scheduled run. **`brief`** = the priority brief. See the grammar below.
 
@@ -79,8 +82,6 @@ Flag these conditions:
 #### P2 — Flagged memory items
 
 - [ ] Anything flagged in memory/MEMORY.md that needs follow-up?
-
-**Re-verify before re-flagging.** A flagged item is a claim from a past run, not ground truth — confirm it still holds before surfacing it again, or you will re-notify a stale finding every dedup window. In particular, community-health files (`SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `FUNDING.yml`) resolve from **any** of the repo root, `.github/`, or `docs/` — a 404 at `contents/SECURITY.md` alone does **not** mean the policy is missing. Check all three paths (or `gh api repos/{o}/{r}/community/profile`, whose `files.security` field resolves the location for you) before reporting one absent, and if the flag no longer holds, note the resolution in the log and treat MEMORY.md as needing a follow-up edit rather than re-notifying.
 
 #### P3 — Missing scheduled skills
 
