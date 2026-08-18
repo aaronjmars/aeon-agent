@@ -1,0 +1,44 @@
+{
+  "version": "1",
+  "generated_at": "2026-08-18T21:35:00Z",
+  "skill": "operator-scorecard",
+  "title": "Operator Scorecard — 2026-08-18",
+  "spec": {
+    "type": "Stack",
+    "props": {"direction": "vertical", "gap": "md"},
+    "children": [
+      {"type": "Heading", "props": {"level": 2, "children": "Operator Scorecard — 2026-08-18"}},
+      {"type": "Alert", "props": {"variant": "destructive", "children": "DEGRADED — zero $AEON distributed this week, despite a clean fleet and a 40-star surge"}},
+      {"type": "Grid", "props": {"columns": 3, "gap": "sm"}, "children": [
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Agent health"}},
+          {"type": "Heading", "props": {"level": 3, "children": "N/A"}},
+          {"type": "Text", "props": {"children": "no skill-analytics data · 9/11 heartbeats clean"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "Stars added"}},
+          {"type": "Heading", "props": {"level": 3, "children": "+40"}},
+          {"type": "Text", "props": {"children": "14 forks · 0 new contributors"}}
+        ]}},
+        {"type": "Card", "props": {"children": [
+          {"type": "Text", "props": {"variant": "muted", "children": "$AEON distributed"}},
+          {"type": "Heading", "props": {"level": 3, "children": "$0.00"}},
+          {"type": "Text", "props": {"children": "0 recipients · tweet-allocator idle 2 weeks"}}
+        ]}}
+      ]},
+      {"type": "Heading", "props": {"level": 3, "children": "Verdicts by lane"}},
+      {"type": "Table", "props": {
+        "columns": [
+          {"key": "lane", "header": "Lane"},
+          {"key": "verdict", "header": "Verdict"},
+          {"key": "headline", "header": "Headline"}
+        ],
+        "rows": [
+          {"lane": "Agent health", "verdict": "INSUFFICIENT_DATA", "headline": "no skill-analytics article this window; heartbeat itself clean (9/11 runs, 0 P0/P1)"},
+          {"lane": "Community growth", "verdict": "OK", "headline": "aeon +31 stars/+14 forks (SURGE), 40 stars fleet-wide, 0 new contributors"},
+          {"lane": "Economic activity", "verdict": "DEGRADED", "headline": "$0.00 distributed, no tweet-allocator run this window"}
+        ]
+      }}
+    ]
+  }
+}

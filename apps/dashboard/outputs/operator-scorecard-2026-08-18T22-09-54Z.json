@@ -1,0 +1,217 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Operator Scorecard — 2026-08-18"
+      },
+      "children": [
+        "alert-degraded",
+        "sep1",
+        "health-section",
+        "sep2",
+        "growth-section",
+        "sep3",
+        "economic-section",
+        "sep4",
+        "window-info",
+        "link-full-report"
+      ]
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "DEGRADED",
+        "message": "Zero $AEON distributed this week, despite a clean fleet and a 40-star surge"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "health-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "health-heading",
+        "health-text"
+      ]
+    },
+    "health-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Agent Health",
+        "level": "h3"
+      }
+    },
+    "health-text": {
+      "type": "Text",
+      "props": {
+        "text": "No skill-analytics data this window (heartbeat clean: 9/11 runs, 0 P0/P1)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "growth-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "growth-heading",
+        "growth-grid"
+      ]
+    },
+    "growth-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Community Growth",
+        "level": "h3"
+      }
+    },
+    "growth-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-stars",
+        "stat-forks",
+        "stat-repos",
+        "stat-aeon-surge",
+        "stat-contributors"
+      ]
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars",
+        "value": "+40",
+        "trend": "up"
+      }
+    },
+    "stat-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "Forks",
+        "value": "+14",
+        "trend": "up"
+      }
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos",
+        "value": "4"
+      }
+    },
+    "stat-aeon-surge": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon (SURGE)",
+        "value": "+31/+14",
+        "trend": "up"
+      }
+    },
+    "stat-contributors": {
+      "type": "Stat",
+      "props": {
+        "label": "New Contributors",
+        "value": "0"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "economic-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "economic-heading",
+        "economic-stats",
+        "allocator-note"
+      ]
+    },
+    "economic-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Economic Activity",
+        "level": "h3"
+      }
+    },
+    "economic-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-aeon-distributed",
+        "stat-recipients"
+      ]
+    },
+    "stat-aeon-distributed": {
+      "type": "Stat",
+      "props": {
+        "label": "$AEON Distributed",
+        "value": "$0.00",
+        "trend": "down"
+      }
+    },
+    "stat-recipients": {
+      "type": "Stat",
+      "props": {
+        "label": "Recipients",
+        "value": "0"
+      }
+    },
+    "allocator-note": {
+      "type": "Text",
+      "props": {
+        "text": "Tweet-allocator idle this window",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "window-info": {
+      "type": "Text",
+      "props": {
+        "text": "Window: last 7 days",
+        "variant": "caption"
+      }
+    },
+    "link-full-report": {
+      "type": "Link",
+      "props": {
+        "label": "View full report",
+        "href": "output/articles/operator-scorecard-2026-08-18.md"
+      }
+    }
+  }
+}
