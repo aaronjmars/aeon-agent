@@ -59,7 +59,14 @@ skills:
   # --- Canon skills pulled via migration 2026-08-17 (installed, all disabled; enable per-skill) ---
   aeon-doctor: { enabled: false, schedule: "0 15 * * 1", var: "" } # weekly Mon 15:00 UTC — static config-correctness linter (silent-failure class: unquoted schedules, dup keys, unconfigured-on-disk, requires-as-list, mode typo, mcp ${VAR}, multi-line entries). read-only; notifies only on problems. var: empty=whole config | <skill>=one skill
   aeon-update: { model: "claude-opus-4-8", enabled: true, schedule: "0 11 * * 1", var: "" } # weekly Mon 11:00 UTC — pull upstream framework changes (canon) into this instance as a PR; 3-way merge, never clobbers operator config. var: empty=sync | report (dry) | repo=owner/name | reset=fork-point
-  deploy-uni-hook: { enabled: false, schedule: "workflow_dispatch", harness: "claude", model: "claude-opus-4-8", var: "" } # generate+audit+simulate+deploy a Uniswap v4 hook + test pool on any v4 chain. var: [arm:][template:dynamic|noop|skim] [chain:base-sepolia] <brief>. Dry-run by default; arm: to broadcast (needs HOOK_DEPLOYER_PRIVATE_KEY burner). Testnet default; mainnet behind arm:+explicit chain:+HOOK_MAINNET_OK=1. Opus-pinned: freeform hook-gen is hard.
+  deploy-uni-hook:
+    {
+      enabled: false,
+      schedule: "workflow_dispatch",
+      harness: "claude",
+      model: "claude-opus-4-8",
+      var: ""
+    } # generate+audit+simulate+deploy a Uniswap v4 hook + test pool on any v4 chain. var: [arm:][template:dynamic|noop|skim] [chain:base-sepolia] <brief>. Dry-run by default; arm: to broadcast (needs HOOK_DEPLOYER_PRIVATE_KEY burner). Testnet default; mainnet behind arm:+explicit chain:+HOOK_MAINNET_OK=1. Opus-pinned: freeform hook-gen is hard.
   executor-mcp: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — run a task through the Executor Cloud tool catalog (executor.sh/mcp; one MCP endpoint proxying the operator's connected integrations, per-tool allow/approve/block policies; OAuth Connect in the dashboard). var: the task
   finance-district-mcp: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — multichain non-custodial agent wallet via the Finance District MCP (keys in a TEE, server-side spend caps; OAuth Connect in the dashboard). var: empty=daily wallet brief | best USDC yield on Base | swap 5 USDC to ETH on Base | pay <x402-url> for <data>
   glim-mcp: { enabled: false, schedule: "workflow_dispatch", var: "" } # on-demand — live-data research via the glim.sh MCP (web/X/Reddit/GitHub/Amazon/YouTube; OAuth Connect in the dashboard, pay-per-call from glim balance). var: research question, append --deep for a wider sweep
