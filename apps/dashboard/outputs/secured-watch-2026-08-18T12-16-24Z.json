@@ -1,0 +1,571 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon",
+        "description": "2 more patched, 6 escalated"
+      },
+      "children": [
+        "summary_section",
+        "sep1",
+        "newly_section",
+        "sep2",
+        "updated_section"
+      ]
+    },
+    "summary_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "74",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "2,197,138",
+        "delta": "+37,672",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "newly_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "newly_title",
+        "repo_1",
+        "repo_2"
+      ]
+    },
+    "newly_title": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (2)",
+        "level": "h3"
+      }
+    },
+    "repo_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_1_header",
+        "repo_1_desc",
+        "repo_1_date"
+      ]
+    },
+    "repo_1_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_1_link",
+        "repo_1_badge",
+        "repo_1_stars"
+      ]
+    },
+    "repo_1_link": {
+      "type": "Link",
+      "props": {
+        "label": "firecrawl/pdf-inspector",
+        "href": "https://github.com/firecrawl/pdf-inspector/pull/321"
+      }
+    },
+    "repo_1_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "repo_1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "15,940★",
+        "variant": "body"
+      }
+    },
+    "repo_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Two UTF-8 char-boundary panics in a crafted PDF caused DoS crashes (CWE-248).",
+        "variant": "body"
+      }
+    },
+    "repo_1_date": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Aug 9, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_2_header",
+        "repo_2_desc",
+        "repo_2_date"
+      ]
+    },
+    "repo_2_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_2_link",
+        "repo_2_badge",
+        "repo_2_stars"
+      ]
+    },
+    "repo_2_link": {
+      "type": "Link",
+      "props": {
+        "label": "huangruiteng/loopx",
+        "href": "https://github.com/huangruiteng/loopx/security/advisories/GHSA-vx2m-gpq4-8j5q"
+      }
+    },
+    "repo_2_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "repo_2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "4,841★",
+        "variant": "body"
+      }
+    },
+    "repo_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Wildcard CORS on the status control plane exposed machine-wide paths to any web origin (CWE-942 + 346).",
+        "variant": "body"
+      }
+    },
+    "repo_2_date": {
+      "type": "Text",
+      "props": {
+        "text": "Advisory published Aug 12, 2026",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "updated_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updated_title",
+        "repo_3",
+        "repo_4",
+        "repo_5",
+        "repo_6",
+        "repo_7",
+        "repo_8"
+      ]
+    },
+    "updated_title": {
+      "type": "Heading",
+      "props": {
+        "text": "🔁 Updated fix / severity (6)",
+        "level": "h3"
+      }
+    },
+    "repo_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_3_header",
+        "repo_3_desc",
+        "repo_3_date"
+      ]
+    },
+    "repo_3_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_3_link",
+        "repo_3_badge",
+        "repo_3_stars"
+      ]
+    },
+    "repo_3_link": {
+      "type": "Link",
+      "props": {
+        "label": "HKUDS/nanobot",
+        "href": "https://github.com/HKUDS/nanobot/commit/207813d3b"
+      }
+    },
+    "repo_3_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "repo_3_stars": {
+      "type": "Text",
+      "props": {
+        "text": "47,089★",
+        "variant": "body"
+      }
+    },
+    "repo_3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "DNS-rebinding let attackers mint a WebUI gateway token and reach agent RCE (no Host/Origin check).",
+        "variant": "body"
+      }
+    },
+    "repo_3_date": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 8, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_4_header",
+        "repo_4_desc",
+        "repo_4_date"
+      ]
+    },
+    "repo_4_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_4_link",
+        "repo_4_badge",
+        "repo_4_stars"
+      ]
+    },
+    "repo_4_link": {
+      "type": "Link",
+      "props": {
+        "label": "tinyhumansai/openhuman",
+        "href": "https://github.com/tinyhumansai/openhuman/commit/b1bbc53fce"
+      }
+    },
+    "repo_4_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "repo_4_stars": {
+      "type": "Text",
+      "props": {
+        "text": "36,324★",
+        "variant": "body"
+      }
+    },
+    "repo_4_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Fetch-metadata CSRF gate on /auth/telegram closes CSRF → session implantation — our exact recommended guard, 7 days after filing (CWE-352/384).",
+        "variant": "body"
+      }
+    },
+    "repo_4_date": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream May 21, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_5_header",
+        "repo_5_desc",
+        "repo_5_date"
+      ]
+    },
+    "repo_5_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_5_link",
+        "repo_5_badge",
+        "repo_5_stars"
+      ]
+    },
+    "repo_5_link": {
+      "type": "Link",
+      "props": {
+        "label": "davila7/claude-code-templates",
+        "href": "https://github.com/davila7/claude-code-templates/commit/bc4618b0"
+      }
+    },
+    "repo_5_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "default"
+      }
+    },
+    "repo_5_stars": {
+      "type": "Text",
+      "props": {
+        "text": "30,268★",
+        "variant": "body"
+      }
+    },
+    "repo_5_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Sandbox-server host RCE + CSRF + wildcard-CORS fixed: argv-style spawn, exact-match CORS allowlist, loopback bind (CWE-78/352/942).",
+        "variant": "body"
+      }
+    },
+    "repo_5_date": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 14, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_6_header",
+        "repo_6_desc",
+        "repo_6_date"
+      ]
+    },
+    "repo_6_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_6_link",
+        "repo_6_badge",
+        "repo_6_stars"
+      ]
+    },
+    "repo_6_link": {
+      "type": "Link",
+      "props": {
+        "label": "fuma-nama/fumadocs",
+        "href": "https://github.com/fuma-nama/fumadocs/commit/6c949cb541"
+      }
+    },
+    "repo_6_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "repo_6_stars": {
+      "type": "Text",
+      "props": {
+        "text": "12,909★",
+        "variant": "body"
+      }
+    },
+    "repo_6_desc": {
+      "type": "Text",
+      "props": {
+        "text": "createProxy() open-proxy SSRF fixed: deny-by-default allowlist + per-hop redirect origin re-validation (fumadocs-openapi@11.2.2, CWE-918).",
+        "variant": "body"
+      }
+    },
+    "repo_6_date": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 16, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_7_header",
+        "repo_7_desc",
+        "repo_7_date"
+      ]
+    },
+    "repo_7_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_7_link",
+        "repo_7_badge",
+        "repo_7_stars"
+      ]
+    },
+    "repo_7_link": {
+      "type": "Link",
+      "props": {
+        "label": "TencentCloud/CubeSandbox",
+        "href": "https://github.com/TencentCloud/CubeSandbox/pull/756"
+      }
+    },
+    "repo_7_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CRITICAL",
+        "variant": "destructive"
+      }
+    },
+    "repo_7_stars": {
+      "type": "Text",
+      "props": {
+        "text": "11,168★",
+        "variant": "body"
+      }
+    },
+    "repo_7_desc": {
+      "type": "Text",
+      "props": {
+        "text": "validateHostPath() + configurable prefix allowlist closes unrestricted host-dir bind-mount → microVM escape / host-root RCE / cross-tenant (CWE-284/22/269).",
+        "variant": "body"
+      }
+    },
+    "repo_7_date": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 5, 2026",
+        "variant": "caption"
+      }
+    },
+    "repo_8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_8_header",
+        "repo_8_desc",
+        "repo_8_date"
+      ]
+    },
+    "repo_8_header": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_8_link",
+        "repo_8_badge",
+        "repo_8_stars"
+      ]
+    },
+    "repo_8_link": {
+      "type": "Link",
+      "props": {
+        "label": "music-assistant/server",
+        "href": "https://github.com/music-assistant/server/pull/4544"
+      }
+    },
+    "repo_8_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM",
+        "variant": "default"
+      }
+    },
+    "repo_8_stars": {
+      "type": "Text",
+      "props": {
+        "text": "2,956★",
+        "variant": "body"
+      }
+    },
+    "repo_8_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Removed unauth /imageproxy file-read, scoped config-secret endpoint, fixed OAuth-callback reflected XSS → session takeover (CWE-22/862/79).",
+        "variant": "body"
+      }
+    },
+    "repo_8_date": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Jul 14, 2026",
+        "variant": "caption"
+      }
+    }
+  }
+}

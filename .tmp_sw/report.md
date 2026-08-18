@@ -1,5 +1,3 @@
-ℹ️ Secured by Aeon
-
 ## Secured by Aeon — 2 more patched, 6 escalated
 **74 repos** secured (+2) · **2,197,138★** total (+37,672)
 
