@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-17T23:24:20.330251Z",
+  "generatedAt": "2026-08-18T00:31:38.031142Z",
   "generator": "eyebrow/0.4.1",
   "artifacts": [
     {
@@ -557,13 +557,9 @@
         {
           "path": "SKILL.md",
           "hash": "cbf503463049bca977bbd174fd47fdb514e8f122ac16ec54d4acb14197f372d8"
-        },
-        {
-          "path": "tests/smoke.sh",
-          "hash": "a3ac7e943a4ed22c600f3ac3e4433a1385c606b65c46de8c15e6b9967e3a07ae"
         }
       ],
-      "contentHash": "sha256-d75712098491fa9896e415bc1d4d924eab76aa02d4a9657b4879e0d9cba94afd",
+      "contentHash": "sha256-9e001f303a31d8b2aecd4794e41c8ba9dc3727345cb65ab199c06d8c5420845f",
       "discoveredFrom": "skills/skill-health/SKILL.md"
     },
     {
