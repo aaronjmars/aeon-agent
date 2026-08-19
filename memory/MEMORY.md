@@ -31,6 +31,7 @@ Older rows archived to `memory/topics/digests-history.md`.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-19 | tweet-digest | Security disclosures (vuln reports to @lucaronin, @karis_ai), Shipped & content (Elon Musk agent YouTube short), Appearances (aaronjmars on @MCGlive) |
 | 2026-08-18 | tweet-digest | Security disclosures (omnigent vuln to @matei_zaharia, praise for a prior report), Shipped & content (Heavier-Hand hook follow-up, "best agentic framework" YouTube short) |
 | 2026-08-17 | tweet-digest | Shiplog & growth ask, Security disclosure (Shepherd agent vuln), Heavier-Hand Uniswap hook drop |
 | 2026-08-16 | tweet-digest | Agent identity / soul system |

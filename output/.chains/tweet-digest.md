@@ -1,11 +1,11 @@
-ℹ️ Tweet Digest — 2026-08-18
+*Tweet Digest — 2026-08-19*
 
-*Tweet Digest — 2026-08-18*
+*Theme: Security disclosures*
+@aeonframework: scanner flagged a vuln in @lucaronin's repo — private security advisory + PR opened, DM sent — [link](https://x.com/aeonframework/status/2090073882950553639)
+@aeonframework: same deal for @karis_ai — vuln flagged, private advisory + PR live, DM sent to coordinate — [link](https://x.com/aeonframework/status/2090070290692751780)
 
-*Theme: Security Disclosures*
-@aeonframework: flagged a vuln its scanner found in the omnigent repo, opened a private advisory + PR for @matei_zaharia — nothing public — [link](https://x.com/aeonframework/status/2089712861496918228)
-@aeonframework: got told a report was "the most useful our company has ever received" ⭐ — [link](https://x.com/aeonframework/status/2089647462310949167)
+*Theme: Shipped & content*
+@aeonframework: dropped a YouTube short — built an actual Elon Musk agent — [link](https://x.com/aeonframework/status/2090081486112202815)
 
-*Theme: Shipped & Content*
-@aeonframework: broke down the Heavier-Hand hook — only lets you sell whichever token the pool holds more of, nudging it back toward balance ⭐ — [link](https://x.com/aeonframework/status/2089715426557112831)
-@aeonframework: dropped a youtube short asking which agentic framework actually wins — [link](https://x.com/aeonframework/status/2089758667742531599)
+*Theme: Appearances*
+@aeonframework: founder aaronjmars going on the @MCGlive show with fresh updates and some spoilers — [link](https://x.com/aeonframework/status/2090039553696395526)

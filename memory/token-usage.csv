@@ -356,3 +356,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-18,operator-scorecard,claude-sonnet-5,2634,17073,2193622,82980
 2026-08-19,token-report,claude-sonnet-5,2769,15608,2069831,66368
 2026-08-19,secured-watch,claude-sonnet-5,2352,6081,719996,38400
+2026-08-19,tweet-digest,claude-sonnet-5,2499,7608,1216213,43003

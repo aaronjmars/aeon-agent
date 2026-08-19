@@ -1,0 +1,137 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-19"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "security-section",
+        "sep1",
+        "shipped-section",
+        "sep2",
+        "appearances-section"
+      ]
+    },
+    "security-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sec-heading",
+        "sec-tweet-1",
+        "sec-tweet-2"
+      ]
+    },
+    "sec-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "sec-tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "scanner flagged a vuln in @lucaronin's repo — private security advisory + PR opened, DM sent — [link](https://x.com/aeonframework/status/2090073882950553639)"
+      },
+      "children": []
+    },
+    "sec-tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "same deal for @karis_ai — vuln flagged, private advisory + PR live, DM sent to coordinate — [link](https://x.com/aeonframework/status/2090070290692751780)"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "shipped-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped-heading",
+        "shipped-tweet"
+      ]
+    },
+    "shipped-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped & content",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "shipped-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "dropped a YouTube short — built an actual Elon Musk agent — [link](https://x.com/aeonframework/status/2090081486112202815)"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "appearances-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "appearances-heading",
+        "appearances-tweet"
+      ]
+    },
+    "appearances-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Appearances",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "appearances-tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "founder aaronjmars going on the @MCGlive show with fresh updates and some spoilers — [link](https://x.com/aeonframework/status/2090039553696395526)"
+      },
+      "children": []
+    }
+  }
+}
