@@ -1,10 +1,10 @@
-ℹ️ $AEON Token Report
+ℹ️ AEON Token Report — 2026-08-19
 
-*$AEON — CONSOLIDATING*
+*$AEON — SLIDING*
 
-AEON gave back most of yesterday's 42.1% spike, falling 15.7% to $0.00001143 — but volume is only 1.4× the 7d average, short of the 2.0× breakdown bar.
+Price fell 7.3% but volume is only 1.2× the 7d average — under the 2.0× bar for a confirmed breakdown, and buyers actually outnumbered sellers (138/99).
 
-Price $0.00001143 (-15.7% 24h) | Liq $795.4K (-9.8%) | Vol $72.5K (1.4× 7d)
-Buys/Sells 168/164 (ratio 1.02) | Whales: 14
+Price $0.00001060 (-7.3% 24h) | Liq $759.2K (-4.6%) | Vol $71.5K (1.2× 7d)
+Buys/Sells 138/99 (ratio 1.39) | Whales: 10 (4 buy/6 sell)
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4

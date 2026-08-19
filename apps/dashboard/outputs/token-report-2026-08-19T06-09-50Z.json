@@ -1,0 +1,95 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report — 2026-08-19"
+      },
+      "children": [
+        "status_badge",
+        "analysis_text",
+        "metrics_stack",
+        "chart_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$AEON — SLIDING",
+        "variant": "warning"
+      }
+    },
+    "analysis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Price fell 7.3% but volume is only 1.2× the 7d average — under the 2.0× bar for a confirmed breakdown, and buyers actually outnumbered sellers (138/99)."
+      }
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liquidity_stat",
+        "volume_stat",
+        "buys_sells_stat",
+        "whales_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001060",
+        "delta": "-7.3% (24h)",
+        "trend": "down"
+      }
+    },
+    "liquidity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$759.2K",
+        "delta": "-4.6%",
+        "trend": "down"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$71.5K",
+        "delta": "1.2× 7d avg"
+      }
+    },
+    "buys_sells_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "138/99",
+        "delta": "ratio 1.39"
+      }
+    },
+    "whales_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "10",
+        "delta": "4 buy / 6 sell"
+      }
+    },
+    "chart_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GeckoTerminal Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    }
+  }
+}
