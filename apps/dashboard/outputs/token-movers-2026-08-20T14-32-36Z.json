@@ -1,0 +1,23 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "token-movers"
+      },
+      "children": [
+        "alert"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "deep-dive",
+        "message": "Want a deep-dive report on a mover? Reply with a ticker or contract.",
+        "type": "info"
+      }
+    }
+  }
+}
