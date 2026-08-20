@@ -1,0 +1,332 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — 2026-08-20"
+      },
+      "children": [
+        "verdict-section",
+        "sep-1",
+        "metrics-section",
+        "sep-2",
+        "trend-section",
+        "sep-3",
+        "what-changed-section",
+        "sep-4",
+        "social-section",
+        "sep-5",
+        "context-section",
+        "sep-6",
+        "footer-section"
+      ]
+    },
+    "verdict-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "verdict-badge",
+        "verdict-text"
+      ]
+    },
+    "verdict-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "BREAKOUT",
+        "variant": "default"
+      }
+    },
+    "verdict-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price +46.3% in 24h on 2.1× average volume, liquidity up 32.7%.",
+        "variant": "lead"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "metrics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics-heading",
+        "table-24h"
+      ]
+    },
+    "metrics-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "24h at a glance",
+        "level": "h2"
+      }
+    },
+    "table-24h": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Metric",
+          "Now",
+          "24h Δ",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "Price",
+            "$0.00001550",
+            "+46.3%",
+            "—"
+          ],
+          [
+            "Liquidity",
+            "$1,007.5K",
+            "+32.7%",
+            "—"
+          ],
+          [
+            "Volume (24h)",
+            "$121.3K",
+            "—",
+            "2.1×"
+          ],
+          [
+            "Buys / Sells",
+            "255 / 217",
+            "ratio 1.18 (yest 1.39)",
+            "—"
+          ],
+          [
+            "Whale trades (≥$1k)",
+            "11",
+            "—",
+            "—"
+          ],
+          [
+            "FDV",
+            "$1.55M",
+            "—",
+            "—"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "trend-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trend-heading",
+        "trend-container"
+      ]
+    },
+    "trend-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trend",
+        "level": "h2"
+      }
+    },
+    "trend-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "trend-7d",
+        "trend-30d"
+      ]
+    },
+    "trend-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+73.5%",
+        "trend": "up"
+      }
+    },
+    "trend-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+91.5%",
+        "trend": "up"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "what-changed-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "what-changed-heading",
+        "what-changed-text"
+      ]
+    },
+    "what-changed-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h2"
+      }
+    },
+    "what-changed-text": {
+      "type": "Text",
+      "props": {
+        "text": "AEON broke out, gaining 46.3% in 24h on 2.1× average daily volume — clearing both BREAKOUT thresholds. Liquidity in the aeon/WETH pool grew 32.7% to $1.01M ($248.4K added) as price climbed. Whale activity was two-sided: the largest single trade was a $5.94K sell at $0.0000130 (16:42 UTC yesterday), followed by two buys — $3.06K at $0.0000152 (05:58 UTC) and $2.96K at $0.0000151 (21:30 UTC) — as buyers absorbed the early sell pressure and pushed price higher through the session. Buy/sell ratio eased slightly to 1.18 from yesterday's 1.39, but volume more than doubling the weekly average confirms this wasn't a thin-book move.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "social-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "social-heading",
+        "social-intro",
+        "tweet-1",
+        "tweet-2",
+        "tweet-3"
+      ]
+    },
+    "social-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Social Pulse",
+        "level": "h2"
+      }
+    },
+    "social-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Conversation is thin but on-theme — a trader shoutout and a founder interview recap are doing the work, not volume of chatter.",
+        "variant": "body"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "LyvoCrypto",
+        "text": "Highlights Ansem's positive Pump.fun callout on the $AEON contract. (3.8K views)",
+        "likes": 46
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "MCGlive",
+        "text": "Recaps an in-depth interview with @aeonframework covering the agent revenue model and Base ecosystem roadmap. (3K views)",
+        "likes": 17,
+        "retweets": 4
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "LyvoCrypto",
+        "text": "Chart take — $AEON \"coiled/bidded,\" tied to an upcoming Base utility narrative. (5.4K views)",
+        "likes": 42
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "context-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "context-heading",
+        "context-text"
+      ]
+    },
+    "context-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Context",
+        "level": "h2"
+      }
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "The move lines up with two real signals in the last 24h: a Pump.fun callout from trader Ansem on the $AEON contract, and an @aeonframework founder interview with @MCGlive covering the agent revenue model and Base roadmap.",
+        "variant": "body"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "footer-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "footer-chart-link",
+        "footer-contract",
+        "footer-sources",
+        "footer-chart-url"
+      ]
+    },
+    "footer-chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart: GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    },
+    "footer-contract": {
+      "type": "Text",
+      "props": {
+        "text": "Contract: 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | Chain: Base",
+        "variant": "caption"
+      }
+    },
+    "footer-sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: gt=ok · ds=ok · xai=ok · treasury=skip",
+        "variant": "caption"
+      }
+    },
+    "footer-chart-url": {
+      "type": "Text",
+      "props": {
+        "text": "🔗 https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "variant": "caption"
+      }
+    }
+  }
+}

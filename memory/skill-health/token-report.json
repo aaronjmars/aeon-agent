@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-19T06:09:50Z",
-  "quality_score": 4,
-  "assessment": "Substantive market analysis with cross-verified data, clear verdict, and actionable insights.",
+  "last_analyzed": "2026-08-20T06:10:28Z",
+  "quality_score": 5,
+  "assessment": "Excellent — comprehensive, well-sourced report with specific metrics, clear verdict tied to real signals, and transparent methodology",
   "flags": [],
-  "avg_score": 4.07,
+  "avg_score": 4.1,
   "history": [
-    {
-      "date": "2026-07-16",
-      "score": 4
-    },
     {
       "date": "2026-07-17",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-19",
       "score": 4
+    },
+    {
+      "date": "2026-08-20",
+      "score": 5
     }
   ]
 }

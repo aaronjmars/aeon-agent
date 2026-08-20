@@ -1,5 +1,3 @@
-✅ $AEON — BREAKOUT
-
 # $AEON — 2026-08-20
 
 **Verdict:** BREAKOUT — price +46.3% in 24h on 2.1× average volume, liquidity up 32.7%.
@@ -35,5 +33,3 @@ The move lines up with two real signals in the last 24h: a Pump.fun callout from
 *Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4*
 *Contract: 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | Chain: Base*
 *Sources: gt=ok · ds=ok · xai=ok · treasury=skip*
-
-🔗 https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
