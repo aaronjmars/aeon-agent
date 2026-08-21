@@ -1,8 +1,8 @@
 {
   "skill": "secured-watch",
-  "last_analyzed": "2026-08-20T12:06:51Z",
+  "last_analyzed": "2026-08-21T12:06:41Z",
   "quality_score": 4,
-  "assessment": "Well-structured monitoring run—fetched live data, compared against prior state with specific metrics (74 repos, 0 changes), maintained state properly, followed protocol (silence rule, logging).",
+  "assessment": "Solid monitoring run—verified data, correct methodology, honest baseline for future diffs.",
   "flags": [],
   "avg_score": 3.96,
   "history": [
@@ -108,6 +108,10 @@
     },
     {
       "date": "2026-08-20",
+      "score": 4
+    },
+    {
+      "date": "2026-08-21",
       "score": 4
     }
   ]

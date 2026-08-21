@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-20",
+  "updated_at": "2026-08-21",
   "total_repos": 74,
-  "total_stars": 2197138,
+  "total_stars": 2198435,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -35,7 +35,7 @@
     },
     "koala73/worldmonitor": {
       "severity": "HIGH",
-      "stars": 82549,
+      "stars": 83364,
       "fix_url": "https://github.com/koala73/worldmonitor/pull/5477",
       "note": "Bump sharp to &gt;=0.35.0 in blog-site to patch four inherited libvips CVEs (GHSA-f88m-g3jw-g9cj). (fix merged Aug 1, 2026)"
     },
@@ -131,7 +131,7 @@
     },
     "HKUDS/Vibe-Trading": {
       "severity": "MEDIUM",
-      "stars": 31064,
+      "stars": 31319,
       "fix_url": "https://github.com/HKUDS/Vibe-Trading/pull/390",
       "note": "Bump Pillow + langchain to patch dependency CVEs. (fix merged Jul 5, 2026)"
     },
@@ -227,7 +227,7 @@
     },
     "cocoindex-io/cocoindex": {
       "severity": "MEDIUM",
-      "stars": 11333,
+      "stars": 11369,
       "fix_url": "https://github.com/cocoindex-io/cocoindex/pull/1947",
       "note": "Validate SQL identifiers in the postgres/sqlite connectors. (fix merged Jul 26, 2026)"
     },
@@ -263,7 +263,7 @@
     },
     "usekaneo/kaneo": {
       "severity": "HIGH",
-      "stars": 8334,
+      "stars": 8393,
       "fix_url": "https://github.com/usekaneo/kaneo/pull/1457",
       "note": "Fixed a Gitea-token leak + SSRF among 6 code findings (release 2.13.0); also bumped next to 15.5.21 for 8 disclosed advisories incl. 3 HIGH SSRF/DoS. (fixed upstream Aug 5, 2026)"
     },
@@ -287,7 +287,7 @@
     },
     "katanemo/plano": {
       "severity": "HIGH+MEDIUM",
-      "stars": 6999,
+      "stars": 7006,
       "fix_url": "https://github.com/katanemo/plano/pull/1001",
       "note": "Dep-bump serde_with, tokio-postgres, turbo, undici, and next to patch CVEs across the Rust and JS stacks. (fix merged Jul 27, 2026)"
     },
@@ -395,7 +395,7 @@
     },
     "makecindy/cindy": {
       "severity": "HIGH",
-      "stars": 2103,
+      "stars": 2228,
       "fix_url": "https://github.com/makecindy/cindy/pull/1116",
       "note": "Pinned builder-util-runtime to &gt;=9.7.0, patching an Electron auto-updater dependency vulnerability (GHSA-p2f4-r6v6-j797). (fix merged Jul 31, 2026)"
     },
