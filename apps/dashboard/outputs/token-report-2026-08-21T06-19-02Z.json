@@ -1,0 +1,118 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "badge_status",
+        "text_description",
+        "separator_1",
+        "stack_stats",
+        "separator_2",
+        "stack_metrics",
+        "link_chart"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "SLIDING",
+        "variant": "destructive"
+      }
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "Price gave back a chunk of yesterday's breakout — sellers took control on still-elevated volume.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liquidity",
+        "stat_volume"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.0000140",
+        "delta": "-9.6%",
+        "trend": "down"
+      }
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$980.7K",
+        "delta": "-2.7%",
+        "trend": "down"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$114.1K",
+        "delta": "1.8× 7d avg",
+        "trend": "up"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_trades",
+        "stat_whales"
+      ]
+    },
+    "text_trades": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 154/216 (ratio 0.71)",
+        "variant": "caption"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Addresses",
+        "value": "30"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

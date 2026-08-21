@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-20T06:10:28Z",
-  "quality_score": 5,
-  "assessment": "Excellent — comprehensive, well-sourced report with specific metrics, clear verdict tied to real signals, and transparent methodology",
+  "last_analyzed": "2026-08-21T06:19:02Z",
+  "quality_score": 4,
+  "assessment": "Substantive, well-sourced token report with specific verifiable metrics and honest data-gap transparency; directly serves strategy priority of tracking $AEON momentum.",
   "flags": [],
   "avg_score": 4.1,
   "history": [
-    {
-      "date": "2026-07-17",
-      "score": 4
-    },
     {
       "date": "2026-07-18",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-20",
       "score": 5
+    },
+    {
+      "date": "2026-08-21",
+      "score": 4
     }
   ]
 }
