@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest — 2026-08-21
-
 *Tweet Digest — 2026-08-21*
 
 *Theme: Skill Drops*
