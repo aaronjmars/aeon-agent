@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest — 2026-08-22
-
 *Tweet Digest — 2026-08-22*
 
 *Theme: Skill Drop — Spend Watch*

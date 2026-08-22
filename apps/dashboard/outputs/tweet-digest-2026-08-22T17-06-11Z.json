@@ -1,0 +1,35 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-22",
+        "description": "Skill Drop — Spend Watch"
+      },
+      "children": [
+        "tweet-1",
+        "tweet-2"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "new Spend Watch skill — wire railway/vercel/github to your aeon agent, get a spend report + tips to kill dead subscriptions 💸 — [link](https://x.com/aeonframework/status/2091063958518038943)"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "follow-up — more skills like this live at aeon.fun — [link](https://x.com/aeonframework/status/2091063961349243073)"
+      },
+      "children": []
+    }
+  }
+}
