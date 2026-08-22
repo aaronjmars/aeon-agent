@@ -1,0 +1,108 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report"
+      },
+      "children": [
+        "badge-breakout",
+        "text-summary",
+        "sep-1",
+        "grid-metrics",
+        "sep-2",
+        "link-chart"
+      ]
+    },
+    "badge-breakout": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ BREAKOUT",
+        "variant": "success"
+      }
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "Price +110.3% in 24h on 17.0x average volume — broke out 20:00 UTC 08-21, peaked near $0.0000415, now $0.0000295.",
+        "variant": "body"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "grid-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume",
+        "stat-buys-sells",
+        "stat-whales"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.0000295",
+        "delta": "+110.3%",
+        "trend": "up"
+      }
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.53M",
+        "delta": "+56.1%",
+        "trend": "up"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (7d avg)",
+        "value": "$1.24M",
+        "delta": "17.0x"
+      }
+    },
+    "stat-buys-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys / Sells",
+        "value": "1630 / 1119",
+        "delta": "1.46x ratio"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Holders",
+        "value": "43"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
