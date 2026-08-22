@@ -55,7 +55,7 @@ the *next* run onward. Never emit a wall of 58 "new" repos on the first run.
 ## Steps
 
 1. **Fetch + parse + diff deterministically.** The board is server-rendered HTML; each
-   secured repo is an `<a class="page_row…">` whose `aria-label` reads
+   secured repo is an `<a>` whose `aria-label` reads
    `owner/repo - <severity> severity, <N> stars` (severity may be compound, e.g.
    `HIGH+MEDIUM`, `HIGH×2`), with the fix link in `href` and the fix description + date
    in `title`. The separator before the severity is a **literal ` - ` (spaces
@@ -77,10 +77,12 @@ the *next* run onward. Never emit a wall of 58 "new" repos on the first run.
    html = open('/tmp/sw/security.html', encoding='utf-8', errors='replace').read()
 
    # --- parse every secured-repo row ---
+   # Key off the stable aria-label shape, NOT the CSS class: the row <a>'s class
+   # carries a rotating build hash (page_row__xxxxx, page-module__xxxxx__row, ...)
+   # that changes on every site rebuild. Split on each anchor, keep the ones whose
+   # aria-label matches a secured-repo row.
    rows = {}
-   for c in re.split(r'(?=<a class="page_row)', html):
-       if not c.startswith('<a class="page_row'):
-           continue
+   for c in re.split(r'(?=<a\b)', html):
        al = re.search(r'aria-label="(.+?) - (.+?) severity, ([\d,]+) stars', c)
        if not al:
            continue
@@ -204,9 +206,11 @@ the *next* run onward. Never emit a wall of 58 "new" repos on the first run.
 - **Advance state every real run** (not `dry-run`), even a quiet one — otherwise the
   next run re-reports the same additions. The one exception: on `PARSE_EMPTY`, leave
   state untouched.
-- The `page_row` class carries a build-hash suffix (`page_row__xxxxx`); match the
-  `page_row` prefix, not the full class. The ` - <severity> severity, <N> stars`
-  aria-label shape is content-driven and stable — key the parse off it.
+- **Parse by aria-label, never by class.** The row `<a>`'s CSS-module class carries a
+  rotating build hash and its whole shape changes across site rebuilds (it has been
+  `page_row__xxxxx` and `page-module__xxxxx__row`), so a class-based selector silently
+  drifts to 0 rows. The ` - <severity> severity, <N> stars` aria-label shape is
+  content-driven and stable - match every `<a>` and keep the ones whose aria-label fits.
 - Cadence-agnostic: the window is always "since last run", so the `aeon.yml` schedule
   alone (default every 2 days) decides frequency. Don't hardcode a day count.
 
