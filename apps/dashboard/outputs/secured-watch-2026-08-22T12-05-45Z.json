@@ -1,0 +1,89 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "secured-watch",
+        "description": "Security endpoint parsing"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "result-row",
+        "sep1",
+        "css-alert",
+        "sep2",
+        "state-text"
+      ]
+    },
+    "result-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "rows-stat",
+        "url-link",
+        "http-badge"
+      ]
+    },
+    "rows-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Rows parsed",
+        "value": "0"
+      }
+    },
+    "url-link": {
+      "type": "Link",
+      "props": {
+        "label": "aeon.fun/security",
+        "href": "https://aeon.fun/security"
+      }
+    },
+    "http-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "http=200",
+        "variant": "default"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "css-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "CSS module class renamed",
+        "message": "page_row__xxxxx → page-module__eEUUaa__row. Selector needs a look.",
+        "type": "warning"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "state-text": {
+      "type": "Text",
+      "props": {
+        "text": "State left untouched"
+      }
+    }
+  }
+}
