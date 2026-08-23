@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-22T17:06:11Z",
-  "quality_score": 3,
-  "assessment": "Well-executed monitoring task with clean dedup logic and proper logging; strategically low-impact—tracking momentum via tweet digest is secondary to the north-star of shipping code, ecosystem growth, and fork-ability.",
+  "last_analyzed": "2026-08-23T17:06:35Z",
+  "quality_score": 4,
+  "assessment": "Substantive routine digest with verifiable specifics, proper dedup, and clean execution",
   "flags": [],
   "avg_score": 3.93,
   "history": [
-    {
-      "date": "2026-07-20",
-      "score": 4
-    },
     {
       "date": "2026-07-21",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-22",
       "score": 3
+    },
+    {
+      "date": "2026-08-23",
+      "score": 4
     }
   ]
 }

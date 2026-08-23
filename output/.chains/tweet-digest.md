@@ -1,7 +1,9 @@
-ℹ️ Tweet Digest — 2026-08-22
+ℹ️ Tweet Digest — 2026-08-23
 
-*Tweet Digest — 2026-08-22*
+*Tweet Digest — 2026-08-23*
 
-*Theme: Skill Drop — Spend Watch*
-@aeonframework: new Spend Watch skill — wire railway/vercel/github to your aeon agent, get a spend report + tips to kill dead subscriptions 💸 — [link](https://x.com/aeonframework/status/2091063958518038943)
-@aeonframework: follow-up — more skills like this live at aeon.fun — [link](https://x.com/aeonframework/status/2091063961349243073)
+*Theme: Skill Drop*
+@aeonframework: new "Weekly Card Run" skill spotlight — agents can now send a weekly report on running skills + token consumption — [link](https://x.com/aeonframework/status/2091457045660590251)
+
+*Theme: Growth*
+@aeonframework: "welcome back to aeon" — growth recap + invite to stick around — [link](https://x.com/aeonframework/status/2091299567253799221)
