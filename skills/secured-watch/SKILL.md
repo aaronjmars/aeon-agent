@@ -83,12 +83,20 @@ the *next* run onward. Never emit a wall of 58 "new" repos on the first run.
    # aria-label matches a secured-repo row.
    rows = {}
    for c in re.split(r'(?=<a\b)', html):
-       al = re.search(r'aria-label="(.+?) - (.+?) severity, ([\d,]+) stars', c)
+       # Groups are bounded to an owner/repo shape and an ALLCAPS severity token, not `.+?`:
+       # the page's last literal <a> (the footer GitHub link) has no further <a\b> after it,
+       # so its "chunk" runs to EOF and swallows the trailing Next.js RSC hydration payload
+       # (a JSON re-serialization of the same rows). An unbounded `.+?` will happily match
+       # across that whole tail and stitch together a fake "new" repo out of unrelated text.
+       al = re.search(r'aria-label="([\w.-]+/[\w.-]+) - ([A-Z][A-Z0-9+×]*) severity, ([\d,]+) stars', c)
        if not al:
            continue
        href = (re.search(r'href="([^"]+)"', c) or [None, None])[1]
        note = (re.search(r'title="([^"]*)"', c) or [None, ''])[1]
        repo, sev, stars = al.group(1).strip(), al.group(2).strip(), int(al.group(3).replace(',', ''))
+       # A real row's fix link is always an external GitHub/advisory URL, never same-site nav.
+       if not href or href.startswith('https://www.aeon.fun') or href.startswith('https://x.com') or href.startswith('/'):
+           continue
        rows[repo] = {"severity": sev, "stars": stars, "fix_url": href, "note": note}
 
    # --- resilience: if the page structure changed, don't report "nothing new" ---
@@ -211,6 +219,15 @@ the *next* run onward. Never emit a wall of 58 "new" repos on the first run.
   `page_row__xxxxx` and `page-module__xxxxx__row`), so a class-based selector silently
   drifts to 0 rows. The ` - <severity> severity, <N> stars` aria-label shape is
   content-driven and stable - match every `<a>` and keep the ones whose aria-label fits.
+- **Bound the aria-label capture groups, don't use `.+?`.** The footer's GitHub-link `<a>`
+  is the last literal `<a` tag before `</body>`, so its per-`<a>` chunk (from `re.split`)
+  runs to EOF and absorbs the trailing Next.js RSC hydration payload — a JSON
+  re-serialization of the whole page, including every row's aria-label again. An unbounded
+  `(.+?) - (.+?) severity` will cheerfully span from the footer's own aria-label across that
+  entire tail and stitch together a fake "new" repo out of unrelated page chrome + JSON. Keep
+  the repo group anchored to an `owner/repo` shape (`[\w.-]+/[\w.-]+`) and the severity group
+  to `[A-Z][A-Z0-9+×]*`, and reject any match whose `href` isn't an external fix link (same-site
+  `aeon.fun`/`x.com`/relative hrefs are never real fix URLs).
 - Cadence-agnostic: the window is always "since last run", so the `aeon.yml` schedule
   alone (default every 2 days) decides frequency. Don't hardcode a day count.
 
