@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21",
+  "updated_at": "2026-08-23",
   "total_repos": 74,
   "total_stars": 2198435,
   "repos": {
@@ -109,7 +109,7 @@
       "severity": "CRITICAL+HIGH",
       "stars": 39207,
       "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
-      "note": "Integer-truncation heap overflow in zstd artifact decompression (CWE-681/787) \u2014 fixed in v0.9.0. (fixed upstream Jul 7, 2026)"
+      "note": "Integer-truncation heap overflow in zstd artifact decompression (CWE-681/787) - fixed in v0.9.0. (fixed upstream Jul 7, 2026)"
     },
     "lfnovo/open-notebook": {
       "severity": "MEDIUM",
@@ -127,7 +127,7 @@
       "severity": "HIGH",
       "stars": 36324,
       "fix_url": "https://github.com/tinyhumansai/openhuman/commit/b1bbc53fce",
-      "note": "Fetch-metadata CSRF gate on /auth/telegram closes CSRF \u2192 session implantation \u2014 our exact recommended guard, 7 days after filing (CWE-352/384). (fixed upstream May 21, 2026)"
+      "note": "Fetch-metadata CSRF gate on /auth/telegram closes CSRF \u2192 session implantation - our exact recommended guard, 7 days after filing (CWE-352/384). (fixed upstream May 21, 2026)"
     },
     "HKUDS/Vibe-Trading": {
       "severity": "MEDIUM",
@@ -175,7 +175,7 @@
       "severity": "HIGH",
       "stars": 25463,
       "fix_url": "https://hackerone.com/x",
-      "note": "Argument injection in the plugin-marketplace git clone/fetch path \u2014 --upload-pack + file:// allows host RCE before any plugin is staged (CWE-88/78). (fixed upstream Jul 16, 2026)"
+      "note": "Argument injection in the plugin-marketplace git clone/fetch path - --upload-pack + file:// allows host RCE before any plugin is staged (CWE-88/78). (fixed upstream Jul 16, 2026)"
     },
     "HKUDS/AI-Trader": {
       "severity": "HIGH",
@@ -223,7 +223,7 @@
       "severity": "HIGH",
       "stars": 12729,
       "fix_url": "https://github.com/InsForge/InsForge/pull/1759",
-      "note": "Dep-bump multer \u22652.2.0 and nodemailer \u22659.0.3 \u2014 closes DoS (GHSA-72gw), CRLF injection (GHSA-268h), and OAuth TLS advisories. (fixed upstream Jul 20, 2026)"
+      "note": "Dep-bump multer \u22652.2.0 and nodemailer \u22659.0.3 - closes DoS (GHSA-72gw), CRLF injection (GHSA-268h), and OAuth TLS advisories. (fixed upstream Jul 20, 2026)"
     },
     "cocoindex-io/cocoindex": {
       "severity": "MEDIUM",
@@ -253,7 +253,7 @@
       "severity": "HIGH",
       "stars": 8962,
       "fix_url": "https://github.com/omnigent-ai/omnigent/security/advisories/GHSA-7mqg-cx4g-x2rf",
-      "note": "Shell-command parser no longer fails open on unrecognized gated commands \u2014 policy-bypass leading to sandbox escape (CWE-184). (advisory published Jun 29, 2026)"
+      "note": "Shell-command parser no longer fails open on unrecognized gated commands - policy-bypass leading to sandbox escape (CWE-184). (advisory published Jun 29, 2026)"
     },
     "Universal-Debloater-Alliance/universal-android-debloater-next-generation": {
       "severity": "LOW",
