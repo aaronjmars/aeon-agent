@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-22T06:09:19Z",
-  "quality_score": 4,
-  "assessment": "Substantive, well-sourced daily report with specific metrics, cross-checked data sources, and clear methodology. Directly tracks the north-star metric ($AEON price momentum). Transparent about sources and limitations.",
+  "last_analyzed": "2026-08-23T06:09:52Z",
+  "quality_score": 2,
+  "assessment": "Substantive reporting but violated hard constraint: pushed directly to main instead of branch+PR per strategy",
   "flags": [],
-  "avg_score": 4.1,
+  "avg_score": 4.03,
   "history": [
-    {
-      "date": "2026-07-19",
-      "score": 4
-    },
     {
       "date": "2026-07-20",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-22",
       "score": 4
+    },
+    {
+      "date": "2026-08-23",
+      "score": 2
     }
   ]
 }

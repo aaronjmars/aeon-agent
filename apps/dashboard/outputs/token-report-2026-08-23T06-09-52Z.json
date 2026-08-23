@@ -1,0 +1,109 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "✅ AEON Token Report",
+        "description": "$AEON — BREAKOUT"
+      },
+      "children": [
+        "narrative",
+        "stats-stack",
+        "sep1",
+        "metrics-stack",
+        "sep2",
+        "chart-link"
+      ]
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price extended yesterday's breakout, +22.1% to $0.0000360 on 2.2x average volume — second straight breakout day.",
+        "variant": "lead"
+      }
+    },
+    "stats-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.0000360",
+        "delta": "+22.1%",
+        "trend": "up"
+      }
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.78M",
+        "delta": "+16.1%",
+        "trend": "up"
+      }
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (2.2x 7d avg)",
+        "value": "$677.9K"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "buys-sells",
+        "whales"
+      ]
+    },
+    "buys-sells": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 917/717 (ratio 1.28)",
+        "variant": "body"
+      }
+    },
+    "whales": {
+      "type": "Text",
+      "props": {
+        "text": "Whales: 21 (7 buy / 14 sell)",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
