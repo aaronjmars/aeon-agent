@@ -3,8 +3,7 @@ type: Index
 ---
 
 # Long-term Memory
-*Last consolidated: 2026-08-16*
-
+*Last consolidated: 2026-08-23*
 ## About This Repo
 - Autonomous agent (Aeon) running on GitHub Actions via Claude Code, operating for the **$AEON** token and the `aeonfun/aeon` framework.
 - Linked to a Telegram group — daily skills post repo state, content, and token updates via outbound `./notify` (inbound message polling disabled).
@@ -31,17 +30,16 @@ Older rows archived to `memory/topics/digests-history.md`.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-23 | tweet-digest | Skill Drop (Weekly Card Run spotlight), Growth ("welcome back to aeon" recap/invite) |
+| 2026-08-22 | tweet-digest | Skill Drop — Spend Watch (spending-report skill announcement + aeon.fun CTA follow-up) |
 | 2026-08-21 | tweet-digest | Skill Drops (vuln-scanner skill, Remotion skill spotlight), Security disclosures (private advisories to @jeffreykim0711, @relakkesyang), Growth (weekly recap follow/star CTA) |
+| 2026-08-20 | tweet-digest | Security scanning & disclosures (vuln-scanner + Binance/OpenSea/launchpad findings, private advisory to @_ulivz/@agent_tars), Shipped & content (Skill Spotlight: Pack Submit), Appearances (aaronjmars on @MCGlive again) |
 | 2026-08-19 | tweet-digest | Security disclosures (vuln reports to @lucaronin, @karis_ai), Shipped & content (Elon Musk agent YouTube short), Appearances (aaronjmars on @MCGlive) |
 | 2026-08-18 | tweet-digest | Security disclosures (omnigent vuln to @matei_zaharia, praise for a prior report), Shipped & content (Heavier-Hand hook follow-up, "best agentic framework" YouTube short) |
 | 2026-08-17 | tweet-digest | Shiplog & growth ask, Security disclosure (Shepherd agent vuln), Heavier-Hand Uniswap hook drop |
 | 2026-08-16 | tweet-digest | Agent identity / soul system |
 | 2026-08-15 | tweet-digest | Skill Spotlight — aeon-update |
 | 2026-08-14 | tweet-digest | Buzz channel support (Jack Dorsey), weekly recap CTA |
-| 2026-08-13 | tweet-digest | NoOp Uniswap hook, Base-MCP skill spotlight, $aeon model video |
-| 2026-08-12 | tweet-digest | Skill Drops (Monitor Competitors, Higgsfield MCP), Growth/Shipping (YouTube video, blog article) |
-| 2026-08-11 | tweet-digest | Shipped (Dynamic Fee Hook for Uniswap v4), Distribution (HN digest example post) |
-| 2026-08-10 | tweet-digest | Ecosystem momentum (shiplog recap, aeon+miroshark star/PR growth), Agent design philosophy (orchestration-creep article) |
 
 ## Skills Built
 | Skill | Date | Notes |
@@ -62,9 +60,11 @@ Older rows archived to `memory/topics/digests-history.md`.
 - apps/** npm changes in aaronjmars/aeon are NOT gated by any CI build/test — all 4 ci-*.yml path-filters target skills/**/catalog/capabilities; only post-merge Vercel deploy catches build/type errors on app deps (surfaced by Dependabot first run 2026-06-21, #514–#525).
 - Bash scripts cannot synchronously invoke agentic skills (SKILL.md-only, no scan.sh entrypoint) — bridge must be agent-to-agent: an agentic skill inline-invokes another agentic skill via CLAUDE.md "standalone composition". Surfaced when repo-actions promoted bash→phylax-audit as top pick two consecutive cycles; now blocked by Gate 3 in repo-actions (PR #116).
 - A GitHub Actions spending-limit gate looks like a stuck dispatch, not a code regression: `workflow_dispatch` runs return `action_required` with 0 jobs and never start. Confirm via `gh run list`/`gh run view`, not by assuming the skill broke. Hit 2026-08-02T19:20Z→08-04T14:46Z (~44h), stalled 6 skills; the 3 weekly-cadence ones (repo-pulse, shiplog, changelog) stayed stuck past recovery because their next cron tick was days out — a manual re-dispatch clears it faster than waiting.
+- aeon.fun/security's scraper is brittle to upstream markup churn: a CSS-module class rename (`page_row__xxxxx` → `page-module__eEUUaa__row`, 08-22) caused a silent 0/74 PARSE_EMPTY while `cron-state` still recorded `last_status: success` — exact-class selectors can fail without tripping failure detection. Match structurally (owner/repo-shaped capture, GitHub href) instead of by literal class name; secured-watch self-fixed both this and a separate RSC-hydration-payload regex false-positive by 08-23.
 
 ## Next Priorities
 - Re-enable previously-curated extras (`fetch-tweets`, `tweet-allocator`) only when organic signal justifies it.
 - **minitor:** #72–#81 all merged. SECURITY.md confirmed present at `.github/SECURITY.md` (re-verified 08-14; old "MISSING" flag was a false positive from checking only the repo root path). Remaining: improve manifest.ts + ci.yml (MED), add Deploy section to README (MED). No open PRs. (Canonical at `aeonfun/minitor`.)
-- **aeon:** v0.1.0 released 2026-07-10 (Grok harness, channels, OKF, attestation, Langfuse); Grok 4.5 + OpenAI Codex + Kimi Moonshot support added late Jul. docs-sync last ran 2026-08-10 (aeon-website PR #245); treat the website's `app/changelog-data.ts`, not memory/logs, as source of truth for what's published. apps/** dep PRs have no CI gate — Vercel post-merge is the only catch. Remaining: SHA-pin workflows (needs workflows-scoped token); ideas #2/3/5 (README, SHOWCASE.md) re-eligible. Stars: 641, forks: 226 as of 2026-08-10 (see repo-pulse line below; repo-pulse hasn't run again since).
-- **repo-pulse 2026-08-10:** aeon 641 stars (+49/7d, SURGE, events truncated by GitHub's 300-event cap — real total likely higher)/226 forks (+12/7d); opendia 1907 stars (+5/7d, STEADY)/159 forks; soul.md 640 stars (+7/7d, STEADY)/68 forks; minitor 16 stars/4 forks (QUIET). Notable new contacts: edsonmartins (Archbase maintainer, Maven Central/npm/pub.dev, forked aeon).
+- **aeon:** v0.1.0 released 2026-07-10 (Grok harness, channels, OKF, attestation, Langfuse); Grok 4.5 + OpenAI Codex + Kimi Moonshot support added late Jul. docs-sync last ran 2026-08-17 (aeon-website PR #251, in-repo docs catch-up to Aug 10 batch); treat the website's `app/changelog-data.ts`, not memory/logs, as source of truth for what's published. apps/** dep PRs have no CI gate — Vercel post-merge is the only catch. Remaining: SHA-pin workflows (needs workflows-scoped token); ideas #2/3/5 (README, SHOWCASE.md) re-eligible. Stars: 666, forks: 238 as of 2026-08-17 (see repo-pulse line below; repo-pulse hasn't run again since). Headline ship this window: #866 fixed `bin/add-skill` skill discovery (searched 2 dirs deep, layout is 3) — a priority-zero fork-onboarding bug, verified against a live community fork.
+- **repo-pulse 2026-08-17:** aeon 666 stars (+31/7d, SURGE)/238 forks (+14/7d); opendia 1911 stars (+4/7d, STEADY)/159 forks; soul.md 644 stars (+5/7d, STEADY)/68 forks; minitor 16 stars/4 forks (QUIET, unchanged). No threshold-notable stargazers/forkers this round (top new forker evrimulgen, 2346 repos, below notability bar).
+- **Working tree anomaly:** `AGENTS.md` shows as deleted (uncommitted) and `notify`/`notify-jsonrender` are untracked, persisting since at least 2026-08-18 (still present 2026-08-23). Flagged repeatedly by heartbeat but out of its checked scope to fix — risk is a later `git add -A`-style step landing the AGENTS.md deletion on main. Needs a human/skill decision: restore, delete-and-commit, or gitignore.

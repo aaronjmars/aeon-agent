@@ -10,6 +10,10 @@ Older entries rotated out of MEMORY.md's Recent Digests table.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-13 | tweet-digest | NoOp Uniswap hook, Base-MCP skill spotlight, $aeon model video |
+| 2026-08-12 | tweet-digest | Skill Drops (Monitor Competitors, Higgsfield MCP), Growth/Shipping (YouTube video, blog article) |
+| 2026-08-11 | tweet-digest | Shipped (Dynamic Fee Hook for Uniswap v4), Distribution (HN digest example post) |
+| 2026-08-10 | tweet-digest | Ecosystem momentum (shiplog recap, aeon+miroshark star/PR growth), Agent design philosophy (orchestration-creep article) |
 | 2026-08-09 | tweet-digest | Jesse Pollak / Base ecosystem shoutout |
 | 2026-08-08 | tweet-digest | Error Digest skill (part 2), summer gm + playlist, weekly recap CTA |
 | 2026-08-07 | tweet-digest | "run it and forget it" philosophy piece, you.com contributed skill, miroshark x402 listing |

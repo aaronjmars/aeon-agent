@@ -1,19 +1,16 @@
 ## Summary
 
-Ran the memory-flush skill against the full gap since last consolidation (2026-08-09 → 2026-08-16, since memory-flush runs weekly):
+Ran `memory-flush` for the 2026-08-16 → 2026-08-23 window (8 daily logs, deterministically resolved via `scripts/memory_prep.py`).
 
-**Promoted:**
-- 5 missing tweet-digest rows (08-10, 08-11, 08-12, 08-15, 08-16) into MEMORY.md's Recent Digests table
+**Promoted to MEMORY.md:**
+- 3 missing tweet-digest rows (08-20, 08-22, 08-23) added to Recent Digests
+- Refreshed stale `aeon` priority: docs-sync date/PR (08-10→08-17, PR #251), stars/forks (641/226 → 666/238), plus a headline note on the #866 `bin/add-skill` priority-zero fork-onboarding fix
+- Replaced the week-old `repo-pulse 2026-08-10` bullet with fresh 08-17 per-repo star/fork deltas
+- New Lessons Learned entry: secured-watch's scraper hit a silent PARSE_EMPTY (CSS class rename) that `cron-state` still recorded as `success` — a detection-gap pattern worth a skill-repair look
+- New Next Priorities bullet: the persistent uncommitted `AGENTS.md` deletion + untracked `notify`/`notify-jsonrender` files (flagged by heartbeat since 08-18, never resolved, risk of an auto-commit landing it on `main`)
 
-**Pruned (stale/resolved content):**
-- Archived 12 older Recent Digests rows (07-17 → 08-09) to a new `memory/topics/digests-history.md`
-- Removed the resolved "Stuck skills (Aug 2-4 outage)" bullet from Next Priorities — fully confirmed recovered, and the diagnostic lesson is already captured elsewhere in Lessons Learned
-- Updated a stale Lesson Learned that told skills to use a `scripts/prefetch-*.sh` cache-file workaround for auth'd curls — that pattern is now explicitly retired per CLAUDE.md; repointed it to `./secretcurl`
-- Tightened the verbose minitor and aeon Next Priorities bullets (dropped resolved historical narrative, kept actionable state)
+**Pruned:** archived the 4 oldest Recent Digests rows (08-10→08-13) to `memory/topics/digests-history.md` to offset the 3 additions. No open `improve:` PRs to prune. Confirmed `token-movers`/`operator-scorecard` predate this window (not new Skills Built entries).
 
-**Verified, no action needed:**
-- No open "improve:" PRs (no section to prune)
-- PR #872 (external contributor fix) closed unmerged 08-16 — no follow-up
-- No new skills built this window
+**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/logs/2026-08-23.md`, `memory/memory-flush-state.json` (new, watermark), plus deterministic log rotation (2 months archived to `memory/logs/archive/`).
 
-**Files changed:** `memory/MEMORY.md` (72 → 66 lines, last-consolidated bumped to 2026-08-16), `memory/topics/digests-history.md` (new), `memory/logs/2026-08-16.md` (logged the flush).
+**Follow-up needed:** someone should decide what to do about the stray `AGENTS.md` deletion / untracked notify scripts — that's a repo-state question outside this skill's scope.
