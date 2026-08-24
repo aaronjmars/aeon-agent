@@ -1,5 +1,3 @@
-ℹ️ Repo Pulse
-
 *Repo Pulse — 2026-08-24* — [STEADY]
 
 | Repo | Stars | Forks | Rel | Verdict |

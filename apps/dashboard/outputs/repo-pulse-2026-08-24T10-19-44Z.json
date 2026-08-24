@@ -1,0 +1,938 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "ℹ️ Repo Pulse",
+        "description": "2026-08-24 — Overall Status: STEADY"
+      },
+      "children": [
+        "table_summary",
+        "separator_1",
+        "section_aeon",
+        "separator_2",
+        "section_soul",
+        "separator_3",
+        "section_opendia",
+        "separator_4",
+        "section_minitor",
+        "separator_5",
+        "text_source"
+      ]
+    },
+    "table_summary": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "679 (+13)",
+            "240 (+2)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "648 (+4)",
+            "68 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1913 (+2)",
+            "159 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "16 (—)",
+            "5 (+1)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "separator_1": {
+      "type": "Separator"
+    },
+    "section_aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aeon",
+        "stack_aeon_status",
+        "alert_aeon_cap",
+        "heading_aeon_stargazers",
+        "stack_aeon_profiles",
+        "stack_aeon_other_stargazers",
+        "heading_aeon_forks",
+        "stack_aeon_forks"
+      ]
+    },
+    "heading_aeon": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h2"
+      }
+    },
+    "stack_aeon_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_aeon",
+        "text_aeon_avg"
+      ]
+    },
+    "badge_aeon": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "secondary"
+      }
+    },
+    "text_aeon_avg": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w ≈ 40"
+      }
+    },
+    "alert_aeon_cap": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "GitHub's ~300-event cap was hit before reaching the 7d cutoff (oldest retrieved event 2026-08-17T21:37Z vs cutoff 2026-08-17T10:14Z). Real 7d star/fork total is likely higher than reported."
+      }
+    },
+    "heading_aeon_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 14 of 17)",
+        "level": "h3"
+      }
+    },
+    "stack_aeon_profiles": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "profile_amreid",
+        "profile_zarguell",
+        "profile_tracure",
+        "profile_geekyayush",
+        "profile_gparrello",
+        "profile_britkern",
+        "profile_dopoljak",
+        "profile_jdylanmc",
+        "profile_tankneo"
+      ]
+    },
+    "profile_amreid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_amreid",
+        "text_amreid_meta",
+        "text_amreid_bio"
+      ]
+    },
+    "link_amreid": {
+      "type": "Link",
+      "props": {
+        "label": "AmrEidAly — Amr A Eid",
+        "href": "https://github.com/AmrEidAly"
+      }
+    },
+    "text_amreid_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Dubai · 🏢 OmniClouds · 197 repos · 23 followers",
+        "variant": "caption"
+      }
+    },
+    "text_amreid_bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"human being\"",
+        "variant": "caption"
+      }
+    },
+    "profile_zarguell": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_zarguell",
+        "text_zarguell_meta",
+        "text_zarguell_bio"
+      ]
+    },
+    "link_zarguell": {
+      "type": "Link",
+      "props": {
+        "label": "zarguell",
+        "href": "https://github.com/zarguell"
+      }
+    },
+    "text_zarguell_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 United States · 106 repos · www.arguelles.me · 18 followers",
+        "variant": "caption"
+      }
+    },
+    "text_zarguell_bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"cybersecurity engineer with an obsession for building and breaking stuff\"",
+        "variant": "caption"
+      }
+    },
+    "profile_tracure": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_tracure",
+        "text_tracure_meta",
+        "text_tracure_bio"
+      ]
+    },
+    "link_tracure": {
+      "type": "Link",
+      "props": {
+        "label": "tracure1337 — ɘɿuɔɐɿɈ",
+        "href": "https://github.com/tracure1337"
+      }
+    },
+    "text_tracure_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 in transit · 11 repos · 160 followers",
+        "variant": "caption"
+      }
+    },
+    "text_tracure_bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"I use arch btw.\"",
+        "variant": "caption"
+      }
+    },
+    "profile_geekyayush": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_geekyayush",
+        "text_geekyayush_meta",
+        "text_geekyayush_bio"
+      ]
+    },
+    "link_geekyayush": {
+      "type": "Link",
+      "props": {
+        "label": "geekyayush — Ayush Somani",
+        "href": "https://github.com/geekyayush"
+      }
+    },
+    "text_geekyayush_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 127.0.0.1 · 57 repos · ayushsomani.me · 🐦 @TheAyushSomani · 67 followers",
+        "variant": "caption"
+      }
+    },
+    "text_geekyayush_bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"Building apps (NodeJS, Typescript, NestJS, Postgres, Serverless, Lambda, MongoDB)\"",
+        "variant": "caption"
+      }
+    },
+    "profile_gparrello": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_gparrello",
+        "text_gparrello_meta"
+      ]
+    },
+    "link_gparrello": {
+      "type": "Link",
+      "props": {
+        "label": "gparrello — Gerardo Parrello",
+        "href": "https://github.com/gparrello"
+      }
+    },
+    "text_gparrello_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Barcelona · 🏢 Glovo · 44 repos · gparrello.com · 21 followers",
+        "variant": "caption"
+      }
+    },
+    "profile_britkern": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_britkern",
+        "text_britkern_meta"
+      ]
+    },
+    "link_britkern": {
+      "type": "Link",
+      "props": {
+        "label": "britkern — Brit Kern",
+        "href": "https://github.com/britkern"
+      }
+    },
+    "text_britkern_meta": {
+      "type": "Text",
+      "props": {
+        "text": "85 repos · 11 followers",
+        "variant": "caption"
+      }
+    },
+    "profile_dopoljak": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_dopoljak",
+        "text_dopoljak_meta",
+        "text_dopoljak_bio"
+      ]
+    },
+    "link_dopoljak": {
+      "type": "Link",
+      "props": {
+        "label": "dopoljak — Domagoj Poljak",
+        "href": "https://github.com/dopoljak"
+      }
+    },
+    "text_dopoljak_meta": {
+      "type": "Text",
+      "props": {
+        "text": "26 repos · 42 followers",
+        "variant": "caption"
+      }
+    },
+    "text_dopoljak_bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"Software Architect believing in Software Craftsmanship\"",
+        "variant": "caption"
+      }
+    },
+    "profile_jdylanmc": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_jdylanmc",
+        "text_jdylanmc_meta"
+      ]
+    },
+    "link_jdylanmc": {
+      "type": "Link",
+      "props": {
+        "label": "jdylanmc — Dylan McCurry",
+        "href": "https://github.com/jdylanmc"
+      }
+    },
+    "text_jdylanmc_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Roswell, GA · 🏢 Microsoft · 32 repos",
+        "variant": "caption"
+      }
+    },
+    "profile_tankneo": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_tankneo",
+        "text_tankneo_meta"
+      ]
+    },
+    "link_tankneo": {
+      "type": "Link",
+      "props": {
+        "label": "tankneo — TankNeo",
+        "href": "https://github.com/tankneo"
+      }
+    },
+    "text_tankneo_meta": {
+      "type": "Text",
+      "props": {
+        "text": "20 repos",
+        "variant": "caption"
+      }
+    },
+    "stack_aeon_other_stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_aeon_other",
+        "text_aeon_other_handles"
+      ]
+    },
+    "heading_aeon_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h4"
+      }
+    },
+    "text_aeon_other_handles": {
+      "type": "Text",
+      "props": {
+        "text": "knnthevans2 · xabru · AIOSAI · 0mkara · KlusSoh · yermakoffivan"
+      }
+    },
+    "heading_aeon_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "stack_aeon_forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork_kajr0s",
+        "fork_trueness04",
+        "fork_thanhdat",
+        "fork_jdmd21",
+        "fork_czijian"
+      ]
+    },
+    "fork_kajr0s": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_kajr0s",
+        "text_fork_kajr0s"
+      ]
+    },
+    "link_fork_kajr0s": {
+      "type": "Link",
+      "props": {
+        "label": "kajr0s",
+        "href": "https://github.com/kajr0s"
+      }
+    },
+    "text_fork_kajr0s": {
+      "type": "Text",
+      "props": {
+        "text": "6 repos",
+        "variant": "caption"
+      }
+    },
+    "fork_trueness04": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_trueness04",
+        "text_fork_trueness04"
+      ]
+    },
+    "link_fork_trueness04": {
+      "type": "Link",
+      "props": {
+        "label": "Trueness04 — Amin",
+        "href": "https://github.com/Trueness04"
+      }
+    },
+    "text_fork_trueness04": {
+      "type": "Text",
+      "props": {
+        "text": "9 repos",
+        "variant": "caption"
+      }
+    },
+    "fork_thanhdat": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_thanhdat",
+        "text_fork_thanhdat"
+      ]
+    },
+    "link_fork_thanhdat": {
+      "type": "Link",
+      "props": {
+        "label": "thanhdat3007-create",
+        "href": "https://github.com/thanhdat3007-create"
+      }
+    },
+    "text_fork_thanhdat": {
+      "type": "Text",
+      "props": {
+        "text": "15 repos",
+        "variant": "caption"
+      }
+    },
+    "fork_jdmd21": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_jdmd21",
+        "text_fork_jdmd21"
+      ]
+    },
+    "link_fork_jdmd21": {
+      "type": "Link",
+      "props": {
+        "label": "JDMD21",
+        "href": "https://github.com/JDMD21"
+      }
+    },
+    "text_fork_jdmd21": {
+      "type": "Text",
+      "props": {
+        "text": "16 repos",
+        "variant": "caption"
+      }
+    },
+    "fork_czijian": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_czijian",
+        "text_fork_czijian"
+      ]
+    },
+    "link_fork_czijian": {
+      "type": "Link",
+      "props": {
+        "label": "czijian729-oss",
+        "href": "https://github.com/czijian729-oss"
+      }
+    },
+    "text_fork_czijian": {
+      "type": "Text",
+      "props": {
+        "text": "1 repos",
+        "variant": "caption"
+      }
+    },
+    "separator_2": {
+      "type": "Separator"
+    },
+    "section_soul": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_soul",
+        "stack_soul_status",
+        "heading_soul_stargazers",
+        "stack_soul_profiles",
+        "stack_soul_other_stargazers",
+        "heading_soul_forks",
+        "stack_soul_forks"
+      ]
+    },
+    "heading_soul": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h2"
+      }
+    },
+    "stack_soul_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_soul",
+        "text_soul_avg"
+      ]
+    },
+    "badge_soul": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "secondary"
+      }
+    },
+    "text_soul_avg": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w ≈ 6"
+      }
+    },
+    "heading_soul_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 5 of 5)",
+        "level": "h3"
+      }
+    },
+    "stack_soul_profiles": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "profile_susyimes",
+        "profile_rosyiid"
+      ]
+    },
+    "profile_susyimes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_susyimes",
+        "text_susyimes_meta",
+        "text_susyimes_bio"
+      ]
+    },
+    "link_susyimes": {
+      "type": "Link",
+      "props": {
+        "label": "susyimes",
+        "href": "https://github.com/susyimes"
+      }
+    },
+    "text_susyimes_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 everywhere · 986 repos · 159 followers",
+        "variant": "caption"
+      }
+    },
+    "text_susyimes_bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"connected to reality\"",
+        "variant": "caption"
+      }
+    },
+    "profile_rosyiid": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_rosyiid",
+        "text_rosyiid_meta"
+      ]
+    },
+    "link_rosyiid": {
+      "type": "Link",
+      "props": {
+        "label": "rosyiid1440 — Abdurrosyiid Amrullah",
+        "href": "https://github.com/rosyiid1440"
+      }
+    },
+    "text_rosyiid_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Gresik · 🏢 99 SerCell · 40 repos · rosyiid.my.id",
+        "variant": "caption"
+      }
+    },
+    "stack_soul_other_stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_soul_other",
+        "text_soul_other_handles"
+      ]
+    },
+    "heading_soul_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h4"
+      }
+    },
+    "text_soul_other_handles": {
+      "type": "Text",
+      "props": {
+        "text": "adamlonda · KeepRuni"
+      }
+    },
+    "heading_soul_forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h3"
+      }
+    },
+    "stack_soul_forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork_soul_thanhdat"
+      ]
+    },
+    "fork_soul_thanhdat": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_fork_soul_thanhdat",
+        "text_fork_soul_thanhdat"
+      ]
+    },
+    "link_fork_soul_thanhdat": {
+      "type": "Link",
+      "props": {
+        "label": "thanhdat3007-create",
+        "href": "https://github.com/thanhdat3007-create"
+      }
+    },
+    "text_fork_soul_thanhdat": {
+      "type": "Text",
+      "props": {
+        "text": "15 repos",
+        "variant": "caption"
+      }
+    },
+    "separator_3": {
+      "type": "Separator"
+    },
+    "section_opendia": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_opendia",
+        "stack_opendia_status",
+        "heading_opendia_stargazers",
+        "stack_opendia_profiles",
+        "stack_opendia_other_stargazers"
+      ]
+    },
+    "heading_opendia": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h2"
+      }
+    },
+    "stack_opendia_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_opendia",
+        "text_opendia_avg"
+      ]
+    },
+    "badge_opendia": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "secondary"
+      }
+    },
+    "text_opendia_avg": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w ≈ 4.5"
+      }
+    },
+    "heading_opendia_stargazers": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 2 of 2)",
+        "level": "h3"
+      }
+    },
+    "stack_opendia_profiles": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "profile_henrybabbage"
+      ]
+    },
+    "profile_henrybabbage": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link_henrybabbage",
+        "text_henrybabbage_meta",
+        "text_henrybabbage_bio"
+      ]
+    },
+    "link_henrybabbage": {
+      "type": "Link",
+      "props": {
+        "label": "henrybabbage — Henry Babbage",
+        "href": "https://github.com/henrybabbage"
+      }
+    },
+    "text_henrybabbage_meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Berlin, Germany · 🏢 Graduate of Ironhack, Berlin · 24 repos · henrybabbage.com · 27 followers",
+        "variant": "caption"
+      }
+    },
+    "text_henrybabbage_bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"Full Stack Developer from Aotearoa now based in Berlin\"",
+        "variant": "caption"
+      }
+    },
+    "stack_opendia_other_stargazers": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_opendia_other",
+        "text_opendia_other_handles"
+      ]
+    },
+    "heading_opendia_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h4"
+      }
+    },
+    "text_opendia_other_handles": {
+      "type": "Text",
+      "props": {
+        "text": "sajeevtv"
+      }
+    },
+    "separator_4": {
+      "type": "Separator"
+    },
+    "section_minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_minitor",
+        "text_minitor_status"
+      ]
+    },
+    "heading_minitor": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/minitor",
+        "level": "h2"
+      }
+    },
+    "text_minitor_status": {
+      "type": "Badge",
+      "props": {
+        "text": "QUIET (no activity)",
+        "variant": "outline"
+      }
+    },
+    "separator_5": {
+      "type": "Separator"
+    },
+    "text_source": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events (aeon truncated, see note above) · minitor QUIET (no activity)",
+        "variant": "caption"
+      }
+    }
+  }
+}
