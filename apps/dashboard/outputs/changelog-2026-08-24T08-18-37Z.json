@@ -1,0 +1,59 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog synced"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_metadata",
+        "text_repos",
+        "text_summary",
+        "story_pr"
+      ]
+    },
+    "text_metadata": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog (push-to) — 2026-08-24",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text_repos": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon → aaronjmars/aeon-website"
+      },
+      "children": []
+    },
+    "text_summary": {
+      "type": "Text",
+      "props": {
+        "text": "17 new PRs → changelog entry \"Vercel fx harness + secretcurl leak fix\""
+      },
+      "children": []
+    },
+    "story_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Vercel fx harness + secretcurl leak fix",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/301",
+        "source": "aaronjmars/aeon-website"
+      },
+      "children": []
+    }
+  }
+}
