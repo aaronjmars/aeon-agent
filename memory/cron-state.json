@@ -229,5 +229,9 @@
     "consecutive_failures": 0,
     "success_rate": 1,
     "last_quality_score": 4
+  },
+  "aeon-update": {
+    "last_dispatch": "2026-08-24T11:07:04Z",
+    "last_status": "dispatched"
   }
 }
