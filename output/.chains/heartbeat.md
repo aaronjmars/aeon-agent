@@ -1,24 +1,10 @@
-Ambient fleet check complete — everything's green, no notification needed.
-
-## Heartbeat — Ambient Check (2026-08-23)
-
-**P0 — Failed & stuck skills:** CLEAR. All 9 enabled skills with cron-state history (`changelog`, `shiplog`, `memory-flush`, `token-report`, `holdings`, `repo-pulse`, `tweet-digest`, `secured-watch`, `heartbeat`) show `last_status: success`, 0 consecutive failures, 100% success rate. No stuck or hung dispatches. Heartbeat self-check: last success ~24h ago, under the 36h threshold.
-
-**P1 — Stalled PRs & urgent issues:** CLEAR. 2 open PRs on `aeonfun/aeon` (#941, #937), both updated within the last ~1.3h — neither stalled. 0 issues labeled urgent on `aeonfun/aeon` or `aeonfun/minitor`.
-
-**P2 — Flagged memory items:** CLEAR. `memory/issues/INDEX.md` has 0 open rows; MEMORY.md "Next Priorities" unchanged since yesterday.
-
-**P3 — Missing scheduled skills:** CLEAR. All enabled skills ran within 2x their schedule interval. `aeon-update` still has no cron-state entry — expected, its first weekly slot is due Mon 2026-08-24.
-
-**Aside (deduped, not re-notified):** The working-tree anomaly (`AGENTS.md` shown deleted uncommitted, `notify`/`notify-jsonrender` untracked) is unchanged and was already flagged in the 08-18 through 08-22 logs within the 48h dedup window.
-
-**Status page:** rewrote `docs/status.md` — Overall 🟢 OK, Token pulse AEON $0.0000360 / +22.1% 24h / BREAKOUT verdict (source: `token-report-2026-08-23.md`), skill table refreshed and re-sorted, next scheduled run = token-report at 2026-08-24 06:00 UTC.
-
-`HEARTBEAT_OK · STATUS_PAGE=OK`
+Fleet is fully green (all 10 enabled skills at 100% success, 0 consecutive failures, no stalled PRs, no urgent issues), so per the SKILL.md rule this run sends no notification. Log entry appended and `docs/status.md` regenerated.
 
 ## Summary
-- Read `memory/MEMORY.md`, last 2 days of logs, `memory/cron-state.json`, `memory/issues/INDEX.md`, `aeon.yml`, and checked `gh pr/issue list` on `aeonfun/aeon` and `aeonfun/minitor`.
-- Modified `docs/status.md` (refreshed status page).
-- Appended a `### heartbeat` entry to `memory/logs/2026-08-23.md`.
-- No notification sent — nothing needed attention; fleet fully green.
-- Follow-up (unowned by heartbeat): the persistent `AGENTS.md` deletion / untracked `notify`, `notify-jsonrender` files still need a human or repair-skill decision.
+
+Ran the heartbeat ambient check (default `${var}`, the live scheduled path):
+- **P0–P3 all CLEAR**: 10 enabled skills all showing `success`/100%/0 consecutive failures; 4 open PRs on `aaronjmars/aeon`, all opened today, none stalled; no urgent issues; no flagged memory items; no missing scheduled skills.
+- **New observation (not fleet-affecting, out of heartbeat's fix-scope)**: the long-standing working-tree anomaly (uncommitted `AGENTS.md` deletion, untracked `notify`/`notify-jsonrender`) has grown — `secretcurl` is now also modified-uncommitted, containing the upstream argv-leak security fix (#935), likely a residue of today's `aeon-update` sync. Logged as an aside; recommend a human/skill decision soon since it now touches security-relevant code.
+- **Files changed**: `docs/status.md` (regenerated — Overall 🟢 OK, updated Token pulse to today's SLIDING verdict/figures, refreshed full skill table, next-run pointer to `tweet-digest` 17:00 UTC), `memory/logs/2026-08-24.md` (appended `### heartbeat` entry).
+- **Notification**: none sent — fleet fully green, per the "notify only on signal" rule.
+- Follow-up: no action needed from this run; the growing working-tree anomaly remains a candidate for a dedicated fix skill.
