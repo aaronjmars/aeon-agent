@@ -1,10 +1,10 @@
 {
   "skill": "shiplog",
-  "last_analyzed": "2026-08-17T09:08:41Z",
-  "quality_score": 5,
-  "assessment": "Excellent — discovered and fixed a production bug (bin/add-skill broken for forks), synthesized specific multi-source data (56 PRs, 4 merged awesome-list, CVE patch across 6 repos), delivered polished ready-to-post outputs.",
+  "last_analyzed": "2026-08-24T09:17:05Z",
+  "quality_score": 4,
+  "assessment": "Substantive shiplog with verifiable numbers, strategic focus on shipped code and ecosystem growth, honest gap reporting, ready-to-post content that directly serves the operator's priorities.",
   "flags": [],
-  "avg_score": 4.15,
+  "avg_score": 4.14,
   "history": [
     {
       "date": "2026-06-15",
@@ -57,6 +57,10 @@
     {
       "date": "2026-08-17",
       "score": 5
+    },
+    {
+      "date": "2026-08-24",
+      "score": 4
     }
   ]
 }

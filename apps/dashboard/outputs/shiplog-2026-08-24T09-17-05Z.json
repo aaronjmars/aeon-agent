@@ -1,0 +1,167 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Shiplog ⭐ Aug 17 → Aug 24",
+        "description": "Weekly ecosystem update"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-prs",
+        "sep-1",
+        "heading-shipped",
+        "stack-shipped",
+        "sep-2",
+        "heading-traction",
+        "stack-traction",
+        "sep-3",
+        "link-article"
+      ]
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Merged PRs (ecosystem)",
+        "value": "224"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      }
+    },
+    "stack-shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-secretcurl",
+        "text-claude-plugin",
+        "text-security",
+        "text-governance",
+        "text-ecosystem"
+      ]
+    },
+    "text-secretcurl": {
+      "type": "Text",
+      "props": {
+        "text": "Secret-leak bug fix in secretcurl: External contributor discovered and fixed an issue where secretcurl was keeping secrets out of the command line (sandbox-safe), but leaking them into curl's process argv (readable via /proc). Fixed via curl -K/stdin. Same contributor submitted 8 PRs this window covering harness bugs, a race condition, and a new run-harness for Vercel's fx CLI.",
+        "variant": "body"
+      }
+    },
+    "text-claude-plugin": {
+      "type": "Text",
+      "props": {
+        "text": "Claude plugin integration: Run Aeon directly from Claude with /plugin install aeon@aeon. Set up an instance, edit skills, turn a chat into an automation, all without leaving Claude Code. (PRs #884, #885)",
+        "variant": "body"
+      }
+    },
+    "text-security": {
+      "type": "Text",
+      "props": {
+        "text": "Security hardening: SHA-pinned all GitHub Actions to immutable refs, blocked codex install scripts, narrowed the secrets-injection allowlist.",
+        "variant": "body"
+      }
+    },
+    "text-governance": {
+      "type": "Text",
+      "props": {
+        "text": "Governance improvements: Dry-run gate preventing a skill from auto-merging its own self-authored PR; structured audit log of privileged actions.",
+        "variant": "body"
+      }
+    },
+    "text-ecosystem": {
+      "type": "Text",
+      "props": {
+        "text": "Ecosystem recognition: Listed in Pashov's curated AI-Web3-Security directory (505⭐). @Base_Insights featured @aeonframework in \"Top AI on Base gainers\" 3 times this window.",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-traction": {
+      "type": "Heading",
+      "props": {
+        "text": "Traction",
+        "level": "h2"
+      }
+    },
+    "stack-traction": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-aeon-stars",
+        "stat-miroshark-stars",
+        "text-base-insights"
+      ]
+    },
+    "stat-aeon-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "aeonfun/aeon GitHub Stars",
+        "value": "679",
+        "delta": "+13",
+        "trend": "up"
+      }
+    },
+    "stat-miroshark-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "miroshark GitHub Stars",
+        "value": "1437",
+        "delta": "+7",
+        "trend": "up"
+      }
+    },
+    "text-base-insights": {
+      "type": "Text",
+      "props": {
+        "text": "Featured by @Base_Insights (21.9k followers) three times this window, with an \"Early\" tier placement for miroshark.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Shiplog Article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-08-24.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
