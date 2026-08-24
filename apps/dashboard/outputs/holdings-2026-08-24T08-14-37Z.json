@@ -1,0 +1,76 @@
+{
+  "root": "card_holdings",
+  "state": {},
+  "elements": {
+    "card_holdings": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings",
+        "description": "Holdings — aeon"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_top",
+        "separator_1",
+        "stat_7d",
+        "badge_30d"
+      ]
+    },
+    "stack_top": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_holdings",
+        "stat_supply"
+      ]
+    },
+    "stat_holdings": {
+      "type": "Stat",
+      "props": {
+        "label": "Holdings",
+        "value": "13.93B"
+      }
+    },
+    "stat_supply": {
+      "type": "Stat",
+      "props": {
+        "label": "% of supply",
+        "value": "13.93%"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "+347.02M",
+        "delta": "+2.55%",
+        "trend": "up"
+      }
+    },
+    "badge_30d": {
+      "type": "Badge",
+      "props": {
+        "text": "30d building",
+        "variant": "secondary"
+      }
+    }
+  }
+}

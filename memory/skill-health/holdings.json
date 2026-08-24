@@ -1,10 +1,10 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-08-17T08:07:09Z",
+  "last_analyzed": "2026-08-24T08:14:37Z",
   "quality_score": 4,
-  "assessment": "Completed tracking skill with specific metrics (13.59B aeon, +0.74% 7d growth), proper state management, and clear methodology — no issues detected.",
+  "assessment": "Substantive, well-verified holdings report with accurate data sourcing, proper acknowledgment of limitations (30d column), and clear service to the momentum-tracking priority.",
   "flags": [],
-  "avg_score": 3.83,
+  "avg_score": 3.86,
   "history": [
     {
       "date": "2026-07-30",
@@ -28,6 +28,10 @@
     },
     {
       "date": "2026-08-17",
+      "score": 4
+    },
+    {
+      "date": "2026-08-24",
       "score": 4
     }
   ]
