@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-23T17:06:35Z",
-  "quality_score": 4,
-  "assessment": "Substantive routine digest with verifiable specifics, proper dedup, and clean execution",
+  "last_analyzed": "2026-08-24T17:17:30Z",
+  "quality_score": 3,
+  "assessment": "Competently executed fetch, organized tweets into themes with verifiable links, and logged properly. Scope limited to single account and some tweet summaries are vague, reducing actionable insight—serves tracking priority but doesn't strengthen shipping/fork-ability goals.",
   "flags": [],
-  "avg_score": 3.93,
+  "avg_score": 3.9,
   "history": [
-    {
-      "date": "2026-07-21",
-      "score": 4
-    },
     {
       "date": "2026-07-22",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-23",
       "score": 4
+    },
+    {
+      "date": "2026-08-24",
+      "score": 3
     }
   ]
 }
