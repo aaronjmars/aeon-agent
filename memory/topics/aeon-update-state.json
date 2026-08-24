@@ -1,7 +1,14 @@
 {
-  "baseline_sha": "b1d907976ee1d2939b4b545ee4aab46b9fed06a9",
+  "baseline_sha": "b7a909aa412d8e654df15417fcff0682dac39682",
   "upstream": "aeonfun/aeon",
-  "last_run": null,
-  "last_pr": 176,
-  "pending_conflicts": []
+  "last_run": "2026-08-24",
+  "last_pr": 193,
+  "applied": { "added": 25, "updated": 54, "deleted": 4, "merged_3way": 10 },
+  "pending_conflicts": [
+    { "path": "CHANGELOG.md", "reason": "operator-customized", "upstream_commits": ["6535c66", "d208931", "bd8595d"] },
+    { "path": ".github/workflows/aeon.yml", "reason": "operator-customized-overlap", "upstream_commits": ["8367e67", "5b08830", "326b6ab"] },
+    { "path": ".github/workflows/ci-tests.yml", "reason": "operator-customized-overlap", "upstream_commits": ["8367e67"] },
+    { "path": ".github/workflows/messages.yml", "reason": "operator-customized-overlap", "upstream_commits": ["c139fd7", "8367e67"] },
+    { "path": "llms.txt", "reason": "collision-added-upstream-diverges-locally", "upstream_commits": ["d208931"] }
+  ]
 }
