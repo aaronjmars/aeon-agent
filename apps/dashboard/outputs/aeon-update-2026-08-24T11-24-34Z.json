@@ -1,0 +1,280 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update: PR #193",
+        "description": "Synced 43 upstream commits on 2026-08-24"
+      },
+      "children": [
+        "summary-section",
+        "files-section",
+        "highlights-section",
+        "manual-section",
+        "baseline-section",
+        "pr-link"
+      ]
+    },
+    "summary-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-info",
+        "stats-grid"
+      ]
+    },
+    "repo-info": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon b1d9079..b7a909a",
+        "variant": "body"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "sm"
+      },
+      "children": [
+        "stat-commits",
+        "stat-files-applied",
+        "stat-new",
+        "stat-modified",
+        "stat-removed",
+        "stat-manual"
+      ]
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Upstream commits synced",
+        "value": "43"
+      }
+    },
+    "stat-files-applied": {
+      "type": "Stat",
+      "props": {
+        "label": "Files applied cleanly",
+        "value": "83"
+      }
+    },
+    "stat-new": {
+      "type": "Stat",
+      "props": {
+        "label": "New files",
+        "value": "25"
+      }
+    },
+    "stat-modified": {
+      "type": "Stat",
+      "props": {
+        "label": "Modified",
+        "value": "54"
+      }
+    },
+    "stat-removed": {
+      "type": "Stat",
+      "props": {
+        "label": "Removed",
+        "value": "4"
+      }
+    },
+    "stat-manual": {
+      "type": "Stat",
+      "props": {
+        "label": "Need manual merge",
+        "value": "5"
+      }
+    },
+    "files-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "files-sep",
+        "files-content"
+      ]
+    },
+    "files-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "files-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "files-label",
+        "files-text"
+      ]
+    },
+    "files-label": {
+      "type": "Heading",
+      "props": {
+        "text": "File Changes Summary",
+        "level": "h3"
+      }
+    },
+    "files-text": {
+      "type": "Text",
+      "props": {
+        "text": "83 files applied cleanly (25 new, 54 modified incl. 10 3-way merges, 4 removed); 5 need manual merge",
+        "variant": "body"
+      }
+    },
+    "highlights-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "highlights-sep",
+        "highlights-content"
+      ]
+    },
+    "highlights-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "highlights-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "highlights-label",
+        "highlights-list"
+      ]
+    },
+    "highlights-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Highlights",
+        "level": "h3"
+      }
+    },
+    "highlights-list": {
+      "type": "Text",
+      "props": {
+        "text": "• New `fx` Vercel harness + generated `harnesses.json` manifest\n• `scripts/audit.sh` + `dry-run.sh` gate\n• Codex plugin (LICENSE/README/SECURITY)\n• Dashboard MCP-secret auto-allowlist\n• Webhook update_id dedupe\n• `secretcurl` argv hardening",
+        "variant": "body"
+      }
+    },
+    "manual-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "manual-sep",
+        "manual-alert"
+      ]
+    },
+    "manual-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "manual-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Manual merges required",
+        "message": ".github/workflows/aeon.yml · ci-tests.yml · messages.yml (your local narrowing overlaps upstream's SHA-pin/allowlist edits) · CHANGELOG.md · llms.txt (upstream added, divergent local copy)",
+        "type": "warning"
+      }
+    },
+    "baseline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "baseline-sep",
+        "baseline-content"
+      ]
+    },
+    "baseline-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "baseline-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "baseline-label",
+        "baseline-note",
+        "config-note"
+      ]
+    },
+    "baseline-label": {
+      "type": "Heading",
+      "props": {
+        "text": "Next Steps",
+        "level": "h3"
+      }
+    },
+    "baseline-note": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline advances to b7a909a when you merge.",
+        "variant": "body"
+      }
+    },
+    "config-note": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml config changes surfaced in the PR body, not auto-applied.",
+        "variant": "caption"
+      }
+    },
+    "pr-link": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr-sep",
+        "pr-story"
+      ]
+    },
+    "pr-sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-story": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View PR #193",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/193",
+        "source": "GitHub"
+      }
+    }
+  }
+}
