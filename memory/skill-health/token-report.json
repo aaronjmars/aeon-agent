@@ -1,15 +1,13 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-24T06:13:34Z",
-  "quality_score": 4,
-  "assessment": "Substantive, well-structured token report with specific verified data (prices, volumes, whale trades, social sentiment) from named sources; honest about limitations (treasury skip); serves the north-star metric directly.",
-  "flags": [],
-  "avg_score": 4.03,
+  "last_analyzed": "2026-08-25T06:09:59Z",
+  "quality_score": 2,
+  "assessment": "Well-structured report with specific claims that cannot be independently verified; violates strategy constraint against publishing unverified numbers as fact.",
+  "flags": [
+    "unverifiable_claim"
+  ],
+  "avg_score": 3.97,
   "history": [
-    {
-      "date": "2026-07-21",
-      "score": 4
-    },
     {
       "date": "2026-07-22",
       "score": 4
@@ -125,6 +123,10 @@
     {
       "date": "2026-08-24",
       "score": 4
+    },
+    {
+      "date": "2026-08-25",
+      "score": 2
     }
   ]
 }
