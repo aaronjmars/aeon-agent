@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-24",
-  "total_repos": 74,
-  "total_stars": 2198435,
+  "updated_at": "2026-08-25",
+  "total_repos": 76,
+  "total_stars": 2354488,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -14,6 +14,12 @@
       "stars": 240587,
       "fix_url": "https://github.com/affaan-m/ECC/pull/2185",
       "note": "Host/Origin allowlist + validated git refs + quoted workflow input (CWE-352 + 78 + 918). (fix merged Jun 15, 2026)"
+    },
+    "harry0703/MoneyPrinterTurbo": {
+      "severity": "HIGH",
+      "stars": 115640,
+      "fix_url": "https://github.com/harry0703/MoneyPrinterTurbo/commit/28a55ddc1d3f4fc094837352ee9a74e1b264484a",
+      "note": "Missing API-key enforcement on /api/v1 routes - wired verify_token into the video and LLM-proxy routers (CWE-306). (fixed upstream Aug 22, 2026)"
     },
     "ruvnet/RuView": {
       "severity": "HIGH",
@@ -35,7 +41,7 @@
     },
     "koala73/worldmonitor": {
       "severity": "HIGH",
-      "stars": 83364,
+      "stars": 83993,
       "fix_url": "https://github.com/koala73/worldmonitor/pull/5477",
       "note": "Bump sharp to &gt;=0.35.0 in blog-site to patch four inherited libvips CVEs (GHSA-f88m-g3jw-g9cj). (fix merged Aug 1, 2026)"
     },
@@ -111,6 +117,12 @@
       "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
       "note": "Integer-truncation heap overflow in zstd artifact decompression (CWE-681/787) - fixed in v0.9.0. (fixed upstream Jul 7, 2026)"
     },
+    "Wei-Shaw/sub2api": {
+      "severity": "HIGH",
+      "stars": 39151,
+      "fix_url": "https://github.com/Wei-Shaw/sub2api/pull/6122",
+      "note": "Bumped dompurify to patch a sanitizer-bypass XSS reachable via USE_PROFILES (CVE-2026-65913 + ~18 related advisories). (fix merged Aug 24, 2026)"
+    },
     "lfnovo/open-notebook": {
       "severity": "MEDIUM",
       "stars": 36963,
@@ -131,7 +143,7 @@
     },
     "HKUDS/Vibe-Trading": {
       "severity": "MEDIUM",
-      "stars": 31319,
+      "stars": 31607,
       "fix_url": "https://github.com/HKUDS/Vibe-Trading/pull/390",
       "note": "Bump Pillow + langchain to patch dependency CVEs. (fix merged Jul 5, 2026)"
     },
@@ -227,13 +239,13 @@
     },
     "cocoindex-io/cocoindex": {
       "severity": "MEDIUM",
-      "stars": 11369,
+      "stars": 11396,
       "fix_url": "https://github.com/cocoindex-io/cocoindex/pull/1947",
       "note": "Validate SQL identifiers in the postgres/sqlite connectors. (fix merged Jul 26, 2026)"
     },
     "TencentCloud/CubeSandbox": {
       "severity": "CRITICAL",
-      "stars": 11168,
+      "stars": 11320,
       "fix_url": "https://github.com/TencentCloud/CubeSandbox/pull/756",
       "note": "validateHostPath() + configurable prefix allowlist closes unrestricted host-dir bind-mount \u2192 microVM escape / host-root RCE / cross-tenant (CWE-284/22/269). (fixed upstream Jul 5, 2026)"
     },
@@ -263,7 +275,7 @@
     },
     "usekaneo/kaneo": {
       "severity": "HIGH",
-      "stars": 8393,
+      "stars": 8496,
       "fix_url": "https://github.com/usekaneo/kaneo/pull/1457",
       "note": "Fixed a Gitea-token leak + SSRF among 6 code findings (release 2.13.0); also bumped next to 15.5.21 for 8 disclosed advisories incl. 3 HIGH SSRF/DoS. (fixed upstream Aug 5, 2026)"
     },
@@ -287,7 +299,7 @@
     },
     "katanemo/plano": {
       "severity": "HIGH+MEDIUM",
-      "stars": 7006,
+      "stars": 7015,
       "fix_url": "https://github.com/katanemo/plano/pull/1001",
       "note": "Dep-bump serde_with, tokio-postgres, turbo, undici, and next to patch CVEs across the Rust and JS stacks. (fix merged Jul 27, 2026)"
     },
@@ -387,17 +399,17 @@
       "fix_url": "https://github.com/Sophomoresty/gemini-web2api/pull/23",
       "note": "Honor api_keys auth in the monolithic gemini_web2api.py. (fix merged Jun 2, 2026)"
     },
+    "makecindy/cindy": {
+      "severity": "HIGH",
+      "stars": 2282,
+      "fix_url": "https://github.com/makecindy/cindy/pull/1116",
+      "note": "Pinned builder-util-runtime to &gt;=9.7.0, patching an Electron auto-updater dependency vulnerability (GHSA-p2f4-r6v6-j797). (fix merged Jul 31, 2026)"
+    },
     "zarazhangrui/lark-coding-agent-bridge": {
       "severity": "HIGH",
       "stars": 2271,
       "fix_url": "https://github.com/zarazhangrui/feishu-claude-code-bridge/pull/48",
       "note": "Gate cloud-doc comment mentions to an allowlist (CWE-862). (fixed upstream Jun 3, 2026)"
-    },
-    "makecindy/cindy": {
-      "severity": "HIGH",
-      "stars": 2228,
-      "fix_url": "https://github.com/makecindy/cindy/pull/1116",
-      "note": "Pinned builder-util-runtime to &gt;=9.7.0, patching an Electron auto-updater dependency vulnerability (GHSA-p2f4-r6v6-j797). (fix merged Jul 31, 2026)"
     },
     "Doorman11991/smallcode": {
       "severity": "HIGH",

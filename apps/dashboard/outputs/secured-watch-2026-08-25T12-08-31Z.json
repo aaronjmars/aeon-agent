@@ -1,0 +1,196 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon",
+        "description": "Monitoring secured repos across the ecosystem"
+      },
+      "children": [
+        "heading_main",
+        "stack_stats",
+        "separator_1",
+        "heading_new",
+        "stack_items"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Secured by Aeon — 2 new since last check",
+        "level": "h2"
+      }
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "76",
+        "delta": "+2"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "2,354,488",
+        "delta": "+156,053"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_new": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (2)",
+        "level": "h3"
+      }
+    },
+    "stack_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "item_1",
+        "item_2"
+      ]
+    },
+    "item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_1_repo",
+        "item_1_meta_row",
+        "item_1_desc",
+        "item_1_status"
+      ]
+    },
+    "item_1_repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "harry0703/MoneyPrinterTurbo",
+        "href": "https://github.com/harry0703/MoneyPrinterTurbo/commit/28a55ddc1d3f4fc094837352ee9a74e1b264484a"
+      }
+    },
+    "item_1_meta_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "item_1_severity",
+        "item_1_stars"
+      ]
+    },
+    "item_1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "item_1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "115,640★",
+        "variant": "muted"
+      }
+    },
+    "item_1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Missing API-key enforcement on /api/v1 routes - wired verify_token into the video and LLM-proxy routers (CWE-306).",
+        "variant": "body"
+      }
+    },
+    "item_1_status": {
+      "type": "Text",
+      "props": {
+        "text": "Fixed upstream Aug 22, 2026",
+        "variant": "caption"
+      }
+    },
+    "item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "item_2_repo",
+        "item_2_meta_row",
+        "item_2_desc",
+        "item_2_status"
+      ]
+    },
+    "item_2_repo": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Wei-Shaw/sub2api",
+        "href": "https://github.com/Wei-Shaw/sub2api/pull/6122"
+      }
+    },
+    "item_2_meta_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "item_2_severity",
+        "item_2_stars"
+      ]
+    },
+    "item_2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "item_2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "39,151★",
+        "variant": "muted"
+      }
+    },
+    "item_2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "Bumped dompurify to patch a sanitizer-bypass XSS reachable via USE_PROFILES (CVE-2026-65913 + ~18 related advisories).",
+        "variant": "body"
+      }
+    },
+    "item_2_status": {
+      "type": "Text",
+      "props": {
+        "text": "Fix merged Aug 24, 2026",
+        "variant": "caption"
+      }
+    }
+  }
+}
