@@ -1,0 +1,100 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat"
+      },
+      "children": [
+        "alert_attention",
+        "separator_main",
+        "pr_container"
+      ]
+    },
+    "alert_attention": {
+      "type": "Alert",
+      "props": {
+        "title": "1 item needs attention",
+        "type": "warning"
+      }
+    },
+    "separator_main": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "pr_status_line",
+        "pr_metadata",
+        "pr_note_text"
+      ]
+    },
+    "pr_status_line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "status_badge",
+        "pr_title_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 STALLED",
+        "variant": "destructive"
+      }
+    },
+    "pr_title_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #954: feat: add cortx-reliability skill — x402 endpoint reliability check",
+        "href": "https://github.com/aaronjmars/aeon/pull/954",
+        "source": "aaronjmars/aeon"
+      }
+    },
+    "pr_metadata": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "open_duration",
+        "opened_timestamp"
+      ]
+    },
+    "open_duration": {
+      "type": "Text",
+      "props": {
+        "text": "open 24h23m",
+        "variant": "caption"
+      }
+    },
+    "opened_timestamp": {
+      "type": "Text",
+      "props": {
+        "text": "opened 2026-08-24T21:46:15Z",
+        "variant": "caption"
+      }
+    },
+    "pr_note_text": {
+      "type": "Text",
+      "props": {
+        "text": "crossed the 24h stall bar since this morning's check",
+        "variant": "muted"
+      }
+    }
+  }
+}
