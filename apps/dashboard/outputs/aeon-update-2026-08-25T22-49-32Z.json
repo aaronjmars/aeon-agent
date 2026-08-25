@@ -1,0 +1,410 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update",
+        "description": "2026-08-25: synced 25 upstream commits → PR #198"
+      },
+      "children": [
+        "status-row",
+        "sep-1",
+        "pr-link",
+        "sep-2",
+        "stats-row",
+        "sep-3",
+        "headline-section",
+        "sep-4",
+        "commit-info",
+        "sep-5",
+        "needs-section",
+        "sep-6",
+        "messages-section"
+      ]
+    },
+    "status-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "status-badge",
+        "repo-badge"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ PR #198",
+        "variant": "default"
+      }
+    },
+    "repo-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "aeonfun/aeon",
+        "variant": "secondary"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #198",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/198",
+        "source": "GitHub"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-commits",
+        "stat-files",
+        "stat-add",
+        "stat-update",
+        "stat-merge"
+      ]
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits synced",
+        "value": "25"
+      }
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "Files applied",
+        "value": "51"
+      }
+    },
+    "stat-add": {
+      "type": "Stat",
+      "props": {
+        "label": "Added",
+        "value": "10"
+      }
+    },
+    "stat-update": {
+      "type": "Stat",
+      "props": {
+        "label": "Updated",
+        "value": "36"
+      }
+    },
+    "stat-merge": {
+      "type": "Stat",
+      "props": {
+        "label": "Auto-merged",
+        "value": "5"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "headline-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "headline-title",
+        "headline-desc",
+        "headline-bullets"
+      ]
+    },
+    "headline-title": {
+      "type": "Heading",
+      "props": {
+        "text": "#912 Phase-2 Secret Hardening",
+        "level": "h3"
+      }
+    },
+    "headline-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Channel delivery moved to a post-run dispatcher, dead channel creds no longer bind into every skill's env.",
+        "variant": "body"
+      }
+    },
+    "headline-bullets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "bullet-1",
+        "bullet-2",
+        "bullet-3",
+        "bullet-4"
+      ]
+    },
+    "bullet-1": {
+      "type": "Text",
+      "props": {
+        "text": "• Egress-audit action",
+        "variant": "caption"
+      }
+    },
+    "bullet-2": {
+      "type": "Text",
+      "props": {
+        "text": "• ESLint + ShellCheck gates",
+        "variant": "caption"
+      }
+    },
+    "bullet-3": {
+      "type": "Text",
+      "props": {
+        "text": "• FX harness dispatch fix",
+        "variant": "caption"
+      }
+    },
+    "bullet-4": {
+      "type": "Text",
+      "props": {
+        "text": "• OpenAI/MiniMax/Kiro plugin manifests",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "commit-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "commit-range",
+        "baseline-note"
+      ]
+    },
+    "commit-range": {
+      "type": "Text",
+      "props": {
+        "text": "Commit range: b7a909a..8b8d719",
+        "variant": "caption"
+      }
+    },
+    "baseline-note": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline advances on merge.",
+        "variant": "muted"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "needs-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "needs-title",
+        "needs-alert",
+        "need-skills",
+        "need-conflicts",
+        "need-aeon"
+      ]
+    },
+    "needs-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Needs you (13)",
+        "level": "h3"
+      }
+    },
+    "needs-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Action required before merge",
+        "message": "13 items require manual attention",
+        "type": "warning"
+      }
+    },
+    "need-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "skills-heading",
+        "skills-list",
+        "skills-reason"
+      ]
+    },
+    "skills-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2 new skills held back",
+        "level": "h4"
+      }
+    },
+    "skills-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill-rightstack",
+        "skill-article"
+      ]
+    },
+    "skill-rightstack": {
+      "type": "Badge",
+      "props": {
+        "text": "rightstack",
+        "variant": "outline"
+      }
+    },
+    "skill-article": {
+      "type": "Badge",
+      "props": {
+        "text": "skill-article",
+        "variant": "outline"
+      }
+    },
+    "skills-reason": {
+      "type": "Text",
+      "props": {
+        "text": "Can't run eyebrow/catalog gen in-sandbox, so shipping them would go CI-red. One-line manual step in the PR.",
+        "variant": "caption"
+      }
+    },
+    "need-conflicts": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "conflicts-heading",
+        "conflicts-desc",
+        "conflicts-critical"
+      ]
+    },
+    "conflicts-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "10 conflicts",
+        "level": "h4"
+      }
+    },
+    "conflicts-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Mostly six→seven / 75→77 count bumps colliding with this fork's own numbers.",
+        "variant": "caption"
+      }
+    },
+    "conflicts-critical": {
+      "type": "Alert",
+      "props": {
+        "title": "Critical: .github/workflows/aeon.yml",
+        "message": "Phase-2 secret rework lands here, over your narrowed env block",
+        "type": "error"
+      }
+    },
+    "need-aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-text"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon.yml default toggle",
+        "level": "h4"
+      }
+    },
+    "aeon-text": {
+      "type": "Text",
+      "props": {
+        "text": "Default toggle to eyeball.",
+        "variant": "caption"
+      }
+    },
+    "sep-6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "messages-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "messages-title",
+        "messages-desc",
+        "messages-note"
+      ]
+    },
+    "messages-title": {
+      "type": "Heading",
+      "props": {
+        "text": "messages.yml",
+        "level": "h3"
+      }
+    },
+    "messages-desc": {
+      "type": "Text",
+      "props": {
+        "text": "Resolved itself via 3-way merge this run (pending since #193).",
+        "variant": "body"
+      }
+    },
+    "messages-note": {
+      "type": "Text",
+      "props": {
+        "text": "Merge #198 and the watermark moves.",
+        "variant": "muted"
+      }
+    }
+  }
+}
