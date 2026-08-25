@@ -7,29 +7,32 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "test": "node test/replay-guard.test.mjs"
+    "test": "node test/replay-guard.test.mjs",
+    "lint": "eslint ."
   },
   "cloudflare": {
     "bindings": {
       "TELEGRAM_BOT_TOKEN": {
-        "description": "Bot token from @BotFather — open t.me/BotFather, send /newbot (or /token for an existing bot), and paste the token it replies with."
+        "description": "Bot token from @BotFather \u2014 open t.me/BotFather, send /newbot (or /token for an existing bot), and paste the token it replies with."
       },
       "TELEGRAM_CHAT_ID": {
-        "description": "Your Telegram chat ID — only this chat can command the agent. Message your bot, then open api.telegram.org/bot<TOKEN>/getUpdates and copy chat.id."
+        "description": "Your Telegram chat ID \u2014 only this chat can command the agent. Message your bot, then open api.telegram.org/bot<TOKEN>/getUpdates and copy chat.id."
       },
       "TELEGRAM_WEBHOOK_SECRET": {
-        "description": "Random string you choose (any secure value). Pass the SAME value to setWebhook as secret_token — the Worker rejects every update with 403 until it's set."
+        "description": "Random string you choose (any secure value). Pass the SAME value to setWebhook as secret_token \u2014 the Worker rejects every update with 403 until it's set."
       },
       "GITHUB_REPO": {
-        "description": "owner/repo of YOUR Aeon fork (where the GitHub Actions run) — not this worker repo."
+        "description": "owner/repo of YOUR Aeon fork (where the GitHub Actions run) \u2014 not this worker repo."
       },
       "GITHUB_TOKEN": {
-        "description": "GitHub PAT — fine-grained with Contents: read/write + Actions: read/write on your fork, or a classic token with repo scope."
+        "description": "GitHub PAT \u2014 fine-grained with Contents: read/write + Actions: read/write on your fork, or a classic token with repo scope."
       }
     }
   },
   "devDependencies": {
-    "wrangler": "4.123.0"
+    "wrangler": "4.123.0",
+    "eslint": "^9.39.5",
+    "globals": "^15.15.0"
   },
   "dependencies": {
     "@microlabs/otel-cf-workers": "^1.0.0-rc.52",
