@@ -66,3 +66,16 @@ skills/remotion/project/props.json
 
 # eyebrow local snapshot cache (content-addressed; not committed)
 .eyebrow/
+
+# Run-scratch that leaked via mis-anchored ignores (fleet-hardening 2026-08-25):
+# staged LLM payloads (xai grok x_search), intermediate skill working dirs, and
+# stray root tweet-digest outputs. Root-anchored so they never re-commit. The
+# committed dashboard run-history under apps/dashboard/outputs/ is intentional and
+# is NOT ignored here.
+/.aeon-tmp/
+/.sw-tmp/
+/.scratch/
+/xai-td*.json
+/.pending-xai-td*.json
+/digest-*.md
+/output-tweet-digest-*.md
