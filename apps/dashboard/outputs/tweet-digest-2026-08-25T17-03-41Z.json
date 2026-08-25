@@ -1,0 +1,123 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-25"
+      },
+      "children": [
+        "heading_shipped",
+        "stack_shipped",
+        "sep1",
+        "heading_growth",
+        "stack_growth",
+        "sep2",
+        "heading_community",
+        "stack_community"
+      ]
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped & Content",
+        "level": "h2"
+      }
+    },
+    "stack_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_shipped1",
+        "link_shipped2",
+        "link_shipped3"
+      ]
+    },
+    "link_shipped1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "showcasing the BlockEcho @Uniswap hook, built by an aeon agent — short video teased",
+        "href": "https://x.com/aeonframework/status/2092255422396731885",
+        "source": "@aeonframework"
+      }
+    },
+    "link_shipped2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "new blog post on using soul.md + strategy.md to give an aeon agent character and direction",
+        "href": "https://x.com/aeonframework/status/2092246999277969557",
+        "source": "@aeonframework"
+      }
+    },
+    "link_shipped3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pushed a fix to google/agents-cli",
+        "href": "https://x.com/aeonframework/status/2092204197890408843",
+        "source": "@aeonframework"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_growth": {
+      "type": "Heading",
+      "props": {
+        "text": "Growth",
+        "level": "h2"
+      }
+    },
+    "stack_growth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_growth1"
+      ]
+    },
+    "link_growth1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "teased a possible @CoinMarketCap listing \"soon\"",
+        "href": "https://x.com/aeonframework/status/2092284288603431295",
+        "source": "@aeonframework"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading_community": {
+      "type": "Heading",
+      "props": {
+        "text": "Community",
+        "level": "h2"
+      }
+    },
+    "stack_community": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "link_community1"
+      ]
+    },
+    "link_community1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "dropped Aeon-branded Telegram stickers",
+        "href": "https://x.com/aeonframework/status/2092260921003344352",
+        "source": "@aeonframework"
+      }
+    }
+  }
+}

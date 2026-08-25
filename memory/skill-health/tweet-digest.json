@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-24T17:17:30Z",
-  "quality_score": 3,
-  "assessment": "Competently executed fetch, organized tweets into themes with verifiable links, and logged properly. Scope limited to single account and some tweet summaries are vague, reducing actionable insight—serves tracking priority but doesn't strengthen shipping/fork-ability goals.",
+  "last_analyzed": "2026-08-25T17:03:41Z",
+  "quality_score": 4,
+  "assessment": "Well-structured digest of @aeonframework tweets grouped by theme (Shipped, Growth, Community), with specific URLs and http=200 verification; correctly deduped against memory and logged. Aligns with strategy's documentation/momentum tracking priorities.",
   "flags": [],
   "avg_score": 3.9,
   "history": [
-    {
-      "date": "2026-07-22",
-      "score": 4
-    },
     {
       "date": "2026-07-23",
       "score": 3
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-24",
       "score": 3
+    },
+    {
+      "date": "2026-08-25",
+      "score": 4
     }
   ]
 }
