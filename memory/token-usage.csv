@@ -392,3 +392,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-08-25,heartbeat,claude-sonnet-5,17204,9198,888575,80444
 2026-08-25,heartbeat,claude-sonnet-5,2350,5375,733881,48835
 2026-08-25,aeon-update,claude-opus-4-8,4274,54604,5700357,104683
+2026-08-25,heartbeat,claude-sonnet-5,6143,9878,891648,66144
