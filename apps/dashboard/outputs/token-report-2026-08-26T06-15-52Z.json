@@ -1,0 +1,110 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status_badge",
+        "main_text",
+        "separator_1",
+        "metrics_stack",
+        "separator_2",
+        "whale_info",
+        "chart_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CONSOLIDATING",
+        "variant": "outline"
+      }
+    },
+    "main_text": {
+      "type": "Text",
+      "props": {
+        "text": "Price down 22.2% on just 0.32x average volume — a low-conviction pullback, whale flow sell-heavy (12 sells vs 5 buys) but not enough volume to confirm a breakdown.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator"
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liq_stat",
+        "vol_stat",
+        "buys_sells_stat",
+        "whales_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.0000274",
+        "delta": "-22.2%",
+        "trend": "down"
+      }
+    },
+    "liq_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1,513.6K",
+        "delta": "-17.0%",
+        "trend": "down"
+      }
+    },
+    "vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$130.4K",
+        "delta": "0.32x 7d avg"
+      }
+    },
+    "buys_sells_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells Ratio",
+        "value": "1.33x",
+        "delta": "290/218 trades"
+      }
+    },
+    "whales_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Wallets",
+        "value": "17"
+      }
+    },
+    "separator_2": {
+      "type": "Separator"
+    },
+    "whale_info": {
+      "type": "Text",
+      "props": {
+        "text": "Whale flow: 12 sells vs 5 buys",
+        "variant": "caption"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
