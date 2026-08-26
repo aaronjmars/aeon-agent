@@ -1,18 +1,18 @@
-Fleet is fully green — no notification needed this cycle. Here's the summary.
+Nothing needs attention beyond what's already been reported (deduped), so per the skill's rules, no notification is sent for this run.
 
-## Heartbeat — Ambient Check (2026-08-25, 23:35 UTC)
+## Heartbeat — Ambient Check — 2026-08-26 19:32 UTC
 
-**P0 — Failed/stuck skills:** CLEAR. All 10 enabled skills (`changelog`, `aeon-update`, `shiplog`, `memory-flush`, `token-report`, `holdings`, `repo-pulse`, `tweet-digest`, `secured-watch`, `heartbeat`) show `last_status: success`, 0 consecutive failures, 100% success rates. `aeon-update` landed a new sync since the last check (PR #198, `b7a909a..8b8d719`, 22:50 UTC). Heartbeat self-check clear (last success ~1h ago).
+**Overall: 🟡 WATCH** (carried from PR #954 stall — already reported, no new signal)
 
-**P1 — Stalled PRs/urgent issues:** No new signal. PR #954 (cortx-reliability skill) is still open at ~25h49m stalled but was already reported at 22:09 UTC — deduped, not re-sent. PR #967 is too fresh (~1h17m) to flag. No urgent-labeled issues, no open PRs on minitor/aeon-agent.
+- **P0 (fleet health): CLEAR** — all 10 enabled skills (`changelog`, `aeon-update`, `shiplog`, `memory-flush`, `token-report`, `holdings`, `repo-pulse`, `tweet-digest`, `secured-watch`, `heartbeat`) show `last_status: success`, 0 consecutive failures, 100% success rate. No stuck/failed entries. Heartbeat's own self-check clean (~20h since last success, well under 36h).
+- **P1 (PRs/issues): no new signal.** PR #954 on `aaronjmars/aeon` ("cortx-reliability skill") is still open at ~45h46m — already surfaced yesterday and within the 48h dedup window, so not re-notified. Four fresh PRs today (#969–#972) are all under 7h old, none stalled. PR #967 has closed/merged since yesterday's check. Zero urgent-labeled issues across `aeon`, `minitor`, `aeon-agent`; zero open PRs on `minitor`/`aeon-agent`.
+- **P2 (memory follow-ups): CLEAR** — no unresolved flags in MEMORY.md; `memory/issues/INDEX.md` has 0 open rows.
+- **P3 (schedule coverage): CLEAR** — every enabled skill ran within its schedule interval.
+- **Aside:** the long-standing working-tree anomaly (`AGENTS.md` shown deleted, `notify`/`notify-jsonrender` untracked, persisting since 08-18) is unchanged — still out of heartbeat's checked scope, still needs a human/skill decision.
 
-**P2 — Flagged memory:** CLEAR, unchanged.
+**Status page:** `docs/status.md` regenerated — Updated 2026-08-26 19:32 UTC, Token pulse refreshed to today's report (AEON $0.0000274, -22.2% 24h, CONSOLIDATING), skill table reordered by latest runs, next scheduled run = token-report tomorrow 06:00 UTC.
 
-**P3 — Missing scheduled skills:** CLEAR, all within schedule.
-
-**Known aside (unchanged, out of scope):** `AGENTS.md` still deleted-uncommitted, `notify`/`notify-jsonrender` still untracked in the working tree — flagged repeatedly since 08-18, still needs a human/skill decision.
-
-**Status page:** `docs/status.md` refreshed — Overall stays 🟡 WATCH (carried from the #954 stall, no new flags), skill table reordered with `aeon-update`'s 22:50 UTC success now on top.
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
-Ran the ambient heartbeat check (4th pass today). Everything is green except the already-reported PR #954 stall. Updated `docs/status.md` and appended a log entry to `memory/logs/2026-08-25.md`. No notification sent (nothing new). No follow-up needed beyond the standing `AGENTS.md`/`notify` working-tree cleanup decision.
+Ran the ambient fleet-health check: fleet is fully green (P0/P2/P3 clear), only outstanding flag is the already-reported PR #954 stall (deduped, no re-notification). Updated `docs/status.md` with fresh token pulse and skill-health table, and appended the `### heartbeat` log entry to `memory/logs/2026-08-26.md`. No further action needed until the next scheduled run or a new signal appears.
