@@ -1,0 +1,128 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "Tweet Digest — 2026-08-26"
+      },
+      "children": [
+        "heading_shipped",
+        "stack_shipped",
+        "separator_1",
+        "heading_comparisons",
+        "stack_comparisons",
+        "separator_2",
+        "heading_miroshark",
+        "stack_miroshark"
+      ]
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h3"
+      }
+    },
+    "stack_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_1",
+        "tweet_2",
+        "tweet_3"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "uniswap v4 hooks made by aeon are live on ethereum mainnet — after base and the robinhood chain — [link](https://x.com/aeonframework/status/2092641553831301186)"
+      }
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "aeon skills now run on 7 harnesses — claude, openai codex, grok, kimi moonshot, pi, mistral vibe, vercel. one supercar, seven engines — [link](https://x.com/aeonframework/status/2092313415159021812)"
+      }
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner v2 teased — \"imagine what we can secure... limitless\" — [link](https://x.com/aeonframework/status/2092306758110687722)"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_comparisons": {
+      "type": "Heading",
+      "props": {
+        "text": "Comparisons",
+        "level": "h3"
+      }
+    },
+    "stack_comparisons": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_4"
+      ]
+    },
+    "tweet_4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "round 1 of a new series — aeon vs NousResearch's Hermes — kicks off a head-to-head look at agentic frameworks — [link](https://x.com/aeonframework/status/2092540850492326395)"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_miroshark": {
+      "type": "Heading",
+      "props": {
+        "text": "Miroshark",
+        "level": "h3"
+      }
+    },
+    "stack_miroshark": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet_5"
+      ]
+    },
+    "tweet_5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "reminder that miroshark runs 10-min multi-agent football sims for $1 via x402, for match predictions — [link](https://x.com/aeonframework/status/2092591544423301351)"
+      }
+    }
+  }
+}

@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-25T17:03:41Z",
-  "quality_score": 4,
-  "assessment": "Well-structured digest of @aeonframework tweets grouped by theme (Shipped, Growth, Community), with specific URLs and http=200 verification; correctly deduped against memory and logged. Aligns with strategy's documentation/momentum tracking priorities.",
+  "last_analyzed": "2026-08-26T18:04:22Z",
+  "quality_score": 3,
+  "assessment": "Well-executed monitoring skill with proper structure and dedup logic; tracks momentum via tweets but doesn't drive shipping or north-star metrics.",
   "flags": [],
   "avg_score": 3.9,
   "history": [
-    {
-      "date": "2026-07-23",
-      "score": 3
-    },
     {
       "date": "2026-07-24",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-25",
       "score": 4
+    },
+    {
+      "date": "2026-08-26",
+      "score": 3
     }
   ]
 }
