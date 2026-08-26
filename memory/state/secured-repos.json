@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-08-25",
-  "total_repos": 76,
-  "total_stars": 2354488,
+  "updated_at": "2026-08-26",
+  "total_repos": 77,
+  "total_stars": 2360205,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -302,6 +302,12 @@
       "stars": 7015,
       "fix_url": "https://github.com/katanemo/plano/pull/1001",
       "note": "Dep-bump serde_with, tokio-postgres, turbo, undici, and next to patch CVEs across the Rust and JS stacks. (fix merged Jul 27, 2026)"
+    },
+    "google/agents-cli": {
+      "severity": "HIGH+MEDIUM",
+      "stars": 5717,
+      "fix_url": "https://github.com/google/agents-cli/issues/51",
+      "note": "Symlink-follow arbitrary file read (CWE-59) + agent_directory path traversal (CWE-22) in the `agents create` remote-template copy. (fixed upstream Aug 24, 2026)"
     },
     "dograh-hq/dograh": {
       "severity": "HIGH",

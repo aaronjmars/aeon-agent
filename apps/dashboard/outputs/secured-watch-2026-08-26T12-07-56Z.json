@@ -1,0 +1,139 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-title",
+        "stack-metrics",
+        "separator-1",
+        "heading-newly",
+        "item-1"
+      ]
+    },
+    "heading-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Secured by Aeon — new since last check",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-repos",
+        "stat-stars"
+      ]
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "77",
+        "delta": "+1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "2,360,205",
+        "delta": "+5,717",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-newly": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (1)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story-1",
+        "stack-meta-1",
+        "text-desc-1"
+      ]
+    },
+    "story-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "google/agents-cli",
+        "href": "https://github.com/google/agents-cli/issues/51",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "stack-meta-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-severity",
+        "text-stars"
+      ]
+    },
+    "badge-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "text-stars": {
+      "type": "Text",
+      "props": {
+        "text": "5,717★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "text-desc-1": {
+      "type": "Text",
+      "props": {
+        "text": "Symlink-follow arbitrary file read (CWE-59) + agent_directory path traversal (CWE-22) in the `agents create` remote-template copy. (fixed upstream Aug 24, 2026)",
+        "variant": "body"
+      },
+      "children": []
+    }
+  }
+}
