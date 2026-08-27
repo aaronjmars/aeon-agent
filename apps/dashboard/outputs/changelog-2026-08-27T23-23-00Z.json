@@ -1,0 +1,192 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog — 2026-08-27",
+        "description": "Week of 2026-08-27"
+      },
+      "children": [
+        "text_intro",
+        "stack_summary",
+        "separator1",
+        "stack_top_changes",
+        "separator2",
+        "stack_other_repos",
+        "link_full_changelog"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "3 repos scanned with 25 user-facing changes"
+      },
+      "children": []
+    },
+    "stack_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_aeonfun",
+        "grid_changes"
+      ]
+    },
+    "heading_aeonfun": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "grid_changes": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat_total",
+        "stat_security",
+        "stat_added",
+        "stat_fixed",
+        "stat_changed"
+      ]
+    },
+    "stat_total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total",
+        "value": "25"
+      },
+      "children": []
+    },
+    "stat_security": {
+      "type": "Stat",
+      "props": {
+        "label": "Security",
+        "value": "3"
+      },
+      "children": []
+    },
+    "stat_added": {
+      "type": "Stat",
+      "props": {
+        "label": "Added",
+        "value": "8"
+      },
+      "children": []
+    },
+    "stat_fixed": {
+      "type": "Stat",
+      "props": {
+        "label": "Fixed",
+        "value": "11"
+      },
+      "children": []
+    },
+    "stat_changed": {
+      "type": "Stat",
+      "props": {
+        "label": "Changed",
+        "value": "3"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_top_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_top",
+        "text_secretcurl",
+        "text_tokens",
+        "text_harnesses"
+      ]
+    },
+    "heading_top": {
+      "type": "Heading",
+      "props": {
+        "text": "Top Changes",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_secretcurl": {
+      "type": "Text",
+      "props": {
+        "text": "secretcurl argv secret-leak fixed"
+      },
+      "children": []
+    },
+    "text_tokens": {
+      "type": "Text",
+      "props": {
+        "text": "infra tokens pulled from every skill's runtime env"
+      },
+      "children": []
+    },
+    "text_harnesses": {
+      "type": "Text",
+      "props": {
+        "text": "4 new run harnesses: fx, Cursor, Hermes, GLM"
+      },
+      "children": []
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_other_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_other",
+        "text_other"
+      ]
+    },
+    "heading_other": {
+      "type": "Heading",
+      "props": {
+        "text": "Other Repos",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_other": {
+      "type": "Text",
+      "props": {
+        "text": "minitor/opendia/soul.md: no user-facing changes"
+      },
+      "children": []
+    },
+    "link_full_changelog": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Changelog",
+        "href": "output/articles/changelog-2026-08-27.md"
+      },
+      "children": []
+    }
+  }
+}

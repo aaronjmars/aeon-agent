@@ -1,8 +1,4 @@
-ℹ️ Changelog synced
+ℹ️ Changelog — 2026-08-27
 
-*Changelog (push-to) — 2026-08-24*
-aaronjmars/aeon → aaronjmars/aeon-website
-17 new PRs → changelog entry "Vercel fx harness + secretcurl leak fix"
-PR: https://github.com/aaronjmars/aeon-website/pull/301
-
-🔗 https://github.com/aaronjmars/aeon-website/pull/301
+*Changelog — Week of 2026-08-27*
+3 repos scanned: 25 user-facing changes on aeonfun/aeon (3 security, 8 added, 11 fixed, 3 changed). Top: secretcurl argv secret-leak fixed + infra tokens pulled from every skill's runtime env; 4 new run harnesses (fx, Cursor, Hermes, GLM). minitor/opendia/soul.md: no user-facing changes. Full: output/articles/changelog-2026-08-27.md

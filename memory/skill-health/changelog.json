@@ -1,12 +1,10 @@
 {
   "skill": "changelog",
-  "last_analyzed": "2026-08-24T08:18:37Z",
-  "quality_score": 2,
-  "assessment": "Fluent but unverifiable: claims 17 specific PRs (#926–#942), a secretcurl security fix, and draft PR #301, but operates on aaronjmars/aeon (not canonical aeonfun/aeon per CLAUDE.md) and presents detailed technical claims that read invented and cannot be independently verified.",
-  "flags": [
-    "unverifiable_claim"
-  ],
-  "avg_score": 3.25,
+  "last_analyzed": "2026-08-27T23:23:00Z",
+  "quality_score": 4,
+  "assessment": "Substantive, well-structured changelog documenting shipped framework features and security fixes; directly serves strategy priority to show shipped work and lower fork barriers; output appears genuine and properly executed with verified file writes.",
+  "flags": [],
+  "avg_score": 3.4,
   "history": [
     {
       "date": "2026-07-27",
@@ -23,6 +21,10 @@
     {
       "date": "2026-08-24",
       "score": 2
+    },
+    {
+      "date": "2026-08-27",
+      "score": 4
     }
   ]
 }
