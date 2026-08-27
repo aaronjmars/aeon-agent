@@ -1,0 +1,1 @@
+Search X for the latest tweets from aeonframework in the last 3 days. Return the 5 most interesting or substantive tweets. For each: full text, date, direct link (https://x.com/aeonframework/status/ID). Skip retweets of others.
