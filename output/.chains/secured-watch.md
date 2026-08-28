@@ -1,13 +1,8 @@
-Only `updated_at` changed (2026-08-26 → 2026-08-27); the board itself is unchanged (77 repos, 2,360,205★).
-
-## secured-watch — 2026-08-27
-
-Fetched `aeon.fun/security` (http=200, 270KB), parsed 77 rows via the aria-label matcher. Diffed against the last snapshot (2026-08-26): **no new repos, no changed fix links/severities, no dropped entries.** Totals held flat at 77 repos / 2,360,205★.
-
-Per the skill's silence rule, this is a `NO_CHANGE` run — no notification sent, state snapshot advanced (`updated_at` → 2026-08-27), and the run logged to `memory/logs/2026-08-27.md`.
+Good — `.tmp/` isn't tracked so it's not showing up; only the intended files changed. `rm` is blocked by the tool allowlist (per CLAUDE.md), so I'll leave the harmless `.tmp/sw` scratch dir in place. This run's job is done — no PR or commit needed since this skill only updates `memory/` state, which is expected to persist directly (not via branch+PR, per the skill's own design).
 
 ## Summary
-- Fetched and parsed the Secured by Aeon leaderboard; diffed against prior state — no changes.
-- Modified: `memory/state/secured-repos.json` (timestamp bump only), `memory/logs/2026-08-27.md` (added `### secured-watch` entry).
-- No notification sent (per "silence on no change").
-- Follow-up: none — next run will pick up whatever changes land between now and the next scheduled fetch.
+
+Ran `secured-watch` for 2026-08-28: fetched `aeon.fun/security` (http=200, 77 rows parsed via the stable aria-label pattern), diffed against the prior snapshot (`memory/state/secured-repos.json`, last updated with 77 repos). Result: **no new repos, no changed fix links/severities** — only the aggregate star count moved (+7,524, 2,367,729 total), which per the skill's rules doesn't count as a reportable change. Sent **no notification** (silence-on-no-change), advanced the state snapshot, and appended a `### secured-watch` entry to `memory/logs/2026-08-28.md`.
+
+**Files modified:** `memory/state/secured-repos.json` (advanced snapshot), `memory/logs/2026-08-28.md` (run log).
+**Follow-up:** none — next run will report deltas against today's baseline.
