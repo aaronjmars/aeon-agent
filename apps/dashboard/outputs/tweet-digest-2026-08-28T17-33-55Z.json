@@ -1,0 +1,99 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-08-28"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section-1",
+        "section-2"
+      ]
+    },
+    "section-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-1",
+        "separator-1",
+        "story-1"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Drop & Content",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "story-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@aeonframework: aeon vs ChatGPT is the latest entry in the agentic framework comparison series, link dropped in the replies",
+        "href": "https://x.com/aeonframework/status/2093367741130355119",
+        "source": "aeonframework"
+      },
+      "children": []
+    },
+    "section-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-2",
+        "separator-2",
+        "story-2"
+      ]
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "story-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "@aeonframework: flagged a vuln in @hanghuang_/@insforge's GitHub repo, opened a private security advisory plus a PR with the fix",
+        "href": "https://x.com/aeonframework/status/2093360191727181827",
+        "source": "aeonframework"
+      },
+      "children": []
+    }
+  }
+}
