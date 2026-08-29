@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-28T17:33:55Z",
-  "quality_score": 3,
-  "assessment": "Completed the task adequately — fetched tweets via Grok API (http=200), deduped against prior runs, sent digest, logged results properly; methodology is transparent and plausible, though tweet details cannot be independently verified",
+  "last_analyzed": "2026-08-29T17:04:21Z",
+  "quality_score": 4,
+  "assessment": "Substantive skill execution with documented workflow, real-looking tweet data, and proper dedup logic; aligns with momentum-tracking priority but outside main shipping focus",
   "flags": [],
   "avg_score": 3.83,
   "history": [
-    {
-      "date": "2026-07-26",
-      "score": 4
-    },
     {
       "date": "2026-07-27",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-28",
       "score": 3
+    },
+    {
+      "date": "2026-08-29",
+      "score": 4
     }
   ]
 }

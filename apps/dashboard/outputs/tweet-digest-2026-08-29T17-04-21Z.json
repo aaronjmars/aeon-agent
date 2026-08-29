@@ -1,0 +1,79 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-08-29"
+      },
+      "children": [
+        "badge_theme1",
+        "tweet1",
+        "sep1",
+        "badge_theme2",
+        "tweet2",
+        "sep2",
+        "badge_theme3",
+        "tweet3"
+      ]
+    },
+    "badge_theme1": {
+      "type": "Badge",
+      "props": {
+        "text": "Skill Drop & Content",
+        "variant": "secondary"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "comparison series continues — aeon vs another agentic framework, full breakdown linked in the replies — https://x.com/aeonframework/status/2093590019793469485"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "badge_theme2": {
+      "type": "Badge",
+      "props": {
+        "text": "Growth & Partnerships",
+        "variant": "secondary"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "teases a three-way tie-up — aeon x @FD_XYZ x @CoinMarketCap, framed as \"building the agent economy\" — https://x.com/aeonframework/status/2093409690319290467"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "badge_theme3": {
+      "type": "Badge",
+      "props": {
+        "text": "Security disclosures",
+        "variant": "secondary"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "flags a vuln in TencentCloud's TencentDB-Agent-Memory repo — private advisory + fix PR filed, DMs open — https://x.com/aeonframework/status/2093583641607581971"
+      }
+    }
+  }
+}
