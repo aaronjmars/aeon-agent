@@ -1,0 +1,128 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "⚠️ AEON Token Report"
+      },
+      "children": [
+        "alert_consolidating",
+        "text_main_para",
+        "separator_1",
+        "metrics_grid",
+        "separator_2",
+        "text_catalyst",
+        "link_chart"
+      ]
+    },
+    "alert_consolidating": {
+      "type": "Alert",
+      "props": {
+        "title": "$AEON — CONSOLIDATING",
+        "type": "warning"
+      },
+      "children": []
+    },
+    "text_main_para": {
+      "type": "Text",
+      "props": {
+        "text": "Price fell 23.3% to $0.0000230 but on just 0.27x average volume — too thin to confirm a breakdown. Whale flow tilted sharply toward selling (23 sells vs 9 buys on trades ≥$1k).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metrics_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 5,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol",
+        "stat_buysells",
+        "stat_whales"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.0000230",
+        "delta": "-23.3%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1,374.2K",
+        "delta": "-14.8%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$117.2K",
+        "delta": "0.27x 7d avg"
+      },
+      "children": []
+    },
+    "stat_buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "166/150",
+        "delta": "ratio 1.11"
+      },
+      "children": []
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "32"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_catalyst": {
+      "type": "Text",
+      "props": {
+        "text": "Fresh catalyst: OKX confirmed an $AEON listing on Flash Earn Lite for Aug 31.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "link_chart": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      },
+      "children": []
+    }
+  }
+}
