@@ -1,23 +1,14 @@
-Fleet health check complete, everything's clear.
+No findings needed a notification — the fleet is fully clear, so per the skill's rules I'm sending nothing (a clean run stays silent).
 
 ## Summary
 
-Ran the heartbeat ambient check (default branch, `${var}` empty):
+Ran the **heartbeat** skill's ambient fleet-check branch (default, empty `${var}`):
 
-**P0 (skill failures/stuck):** Clear — all 10 enabled skills at 100% success rate, 0 consecutive failures, no stuck dispatches. Heartbeat's own self-check clear (last success ~21h45m ago, well under 36h threshold).
+- **P0 (failed/stuck skills):** clear — all 10 enabled skills show `success`, 0 consecutive failures, 100% success rate.
+- **P1 (stalled PRs/urgent issues):** clear — 3 new PRs on `aeonfun/aeon` (#987–#989), all opened today, none stalled >24h; no urgent-labeled issues on any watched repo.
+- **P2 (flagged memory items):** clear — no open rows in `memory/issues/INDEX.md`. The known working-tree anomaly (`AGENTS.md` deleted, `notify`/`notify-jsonrender` untracked, 13+ days) is unchanged and was deduped per the 48h rule (already logged yesterday).
+- **P3 (missing scheduled skills):** clear — all enabled skills within their schedule interval.
 
-**P1 (stalled PRs/urgent issues):** Clear — 0 open PRs across watched repos (`aeonfun/aeon`, `aeonfun/minitor`, `aeonfun/opendia`, `aeonfun/soul.md`). Noted a discrepancy: prior logs referenced PRs under `aaronjmars/*` repo names, but those return empty now — the org is `aeonfun`, so I checked the correct canonical repos. One open, non-urgent issue on `aeonfun/aeon` (#878, opened 08-17).
+Regenerated `docs/status.md`: Overall 🟢 OK, updated 2026-08-30 19:03 UTC, token pulse AEON $0.0000189 (-18.0% 24h, CONSOLIDATING), next scheduled run token-report at 2026-08-31 06:00 UTC. Logged findings to `memory/logs/2026-08-30.md` under `### heartbeat`.
 
-**P2 (flagged memory):** Clear — no new follow-ups in MEMORY.md, 0 open rows in `memory/issues/INDEX.md`.
-
-**P3 (missing/stale skills):** Clear — every enabled skill ran within its schedule interval.
-
-**Standing anomaly (unchanged, out of scope to fix):** `AGENTS.md` still shows as deleted-uncommitted, `notify`/`notify-jsonrender` still untracked — flagged again but not actionable by this skill.
-
-Since nothing needed attention, no notification was sent (per the skill's "notify only on signal" rule).
-
-**Files modified:**
-- `docs/status.md` — regenerated: Overall 🟢 OK, updated timestamp, refreshed skill-health table, and new Token Pulse row (AEON $0.0000230, -23.3% 24h, CONSOLIDATING) from today's `token-report-2026-08-29.md`.
-- `memory/logs/2026-08-29.md` — appended `### heartbeat` entry with mode/findings/status-page verdict.
-
-**Follow-up needed:** none from this run beyond the standing `AGENTS.md`/`notify` working-tree anomaly, which needs an operator decision (restore vs. delete-and-commit vs. gitignore).
+**Files modified:** `docs/status.md`, `memory/logs/2026-08-30.md`. No follow-up actions needed — fleet is healthy.
