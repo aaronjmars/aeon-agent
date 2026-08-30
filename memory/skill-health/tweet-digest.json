@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-29T17:04:21Z",
-  "quality_score": 4,
-  "assessment": "Substantive skill execution with documented workflow, real-looking tweet data, and proper dedup logic; aligns with momentum-tracking priority but outside main shipping focus",
+  "last_analyzed": "2026-08-30T17:04:23Z",
+  "quality_score": 3,
+  "assessment": "Completed competently with honest reporting, but maintenance work that doesn't advance core priorities (shipping, ecosystem growth, fork barriers)",
   "flags": [],
-  "avg_score": 3.83,
+  "avg_score": 3.8,
   "history": [
-    {
-      "date": "2026-07-27",
-      "score": 4
-    },
     {
       "date": "2026-07-28",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-29",
       "score": 4
+    },
+    {
+      "date": "2026-08-30",
+      "score": 3
     }
   ]
 }
