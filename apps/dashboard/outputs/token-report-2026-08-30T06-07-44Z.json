@@ -1,0 +1,117 @@
+{
+  "root": "card_report",
+  "state": {},
+  "elements": {
+    "card_report": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status_badge",
+        "analysis_text",
+        "separator1",
+        "price_stat",
+        "liq_stat",
+        "vol_stat",
+        "separator2",
+        "metrics_table",
+        "separator3",
+        "chart_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CONSOLIDATING",
+        "variant": "outline"
+      }
+    },
+    "analysis_text": {
+      "type": "Text",
+      "props": {
+        "text": "Price fell 18.0% but on just 0.41x average volume — too thin to confirm a breakdown.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.0000189",
+        "delta": "-18.0%",
+        "trend": "down"
+      }
+    },
+    "liq_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity (24h)",
+        "value": "$1,205.2K",
+        "delta": "-12.3%",
+        "trend": "down"
+      }
+    },
+    "vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (7d avg)",
+        "value": "$114.1K",
+        "delta": "0.41x"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Metric",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Buys",
+            "142"
+          ],
+          [
+            "Sells",
+            "107"
+          ],
+          [
+            "Buy/Sell Ratio",
+            "1.33"
+          ],
+          [
+            "Whales",
+            "26"
+          ]
+        ]
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    }
+  }
+}

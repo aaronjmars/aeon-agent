@@ -1,14 +1,10 @@
-⚠️ AEON Token Report
+ℹ️ AEON Token Report — CONSOLIDATING
 
-*$AEON — CONSOLIDATING*
+*AEON — CONSOLIDATING*
 
-Price fell 23.3% to $0.0000230 but on just 0.27x average volume — too thin to confirm a breakdown. Whale flow tilted sharply toward selling (23 sells vs 9 buys on trades ≥$1k).
+Price fell 18.0% but on just 0.41x average volume — too thin to confirm a breakdown.
 
-Price $0.0000230 (-23.3% 24h) | Liq $1,374.2K (-14.8%) | Vol $117.2K (0.27x 7d)
-Buys/Sells 166/150 (ratio 1.11) | Whales: 32
-
-Fresh catalyst: OKX confirmed an $AEON listing on Flash Earn Lite for Aug 31.
+Price $0.0000189 (-18.0% 24h) | Liq $1,205.2K (-12.3%) | Vol $114.1K (0.41x 7d)
+Buys/Sells 142/107 (ratio 1.33) | Whales: 26
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
-
-🔗 https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
