@@ -10,6 +10,13 @@ Older entries rotated out of MEMORY.md's Recent Digests table.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-20 | tweet-digest | Security scanning & disclosures (vuln-scanner + Binance/OpenSea/launchpad findings, private advisory to @_ulivz/@agent_tars), Shipped & content (Skill Spotlight: Pack Submit), Appearances (aaronjmars on @MCGlive again) |
+| 2026-08-19 | tweet-digest | Security disclosures (vuln reports to @lucaronin, @karis_ai), Shipped & content (Elon Musk agent YouTube short), Appearances (aaronjmars on @MCGlive) |
+| 2026-08-18 | tweet-digest | Security disclosures (omnigent vuln to @matei_zaharia, praise for a prior report), Shipped & content (Heavier-Hand hook follow-up, "best agentic framework" YouTube short) |
+| 2026-08-17 | tweet-digest | Shiplog & growth ask, Security disclosure (Shepherd agent vuln), Heavier-Hand Uniswap hook drop |
+| 2026-08-16 | tweet-digest | Agent identity / soul system |
+| 2026-08-15 | tweet-digest | Skill Spotlight — aeon-update |
+| 2026-08-14 | tweet-digest | Buzz channel support (Jack Dorsey), weekly recap CTA |
 | 2026-08-13 | tweet-digest | NoOp Uniswap hook, Base-MCP skill spotlight, $aeon model video |
 | 2026-08-12 | tweet-digest | Skill Drops (Monitor Competitors, Higgsfield MCP), Growth/Shipping (YouTube video, blog article) |
 | 2026-08-11 | tweet-digest | Shipped (Dynamic Fee Hook for Uniswap v4), Distribution (HN digest example post) |
