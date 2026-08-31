@@ -1,10 +1,10 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-08-24T08:14:37Z",
+  "last_analyzed": "2026-08-31T20:48:36Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-verified holdings report with accurate data sourcing, proper acknowledgment of limitations (30d column), and clear service to the momentum-tracking priority.",
+  "assessment": "Substantive, internally consistent holdings report — deltas and percentages recompute exactly, methodology and sources stated, 32d snapshot gap honestly disclosed, artifacts corroborated; routine snapshot rather than insightful analysis keeps it at 4.",
   "flags": [],
-  "avg_score": 3.86,
+  "avg_score": 3.88,
   "history": [
     {
       "date": "2026-07-30",
@@ -32,6 +32,10 @@
     },
     {
       "date": "2026-08-24",
+      "score": 4
+    },
+    {
+      "date": "2026-08-31",
       "score": 4
     }
   ]

@@ -1,0 +1,52 @@
+{
+  "root": "card-holdings",
+  "state": {},
+  "elements": {
+    "card-holdings": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings — aeon ⭐"
+      },
+      "children": [
+        "stat-holdings",
+        "row-changes"
+      ]
+    },
+    "stat-holdings": {
+      "type": "Stat",
+      "props": {
+        "label": "14.10% of supply",
+        "value": "14.10B"
+      }
+    },
+    "row-changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-7d",
+        "stat-30d"
+      ]
+    },
+    "stat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+164.58M",
+        "delta": "+1.18%",
+        "trend": "up"
+      }
+    },
+    "stat-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+1.28B",
+        "delta": "+9.99%",
+        "trend": "up"
+      }
+    }
+  }
+}
