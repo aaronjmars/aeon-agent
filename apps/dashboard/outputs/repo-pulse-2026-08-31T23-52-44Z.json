@@ -1,0 +1,902 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-08-31"
+      },
+      "children": [
+        "headerRow",
+        "statsGrid",
+        "metricsTable",
+        "sep1",
+        "aeonSection",
+        "sep2",
+        "soulSection",
+        "sep3",
+        "opendiaSection",
+        "sep4",
+        "footerRow"
+      ]
+    },
+    "headerRow": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badgeActive"
+      ]
+    },
+    "badgeActive": {
+      "type": "Badge",
+      "props": {
+        "text": "ACTIVE",
+        "variant": "default"
+      }
+    },
+    "statsGrid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "sm"
+      },
+      "children": [
+        "statAeon",
+        "statSoul",
+        "statOpendia",
+        "statMinitor"
+      ]
+    },
+    "statAeon": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon stars",
+        "value": "711",
+        "delta": "+32",
+        "trend": "up"
+      }
+    },
+    "statSoul": {
+      "type": "Stat",
+      "props": {
+        "label": "soul.md stars",
+        "value": "658",
+        "delta": "+10",
+        "trend": "up"
+      }
+    },
+    "statOpendia": {
+      "type": "Stat",
+      "props": {
+        "label": "opendia stars",
+        "value": "1914",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "statMinitor": {
+      "type": "Stat",
+      "props": {
+        "label": "minitor stars",
+        "value": "16",
+        "delta": "—",
+        "trend": "neutral"
+      }
+    },
+    "metricsTable": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "711 (+32)",
+            "253 (+13)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "658 (+10)",
+            "70 (+2)",
+            "—",
+            "ACTIVE"
+          ],
+          [
+            "opendia",
+            "1914 (+1)",
+            "159 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "16 (—)",
+            "5 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "aeonSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeonHeader",
+        "aeonNotableHeading",
+        "aeonStar1",
+        "aeonOthersLabel",
+        "aeonOthersNames",
+        "aeonForksHeading",
+        "forkA1",
+        "forkA2",
+        "forkA3",
+        "forkA4",
+        "forkA5",
+        "forkA6",
+        "forkA7",
+        "forkA8",
+        "forkA9",
+        "forkA10",
+        "forkA11",
+        "forkA12",
+        "forkA13",
+        "forkA14",
+        "forkA15"
+      ]
+    },
+    "aeonHeader": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aeonHeading",
+        "aeonBadge",
+        "aeonAvg"
+      ]
+    },
+    "aeonHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h3"
+      }
+    },
+    "aeonBadge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "secondary"
+      }
+    },
+    "aeonAvg": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w ≈ 19",
+        "variant": "muted"
+      }
+    },
+    "aeonNotableHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 5 of 25):",
+        "level": "h4"
+      }
+    },
+    "aeonStar1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeonStar1Link",
+        "aeonStar1Links",
+        "aeonStar1Bio"
+      ]
+    },
+    "aeonStar1Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Madhavan Malolan",
+        "href": "https://github.com/madhavanmalolan",
+        "source": "📍 India · 65 repos · 140 followers"
+      }
+    },
+    "aeonStar1Links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aeonStar1Site",
+        "aeonStar1Tw"
+      ]
+    },
+    "aeonStar1Site": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 madhavanmalolan.xyz",
+        "href": "https://madhavanmalolan.xyz"
+      }
+    },
+    "aeonStar1Tw": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @madhavanmalolan",
+        "href": "https://x.com/madhavanmalolan"
+      }
+    },
+    "aeonStar1Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"I love to build things people dont know they need\"",
+        "variant": "muted"
+      }
+    },
+    "aeonOthersLabel": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:",
+        "variant": "muted"
+      }
+    },
+    "aeonOthersNames": {
+      "type": "Text",
+      "props": {
+        "text": "finessionalist | InstinctLabsAG | wesleymtomaz | Matheuscara | mycelious1960 | Chandra77778 | NewTonyStark23 | gitaiclaude | jdiega13 | steliosspap | 16navigabraham | yongsengtan700-lang | andngu | eren7262 | arcticfoxweb | TheGreatestGgoat | ahoken50 | jonmodell | dreamingo88 | zizzfizzix | Kodawari10 | web3Gurung | MilleniumSpark | ataraxies",
+        "variant": "caption"
+      }
+    },
+    "aeonForksHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h4"
+      }
+    },
+    "forkA1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "forumchen388-debug/aeon",
+        "href": "https://github.com/forumchen388-debug/aeon",
+        "source": "1 repo"
+      }
+    },
+    "forkA2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA2Link",
+        "forkA2Links",
+        "forkA2Bio"
+      ]
+    },
+    "forkA2Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "keyurbodar/aeon",
+        "href": "https://github.com/keyurbodar/aeon",
+        "source": "keyur · 9 repos"
+      }
+    },
+    "forkA2Links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA2Tw"
+      ]
+    },
+    "forkA2Tw": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @keyurprmr",
+        "href": "https://x.com/keyurprmr"
+      }
+    },
+    "forkA2Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"nothing\"",
+        "variant": "muted"
+      }
+    },
+    "forkA3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MADRIGAL007/aeon",
+        "href": "https://github.com/MADRIGAL007/aeon",
+        "source": "2 repos"
+      }
+    },
+    "forkA4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "weezyf1995-boop/aeon",
+        "href": "https://github.com/weezyf1995-boop/aeon",
+        "source": "1 repo"
+      }
+    },
+    "forkA5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "elegarmco/aeon",
+        "href": "https://github.com/elegarmco/aeon",
+        "source": "Lena · 716 repos"
+      }
+    },
+    "forkA6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "MagIcKEarl/aeon",
+        "href": "https://github.com/MagIcKEarl/aeon",
+        "source": "2 repos"
+      }
+    },
+    "forkA7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA7Link",
+        "forkA7Links",
+        "forkA7Bio"
+      ]
+    },
+    "forkA7Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Calcutatator/aeon",
+        "href": "https://github.com/Calcutatator/aeon",
+        "source": "Calcutator · 77 repos"
+      }
+    },
+    "forkA7Links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA7Tw"
+      ]
+    },
+    "forkA7Tw": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @Calcutat",
+        "href": "https://x.com/Calcutat"
+      }
+    },
+    "forkA7Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"Calcutat\"",
+        "variant": "muted"
+      }
+    },
+    "forkA8": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA8Link",
+        "forkA8Links",
+        "forkA8Bio"
+      ]
+    },
+    "forkA8Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cultosagent/aeon",
+        "href": "https://github.com/cultosagent/aeon",
+        "source": "Cult OS Agent · 4 repos"
+      }
+    },
+    "forkA8Links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA8Site",
+        "forkA8Tw"
+      ]
+    },
+    "forkA8Site": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 cultos.dev",
+        "href": "https://cultos.dev"
+      }
+    },
+    "forkA8Tw": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @thecultos",
+        "href": "https://x.com/thecultos"
+      }
+    },
+    "forkA8Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"GitHub for agent economy. Automated demo account.\"",
+        "variant": "muted"
+      }
+    },
+    "forkA9": {
+      "type": "StoryLink",
+      "props": {
+        "title": "jsfranklin221/aeon",
+        "href": "https://github.com/jsfranklin221/aeon",
+        "source": "Jared Franklin · 10 repos"
+      }
+    },
+    "forkA10": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA10Link",
+        "forkA10Links",
+        "forkA10Bio"
+      ]
+    },
+    "forkA10Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "thesmithdao/aeon",
+        "href": "https://github.com/thesmithdao/aeon",
+        "source": "TheSmith · 8 repos · 12 followers"
+      }
+    },
+    "forkA10Links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "forkA10Tw"
+      ]
+    },
+    "forkA10Tw": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @akathesmith",
+        "href": "https://x.com/akathesmith"
+      }
+    },
+    "forkA10Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"Web3 architect\"",
+        "variant": "muted"
+      }
+    },
+    "forkA11": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kevin-houston/aeon",
+        "href": "https://github.com/kevin-houston/aeon",
+        "source": "10 repos"
+      }
+    },
+    "forkA12": {
+      "type": "StoryLink",
+      "props": {
+        "title": "theia-ttista/aeon",
+        "href": "https://github.com/theia-ttista/aeon",
+        "source": "1 repo"
+      }
+    },
+    "forkA13": {
+      "type": "StoryLink",
+      "props": {
+        "title": "hansj73/aeon",
+        "href": "https://github.com/hansj73/aeon",
+        "source": "17 repos"
+      }
+    },
+    "forkA14": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kyleobrien91/aeon",
+        "href": "https://github.com/kyleobrien91/aeon",
+        "source": "Kyle O'Brien · London, United Kingdom · 82 repos"
+      }
+    },
+    "forkA15": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Kodawari10/aeon",
+        "href": "https://github.com/Kodawari10/aeon",
+        "source": "1 repo"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "soulSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soulHeader",
+        "soulNotableHeading",
+        "soulStar1",
+        "soulStar2",
+        "soulOthersLabel",
+        "soulOthersNames",
+        "soulForksHeading",
+        "soulFork1",
+        "soulFork2"
+      ]
+    },
+    "soulHeader": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soulHeading",
+        "soulBadge",
+        "soulAvg"
+      ]
+    },
+    "soulHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h3"
+      }
+    },
+    "soulBadge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACTIVE",
+        "variant": "default"
+      }
+    },
+    "soulAvg": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w ≈ 4",
+        "variant": "muted"
+      }
+    },
+    "soulNotableHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 2 of 8):",
+        "level": "h4"
+      }
+    },
+    "soulStar1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soulStar1Link",
+        "soulStar1Links",
+        "soulStar1Bio"
+      ]
+    },
+    "soulStar1Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Annurdien Rasyid",
+        "href": "https://github.com/annurdien",
+        "source": "📍 Jakarta · 55 repos · 100 followers"
+      }
+    },
+    "soulStar1Links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soulStar1Site"
+      ]
+    },
+    "soulStar1Site": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 rasyid.codes",
+        "href": "https://rasyid.codes"
+      }
+    },
+    "soulStar1Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"just for fun\"",
+        "variant": "muted"
+      }
+    },
+    "soulStar2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soulStar2Link",
+        "soulStar2Links",
+        "soulStar2Bio"
+      ]
+    },
+    "soulStar2Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Rafito Juan Saputra",
+        "href": "https://github.com/rafitojuan",
+        "source": "📍 Jakarta, Indonesia · 🏢 PT ENERGI PELABUHAN INDONESIA · 28 repos · 23 followers"
+      }
+    },
+    "soulStar2Links": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soulStar2Site"
+      ]
+    },
+    "soulStar2Site": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 portfolio.rafitojuan.my.id",
+        "href": "https://portfolio.rafitojuan.my.id/"
+      }
+    },
+    "soulStar2Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"I code\"",
+        "variant": "muted"
+      }
+    },
+    "soulOthersLabel": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:",
+        "variant": "muted"
+      }
+    },
+    "soulOthersNames": {
+      "type": "Text",
+      "props": {
+        "text": "wesleymtomaz | zensaintlaurent-source | philippl-onz | kolar0101 | Thinkya1 | eggy4prlnt",
+        "variant": "caption"
+      }
+    },
+    "soulForksHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h4"
+      }
+    },
+    "soulFork1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "elegarmco/soul.md",
+        "href": "https://github.com/elegarmco/soul.md",
+        "source": "Lena · 716 repos"
+      }
+    },
+    "soulFork2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soulFork2Link",
+        "soulFork2Bio"
+      ]
+    },
+    "soulFork2Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ppp727276/soul.md",
+        "href": "https://github.com/ppp727276/soul.md",
+        "source": "riqqles · 20 repos"
+      }
+    },
+    "soulFork2Bio": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soulFork2BioPrev",
+        "soulFork2BioLink",
+        "soulFork2BioSusp"
+      ]
+    },
+    "soulFork2BioPrev": {
+      "type": "Text",
+      "props": {
+        "text": "prev",
+        "variant": "muted"
+      }
+    },
+    "soulFork2BioLink": {
+      "type": "Link",
+      "props": {
+        "label": "https://github.com/suhuudev",
+        "href": "https://github.com/suhuudev"
+      }
+    },
+    "soulFork2BioSusp": {
+      "type": "Text",
+      "props": {
+        "text": "suspened",
+        "variant": "muted"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "opendiaSection": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendiaHeader",
+        "opendiaNotableHeading",
+        "opendiaStar1"
+      ]
+    },
+    "opendiaHeader": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "opendiaHeading",
+        "opendiaBadge",
+        "opendiaAvg"
+      ]
+    },
+    "opendiaHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h3"
+      }
+    },
+    "opendiaBadge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "secondary"
+      }
+    },
+    "opendiaAvg": {
+      "type": "Text",
+      "props": {
+        "text": "avg4w ≈ 3",
+        "variant": "muted"
+      }
+    },
+    "opendiaNotableHeading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 1 of 1):",
+        "level": "h4"
+      }
+    },
+    "opendiaStar1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendiaStar1Link",
+        "opendiaStar1Bio"
+      ]
+    },
+    "opendiaStar1Link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aIex quiterio",
+        "href": "https://github.com/alex-quiterio",
+        "source": "📍 Amsterdam · 🏢 Seenons · 72 repos · 43 followers"
+      }
+    },
+    "opendiaStar1Bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"wondering....finding active-hope with my thoughts and deeds 🌿\"",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footerRow": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "footerSource",
+        "footerMinitor"
+      ]
+    },
+    "footerSource": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events ·",
+        "variant": "muted"
+      }
+    },
+    "footerMinitor": {
+      "type": "Badge",
+      "props": {
+        "text": "minitor QUIET (no activity)",
+        "variant": "outline"
+      }
+    }
+  }
+}

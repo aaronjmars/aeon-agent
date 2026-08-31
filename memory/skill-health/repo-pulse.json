@@ -1,15 +1,11 @@
 {
   "skill": "repo-pulse",
-  "last_analyzed": "2026-08-24T10:19:44Z",
+  "last_analyzed": "2026-08-31T23:52:44Z",
   "quality_score": 4,
-  "assessment": "Substantive momentum tracking with verifiable GitHub data; aligns with strategy priority 4 (track momentum honestly) and provides actionable stargazer context for framework adoption.",
+  "assessment": "Substantive, well-sourced momentum report: per-repo star/fork deltas with stated rules and cutoffs, enriched stargazer/fork profiles, honest reconciliation of the baseline gap and the soul.md anomaly, and untrusted bios handled correctly; kept from 5 by minor internal slop (summary says 'plus 9' low-profile forks but lists 10; table shows +13 forks vs 15 fork events unexplained; 'opendai' typo).",
   "flags": [],
   "avg_score": 3.93,
   "history": [
-    {
-      "date": "2026-06-14",
-      "score": 4
-    },
     {
       "date": "2026-06-15",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-08-24",
+      "score": 4
+    },
+    {
+      "date": "2026-08-31",
       "score": 4
     }
   ]
