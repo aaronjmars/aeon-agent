@@ -148,8 +148,8 @@
     "success_rate": 1
   },
   "shiplog": {
-    "last_dispatch": "2026-08-31T10:25:02Z",
-    "last_status": "failed",
+    "last_dispatch": "2026-08-31T16:32:13Z",
+    "last_status": "dispatched",
     "last_success": "2026-08-24T09:18:42Z",
     "total_runs": 17,
     "total_successes": 14,
