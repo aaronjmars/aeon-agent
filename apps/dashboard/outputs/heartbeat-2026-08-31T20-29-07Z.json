@@ -1,0 +1,323 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "🚨 Heartbeat: GLM fix didn't hold",
+        "description": "Heartbeat — the fix didn't hold. Post-fix record: 2 successes, 7 failures, 1 hang."
+      },
+      "children": [
+        "alert-header",
+        "grid-postfix",
+        "sep-1",
+        "stack-failed",
+        "sep-2",
+        "stack-stalled",
+        "sep-3",
+        "stack-memory",
+        "sep-4",
+        "alert-correction",
+        "sep-5",
+        "stack-status"
+      ]
+    },
+    "alert-header": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Heartbeat — the fix didn't hold 🔴",
+        "message": "This morning's GLM pin (12:13 UTC) bought ~2 hours. 14:39→19:49 UTC: 7 more runs died with the same signature as the outage — 0 tokens, $0 cost. This very run completing at 20:26 says it plainly: the gateway is flapping, not fixed."
+      }
+    },
+    "grid-postfix": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-success",
+        "stat-failures",
+        "stat-hangs"
+      ]
+    },
+    "stat-success": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-fix successes",
+        "value": "2",
+        "delta": "heartbeat 12:27, changelog 15:48",
+        "trend": "up"
+      }
+    },
+    "stat-failures": {
+      "type": "Stat",
+      "props": {
+        "label": "Post-fix failures",
+        "value": "7",
+        "delta": "0 tokens, $0 cost — same signature as the outage",
+        "trend": "down"
+      }
+    },
+    "stat-hangs": {
+      "type": "Stat",
+      "props": {
+        "label": "Hangs",
+        "value": "1",
+        "trend": "neutral"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-failed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-failed",
+        "text-gateway",
+        "badge-stuck",
+        "text-stuck",
+        "badge-api",
+        "table-api",
+        "badge-chronic",
+        "stat-chronic"
+      ]
+    },
+    "badge-failed": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 FAILED",
+        "variant": "destructive"
+      }
+    },
+    "text-gateway": {
+      "type": "Text",
+      "props": {
+        "text": "Gateway regression — 7 empty-response failures this afternoon/evening. Shared dependency: GLM gateway. Not per-skill bugs.",
+        "variant": "body"
+      }
+    },
+    "badge-stuck": {
+      "type": "Badge",
+      "props": {
+        "text": "STUCK: shiplog",
+        "variant": "destructive"
+      }
+    },
+    "text-stuck": {
+      "type": "Text",
+      "props": {
+        "text": "Dispatched 16:32 UTC, no outcome ~4h later. 17 runs of history, last success 08-24. Hang, not a lost write.",
+        "variant": "body"
+      }
+    },
+    "badge-api": {
+      "type": "Badge",
+      "props": {
+        "text": "API degradation (≥3 consecutive)",
+        "variant": "destructive"
+      }
+    },
+    "table-api": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Consecutive failures"
+        ],
+        "rows": [
+          [
+            "token-report",
+            "5"
+          ],
+          [
+            "secured-watch",
+            "4"
+          ],
+          [
+            "repo-pulse",
+            "4"
+          ],
+          [
+            "holdings",
+            "4"
+          ],
+          [
+            "aeon-update",
+            "4"
+          ],
+          [
+            "tweet-digest",
+            "3"
+          ],
+          [
+            "shiplog",
+            "3"
+          ]
+        ]
+      }
+    },
+    "badge-chronic": {
+      "type": "Badge",
+      "props": {
+        "text": "CHRONIC: aeon-update",
+        "variant": "destructive"
+      }
+    },
+    "stat-chronic": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon-update success rate — worst in fleet",
+        "value": "33%",
+        "delta": "2/6 runs",
+        "trend": "down"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-stalled": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-stalled",
+        "text-stalled",
+        "grid-stalled"
+      ]
+    },
+    "badge-stalled": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 STALLED — clear",
+        "variant": "outline"
+      }
+    },
+    "text-stalled": {
+      "type": "Text",
+      "props": {
+        "text": "3 open PRs on aeonfun/aeon (#999, #1001, #1002), all <4h old. No urgent issues, 0 open tracked issues.",
+        "variant": "body"
+      }
+    },
+    "grid-stalled": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-prs",
+        "stat-issues"
+      ]
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Open PRs on aeonfun/aeon",
+        "value": "3",
+        "delta": "#999, #1001, #1002 — all <4h old",
+        "trend": "neutral"
+      }
+    },
+    "stat-issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Open tracked issues",
+        "value": "0",
+        "delta": "no urgent issues",
+        "trend": "neutral"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-memory",
+        "text-memory"
+      ]
+    },
+    "badge-memory": {
+      "type": "Badge",
+      "props": {
+        "text": "🔵 MEMORY",
+        "variant": "secondary"
+      }
+    },
+    "text-memory": {
+      "type": "Text",
+      "props": {
+        "text": "Working-tree anomaly (AGENTS.md deleted-uncommitted, notify bins untracked) unchanged, deduped.",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-correction": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Correction to this morning's call",
+        "message": "Daily skills were supposed to self-recover on tonight's tick — token-report and secured-watch both re-failed. Waiting won't clear this one: shiplog, holdings, repo-pulse, aeon-update have no cron until Mon 09-07; they need a manual re-dispatch once the gateway is stable."
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "link-status"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "Status page: 🔴 DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "link-status": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    }
+  }
+}
