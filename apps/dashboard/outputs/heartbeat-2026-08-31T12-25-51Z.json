@@ -1,0 +1,214 @@
+{
+  "root": "heartbeat-card",
+  "state": {},
+  "elements": {
+    "heartbeat-card": {
+      "type": "Card",
+      "props": {
+        "title": "🚨 🔴 Fleet incident 08-31 — fixed, 5 skills need re-dispatch"
+      },
+      "children": [
+        "heading-incident",
+        "grid-impact",
+        "text-rootcause-1",
+        "link-commit-1",
+        "text-rootcause-2",
+        "separator-1",
+        "text-failed-heading",
+        "table-failed",
+        "separator-2",
+        "alert-action",
+        "separator-3",
+        "stack-status",
+        "text-clean",
+        "separator-4",
+        "link-commit-2"
+      ]
+    },
+    "heading-incident": {
+      "type": "Heading",
+      "props": {
+        "text": "🔴 Fleet incident 08-31 — all skills failed 06:00–12:00 UTC, fixed at 12:13",
+        "level": "h2"
+      }
+    },
+    "grid-impact": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "sm"
+      },
+      "children": [
+        "stat-skills",
+        "stat-runs",
+        "stat-successes"
+      ]
+    },
+    "stat-skills": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills failed",
+        "value": "7"
+      }
+    },
+    "stat-runs": {
+      "type": "Stat",
+      "props": {
+        "label": "Total runs",
+        "value": "17"
+      }
+    },
+    "stat-successes": {
+      "type": "Stat",
+      "props": {
+        "label": "Successes",
+        "value": "0",
+        "trend": "down"
+      }
+    },
+    "text-rootcause-1": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause found and already fixed. Every skill dispatched today (7 skills, 17 runs, 0 successes) died with the same signature — 0 input tokens, 0 output tokens, $0.00 cost — the LLM gateway never answered. That's the exhausted Claude subscription you pinned around with",
+        "variant": "body"
+      }
+    },
+    "link-commit-1": {
+      "type": "Link",
+      "props": {
+        "label": "b054cb0",
+        "href": "https://github.com/aaronjmars/aeon-agent/commit/b054cb0"
+      }
+    },
+    "text-rootcause-2": {
+      "type": "Text",
+      "props": {
+        "text": "(gateway → GLM, 12:13 UTC). This heartbeat is the first run through GLM and it's executing normally — the fix works. CI on that commit is green.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-failed-heading": {
+      "type": "Text",
+      "props": {
+        "text": "🔴 FAILED today (all zero-token gateway errors, not per-skill bugs):",
+        "variant": "lead"
+      }
+    },
+    "table-failed": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Skill",
+          "Failed runs"
+        ],
+        "rows": [
+          [
+            "token-report",
+            "3×"
+          ],
+          [
+            "repo-pulse",
+            "3×"
+          ],
+          [
+            "shiplog",
+            "3×"
+          ],
+          [
+            "changelog",
+            "3×"
+          ],
+          [
+            "holdings",
+            "3×"
+          ],
+          [
+            "aeon-update",
+            "2×"
+          ],
+          [
+            "secured-watch",
+            "1×"
+          ]
+        ]
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-action": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "Action needed — re-dispatch the 5 weekly skills",
+        "message": "They're Monday-cadence, so their next cron is 7 days out; without a manual run they stay red until 09-07. This is the same trap as the 08-02 spending-limit stall. token-report (daily 06:00) and secured-watch (daily 12:00) self-recover tomorrow."
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text-status-label",
+        "badge-status",
+        "text-status-tail"
+      ]
+    },
+    "text-status-label": {
+      "type": "Text",
+      "props": {
+        "text": "Status page →"
+      }
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴 DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "text-status-tail": {
+      "type": "Text",
+      "props": {
+        "text": "until the weekly five report a success."
+      }
+    },
+    "text-clean": {
+      "type": "Text",
+      "props": {
+        "text": "Everything else is clean: no stalled PRs (#997 on aeonfun/aeon is 1h old), no urgent issues, no open health issues.",
+        "variant": "muted"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-commit-2": {
+      "type": "Link",
+      "props": {
+        "label": "🔗 https://github.com/aaronjmars/aeon-agent/commit/b054cb0",
+        "href": "https://github.com/aaronjmars/aeon-agent/commit/b054cb0"
+      }
+    }
+  }
+}
