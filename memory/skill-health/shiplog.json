@@ -1,10 +1,10 @@
 {
   "skill": "shiplog",
-  "last_analyzed": "2026-08-24T09:17:05Z",
-  "quality_score": 4,
-  "assessment": "Substantive shiplog with verifiable numbers, strategic focus on shipped code and ecosystem growth, honest gap reporting, ready-to-post content that directly serves the operator's priorities.",
+  "last_analyzed": "2026-08-31T23:04:16Z",
+  "quality_score": 5,
+  "assessment": "Substantive, provenance-traced weekly shiplog (every claim tied to PR numbers, commits, or post URLs; star/fork figures corroborated by the on-disk snapshot and the traction quotes by raw xAI fetch artifacts), honest about gaps and explicitly marks third-party numbers as quoted-not-verified, with ready-to-post/thread variants and concrete follow-ups — tightly aligned to the document-shipped-work and track-momentum-honestly priorities; only minor blemish is scratch files left in output/, which the run itself disclosed.",
   "flags": [],
-  "avg_score": 4.14,
+  "avg_score": 4.2,
   "history": [
     {
       "date": "2026-06-15",
@@ -61,6 +61,10 @@
     {
       "date": "2026-08-24",
       "score": 4
+    },
+    {
+      "date": "2026-08-31",
+      "score": 5
     }
   ]
 }
