@@ -1,10 +1,10 @@
 {
   "skill": "changelog",
-  "last_analyzed": "2026-08-27T23:23:00Z",
-  "quality_score": 4,
-  "assessment": "Substantive, well-structured changelog documenting shipped framework features and security fixes; directly serves strategy priority to show shipped work and lower fork barriers; output appears genuine and properly executed with verified file writes.",
+  "last_analyzed": "2026-08-31T15:47:04Z",
+  "quality_score": 5,
+  "assessment": "Verified against repo state: the claimed scratch files, memory-log entry, MEMORY.md docs-sync line, and HEAD commit (#998 GLM tier vars) all corroborate the output's 20-PR list, entry content, and caveats; it is substantive, honestly caveated (tsc-only check disclosed, stale banner flagged), idempotency-aware, and directly serves the document-shipped-work and honest-tracking priorities — excellent, with follow-ups clearly listed.",
   "flags": [],
-  "avg_score": 3.4,
+  "avg_score": 3.67,
   "history": [
     {
       "date": "2026-07-27",
@@ -25,6 +25,10 @@
     {
       "date": "2026-08-27",
       "score": 4
+    },
+    {
+      "date": "2026-08-31",
+      "score": 5
     }
   ]
 }

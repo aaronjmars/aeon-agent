@@ -1,0 +1,113 @@
+{
+  "root": "card-changelog",
+  "state": {},
+  "elements": {
+    "card-changelog": {
+      "type": "Card",
+      "props": {
+        "title": "✅ Changelog (push-to) — 2026-08-31",
+        "description": "aeonfun/aeon → aaronjmars/aeon-website"
+      },
+      "children": [
+        "stats-grid",
+        "sep-1",
+        "heading-entry",
+        "table-fixes",
+        "alert-recovery",
+        "sep-2",
+        "story-pr",
+        "link-footer"
+      ]
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-prs",
+        "stat-dispatches"
+      ]
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs",
+        "value": "20"
+      }
+    },
+    "stat-dispatches": {
+      "type": "Stat",
+      "props": {
+        "label": "Stuck dispatches recovered",
+        "value": "3"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-entry": {
+      "type": "Heading",
+      "props": {
+        "text": "Changelog entry: GLM gateway move + fail-closed adapters",
+        "level": "h3"
+      }
+    },
+    "table-fixes": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Change",
+          "PRs"
+        ],
+        "rows": [
+          [
+            "GLM leaves the harness list for the LLM gateway registry with per-tier model mapping",
+            "#990, #998"
+          ],
+          [
+            "Dashboard origin-host security fix",
+            "#986"
+          ],
+          [
+            "Batch of fail-closed correctness fixes",
+            "#987, #988, #997, #984"
+          ]
+        ]
+      }
+    },
+    "alert-recovery": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "title": "Dispatch recovery",
+        "message": "Recovered this skill's 3 stuck dispatches from this morning's gateway outage."
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "story-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Draft — GLM gateway move + fail-closed adapters",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/402",
+        "source": "aaronjmars/aeon-website#402"
+      }
+    },
+    "link-footer": {
+      "type": "Link",
+      "props": {
+        "label": "🔗 https://github.com/aaronjmars/aeon-website/pull/402",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/402"
+      }
+    }
+  }
+}

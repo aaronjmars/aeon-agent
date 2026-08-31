@@ -1,4 +1,5 @@
-ℹ️ Changelog — 2026-08-27
+✅ Changelog (push-to) — 2026-08-31
 
-*Changelog — Week of 2026-08-27*
-3 repos scanned: 25 user-facing changes on aeonfun/aeon (3 security, 8 added, 11 fixed, 3 changed). Top: secretcurl argv secret-leak fixed + infra tokens pulled from every skill's runtime env; 4 new run harnesses (fx, Cursor, Hermes, GLM). minitor/opendia/soul.md: no user-facing changes. Full: output/articles/changelog-2026-08-27.md
+aeonfun/aeon → aaronjmars/aeon-website · 20 new PRs → changelog entry **GLM gateway move + fail-closed adapters** — GLM leaves the harness list for the LLM gateway registry with per-tier model mapping (#990, #998), plus a dashboard origin-host security fix (#986) and a batch of fail-closed correctness fixes (#987, #988, #997, #984). Also recovered this skill's 3 stuck dispatches from this morning's gateway outage. Draft: [aeon-website#402](https://github.com/aaronjmars/aeon-website/pull/402)
+
+🔗 https://github.com/aaronjmars/aeon-website/pull/402
