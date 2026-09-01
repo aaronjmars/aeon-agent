@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-08-30T17:04:23Z",
-  "quality_score": 3,
-  "assessment": "Completed competently with honest reporting, but maintenance work that doesn't advance core priorities (shipping, ecosystem growth, fork barriers)",
+  "last_analyzed": "2026-09-01T00:07:02Z",
+  "quality_score": 5,
+  "assessment": "Fully verifiable digest: all 4 tweet texts, IDs, and dates match the raw Grok x_search response left in output/.tmp-xai-td-out.json (http=200 confirmed); honest dupe-drop of the 08-30 openscience tweet, and it caught and deliberately omitted the garbled '@SpaceXAI' attribution in the source tweet rather than repeating it — well-structured, logged for future dedup, no invented specifics.",
   "flags": [],
-  "avg_score": 3.8,
+  "avg_score": 3.83,
   "history": [
-    {
-      "date": "2026-07-28",
-      "score": 4
-    },
     {
       "date": "2026-07-29",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-30",
       "score": 3
+    },
+    {
+      "date": "2026-09-01",
+      "score": 5
     }
   ]
 }

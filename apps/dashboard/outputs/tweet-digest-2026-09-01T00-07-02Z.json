@@ -1,0 +1,191 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-01",
+        "description": "ℹ️ 4 tweets from @aeonframework"
+      },
+      "children": [
+        "sec-shipped",
+        "sep-1",
+        "sec-security",
+        "sep-2",
+        "sec-content"
+      ]
+    },
+    "sec-shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-shipped",
+        "tw1-stack",
+        "tw2-stack"
+      ]
+    },
+    "h-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped & integrations",
+        "level": "h3"
+      }
+    },
+    "tw1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tw-1",
+        "lnk-1"
+      ]
+    },
+    "tw-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "announces Cursor support — the aeon generator now runs its agents on one more harness"
+      }
+    },
+    "lnk-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094399568708296793"
+      }
+    },
+    "tw2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tw-2",
+        "lnk-2"
+      ]
+    },
+    "tw-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "the framework landed on Remotion's official resource page, with the demo clip built by the remotion aeon skill"
+      }
+    },
+    "lnk-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094319274902847668"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sec-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-security",
+        "tw3-stack"
+      ]
+    },
+    "h-security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      }
+    },
+    "tw3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tw-3",
+        "lnk-3"
+      ]
+    },
+    "tw-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "vuln-scanner flagged a vuln in dlt-hub/dlt — private GitHub advisory + fix PR sent, maintainer pinged for feedback"
+      }
+    },
+    "lnk-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094430674186842440"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sec-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-content",
+        "tw4-stack"
+      ]
+    },
+    "h-content": {
+      "type": "Heading",
+      "props": {
+        "text": "Content",
+        "level": "h3"
+      }
+    },
+    "tw4-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tw-4",
+        "lnk-4"
+      ]
+    },
+    "tw-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "kicks off an agentic fight series on YouTube, pitting @aeonframework against another bot — video in the comments"
+      }
+    },
+    "lnk-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094423440945991785"
+      }
+    }
+  }
+}
