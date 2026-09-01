@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-01T02:10:41Z",
-  "quality_score": 5,
-  "assessment": "Substantive, well-sourced token report with cross-checked data (gt/ds/xai all ok, DexScreener agreement within 1.1%), honest methodology caveats for the missed 08-31 tick, whale-level flow insight tied to real fetched trades (corroborated by .gt_trades.json/.xai_social.json scratch artifacts), stays in-lane on the 100x quote ('their call, not ours'), and gives the operator actionable follow-ups (missed cron tick, scratch-file leftovers) — squarely serving the 'track momentum honestly, flag breakage early' priority.",
+  "last_analyzed": "2026-09-01T06:07:59Z",
+  "quality_score": 4,
+  "assessment": "Disciplined duplicate-dispatch no-op: verified the prior successful run, ran a live materiality check (−5.31% continuation, internally consistent math) before standing down, preserved the state contract, and suppressed the duplicate ping per notify-on-signal rules — substantive, verifiable, strategy-aligned; only blemish is the disclosed scratch file left in repo root.",
   "flags": [],
-  "avg_score": 3.97,
+  "avg_score": 3.93,
   "history": [
-    {
-      "date": "2026-07-28",
-      "score": 5
-    },
     {
       "date": "2026-07-29",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-09-01",
       "score": 5
+    },
+    {
+      "date": "2026-09-01",
+      "score": 4
     }
   ]
 }
