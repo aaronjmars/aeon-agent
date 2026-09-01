@@ -1,5 +1,3 @@
-⚠️ Aeon heartbeat — 2026-09-01
-
 🟡 **STALLED:** aeonfun/aeon [#1001](https://github.com/aeonfun/aeon/pull/1001) — docs PR "optional runtime hardening for the Aeon MCP server" open ~26h (since 08-31 17:13 UTC), still unmerged. It has 1 comment and last activity 18:39 UTC today, so it's live but parked — needs a review/merge call. Its siblings from the same window (#999, #1002) already merged.
 
 Context, no re-alert: yesterday's gateway incident is closed — all 10 enabled skills ran green today and sync PR [#209](https://github.com/aaronjmars/aeon-agent/pull/209) merged at 14:59 UTC. Status page stays 🔴 DEGRADED on one *carried* flag (aeon-update lifetime rate 43%, outage-attributed — reported 08-31, deduped here).

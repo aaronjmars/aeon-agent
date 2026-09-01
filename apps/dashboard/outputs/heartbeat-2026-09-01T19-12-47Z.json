@@ -1,0 +1,114 @@
+{
+  "root": "heartbeat-card",
+  "state": {},
+  "elements": {
+    "heartbeat-card": {
+      "type": "Card",
+      "props": {
+        "title": "⚠️ Aeon heartbeat — 2026-09-01",
+        "description": "Stalled PR flag + carried status context"
+      },
+      "children": [
+        "alert-stalled",
+        "link-pr1001",
+        "text-pr1001-status",
+        "text-siblings",
+        "sep-context",
+        "heading-context",
+        "badge-no-realert",
+        "text-gateway",
+        "link-pr209",
+        "sep-status",
+        "alert-degraded",
+        "stat-lifetime-rate"
+      ]
+    },
+    "alert-stalled": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "title": "🟡 STALLED — aeonfun/aeon PR #1001 open ~26h, still unmerged",
+        "message": "Docs PR \"optional runtime hardening for the Aeon MCP server\" — open since 08-31 17:13 UTC. It's live but parked — needs a review/merge call."
+      }
+    },
+    "link-pr1001": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#1001 — optional runtime hardening for the Aeon MCP server",
+        "href": "https://github.com/aeonfun/aeon/pull/1001",
+        "source": "aeonfun/aeon"
+      }
+    },
+    "text-pr1001-status": {
+      "type": "Text",
+      "props": {
+        "variant": "body",
+        "text": "1 comment · last activity 18:39 UTC today — live but parked, needs a review/merge call."
+      }
+    },
+    "text-siblings": {
+      "type": "Text",
+      "props": {
+        "variant": "muted",
+        "text": "Siblings from the same window (#999, #1002) already merged."
+      }
+    },
+    "sep-context": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-context": {
+      "type": "Heading",
+      "props": {
+        "level": "h3",
+        "text": "Context, no re-alert"
+      }
+    },
+    "badge-no-realert": {
+      "type": "Badge",
+      "props": {
+        "text": "deduped — carried from 08-31",
+        "variant": "outline"
+      }
+    },
+    "text-gateway": {
+      "type": "Text",
+      "props": {
+        "variant": "body",
+        "text": "Yesterday's gateway incident is closed — all 10 enabled skills ran green today, and sync PR #209 merged at 14:59 UTC."
+      }
+    },
+    "link-pr209": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#209 — sync PR (merged 14:59 UTC)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/209",
+        "source": "aaronjmars/aeon-agent"
+      }
+    },
+    "sep-status": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "title": "Status page: 🔴 DEGRADED — one carried flag",
+        "message": "aeon-update lifetime rate, outage-attributed. Reported 08-31, deduped here."
+      }
+    },
+    "stat-lifetime-rate": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon-update lifetime rate",
+        "value": "43%",
+        "trend": "neutral"
+      }
+    }
+  }
+}
