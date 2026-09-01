@@ -1,0 +1,170 @@
+{
+  "root": "root",
+  "state": {},
+  "elements": {
+    "root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-01 (evening)"
+      },
+      "children": [
+        "main"
+      ]
+    },
+    "main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-ship",
+        "t1",
+        "t1-link",
+        "t2",
+        "t2-link",
+        "stat-stars",
+        "progress-stars",
+        "sep-1",
+        "h-content",
+        "t3",
+        "t3-link",
+        "t4",
+        "t4-link",
+        "t4-article",
+        "sep-2",
+        "h-sec",
+        "sec-alert",
+        "sec-link"
+      ]
+    },
+    "h-ship": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipping & milestones",
+        "level": "h3"
+      }
+    },
+    "t1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "announced support for the NousResearch Hermes harness — one more run-harness in the stack"
+      }
+    },
+    "t1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094756501768241478"
+      }
+    },
+    "t2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "crossed 700+ GitHub stars, asked \"wen 1k?\" — repo reads 712 right now (verified)"
+      }
+    },
+    "t2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094774246698291494"
+      }
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "GitHub stars — aeonfun/aeon (verified)",
+        "value": "712",
+        "delta": "crossed 700+",
+        "trend": "up"
+      }
+    },
+    "progress-stars": {
+      "type": "Progress",
+      "props": {
+        "value": 712,
+        "max": 1000,
+        "label": "Progress to 1,000 ⭐"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h-content": {
+      "type": "Heading",
+      "props": {
+        "text": "Content",
+        "level": "h3"
+      }
+    },
+    "t3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "dropped the next agentic-fight-series video, \"Aeon vs Grok bot\""
+      }
+    },
+    "t3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094801258791997732"
+      }
+    },
+    "t4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "shipped the companion article"
+      }
+    },
+    "t4-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094801261862203519"
+      }
+    },
+    "t4-article": {
+      "type": "Link",
+      "props": {
+        "label": "aeon.fun/blog/aeon-vs-grok-bot",
+        "href": "https://aeon.fun/blog/aeon-vs-grok-bot"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h-sec": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      }
+    },
+    "sec-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Security disclosure — @aeonframework",
+        "message": "vuln-scanner flagged a vuln in @doodlestein's destructive_command_guard repo — private advisory + fix PR filed, DMs open.",
+        "type": "warning"
+      }
+    },
+    "sec-link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2094766219467571612"
+      }
+    }
+  }
+}

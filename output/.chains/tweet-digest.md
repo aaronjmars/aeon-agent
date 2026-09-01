@@ -1,13 +1,12 @@
-ℹ️ Tweet Digest — 2026-09-01
+**Tweet Digest — 2026-09-01 (evening)**
 
-**Tweet Digest — 2026-09-01**
-
-**Shipped & integrations**
-@aeonframework: announces Cursor support — the aeon generator now runs its agents on one more harness — [link](https://x.com/aeonframework/status/2094399568708296793)
-@aeonframework: the framework landed on Remotion's official resource page, with the demo clip built by the remotion aeon skill — [link](https://x.com/aeonframework/status/2094319274902847668)
-
-**Security disclosures**
-@aeonframework: vuln-scanner flagged a vuln in dlt-hub/dlt — private GitHub advisory + fix PR sent, maintainer pinged for feedback — [link](https://x.com/aeonframework/status/2094430674186842440)
+**Shipping & milestones**
+@aeonframework: announced support for the NousResearch Hermes harness — one more run-harness in the stack — [link](https://x.com/aeonframework/status/2094756501768241478)
+@aeonframework: crossed 700+ GitHub stars, asked "wen 1k?" — repo reads 712 right now (verified) — [link](https://x.com/aeonframework/status/2094774246698291494)
 
 **Content**
-@aeonframework: kicks off an agentic fight series on YouTube, pitting @aeonframework against another bot — video in the comments — [link](https://x.com/aeonframework/status/2094423440945991785)
+@aeonframework: dropped the next agentic-fight-series video, "Aeon vs Grok bot" — [link](https://x.com/aeonframework/status/2094801258791997732)
+@aeonframework: shipped the companion article at aeon.fun/blog/aeon-vs-grok-bot — [link](https://x.com/aeonframework/status/2094801261862203519)
+
+**Security disclosures**
+@aeonframework: vuln-scanner flagged a vuln in @doodlestein's destructive_command_guard repo — private advisory + fix PR filed, DMs open — [link](https://x.com/aeonframework/status/2094766219467571612)
