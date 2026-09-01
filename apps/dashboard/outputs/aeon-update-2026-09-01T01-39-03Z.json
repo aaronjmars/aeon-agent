@@ -1,0 +1,205 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update: 34 commits synced → PR #209",
+        "description": "aeon-update — 2026-09-01"
+      },
+      "children": [
+        "intro-lead",
+        "intro-badges",
+        "sep-1",
+        "stats-grid",
+        "sep-2",
+        "highlights-heading",
+        "hl-1",
+        "hl-2",
+        "hl-3",
+        "hl-4",
+        "sep-3",
+        "manual-alert",
+        "sep-4",
+        "pr-link"
+      ]
+    },
+    "intro-lead": {
+      "type": "Text",
+      "props": {
+        "text": "synced 34 upstream commits → PR #209 ⭐ — aeonfun/aeon went 34 commits ahead this week (08-26 → 08-31). pulled 91 files clean, 8 need your eyes. all 17 CI checks green.",
+        "variant": "lead"
+      }
+    },
+    "intro-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-week",
+        "badge-clean",
+        "badge-ci"
+      ]
+    },
+    "badge-week": {
+      "type": "Badge",
+      "props": {
+        "text": "08-26 → 08-31",
+        "variant": "secondary"
+      }
+    },
+    "badge-clean": {
+      "type": "Badge",
+      "props": {
+        "text": "91 files clean",
+        "variant": "secondary"
+      }
+    },
+    "badge-ci": {
+      "type": "Badge",
+      "props": {
+        "text": "CI 17/17 green",
+        "variant": "default"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 4,
+        "gap": "md"
+      },
+      "children": [
+        "stat-commits",
+        "stat-files",
+        "stat-manual",
+        "stat-ci"
+      ]
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "commits synced",
+        "value": "34"
+      }
+    },
+    "stat-files": {
+      "type": "Stat",
+      "props": {
+        "label": "files pulled clean",
+        "value": "91"
+      }
+    },
+    "stat-manual": {
+      "type": "Stat",
+      "props": {
+        "label": "need manual eyes",
+        "value": "8",
+        "trend": "neutral"
+      }
+    },
+    "stat-ci": {
+      "type": "Stat",
+      "props": {
+        "label": "CI checks green",
+        "value": "17/17",
+        "delta": "all green",
+        "trend": "up"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "highlights-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Highlights",
+        "level": "h3"
+      }
+    },
+    "hl-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-new-skill",
+        "hl-1-text"
+      ]
+    },
+    "badge-new-skill": {
+      "type": "Badge",
+      "props": {
+        "text": "new skill",
+        "variant": "default"
+      }
+    },
+    "hl-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "cortx-reliability — x402 endpoint reliability check",
+        "variant": "body"
+      }
+    },
+    "hl-2": {
+      "type": "Text",
+      "props": {
+        "text": "rightstack + skill-article finally landed. the 08-25 sync held them back because eyebrow couldn't run in-sandbox. ran it this time — sha-pinned v0.4.1 binary, scrubbed env, scan + verify both clean, catalogs regenerated in-branch. the sync loop repaired its own repair loop.",
+        "variant": "body"
+      }
+    },
+    "hl-3": {
+      "type": "Text",
+      "props": {
+        "text": "cursor + hermes harness adapters shipped upstream; GLM moved from harness to the claude AI gateway, tiered model mapping (GLM_MODEL_SONNET / GLM_MODEL_OPUS / GLM_MODEL_HAIKU).",
+        "variant": "body"
+      }
+    },
+    "hl-4": {
+      "type": "Text",
+      "props": {
+        "text": "mcp-server single-flight queue, telegram reply-to-previous-skill-run, envelope fail-on-garbage.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "manual-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Manual review — 8 files",
+        "message": "scripts/llm-gateway.sh + messages.yml are the real ones — your b054cb0 emergency GLM pin from the outage overlaps upstream's proper implementation. upstream's is a superset; take it. rest is carried README/CHANGELOG/workflow drift.",
+        "type": "warning"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "Link",
+      "props": {
+        "label": "PR #209 — synced 34 upstream commits",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/209"
+      }
+    }
+  }
+}

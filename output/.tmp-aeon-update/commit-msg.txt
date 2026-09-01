@@ -1,0 +1,11 @@
+aeon-update: sync upstream 8b8d719..3b4c5a3
+
+34 upstream commits from aeonfun/aeon (2026-08-26 to 2026-08-31).
+91 files applied cleanly (19 added, 71 updated, 1 auto-merged 3-way),
+8 need manual review. Baseline advanced to 3b4c5a3.
+
+Also lands the two skills held back from the 08-25 sync (rightstack,
+skill-article): the eyebrow v0.4.1 integrity scan (sha-pinned binary)
+now runs in-run, so their eyebrowlock coverage and catalog entries are
+generated here rather than deferred to a manual step. Catalogs and
+eyebrowlock.json regenerated from the synced tree, not copied.

@@ -1,5 +1,3 @@
-ℹ️ aeon-update: 34 commits synced → PR #209
-
 *aeon-update — 2026-09-01*
 synced 34 upstream commits → PR #209 ⭐
 
@@ -14,5 +12,3 @@ highlights:
 manual (8): `scripts/llm-gateway.sh` + `messages.yml` are the real ones — your `b054cb0` emergency GLM pin from the outage overlaps upstream's proper implementation. upstream's is a superset; take it. rest is carried README/CHANGELOG/workflow drift.
 
 PR: https://github.com/aaronjmars/aeon-agent/pull/209
-
-🔗 https://github.com/aaronjmars/aeon-agent/pull/209

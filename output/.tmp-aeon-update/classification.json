@@ -1,0 +1,999 @@
+[
+ {
+  "path": ".claude/skills/aeon/SKILL.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/.claude__skills__aeon__SKILL.md"
+ },
+ {
+  "path": ".claude/skills/aeon/references/layout.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/.claude__skills__aeon__references__layout.md"
+ },
+ {
+  "path": ".claude/skills/aeon/references/mcp.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/.claude__skills__aeon__references__mcp.md"
+ },
+ {
+  "path": ".claude/skills/aeon/references/secrets.md",
+  "status": "modified",
+  "commits": [
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/.claude__skills__aeon__references__secrets.md"
+ },
+ {
+  "path": ".claude/skills/aeon/references/skill-anatomy.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/.claude__skills__aeon__references__skill-anatomy.md"
+ },
+ {
+  "path": ".github/CONTRIBUTING.md",
+  "status": "modified",
+  "commits": [
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/.github__CONTRIBUTING.md"
+ },
+ {
+  "path": ".github/README.md",
+  "status": "modified",
+  "commits": [
+   "935965d",
+   "bb8211f",
+   "6a03d1c",
+   "1a67ffb",
+   "a80f70f"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 7
+ },
+ {
+  "path": ".github/workflows/aeon.yml",
+  "status": "modified",
+  "commits": [
+   "8cff4d0",
+   "8cc45e4",
+   "a59b691",
+   "71fad7a",
+   "a80f70f",
+   "a10fd0f",
+   "d28801b",
+   "47d1a56"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 5
+ },
+ {
+  "path": ".github/workflows/chain-runner.yml",
+  "status": "modified",
+  "commits": [
+   "a10fd0f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/.github__workflows__chain-runner.yml"
+ },
+ {
+  "path": ".github/workflows/ci-tests.yml",
+  "status": "modified",
+  "commits": [
+   "a59b691",
+   "71fad7a",
+   "792a880",
+   "1924c4f",
+   "a10fd0f",
+   "8fcce1e"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 4
+ },
+ {
+  "path": ".github/workflows/messages.yml",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 2
+ },
+ {
+  "path": "CHANGELOG.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f",
+   "a80f70f",
+   "bb13088"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 1
+ },
+ {
+  "path": "aeon.yml",
+  "status": "modified",
+  "commits": [
+   "a80f70f"
+  ],
+  "disposition": "OPERATOR"
+ },
+ {
+  "path": "apps/cli/src/commands/auth.ts",
+  "status": "modified",
+  "commits": [
+   "4738f27"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__cli__src__commands__auth.ts"
+ },
+ {
+  "path": "apps/cli/src/index.ts",
+  "status": "modified",
+  "commits": [
+   "4738f27"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__cli__src__index.ts"
+ },
+ {
+  "path": "apps/dashboard/app/api/github-auth/route.ts",
+  "status": "added",
+  "commits": [
+   "4738f27"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__app__api__github-auth__route.ts"
+ },
+ {
+  "path": "apps/dashboard/app/page.tsx",
+  "status": "modified",
+  "commits": [
+   "4738f27"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__app__page.tsx"
+ },
+ {
+  "path": "apps/dashboard/components/AuthModal.tsx",
+  "status": "modified",
+  "commits": [
+   "a80f70f",
+   "a4e1e1e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__components__AuthModal.tsx"
+ },
+ {
+  "path": "apps/dashboard/components/GrokAuthModal.tsx",
+  "status": "modified",
+  "commits": [
+   "a4e1e1e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__components__GrokAuthModal.tsx"
+ },
+ {
+  "path": "apps/dashboard/components/HarnessAuthModal.tsx",
+  "status": "modified",
+  "commits": [
+   "d90a104",
+   "a80f70f",
+   "a4e1e1e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__components__HarnessAuthModal.tsx"
+ },
+ {
+  "path": "apps/dashboard/components/SecretsPanel.tsx",
+  "status": "modified",
+  "commits": [
+   "d90a104",
+   "4738f27"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__components__SecretsPanel.tsx"
+ },
+ {
+  "path": "apps/dashboard/lib/constants.ts",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f",
+   "a4e1e1e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__constants.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/gateway-registry.ts",
+  "status": "modified",
+  "commits": [
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__gateway-registry.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/github-auth.test.ts",
+  "status": "added",
+  "commits": [
+   "4738f27"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__github-auth.test.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/github-auth.ts",
+  "status": "added",
+  "commits": [
+   "4738f27"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__github-auth.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/harness-auth.test.ts",
+  "status": "added",
+  "commits": [
+   "d90a104"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__harness-auth.test.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/harness-auth.ts",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "d90a104",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__harness-auth.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/secrets-catalog.ts",
+  "status": "modified",
+  "commits": [
+   "d90a104",
+   "a80f70f",
+   "4738f27"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__secrets-catalog.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/security/api-gate.test.ts",
+  "status": "modified",
+  "commits": [
+   "e42f963"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__security__api-gate.test.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/security/api-gate.ts",
+  "status": "modified",
+  "commits": [
+   "e42f963"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__security__api-gate.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/service-icon.test.ts",
+  "status": "modified",
+  "commits": [
+   "d90a104"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__service-icon.test.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/service-icons.ts",
+  "status": "modified",
+  "commits": [
+   "d90a104",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__service-icons.ts"
+ },
+ {
+  "path": "apps/dashboard/lib/skill-icons.data.ts",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 1
+ },
+ {
+  "path": "apps/dashboard/lib/types.ts",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__dashboard__lib__types.ts"
+ },
+ {
+  "path": "apps/mcp-server/src/index.ts",
+  "status": "modified",
+  "commits": [
+   "c648040"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__mcp-server__src__index.ts"
+ },
+ {
+  "path": "apps/mcp-server/src/skill-executor.ts",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "c648040",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/apps__mcp-server__src__skill-executor.ts"
+ },
+ {
+  "path": "bin/add-skill",
+  "status": "modified",
+  "commits": [
+   "00951ad"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/bin__add-skill"
+ },
+ {
+  "path": "catalog/packs.json",
+  "status": "modified",
+  "commits": [
+   "6a03d1c"
+  ],
+  "disposition": "OPERATOR"
+ },
+ {
+  "path": "catalog/skill-icons.json",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "OPERATOR"
+ },
+ {
+  "path": "catalog/skill-packs.json",
+  "status": "modified",
+  "commits": [
+   "935965d",
+   "8ea76be",
+   "af2c44b"
+  ],
+  "disposition": "OPERATOR"
+ },
+ {
+  "path": "catalog/skills.json",
+  "status": "modified",
+  "commits": [
+   "6a03d1c"
+  ],
+  "disposition": "OPERATOR"
+ },
+ {
+  "path": "docs/CAPABILITIES.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__CAPABILITIES.md"
+ },
+ {
+  "path": "docs/CONFIGURATION.md",
+  "status": "modified",
+  "commits": [
+   "a80f70f",
+   "bb13088"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__CONFIGURATION.md"
+ },
+ {
+  "path": "docs/ECOSYSTEM.md",
+  "status": "modified",
+  "commits": [
+   "b2238dd",
+   "867e4d9"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__ECOSYSTEM.md"
+ },
+ {
+  "path": "docs/assets/harnesses-aeon.jpg",
+  "status": "modified",
+  "commits": [
+   "fd25871"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__assets__harnesses-aeon.jpg"
+ },
+ {
+  "path": "docs/assets/hero-animated.svg",
+  "status": "modified",
+  "commits": [
+   "bb8211f",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__assets__hero-animated.svg"
+ },
+ {
+  "path": "docs/assets/skill-icons/rightstack.svg",
+  "status": "added",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__assets__skill-icons__rightstack.svg"
+ },
+ {
+  "path": "docs/community-skill-packs.md",
+  "status": "modified",
+  "commits": [
+   "935965d",
+   "8ea76be",
+   "af2c44b"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__community-skill-packs.md"
+ },
+ {
+  "path": "docs/harnesses.md",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "bb8211f",
+   "792a880",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__harnesses.md"
+ },
+ {
+  "path": "docs/skill-packs.md",
+  "status": "modified",
+  "commits": [
+   "6a03d1c"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 2
+ },
+ {
+  "path": "docs/telegram-commands.md",
+  "status": "modified",
+  "commits": [
+   "bb13088"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/docs__telegram-commands.md"
+ },
+ {
+  "path": "eyebrowlock.json",
+  "status": "modified",
+  "commits": [
+   "6a03d1c"
+  ],
+  "disposition": "OPERATOR"
+ },
+ {
+  "path": "harness-adapter/README.md",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "bb8211f",
+   "792a880",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__README.md"
+ },
+ {
+  "path": "harness-adapter/adapters/claude.sh",
+  "status": "modified",
+  "commits": [
+   "d28801b"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__adapters__claude.sh"
+ },
+ {
+  "path": "harness-adapter/adapters/cursor.sh",
+  "status": "added",
+  "commits": [
+   "8cc45e4",
+   "792a880",
+   "d28801b"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__adapters__cursor.sh"
+ },
+ {
+  "path": "harness-adapter/adapters/grok.sh",
+  "status": "modified",
+  "commits": [
+   "d28801b"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__adapters__grok.sh"
+ },
+ {
+  "path": "harness-adapter/adapters/hermes.sh",
+  "status": "added",
+  "commits": [
+   "8cc45e4",
+   "1924c4f"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__adapters__hermes.sh"
+ },
+ {
+  "path": "harness-adapter/adapters/vibe.sh",
+  "status": "modified",
+  "commits": [
+   "d28801b"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__adapters__vibe.sh"
+ },
+ {
+  "path": "harness-adapter/harnesses.json",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "792a880",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__harnesses.json"
+ },
+ {
+  "path": "harness-adapter/lib/envelope.sh",
+  "status": "modified",
+  "commits": [
+   "d28801b"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__lib__envelope.sh"
+ },
+ {
+  "path": "harness-adapter/run-harness",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f",
+   "d28801b"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/harness-adapter__run-harness"
+ },
+ {
+  "path": "llms.txt",
+  "status": "modified",
+  "commits": [
+   "bb8211f",
+   "a80f70f"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 2
+ },
+ {
+  "path": "plugin/skills/aeon/SKILL.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/plugin__skills__aeon__SKILL.md"
+ },
+ {
+  "path": "plugin/skills/aeon/references/layout.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/plugin__skills__aeon__references__layout.md"
+ },
+ {
+  "path": "plugin/skills/aeon/references/mcp.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/plugin__skills__aeon__references__mcp.md"
+ },
+ {
+  "path": "plugin/skills/aeon/references/secrets.md",
+  "status": "modified",
+  "commits": [
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/plugin__skills__aeon__references__secrets.md"
+ },
+ {
+  "path": "plugin/skills/aeon/references/skill-anatomy.md",
+  "status": "modified",
+  "commits": [
+   "bb8211f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/plugin__skills__aeon__references__skill-anatomy.md"
+ },
+ {
+  "path": "scripts/health_issue.sh",
+  "status": "modified",
+  "commits": [
+   "252947e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__health_issue.sh"
+ },
+ {
+  "path": "scripts/install-harness.sh",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__install-harness.sh"
+ },
+ {
+  "path": "scripts/llm-gateway.sh",
+  "status": "modified",
+  "commits": [
+   "a80f70f",
+   "47d1a56"
+  ],
+  "disposition": "CONFLICT",
+  "reason": "operator-customized-overlap",
+  "merge_exit": 1
+ },
+ {
+  "path": "scripts/notify-deliver.sh",
+  "status": "modified",
+  "commits": [
+   "6738690"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__notify-deliver.sh"
+ },
+ {
+  "path": "scripts/notify_format.py",
+  "status": "modified",
+  "commits": [
+   "fa11d48"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__notify_format.py"
+ },
+ {
+  "path": "scripts/resolve-harness.sh",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__resolve-harness.sh"
+ },
+ {
+  "path": "scripts/secretcurl.sh",
+  "status": "modified",
+  "commits": [
+   "8fcce1e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__secretcurl.sh"
+ },
+ {
+  "path": "scripts/skill-health-routing.mjs",
+  "status": "added",
+  "commits": [
+   "a59b691",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__skill-health-routing.mjs"
+ },
+ {
+  "path": "scripts/stage-vuln-scanner.sh",
+  "status": "modified",
+  "commits": [
+   "8cff4d0"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__stage-vuln-scanner.sh"
+ },
+ {
+  "path": "scripts/state_store.sh",
+  "status": "modified",
+  "commits": [
+   "252947e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__state_store.sh"
+ },
+ {
+  "path": "scripts/tests/fixtures/curl",
+  "status": "added",
+  "commits": [
+   "8fcce1e"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__fixtures__curl"
+ },
+ {
+  "path": "scripts/tests/test_chain_runner.sh",
+  "status": "added",
+  "commits": [
+   "a10fd0f"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_chain_runner.sh"
+ },
+ {
+  "path": "scripts/tests/test_community_skill_install.sh",
+  "status": "modified",
+  "commits": [
+   "00951ad"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_community_skill_install.sh"
+ },
+ {
+  "path": "scripts/tests/test_cursor_adapter.sh",
+  "status": "added",
+  "commits": [
+   "792a880"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_cursor_adapter.sh"
+ },
+ {
+  "path": "scripts/tests/test_generate_harnesses_json.sh",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_generate_harnesses_json.sh"
+ },
+ {
+  "path": "scripts/tests/test_harness_envelope.sh",
+  "status": "modified",
+  "commits": [
+   "d28801b"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_harness_envelope.sh"
+ },
+ {
+  "path": "scripts/tests/test_health_issue.sh",
+  "status": "modified",
+  "commits": [
+   "252947e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_health_issue.sh"
+ },
+ {
+  "path": "scripts/tests/test_hermes_adapter.sh",
+  "status": "added",
+  "commits": [
+   "1924c4f"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_hermes_adapter.sh"
+ },
+ {
+  "path": "scripts/tests/test_notify.sh",
+  "status": "modified",
+  "commits": [
+   "6738690"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_notify.sh"
+ },
+ {
+  "path": "scripts/tests/test_notify_format.py",
+  "status": "modified",
+  "commits": [
+   "fa11d48"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_notify_format.py"
+ },
+ {
+  "path": "scripts/tests/test_resolve_harness.sh",
+  "status": "modified",
+  "commits": [
+   "8cc45e4",
+   "a80f70f"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_resolve_harness.sh"
+ },
+ {
+  "path": "scripts/tests/test_secretcurl_xai_retry.sh",
+  "status": "added",
+  "commits": [
+   "8fcce1e"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_secretcurl_xai_retry.sh"
+ },
+ {
+  "path": "scripts/tests/test_skill_health_routing.sh",
+  "status": "added",
+  "commits": [
+   "a59b691"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_skill_health_routing.sh"
+ },
+ {
+  "path": "scripts/tests/test_state_store.sh",
+  "status": "modified",
+  "commits": [
+   "252947e"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_state_store.sh"
+ },
+ {
+  "path": "scripts/tests/test_workflow_harness_choices.sh",
+  "status": "added",
+  "commits": [
+   "71fad7a"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/scripts__tests__test_workflow_harness_choices.sh"
+ },
+ {
+  "path": "skills/changelog/SKILL.md",
+  "status": "modified",
+  "commits": [
+   "3b4c5a3"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__changelog__SKILL.md"
+ },
+ {
+  "path": "skills/cortx-reliability/SKILL.md",
+  "status": "added",
+  "commits": [
+   "6a03d1c"
+  ],
+  "disposition": "CLEAN-ADD",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__cortx-reliability__SKILL.md"
+ },
+ {
+  "path": "skills/deploy-uni-hook/SKILL.md",
+  "status": "modified",
+  "commits": [
+   "9d5c519",
+   "b99d6ae"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__deploy-uni-hook__SKILL.md"
+ },
+ {
+  "path": "skills/deploy-uni-hook/hook-deploy.sh",
+  "status": "modified",
+  "commits": [
+   "9d5c519",
+   "b99d6ae"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__deploy-uni-hook__hook-deploy.sh"
+ },
+ {
+  "path": "skills/deploy-uni-hook/templates/DeployHook.s.sol",
+  "status": "modified",
+  "commits": [
+   "9d5c519"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__deploy-uni-hook__templates__DeployHook.s.sol"
+ },
+ {
+  "path": "skills/deploy-uni-hook/templates/DynamicFeeHook.sol",
+  "status": "modified",
+  "commits": [
+   "9d5c519"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__deploy-uni-hook__templates__DynamicFeeHook.sol"
+ },
+ {
+  "path": "skills/deploy-uni-hook/templates/Hook.sol",
+  "status": "modified",
+  "commits": [
+   "9d5c519",
+   "b99d6ae"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__deploy-uni-hook__templates__Hook.sol"
+ },
+ {
+  "path": "skills/deploy-uni-hook/templates/HookFeeHook.sol",
+  "status": "modified",
+  "commits": [
+   "9d5c519",
+   "b99d6ae"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__deploy-uni-hook__templates__HookFeeHook.sol"
+ },
+ {
+  "path": "skills/deploy-uni-hook/templates/NoOpHook.sol",
+  "status": "modified",
+  "commits": [
+   "9d5c519"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__deploy-uni-hook__templates__NoOpHook.sol"
+ },
+ {
+  "path": "skills/skill-health/SKILL.md",
+  "status": "modified",
+  "commits": [
+   "760a809"
+  ],
+  "disposition": "CLEAN-MERGE",
+  "merged_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/merged/skills__skill-health__SKILL.md"
+ },
+ {
+  "path": "skills/skill-repair/SKILL.md",
+  "status": "modified",
+  "commits": [
+   "760a809"
+  ],
+  "disposition": "CLEAN-UPDATE",
+  "head_file": "/home/runner/work/aeon-agent/aeon-agent/output/.tmp-aeon-update/head/skills__skill-repair__SKILL.md"
+ }
+]

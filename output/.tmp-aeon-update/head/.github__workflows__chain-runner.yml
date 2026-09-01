@@ -1,0 +1,444 @@
+name: Aeon · Chain Runner
+run-name: "chain: ${{ inputs.chain }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      chain:
+        description: 'Chain name from aeon.yml chains section'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: write
+  issues: write   # §3 issues-as-state: the chain's append (state_store.sh ensure/comment)
+                  # calls the Issues API; without this it 403s and only the file path records
+                  # chain events (and in `issues` mode they'd be lost from the ledger entirely).
+
+concurrency:
+  group: aeon-chain-${{ inputs.chain }}
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          token: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+
+      - name: Configure git identity
+        run: |
+          git config user.name "aeonframework"
+          git config user.email "aeonframework@proton.me"
+
+      - name: Run chain
+        env:
+          GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          _INPUT_CHAIN: ${{ inputs.chain }}
+        run: |
+          set -euo pipefail
+          # env-bound (passed via env:, not expanded into this run: block) +
+          # allowlisted: a chain name is an
+          # aeon.yml chains: key, so it must match ^[a-zA-Z0-9_-]+$. Interpolating
+          # it into the shell source let a crafted value break out and run
+          # arbitrary commands on the runner. (GHSA-h9v2-7m42-33m3)
+          CHAIN="$_INPUT_CHAIN"
+          if ! printf '%s' "$CHAIN" | grep -qE '^[a-zA-Z0-9_-]+$'; then
+            echo "::error::Invalid chain name: must match ^[a-zA-Z0-9_-]+$"
+            exit 1
+          fi
+          NOW_ISO=$(date -u +%FT%TZ)
+          echo "Running chain: $CHAIN"
+
+          # --- Helper: dispatch a skill and return its uniquely correlated run ID ---
+          dispatch_skill() {
+            local skill="$1" var="${2:-}" ctx_file="${3:-}"
+            local before_ts=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+            # The ID is bounded and shell-safe so it can be passed as a workflow input
+            # and embedded in the run-name without changing untrusted jq source.
+            local dispatch_id="chain-$(openssl rand -hex 16)"
+
+            local args=(-f skill="$skill" -f dispatch_id="$dispatch_id")
+            [ -n "$var" ] && args+=(-f var="$var")
+            [ -n "$ctx_file" ] && args+=(-f chain_context_file="$ctx_file")
+
+            local expected_title="skill: $skill"
+            [ -n "$var" ] && expected_title+=" ($var)"
+            expected_title+=" [dispatch: $dispatch_id]"
+
+            echo "  Dispatching: $skill"
+            gh workflow run aeon.yml "${args[@]}"
+
+            # Poll for the run to appear (up to 60s). Match the exact run-name
+            # containing this dispatch ID; never fall back to a newer skill run.
+            local run_id=""
+            for i in $(seq 1 12); do
+              sleep 5
+              run_id=$(gh run list --workflow=aeon.yml -L 100 \
+                --json databaseId,displayTitle,createdAt |
+                jq -r --arg expected_title "$expected_title" \
+                  --arg dispatch_id "$dispatch_id" --arg before_ts "$before_ts" \
+                  '[.[] | select(.displayTitle == $expected_title and
+                    (.displayTitle | contains($dispatch_id)) and
+                    .createdAt >= $before_ts) | .databaseId] |
+                   if length == 1 then .[0] else empty end' \
+                2>/dev/null || true)
+              [ -n "$run_id" ] && [ "$run_id" != "null" ] && break
+              run_id=""
+            done
+
+            if [ -z "$run_id" ]; then
+              echo "::error::Failed to discover run ID for skill: $skill (dispatch: $dispatch_id)"
+              return 1
+            fi
+            echo "  Run ID: $run_id"
+            echo "$run_id"
+          }
+
+          # --- Helper: wait for a set of run IDs to complete ---
+          wait_for_runs() {
+            local timeout=1800  # 30 min
+            local start=$(date +%s)
+            local run_ids=("$@")
+
+            echo "  Waiting for ${#run_ids[@]} run(s)..."
+            while true; do
+              local all_done=true
+              for id in "${run_ids[@]}"; do
+                local status=$(gh run view "$id" --json status -q '.status' 2>/dev/null || echo "unknown")
+                if [ "$status" != "completed" ]; then
+                  all_done=false
+                  break
+                fi
+              done
+              $all_done && break
+
+              local elapsed=$(( $(date +%s) - start ))
+              if [ "$elapsed" -ge "$timeout" ]; then
+                echo "::error::Chain timed out waiting for runs: ${run_ids[*]}"
+                return 1
+              fi
+              sleep 30
+            done
+
+            # Check conclusions
+            local failed=()
+            for id in "${run_ids[@]}"; do
+              local conclusion=$(gh run view "$id" --json conclusion -q '.conclusion' 2>/dev/null || echo "failure")
+              if [ "$conclusion" != "success" ]; then
+                local name=$(gh run view "$id" --json displayTitle -q '.displayTitle' 2>/dev/null || echo "$id")
+                failed+=("$name")
+                echo "::warning::Run failed: $name (ID: $id, conclusion: $conclusion)"
+              fi
+            done
+
+            if [ ${#failed[@]} -gt 0 ]; then
+              return 1
+            fi
+            return 0
+          }
+
+          # --- Helper: build chain context file from consumed outputs ---
+          build_context() {
+            local target_skill="$1"
+            shift
+            local consume_skills=("$@")
+            local ctx_file="output/.chains/.chain-context-${target_skill}.md"
+
+            mkdir -p output/.chains
+            echo "" > "$ctx_file"
+            for dep in "${consume_skills[@]}"; do
+              local output_file="output/.chains/${dep}.md"
+              if [ -f "$output_file" ] && [ -s "$output_file" ]; then
+                echo "### ${dep}" >> "$ctx_file"
+                echo "" >> "$ctx_file"
+                cat "$output_file" >> "$ctx_file"
+                echo "" >> "$ctx_file"
+                echo "---" >> "$ctx_file"
+                echo "" >> "$ctx_file"
+              else
+                echo "### ${dep}" >> "$ctx_file"
+                echo "" >> "$ctx_file"
+                echo "_Output not available._" >> "$ctx_file"
+                echo "" >> "$ctx_file"
+              fi
+            done
+
+            echo "$ctx_file"
+          }
+
+          # --- Parse chain definition from aeon.yml ---
+          # Extract the chain block using awk
+          CHAIN_BLOCK=$(awk -v chain="$CHAIN" '
+            /^chains:/ { in_chains=1; next }
+            in_chains && /^[^ ]/ { in_chains=0 }
+            in_chains && $0 ~ "^  " chain ":" { in_chain=1; next }
+            in_chain && /^  [^ ]/ && !($0 ~ "^    ") { in_chain=0 }
+            in_chain { print }
+          ' aeon.yml)
+
+          if [ -z "$CHAIN_BLOCK" ]; then
+            echo "::error::Chain '$CHAIN' not found in aeon.yml"
+            exit 1
+          fi
+
+          # Extract on_error mode (default: fail-fast)
+          ON_ERROR=$(echo "$CHAIN_BLOCK" | grep -oP 'on_error:\s*\K[a-z-]+' || echo "fail-fast")
+          echo "Error mode: $ON_ERROR"
+
+          # Total-dispatch budget for the whole chain. Chassis lets cycles run because
+          # the operator owns the box; Aeon runs on billed Actions minutes and a shared
+          # rate limit, so a chain that routes back on itself (via when:) gets a hard
+          # cap instead of a pkill. Default low; override per chain with max_dispatches:.
+          MAX_DISPATCHES=$(echo "$CHAIN_BLOCK" | grep -oP 'max_dispatches:\s*\K[0-9]+' || echo "10")
+          DISPATCH_COUNT=0
+          echo "Dispatch budget: $MAX_DISPATCHES"
+
+          # Parse steps into an ordered array
+          # Each step is either:
+          #   - parallel: [a, b, c]
+          #   - skill: name [, var: "val"] [, consume: [a, b]]
+          STEP_INDEX=0
+          declare -A STEP_TYPE STEP_SKILLS STEP_VAR STEP_CONSUME STEP_WHEN
+
+          while IFS= read -r line; do
+            # Skip empty lines and non-step lines
+            [[ "$line" =~ ^[[:space:]]*$ ]] && continue
+            [[ "$line" =~ ^[[:space:]]*#  ]] && continue
+
+            if [[ "$line" =~ parallel:\ *\[([^\]]+)\] ]]; then
+              STEP_TYPE[$STEP_INDEX]="parallel"
+              STEP_SKILLS[$STEP_INDEX]=$(echo "${BASH_REMATCH[1]}" | tr -d ' ')
+              STEP_INDEX=$((STEP_INDEX + 1))
+            elif [[ "$line" =~ skill:\ *([a-zA-Z0-9_-]+) ]]; then
+              STEP_TYPE[$STEP_INDEX]="single"
+              STEP_SKILLS[$STEP_INDEX]="${BASH_REMATCH[1]}"
+              # Extract optional var
+              if [[ "$line" =~ var:\ *\"([^\"]+)\" ]]; then
+                STEP_VAR[$STEP_INDEX]="${BASH_REMATCH[1]}"
+              fi
+              # Extract optional consume
+              if [[ "$line" =~ consume:\ *\[([^\]]+)\] ]]; then
+                STEP_CONSUME[$STEP_INDEX]=$(echo "${BASH_REMATCH[1]}" | tr -d ' ')
+              fi
+              # Extract optional when: conditional routing on the consumed skill's score
+              if [[ "$line" =~ when:\ *\"([^\"]+)\" ]]; then
+                STEP_WHEN[$STEP_INDEX]="${BASH_REMATCH[1]}"
+              fi
+              STEP_INDEX=$((STEP_INDEX + 1))
+            fi
+          done <<< "$CHAIN_BLOCK"
+
+          TOTAL_STEPS=$STEP_INDEX
+          echo "Chain has $TOTAL_STEPS step(s)"
+          CHAIN_FAILED=false
+
+          # --- Execute steps sequentially ---
+          for ((i=0; i<TOTAL_STEPS; i++)); do
+            TYPE="${STEP_TYPE[$i]}"
+            SKILLS="${STEP_SKILLS[$i]}"
+            VAR="${STEP_VAR[$i]:-}"
+            CONSUME="${STEP_CONSUME[$i]:-}"
+
+            echo ""
+            echo "=== Step $((i+1))/$TOTAL_STEPS: $TYPE [$SKILLS] ==="
+
+            # Check if chain should abort
+            if [ "$CHAIN_FAILED" = "true" ] && [ "$ON_ERROR" = "fail-fast" ]; then
+              echo "Skipping step (chain failed, on_error=fail-fast)"
+              continue
+            fi
+
+            # Conditional routing: a step with when: runs only if the condition holds
+            # for the scored source skill (the first consumed skill, else the previous
+            # step's first skill). The score comes from the Haiku scorer, committed to
+            # memory/skill-health/<skill>.json by the source's own run and pulled in
+            # after the prior step completed. A missing key does NOT fire (the step is
+            # skipped, not failed), which forces every routing path to either publish a
+            # score or fall through to an unconditional step. An invalid expression
+            # hard-fails the chain rather than silently mis-routing.
+            WHEN="${STEP_WHEN[$i]:-}"
+            if [ -n "$WHEN" ]; then
+              SRC=""
+              if [ -n "$CONSUME" ]; then
+                SRC="${CONSUME%%,*}"
+              elif [ "$i" -gt 0 ]; then
+                SRC=$(echo "${STEP_SKILLS[$((i-1))]}" | cut -d, -f1)
+              fi
+              VERDICT='{}'
+              if [ -n "$SRC" ] && [ -f "memory/skill-health/${SRC}.json" ]; then
+                SC=$(jq -r '.quality_score // empty' "memory/skill-health/${SRC}.json" 2>/dev/null || true)
+                [ -n "$SC" ] && VERDICT=$(jq -cn --argjson s "$SC" '{score:$s}')
+              fi
+              WRC=0
+              printf '%s' "$VERDICT" | bash scripts/chain_when.sh "$WHEN" || WRC=$?
+              if [ "$WRC" -eq 1 ]; then
+                echo "  Skip: when \"$WHEN\" not satisfied for '${SRC:-<none>}' (verdict=$VERDICT)"
+                continue
+              elif [ "$WRC" -eq 2 ]; then
+                echo "::error::Step $((i+1)) has an invalid when expression: \"$WHEN\""
+                CHAIN_FAILED=true
+                break
+              fi
+              echo "  when \"$WHEN\" satisfied (verdict=$VERDICT)"
+            fi
+
+            # Build list of skills to dispatch
+            IFS=',' read -ra SKILL_LIST <<< "$SKILLS"
+            RUN_IDS=()
+
+            for skill in "${SKILL_LIST[@]}"; do
+              # Build context file if this step consumes outputs
+              CTX_FILE=""
+              if [ -n "$CONSUME" ]; then
+                IFS=',' read -ra CONSUME_LIST <<< "$CONSUME"
+                CTX_FILE=$(build_context "$skill" "${CONSUME_LIST[@]}")
+                # Commit and push context file so the skill run can access it
+                git add output/.chains/ 2>/dev/null || true
+                if ! git diff --staged --quiet 2>/dev/null; then
+                  git commit -m "chore(chain): context for $skill"
+                  for attempt in 1 2 3; do
+                    git pull --rebase origin main 2>/dev/null || true
+                    git push -u origin HEAD 2>/dev/null && break
+                    sleep "$attempt"
+                  done
+                fi
+              fi
+
+              # Dispatch budget: hard-fail before overspending Actions minutes on a
+              # chain that routes back on itself.
+              DISPATCH_COUNT=$((DISPATCH_COUNT + 1))
+              if [ "$DISPATCH_COUNT" -gt "$MAX_DISPATCHES" ]; then
+                echo "::error::Chain '$CHAIN' hit its dispatch budget ($MAX_DISPATCHES) at step $((i+1)), skill '$skill'. Steps so far: $DISPATCH_COUNT dispatches. Raise max_dispatches: if this is intentional."
+                CHAIN_FAILED=true
+                break 2
+              fi
+
+              RUN_ID=$(dispatch_skill "$skill" "$VAR" "$CTX_FILE")
+              DISPATCH_EXIT=$?
+              if [ $DISPATCH_EXIT -ne 0 ] || [ -z "$RUN_ID" ]; then
+                echo "::error::Failed to dispatch skill: $skill"
+                CHAIN_FAILED=true
+                [ "$ON_ERROR" = "fail-fast" ] && break
+                continue
+              fi
+              # run_id is the last line of dispatch_skill output
+              RUN_ID=$(echo "$RUN_ID" | tail -1)
+              RUN_IDS+=("$RUN_ID")
+              sleep 2  # Stagger dispatches
+            done
+
+            # Wait for all runs in this step to complete
+            if [ ${#RUN_IDS[@]} -gt 0 ]; then
+              if ! wait_for_runs "${RUN_IDS[@]}"; then
+                echo "::warning::Step $((i+1)) had failures"
+                CHAIN_FAILED=true
+                if [ "$ON_ERROR" = "fail-fast" ]; then
+                  echo "Aborting chain (on_error=fail-fast)"
+                  continue
+                fi
+              fi
+
+              # Pull latest to get committed outputs from completed skills
+              git pull --rebase origin main 2>/dev/null || true
+              echo "  Pulled latest outputs"
+            fi
+          done
+
+          # --- Final status ---
+          echo ""
+          if [ "$CHAIN_FAILED" = "true" ]; then
+            echo "::error::Chain '$CHAIN' completed with failures"
+            echo "CHAIN_STATUS=failed" >> "$GITHUB_ENV"
+          else
+            echo "Chain '$CHAIN' completed successfully"
+            echo "CHAIN_STATUS=success" >> "$GITHUB_ENV"
+          fi
+
+      - name: Update cron state
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_GLOBAL || secrets.GITHUB_TOKEN }}
+          STATE_BACKEND: ${{ vars.STATE_BACKEND }}
+          _INPUT_CHAIN: ${{ inputs.chain }}
+        run: |
+          # env-bound + allowlisted, same as the Run chain step. (GHSA-h9v2-7m42-33m3)
+          CHAIN="$_INPUT_CHAIN"
+          if ! printf '%s' "$CHAIN" | grep -qE '^[a-zA-Z0-9_-]+$'; then
+            echo "::error::Invalid chain name: must match ^[a-zA-Z0-9_-]+$"
+            exit 1
+          fi
+          NOW_ISO=$(date -u +%FT%TZ)
+          STATUS="${CHAIN_STATUS:-failed}"
+          STATE_FILE="memory/cron-state.json"
+
+          # Issues backend (hardening §3) — STATE_BACKEND tri-state, matching aeon.yml:
+          # file (DEFAULT) commits the file only, no Issue writes (best for
+          # fork-and-forget); dual also appends the chain event to the shared state
+          # Issue (opt-in transition); issues appends + skips the file/rebase path.
+          # Append failure falls through to the file either way.
+          BACKEND="${STATE_BACKEND:-file}"
+          if [ "$BACKEND" != "file" ]; then
+            EVENT=$(jq -cn --arg s "chain:$CHAIN" --arg st "$STATUS" --arg ts "$NOW_ISO" \
+              '{skill:$s,status:$st,ts:$ts}')
+            ISSUE=$(GH_REPO="$GITHUB_REPOSITORY" bash scripts/state_store.sh ensure "aeon:cron-state" 2>/dev/null || true)
+            if [ -n "$ISSUE" ] && GH_REPO="$GITHUB_REPOSITORY" bash scripts/state_store.sh append "$ISSUE" "$EVENT"; then
+              echo "chain state appended to issue #$ISSUE (backend=$BACKEND)"
+              if [ "$BACKEND" = "issues" ]; then echo "(issues mode: skipping file commit)"; exit 0; fi
+            else
+              echo "::warning::Issues-as-state append failed (backend=$BACKEND); file path records this run"
+            fi
+          fi
+
+          git checkout main 2>/dev/null || true
+          git pull --rebase origin main 2>/dev/null || true
+
+          if [ -f "$STATE_FILE" ] && jq empty "$STATE_FILE" 2>/dev/null; then
+            STATE=$(cat "$STATE_FILE")
+          else
+            STATE='{}'
+          fi
+
+          # Store chain state with "chain:" prefix to distinguish from skills
+          STATE=$(echo "$STATE" | jq --arg s "chain:$CHAIN" --arg st "$STATUS" --arg ts "$NOW_ISO" \
+            '.[$s].last_status = $st | .[$s]["last_" + $st] = $ts')
+
+          mkdir -p memory
+          echo "$STATE" | jq '.' > "$STATE_FILE"
+
+          git add "$STATE_FILE"
+          if git diff --staged --quiet; then
+            echo "No state changes"
+            exit 0
+          fi
+
+          git commit -m "chore(chain): $CHAIN $STATUS"
+          for i in 1 2 3 4 5; do
+            if git pull --rebase origin main 2>/dev/null && git push -u origin HEAD 2>/dev/null; then
+              echo "Chain state updated: $CHAIN=$STATUS"
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            git reset --soft HEAD~1 2>/dev/null || true
+            git checkout -- "$STATE_FILE" 2>/dev/null || true
+            git pull origin main 2>/dev/null || true
+
+            if [ -f "$STATE_FILE" ] && jq empty "$STATE_FILE" 2>/dev/null; then
+              STATE=$(cat "$STATE_FILE")
+            else
+              STATE='{}'
+            fi
+            STATE=$(echo "$STATE" | jq --arg s "chain:$CHAIN" --arg st "$STATUS" --arg ts "$NOW_ISO" \
+              '.[$s].last_status = $st | .[$s]["last_" + $st] = $ts')
+            echo "$STATE" | jq '.' > "$STATE_FILE"
+            git add "$STATE_FILE"
+            git diff --staged --quiet && { echo "State already up to date"; exit 0; }
+            git commit -m "chore(chain): $CHAIN $STATUS"
+            sleep "$i"
+          done
+          echo "::warning::Failed to commit chain state (non-fatal)"
