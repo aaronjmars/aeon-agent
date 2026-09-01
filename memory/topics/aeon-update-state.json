@@ -1,22 +1,27 @@
 {
-  "baseline_sha": "8b8d719715ec9bb68fb858a1e334d23209047d82",
+  "baseline_sha": "3b4c5a3ff1d9846530e02ed5e6796a4a409d2674",
   "upstream": "aeonfun/aeon",
-  "last_run": "2026-08-25",
-  "last_pr": 198,
-  "applied": { "added": 10, "updated": 36, "merged_3way": 5, "deleted": 0 },
+  "last_run": "2026-09-01",
+  "last_pr": 209,
+  "applied": { "added": 19, "updated": 71, "merged_3way": 1, "deleted": 0 },
   "pending_conflicts": [
-    { "path": "CHANGELOG.md", "reason": "operator-customized-overlap", "upstream_commits": ["846cc73", "3c0ba70"] },
-    { "path": ".github/workflows/aeon.yml", "reason": "operator-customized-overlap", "upstream_commits": ["0b1dfde", "9e48e6a", "f72f823", "4bcc4be", "90a4d34"] },
-    { "path": ".github/workflows/ci-tests.yml", "reason": "operator-customized-overlap", "upstream_commits": ["8367e67"] },
-    { "path": "llms.txt", "reason": "operator-customized-overlap", "upstream_commits": ["86ffd45"] },
-    { "path": ".github/README.md", "reason": "operator-customized-overlap", "upstream_commits": ["3da3b73", "3c0ba70", "3a80957"] },
-    { "path": "apps/dashboard/package.json", "reason": "operator-customized-overlap", "upstream_commits": ["64790e3"] },
-    { "path": "apps/dashboard/package-lock.json", "reason": "operator-customized-overlap", "upstream_commits": ["64790e3"] },
-    { "path": "apps/webhook/package.json", "reason": "operator-customized-overlap", "upstream_commits": ["64790e3"] },
-    { "path": "apps/webhook/package-lock.json", "reason": "operator-customized-overlap", "upstream_commits": ["64790e3"] },
-    { "path": "docs/skill-packs.md", "reason": "operator-customized-overlap", "upstream_commits": ["3da3b73", "3c0ba70", "3a80957"] },
-    { "path": "skills/rightstack/SKILL.md", "reason": "needs-eyebrowlock-scan", "upstream_commits": ["3da3b73", "d157fcb"] },
-    { "path": "skills/rightstack/run.mjs", "reason": "needs-eyebrowlock-scan", "upstream_commits": ["3da3b73"] },
-    { "path": "skills/skill-article/SKILL.md", "reason": "needs-eyebrowlock-scan", "upstream_commits": ["3a80957"] }
+    { "path": "CHANGELOG.md", "reason": "operator-customized-overlap", "upstream_commits": ["bb8211f", "a80f70f", "bb13088"] },
+    { "path": ".github/workflows/aeon.yml", "reason": "operator-customized-overlap", "upstream_commits": ["8cff4d0", "8cc45e4", "a59b691", "71fad7a", "a80f70f", "a10fd0f"] },
+    { "path": ".github/workflows/ci-tests.yml", "reason": "operator-customized-overlap", "upstream_commits": ["a59b691", "71fad7a", "792a880", "1924c4f", "a10fd0f", "8fcce1e"] },
+    { "path": ".github/workflows/messages.yml", "reason": "operator-customized-overlap", "upstream_commits": ["8cc45e4", "a80f70f"] },
+    { "path": "scripts/llm-gateway.sh", "reason": "operator-customized-overlap", "upstream_commits": ["a80f70f", "47d1a56"] },
+    { "path": "llms.txt", "reason": "operator-customized-overlap", "upstream_commits": ["bb8211f", "a80f70f"] },
+    { "path": ".github/README.md", "reason": "operator-customized-overlap", "upstream_commits": ["935965d", "bb8211f", "6a03d1c", "1a67ffb", "a80f70f"] },
+    { "path": "docs/skill-packs.md", "reason": "operator-customized-overlap", "upstream_commits": ["6a03d1c"] }
+  ],
+  "resolved_this_run": [
+    { "path": "skills/rightstack/SKILL.md", "how": "applied-from-prior-window (eyebrow v0.4.1 sha-pinned scan ran in-run)" },
+    { "path": "skills/rightstack/run.mjs", "how": "applied-from-prior-window" },
+    { "path": "skills/skill-article/SKILL.md", "how": "applied-from-prior-window" },
+    { "path": "apps/dashboard/package.json", "how": "dropped: operator reconciled on PR #198 branch; remaining delta is newer local dep versions, no upstream change since 8b8d719" },
+    { "path": "apps/dashboard/package-lock.json", "how": "dropped: reconciled in PR #198" },
+    { "path": "apps/webhook/package.json", "how": "dropped: reconciled in PR #198" },
+    { "path": "apps/webhook/package-lock.json", "how": "dropped: reconciled in PR #198" },
+    { "path": "apps/dashboard/lib/skill-icons.data.ts", "how": "dropped: regenerated in-run by bin/generate-skill-icons (derived artifact)" }
   ]
 }
