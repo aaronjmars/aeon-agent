@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-08-30T06:07:44Z",
-  "quality_score": 4,
-  "assessment": "Substantive market report with specific, sourced data, transparent methodology, and clear alignment to north-star metric tracking. Well-structured, verifiable, and properly transparent about data quality and limitations.",
+  "last_analyzed": "2026-09-01T02:10:41Z",
+  "quality_score": 5,
+  "assessment": "Substantive, well-sourced token report with cross-checked data (gt/ds/xai all ok, DexScreener agreement within 1.1%), honest methodology caveats for the missed 08-31 tick, whale-level flow insight tied to real fetched trades (corroborated by .gt_trades.json/.xai_social.json scratch artifacts), stays in-lane on the 100x quote ('their call, not ours'), and gives the operator actionable follow-ups (missed cron tick, scratch-file leftovers) — squarely serving the 'track momentum honestly, flag breakage early' priority.",
   "flags": [],
-  "avg_score": 3.93,
+  "avg_score": 3.97,
   "history": [
-    {
-      "date": "2026-07-27",
-      "score": 4
-    },
     {
       "date": "2026-07-28",
       "score": 5
@@ -125,6 +121,10 @@
     {
       "date": "2026-08-30",
       "score": 4
+    },
+    {
+      "date": "2026-09-01",
+      "score": 5
     }
   ]
 }
