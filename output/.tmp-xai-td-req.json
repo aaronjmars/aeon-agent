@@ -3,7 +3,7 @@
   "input": [
     {
       "role": "user",
-      "content": "Search X for the latest tweets from aeonframework in the last 3 days (since 2026-08-29). Return the 5 most interesting or substantive tweets. For each: full text, date, direct link (https://x.com/aeonframework/status/ID). Skip retweets of others."
+      "content": "Search X for the latest tweets from aeonframework in the last 3 days (since 2026-08-30, today is 2026-09-02). Return the 5 most interesting or substantive tweets. For each: full text, date, direct link (https://x.com/aeonframework/status/ID). Skip retweets of others."
     }
   ],
   "tools": [{ "type": "x_search" }]
