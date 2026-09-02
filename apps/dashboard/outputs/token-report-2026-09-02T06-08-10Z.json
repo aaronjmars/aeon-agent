@@ -1,0 +1,150 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report"
+      },
+      "children": [
+        "status-badge",
+        "analysis-text",
+        "separator-1",
+        "price-metrics",
+        "separator-2",
+        "trading-section",
+        "separator-3",
+        "chart-link"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "CONSOLIDATING",
+        "variant": "secondary"
+      }
+    },
+    "analysis-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price down 22.3% but volume only 1.6× trend and buy/sell flow flipped positive — too thin to call it a confirmed breakdown.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "liquidity-stat",
+        "volume-stat"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001847",
+        "delta": "-22.3%",
+        "trend": "down"
+      }
+    },
+    "liquidity-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.18M",
+        "delta": "-17.8%",
+        "trend": "down"
+      }
+    },
+    "volume-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$231.5K",
+        "delta": "1.63× 7d"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trading-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trading-grid",
+        "ratio-text"
+      ]
+    },
+    "trading-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "buys-stat",
+        "sells-stat",
+        "whales-stat"
+      ]
+    },
+    "buys-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "278"
+      }
+    },
+    "sells-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "261"
+      }
+    },
+    "whales-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "29"
+      }
+    },
+    "ratio-text": {
+      "type": "Text",
+      "props": {
+        "text": "Buy/Sell Ratio: 1.07",
+        "variant": "caption"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
