@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-02T06:08:09Z",
+  "last_analyzed": "2026-09-03T06:08:11Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-structured daily token report with sound reasoning and clear verdict; properly aligned with strategy (tracking $AEON price momentum). Sources executed successfully; analysis shows understanding of market microstructure (volume ratios, order flow dynamics, whale prints). Sourcing attribution could be more detailed for reproducibility.",
+  "assessment": "Substantive, well-structured market report with real data, cross-verified sources, and sound analysis; verifiable via disclosed APIs and transparent methodology—a competent supporting task aligned to the momentum-tracking metric.",
   "flags": [],
   "avg_score": 3.93,
   "history": [
-    {
-      "date": "2026-07-30",
-      "score": 4
-    },
     {
       "date": "2026-08-05",
       "score": 5
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-02",
+      "score": 4
+    },
+    {
+      "date": "2026-09-03",
       "score": 4
     }
   ]
