@@ -30,6 +30,7 @@ Older rows archived to `memory/topics/digests-history.md`.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-03 | tweet-digest | Skill Drop (rightstack advisor spotlight), Shipped (Uniswap v4 hooks — 4-network deploy + "Tail Twins" hook), Security disclosures (vuln-scanner flagged heyito/moo, advisory + fix PR) |
 | 2026-09-02 | tweet-digest | Content & Shipped (self-healing loop blog post, skill catalogue plug), Security disclosures (Graphify-Labs/graphify vuln), Growth & Partnerships (UsePodAI cheaper-inference shoutout) |
 | 2026-08-30 | tweet-digest | Security disclosures (vuln-scanner flagged synthetic-sciences/openscience, private advisory + fix PR filed) |
 | 2026-08-29 | tweet-digest | Skill Drop & Content (aeon vs another framework comparison), Growth & Partnerships (aeon x FD_XYZ x CoinMarketCap), Security disclosures (TencentCloud TencentDB-Agent-Memory vuln) |

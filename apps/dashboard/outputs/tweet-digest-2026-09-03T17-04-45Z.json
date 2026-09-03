@@ -1,0 +1,193 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-03"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_theme1",
+        "stack_tweet1",
+        "sep1",
+        "heading_theme2",
+        "stack_theme2",
+        "sep2",
+        "heading_theme3",
+        "stack_tweet4"
+      ]
+    },
+    "heading_theme1": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Skill Drop",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_tweet1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "new skill \"rightstack\" — read-only web3 stack advisor for architecture calls, workflow inspection, tool comparisons and package-migration checks"
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2095406440789741829"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_theme2": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Shipped (Uniswap v4 hooks)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_theme2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_tweet2",
+        "stack_tweet3"
+      ]
+    },
+    "stack_tweet2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "agent-made uniswap v4 hooks now deployable across ethereum, base, robinhood app & monad"
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2095513299974578480"
+      },
+      "children": []
+    },
+    "stack_tweet3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "shipped \"tail twins,\" a uniswap v4 hook where the price shifts on every trade so you chase to match its last digit"
+      },
+      "children": []
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2095521422038724664"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_theme3": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Security disclosures",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack_tweet4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "link4"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner flagged an issue in heyito/moo — private advisory + fix pr filed, feedback requested"
+      },
+      "children": []
+    },
+    "link4": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2095481949955518549"
+      },
+      "children": []
+    }
+  }
+}
