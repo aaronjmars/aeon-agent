@@ -1,27 +1,24 @@
 {
-  "baseline_sha": "3b4c5a3ff1d9846530e02ed5e6796a4a409d2674",
+  "baseline_sha": "bf33365164c5a8b50d49a0ed64a45521dbe96771",
   "upstream": "aeonfun/aeon",
-  "last_run": "2026-09-01",
-  "last_pr": 209,
-  "applied": { "added": 19, "updated": 71, "merged_3way": 1, "deleted": 0 },
+  "last_run": "2026-09-04",
+  "last_pr": 220,
+  "applied": { "added": 12, "updated": 16, "merged_3way": 3, "deleted": 0, "eyebrowlock_entries_swapped": 5 },
   "pending_conflicts": [
-    { "path": "CHANGELOG.md", "reason": "operator-customized-overlap", "upstream_commits": ["bb8211f", "a80f70f", "bb13088"] },
-    { "path": ".github/workflows/aeon.yml", "reason": "operator-customized-overlap", "upstream_commits": ["8cff4d0", "8cc45e4", "a59b691", "71fad7a", "a80f70f", "a10fd0f"] },
-    { "path": ".github/workflows/ci-tests.yml", "reason": "operator-customized-overlap", "upstream_commits": ["a59b691", "71fad7a", "792a880", "1924c4f", "a10fd0f", "8fcce1e"] },
-    { "path": ".github/workflows/messages.yml", "reason": "operator-customized-overlap", "upstream_commits": ["8cc45e4", "a80f70f"] },
-    { "path": "scripts/llm-gateway.sh", "reason": "operator-customized-overlap", "upstream_commits": ["a80f70f", "47d1a56"] },
-    { "path": "llms.txt", "reason": "operator-customized-overlap", "upstream_commits": ["bb8211f", "a80f70f"] },
-    { "path": ".github/README.md", "reason": "operator-customized-overlap", "upstream_commits": ["935965d", "bb8211f", "6a03d1c", "1a67ffb", "a80f70f"] },
-    { "path": "docs/skill-packs.md", "reason": "operator-customized-overlap", "upstream_commits": ["6a03d1c"] }
+    { "path": "skills/skill-health/SKILL.md", "reason": "needs-eyebrowlock-scan: upstream f3b3b29 (#1018) is a clean 3-way merge over the operator's `scorable: false` line, but the merged SKILL.md needs a fresh eyebrow contentHash the sandbox can't compute (no eyebrow binary, no pinned v0.4.2 sha). Reverted to base and surfaced so `eyebrow verify` stays green; operator merges #1018 then runs `eyebrow scan --path . --lockfile eyebrowlock.json`.", "upstream_commits": ["f3b3b29"] },
+    { "path": "CHANGELOG.md", "reason": "operator-customized-overlap", "upstream_commits": ["dc1a975", "69c6a17", "e7ef463"] },
+    { "path": ".github/workflows/aeon.yml", "reason": "operator-customized-overlap", "upstream_commits": ["dc1a975", "66711d3", "6dc0ad1", "c92fbfb", "bf33365"] },
+    { "path": ".github/workflows/ci-tests.yml", "reason": "operator-customized-overlap", "upstream_commits": ["dc1a975", "66711d3", "c92fbfb", "66ab2b4", "f3b3b29", "bd74379"] },
+    { "path": ".github/workflows/messages.yml", "reason": "operator-customized-overlap", "upstream_commits": ["dc1a975"] },
+    { "path": "apps/dashboard/package.json", "reason": "cosmetic-ordering-only-versions-already-match-head", "upstream_commits": ["158a4ca"] },
+    { "path": "apps/webhook/package.json", "reason": "cosmetic-ordering-only-versions-already-match-head", "upstream_commits": ["bccb67c"] },
+    { "path": "llms.txt", "reason": "operator-customized-overlap-carried-upstream-unchanged-this-window", "upstream_commits": ["bb8211f", "a80f70f"] },
+    { "path": ".github/README.md", "reason": "operator-customized-overlap-carried-upstream-unchanged-this-window", "upstream_commits": ["935965d", "bb8211f", "6a03d1c", "1a67ffb", "a80f70f"] },
+    { "path": "docs/skill-packs.md", "reason": "operator-customized-overlap-carried-upstream-unchanged-this-window", "upstream_commits": ["6a03d1c"] }
   ],
   "resolved_this_run": [
-    { "path": "skills/rightstack/SKILL.md", "how": "applied-from-prior-window (eyebrow v0.4.1 sha-pinned scan ran in-run)" },
-    { "path": "skills/rightstack/run.mjs", "how": "applied-from-prior-window" },
-    { "path": "skills/skill-article/SKILL.md", "how": "applied-from-prior-window" },
-    { "path": "apps/dashboard/package.json", "how": "dropped: operator reconciled on PR #198 branch; remaining delta is newer local dep versions, no upstream change since 8b8d719" },
-    { "path": "apps/dashboard/package-lock.json", "how": "dropped: reconciled in PR #198" },
-    { "path": "apps/webhook/package.json", "how": "dropped: reconciled in PR #198" },
-    { "path": "apps/webhook/package-lock.json", "how": "dropped: reconciled in PR #198" },
-    { "path": "apps/dashboard/lib/skill-icons.data.ts", "how": "dropped: regenerated in-run by bin/generate-skill-icons (derived artifact)" }
+    { "path": "scripts/llm-gateway.sh", "how": "CLEAN-MERGE 3-way: operator's ASCII-normalized punctuation kept; upstream dc1a975 (#999) GLM reasoning-effort change subsumed. Net-zero tree change (local already carried it), no longer divergent — dropped from pending." },
+    { "path": "apps/dashboard/package-lock.json", "how": "CLEAN-MERGE 3-way: net-zero (operator's committed lock already equals the merge result)." },
+    { "path": "eyebrowlock.json", "how": "5 artifact entries (vuln-scanner, pr-review, feature, deploy-uni-hook, .claude/skills/aeon) swapped in from upstream HEAD's v0.4.2 lock — valid because each swapped skill's branch content is byte-identical to upstream HEAD (eyebrow output is deterministic on identical content). Confirmed v0.4.2↔v0.4.1 hash compatibility across 72 unchanged shared skills before swapping. Fixes the ci-skill-integrity `eyebrow verify --ci` drift that failed PR #220's first run." }
   ]
 }
