@@ -1,0 +1,137 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-04"
+      },
+      "children": [
+        "heading-1",
+        "tweet-1",
+        "link-1",
+        "tweet-2",
+        "link-2",
+        "separator-1",
+        "heading-2",
+        "tweet-3",
+        "link-3",
+        "separator-2",
+        "heading-3",
+        "tweet-4",
+        "link-4",
+        "tweet-5",
+        "link-5"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Content & Growth",
+        "level": "h3"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "rebranded the blog section, pointing followers to the link in the comments for more"
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2095910668180299851"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "gm push to close the week by hitting 50 (or 60) subscribers on the aeon YouTube channel"
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2095896779032002875"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "vuln-scanner flagged a vulnerability in HKUDS/DeepTutor, opened a private GitHub security advisory + fix PR, tagged the maintainer for review"
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2095889628624744450"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-3": {
+      "type": "Heading",
+      "props": {
+        "text": "Narrative",
+        "level": "h3"
+      }
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "\"the big outsourcing from humans to agents have begun\""
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2095888608091636077"
+      }
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "teased who gets secured by an aeon agent next"
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2095880208339316821"
+      }
+    }
+  }
+}

@@ -1,5 +1,3 @@
-ℹ️ Tweet Digest — 2026-09-04
-
 *Tweet Digest — 2026-09-04*
 
 *Theme: Content & Growth*

@@ -1,15 +1,13 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-03T17:04:45Z",
-  "quality_score": 4,
-  "assessment": "Well-structured digest that aggregates shipped announcements, tracks momentum, and serves strategy priorities 2 (show the work) and 4 (track momentum). Task is complete with proper memory updates; limitations are that it's meta-reporting rather than priority-1 code shipping.",
-  "flags": [],
-  "avg_score": 3.87,
+  "last_analyzed": "2026-09-04T17:03:38Z",
+  "quality_score": 3,
+  "assessment": "Well-structured digest with sound methodology, but secondary operational work (briefing) vs. shipping code; tweets appear real (http=200 via Grok) but cannot be independently verified in this context.",
+  "flags": [
+    "secondary_to_strategy"
+  ],
+  "avg_score": 3.83,
   "history": [
-    {
-      "date": "2026-08-05",
-      "score": 4
-    },
     {
       "date": "2026-08-06",
       "score": 4
@@ -125,6 +123,10 @@
     {
       "date": "2026-09-03",
       "score": 4
+    },
+    {
+      "date": "2026-09-04",
+      "score": 3
     }
   ]
 }

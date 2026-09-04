@@ -440,3 +440,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-09-04,aeon-update,claude-opus-4-8,7328,103838,15571301,181114
 2026-09-04,token-report,claude-sonnet-5,2944,19353,4485662,114576
 2026-09-04,secured-watch,claude-sonnet-5,3133,14527,1976565,73869
+2026-09-04,tweet-digest,claude-sonnet-5,2489,7057,867648,36811
