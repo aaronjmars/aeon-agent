@@ -117,7 +117,7 @@
       "files": [
         {
           "path": "SKILL.md",
-          "hash": "a48fb63798be19f958820e880efc6f1f5cf0d242d6937eb26c4c02b79bb32bd5"
+          "hash": "b17491de609e1fa3b241a55012e60f21d63eaaac6ad9251c43509f40ec635872"
         }
       ],
       "findings": [
@@ -126,7 +126,7 @@
           "severity": "critical",
           "owasp": "ASK-01",
           "file": "SKILL.md",
-          "line": 105,
+          "line": 108,
           "snippet": "network is open, but `pip install` / `curl | sh` / `tar` are **not** on the in-run",
           "explanation": "downloads and executes remote code via a pipe to a shell"
         },
@@ -135,7 +135,7 @@
           "severity": "critical",
           "owasp": "ASK-01",
           "file": "SKILL.md",
-          "line": 119,
+          "line": 122,
           "snippet": "# open, but `pip install` / `curl | sh` / `tar` are NOT allow-listed — `python3 -m pip`,",
           "explanation": "downloads and executes remote code via a pipe to a shell"
         },
@@ -144,7 +144,7 @@
           "severity": "medium",
           "owasp": "ASK-03",
           "file": "SKILL.md",
-          "line": 301,
+          "line": 304,
           "snippet": "- `exec` / `spawn` / `system` / `eval` sinks + subprocess with string interpolation (RCE)",
           "explanation": "uses a process-execution primitive"
         },
@@ -153,12 +153,12 @@
           "severity": "critical",
           "owasp": "ASK-01",
           "file": "SKILL.md",
-          "line": 872,
+          "line": 1013,
           "snippet": "1. **Install** — the binaries (`semgrep`, `trufflehog`, `osv-scanner`, `slither`) are **not pre-installed**. Stage the…",
           "explanation": "downloads and executes remote code via a pipe to a shell"
         }
       ],
-      "contentHash": "sha256-a9cdb0547fa559f53196eef12f5459c6d1f8bace3a56fa257f809e4f309cb1c5",
+      "contentHash": "sha256-a81f0757d7b3bafe3baaa0c3d2c0e735eb284a7ebc9768264bdfe4e747b4aa9a",
       "discoveredFrom": "skills/vuln-scanner/SKILL.md"
     },
     {
@@ -315,10 +315,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "hash": "e8684cee3a8d87a5c192bd2eeca38ad4b64c39714513e8ace57471ae962281da"
+          "hash": "bf3a11650596bd34818ff8df5a8e6da7c3153f2a41388c867fd4b4861472860d"
         }
       ],
-      "contentHash": "sha256-eed99c7e18a9bcaad45109a53323096bbce76cf15c32b3b2b6663465ba1329a1",
+      "contentHash": "sha256-7a3f62acc00ed607838decee306822cf7791ef3471b5df3a8d5387f940c3482b",
       "discoveredFrom": "skills/pr-review/SKILL.md"
     },
     {
@@ -688,7 +688,7 @@
           "owasp": "ASK-06",
           "file": "run.mjs",
           "line": 10,
-          "snippet": ".flatMap((key) =\u003e process.env[key] === undefined ? [] : [[key, process.env[key]]]),",
+          "snippet": ".flatMap((key) => process.env[key] === undefined ? [] : [[key, process.env[key]]]),",
           "explanation": "references sensitive credential or secret paths"
         }
       ],
@@ -917,10 +917,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "hash": "2a02d778f165018741ce467b242334de6e8213f6c962ed33307984b0b401e8c9"
+          "hash": "b9a7d47326648ec745a35419c2e0b67521d58020fb1eef4959f58df4be09f5f3"
         }
       ],
-      "contentHash": "sha256-b5d7317728abc7bc8c4bc0ffcef5967af295cbb33cab91b2eb3617a1f7c39c00",
+      "contentHash": "sha256-3ffc12f919716a0035c0594849f176a844ba4b56ba0f71d6bf1152a2f1aaaaea",
       "discoveredFrom": "skills/feature/SKILL.md"
     },
     {
@@ -1698,7 +1698,7 @@
           "owasp": "ASK-06",
           "file": "hook-deploy.sh",
           "line": 200,
-          "snippet": "[ -f hook.env ] \u0026\u0026 . ./hook.env",
+          "snippet": "[ -f hook.env ] && . ./hook.env",
           "explanation": "references sensitive credential or secret paths"
         },
         {
