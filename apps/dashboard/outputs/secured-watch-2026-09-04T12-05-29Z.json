@@ -1,0 +1,147 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon"
+      },
+      "children": [
+        "intro_text",
+        "sep1",
+        "metrics_stack",
+        "sep2",
+        "newly_secured_heading",
+        "repos_stack",
+        "sep3",
+        "dropped_note"
+      ]
+    },
+    "intro_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 more repos fixed since last check. vuln-scanner keeps cooking.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "repos secured",
+        "value": "81",
+        "delta": "+4"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "2,518,267",
+        "delta": "+144,656"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "newly_secured_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (5)",
+        "level": "h3"
+      }
+    },
+    "repos_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo1",
+        "repo2",
+        "repo3",
+        "repo4",
+        "repo5"
+      ]
+    },
+    "repo1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "esengine/DeepSeek-Reasonix",
+        "href": "https://github.com/esengine/DeepSeek-Reasonix/pull/9599",
+        "source": "HIGH+MEDIUM",
+        "score": "35,383★"
+      }
+    },
+    "repo2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "lidge-jun/opencodex",
+        "href": "https://github.com/lidge-jun/opencodex/commit/a616078949ca5b5e9b024d3a1619744a3fb62ac8",
+        "source": "LOW",
+        "score": "13,173★"
+      }
+    },
+    "repo3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "NVIDIA/OpenShell",
+        "href": "https://github.com/NVIDIA/OpenShell/pull/3016",
+        "source": "LOW",
+        "score": "8,501★"
+      }
+    },
+    "repo4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "shy3130/tick-stock-panel",
+        "href": "https://github.com/shy3130/tick-stock-panel/pull/122",
+        "source": "HIGH",
+        "score": "4,264★"
+      }
+    },
+    "repo5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pacifio/atlas",
+        "href": "https://github.com/pacifio/atlas/pull/228",
+        "source": "MEDIUM",
+        "score": "3,121★"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dropped_note": {
+      "type": "Text",
+      "props": {
+        "text": "Dropped from board: shy3130/tickflow-stock-panel",
+        "variant": "muted"
+      }
+    }
+  }
+}
