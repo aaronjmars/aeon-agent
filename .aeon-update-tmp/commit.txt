@@ -1,0 +1,5 @@
+aeon-update: sync upstream 3b4c5a3..bf33365
+
+22 upstream commits from aeonfun/aeon. 30 files applied cleanly (12 added, 16 updated incl. eyebrowlock refresh, 1 three-way auto-merge; 2 further 3-way merges were net-zero), 10 need manual review. Baseline advanced to bf33365. eyebrowlock.json: 5 skill entries refreshed to upstream HEAD (byte-identical content) to satisfy the v0.4.2 eyebrow verify gate.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>

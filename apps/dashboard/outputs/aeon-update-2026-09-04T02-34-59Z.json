@@ -1,0 +1,278 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update",
+        "description": "PR #220 — synced 22 upstream commits"
+      },
+      "children": [
+        "header_stack",
+        "sep1",
+        "summary_stack",
+        "sep2",
+        "gist_section",
+        "sep3",
+        "snag_alert",
+        "sep4",
+        "held_section",
+        "sep5",
+        "action_section",
+        "sep6",
+        "pr_link"
+      ]
+    },
+    "header_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "status_badge",
+        "date_text"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "PR #220 (green)",
+        "variant": "default"
+      }
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-09-04",
+        "variant": "caption"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "summary_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "summary_main",
+        "commits_range",
+        "files_detail"
+      ]
+    },
+    "summary_main": {
+      "type": "Text",
+      "props": {
+        "text": "synced 22 upstream commits → PR, all green.",
+        "variant": "lead"
+      }
+    },
+    "commits_range": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon 3b4c5a3..bf33365"
+      }
+    },
+    "files_detail": {
+      "type": "Text",
+      "props": {
+        "text": "30 files applied clean, 10 need your hand. baseline advances to bf33365 on merge."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "gist_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "gist_heading",
+        "gist_items"
+      ]
+    },
+    "gist_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Changes",
+        "level": "h3"
+      }
+    },
+    "gist_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "gist_item1",
+        "gist_item2",
+        "gist_item3",
+        "gist_item4"
+      ]
+    },
+    "gist_item1": {
+      "type": "Text",
+      "props": {
+        "text": "notify per-channel status"
+      }
+    },
+    "gist_item2": {
+      "type": "Text",
+      "props": {
+        "text": "fleet-scorecard no longer leaks non-skill runs into reliability"
+      }
+    },
+    "gist_item3": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner PoC gate + deploy-uni-hook template fixes"
+      }
+    },
+    "gist_item4": {
+      "type": "Text",
+      "props": {
+        "text": "block-style per-skill model: scheduler fix (#1024)"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "snag_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Upstream Dependency Change",
+        "message": "upstream bumped the eyebrow gate to v0.4.2 and it now checks content hashes — the old \"verify tolerates drift\" assumption is dead. first push went red. fixed by refreshing 5 lock entries from upstream HEAD (byte-identical skills only, no binary run) after proving 72/72 hash-compat. green now.",
+        "type": "warning"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "held_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "held_heading",
+        "held_content"
+      ]
+    },
+    "held_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "On Hold",
+        "level": "h3"
+      }
+    },
+    "held_content": {
+      "type": "Text",
+      "props": {
+        "text": "skill-health (#1018 recovery detection) — clean merge but needs an eyebrow rescan i can't run here. surfaced, not shipped."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "action_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "action_heading",
+        "decision_line",
+        "conflicts_heading",
+        "conflicts_items"
+      ]
+    },
+    "action_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Decision",
+        "level": "h3"
+      }
+    },
+    "decision_line": {
+      "type": "Text",
+      "props": {
+        "text": "merge, or reconcile the 10 conflicts"
+      }
+    },
+    "conflicts_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Conflicts to Resolve",
+        "level": "h4"
+      }
+    },
+    "conflicts_items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "conflict_item1",
+        "conflict_item2",
+        "conflict_item3"
+      ]
+    },
+    "conflict_item1": {
+      "type": "Text",
+      "props": {
+        "text": "workflows + CHANGELOG carry the GLM_REASONING_EFFORT / PoC-gate wiring"
+      }
+    },
+    "conflict_item2": {
+      "type": "Text",
+      "props": {
+        "text": "2 package.json are cosmetic-only"
+      }
+    },
+    "conflict_item3": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml gains a dev-loop chain"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #220",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/220",
+        "source": "aaronjmars/aeon-agent"
+      }
+    }
+  }
+}

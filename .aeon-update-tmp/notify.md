@@ -1,5 +1,3 @@
-✅ aeon-update: PR #220 (green)
-
 ⭐ *aeon-update — 2026-09-04*
 
 synced 22 upstream commits → PR, all green.
@@ -15,5 +13,3 @@ held back: `skill-health` (#1018 recovery detection) — clean merge but needs a
 your call: merge, or reconcile the 10 conflicts (workflows + CHANGELOG carry the GLM_REASONING_EFFORT / PoC-gate wiring; 2 package.json are cosmetic-only; `aeon.yml` gains a `dev-loop` chain).
 
 PR: https://github.com/aaronjmars/aeon-agent/pull/220
-
-🔗 https://github.com/aaronjmars/aeon-agent/pull/220
