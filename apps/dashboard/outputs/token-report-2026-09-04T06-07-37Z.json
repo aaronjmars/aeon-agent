@@ -1,0 +1,98 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "✅ AEON — BREAKOUT"
+      },
+      "children": [
+        "text-description",
+        "separator-1",
+        "stats-section",
+        "separator-2",
+        "link-chart"
+      ]
+    },
+    "text-description": {
+      "type": "Text",
+      "props": {
+        "text": "Up 44.7% on 2.1x normal volume, led by a $96.6K print at 16:00 UTC that lifted price from $0.0000224 to an intraday high near $0.0000273.",
+        "variant": "lead"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol",
+        "stat-ratio",
+        "stat-whales"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00002258",
+        "delta": "+44.7%",
+        "trend": "up"
+      }
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.37M",
+        "delta": "+26.5%",
+        "trend": "up"
+      }
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (2.1x 7d avg)",
+        "value": "$344.0K"
+      }
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys / Sells (0.47)",
+        "value": "375 / 797"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "28"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

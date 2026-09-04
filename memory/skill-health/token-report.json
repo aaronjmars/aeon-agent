@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-03T06:08:11Z",
+  "last_analyzed": "2026-09-04T06:07:37Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-structured market report with real data, cross-verified sources, and sound analysis; verifiable via disclosed APIs and transparent methodology—a competent supporting task aligned to the momentum-tracking metric.",
+  "assessment": "Substantive, verifiable execution of token-tracking mission — detected real breakout signal, documented source data and skip reasons, logged metrics for delta tracking, clean run aligned to north-star metric.",
   "flags": [],
-  "avg_score": 3.93,
+  "avg_score": 3.9,
   "history": [
-    {
-      "date": "2026-08-05",
-      "score": 5
-    },
     {
       "date": "2026-08-06",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-03",
+      "score": 4
+    },
+    {
+      "date": "2026-09-04",
       "score": 4
     }
   ]

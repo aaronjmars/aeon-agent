@@ -1,10 +1,12 @@
-ℹ️ $AEON Token Report
+✅ AEON — BREAKOUT
 
-*$AEON — CONSOLIDATING*
+*$AEON — BREAKOUT*
 
-Price down 15.5% on a sharp evening wick, but volume at only 0.78× trend and whale flow split 4 buys/3 sells — too thin to call a confirmed breakdown.
+Up 44.7% on 2.1x normal volume, led by a $96.6K print at 16:00 UTC that lifted price from $0.0000224 to an intraday high near $0.0000273.
 
-Price $0.00001561 (−15.5% 24h) | Liq $1.08M (−8.0%) | Vol $107.2K (0.78× 7d)
-Buys/Sells 187/356 (ratio 0.53) | Whales: 7
+Price $0.00002258 (+44.7% 24h) | Liq $1.37M (+26.5%) | Vol $344.0K (2.1x 7d)
+Buys/Sells 375/797 (ratio 0.47) | Whales: 28
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
+
+🔗 https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
