@@ -1,17 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-04T17:03:38Z",
-  "quality_score": 3,
-  "assessment": "Well-structured digest with sound methodology, but secondary operational work (briefing) vs. shipping code; tweets appear real (http=200 via Grok) but cannot be independently verified in this context.",
-  "flags": [
-    "secondary_to_strategy"
-  ],
+  "last_analyzed": "2026-09-05T17:04:45Z",
+  "quality_score": 4,
+  "assessment": "Well-executed monitoring skill; substantive and verifiable via git history (commit 805e47f matches output exactly), properly deduped and themed, clearly serves the 'show the work' priority—not shipping framework code but accurate signal tracking.",
+  "flags": [],
   "avg_score": 3.83,
   "history": [
-    {
-      "date": "2026-08-06",
-      "score": 4
-    },
     {
       "date": "2026-08-07",
       "score": 4
@@ -127,6 +121,10 @@
     {
       "date": "2026-09-04",
       "score": 3
+    },
+    {
+      "date": "2026-09-05",
+      "score": 4
     }
   ]
 }

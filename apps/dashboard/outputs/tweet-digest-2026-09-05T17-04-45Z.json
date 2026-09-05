@@ -1,0 +1,70 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-05"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-1",
+        "tweet-1",
+        "sep-1",
+        "heading-2",
+        "tweet-2"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Skill Drop",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "new skill dropped — Skill Article, lets an agent write its own high-quality writeup of any skill — [link](https://x.com/aeonframework/status/2096176521199099996)"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Security disclosures",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "vuln-scanner flagged a bug in MoonshotAI/kimi-cli — private advisory + fix PR already filed, waiting on their team to look — [link](https://x.com/aeonframework/status/2096206722373165267)"
+      },
+      "children": []
+    }
+  }
+}
