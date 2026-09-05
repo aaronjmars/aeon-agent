@@ -1,15 +1,9 @@
-ℹ️ Secured by Aeon
+No changes on the "Secured by Aeon" leaderboard since the last run — per skill rules, that means no notification, just the state timestamp bump and a log entry.
 
-## Secured by Aeon — new since last check
-5 more repos fixed since last check. vuln-scanner keeps cooking.
-
-**81 repos** secured (+4) · **2,518,267★** total (+144,656)
-
-### 🆕 Newly secured (5)
-- **[esengine/DeepSeek-Reasonix](https://github.com/esengine/DeepSeek-Reasonix/pull/9599)** — `HIGH+MEDIUM` · 35,383★ — 
-- **[lidge-jun/opencodex](https://github.com/lidge-jun/opencodex/commit/a616078949ca5b5e9b024d3a1619744a3fb62ac8)** — `LOW` · 13,173★ — 
-- **[NVIDIA/OpenShell](https://github.com/NVIDIA/OpenShell/pull/3016)** — `LOW` · 8,501★ — 
-- **[shy3130/tick-stock-panel](https://github.com/shy3130/tick-stock-panel/pull/122)** — `HIGH` · 4,264★ — 
-- **[pacifio/atlas](https://github.com/pacifio/atlas/pull/228)** — `MEDIUM` · 3,121★ — 
-
-_Dropped from board: shy3130/tickflow-stock-panel_
+## Summary
+- Fetched `aeon.fun/security` (http=200, 81 rows parsed) and diffed against `memory/state/secured-repos.json`.
+- Result: `NO_CHANGE` — 81 repos, 2,518,267★ total, identical to prior run. No new/changed/dropped entries.
+- Updated `memory/state/secured-repos.json`'s `updated_at` timestamp (state must advance every real run).
+- No notification sent (per skill: silence on no change).
+- Appended a `### secured-watch` entry to `memory/logs/2026-09-05.md`.
+- Follow-up: none needed — next run picks up from this baseline.
