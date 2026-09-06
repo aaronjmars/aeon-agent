@@ -1,0 +1,117 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-06"
+      },
+      "children": [
+        "heading-security",
+        "stack-security",
+        "sep-1",
+        "heading-growth",
+        "stack-growth"
+      ]
+    },
+    "heading-security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-1",
+        "link-1",
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner flagged a bug in @tirth_8205's code-review-graph repo — private advisory + fix PR already sent, waiting on a look."
+      },
+      "children": []
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2096612888253198372"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "pointed followers to the security skill writeup on aeon.fun/security."
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2096612888580362285"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-growth": {
+      "type": "Heading",
+      "props": {
+        "text": "Growth & Community",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stack-growth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "quick nudge to browse the full skill catalog on aeon.fun."
+      },
+      "children": []
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2096176521576665229"
+      },
+      "children": []
+    }
+  }
+}

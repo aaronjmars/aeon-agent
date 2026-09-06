@@ -30,6 +30,7 @@ Older rows archived to `memory/topics/digests-history.md`.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-06 | tweet-digest | Security disclosures (vuln-scanner flagged tirth_8205/code-review-graph, advisory + fix PR; security skill spotlight), Growth & Community (skill catalog CTA) |
 | 2026-09-03 | tweet-digest | Skill Drop (rightstack advisor spotlight), Shipped (Uniswap v4 hooks — 4-network deploy + "Tail Twins" hook), Security disclosures (vuln-scanner flagged heyito/moo, advisory + fix PR) |
 | 2026-09-02 | tweet-digest | Content & Shipped (self-healing loop blog post, skill catalogue plug), Security disclosures (Graphify-Labs/graphify vuln), Growth & Partnerships (UsePodAI cheaper-inference shoutout) |
 | 2026-08-30 | tweet-digest | Security disclosures (vuln-scanner flagged synthetic-sciences/openscience, private advisory + fix PR filed) |

@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-05T17:04:45Z",
-  "quality_score": 4,
-  "assessment": "Well-executed monitoring skill; substantive and verifiable via git history (commit 805e47f matches output exactly), properly deduped and themed, clearly serves the 'show the work' priority—not shipping framework code but accurate signal tracking.",
+  "last_analyzed": "2026-09-06T17:04:23Z",
+  "quality_score": 3,
+  "assessment": "Completed the task adequately with sound methodology (API fetch, dedup logic, proper logging), but limited strategic value — reports what was tweeted rather than measuring impact or momentum on north-star metrics (stars, ecosystem, forks)",
   "flags": [],
-  "avg_score": 3.83,
+  "avg_score": 3.8,
   "history": [
-    {
-      "date": "2026-08-07",
-      "score": 4
-    },
     {
       "date": "2026-08-08",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-09-05",
       "score": 4
+    },
+    {
+      "date": "2026-09-06",
+      "score": 3
     }
   ]
 }
