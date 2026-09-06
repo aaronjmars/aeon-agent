@@ -1,0 +1,101 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING",
+        "description": "Price down 6.9% but volume only 0.6x the 7-day average — soft fade, not a confirmed breakdown."
+      },
+      "children": [
+        "separator-1",
+        "grid-stats",
+        "separator-2",
+        "link-chart"
+      ]
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "grid-stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol",
+        "stat-ratio",
+        "stat-whales"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00001615",
+        "delta": "-6.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.13M",
+        "delta": "-3.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$98.7K",
+        "delta": "0.6x 7d avg",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells (ratio 1.02)",
+        "value": "109/107"
+      },
+      "children": []
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "24"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}
