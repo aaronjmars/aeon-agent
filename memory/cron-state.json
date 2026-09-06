@@ -198,14 +198,14 @@
     "last_quality_score": 4
   },
   "secured-watch": {
-    "last_status": "dispatched",
-    "last_success": "2026-09-05T12:04:03Z",
-    "total_runs": 46,
-    "total_successes": 42,
+    "last_status": "success",
+    "last_success": "2026-09-06T12:03:55Z",
+    "total_runs": 47,
+    "total_successes": 43,
     "total_failures": 4,
     "consecutive_failures": 0,
     "success_rate": 0.91,
-    "last_quality_score": 3,
+    "last_quality_score": 4,
     "last_dispatch": "2026-09-06T12:01:33Z",
     "last_failed": "2026-08-31T19:34:53Z",
     "last_error": "673a77\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"s"
