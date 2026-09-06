@@ -1,18 +1,19 @@
-Watermark stamped and all changes look correct. The flush is complete — no code to commit here (memory-flush is a `read-only`-adjacent bookkeeping skill working only in `memory/`), so I'm not opening a PR, just reporting the work done.
+Consolidation complete for the 2026-08-30 → 2026-09-06 window.
 
 ## Summary
 
-Ran `memory-flush` for scan window **2026-08-23 → 2026-08-30** (8 log files).
+**Promoted / corrected:**
+- Filled 3 missing Recent Digests rows (09-01, 09-04, 09-05)
+- Fixed a stale fact: `aeon-update` PR #220 was recorded as "awaiting operator merge" but had actually **merged** 2026-09-04 02:37 UTC (baseline now `bf33365`); updated lifetime success rate 43%→50% (no longer chronic)
+- Refreshed the `repo-pulse` bullet from stale 08-24 data to the freshest 08-31 re-dispatch (aeon 711★/253 forks, soul.md 658★ ACTIVE, opendia 1914★)
+- Reconfirmed the working-tree anomaly (`AGENTS.md`/`notify`) is still unresolved as of today (19+ days)
 
-**Promoted:**
-- 7 missing tweet-digest rows (08-24 → 08-30) into MEMORY.md's Recent Digests table; archived the 7 oldest rows (08-14 → 08-20) to `memory/topics/digests-history.md` to keep the table near budget.
-- Closed the stale "SHA-pin workflows" item in the `aeon` Next Priority (done via #917) and folded in the window's real headline: secretcurl argv-leak fix (#935, external contributor), channel-secret Phase-2 hardening (#951/#955/#947), 4 new run harnesses, and Claude Code plugin packaging (#884/#885) — a direct fork-onboarding win.
-- New Next Priorities bullet tracking `aeon-update`'s fork-sync baseline (now `8b8d719`, PRs #193/#198) and its 10 carried conflicts.
-- Two new Lessons Learned: the sandbox also blocks stdout redirection in bash blocks (with the workaround `aeon-update` used), and `aeon-update`'s pattern of holding back brand-new upstream skills that need `eyebrow`/catalog regen.
-- Refreshed the working-tree-anomaly bullet's date (still unresolved, 12+ days, ~10 heartbeat flags).
+**Removed / added lessons:**
+- Removed a falsified lesson ("eyebrow can't run in sandbox") — 09-01's `aeon-update` run disproved it; replaced with the corrected capability
+- Added a new lesson on the 08-31 GLM-gateway outage (zero-token failure signature = infra outage, not a code bug); merged its "weekly skills don't self-heal" angle into the existing 08-02 lesson instead of duplicating
 
-**Checked, nothing to prune:** 0 open `improve:` PRs; no new Skills Built entries this window; Lessons Learned reviewed for staleness (none removed, now at 15 — flagged for possible archiving next flush).
+**Pruned for budget:** archived 3 oldest Recent Digests rows and 2 lowest-value Lessons Learned to new/existing history files (`digests-history.md`, new `lessons-history.md`), keeping both sections within their ~10-15 row budget.
 
-**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/logs/2026-08-30.md`, `memory/memory-flush-state.json` (watermark stamped to 2026-08-30).
+**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/topics/lessons-history.md` (new), `memory/logs/2026-09-06.md`, `memory/memory-flush-state.json` (watermark stamped to 2026-09-06).
 
-Follow-up still needed (unrelated to this skill's scope): the persistent working-tree anomaly (`AGENTS.md` deleted, `notify`/`notify-jsonrender` untracked) needs a human/skill decision — restore, delete-and-commit, or gitignore.
+No follow-up actions needed — this is local memory-file work only, no PR required.

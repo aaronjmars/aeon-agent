@@ -10,6 +10,9 @@ Older entries rotated out of MEMORY.md's Recent Digests table.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-23 | tweet-digest | Skill Drop (Weekly Card Run spotlight), Growth ("welcome back to aeon" recap/invite) |
+| 2026-08-22 | tweet-digest | Skill Drop — Spend Watch (spending-report skill announcement + aeon.fun CTA follow-up) |
+| 2026-08-21 | tweet-digest | Skill Drops (vuln-scanner skill, Remotion skill spotlight), Security disclosures (private advisories to @jeffreykim0711, @relakkesyang), Growth (weekly recap follow/star CTA) |
 | 2026-08-20 | tweet-digest | Security scanning & disclosures (vuln-scanner + Binance/OpenSea/launchpad findings, private advisory to @_ulivz/@agent_tars), Shipped & content (Skill Spotlight: Pack Submit), Appearances (aaronjmars on @MCGlive again) |
 | 2026-08-19 | tweet-digest | Security disclosures (vuln reports to @lucaronin, @karis_ai), Shipped & content (Elon Musk agent YouTube short), Appearances (aaronjmars on @MCGlive) |
 | 2026-08-18 | tweet-digest | Security disclosures (omnigent vuln to @matei_zaharia, praise for a prior report), Shipped & content (Heavier-Hand hook follow-up, "best agentic framework" YouTube short) |
