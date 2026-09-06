@@ -1,17 +1,18 @@
-Nothing needs attention this run — the fleet is entirely green with no new findings, so per the skill's rules no notification is sent.
-
 ## Summary
 
-Ran heartbeat's **ambient check** (default, empty `${var}`) for 2026-09-05:
-- **P0** (failed/stuck/degraded skills): clear — all 10 enabled skills show `last_status: success`, `consecutive_failures: 0`.
-- **P1** (stalled PRs/urgent issues): clear — no open PRs or urgent issues on `aaronjmars/aeon-agent`; upstream `aeonfun/aeon` PR #1030 is only ~5h old, not stalled.
-- **P2** (flagged memory items): the working-tree anomaly (`AGENTS.md` deleted-uncommitted, `notify`/`notify-jsonrender` untracked) is still present but was already reported <48h ago — deduped, no re-alert.
-- **P3** (missing scheduled skills): clear — all enabled skills have current cron-state entries within their schedule window.
+Ran the heartbeat ambient fleet check (`${var}` empty — the daily 19:00 UTC scheduled path).
 
-Overall status stays **🟡 WATCH** (sole driver: the persisting working-tree anomaly, unchanged from yesterday).
+**Findings: HEARTBEAT_OK · STATUS_PAGE=WATCH**
 
-Files modified:
-- `docs/status.md` — regenerated with today's timestamp, refreshed token pulse (AEON $0.00001734, −23.2% 24h, verdict CONSOLIDATING), updated skill-health table, next scheduled run (`token-report` at 2026-09-06 06:00 UTC).
-- `memory/logs/2026-09-05.md` — appended `### heartbeat` entry (`mode: ambient`).
+- **P0 (failed/stuck skills):** Clear. All 10 enabled skills (`changelog`, `aeon-update`, `shiplog`, `memory-flush`, `token-report`, `holdings`, `repo-pulse`, `tweet-digest`, `secured-watch`, `heartbeat`) show `last_status: success`, `consecutive_failures: 0`. No stuck/chronic-failure skills.
+- **P1 (stalled PRs / urgent issues):** Clear. 0 open PRs/urgent issues on this repo. Upstream `aeonfun/aeon` PR #1030 (flagged in yesterday's run) merged 2026-09-05 22:57 UTC.
+- **P2 (flagged memory items):** The known working-tree anomaly (`AGENTS.md` deleted-uncommitted, `notify`/`notify-jsonrender` untracked) is still present — 19+ days unresolved, still awaiting an operator decision. Already reported within the last 48h, so no re-notification per dedup rule.
+- **P3 (missing scheduled skills):** Clear — all enabled skills have cron-state entries and ran within 2x their schedule interval.
 
-No notification sent (nothing new to report). Follow-up still pending: operator decision on the working-tree anomaly (restore `AGENTS.md` / commit the deletion / gitignore `notify`+`notify-jsonrender`).
+No new findings → no `./notify` sent (dedup rule: don't re-report the standing working-tree flag).
+
+**Files modified:**
+- `docs/status.md` — regenerated: overall 🟡 WATCH (unchanged driver), token pulse refreshed to today's report (AEON $0.00001615, −6.9% 24h, CONSOLIDATING), skill table re-sorted with today's timestamps, next run set to token-report 2026-09-07 06:00 UTC.
+- `memory/logs/2026-09-06.md` — appended `### heartbeat` entry (mode: ambient) with the checks above.
+
+**Follow-up needed:** none new — the working-tree anomaly still needs a human decision (restore/commit-deletion/gitignore), unchanged from prior days.
