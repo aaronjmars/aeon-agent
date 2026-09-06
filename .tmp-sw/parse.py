@@ -1,6 +1,6 @@
 import re, json, sys, os
 
-TODAY = "2026-08-23"
+TODAY = "2026-09-06"
 var = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
 dry = var == "dry-run"
 full = var == "full"
