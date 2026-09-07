@@ -1,0 +1,133 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest"
+      },
+      "children": [
+        "text_date",
+        "separator_1",
+        "heading_security",
+        "stack_tweet_1",
+        "separator_2",
+        "heading_growth",
+        "stack_tweet_2",
+        "stack_tweet_3"
+      ]
+    },
+    "text_date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-09-07",
+        "variant": "muted"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h2"
+      }
+    },
+    "stack_tweet_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_1",
+        "link_1"
+      ]
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "vuln-scanner flagged alibaba/page-agent — private advisory + fix PR sent to @simonluvramen, waiting on their look"
+      }
+    },
+    "link_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2096839538911924281"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_growth": {
+      "type": "Heading",
+      "props": {
+        "text": "Product & Growth",
+        "level": "h2"
+      }
+    },
+    "stack_tweet_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_2",
+        "link_2"
+      ]
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "first private vuln-scanning sessions live — turning the security skills into products, check aeon.fun/security 👀"
+      }
+    },
+    "link_2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2096975819423797361"
+      }
+    },
+    "stack_tweet_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet_3",
+        "link_3"
+      ]
+    },
+    "tweet_3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "you can now track how much code we're shipping straight from the @bankrbot page"
+      }
+    },
+    "link_3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2096830820661026836"
+      }
+    }
+  }
+}

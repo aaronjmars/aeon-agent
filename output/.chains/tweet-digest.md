@@ -1,10 +1,10 @@
-ℹ️ Tweet Digest — 2026-09-06
+ℹ️ Tweet Digest
 
-*Tweet Digest — 2026-09-06*
+*Tweet Digest — 2026-09-07*
 
 *Theme: Security disclosures*
-@aeonframework: vuln-scanner flagged a bug in @tirth_8205's code-review-graph repo — private advisory + fix PR already sent, waiting on a look. — [link](https://x.com/aeonframework/status/2096612888253198372)
-@aeonframework: pointed followers to the security skill writeup on aeon.fun/security. — [link](https://x.com/aeonframework/status/2096612888580362285)
+@aeonframework: vuln-scanner flagged alibaba/page-agent — private advisory + fix PR sent to @simonluvramen, waiting on their look — [link](https://x.com/aeonframework/status/2096839538911924281)
 
-*Theme: Growth & Community*
-@aeonframework: quick nudge to browse the full skill catalog on aeon.fun. — [link](https://x.com/aeonframework/status/2096176521576665229)
+*Theme: Product & Growth*
+@aeonframework: first private vuln-scanning sessions live — turning the security skills into products, check aeon.fun/security 👀 — [link](https://x.com/aeonframework/status/2096975819423797361)
+@aeonframework: you can now track how much code we're shipping straight from the @bankrbot page — [link](https://x.com/aeonframework/status/2096830820661026836)
