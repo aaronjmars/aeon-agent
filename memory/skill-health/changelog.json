@@ -1,10 +1,10 @@
 {
   "skill": "changelog",
-  "last_analyzed": "2026-08-31T15:47:04Z",
-  "quality_score": 5,
-  "assessment": "Verified against repo state: the claimed scratch files, memory-log entry, MEMORY.md docs-sync line, and HEAD commit (#998 GLM tier vars) all corroborate the output's 20-PR list, entry content, and caveats; it is substantive, honestly caveated (tsc-only check disclosed, stale banner flagged), idempotency-aware, and directly serves the document-shipped-work and honest-tracking priorities — excellent, with follow-ups clearly listed.",
+  "last_analyzed": "2026-09-07T08:09:59Z",
+  "quality_score": 4,
+  "assessment": "Substantive changelog generation with 30 verified PRs documented and draft PR opened; directly serves strategy priority 2 (show the work). Specific, well-structured, actionable, and honest about verification gaps.",
   "flags": [],
-  "avg_score": 3.67,
+  "avg_score": 3.71,
   "history": [
     {
       "date": "2026-07-27",
@@ -29,6 +29,10 @@
     {
       "date": "2026-08-31",
       "score": 5
+    },
+    {
+      "date": "2026-09-07",
+      "score": 4
     }
   ]
 }

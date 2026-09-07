@@ -1,0 +1,67 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog",
+        "description": "Synced to aeon-website"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-badge",
+        "heading-time",
+        "repos-sync",
+        "pr-count",
+        "pr-link"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ Changelog synced to aeon-website",
+        "variant": "default"
+      }
+    },
+    "heading-time": {
+      "type": "Heading",
+      "props": {
+        "text": "Changelog (push-to) — 2026-09-07",
+        "level": "h3"
+      }
+    },
+    "repos-sync": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon → aaronjmars/aeon-website",
+        "variant": "body"
+      }
+    },
+    "pr-count": {
+      "type": "Text",
+      "props": {
+        "text": "30 new PRs → changelog entry \"Verification hardening across the self-healing loop\"",
+        "variant": "body"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aeon-website PR #466",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/466",
+        "source": "GitHub",
+        "score": "draft"
+      }
+    }
+  }
+}
