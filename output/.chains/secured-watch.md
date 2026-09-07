@@ -1,8 +1,20 @@
-No changes on the "Secured by Aeon" board since the last check — still 81 repos, 2,518,267★ total, no new entries, no severity/fix-link changes. Per the skill's rule, no notification was sent for a quiet run.
+Confirmed the only change is the `updated_at` date bump — the board itself is unchanged.
+
+## Secured Watch — 2026-09-07
+
+Fetched `https://www.aeon.fun/security` (http=200, 331KB). Parsed 81 secured-repo rows.
+
+**Result: NO_CHANGE** — nothing new, nothing changed since the 2026-09-06 snapshot.
+- Repos: 81 (±0)
+- Total stars: 2,518,267★ (±0)
+- New: none · Changed: none · Dropped: none
+
+Per skill spec, a quiet run sends no notification — only state and log were advanced.
 
 ## Summary
-- Ran `secured-watch`: fetched aeon.fun/security (http=200, 81 rows parsed), diffed against `memory/state/secured-repos.json` — result was `NO_CHANGE`, so no `./notify` was sent (correct per skill spec).
-- Updated `memory/state/secured-repos.json` (state advances every real run, timestamp bumped to 2026-09-06; contents identical otherwise).
-- Logged the run under `### secured-watch` in `memory/logs/2026-09-06.md`.
-- Note: found and reused a stale, git-tracked `.tmp-sw/` directory (leftover from a prior buggy run, dated 2026-08-23) that I can't `rm` due to tool restrictions — it now shows as modified in `git status`, similar to the pre-existing `AGENTS.md`/`notify` working-tree anomaly already flagged in memory. Worth a human decision on cleanup.
-- No follow-up action needed otherwise; next run will pick up any new/changed board entries.
+- Ran `secured-watch` (default mode, no `${var}` flags).
+- Fetched and parsed the leaderboard, diffed against `memory/state/secured-repos.json` — result was `NO_CHANGE` (board identical to yesterday's snapshot: 81 repos, 2,518,267★).
+- Updated `memory/state/secured-repos.json` (`updated_at` bumped to 2026-09-07; no repo entries changed) and `memory/state/security.html` (raw fetch, scratch).
+- Appended a `### secured-watch` entry to `memory/logs/2026-09-07.md`.
+- No notification sent (per skill rule: silence on no change).
+- Follow-up: none needed. A stray scratch file `memory/state/parse_sw_run.py` was created during parsing (couldn't be removed — `rm` isn't in the tool allowlist); harmless and consistent with similar leftover scratch scripts already in that directory from prior runs.
