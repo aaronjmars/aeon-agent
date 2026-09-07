@@ -1,0 +1,141 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report — 2026-09-07"
+      },
+      "children": [
+        "badge_status",
+        "text_description",
+        "sep_1",
+        "heading_metrics",
+        "grid_stats",
+        "sep_2",
+        "heading_whales",
+        "text_whale_detail",
+        "link_chart"
+      ]
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCUMULATING",
+        "variant": "outline"
+      }
+    },
+    "text_description": {
+      "type": "Text",
+      "props": {
+        "text": "Price flat (+2.8%) on thin volume (0.4× 7d avg), but buy/sell ratio flipped bullish — 1.76 vs yesterday's 1.02. Strong whale positioning with 13 buys outweighing 10 sells.",
+        "variant": "body"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_metrics": {
+      "type": "Heading",
+      "props": {
+        "text": "Key Metrics",
+        "level": "h3"
+      }
+    },
+    "grid_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol",
+        "stat_ratio",
+        "stat_buys_sells",
+        "stat_whales"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001660",
+        "delta": "+2.8%",
+        "trend": "up"
+      }
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.16M",
+        "delta": "+2.9%",
+        "trend": "up"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$66.3K",
+        "delta": "0.4× 7d avg"
+      }
+    },
+    "stat_ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "1.76",
+        "delta": "↑ from 1.02",
+        "trend": "up"
+      }
+    },
+    "stat_buys_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "95/54"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Transactions",
+        "value": "23"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_whales": {
+      "type": "Heading",
+      "props": {
+        "text": "Whale Activity",
+        "level": "h3"
+      }
+    },
+    "text_whale_detail": {
+      "type": "Text",
+      "props": {
+        "text": "13 whale buys ($25.8K) outweighing 10 whale sells ($23.1K)",
+        "variant": "lead"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
