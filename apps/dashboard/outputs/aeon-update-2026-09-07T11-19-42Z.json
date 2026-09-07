@@ -1,0 +1,156 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update ⭐"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "text-title",
+        "text-summary",
+        "sep-1",
+        "heading-landed",
+        "text-landed-1",
+        "text-landed-2",
+        "text-landed-3",
+        "text-landed-4",
+        "text-landed-5",
+        "sep-2",
+        "heading-eyebrowlock",
+        "text-eyebrowlock",
+        "sep-3",
+        "heading-manual",
+        "text-manual",
+        "sep-4",
+        "text-baseline",
+        "sep-5",
+        "link-pr"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ Synced",
+        "variant": "default"
+      }
+    },
+    "text-title": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-update ⭐ — synced 7 upstream commits → PR #221",
+        "variant": "lead"
+      }
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "canon shipped 7, we pulled them down. 17 files applied clean, 2 workflows need a hand-merge."
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "heading-landed": {
+      "type": "Heading",
+      "props": {
+        "text": "What landed",
+        "level": "h3"
+      }
+    },
+    "text-landed-1": {
+      "type": "Text",
+      "props": {
+        "text": "send-email: delivery preflight — checks prior sends for bounces before firing (#1033)"
+      }
+    },
+    "text-landed-2": {
+      "type": "Text",
+      "props": {
+        "text": "pr-review: verified review receipts, trivial PRs get an approve-ready receipt not a skip (#1027)"
+      }
+    },
+    "text-landed-3": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner: trufflehog git-history scan bounded, no more phantom-success runs (#1030)"
+      }
+    },
+    "text-landed-4": {
+      "type": "Text",
+      "props": {
+        "text": "dry-run: explicit claude/codex model selection (#1029)"
+      }
+    },
+    "text-landed-5": {
+      "type": "Text",
+      "props": {
+        "text": "deploy-uni-hook: price/balance/skew gates anchored to the pool's own price, not an implicit 1.0 (#1031)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "heading-eyebrowlock": {
+      "type": "Heading",
+      "props": {
+        "text": "eyebrowlock reconciliation",
+        "level": "h3"
+      }
+    },
+    "text-eyebrowlock": {
+      "type": "Text",
+      "props": {
+        "text": "eyebrowlock reconciled without running the binary — 4 skill entries swapped verbatim from upstream's v0.4.2 lock, byte-identical content so it's deterministic. catalogs untouched (body-only edits, nothing semantic moved). CI's green."
+      }
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "heading-manual": {
+      "type": "Heading",
+      "props": {
+        "text": "Manual merge required",
+        "level": "h3"
+      }
+    },
+    "text-manual": {
+      "type": "Text",
+      "props": {
+        "text": ".github/workflows/aeon.yml — #1032 binds RESEND_API_KEY in the secret-injection step, the functional half you want for Resend. overlaps your narrowed secrets block, so it's yours to merge."
+      }
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "text-baseline": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline moves to 21b82db when you merge."
+      }
+    },
+    "sep-5": {
+      "type": "Separator"
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #221",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/221",
+        "source": "GitHub"
+      }
+    }
+  }
+}
