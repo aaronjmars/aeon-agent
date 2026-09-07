@@ -1,0 +1,713 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-09-07 • ACTIVE"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "table_metrics",
+        "sep_1",
+        "section_aeon",
+        "sep_2",
+        "section_soul",
+        "sep_3",
+        "section_opendia",
+        "sep_4",
+        "section_minitor",
+        "sep_5",
+        "section_summary"
+      ]
+    },
+    "table_metrics": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "717 (+6)",
+            "256 (+3)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "663 (+5)",
+            "72 (+2)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1920 (+6)",
+            "160 (+1)",
+            "—",
+            "ACTIVE"
+          ],
+          [
+            "minitor",
+            "16 (—)",
+            "5 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "sep_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon_heading",
+        "aeon_status",
+        "aeon_notable_label",
+        "aeon_notables_stack",
+        "aeon_other_label",
+        "aeon_other_list",
+        "aeon_forks_label",
+        "aeon_forks_stack"
+      ]
+    },
+    "aeon_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h3"
+      }
+    },
+    "aeon_status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 23.3)",
+        "variant": "muted"
+      }
+    },
+    "aeon_notable_label": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers (enriched 8 of 11):",
+        "variant": "lead"
+      }
+    },
+    "aeon_notables_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_star_rocky2431"
+      ]
+    },
+    "aeon_star_rocky2431": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "aeon_star_rocky2431_link",
+        "aeon_star_rocky2431_info"
+      ]
+    },
+    "aeon_star_rocky2431_link": {
+      "type": "Link",
+      "props": {
+        "label": "rocky2431",
+        "href": "https://github.com/rocky2431"
+      }
+    },
+    "aeon_star_rocky2431_info": {
+      "type": "Text",
+      "props": {
+        "text": "59 repos · 17 followers\n\"AI & Crypto Native Developer\"",
+        "variant": "caption"
+      }
+    },
+    "aeon_other_label": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:"
+      }
+    },
+    "aeon_other_list": {
+      "type": "Text",
+      "props": {
+        "text": "Ntrakiyski | victorbessa96 | towtvis | madeat3am | NurstarK | tomach | finessionalist | madhavanmalolan | InstinctLabsAG | wesleymtomaz",
+        "variant": "body"
+      }
+    },
+    "aeon_forks_label": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      }
+    },
+    "aeon_forks_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon_fork_cyborganeh",
+        "aeon_fork_jason9720",
+        "aeon_fork_dipanshu",
+        "aeon_fork_forumchen"
+      ]
+    },
+    "aeon_fork_cyborganeh": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "aeon_fork_cyborganeh_link",
+        "aeon_fork_cyborganeh_info"
+      ]
+    },
+    "aeon_fork_cyborganeh_link": {
+      "type": "Link",
+      "props": {
+        "label": "cyborganeh/aeon",
+        "href": "https://github.com/cyborganeh/aeon"
+      }
+    },
+    "aeon_fork_cyborganeh_info": {
+      "type": "Text",
+      "props": {
+        "text": "2 repos",
+        "variant": "caption"
+      }
+    },
+    "aeon_fork_jason9720": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "aeon_fork_jason9720_link",
+        "aeon_fork_jason9720_info"
+      ]
+    },
+    "aeon_fork_jason9720_link": {
+      "type": "Link",
+      "props": {
+        "label": "Jason9720/aeon",
+        "href": "https://github.com/Jason9720/aeon"
+      }
+    },
+    "aeon_fork_jason9720_info": {
+      "type": "Text",
+      "props": {
+        "text": "Jazy 🇨🇭 · 2 repos\n\"🇨🇭 Logisticien CFC | AI Product Building | Building & experimenting with AI, OSINT and automation | Learning by building.\"",
+        "variant": "caption"
+      }
+    },
+    "aeon_fork_dipanshu": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "aeon_fork_dipanshu_link",
+        "aeon_fork_dipanshu_info"
+      ]
+    },
+    "aeon_fork_dipanshu_link": {
+      "type": "Link",
+      "props": {
+        "label": "dipanshuhappy/aeon",
+        "href": "https://github.com/dipanshuhappy/aeon"
+      }
+    },
+    "aeon_fork_dipanshu_info": {
+      "type": "Text",
+      "props": {
+        "text": "Dipanshu Singh · 64 repos · 47 followers",
+        "variant": "caption"
+      }
+    },
+    "aeon_fork_forumchen": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "aeon_fork_forumchen_link",
+        "aeon_fork_forumchen_info"
+      ]
+    },
+    "aeon_fork_forumchen_link": {
+      "type": "Link",
+      "props": {
+        "label": "forumchen388-debug/aeon",
+        "href": "https://github.com/forumchen388-debug/aeon"
+      }
+    },
+    "aeon_fork_forumchen_info": {
+      "type": "Text",
+      "props": {
+        "text": "1 repos",
+        "variant": "caption"
+      }
+    },
+    "section_soul": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul_heading",
+        "soul_status",
+        "soul_notable_label",
+        "soul_notables_stack",
+        "soul_other_label",
+        "soul_other_list",
+        "soul_forks_label",
+        "soul_forks_stack"
+      ]
+    },
+    "soul_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h3"
+      }
+    },
+    "soul_status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 6.0)",
+        "variant": "muted"
+      }
+    },
+    "soul_notable_label": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers (enriched 5 of 8):",
+        "variant": "lead"
+      }
+    },
+    "soul_notables_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_star_sammysnake"
+      ]
+    },
+    "soul_star_sammysnake": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "soul_star_sammysnake_link",
+        "soul_star_sammysnake_info"
+      ]
+    },
+    "soul_star_sammysnake_link": {
+      "type": "Link",
+      "props": {
+        "label": "SammySnake-d",
+        "href": "https://github.com/SammySnake-d"
+      }
+    },
+    "soul_star_sammysnake_info": {
+      "type": "Text",
+      "props": {
+        "text": "momo · 101 repos\n\"nononon\"",
+        "variant": "caption"
+      }
+    },
+    "soul_other_label": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:"
+      }
+    },
+    "soul_other_list": {
+      "type": "Text",
+      "props": {
+        "text": "groupcleco-dpk | possama | bimbap | sobicode | annurdien | rafitojuan | wesleymtomaz",
+        "variant": "body"
+      }
+    },
+    "soul_forks_label": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      }
+    },
+    "soul_forks_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul_fork_amit",
+        "soul_fork_nicemare"
+      ]
+    },
+    "soul_fork_amit": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "soul_fork_amit_link",
+        "soul_fork_amit_info"
+      ]
+    },
+    "soul_fork_amit_link": {
+      "type": "Link",
+      "props": {
+        "label": "amitchhetri43/soul.md",
+        "href": "https://github.com/amitchhetri43/soul.md"
+      }
+    },
+    "soul_fork_amit_info": {
+      "type": "Text",
+      "props": {
+        "text": "5 repos",
+        "variant": "caption"
+      }
+    },
+    "soul_fork_nicemare": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "soul_fork_nicemare_link",
+        "soul_fork_nicemare_info"
+      ]
+    },
+    "soul_fork_nicemare_link": {
+      "type": "Link",
+      "props": {
+        "label": "nicemare/soul.md",
+        "href": "https://github.com/nicemare/soul.md"
+      }
+    },
+    "soul_fork_nicemare_info": {
+      "type": "Text",
+      "props": {
+        "text": "Nicemare · 173 repos · 10 followers\n\"Learn to be better\"",
+        "variant": "caption"
+      }
+    },
+    "section_opendia": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia_heading",
+        "opendia_status",
+        "opendia_notable_label",
+        "opendia_notables_stack",
+        "opendia_other_label",
+        "opendia_other_list",
+        "opendia_forks_label",
+        "opendia_forks_stack"
+      ]
+    },
+    "opendia_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h3"
+      }
+    },
+    "opendia_status": {
+      "type": "Text",
+      "props": {
+        "text": "ACTIVE (avg4w ≈ 2.3)",
+        "variant": "muted"
+      }
+    },
+    "opendia_notable_label": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers (enriched 5 of 7):",
+        "variant": "lead"
+      }
+    },
+    "opendia_notables_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia_star_nekonyuu",
+        "opendia_star_zcattacz",
+        "opendia_star_chethan"
+      ]
+    },
+    "opendia_star_nekonyuu": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "opendia_star_nekonyuu_link_github",
+        "opendia_star_nekonyuu_info1",
+        "opendia_star_nekonyuu_link_web",
+        "opendia_star_nekonyuu_info2"
+      ]
+    },
+    "opendia_star_nekonyuu_link_github": {
+      "type": "Link",
+      "props": {
+        "label": "nekonyuu",
+        "href": "https://github.com/nekonyuu"
+      }
+    },
+    "opendia_star_nekonyuu_info1": {
+      "type": "Text",
+      "props": {
+        "text": "Jonathan Raffre · 📍 Paris · 🏢 Freelance · 47 repos",
+        "variant": "caption"
+      }
+    },
+    "opendia_star_nekonyuu_link_web": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 https://jonathan.raff.re",
+        "href": "https://jonathan.raff.re"
+      }
+    },
+    "opendia_star_nekonyuu_info2": {
+      "type": "Text",
+      "props": {
+        "text": "🐦 @nekonyuu42 · 25 followers\n\"Freelance Technical Architect\"",
+        "variant": "caption"
+      }
+    },
+    "opendia_star_zcattacz": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "opendia_star_zcattacz_link",
+        "opendia_star_zcattacz_info"
+      ]
+    },
+    "opendia_star_zcattacz_link": {
+      "type": "Link",
+      "props": {
+        "label": "zcattacz",
+        "href": "https://github.com/zcattacz"
+      }
+    },
+    "opendia_star_zcattacz_info": {
+      "type": "Text",
+      "props": {
+        "text": "60 repos · 19 followers",
+        "variant": "caption"
+      }
+    },
+    "opendia_star_chethan": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "opendia_star_chethan_link",
+        "opendia_star_chethan_info"
+      ]
+    },
+    "opendia_star_chethan_link": {
+      "type": "Link",
+      "props": {
+        "label": "Chethan616",
+        "href": "https://github.com/Chethan616"
+      }
+    },
+    "opendia_star_chethan_info": {
+      "type": "Text",
+      "props": {
+        "text": "Chethan Krishna · 38 repos · 17 followers",
+        "variant": "caption"
+      }
+    },
+    "opendia_other_label": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:"
+      }
+    },
+    "opendia_other_list": {
+      "type": "Text",
+      "props": {
+        "text": "spirit3189 | hugocomh | zephyr-cheung",
+        "variant": "body"
+      }
+    },
+    "opendia_forks_label": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      }
+    },
+    "opendia_forks_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia_fork_pechjacobsaic"
+      ]
+    },
+    "opendia_fork_pechjacobsaic": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "opendia_fork_pechjacobsaic_link",
+        "opendia_fork_pechjacobsaic_info"
+      ]
+    },
+    "opendia_fork_pechjacobsaic_link": {
+      "type": "Link",
+      "props": {
+        "label": "pechjacobsaic/opendia",
+        "href": "https://github.com/pechjacobsaic/opendia"
+      }
+    },
+    "opendia_fork_pechjacobsaic_info": {
+      "type": "Text",
+      "props": {
+        "text": "10 repos",
+        "variant": "caption"
+      }
+    },
+    "section_minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor_heading",
+        "minitor_status_line"
+      ]
+    },
+    "minitor_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/minitor",
+        "level": "h3"
+      }
+    },
+    "minitor_status_line": {
+      "type": "Text",
+      "props": {
+        "text": "QUIET (no activity)"
+      }
+    },
+    "section_summary": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_heading",
+        "summary_content"
+      ]
+    },
+    "summary_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Summary",
+        "level": "h3"
+      }
+    },
+    "summary_content": {
+      "type": "Text",
+      "props": {
+        "text": "• Checked all 4 watched repos (memory/watched-repos.md): aeonfun/aeon, aeonfun/soul.md, aeonfun/opendia, aeonfun/minitor. 7-day cutoff: 2026-08-31T10:02:00Z. All 4 repos used source=events, no truncation, no fallback needed.\n• Header verdict ACTIVE (opendia crossed week_stars > 1.5*avg4w); aeon and soul.md STEADY; minitor QUIET (zero activity).\n• Enriched 22 of 26 total new stargazer/forker actors (24/24 profile-lookup budget used: 7 fork authors + 8 aeon stars + 5 soul.md stars + 4 opendia stars; pechjacobsaic on opendia double-counted as both forker and stargazer, counted once under forks). No bot accounts in this window's new actors.\n• Sent one stacked notification via ./notify -f covering all 4 repos.\n• Logged per-repo counts (incl. minitor QUIET) to memory/logs/2026-09-07.md under ## Repo Pulse for next week's avg4w baseline.\n• Follow-up: none required — no failures, no truncation, no rate-limit fallbacks this run.",
+        "variant": "body"
+      }
+    }
+  }
+}
