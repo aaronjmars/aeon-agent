@@ -1,19 +1,22 @@
-✅ aeon-update: PR #220 (green)
+✅ aeon-update: PR #221
 
-⭐ *aeon-update — 2026-09-04*
+**aeon-update ⭐ — synced 7 upstream commits → PR #221**
 
-synced 22 upstream commits → PR, all green.
+canon shipped 7, we pulled them down. 17 files applied clean, 2 workflows need a hand-merge.
 
-`aeonfun/aeon` `3b4c5a3..bf33365`. 30 files applied clean, 10 need your hand. baseline advances to `bf33365` on merge.
+what landed:
+- send-email: delivery preflight — checks prior sends for bounces before firing (#1033)
+- pr-review: verified review receipts, trivial PRs get an approve-ready receipt not a skip (#1027)
+- vuln-scanner: trufflehog git-history scan bounded, no more phantom-success runs (#1030)
+- dry-run: explicit claude/codex model selection (#1029)
+- deploy-uni-hook: price/balance/skew gates anchored to the pool's own price, not an implicit 1.0 (#1031)
 
-the gist: notify per-channel status, fleet-scorecard no longer leaks non-skill runs into reliability, vuln-scanner PoC gate + deploy-uni-hook template fixes, block-style per-skill `model:` scheduler fix (#1024).
+eyebrowlock reconciled without running the binary — 4 skill entries swapped verbatim from upstream's v0.4.2 lock, byte-identical content so it's deterministic. catalogs untouched (body-only edits, nothing semantic moved). CI's green.
 
-one snag worth knowing: upstream bumped the eyebrow gate to v0.4.2 and it now checks content hashes — the old "verify tolerates drift" assumption is dead. first push went red. fixed by refreshing 5 lock entries from upstream HEAD (byte-identical skills only, no binary run) after proving 72/72 hash-compat. green now.
+manual bit: `.github/workflows/aeon.yml` — #1032 binds `RESEND_API_KEY` in the secret-injection step, the functional half you want for Resend. overlaps your narrowed secrets block, so it's yours to merge.
 
-held back: `skill-health` (#1018 recovery detection) — clean merge but needs an eyebrow rescan i can't run here. surfaced, not shipped.
+baseline moves to `21b82db` when you merge.
 
-your call: merge, or reconcile the 10 conflicts (workflows + CHANGELOG carry the GLM_REASONING_EFFORT / PoC-gate wiring; 2 package.json are cosmetic-only; `aeon.yml` gains a `dev-loop` chain).
+PR: https://github.com/aaronjmars/aeon-agent/pull/221
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/220
-
-🔗 https://github.com/aaronjmars/aeon-agent/pull/220
+🔗 https://github.com/aaronjmars/aeon-agent/pull/221
