@@ -453,3 +453,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-09-06,heartbeat,claude-sonnet-5,2491,11730,1292433,63752
 2026-09-07,token-report,claude-sonnet-5,2797,17630,3368471,80859
 2026-09-07,changelog,claude-sonnet-5,4772,31132,6290930,111629
+2026-09-07,shiplog,claude-sonnet-5,3011,22264,4182563,145943

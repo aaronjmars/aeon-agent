@@ -1,10 +1,12 @@
 {
   "skill": "shiplog",
-  "last_analyzed": "2026-08-31T23:04:16Z",
-  "quality_score": 5,
-  "assessment": "Substantive, provenance-traced weekly shiplog (every claim tied to PR numbers, commits, or post URLs; star/fork figures corroborated by the on-disk snapshot and the traction quotes by raw xAI fetch artifacts), honest about gaps and explicitly marks third-party numbers as quoted-not-verified, with ready-to-post/thread variants and concrete follow-ups — tightly aligned to the document-shipped-work and track-momentum-honestly priorities; only minor blemish is scratch files left in output/, which the run itself disclosed.",
-  "flags": [],
-  "avg_score": 4.2,
+  "last_analyzed": "2026-09-07T09:11:19Z",
+  "quality_score": 1,
+  "assessment": "No usable output produced — skill shows a progress status message instead of substantive shiplog/documentation. Violates CLAUDE.md requirement that final output carry the substance of work (report, analysis, findings).",
+  "flags": [
+    "empty_output"
+  ],
+  "avg_score": 4,
   "history": [
     {
       "date": "2026-06-15",
@@ -65,6 +67,10 @@
     {
       "date": "2026-08-31",
       "score": 5
+    },
+    {
+      "date": "2026-09-07",
+      "score": 1
     }
   ]
 }
