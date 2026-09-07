@@ -1,4 +1,6 @@
-*Holdings — aeon* ⭐
+ℹ️ Holdings
 
-14.10B · 14.10% of supply
-7d +164.58M (+1.18%) · 30d +1.28B (+9.99%)
+*Holdings — aeon*
+
+14.28B · 14.28% of supply
+7d +178.40M (+1.3%) · 30d +790.08M (+5.9%)
