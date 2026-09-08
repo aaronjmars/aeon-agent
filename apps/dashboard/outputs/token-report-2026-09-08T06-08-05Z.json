@@ -1,0 +1,159 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "badge-status",
+        "text-analysis",
+        "sep1",
+        "grid-main-metrics",
+        "heading-whale",
+        "grid-whale-metrics",
+        "sep2",
+        "link-chart"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "variant": "default"
+      }
+    },
+    "text-analysis": {
+      "type": "Text",
+      "props": {
+        "text": "Flat 24h (+0.4%) on thin volume (0.3× 7d avg) — trade count flipped bearish (52/70) but whale dollars stayed near-even ($12.2K buys vs $11.9K sells), no directional conviction either way.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "grid-main-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol",
+        "stat-buysells",
+        "stat-ratio",
+        "stat-whales"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001667",
+        "delta": "+0.4%",
+        "trend": "up"
+      }
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.16M",
+        "delta": "+0.3%",
+        "trend": "up"
+      }
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (0.3× 7d avg)",
+        "value": "$44.9K"
+      }
+    },
+    "stat-buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "52/70",
+        "trend": "down"
+      }
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "0.74"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Whales",
+        "value": "14"
+      }
+    },
+    "heading-whale": {
+      "type": "Heading",
+      "props": {
+        "text": "Whale Activity",
+        "level": "h3"
+      }
+    },
+    "grid-whale-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "stat-whale-buys",
+        "stat-whale-sells"
+      ]
+    },
+    "stat-whale-buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Buys",
+        "value": "$12.2K"
+      }
+    },
+    "stat-whale-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Sells",
+        "value": "$11.9K"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

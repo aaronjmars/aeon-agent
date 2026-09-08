@@ -1,10 +1,10 @@
-ℹ️ AEON Token Report — 2026-09-07
+ℹ️ AEON Token Report
 
-*$AEON — ACCUMULATING*
+*$AEON — CONSOLIDATING*
 
-Price flat (+2.8%) on thin volume (0.4x 7d avg), but buy/sell ratio flipped bullish — 1.76 vs yesterday's 1.02, with 13 whale buys ($25.8K) outweighing 10 whale sells ($23.1K).
+Flat 24h (+0.4%) on thin volume (0.3× 7d avg) — trade count flipped bearish (52/70) but whale dollars stayed near-even ($12.2K buys vs $11.9K sells), no directional conviction either way.
 
-Price $0.00001660 (+2.8% 24h) | Liq $1.16M (+2.9%) | Vol $66.3K (0.4× 7d)
-Buys/Sells 95/54 (ratio 1.76) | Whales: 23
+Price $0.00001667 (+0.4% 24h) | Liq $1.16M (+0.3%) | Vol $44.9K (0.3× 7d)
+Buys/Sells 52/70 (ratio 0.74) | Whales: 14
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4

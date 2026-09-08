@@ -1,0 +1,5 @@
+{
+  "model": "grok-4-1-fast",
+  "input": [{"role": "user", "content": "Search X for $AEON token (contract 0xbf8e8f0e8866a7052f948c16508644347c57aba3, Base chain, aeon crypto/agent framework token) mentions in the last 24 hours with at least 10 likes. Return up to 5 notable tweets with @handle, engagement counts, and a one-line summary of the claim or vibe. Exclude obvious bots and generic shill posts."}],
+  "tools": [{"type": "x_search"}]
+}
