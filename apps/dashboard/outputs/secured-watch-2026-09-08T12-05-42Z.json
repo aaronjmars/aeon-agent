@@ -1,0 +1,242 @@
+{
+  "root": "main_card",
+  "state": {},
+  "elements": {
+    "main_card": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "header_section",
+        "stats_section",
+        "separator1",
+        "newly_secured_section",
+        "separator2",
+        "dropped_section"
+      ]
+    },
+    "header_section": {
+      "type": "Heading",
+      "props": {
+        "text": "3 new, 1 dropped",
+        "level": "h3"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "83",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "2,539,071",
+        "delta": "+20,804",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "newly_secured_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "newly_secured_heading",
+        "repos_stack"
+      ]
+    },
+    "newly_secured_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (3)",
+        "level": "h3"
+      }
+    },
+    "repos_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo1",
+        "repo2",
+        "repo3"
+      ]
+    },
+    "repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1_title_line",
+        "repo1_meta"
+      ]
+    },
+    "repo1_title_line": {
+      "type": "Link",
+      "props": {
+        "label": "career-ops-hq/career-ops",
+        "href": "https://github.com/career-ops-hq/career-ops/pull/917"
+      }
+    },
+    "repo1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1_severity",
+        "repo1_stars"
+      ]
+    },
+    "repo1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "70,382★"
+      }
+    },
+    "repo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2_title_line",
+        "repo2_meta"
+      ]
+    },
+    "repo2_title_line": {
+      "type": "Link",
+      "props": {
+        "label": "MiroShark/MiroShark 🦈",
+        "href": "https://github.com/MiroShark/MiroShark/pull/297"
+      }
+    },
+    "repo2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2_severity",
+        "repo2_stars"
+      ]
+    },
+    "repo2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "1,448★"
+      }
+    },
+    "repo3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo3_title_line",
+        "repo3_meta"
+      ]
+    },
+    "repo3_title_line": {
+      "type": "Link",
+      "props": {
+        "label": "Capminal/capminal-contracts",
+        "href": "https://github.com/Capminal/capminal-contracts/pull/4"
+      }
+    },
+    "repo3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo3_severity",
+        "repo3_stars"
+      ]
+    },
+    "repo3_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "repo3_stars": {
+      "type": "Text",
+      "props": {
+        "text": "95★"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "dropped_section": {
+      "type": "Alert",
+      "props": {
+        "title": "Dropped from board",
+        "message": "santifer/career-ops (repo transferred to career-ops-hq/career-ops, same fix PR)",
+        "type": "info"
+      }
+    }
+  }
+}
