@@ -1,0 +1,168 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "⚠️ Heartbeat"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section_infra",
+        "separator1",
+        "section_carried",
+        "separator2",
+        "section_status"
+      ]
+    },
+    "section_infra": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_infra",
+        "stack_infra_details"
+      ]
+    },
+    "heading_infra": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 INFRA: tweet-digest's 17:01 UTC run failed",
+        "level": "h3"
+      }
+    },
+    "stack_infra_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "infra_line1",
+        "infra_line2",
+        "infra_line3",
+        "infra_line4"
+      ]
+    },
+    "infra_line1": {
+      "type": "Text",
+      "props": {
+        "text": "GH Actions 403 \"from an intermediary\" finalizing the egress-audit artifact upload, not a code regression",
+        "variant": "body"
+      }
+    },
+    "infra_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Root cause: skill's own cron-state commit landed first, then lost a push race, leaving cron-state.json stale at last_status:dispatched",
+        "variant": "body"
+      }
+    },
+    "infra_line3": {
+      "type": "Text",
+      "props": {
+        "text": "Status: Isolated, consecutive_failures: 0",
+        "variant": "caption"
+      }
+    },
+    "infra_line4": {
+      "type": "Text",
+      "props": {
+        "text": "Operator already ran a proof/egress-403 diagnostic at 17:54 UTC (succeeded) — looks under investigation already",
+        "variant": "muted"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_carried": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_carried",
+        "stack_carried_details"
+      ]
+    },
+    "heading_carried": {
+      "type": "Heading",
+      "props": {
+        "text": "🔵 Carried (deduped)",
+        "level": "h3"
+      }
+    },
+    "stack_carried_details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "carried_line1",
+        "carried_line2"
+      ]
+    },
+    "carried_line1": {
+      "type": "Text",
+      "props": {
+        "text": "Working-tree anomaly: AGENTS.md deleted-uncommitted, notify/notify-jsonrender untracked",
+        "variant": "body"
+      }
+    },
+    "carried_line2": {
+      "type": "Text",
+      "props": {
+        "text": "Status: Unchanged, 21+ days",
+        "variant": "muted"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "status_label",
+        "status_badge"
+      ]
+    },
+    "status_label": {
+      "type": "Text",
+      "props": {
+        "text": "Status page:",
+        "variant": "caption"
+      }
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH",
+        "variant": "secondary"
+      }
+    }
+  }
+}
