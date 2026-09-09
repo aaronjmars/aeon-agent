@@ -1,11 +1,6 @@
-ℹ️ Secured by Aeon
+The secured-watch skill ran clean: fetched the board (83 rows, http=200), diffed against yesterday's snapshot — no new repos, no severity/fix-link changes, no drops. Per the skill's silence rule, no notification was sent for this quiet run; state was advanced (`updated_at` → 2026-09-09) and the log entry appended.
 
-## Secured by Aeon — 3 new, 1 dropped
-**83 repos** secured (+2) · **2,539,071★** total (+20,804)
-
-### 🆕 Newly secured (3)
-- **[career-ops-hq/career-ops](https://github.com/career-ops-hq/career-ops/pull/917)** — `HIGH` · 70,382★ —
-- **[MiroShark/MiroShark](https://github.com/MiroShark/MiroShark/pull/297)** 🦈 — `HIGH` · 1,448★ —
-- **[Capminal/capminal-contracts](https://github.com/Capminal/capminal-contracts/pull/4)** — `HIGH` · 95★ —
-
-_Dropped from board: santifer/career-ops (repo transferred to career-ops-hq/career-ops, same fix PR)_
+## Summary
+- Ran `secured-watch`: fetched `aeon.fun/security`, parsed 83 secured repos, diffed against `memory/state/secured-repos.json` — result `NO_CHANGE` (83 repos, 2,539,071★, both unchanged).
+- Modified: `memory/state/secured-repos.json` (updated_at bumped to 2026-09-09), `memory/logs/2026-09-09.md` (appended `### secured-watch` entry).
+- No notification sent (quiet run, as required). No follow-up needed — next scheduled run will pick up any new/changed entries.
