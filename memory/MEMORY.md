@@ -30,6 +30,7 @@ Older rows archived to `memory/topics/digests-history.md`.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-09 | tweet-digest | Ecosystem & Integrations (x402aff standard now official @x402Foundation extension), Security disclosures (vuln-scanner flagged jamiepine/voicebox, advisory + fix PR), Content & Growth (aeon agentic infra article plug) — 09-08 tick skipped (infra 403 before reporting, see heartbeat) |
 | 2026-09-06 | tweet-digest | Security disclosures (vuln-scanner flagged tirth_8205/code-review-graph, advisory + fix PR; security skill spotlight), Growth & Community (skill catalog CTA) |
 | 2026-09-05 | tweet-digest | Skill Drop (Skill Article skill spotlight), Security disclosures (vuln-scanner flagged MoonshotAI/kimi-cli, advisory + fix PR) |
 | 2026-09-04 | tweet-digest | Content & Growth (blog rebrand, YouTube subscriber push), Security disclosures (vuln-scanner flagged HKUDS/DeepTutor, advisory + fix PR), Narrative ("outsourcing from humans to agents" post) |

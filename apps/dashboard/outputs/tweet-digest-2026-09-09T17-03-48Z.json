@@ -1,0 +1,90 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-09-09"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1-heading",
+        "tweet1",
+        "separator1",
+        "section2-heading",
+        "tweet2",
+        "separator2",
+        "section3-heading",
+        "tweet3"
+      ]
+    },
+    "section1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Ecosystem & Integrations",
+        "level": "h3"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "x402aff standard is now an official extension on the @x402Foundation repo, onchain affiliation live — https://x.com/aeonframework/status/2097640618667155770"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner flagged an issue in jamiepine/voicebox — private advisory + fix PR sent, DMs open — https://x.com/aeonframework/status/2097656277748809753"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Content & Growth",
+        "level": "h3"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "handle": "aeonframework",
+        "text": "pointed followers to an article breaking down how the aeon agentic infra works in practice — https://x.com/aeonframework/status/2097173811053334849"
+      }
+    }
+  }
+}
