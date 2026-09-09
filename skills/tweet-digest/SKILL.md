@@ -5,7 +5,7 @@ category: basics
 description: Account-based digest of recent tweets from tracked X/Twitter accounts. Sibling to fetch-tweets (keyword) and tweet-roundup (topic).
 var: ""
 tags: [social]
-requires: [XAI_API_KEY]
+requires: [TWITTER_API_KEY, XAI_API_KEY?]
 ---
 > **${var}** — Optional. If set, restrict to that single account (or topic filter). If empty, processes every account in `memory/topics/tracked-accounts.yml`.
 
@@ -48,7 +48,25 @@ Read `memory/MEMORY.md` for context and the last 2 days of `memory/logs/` to ded
 
 For each `handle` in the config (or just the one from `${var}` if set):
 
-Call Grok's `x_search` **in-run** with `./secretcurl` (the literal `{XAI_API_KEY}` placeholder — never `$XAI_API_KEY`; see CLAUDE.md → Network & Secrets). Capture the HTTP status and print `http=<code>` before parsing:
+**Path A - twitterapi.io (primary).** `/user/last_tweets` returns structured tweet objects (exact engagement counts, real permalinks, parsed fields) in ~700ms - no fabrication risk. It has no server-side date filter, so keep the last 3 days client-side on `.createdAt`. Auth via `./secretcurl` with the literal `{TWITTER_API_KEY}` placeholder (never `$TWITTER_API_KEY`; see CLAUDE.md -> Network & Secrets):
+
+```bash
+SINCE=$(date -u -d '3 days ago' +%Y-%m-%d 2>/dev/null || date -u -v-3d +%Y-%m-%d)
+HTTP=$(./secretcurl -m 30 -s -o /tmp/tw-td.json -w '%{http_code}' -G "https://api.twitterapi.io/twitter/user/last_tweets" \
+  --data-urlencode "userName=$HANDLE" -H "X-API-Key: {TWITTER_API_KEY}")
+echo "twitterapi http=$HTTP"
+# on HTTP 200: last-3-day originals (createdAt is Twitter native format; strptime normalizes to a date), skip replies/RTs
+jq -r --arg since "$SINCE" '
+  .data.tweets[]
+  | select((.isReply // false) | not)
+  | (try (.createdAt | strptime("%a %b %d %H:%M:%S %z %Y") | strftime("%Y-%m-%d")) catch (.createdAt[0:10])) as $d
+  | select($d >= $since)
+  | [.author.userName, $d, .likeCount, .retweetCount, .replyCount, .url, .text] | @tsv' /tmp/tw-td.json
+```
+
+On `HTTP=200` with parsed rows, take the 5 most interesting or substantive tweets for that handle; paginate with `&cursor=<next_cursor>` only if you need older in-window tweets.
+
+**Path B - xAI Grok `x_search` (fallback).** Only if a handle's Path A returned non-2xx, empty, or timed out (or `TWITTER_API_KEY` is unset). Call Grok's `x_search` **in-run** with `./secretcurl` (the literal `{XAI_API_KEY}` placeholder - never `$XAI_API_KEY`; see CLAUDE.md -> Network & Secrets). Capture the HTTP status and print `http=<code>` before parsing:
 
 ```bash
 PROMPT="Search X for the latest tweets from ${HANDLE} in the last 3 days. Return the 5 most interesting or substantive tweets. For each: full text, date, direct link (https://x.com/${HANDLE}/status/ID). Skip retweets of others."
@@ -60,7 +78,7 @@ HTTP=$(./secretcurl -m 60 -s -o /tmp/xai-td-out.json -w '%{http_code}' -X POST "
 echo "http=$HTTP"
 ```
 
-Then parse `/tmp/xai-td-out.json` for the tweets. If `XAI_API_KEY` is unset, log `TWEET_DIGEST_NO_KEY: skill requires XAI_API_KEY` and exit (no notification). On a non-2xx `http`, a `--max-time` timeout, or a 200 with an empty body, record the real reason (`http-<code>` / `timeout` / `empty`) and skip that handle — never blame a "sandbox".
+Then parse `/tmp/xai-td-out.json` for the tweets. If neither `TWITTER_API_KEY` nor `XAI_API_KEY` is set, log `TWEET_DIGEST_NO_KEY: skill requires TWITTER_API_KEY or XAI_API_KEY` and exit (no notification). On a non-2xx `http`, a `--max-time` timeout, or a 200 with an empty body on both paths, record the real reason (`http-<code>` / `timeout` / `empty`) and skip that handle - never blame a "sandbox".
 
 **Dedup:** grep the last 2 days of `memory/logs/` for `https://x.com/` URLs already reported. Drop any candidate URL that's already been seen.
 
@@ -91,10 +109,11 @@ Send via `./notify` (under 4000 chars):
 
 Append to `memory/logs/${today}.md` with the tweet URLs reported (so the next run can dedup). If no notable tweets found across all tracked accounts: log `TWEET_DIGEST_OK` and end (no notification).
 
-## Fetching — in-run, no prefetch
+## Fetching - in-run, no prefetch
 
-Auth'd X.AI calls run **in-run** via `./secretcurl` with the literal `{XAI_API_KEY}` placeholder (see step 1 and CLAUDE.md → Network & Secrets). There is **no** prefetch/cache step — the retired `.xai-cache/` + `scripts/prefetch-xai.sh` pattern no longer exists; do not reference it.
+Auth'd calls run **in-run** via `./secretcurl` with a literal `{ENV}` placeholder - twitterapi.io (`{TWITTER_API_KEY}`, primary) and X.AI Grok (`{XAI_API_KEY}`, fallback); see step 1 and CLAUDE.md -> Network & Secrets. There is **no** prefetch/cache step - the retired `.xai-cache/` + `scripts/prefetch-xai.sh` pattern no longer exists; do not reference it.
 
 ## Environment Variables
 
-- `XAI_API_KEY` — required. X.AI API key for Grok's `x_search` tool.
+- `TWITTER_API_KEY` - primary. twitterapi.io key (`X-API-Key` header) for structured tweet fetches via `/user/last_tweets`.
+- `XAI_API_KEY` - optional fallback. X.AI API key for Grok's `x_search` tool when twitterapi.io is unavailable.

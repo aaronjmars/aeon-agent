@@ -6,7 +6,7 @@ description: Price performance report for the project's token — price, volume,
 var: ""
 tags: [crypto]
 mode: write
-requires: [ALCHEMY_API_KEY?, XAI_API_KEY?, BASE_RPC_URL?]
+requires: [TWITTER_API_KEY, ALCHEMY_API_KEY?, XAI_API_KEY?, BASE_RPC_URL?]
 capabilities: [external_api]
 ---
 <!-- autoresearch: variation B — verdict-first template, threshold-based classification, true deltas from persistent STATE log, skip-when-empty sections -->
@@ -172,7 +172,7 @@ Save to `output/articles/token-report-${today}.md`:
 [2–4 sentences. Name the specific deltas that matter and the verdict they produced. If whale trades exist, list the top 3 as `buy $1.2K @ $0.0042 · 11:03 UTC`. If liquidity moved >5%, name the pool and the $ amount. Tie every sentence back to the verdict. No filler.]
 
 ## Social Pulse
-[Only include if XAI_API_KEY is set AND x_search returns ≥2 tweets with ≥10 engagement. Lead with a one-line read of the conversation shape, then quote 1–3 tweets with @handle + engagement counts. Otherwise OMIT this section entirely.]
+[Only include if the social fetch (Step 6) returns >=2 tweets with >=10 engagement. Lead with a one-line read of the conversation shape, then quote 1-3 tweets with @handle + engagement counts. Otherwise OMIT this section entirely.]
 
 ## Context
 [Only include when there is a genuine link to known activity: a recent repo release, a broader market regime shift, a boost/trending flag, an on-chain event. If none, OMIT. Never write "no specific context".]
@@ -190,9 +190,24 @@ Save to `output/articles/token-report-${today}.md`:
 
 ### 6. Social sentiment (conditional)
 
-If `XAI_API_KEY` is set:
+**Path A - twitterapi.io (primary).** Structured tweet objects with exact engagement counts and real permalinks - no fabrication risk, ~700ms. Search the last 24h for the ticker or contract, then keep tweets clearing the engagement bar. Auth via `./secretcurl` with the literal `{TWITTER_API_KEY}` placeholder (never `$TWITTER_API_KEY`; see CLAUDE.md -> Network & Secrets):
 
-Call it **in-run** with `./secretcurl` and the literal `{XAI_API_KEY}` placeholder (never `$XAI_API_KEY`; see CLAUDE.md → Network & Secrets):
+```bash
+TODAY=$(date -u +%Y-%m-%d)
+SINCE=$(date -u -d '1 day ago' +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
+Q="$TOKEN_SYMBOL OR CONTRACT_ADDRESS since:$SINCE until:$TODAY"
+HTTP=$(./secretcurl -s -o /tmp/tw-token.json -w '%{http_code}' -G "https://api.twitterapi.io/twitter/tweet/advanced_search" \
+  --data-urlencode "query=$Q" --data-urlencode "queryType=Latest" -H "X-API-Key: {TWITTER_API_KEY}")
+echo "twitterapi http=$HTTP bytes=$(wc -c </tmp/tw-token.json)"
+# on HTTP 200: keep tweets with >=10 engagement, top 5 by likes
+jq -r '[.tweets[] | select((.likeCount + .retweetCount + .replyCount) >= 10)]
+  | sort_by(-.likeCount) | .[:5][]
+  | [.author.userName, .likeCount, .retweetCount, .replyCount, .url, .text] | @tsv' /tmp/tw-token.json
+```
+
+Substitute the tracked ticker (cashtag form) for `$TOKEN_SYMBOL` and the token address for `CONTRACT_ADDRESS`. On `HTTP=200` with >=2 tweets clearing the bar, build the Social Pulse section, exclude obvious bots and generic shill posts, and set `xai=ok` in the footer.
+
+**Path B - xAI Grok `x_search` (fallback).** Only if Path A returned non-2xx, empty, timed out, or `TWITTER_API_KEY` is unset. Call it **in-run** with `./secretcurl` and the literal `{XAI_API_KEY}` placeholder (never `$XAI_API_KEY`; see CLAUDE.md -> Network & Secrets):
 
 ```bash
 ./secretcurl -s -X POST "https://api.x.ai/v1/responses" \
@@ -205,7 +220,7 @@ Call it **in-run** with `./secretcurl` and the literal `{XAI_API_KEY}` placehold
   }'
 ```
 
-If the response has fewer than 2 tweets that clear the engagement bar, skip the Social Pulse section and set `xai=skip` in the footer. On API error, set `xai=fail` and skip. If `XAI_API_KEY` is not set, set `xai=skip`.
+If neither path returns at least 2 tweets that clear the engagement bar, skip the Social Pulse section and set `xai=skip` in the footer. On API error on both paths, set `xai=fail` and skip. If neither `TWITTER_API_KEY` nor `XAI_API_KEY` is set, set `xai=skip`.
 
 ### 7. Save article
 
@@ -260,7 +275,7 @@ The `Treasury:` line is included ONLY when step 2b populated treasury_eth_total 
 
 ## Sandbox note
 
-Public reads (GeckoTerminal, DexScreener, the keyless Base RPC `mainnet.base.org`) use plain `curl`; on a real failure (non-2xx / timeout / empty), retry with **WebFetch** — it accepts the JSON body for the `eth_getBalance` POST. The two auth'd calls (Alchemy fallback, api.x.ai Social Pulse) run **in-run** via `./secretcurl` with `{ALCHEMY_API_KEY}` / `{XAI_API_KEY}` placeholders — no pre-fetch / post-process plumbing.
+Public reads (GeckoTerminal, DexScreener, the keyless Base RPC `mainnet.base.org`) use plain `curl`; on a real failure (non-2xx / timeout / empty), retry with **WebFetch** - it accepts the JSON body for the `eth_getBalance` POST. The auth'd calls (Alchemy fallback, twitterapi.io + api.x.ai Social Pulse) run **in-run** via `./secretcurl` with `{ALCHEMY_API_KEY}` / `{TWITTER_API_KEY}` / `{XAI_API_KEY}` placeholders - no pre-fetch / post-process plumbing.
 
 The Alchemy fallback in step 2b uses `$ALCHEMY_API_KEY` in the URL path (not in a header), so curl envvar expansion is safe here. If Alchemy is unset, skip silently — the keyless public RPC + WebFetch are enough.
 

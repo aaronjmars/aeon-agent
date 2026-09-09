@@ -574,13 +574,14 @@
       },
       "capabilities": {
         "network": [
+          "api.twitterapi.io",
           "api.x.ai"
         ]
       },
       "files": [
         {
           "path": "SKILL.md",
-          "hash": "6d3d9351a37cb416418c9eec2b8b41fd1a6b1a5f97d514062e1ad7b4507787b7"
+          "hash": "2f4759545ed6acc41a903275ed232166f6f44ed975ae7aca252a8a9e0076bca3"
         }
       ],
       "contentHash": "sha256-79472cc51afd40fc308c0e7925ed2148642076cdeda3d6658a64fa2c082a7b78",
@@ -886,6 +887,7 @@
         "network": [
           "api.dexscreener.com",
           "api.geckoterminal.com",
+          "api.twitterapi.io",
           "api.x.ai",
           "base-mainnet.g.alchemy.com"
         ]
@@ -893,7 +895,7 @@
       "files": [
         {
           "path": "SKILL.md",
-          "hash": "948ba0f337920df9b120a360ef1ef586adbb39971f23557ff47ba61fd3b69daa"
+          "hash": "6d91233f8843df5e64ee045d6b7b760723687bb096556a4852b88e8482a5c6d3"
         }
       ],
       "contentHash": "sha256-ab5b8d9587d1917cf8b9f4064c47bf728bb179f5e2e123d22131638efbcc6c77",
@@ -2026,6 +2028,7 @@
       },
       "capabilities": {
         "network": [
+          "api.twitterapi.io",
           "api.x.ai",
           "x.com"
         ]
@@ -2033,7 +2036,7 @@
       "files": [
         {
           "path": "SKILL.md",
-          "hash": "6dd3aa21b17bc9e525802387f8cf0544c9387ce7d118081fca2b9523360114d5"
+          "hash": "ca5a7b34e32de89d0c4d543de285fa263f0a6695ca0a45ef83748f80b5a1da33"
         }
       ],
       "contentHash": "sha256-1d5e4c22d96d144b8a7ac5b9385ab413e947998674c13f7c92802010c2e67046",
