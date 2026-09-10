@@ -466,3 +466,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-09-09,secured-watch,claude-sonnet-5,2356,6504,872550,41113
 2026-09-09,tweet-digest,claude-sonnet-5,2495,7280,1134829,42046
 2026-09-09,heartbeat,claude-sonnet-5,2479,16290,891861,72705
+2026-09-10,token-report,claude-sonnet-5,2948,20970,4604658,89534

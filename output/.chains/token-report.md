@@ -1,12 +1,10 @@
-ℹ️ AEON Token Report — 2026-09-09
+✅ AEON Token Report
 
-*$AEON — SLIDING*
+*$AEON — BREAKOUT*
 
-One seller ($26.4K across two prints) drove an 8.0% slide to $0.00001533 as volume ticked back up to 1.2× the 7-day average.
+Price surged 48.0% to $0.00002269 on volume 2.2x the 7-day average — biggest move since the 09-03 slide, though whale flow (40 trades ≥$1K) actually leaned sell-heavy by count.
 
-Price $0.00001533 (-8.0% 24h) | Liq $1.09M (-6.6%) | Vol $177.4K (1.2× 7d)
-Buys/Sells 184/118 (ratio 1.56) | Whales: 34
+Price $0.00002269 (+48.0% 24h) | Liq $1.38M (+26.6%) | Vol $374.2K (2.2x 7d)
+Buys/Sells 285/314 (ratio 0.91) | Whales: 40
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
-
-🔗 https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4

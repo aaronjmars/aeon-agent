@@ -1,0 +1,131 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "heading_breakout",
+        "sep1",
+        "text_narrative",
+        "sep2",
+        "stats_stack",
+        "sep3",
+        "text_whale_note",
+        "sep4",
+        "link_chart"
+      ]
+    },
+    "heading_breakout": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — BREAKOUT",
+        "level": "h2"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price surged 48.0% to $0.00002269 on volume 2.2x the 7-day average — biggest move since the 09-03 slide, though whale flow (40 trades ≥$1K) actually leaned sell-heavy by count.",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liq",
+        "stat_vol",
+        "stat_buys_sells",
+        "stat_whales"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002269",
+        "delta": "+48.0%",
+        "trend": "up"
+      }
+    },
+    "stat_liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.38M",
+        "delta": "+26.6%",
+        "trend": "up"
+      }
+    },
+    "stat_vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$374.2K",
+        "delta": "2.2x 7d avg",
+        "trend": "up"
+      }
+    },
+    "stat_buys_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "285/314",
+        "delta": "0.91 ratio"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales (≥$1K)",
+        "value": "40"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_whale_note": {
+      "type": "Text",
+      "props": {
+        "text": "Whale flow leaned sell-heavy by count.",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "Chart: GeckoTerminal Pool",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
