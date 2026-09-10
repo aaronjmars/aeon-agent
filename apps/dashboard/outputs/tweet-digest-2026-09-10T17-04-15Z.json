@@ -1,0 +1,108 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-09-10"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "security-heading",
+        "security-tweet-1",
+        "security-tweet-2",
+        "sep-1",
+        "shipped-heading",
+        "shipped-tweet-1",
+        "sep-2",
+        "comparisons-heading",
+        "comparisons-tweet-1",
+        "comparisons-tweet-2"
+      ]
+    },
+    "security-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      }
+    },
+    "security-tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "vuln-scanner flagged zonelessdev/zoneless — private advisory + fix PR sent ⭐ — [link](https://x.com/aeonframework/status/2098033759719416274)"
+      }
+    },
+    "security-tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "vuln-scanner flagged Robbyant/lingbot-map — private advisory + patch PR sent ⭐ — [link](https://x.com/aeonframework/status/2097291812771676165)"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "shipped-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h3"
+      }
+    },
+    "shipped-tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "Aeon Hook Marketplace is live — create, audit, and list Uniswap v4 hooks, with token-deploy-on-hook-pool coming soon ⭐ — [link](https://x.com/aeonframework/status/2097955663502557676)"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "comparisons-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Comparisons & Content",
+        "level": "h3"
+      }
+    },
+    "comparisons-tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "posted an agentic comparison between Aeon and @Muse (thread in the comments) — [link](https://x.com/aeonframework/status/2097952080765816972)"
+      }
+    },
+    "comparisons-tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "shared a video clip, no caption — [link](https://x.com/aeonframework/status/2097997668601544919)"
+      }
+    }
+  }
+}

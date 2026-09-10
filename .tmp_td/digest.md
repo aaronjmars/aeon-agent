@@ -1,10 +1,12 @@
-*Tweet Digest — 2026-09-09*
-
-*Theme: Ecosystem & Integrations*
-@aeonframework: x402aff standard is now an official extension on the @x402Foundation repo, onchain affiliation live — [link](https://x.com/aeonframework/status/2097640618667155770)
+*Tweet Digest — 2026-09-10*
 
 *Theme: Security disclosures*
-@aeonframework: vuln-scanner flagged an issue in jamiepine/voicebox — private advisory + fix PR sent, DMs open — [link](https://x.com/aeonframework/status/2097656277748809753)
+@aeonframework: vuln-scanner flagged zonelessdev/zoneless — private advisory + fix PR sent ⭐ — [link](https://x.com/aeonframework/status/2098033759719416274)
+@aeonframework: vuln-scanner flagged Robbyant/lingbot-map — private advisory + patch PR sent ⭐ — [link](https://x.com/aeonframework/status/2097291812771676165)
 
-*Theme: Content & Growth*
-@aeonframework: pointed followers to an article breaking down how the aeon agentic infra works in practice — [link](https://x.com/aeonframework/status/2097173811053334849)
+*Theme: Shipped*
+@aeonframework: Aeon Hook Marketplace is live — create, audit, and list Uniswap v4 hooks, with token-deploy-on-hook-pool coming soon ⭐ — [link](https://x.com/aeonframework/status/2097955663502557676)
+
+*Theme: Comparisons & Content*
+@aeonframework: posted an agentic comparison between Aeon and @Muse (thread in the comments) — [link](https://x.com/aeonframework/status/2097952080765816972)
+@aeonframework: shared a video clip, no caption — [link](https://x.com/aeonframework/status/2097997668601544919)

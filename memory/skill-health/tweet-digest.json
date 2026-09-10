@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-09T17:03:48Z",
+  "last_analyzed": "2026-09-10T17:04:15Z",
   "quality_score": 4,
-  "assessment": "Well-structured digest with verifiable methodology (http=200 fetch, sound dedup logic, memory integration); output aligns with strategy priorities on tracking momentum and ecosystem growth.",
+  "assessment": "Substantive, well-structured digest that tracks shipped work and momentum—aligns with strategy priority to document and spread what shipped.",
   "flags": [],
   "avg_score": 3.77,
   "history": [
-    {
-      "date": "2026-08-10",
-      "score": 4
-    },
     {
       "date": "2026-08-11",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-09",
+      "score": 4
+    },
+    {
+      "date": "2026-09-10",
       "score": 4
     }
   ]
