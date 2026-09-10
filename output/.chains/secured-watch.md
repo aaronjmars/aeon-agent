@@ -1,6 +1,9 @@
-The secured-watch skill ran clean: fetched the board (83 rows, http=200), diffed against yesterday's snapshot — no new repos, no severity/fix-link changes, no drops. Per the skill's silence rule, no notification was sent for this quiet run; state was advanced (`updated_at` → 2026-09-09) and the log entry appended.
+No new or changed entries on the "Secured by Aeon" leaderboard since the last run — per the skill's rules, no notification was sent (silence on no-change).
 
 ## Summary
-- Ran `secured-watch`: fetched `aeon.fun/security`, parsed 83 secured repos, diffed against `memory/state/secured-repos.json` — result `NO_CHANGE` (83 repos, 2,539,071★, both unchanged).
-- Modified: `memory/state/secured-repos.json` (updated_at bumped to 2026-09-09), `memory/logs/2026-09-09.md` (appended `### secured-watch` entry).
-- No notification sent (quiet run, as required). No follow-up needed — next scheduled run will pick up any new/changed entries.
+- Fetched `https://www.aeon.fun/security` (http=200), parsed 83 secured-repo rows.
+- Diffed against `memory/state/secured-repos.json`: 0 new, 0 changed, 0 dropped. Totals unchanged: 83 repos, 2,539,071★.
+- Advanced state snapshot (`memory/state/secured-repos.json`) to today's date per the "advance every real run" rule.
+- No notification sent (NO_CHANGE case).
+- Logged the run under `### secured-watch` in `memory/logs/2026-09-10.md`.
+- Follow-up: none — next check happens on the normal ~2-day cadence.
