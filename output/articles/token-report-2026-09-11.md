@@ -1,5 +1,3 @@
-ℹ️ AEON Token Report
-
 # $AEON — 2026-09-11
 
 **Verdict:** CONSOLIDATING — price fell 19.2% but volume ran only 0.62x the weekly average, thin and low-conviction.

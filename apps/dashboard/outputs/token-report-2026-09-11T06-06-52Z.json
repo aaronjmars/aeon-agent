@@ -1,0 +1,195 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON Token Report — 2026-09-11"
+      },
+      "children": [
+        "verdict_alert",
+        "separator_1",
+        "heading_24h",
+        "table_metrics",
+        "separator_2",
+        "heading_trend",
+        "stats_section",
+        "separator_3",
+        "heading_changed",
+        "text_analysis",
+        "separator_4",
+        "heading_refs",
+        "link_chart",
+        "text_contract",
+        "text_sources"
+      ]
+    },
+    "verdict_alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Verdict",
+        "message": "CONSOLIDATING — price fell 19.2% but volume ran only 0.62x the weekly average, thin and low-conviction.",
+        "type": "warning"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_24h": {
+      "type": "Heading",
+      "props": {
+        "text": "24h at a glance",
+        "level": "h2"
+      }
+    },
+    "table_metrics": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Metric",
+          "Now",
+          "24h Δ",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "Price",
+            "$0.00001834",
+            "-19.2%",
+            "—"
+          ],
+          [
+            "Liquidity",
+            "$1.18M",
+            "-14.0%",
+            "—"
+          ],
+          [
+            "Volume (24h)",
+            "$107.0K",
+            "—",
+            "0.62x"
+          ],
+          [
+            "Buys / Sells",
+            "151 / 92",
+            "ratio 1.64 (yest 0.91)",
+            "—"
+          ],
+          [
+            "Whale trades (≥$1k)",
+            "21",
+            "—",
+            "—"
+          ],
+          [
+            "FDV",
+            "$1.83M",
+            "—",
+            "—"
+          ]
+        ]
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_trend": {
+      "type": "Heading",
+      "props": {
+        "text": "Trend",
+        "level": "h2"
+      }
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_7d",
+        "stat_30d"
+      ]
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7 days",
+        "value": "-18.8%",
+        "trend": "down",
+        "delta": "down from the 09-04 baseline of $0.00002258, unwinding the mid-week breakout"
+      }
+    },
+    "stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30 days",
+        "value": "+81.8%",
+        "trend": "up",
+        "delta": "up from the 08-13 OHLCV close of $0.00001009 — still well above pre-rally levels"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_changed": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h2"
+      }
+    },
+    "text_analysis": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON gave back 19.2% over the past 24h, falling to $0.00001834, but the move came on just $107.0K in volume — 0.62x the 7-day average ($173.2K) — a fraction of the conviction behind Wednesday's breakout, which is why this lands as CONSOLIDATING rather than a breakdown. Whale flow (21 trades ≥$1K) was sell-heavy, 14 sells vs 7 buys: the largest prints were a $12.64K sell at $0.0000182 (18:39 UTC), a $12.21K sell at $0.0000176 (22:15 UTC), and an $8.75K buy at $0.0000175 (05:23 UTC) — that last trade lines up with a late bounce, with price up 11.2% in the final hour off session lows. Liquidity in the AEON/WETH pool thinned 14.0% to $1.18M (from $1.38M, a $192.5K pullback), tracking the price decline rather than a standalone LP exit. Buy/sell count actually flipped bullish (151/92, ratio 1.64, up from yesterday's 0.91) even as price fell — more small buyers stepping in against a handful of large sellers, consistent with distribution into weak hands rather than a broad flush.",
+        "variant": "body"
+      }
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_refs": {
+      "type": "Heading",
+      "props": {
+        "text": "References",
+        "level": "h2"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "Chart: GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    },
+    "text_contract": {
+      "type": "Text",
+      "props": {
+        "text": "Contract: 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | Chain: Base",
+        "variant": "caption"
+      }
+    },
+    "text_sources": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: gt=ok · ds=ok · xai=skip · treasury=skip",
+        "variant": "caption"
+      }
+    }
+  }
+}
