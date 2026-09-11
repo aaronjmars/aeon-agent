@@ -1,0 +1,97 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-11"
+      },
+      "children": [
+        "heading-theme1",
+        "tweet-1-1",
+        "tweet-1-2",
+        "tweet-1-3",
+        "sep-1",
+        "heading-theme2",
+        "tweet-2-1",
+        "sep-2",
+        "heading-theme3",
+        "tweet-3-1"
+      ]
+    },
+    "heading-theme1": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h2"
+      }
+    },
+    "tweet-1-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scanner flagged an issue on Cloudflare's own repo, advisory + fix PR sent, credit to @svector_eth's agent",
+        "href": "https://x.com/aeonframework/status/2098426968702160941",
+        "source": "X / @aeonframework"
+      }
+    },
+    "tweet-1-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "flies now got the power to secure multi-trillion companies — the one-liner riffing on the Cloudflare catch",
+        "href": "https://x.com/aeonframework/status/2098100796499841400",
+        "source": "X / @aeonframework"
+      }
+    },
+    "tweet-1-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "vuln-scanner also flagged Pumpkin-MC/Pumpkin, private advisory + fix PR sent, waiting on maintainer feedback",
+        "href": "https://x.com/aeonframework/status/2098308314299834751",
+        "source": "X / @aeonframework"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-theme2": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Drop",
+        "level": "h2"
+      }
+    },
+    "tweet-2-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "new Compute Resell skill spotlight — agent sells your unused compute subs on the @AskSurplus marketplace in the background",
+        "href": "https://x.com/aeonframework/status/2098317039093862911",
+        "source": "X / @aeonframework"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-theme3": {
+      "type": "Heading",
+      "props": {
+        "text": "Growth & Partnerships",
+        "level": "h2"
+      }
+    },
+    "tweet-3-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pushing agents to equip the @FD_XYZ wallet via MCP from the skill catalogue for an upcoming opportunity/giveaway",
+        "href": "https://x.com/aeonframework/status/2098382041297412573",
+        "source": "X / @aeonframework"
+      }
+    }
+  }
+}
