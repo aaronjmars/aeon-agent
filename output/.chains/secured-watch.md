@@ -1,9 +1,16 @@
-No new or changed entries on the "Secured by Aeon" leaderboard since the last run — per the skill's rules, no notification was sent (silence on no-change).
+ℹ️ Secured by Aeon
 
-## Summary
-- Fetched `https://www.aeon.fun/security` (http=200), parsed 83 secured-repo rows.
-- Diffed against `memory/state/secured-repos.json`: 0 new, 0 changed, 0 dropped. Totals unchanged: 83 repos, 2,539,071★.
-- Advanced state snapshot (`memory/state/secured-repos.json`) to today's date per the "advance every real run" rule.
-- No notification sent (NO_CHANGE case).
-- Logged the run under `### secured-watch` in `memory/logs/2026-09-10.md`.
-- Follow-up: none — next check happens on the normal ~2-day cadence.
+## Secured by Aeon — new since last check
+**89 repos** secured (+6) · **2,654,539★** total (+115,468)
+
+### 🆕 Newly secured (6)
+- **[THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC/pull/1357)** — `HIGH` · 35,144★ — 
+- **[jdx/mise](https://github.com/jdx/mise/pull/12714)** — `HIGH` · 33,756★ — 
+- **[guillaumemeyer/watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover/security/advisories/GHSA-pjg6-92pm-mmcf)** — `MEDIUM` · 21,627★ — 
+- **[microsoft/agent-framework](https://github.com/microsoft/agent-framework/pull/8172)** — `MEDIUM` · 13,447★ — 
+- **[cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk/pull/15584)** — `CRITICAL+HIGH` · 4,524★ — 
+- **[yetone/cumora](https://github.com/yetone/cumora/pull/8)** — `HIGH+MEDIUM` · 3,546★ — 
+
+### 🔁 Updated fix / severity (2)
+- **[abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus/pull/1148)** — `HIGH×2` · 47,107★ —  _(severity HIGH → HIGH×2)_
+- **[pacifio/atlas](https://github.com/pacifio/atlas/pull/233)** — `HIGH+MEDIUM` · 3,293★ —  _(severity MEDIUM → HIGH+MEDIUM)_

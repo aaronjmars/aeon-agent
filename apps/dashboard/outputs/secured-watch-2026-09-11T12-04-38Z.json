@@ -1,0 +1,502 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon",
+        "description": "Security vulnerabilities secured across the ecosystem"
+      },
+      "children": [
+        "heading_main",
+        "stats_section",
+        "sep1",
+        "newly_secured_heading",
+        "newly_secured_list",
+        "sep2",
+        "updated_heading",
+        "updated_list"
+      ]
+    },
+    "heading_main": {
+      "type": "Heading",
+      "props": {
+        "text": "Secured by Aeon — new since last check",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "89",
+        "delta": "+6"
+      },
+      "children": []
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "2,654,539",
+        "delta": "+115,468"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "newly_secured_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (6)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "newly_secured_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo1",
+        "repo2",
+        "repo3",
+        "repo4",
+        "repo5",
+        "repo6"
+      ]
+    },
+    "repo1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1_link",
+        "repo1_meta"
+      ]
+    },
+    "repo1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "THU-MAIC/OpenMAIC",
+        "href": "https://github.com/THU-MAIC/OpenMAIC/pull/1357"
+      },
+      "children": []
+    },
+    "repo1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo1_severity",
+        "repo1_stars"
+      ]
+    },
+    "repo1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "repo1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "35,144★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "repo2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2_link",
+        "repo2_meta"
+      ]
+    },
+    "repo2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "jdx/mise",
+        "href": "https://github.com/jdx/mise/pull/12714"
+      },
+      "children": []
+    },
+    "repo2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo2_severity",
+        "repo2_stars"
+      ]
+    },
+    "repo2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "repo2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "33,756★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "repo3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo3_link",
+        "repo3_meta"
+      ]
+    },
+    "repo3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "guillaumemeyer/watermarks-remover",
+        "href": "https://github.com/guillaumemeyer/watermarks-remover/security/advisories/GHSA-pjg6-92pm-mmcf"
+      },
+      "children": []
+    },
+    "repo3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo3_severity",
+        "repo3_stars"
+      ]
+    },
+    "repo3_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo3_stars": {
+      "type": "Text",
+      "props": {
+        "text": "21,627★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "repo4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo4_link",
+        "repo4_meta"
+      ]
+    },
+    "repo4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "microsoft/agent-framework",
+        "href": "https://github.com/microsoft/agent-framework/pull/8172"
+      },
+      "children": []
+    },
+    "repo4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo4_severity",
+        "repo4_stars"
+      ]
+    },
+    "repo4_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo4_stars": {
+      "type": "Text",
+      "props": {
+        "text": "13,447★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "repo5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo5_link",
+        "repo5_meta"
+      ]
+    },
+    "repo5_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "cloudflare/workers-sdk",
+        "href": "https://github.com/cloudflare/workers-sdk/pull/15584"
+      },
+      "children": []
+    },
+    "repo5_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo5_severity",
+        "repo5_stars"
+      ]
+    },
+    "repo5_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "CRITICAL+HIGH",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "repo5_stars": {
+      "type": "Text",
+      "props": {
+        "text": "4,524★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "repo6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo6_link",
+        "repo6_meta"
+      ]
+    },
+    "repo6_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "yetone/cumora",
+        "href": "https://github.com/yetone/cumora/pull/8"
+      },
+      "children": []
+    },
+    "repo6_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "repo6_severity",
+        "repo6_stars"
+      ]
+    },
+    "repo6_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "repo6_stars": {
+      "type": "Text",
+      "props": {
+        "text": "3,546★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "updated_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔁 Updated fix / severity (2)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "updated_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updated1",
+        "updated2"
+      ]
+    },
+    "updated1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "updated1_link",
+        "updated1_meta",
+        "updated1_note"
+      ]
+    },
+    "updated1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "abhigyanpatwari/GitNexus",
+        "href": "https://github.com/abhigyanpatwari/GitNexus/pull/1148"
+      },
+      "children": []
+    },
+    "updated1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "updated1_severity",
+        "updated1_stars"
+      ]
+    },
+    "updated1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH×2",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "updated1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "47,107★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "updated1_note": {
+      "type": "Text",
+      "props": {
+        "text": "severity HIGH → HIGH×2",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "updated2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "updated2_link",
+        "updated2_meta",
+        "updated2_note"
+      ]
+    },
+    "updated2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "pacifio/atlas",
+        "href": "https://github.com/pacifio/atlas/pull/233"
+      },
+      "children": []
+    },
+    "updated2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "updated2_severity",
+        "updated2_stars"
+      ]
+    },
+    "updated2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "updated2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "3,293★",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "updated2_note": {
+      "type": "Text",
+      "props": {
+        "text": "severity MEDIUM → HIGH+MEDIUM",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

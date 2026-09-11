@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-10",
-  "total_repos": 83,
-  "total_stars": 2539071,
+  "updated_at": "2026-09-11",
+  "total_repos": 89,
+  "total_stars": 2654539,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -17,7 +17,7 @@
     },
     "harry0703/MoneyPrinterTurbo": {
       "severity": "HIGH",
-      "stars": 121257,
+      "stars": 122092,
       "fix_url": "https://github.com/harry0703/MoneyPrinterTurbo/commit/28a55ddc1d3f4fc094837352ee9a74e1b264484a",
       "note": ""
     },
@@ -41,7 +41,7 @@
     },
     "koala73/worldmonitor": {
       "severity": "HIGH",
-      "stars": 85739,
+      "stars": 85949,
       "fix_url": "https://github.com/koala73/worldmonitor/pull/5477",
       "note": ""
     },
@@ -101,31 +101,31 @@
     },
     "HKUDS/nanobot": {
       "severity": "HIGH",
-      "stars": 47830,
+      "stars": 47972,
       "fix_url": "https://github.com/HKUDS/nanobot/commit/207813d3b",
       "note": ""
     },
     "abhigyanpatwari/GitNexus": {
-      "severity": "HIGH",
+      "severity": "HIGH\u00d72",
       "stars": 47107,
       "fix_url": "https://github.com/abhigyanpatwari/GitNexus/pull/1148",
       "note": ""
     },
     "DeusData/codebase-memory-mcp": {
       "severity": "CRITICAL+HIGH",
-      "stars": 42525,
+      "stars": 42831,
       "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
       "note": ""
     },
     "Wei-Shaw/sub2api": {
       "severity": "HIGH",
-      "stars": 40706,
+      "stars": 41107,
       "fix_url": "https://github.com/Wei-Shaw/sub2api/pull/6122",
       "note": ""
     },
     "tinyhumansai/openhuman": {
       "severity": "HIGH",
-      "stars": 39489,
+      "stars": 39603,
       "fix_url": "https://github.com/tinyhumansai/openhuman/commit/b1bbc53fce",
       "note": ""
     },
@@ -137,19 +137,31 @@
     },
     "soxoj/maigret": {
       "severity": "HIGH+LOW",
-      "stars": 37348,
+      "stars": 37418,
       "fix_url": "https://github.com/soxoj/maigret/pull/2635",
       "note": ""
     },
     "esengine/DeepSeek-Reasonix": {
       "severity": "HIGH+MEDIUM",
-      "stars": 35434,
+      "stars": 35477,
       "fix_url": "https://github.com/esengine/DeepSeek-Reasonix/pull/9599",
+      "note": ""
+    },
+    "THU-MAIC/OpenMAIC": {
+      "severity": "HIGH",
+      "stars": 35144,
+      "fix_url": "https://github.com/THU-MAIC/OpenMAIC/pull/1357",
+      "note": ""
+    },
+    "jdx/mise": {
+      "severity": "HIGH",
+      "stars": 33756,
+      "fix_url": "https://github.com/jdx/mise/pull/12714",
       "note": ""
     },
     "HKUDS/Vibe-Trading": {
       "severity": "MEDIUM",
-      "stars": 32906,
+      "stars": 33167,
       "fix_url": "https://github.com/HKUDS/Vibe-Trading/pull/390",
       "note": ""
     },
@@ -161,7 +173,7 @@
     },
     "davila7/claude-code-templates": {
       "severity": "HIGH",
-      "stars": 30550,
+      "stars": 30582,
       "fix_url": "https://github.com/davila7/claude-code-templates/commit/bc4618b0",
       "note": ""
     },
@@ -173,7 +185,7 @@
     },
     "karakeep-app/karakeep": {
       "severity": "MEDIUM",
-      "stars": 28879,
+      "stars": 28938,
       "fix_url": "https://github.com/karakeep-app/karakeep/pull/2945",
       "note": ""
     },
@@ -213,6 +225,12 @@
       "fix_url": "https://github.com/alibaba/open-code-review/pull/10",
       "note": ""
     },
+    "guillaumemeyer/watermarks-remover": {
+      "severity": "MEDIUM",
+      "stars": 21627,
+      "fix_url": "https://github.com/guillaumemeyer/watermarks-remover/security/advisories/GHSA-pjg6-92pm-mmcf",
+      "note": ""
+    },
     "mksglu/context-mode": {
       "severity": "MEDIUM",
       "stars": 20514,
@@ -233,13 +251,19 @@
     },
     "lidge-jun/opencodex": {
       "severity": "LOW",
-      "stars": 13747,
+      "stars": 14159,
       "fix_url": "https://github.com/lidge-jun/opencodex/commit/a616078949ca5b5e9b024d3a1619744a3fb62ac8",
+      "note": ""
+    },
+    "microsoft/agent-framework": {
+      "severity": "MEDIUM",
+      "stars": 13447,
+      "fix_url": "https://github.com/microsoft/agent-framework/pull/8172",
       "note": ""
     },
     "fuma-nama/fumadocs": {
       "severity": "MEDIUM",
-      "stars": 13085,
+      "stars": 13108,
       "fix_url": "https://github.com/fuma-nama/fumadocs/commit/6c949cb541",
       "note": ""
     },
@@ -251,13 +275,13 @@
     },
     "TencentCloud/CubeSandbox": {
       "severity": "CRITICAL",
-      "stars": 11833,
+      "stars": 11904,
       "fix_url": "https://github.com/TencentCloud/CubeSandbox/pull/756",
       "note": ""
     },
     "cocoindex-io/cocoindex": {
       "severity": "MEDIUM",
-      "stars": 11497,
+      "stars": 11519,
       "fix_url": "https://github.com/cocoindex-io/cocoindex/pull/1947",
       "note": ""
     },
@@ -287,7 +311,7 @@
     },
     "usekaneo/kaneo": {
       "severity": "HIGH",
-      "stars": 8987,
+      "stars": 9028,
       "fix_url": "https://github.com/usekaneo/kaneo/pull/1457",
       "note": ""
     },
@@ -317,7 +341,7 @@
     },
     "katanemo/plano": {
       "severity": "HIGH+MEDIUM",
-      "stars": 7038,
+      "stars": 7046,
       "fix_url": "https://github.com/katanemo/plano/pull/1001",
       "note": ""
     },
@@ -329,14 +353,20 @@
     },
     "google/agents-cli": {
       "severity": "HIGH+MEDIUM",
-      "stars": 5835,
+      "stars": 5900,
       "fix_url": "https://github.com/google/agents-cli/issues/51",
       "note": ""
     },
     "huangruiteng/loopx": {
       "severity": "HIGH",
-      "stars": 5696,
+      "stars": 5772,
       "fix_url": "https://github.com/huangruiteng/loopx/security/advisories/GHSA-vx2m-gpq4-8j5q",
+      "note": ""
+    },
+    "baairon/torlink": {
+      "severity": "LOW",
+      "stars": 5610,
+      "fix_url": "https://github.com/baairon/torlink/pull/44",
       "note": ""
     },
     "dograh-hq/dograh": {
@@ -345,28 +375,28 @@
       "fix_url": "https://github.com/dograh-hq/dograh/pull/332",
       "note": ""
     },
-    "baairon/torlink": {
-      "severity": "LOW",
-      "stars": 5578,
-      "fix_url": "https://github.com/baairon/torlink/pull/44",
-      "note": ""
-    },
     "CJackHwang/ds2api": {
       "severity": "LOW",
       "stars": 4747,
       "fix_url": "https://github.com/CJackHwang/ds2api/security/advisories/GHSA-rf34-c5jc-4ffw",
       "note": ""
     },
+    "shy3130/tick-stock-panel": {
+      "severity": "HIGH",
+      "stars": 4529,
+      "fix_url": "https://github.com/shy3130/tick-stock-panel/pull/122",
+      "note": ""
+    },
+    "cloudflare/workers-sdk": {
+      "severity": "CRITICAL+HIGH",
+      "stars": 4524,
+      "fix_url": "https://github.com/cloudflare/workers-sdk/pull/15584",
+      "note": ""
+    },
     "Waishnav/devspace": {
       "severity": "HIGH",
       "stars": 4519,
       "fix_url": "https://github.com/Waishnav/devspace/pull/33",
-      "note": ""
-    },
-    "shy3130/tick-stock-panel": {
-      "severity": "HIGH",
-      "stars": 4429,
-      "fix_url": "https://github.com/shy3130/tick-stock-panel/pull/122",
       "note": ""
     },
     "Open-Legal-Products/mike": {
@@ -387,6 +417,12 @@
       "fix_url": "https://github.com/strukto-ai/mirage/pull/58",
       "note": ""
     },
+    "yetone/cumora": {
+      "severity": "HIGH+MEDIUM",
+      "stars": 3546,
+      "fix_url": "https://github.com/yetone/cumora/pull/8",
+      "note": ""
+    },
     "butterbase-ai/butterbase": {
       "severity": "MEDIUM",
       "stars": 3469,
@@ -400,9 +436,9 @@
       "note": ""
     },
     "pacifio/atlas": {
-      "severity": "MEDIUM",
-      "stars": 3260,
-      "fix_url": "https://github.com/pacifio/atlas/pull/228",
+      "severity": "HIGH+MEDIUM",
+      "stars": 3293,
+      "fix_url": "https://github.com/pacifio/atlas/pull/233",
       "note": ""
     },
     "cpaczek/skylight": {
@@ -425,20 +461,20 @@
     },
     "music-assistant/server": {
       "severity": "HIGH+MEDIUM",
-      "stars": 3039,
+      "stars": 3049,
       "fix_url": "https://github.com/music-assistant/server/pull/4544",
+      "note": ""
+    },
+    "makecindy/cindy": {
+      "severity": "HIGH",
+      "stars": 2495,
+      "fix_url": "https://github.com/makecindy/cindy/pull/1116",
       "note": ""
     },
     "zarazhangrui/lark-coding-agent-bridge": {
       "severity": "HIGH",
       "stars": 2456,
       "fix_url": "https://github.com/zarazhangrui/feishu-claude-code-bridge/pull/48",
-      "note": ""
-    },
-    "makecindy/cindy": {
-      "severity": "HIGH",
-      "stars": 2437,
-      "fix_url": "https://github.com/makecindy/cindy/pull/1116",
       "note": ""
     },
     "Doorman11991/smallcode": {
