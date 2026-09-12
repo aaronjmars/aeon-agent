@@ -1,0 +1,134 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status-badge",
+        "separator-1",
+        "narrative",
+        "separator-2",
+        "stats-section",
+        "separator-3",
+        "chart-link"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "variant": "outline"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price up 1.7% to $0.00001866, but on just 0.77x the 7-day volume average — whale flow (26 trades ≥$1K) actually skewed sell-heavy (15 sell/11 buy) even as overall buy/sell count ran bullish.",
+        "variant": "body"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-section": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol",
+        "stat-buys",
+        "stat-sells",
+        "stat-ratio",
+        "stat-whale"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00001866",
+        "delta": "+1.7%",
+        "trend": "up"
+      }
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.22M",
+        "delta": "+3.0%",
+        "trend": "up"
+      }
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$107.6K",
+        "delta": "0.77x 7d avg",
+        "trend": "down"
+      }
+    },
+    "stat-buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "131"
+      }
+    },
+    "stat-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "114"
+      }
+    },
+    "stat-ratio": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "1.15",
+        "trend": "up"
+      }
+    },
+    "stat-whale": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Trades (≥$1K)",
+        "value": "26",
+        "delta": "15 sell / 11 buy",
+        "trend": "down"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
