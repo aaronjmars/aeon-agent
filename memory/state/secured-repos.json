@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-11",
-  "total_repos": 89,
-  "total_stars": 2654539,
+  "updated_at": "2026-09-12",
+  "total_repos": 91,
+  "total_stars": 2685667,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -10,7 +10,7 @@
       "note": ""
     },
     "affaan-m/ECC": {
-      "severity": "HIGH",
+      "severity": "HIGH+LOW",
       "stars": 252187,
       "fix_url": "https://github.com/affaan-m/ECC/pull/2185",
       "note": ""
@@ -148,7 +148,7 @@
       "note": ""
     },
     "THU-MAIC/OpenMAIC": {
-      "severity": "HIGH",
+      "severity": "HIGH\u00d76",
       "stars": 35144,
       "fix_url": "https://github.com/THU-MAIC/OpenMAIC/pull/1357",
       "note": ""
@@ -195,6 +195,12 @@
       "fix_url": "https://github.com/rohitg00/agentmemory/pull/294",
       "note": ""
     },
+    "JustVugg/colibri": {
+      "severity": "HIGH",
+      "stars": 27680,
+      "fix_url": "https://github.com/JustVugg/colibri/security/advisories/GHSA-4gw4-j89j-4c8r",
+      "note": ""
+    },
     "decolua/9router": {
       "severity": "HIGH",
       "stars": 27317,
@@ -220,7 +226,7 @@
       "note": ""
     },
     "alibaba/open-code-review": {
-      "severity": "HIGH",
+      "severity": "HIGH\u00d72",
       "stars": 22026,
       "fix_url": "https://github.com/alibaba/open-code-review/pull/10",
       "note": ""
@@ -429,6 +435,12 @@
       "fix_url": "https://github.com/butterbase-ai/butterbase/pull/30",
       "note": ""
     },
+    "kvcache-ai/AgentENV": {
+      "severity": "HIGH",
+      "stars": 3448,
+      "fix_url": "https://github.com/kvcache-ai/AgentENV/pull/186",
+      "note": ""
+    },
     "vercel-labs/wterm": {
       "severity": "MEDIUM",
       "stars": 3440,
@@ -466,7 +478,7 @@
       "note": ""
     },
     "makecindy/cindy": {
-      "severity": "HIGH",
+      "severity": "HIGH+MEDIUM",
       "stars": 2495,
       "fix_url": "https://github.com/makecindy/cindy/pull/1116",
       "note": ""

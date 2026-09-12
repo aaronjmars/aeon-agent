@@ -1,16 +1,15 @@
 ℹ️ Secured by Aeon
 
-## Secured by Aeon — new since last check
-**89 repos** secured (+6) · **2,654,539★** total (+115,468)
+## Secured by Aeon ⭐ — new since last check
+2 new, 4 escalated. board's still growing.
+**91 repos** secured (+2) · **2,685,667★** total (+31,128)
 
-### 🆕 Newly secured (6)
-- **[THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC/pull/1357)** — `HIGH` · 35,144★ — 
-- **[jdx/mise](https://github.com/jdx/mise/pull/12714)** — `HIGH` · 33,756★ — 
-- **[guillaumemeyer/watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover/security/advisories/GHSA-pjg6-92pm-mmcf)** — `MEDIUM` · 21,627★ — 
-- **[microsoft/agent-framework](https://github.com/microsoft/agent-framework/pull/8172)** — `MEDIUM` · 13,447★ — 
-- **[cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk/pull/15584)** — `CRITICAL+HIGH` · 4,524★ — 
-- **[yetone/cumora](https://github.com/yetone/cumora/pull/8)** — `HIGH+MEDIUM` · 3,546★ — 
+### 🆕 Newly secured (2)
+- **[JustVugg/colibri](https://github.com/JustVugg/colibri/security/advisories/GHSA-4gw4-j89j-4c8r)** — `HIGH` · 27,680★ — 
+- **[kvcache-ai/AgentENV](https://github.com/kvcache-ai/AgentENV/pull/186)** — `HIGH` · 3,448★ — 
 
-### 🔁 Updated fix / severity (2)
-- **[abhigyanpatwari/GitNexus](https://github.com/abhigyanpatwari/GitNexus/pull/1148)** — `HIGH×2` · 47,107★ —  _(severity HIGH → HIGH×2)_
-- **[pacifio/atlas](https://github.com/pacifio/atlas/pull/233)** — `HIGH+MEDIUM` · 3,293★ —  _(severity MEDIUM → HIGH+MEDIUM)_
+### 🔁 Updated fix / severity (4)
+- **[affaan-m/ECC](https://github.com/affaan-m/ECC/pull/2185)** — `HIGH+LOW` · 252,187★ —  _(severity HIGH → HIGH+LOW)_
+- **[THU-MAIC/OpenMAIC](https://github.com/THU-MAIC/OpenMAIC/pull/1357)** — `HIGH×6` · 35,144★ —  _(severity HIGH → HIGH×6)_
+- **[alibaba/open-code-review](https://github.com/alibaba/open-code-review/pull/10)** — `HIGH×2` · 22,026★ —  _(severity HIGH → HIGH×2)_
+- **[makecindy/cindy](https://github.com/makecindy/cindy/pull/1116)** — `HIGH+MEDIUM` · 2,495★ —  _(severity HIGH → HIGH+MEDIUM)_

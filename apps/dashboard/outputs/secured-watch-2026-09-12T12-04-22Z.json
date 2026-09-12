@@ -1,0 +1,445 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon ⭐ — new since last check",
+        "description": "2 new, 4 escalated. board's still growing."
+      },
+      "children": [
+        "stats_section",
+        "sep1",
+        "new_section",
+        "sep2",
+        "updated_section"
+      ]
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "91",
+        "delta": "+2",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "2,685,667",
+        "delta": "+31,128",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "new_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_heading",
+        "new_repos"
+      ]
+    },
+    "new_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (2)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "new_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "new_repo_1",
+        "new_repo_2"
+      ]
+    },
+    "new_repo_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new_repo_1_link",
+        "new_repo_1_meta"
+      ]
+    },
+    "new_repo_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "JustVugg/colibri",
+        "href": "https://github.com/JustVugg/colibri/security/advisories/GHSA-4gw4-j89j-4c8r",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "new_repo_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "new_repo_1_severity",
+        "new_repo_1_stars"
+      ]
+    },
+    "new_repo_1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "new_repo_1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "27,680★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "new_repo_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new_repo_2_link",
+        "new_repo_2_meta"
+      ]
+    },
+    "new_repo_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "kvcache-ai/AgentENV",
+        "href": "https://github.com/kvcache-ai/AgentENV/pull/186",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "new_repo_2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "new_repo_2_severity",
+        "new_repo_2_stars"
+      ]
+    },
+    "new_repo_2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "new_repo_2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "3,448★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "updated_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updated_heading",
+        "updated_repos"
+      ]
+    },
+    "updated_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔁 Updated fix / severity (4)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "updated_repos": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updated_repo_1",
+        "updated_repo_2",
+        "updated_repo_3",
+        "updated_repo_4"
+      ]
+    },
+    "updated_repo_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_1_link",
+        "updated_repo_1_meta",
+        "updated_repo_1_change"
+      ]
+    },
+    "updated_repo_1_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "affaan-m/ECC",
+        "href": "https://github.com/affaan-m/ECC/pull/2185",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "updated_repo_1_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_1_severity",
+        "updated_repo_1_stars"
+      ]
+    },
+    "updated_repo_1_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+LOW",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "updated_repo_1_stars": {
+      "type": "Text",
+      "props": {
+        "text": "252,187★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "updated_repo_1_change": {
+      "type": "Text",
+      "props": {
+        "text": "severity HIGH → HIGH+LOW",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "updated_repo_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_2_link",
+        "updated_repo_2_meta",
+        "updated_repo_2_change"
+      ]
+    },
+    "updated_repo_2_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "THU-MAIC/OpenMAIC",
+        "href": "https://github.com/THU-MAIC/OpenMAIC/pull/1357",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "updated_repo_2_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_2_severity",
+        "updated_repo_2_stars"
+      ]
+    },
+    "updated_repo_2_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH×6",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "updated_repo_2_stars": {
+      "type": "Text",
+      "props": {
+        "text": "35,144★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "updated_repo_2_change": {
+      "type": "Text",
+      "props": {
+        "text": "severity HIGH → HIGH×6",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "updated_repo_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_3_link",
+        "updated_repo_3_meta",
+        "updated_repo_3_change"
+      ]
+    },
+    "updated_repo_3_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "alibaba/open-code-review",
+        "href": "https://github.com/alibaba/open-code-review/pull/10",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "updated_repo_3_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_3_severity",
+        "updated_repo_3_stars"
+      ]
+    },
+    "updated_repo_3_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH×2",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "updated_repo_3_stars": {
+      "type": "Text",
+      "props": {
+        "text": "22,026★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "updated_repo_3_change": {
+      "type": "Text",
+      "props": {
+        "text": "severity HIGH → HIGH×2",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "updated_repo_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_4_link",
+        "updated_repo_4_meta",
+        "updated_repo_4_change"
+      ]
+    },
+    "updated_repo_4_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "makecindy/cindy",
+        "href": "https://github.com/makecindy/cindy/pull/1116",
+        "source": "GitHub"
+      },
+      "children": []
+    },
+    "updated_repo_4_meta": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "updated_repo_4_severity",
+        "updated_repo_4_stars"
+      ]
+    },
+    "updated_repo_4_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "updated_repo_4_stars": {
+      "type": "Text",
+      "props": {
+        "text": "2,495★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "updated_repo_4_change": {
+      "type": "Text",
+      "props": {
+        "text": "severity HIGH → HIGH+MEDIUM",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
