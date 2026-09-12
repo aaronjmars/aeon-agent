@@ -1,0 +1,78 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-12"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-skill-drop",
+        "section-security"
+      ]
+    },
+    "section-skill-drop": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-skill-drop",
+        "tweet-1"
+      ]
+    },
+    "heading-skill-drop": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Drop",
+        "level": "h3"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "new Submit Hook skill — your aeon agent can now submit Uniswap v4 hooks straight to the aeon hooks marketplace — https://x.com/aeonframework/status/2098792766658535737"
+      }
+    },
+    "section-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-security",
+        "tweet-2"
+      ]
+    },
+    "heading-security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h3"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "vuln-scanner flagged a bug in different-ai/openwork — private advisory + patch PR sent, DMs open — https://x.com/aeonframework/status/2098790396222468443"
+      }
+    }
+  }
+}

@@ -1,15 +1,13 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-11T17:03:36Z",
-  "quality_score": 4,
-  "assessment": "Substantive, well-structured digest with verified HTTP call, transparent deduplication logic, and actionable output; aligns with strategy priority #2 (show the work). Minor: tweet links themselves unvisitable but workflow is sound.",
-  "flags": [],
-  "avg_score": 3.77,
+  "last_analyzed": "2026-09-12T17:03:49Z",
+  "quality_score": 2,
+  "assessment": "Skill executed with proper logic and deduping but asserts unverifiable tweet URLs and specific content that cannot be independently confirmed",
+  "flags": [
+    "unverifiable_claim"
+  ],
+  "avg_score": 3.7,
   "history": [
-    {
-      "date": "2026-08-12",
-      "score": 4
-    },
     {
       "date": "2026-08-13",
       "score": 4
@@ -125,6 +123,10 @@
     {
       "date": "2026-09-11",
       "score": 4
+    },
+    {
+      "date": "2026-09-12",
+      "score": 2
     }
   ]
 }
