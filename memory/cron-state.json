@@ -198,13 +198,13 @@
     "last_quality_score": 4
   },
   "secured-watch": {
-    "last_status": "dispatched",
-    "last_success": "2026-09-12T12:05:39Z",
-    "total_runs": 53,
-    "total_successes": 49,
+    "last_status": "success",
+    "last_success": "2026-09-13T12:04:56Z",
+    "total_runs": 54,
+    "total_successes": 50,
     "total_failures": 4,
     "consecutive_failures": 0,
-    "success_rate": 0.92,
+    "success_rate": 0.93,
     "last_quality_score": 3,
     "last_dispatch": "2026-09-13T12:01:37Z",
     "last_failed": "2026-08-31T19:34:53Z",
