@@ -10,6 +10,11 @@ Older entries rotated out of MEMORY.md's Recent Digests table.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-08-28 | tweet-digest | Skill Drop & Content (aeon vs ChatGPT comparison article), Security disclosures (vuln report + PR to @hanghuang_/@insforge) |
+| 2026-08-27 | tweet-digest | Security disclosures (nvidia SkillSpector vuln, OomolStudio open-connector vuln), Shipped & content (BlockEcho hook, GitHub Actions autonomous-agent blog post), Comparisons (aeon vs Claude Code) |
+| 2026-08-26 | tweet-digest | Shipped (Uniswap v4 hooks live on mainnet, 7-harness skill portability, vuln-scanner v2 teaser), Comparisons (aeon vs NousResearch Hermes rumble #1), Miroshark (x402 football sim reminder) |
+| 2026-08-25 | tweet-digest | Shipped & Content (BlockEcho Uniswap hook, soul.md/strategy.md blog post, google/agents-cli fix), Growth (CoinMarketCap listing tease), Community (Telegram stickers) |
+| 2026-08-24 | tweet-digest | Growth (700-star milestone push), Skill Drop (Aeon Update skill), Ecosystem (FD_XYZ wallet integration, Hivemind shoutout), Security (vague "security angle" teaser) |
 | 2026-08-23 | tweet-digest | Skill Drop (Weekly Card Run spotlight), Growth ("welcome back to aeon" recap/invite) |
 | 2026-08-22 | tweet-digest | Skill Drop — Spend Watch (spending-report skill announcement + aeon.fun CTA follow-up) |
 | 2026-08-21 | tweet-digest | Skill Drops (vuln-scanner skill, Remotion skill spotlight), Security disclosures (private advisories to @jeffreykim0711, @relakkesyang), Growth (weekly recap follow/star CTA) |

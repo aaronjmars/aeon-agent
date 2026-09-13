@@ -1,19 +1,19 @@
-Consolidation complete for the 2026-08-30 → 2026-09-06 window.
+Watermark stamped and mirrored correctly. This is a `read-only`-mode-compatible skill run with local file writes only (no `git`/`gh` mutation, `gh pr list`/`gh pr view` were read-only lookups) — memory-flush is a `write` mode skill per its metadata, so this is expected to land directly.
 
 ## Summary
 
-**Promoted / corrected:**
-- Filled 3 missing Recent Digests rows (09-01, 09-04, 09-05)
-- Fixed a stale fact: `aeon-update` PR #220 was recorded as "awaiting operator merge" but had actually **merged** 2026-09-04 02:37 UTC (baseline now `bf33365`); updated lifetime success rate 43%→50% (no longer chronic)
-- Refreshed the `repo-pulse` bullet from stale 08-24 data to the freshest 08-31 re-dispatch (aeon 711★/253 forks, soul.md 658★ ACTIVE, opendia 1914★)
-- Reconfirmed the working-tree anomaly (`AGENTS.md`/`notify`) is still unresolved as of today (19+ days)
+Ran `memory-flush` for the 2026-09-06→09-13 window (8 log files).
 
-**Removed / added lessons:**
-- Removed a falsified lesson ("eyebrow can't run in sandbox") — 09-01's `aeon-update` run disproved it; replaced with the corrected capability
-- Added a new lesson on the 08-31 GLM-gateway outage (zero-token failure signature = infra outage, not a code bug); merged its "weekly skills don't self-heal" angle into the existing 08-02 lesson instead of duplicating
+**Promoted:**
+- 5 missing Recent Digests rows (09-07, 09-10, 09-11, 09-12, 09-13)
+- Refreshed `repo-pulse` bullet with 09-07's weekly data (aeon 717★/256 forks, soul.md 663★, opendia 1920★ — was stale on 08-31 figures)
+- Updated `aeon-update` bullet: PR #221 confirmed **merged** 2026-09-07 (baseline now `21b82db`), success rate 50%→56%
+- Bumped working-tree-anomaly confirmation to today (26+ days unresolved)
 
-**Pruned for budget:** archived 3 oldest Recent Digests rows and 2 lowest-value Lessons Learned to new/existing history files (`digests-history.md`, new `lessons-history.md`), keeping both sections within their ~10-15 row budget.
+**Found and flagged as a new issue:** the 09-13 `tweet-digest` run re-reported 4 of 5 "new" tweets that were exact duplicates of tweets already published in the 09-11 digest — its dedup only checked the most-recent day's log (09-12) instead of the full 09-10..09-13 fetch window it declared. Logged as both a new Lesson Learned and a new Next Priority (dedup lookback needs to span the full fetch window).
 
-**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/topics/lessons-history.md` (new), `memory/logs/2026-09-06.md`, `memory/memory-flush-state.json` (watermark stamped to 2026-09-06).
+**Pruned:** archived 5 oldest digest rows and 2 low-value lessons ("eyebrow can run in sandbox" — superseded; "feature governance-docs" one-off) to their respective `-history.md` files to stay within budget. Confirmed 0 open improvement PRs, 0 open issues — nothing else to prune.
 
-No follow-up actions needed — this is local memory-file work only, no PR required.
+**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/topics/lessons-history.md`, `memory/logs/2026-09-13.md`, `memory/memory-flush-state.json` (watermark stamp).
+
+**Follow-up needed:** someone should fix `tweet-digest`'s dedup logic to check every log inside its declared fetch window, not just the prior day — otherwise it'll keep re-publishing stale content.
