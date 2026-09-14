@@ -1,0 +1,138 @@
+{
+  "plan": {
+    "CLEAN-ADD": [
+      "docs/assets/skill-icons/compute-resell.svg",
+      "docs/assets/skill-icons/submit-hook.svg",
+      "scripts/build-vuln-context.sh",
+      "scripts/compare-riva-shadow.sh",
+      "scripts/git-push-retry.sh",
+      "scripts/resolve-riva-capabilities.sh",
+      "scripts/tests/test_chain_runner_no_action.sh",
+      "scripts/tests/test_readonly_failure_commit.sh",
+      "scripts/tests/test_readonly_guard_log.sh",
+      "scripts/tests/test_riva_candidates.sh",
+      "scripts/tests/test_riva_context.sh",
+      "scripts/tests/test_riva_kernel_contract.sh",
+      "scripts/tests/test_riva_shadow_compare.sh",
+      "scripts/tests/test_riva_shadow_guard.sh",
+      "scripts/validate-riva-candidates.sh",
+      "skills/compute-resell/SKILL.md",
+      "skills/compute-resell/allocate_caps.py",
+      "skills/compute-resell/bootstrap-siwe.mjs",
+      "skills/compute-resell/claim_ledger.py",
+      "skills/compute-resell/config.example.json",
+      "skills/compute-resell/price_models.py",
+      "skills/compute-resell/score_models.py",
+      "skills/deploy-uni-hook/templates/AeonFee.sol",
+      "skills/miroshark-matchday/SKILL.md",
+      "skills/submit-hook/SKILL.md",
+      "skills/submit-hook/submit-univ4.py",
+      "skills/vuln-scanner/riva.md"
+    ],
+    "CLEAN-UPDATE": [
+      ".claude/skills/aeon/SKILL.md",
+      ".claude/skills/aeon/references/layout.md",
+      ".claude/skills/aeon/references/mcp.md",
+      ".claude/skills/aeon/references/skill-anatomy.md",
+      ".github/workflows/chain-runner.yml",
+      "docs/ECOSYSTEM.md",
+      "harness-adapter/lib/sandbox.sh",
+      "plugin/skills/aeon/SKILL.md",
+      "plugin/skills/aeon/references/layout.md",
+      "plugin/skills/aeon/references/mcp.md",
+      "plugin/skills/aeon/references/skill-anatomy.md",
+      "scripts/competitor-monitor.mjs",
+      "scripts/stage-deploy-uni-hook.sh",
+      "scripts/tests/test_vuln_scanner_status.py",
+      "skills/aeon-update/SKILL.md",
+      "skills/changelog/SKILL.md",
+      "skills/competitor-monitor/SKILL.md",
+      "skills/deploy-uni-hook/SKILL.md",
+      "skills/deploy-uni-hook/hook-deploy.sh",
+      "skills/deploy-uni-hook/templates/DeployHook.s.sol",
+      "skills/deploy-uni-hook/templates/DynamicFeeHook.sol",
+      "skills/deploy-uni-hook/templates/Hook.sol",
+      "skills/deploy-uni-hook/templates/Hook.t.sol",
+      "skills/deploy-uni-hook/templates/HookFeeHook.sol",
+      "skills/deploy-uni-hook/templates/NoOpHook.sol",
+      "skills/github-trending/SKILL.md",
+      "skills/vuln-scanner/SKILL.md"
+    ],
+    "CLEAN-MERGE": [
+      "apps/dashboard/package-lock.json",
+      "apps/dashboard/package.json",
+      "apps/webhook/package-lock.json",
+      "apps/webhook/package.json"
+    ],
+    "CLEAN-DELETE": [],
+    "SKIP": [
+      {
+        "path": "apps/mcp-server/package-lock.json",
+        "reason": "already-synced"
+      },
+      {
+        "path": "skills/remotion/project/package-lock.json",
+        "reason": "already-synced"
+      }
+    ],
+    "CONFLICT": [
+      {
+        "path": ".github/README.md",
+        "reason": "operator-customized-overlap"
+      },
+      {
+        "path": ".github/workflows/aeon.yml",
+        "reason": "operator-customized-overlap"
+      },
+      {
+        "path": ".github/workflows/ci-tests.yml",
+        "reason": "operator-customized-overlap"
+      },
+      {
+        "path": "CHANGELOG.md",
+        "reason": "operator-customized-overlap"
+      },
+      {
+        "path": "apps/dashboard/lib/skill-icons.data.ts",
+        "reason": "operator-customized-overlap"
+      },
+      {
+        "path": "docs/assets/skill-icons/cortx-reliability.svg",
+        "reason": "added-upstream-but-present-locally-diverged"
+      },
+      {
+        "path": "docs/skill-packs.md",
+        "reason": "operator-customized-overlap"
+      }
+    ],
+    "OPERATOR": [
+      {
+        "path": "aeon.yml",
+        "status": "modified"
+      },
+      {
+        "path": "catalog/packs.json",
+        "status": "modified"
+      },
+      {
+        "path": "catalog/skill-icons.json",
+        "status": "modified"
+      },
+      {
+        "path": "catalog/skills.json",
+        "status": "modified"
+      },
+      {
+        "path": "eyebrowlock.json",
+        "status": "modified"
+      }
+    ],
+    "UNREADABLE": []
+  },
+  "applied": {
+    "added": 27,
+    "updated": 27,
+    "merged": 4,
+    "deleted": 0
+  }
+}

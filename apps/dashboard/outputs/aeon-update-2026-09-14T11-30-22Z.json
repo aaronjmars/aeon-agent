@@ -1,0 +1,190 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "⭐ aeon-update — 2026-09-14",
+        "description": "Synced 25 upstream commits → PR #228, all checks green"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "summary_section",
+        "sep1",
+        "applied_section",
+        "sep2",
+        "deferred_section",
+        "sep3",
+        "reconcile_section",
+        "sep4",
+        "pr_section"
+      ]
+    },
+    "summary_section": {
+      "type": "Text",
+      "props": {
+        "text": "Repository aeonfun/aeon was 25 ahead (21b82db..95142d1)."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "applied_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "applied_heading",
+        "files_stat",
+        "changes_detail_1",
+        "changes_detail_2"
+      ]
+    },
+    "applied_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Changes Applied",
+        "level": "h3"
+      }
+    },
+    "files_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Files applied clean",
+        "value": "44"
+      }
+    },
+    "changes_detail_1": {
+      "type": "Text",
+      "props": {
+        "text": "deploy-uni-hook's mandatory 10bps AeonFee, vuln-scanner Riva kernel, competitor-monitor row-diffing, read-only sandbox keeps memory/output writable, chain no-action telemetry"
+      }
+    },
+    "changes_detail_2": {
+      "type": "Text",
+      "props": {
+        "text": "eyebrowlock + catalog reconciled by hand (generators can't run headless) — verify + all catalog gates pass, coverage 84/84"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "deferred_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "deferred_heading",
+        "deferred_count",
+        "deferred_skills",
+        "deferred_requirements",
+        "deferred_note"
+      ]
+    },
+    "deferred_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Deferred Work",
+        "level": "h3"
+      }
+    },
+    "deferred_count": {
+      "type": "Stat",
+      "props": {
+        "label": "New skills deferred",
+        "value": "3"
+      }
+    },
+    "deferred_skills": {
+      "type": "Text",
+      "props": {
+        "text": "compute-resell, miroshark-matchday, submit-hook"
+      }
+    },
+    "deferred_requirements": {
+      "type": "Text",
+      "props": {
+        "text": "Need bin/generate-* + eyebrow scan, blocked in the sandbox"
+      }
+    },
+    "deferred_note": {
+      "type": "Text",
+      "props": {
+        "text": "PR carries the exact install commands",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "reconcile_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "reconcile_heading",
+        "reconcile_items",
+        "baseline_note"
+      ]
+    },
+    "reconcile_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Manual Reconciliation Required",
+        "level": "h3"
+      }
+    },
+    "reconcile_items": {
+      "type": "Text",
+      "props": {
+        "text": "3 workflow files, CHANGELOG, README, skill-health (#1018)"
+      }
+    },
+    "baseline_note": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline advances to 95142d1 on merge",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_section": {
+      "type": "StoryLink",
+      "props": {
+        "title": "aaronjmars/aeon-agent#228",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/228",
+        "source": "GitHub"
+      }
+    }
+  }
+}

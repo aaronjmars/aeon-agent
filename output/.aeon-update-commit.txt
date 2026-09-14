@@ -1,0 +1,5 @@
+aeon-update: sync upstream 21b82db..95142d1
+
+25 upstream commits from aeonfun/aeon. 44 files applied cleanly (15 added, 27 updated, 2 3-way merged), plus catalog + eyebrowlock reconciled for the changed skills. 10 need manual review (7 conflicts, 3 new skills deferred for catalog/eyebrow regen). Baseline advanced to 95142d1.
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
