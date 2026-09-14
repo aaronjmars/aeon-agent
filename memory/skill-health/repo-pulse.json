@@ -1,15 +1,11 @@
 {
   "skill": "repo-pulse",
-  "last_analyzed": "2026-09-07T10:08:06Z",
-  "quality_score": 4,
-  "assessment": "Substantive, well-structured momentum tracking with transparent methodology; specific metrics and enriched profiles are plausible and properly contextualized for the operator's north-star goal.",
+  "last_analyzed": "2026-09-14T10:11:55Z",
+  "quality_score": 3,
+  "assessment": "Well-executed monitoring skill with specific, current metrics and transparent methodology; operationally sound but doesn't directly ship code or drive strategic documentation.",
   "flags": [],
-  "avg_score": 3.93,
+  "avg_score": 3.9,
   "history": [
-    {
-      "date": "2026-06-16",
-      "score": 4
-    },
     {
       "date": "2026-06-16",
       "score": 3
@@ -125,6 +121,10 @@
     {
       "date": "2026-09-07",
       "score": 4
+    },
+    {
+      "date": "2026-09-14",
+      "score": 3
     }
   ]
 }

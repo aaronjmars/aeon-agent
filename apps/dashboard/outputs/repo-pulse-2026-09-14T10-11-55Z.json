@@ -1,0 +1,684 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-09-14"
+      },
+      "children": [
+        "status-badge",
+        "repos-table",
+        "sep1",
+        "aeon-section",
+        "sep2",
+        "soul-section",
+        "sep3",
+        "opendia-section",
+        "sep4",
+        "minitor-section",
+        "sep5",
+        "source-note"
+      ]
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      }
+    },
+    "repos-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "729 (+13)",
+            "263 (+7)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "671 (+8)",
+            "73 (+1)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1921 (+2)",
+            "160 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "16 (—)",
+            "5 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "aeon-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-status",
+        "aeon-forks-heading",
+        "aeon-forks-stack",
+        "aeon-stars-note",
+        "aeon-stars-list"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h3"
+      }
+    },
+    "aeon-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY (avg4w ≈ 19.0)",
+        "variant": "secondary"
+      }
+    },
+    "aeon-forks-heading": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      }
+    },
+    "aeon-forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-fork-1",
+        "aeon-fork-2",
+        "aeon-fork-3",
+        "aeon-fork-4",
+        "aeon-fork-5",
+        "aeon-fork-6",
+        "aeon-fork-7"
+      ]
+    },
+    "aeon-fork-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-1-link",
+        "aeon-fork-1-detail"
+      ]
+    },
+    "aeon-fork-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/niu12503",
+        "href": "https://github.com/niu12503"
+      }
+    },
+    "aeon-fork-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "177 repos (also starred aeon)",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-2-link",
+        "aeon-fork-2-detail"
+      ]
+    },
+    "aeon-fork-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Pinont",
+        "href": "https://github.com/Pinont"
+      }
+    },
+    "aeon-fork-2-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Nonnipat Tangrojjanakhajorn · 📍 Chiang Mai, Thailand · 🏢 CAMT CMU, DII · 117 repos · 🌐 pinont.me · Interested in Minecraft plugin development",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-3-link",
+        "aeon-fork-3-detail"
+      ]
+    },
+    "aeon-fork-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/0xsnackbaker",
+        "href": "https://github.com/0xsnackbaker"
+      }
+    },
+    "aeon-fork-3-detail": {
+      "type": "Text",
+      "props": {
+        "text": "0xsnackbaker · 12 repos · 🌐 https://molty.cash · 🐦 @moltycash · Building @moltycash",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-4-link",
+        "aeon-fork-4-detail"
+      ]
+    },
+    "aeon-fork-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/krpx0341",
+        "href": "https://github.com/krpx0341"
+      }
+    },
+    "aeon-fork-4-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Han · 19 repos",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-5-link",
+        "aeon-fork-5-detail"
+      ]
+    },
+    "aeon-fork-5-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/caseykreps-eng",
+        "href": "https://github.com/caseykreps-eng"
+      }
+    },
+    "aeon-fork-5-detail": {
+      "type": "Text",
+      "props": {
+        "text": "7 repos",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-6-link",
+        "aeon-fork-6-detail"
+      ]
+    },
+    "aeon-fork-6-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/darkstaryuri",
+        "href": "https://github.com/darkstaryuri"
+      }
+    },
+    "aeon-fork-6-detail": {
+      "type": "Text",
+      "props": {
+        "text": "1 repo",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-7": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-7-link",
+        "aeon-fork-7-detail"
+      ]
+    },
+    "aeon-fork-7-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/corinth1ans",
+        "href": "https://github.com/corinth1ans"
+      }
+    },
+    "aeon-fork-7-detail": {
+      "type": "Text",
+      "props": {
+        "text": "2 repos",
+        "variant": "caption"
+      }
+    },
+    "aeon-stars-note": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers (9 of 12 enriched, none notable):",
+        "variant": "lead"
+      }
+    },
+    "aeon-stars-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-star-1",
+        "aeon-star-2",
+        "aeon-star-3",
+        "aeon-star-4",
+        "aeon-star-5",
+        "aeon-star-6",
+        "aeon-star-7",
+        "aeon-star-8",
+        "aeon-star-9",
+        "aeon-star-10",
+        "aeon-star-11",
+        "aeon-star-12"
+      ]
+    },
+    "aeon-star-1": {
+      "type": "Link",
+      "props": {
+        "label": "raxxup",
+        "href": "https://github.com/raxxup"
+      }
+    },
+    "aeon-star-2": {
+      "type": "Link",
+      "props": {
+        "label": "kwonzweig",
+        "href": "https://github.com/kwonzweig"
+      }
+    },
+    "aeon-star-3": {
+      "type": "Link",
+      "props": {
+        "label": "femaninjastar",
+        "href": "https://github.com/femaninjastar"
+      }
+    },
+    "aeon-star-4": {
+      "type": "Link",
+      "props": {
+        "label": "mont-alpine",
+        "href": "https://github.com/mont-alpine"
+      }
+    },
+    "aeon-star-5": {
+      "type": "Link",
+      "props": {
+        "label": "hoangtrank",
+        "href": "https://github.com/hoangtrank"
+      }
+    },
+    "aeon-star-6": {
+      "type": "Link",
+      "props": {
+        "label": "2ndNatureAI",
+        "href": "https://github.com/2ndNatureAI"
+      }
+    },
+    "aeon-star-7": {
+      "type": "Link",
+      "props": {
+        "label": "sambranminez",
+        "href": "https://github.com/sambranminez"
+      }
+    },
+    "aeon-star-8": {
+      "type": "Link",
+      "props": {
+        "label": "tobyrosen",
+        "href": "https://github.com/tobyrosen"
+      }
+    },
+    "aeon-star-9": {
+      "type": "Link",
+      "props": {
+        "label": "Vijayshreekrishna",
+        "href": "https://github.com/Vijayshreekrishna"
+      }
+    },
+    "aeon-star-10": {
+      "type": "Link",
+      "props": {
+        "label": "zylee999",
+        "href": "https://github.com/zylee999"
+      }
+    },
+    "aeon-star-11": {
+      "type": "Link",
+      "props": {
+        "label": "codyfyi",
+        "href": "https://github.com/codyfyi"
+      }
+    },
+    "aeon-star-12": {
+      "type": "Link",
+      "props": {
+        "label": "menaque",
+        "href": "https://github.com/menaque"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "soul-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul-heading",
+        "soul-status",
+        "soul-forks-heading",
+        "soul-forks-stack",
+        "soul-stars-note",
+        "soul-stars-list"
+      ]
+    },
+    "soul-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h3"
+      }
+    },
+    "soul-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY (avg4w ≈ 5.75)",
+        "variant": "secondary"
+      }
+    },
+    "soul-forks-heading": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "lead"
+      }
+    },
+    "soul-forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul-fork-1"
+      ]
+    },
+    "soul-fork-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-fork-1-link",
+        "soul-fork-1-detail"
+      ]
+    },
+    "soul-fork-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/rahlquist",
+        "href": "https://github.com/rahlquist"
+      }
+    },
+    "soul-fork-1-detail": {
+      "type": "Text",
+      "props": {
+        "text": "Richard Ahlquist · 65 repos · 11 followers",
+        "variant": "caption"
+      }
+    },
+    "soul-stars-note": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers (5 of 8 enriched, none notable):",
+        "variant": "lead"
+      }
+    },
+    "soul-stars-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-star-1",
+        "soul-star-2",
+        "soul-star-3",
+        "soul-star-4",
+        "soul-star-5",
+        "soul-star-6",
+        "soul-star-7",
+        "soul-star-8"
+      ]
+    },
+    "soul-star-1": {
+      "type": "Link",
+      "props": {
+        "label": "DigitalMooney",
+        "href": "https://github.com/DigitalMooney"
+      }
+    },
+    "soul-star-2": {
+      "type": "Link",
+      "props": {
+        "label": "IaEstorki",
+        "href": "https://github.com/IaEstorki"
+      }
+    },
+    "soul-star-3": {
+      "type": "Link",
+      "props": {
+        "label": "fernandoagc15",
+        "href": "https://github.com/fernandoagc15"
+      }
+    },
+    "soul-star-4": {
+      "type": "Link",
+      "props": {
+        "label": "eliteformacoes",
+        "href": "https://github.com/eliteformacoes"
+      }
+    },
+    "soul-star-5": {
+      "type": "Link",
+      "props": {
+        "label": "gizellos",
+        "href": "https://github.com/gizellos"
+      }
+    },
+    "soul-star-6": {
+      "type": "Link",
+      "props": {
+        "label": "marioreciojr-oss",
+        "href": "https://github.com/marioreciojr-oss"
+      }
+    },
+    "soul-star-7": {
+      "type": "Link",
+      "props": {
+        "label": "Kwilli9",
+        "href": "https://github.com/Kwilli9"
+      }
+    },
+    "soul-star-8": {
+      "type": "Link",
+      "props": {
+        "label": "Cryptojoker420",
+        "href": "https://github.com/Cryptojoker420"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "opendia-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia-heading",
+        "opendia-status",
+        "opendia-stars-note",
+        "opendia-stars-list"
+      ]
+    },
+    "opendia-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h3"
+      }
+    },
+    "opendia-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY (avg4w ≈ 3.25)",
+        "variant": "secondary"
+      }
+    },
+    "opendia-stars-note": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers (2 of 2 enriched, none notable):",
+        "variant": "lead"
+      }
+    },
+    "opendia-stars-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-star-1",
+        "opendia-star-2"
+      ]
+    },
+    "opendia-star-1": {
+      "type": "Link",
+      "props": {
+        "label": "lightspikeVal",
+        "href": "https://github.com/lightspikeVal"
+      }
+    },
+    "opendia-star-2": {
+      "type": "Link",
+      "props": {
+        "label": "how123480",
+        "href": "https://github.com/how123480"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "minitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor-heading",
+        "minitor-status",
+        "minitor-note"
+      ]
+    },
+    "minitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor",
+        "level": "h3"
+      }
+    },
+    "minitor-status": {
+      "type": "Badge",
+      "props": {
+        "text": "QUIET",
+        "variant": "outline"
+      }
+    },
+    "minitor-note": {
+      "type": "Text",
+      "props": {
+        "text": "No activity",
+        "variant": "muted"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "source-note": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events · minitor QUIET (no activity)",
+        "variant": "caption"
+      }
+    }
+  }
+}
