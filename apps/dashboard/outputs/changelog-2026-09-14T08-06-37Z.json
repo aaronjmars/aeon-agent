@@ -1,0 +1,88 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog"
+      },
+      "children": [
+        "status",
+        "details-section"
+      ]
+    },
+    "status": {
+      "type": "Text",
+      "props": {
+        "text": "ℹ️ Changelog synced"
+      }
+    },
+    "details-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading",
+        "source-dest",
+        "summary",
+        "pr-details",
+        "pr-url"
+      ]
+    },
+    "heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Changelog (push-to) - 2026-09-14",
+        "level": "h3"
+      }
+    },
+    "source-dest": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon → aaronjmars/aeon-website"
+      }
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "18 new PRs → changelog entry: Riva scan kernel and self-healing loop fixes"
+      }
+    },
+    "pr-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-link",
+        "draft-badge"
+      ]
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #497",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/497",
+        "source": "aaronjmars/aeon-website"
+      }
+    },
+    "draft-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "draft",
+        "variant": "outline"
+      }
+    },
+    "pr-url": {
+      "type": "Link",
+      "props": {
+        "label": "🔗 github.com/aaronjmars/aeon-website/pull/497",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/497"
+      }
+    }
+  }
+}
