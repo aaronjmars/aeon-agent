@@ -1,0 +1,93 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-14"
+      },
+      "children": [
+        "shipped-heading",
+        "shipped-stack",
+        "separator1",
+        "security-heading",
+        "security-stack"
+      ]
+    },
+    "shipped-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h2"
+      }
+    },
+    "shipped-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet2"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "uniswap v4 hooks marketplace is fully live — wish it, agent builds the hook, agent audits it, list it, launch a token on a hook-embedded pool — https://x.com/aeonframework/status/2099443994992247254"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "same launch, posted again as a youtube walkthrough of the marketplace — https://x.com/aeonframework/status/2099465557204414518"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "security-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h2"
+      }
+    },
+    "security-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet3",
+        "tweet4"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner flagged a bug in usekaneo/kaneo — private github advisory + fix PR filed, asking @andrejsshell for a look — https://x.com/aeonframework/status/2099186789860721033"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner flagged a bug in perplexityai/numbat — private security advisory + fix PR filed, asking the perplexity team to check it — https://x.com/aeonframework/status/2099459222148727097"
+      }
+    }
+  }
+}
