@@ -1,0 +1,381 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Aeon Shiplog — Aug 31 → Sep 14"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats-top",
+        "sep1",
+        "section-marketplace",
+        "sep2",
+        "section-contributors",
+        "sep3",
+        "section-skills",
+        "sep4",
+        "section-reliability",
+        "sep5",
+        "section-ecosystem",
+        "sep6",
+        "section-security",
+        "sep7",
+        "alert-openai",
+        "sep8",
+        "section-traction",
+        "sep9",
+        "text-footer",
+        "sep10",
+        "link-digest"
+      ]
+    },
+    "stats-top": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-prs",
+        "stat-commits",
+        "stat-external"
+      ]
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs merged",
+        "value": "53"
+      }
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Commits",
+        "value": "54"
+      }
+    },
+    "stat-external": {
+      "type": "Stat",
+      "props": {
+        "label": "From external contributors",
+        "value": "18"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-marketplace": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-marketplace",
+        "text-marketplace-1",
+        "text-marketplace-2",
+        "text-marketplace-3"
+      ]
+    },
+    "heading-marketplace": {
+      "type": "Heading",
+      "props": {
+        "text": "Hook Marketplace — Fully Live",
+        "level": "h2"
+      }
+    },
+    "text-marketplace-1": {
+      "type": "Text",
+      "props": {
+        "text": "Create → audit → submit → list, end-to-end for Uniswap v4 hooks. Mandatory 10bps AeonFee on every deploy (PR #1035). 12 fleet hooks redeployed across 7 chains with public smart-contract audit reports."
+      }
+    },
+    "text-marketplace-2": {
+      "type": "Text",
+      "props": {
+        "text": "Submit Hook shipped (09-12) — any hook creator's own agent can now submit straight in."
+      }
+    },
+    "text-marketplace-3": {
+      "type": "Text",
+      "props": {
+        "text": "Platform moved beyond aeon-fleet-only."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-contributors": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-contributors",
+        "text-contrib-1",
+        "text-contrib-2"
+      ]
+    },
+    "heading-contributors": {
+      "type": "Heading",
+      "props": {
+        "text": "External Contributors: 18 PRs",
+        "level": "h2"
+      }
+    },
+    "text-contrib-1": {
+      "type": "Text",
+      "props": {
+        "text": "@svector_eth hardened the vuln-scanner (bounded trufflehog scans that were hanging, new Riva research kernel) + fixed 4 reliability-signal bugs across skill-health, fleet-scorecard, chain-runner, and notify."
+      }
+    },
+    "text-contrib-2": {
+      "type": "Text",
+      "props": {
+        "text": "First PR from a brand new contributor: miroshark-matchday, a whole new skill for weekly football sims + video handoff."
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-skills": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-skills",
+        "text-skills"
+      ]
+    },
+    "heading-skills": {
+      "type": "Heading",
+      "props": {
+        "text": "New Skills",
+        "level": "h2"
+      }
+    },
+    "text-skills": {
+      "type": "Text",
+      "props": {
+        "text": "compute-resell — multi-provider compute reselling on Surplus"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-reliability": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-reliability",
+        "text-reliability"
+      ]
+    },
+    "heading-reliability": {
+      "type": "Heading",
+      "props": {
+        "text": "Reliability Sweep",
+        "level": "h2"
+      }
+    },
+    "text-reliability": {
+      "type": "Text",
+      "props": {
+        "text": "Read-only sandbox stopped losing memory/logs writes. aeon-update sync stopped going CI-red on version drift. Egress stopped MITM-breaking artifact uploads. Email now preflights for bounces before sending."
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-ecosystem": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-ecosystem",
+        "text-ecosystem"
+      ]
+    },
+    "heading-ecosystem": {
+      "type": "Heading",
+      "props": {
+        "text": "Ecosystem",
+        "level": "h2"
+      }
+    },
+    "text-ecosystem": {
+      "type": "Text",
+      "props": {
+        "text": "x402aff is now an official x402 Foundation extension (merged into x402-foundation/x402) — real infra adoption, not just a blog post."
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-security",
+        "text-security-1",
+        "text-security-2"
+      ]
+    },
+    "heading-security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security",
+        "level": "h2"
+      }
+    },
+    "text-security-1": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner filed 13 private advisories + fix PRs this window. Zero public PRs from the operator's own account — same cadence, different channel."
+      }
+    },
+    "text-security-2": {
+      "type": "Text",
+      "props": {
+        "text": "Affected projects: kaneo, openwork, cloudflare, pumpkin, zoneless, voicebox, lingbot-map, page-agent, code-review-graph, kimi-cli, deeptutor, graphify, moo"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "alert-openai": {
+      "type": "Alert",
+      "props": {
+        "title": "OpenAI Daybreak Program",
+        "message": "Aeon accepted into OpenAI's Daybreak program (09-04)",
+        "type": "success"
+      }
+    },
+    "sep8": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-traction": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-traction",
+        "stat-traction-stars",
+        "text-traction-1",
+        "text-traction-2",
+        "text-traction-3"
+      ]
+    },
+    "heading-traction": {
+      "type": "Heading",
+      "props": {
+        "text": "Traction",
+        "level": "h2"
+      }
+    },
+    "stat-traction-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "GitHub stars",
+        "value": "729",
+        "delta": "+18 this window",
+        "trend": "up"
+      }
+    },
+    "text-traction-1": {
+      "type": "Text",
+      "props": {
+        "text": "@BaseHubHB (58k followers) named aeon a top AI project on Base twice — the second time citing the 1,000-merged-PR / 60-contributor milestone"
+      }
+    },
+    "text-traction-2": {
+      "type": "Text",
+      "props": {
+        "text": "@BaseInsider_ (21.8k followers) featured $AEON in Base AI gainers twice"
+      }
+    },
+    "text-traction-3": {
+      "type": "Text",
+      "props": {
+        "text": "Milestones crossed on 08-31: 1,000 PRs merged / 60 external contributors / 75 ecosystem projects"
+      }
+    },
+    "sep9": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text-footer": {
+      "type": "Text",
+      "props": {
+        "text": "the harness is the model ⭐",
+        "variant": "lead"
+      }
+    },
+    "sep10": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link-digest": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full Digest",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-09-14.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

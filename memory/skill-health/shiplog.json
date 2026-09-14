@@ -1,12 +1,10 @@
 {
   "skill": "shiplog",
-  "last_analyzed": "2026-09-07T09:11:19Z",
-  "quality_score": 1,
-  "assessment": "No usable output produced — skill shows a progress status message instead of substantive shiplog/documentation. Violates CLAUDE.md requirement that final output carry the substance of work (report, analysis, findings).",
-  "flags": [
-    "empty_output"
-  ],
-  "avg_score": 4,
+  "last_analyzed": "2026-09-14T09:16:04Z",
+  "quality_score": 3,
+  "assessment": "Substantive shiplog with specific findings and proper execution, but verifiability relies on summary-level reporting—article content promised but not shown, and metrics lack source citations.",
+  "flags": [],
+  "avg_score": 3.94,
   "history": [
     {
       "date": "2026-06-15",
@@ -71,6 +69,10 @@
     {
       "date": "2026-09-07",
       "score": 1
+    },
+    {
+      "date": "2026-09-14",
+      "score": 3
     }
   ]
 }
