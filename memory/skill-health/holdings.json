@@ -1,10 +1,10 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-09-07T08:03:57Z",
+  "last_analyzed": "2026-09-14T08:03:32Z",
   "quality_score": 4,
-  "assessment": "Verified holdings data with transparent sourcing and clear audit trail. Directly serves strategy priority #4 (track momentum honestly) — concrete numbers, methodical snapshots, honest about data limitations.",
+  "assessment": "Substantive, verifiable holdings report tracking $AEON north-star metric; well-sourced data, clean structure, procedurally sound but observational rather than actionable.",
   "flags": [],
-  "avg_score": 3.89,
+  "avg_score": 3.9,
   "history": [
     {
       "date": "2026-07-30",
@@ -40,6 +40,10 @@
     },
     {
       "date": "2026-09-07",
+      "score": 4
+    },
+    {
+      "date": "2026-09-14",
       "score": 4
     }
   ]
