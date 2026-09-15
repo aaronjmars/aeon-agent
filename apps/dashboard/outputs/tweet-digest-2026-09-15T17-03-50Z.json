@@ -1,0 +1,113 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-09-15"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme1-heading",
+        "theme1-tweets",
+        "separator1",
+        "theme2-heading",
+        "theme2-tweets"
+      ]
+    },
+    "theme1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Hook Marketplace & Security",
+        "level": "h2"
+      }
+    },
+    "theme1-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet2",
+        "tweet3"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "dropped the intro video for the Aeon Hook Marketplace ⭐ — x.com/aeonframework/status/2099861647883895004"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "message is simple — don't avoid @Uniswap v4 hooks, just use audited ones — x.com/aeonframework/status/2099838784569311689"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "audited @aeonframework hooks are the fix, not avoiding hooks altogether — x.com/aeonframework/status/2099785309135266249"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "thecultos x402 Partnership",
+        "level": "h2"
+      }
+    },
+    "theme2-tweets": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet4",
+        "tweet5"
+      ]
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "aeon skills (vuln-scanner included) now live on @thecultos via x402 — 10+ aeon-powered services on demand, no agent setup needed — x.com/aeonframework/status/2099881068966854798"
+      }
+    },
+    "tweet5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "telling followers to keep an eye on @thecultos — x.com/aeonframework/status/2099827744607457434"
+      }
+    }
+  }
+}
