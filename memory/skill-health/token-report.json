@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-14T06:07:18Z",
+  "last_analyzed": "2026-09-15T06:07:50Z",
   "quality_score": 4,
-  "assessment": "Substantive, verifiable token metrics with honest caveats; directly tracks north-star momentum; minor presentation note at top reads like meta-commentary but core report is excellent.",
+  "assessment": "Substantive, well-sourced token report with specific metrics and honest verdict; serves north-star tracking without hype",
   "flags": [],
   "avg_score": 3.93,
   "history": [
-    {
-      "date": "2026-08-16",
-      "score": 4
-    },
     {
       "date": "2026-08-17",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-14",
+      "score": 4
+    },
+    {
+      "date": "2026-09-15",
       "score": 4
     }
   ]

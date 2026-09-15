@@ -2,9 +2,9 @@
 
 *$AEON — CONSOLIDATING*
 
-$AEON slipped 7.9% to $0.00002103, cooling off yesterday's 22.3% surge, but on just 0.72x the 7-day average volume — too thin to call a breakdown.
+Dropped 12.7% to $0.00001835, but on just 0.39x the 7-day volume average — too thin to call it a breakdown.
 
-Price $0.00002103 (-7.9% 24h) | Liq $1.33M (-5.5%) | Vol $101.2K (0.72x 7d)
-Buys/Sells 84/113 (ratio 0.74) | Whales: 33
+Price $0.00001835 (-12.7% 24h) | Liq $1.26M (-5.4%) | Vol $57.4K (0.39x 7d)
+Buys/Sells 75/93 (ratio 0.81) | Whales: 15 (12 sell / 3 buy)
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
