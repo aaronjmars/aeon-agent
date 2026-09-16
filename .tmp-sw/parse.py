@@ -1,25 +1,44 @@
 import re, json, sys, os
 
-TODAY = "2026-09-15"
+TODAY = "2026-09-16"
 var = (sys.argv[1] if len(sys.argv) > 1 else "").strip().lower()
 dry = var == "dry-run"
 full = var == "full"
 STATE = "memory/state/secured-repos.json"
 html = open(".tmp-sw/security.html", encoding="utf-8", errors="replace").read()
 
+# Only look at the chart section of the page (between the chart-open marker and the
+# closing of that div), never the trailing RSC hydration JSON payload which re-serializes
+# the same rows and can produce bogus matches if a chunk runs unbounded to EOF.
+chart_start = html.find('page-module__eEUUaa__chart')
+chart_html = html[chart_start:] if chart_start != -1 else html
+
 rows = {}
 skipped = 0
-for c in re.split(r"(?=<a\b)", html):
-    al = re.search(r'aria-label="([\w.-]+/[\w.-]+) - ([A-Z][A-Z0-9+×]*) severity, ([\d,]+) stars', c)
+bad_keys = []
+REPO_RE = re.compile(r'^[\w.-]+/[\w.-]+$')
+chunks = re.split(r"(?=<a\b)", chart_html)
+for idx, c in enumerate(chunks):
+    al_attr = re.search(r'aria-label="([^"]+)"', c)
+    if not al_attr:
+        continue
+    al = re.match(r'([\w.-]+/[\w.-]+) - ([A-Z][A-Z0-9+×]*) severity, ([\d,]+) stars', al_attr.group(1))
     if not al:
         continue
     href = (re.search(r'href="([^"]+)"', c) or [None, None])[1]
     note = (re.search(r'title="([^"]*)"', c) or [None, ""])[1]
     repo, sev, stars = al.group(1).strip(), al.group(2).strip(), int(al.group(3).replace(",", ""))
+    if not REPO_RE.match(repo):
+        bad_keys.append(repo)
+        continue
     if not href or href.startswith("https://www.aeon.fun") or href.startswith("https://x.com") or href.startswith("/"):
         skipped += 1
         continue
     rows[repo] = {"severity": sev, "stars": stars, "fix_url": href, "note": note}
+
+print("DEBUG chunks=%d matched_rows=%d skipped_bad_href=%d bad_keys=%d" % (len(chunks), len(rows), skipped, len(bad_keys)))
+if bad_keys:
+    print("DEBUG bad_keys_sample=%r" % (bad_keys[:3],))
 
 if len(rows) == 0:
     print("PARSE_EMPTY")

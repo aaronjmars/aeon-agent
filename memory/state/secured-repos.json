@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-16",
   "total_repos": 91,
-  "total_stars": 2685667,
+  "total_stars": 2686214,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -112,8 +112,8 @@
       "note": ""
     },
     "DeusData/codebase-memory-mcp": {
-      "severity": "CRITICAL+HIGH",
-      "stars": 42831,
+      "severity": "HIGH+MEDIUM+LOW",
+      "stars": 43378,
       "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
       "note": ""
     },

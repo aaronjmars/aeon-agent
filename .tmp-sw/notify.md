@@ -1,5 +1,3 @@
-ℹ️ Secured by Aeon
-
 ## Secured by Aeon — one update since last check
 
 no new repos joined the board. one severity got re-scoped.

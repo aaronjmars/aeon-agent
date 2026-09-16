@@ -1,0 +1,159 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon",
+        "description": "one update since last check"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary_text",
+        "stats_section",
+        "separator1",
+        "updates_section"
+      ]
+    },
+    "summary_text": {
+      "type": "Text",
+      "props": {
+        "text": "no new repos joined the board. one severity got re-scoped.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "repos secured",
+        "value": "91",
+        "delta": "±0",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "2,686,214",
+        "delta": "+547",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "updates_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updates_heading",
+        "update_item_container"
+      ]
+    },
+    "updates_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔁 Updated fix / severity (1)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "update_item_container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_line"
+      ]
+    },
+    "repo_line": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo_first_line",
+        "repo_change_note"
+      ]
+    },
+    "repo_first_line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo_link",
+        "repo_severity",
+        "repo_stars"
+      ]
+    },
+    "repo_link": {
+      "type": "Link",
+      "props": {
+        "label": "DeusData/codebase-memory-mcp",
+        "href": "https://github.com/DeusData/codebase-memory-mcp/pull/941"
+      },
+      "children": []
+    },
+    "repo_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH+MEDIUM+LOW",
+        "variant": "secondary"
+      },
+      "children": []
+    },
+    "repo_stars": {
+      "type": "Text",
+      "props": {
+        "text": "43,378★",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "repo_change_note": {
+      "type": "Text",
+      "props": {
+        "text": "severity CRITICAL+HIGH → HIGH+MEDIUM+LOW",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
