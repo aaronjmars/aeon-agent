@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-15T17:03:50Z",
-  "quality_score": 4,
-  "assessment": "Substantive, verifiable tweet digest with sound dedup logic and transparent methodology; aligns with strategy priority #4 (track momentum honestly); provides operational visibility into recent announcements and partnerships.",
+  "last_analyzed": "2026-09-16T17:03:55Z",
+  "quality_score": 3,
+  "assessment": "Acceptable completion of a routine monitoring task — sound methodology and honest logging, but thin signal (1 of 20 tweets) and weak alignment to operator's core priorities (shipping, ecosystem growth, onboarding).",
   "flags": [],
-  "avg_score": 3.67,
+  "avg_score": 3.63,
   "history": [
-    {
-      "date": "2026-08-16",
-      "score": 4
-    },
     {
       "date": "2026-08-17",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-09-15",
       "score": 4
+    },
+    {
+      "date": "2026-09-16",
+      "score": 3
     }
   ]
 }

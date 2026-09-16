@@ -1,0 +1,75 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "Tweet Digest — 2026-09-16"
+      },
+      "children": [
+        "theme_section",
+        "separator1",
+        "tweet_wrapper"
+      ]
+    },
+    "theme_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme_label",
+        "theme_badge"
+      ]
+    },
+    "theme_label": {
+      "type": "Text",
+      "props": {
+        "text": "Theme:",
+        "variant": "body"
+      }
+    },
+    "theme_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Hook Marketplace & Security",
+        "variant": "default"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet_wrapper": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "tweet1",
+        "tweet1_link"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "Uniswap v4 hooks carry risk — the fix is the Aeon flow: create the hook, scan it for vulns, then deploy"
+      }
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2100212507801509920"
+      }
+    }
+  }
+}
