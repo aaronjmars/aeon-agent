@@ -1,5 +1,3 @@
-ℹ️ AEON Token Report
-
 *$AEON — CONSOLIDATING*
 
 Down 9.0% to $0.00001669 on just 0.46x average volume, too thin to confirm direction. Order flow flipped bullish (132 buys / 71 sells) even as price fell.
