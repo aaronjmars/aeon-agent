@@ -1,0 +1,143 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status",
+        "description",
+        "sep1",
+        "current_metrics",
+        "sep2",
+        "performance",
+        "sep3",
+        "chart_link"
+      ]
+    },
+    "status": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "level": "h2"
+      }
+    },
+    "description": {
+      "type": "Text",
+      "props": {
+        "text": "Price eased 1.4% on the lightest volume in a week (0.36x 7d avg); whale flow was sell-heavy ($14.4K sold vs $4.9K bought) even as regular order flow stayed net-buy."
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "current_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liq_stat",
+        "vol_stat",
+        "buys_sells_stat",
+        "whales_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001645",
+        "delta": "-1.4%",
+        "trend": "down"
+      }
+    },
+    "liq_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.14M",
+        "delta": "-0.7%",
+        "trend": "down"
+      }
+    },
+    "vol_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$47.2K",
+        "delta": "0.36x 7d avg"
+      }
+    },
+    "buys_sells_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "1.26",
+        "delta": "82/65"
+      }
+    },
+    "whales_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Active Whales",
+        "value": "11"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "performance": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "perf_7d",
+        "perf_30d"
+      ]
+    },
+    "perf_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7-day Change",
+        "value": "-27.5%",
+        "delta": "unwinding early-Sept BREAKOUT",
+        "trend": "down"
+      }
+    },
+    "perf_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30-day Change",
+        "value": "+44.0%",
+        "trend": "up"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

@@ -1,5 +1,3 @@
-ℹ️ AEON Token Report
-
 *$AEON — CONSOLIDATING*
 
 Price eased 1.4% on the lightest volume in a week (0.36x 7d avg); whale flow was sell-heavy ($14.4K sold vs $4.9K bought) even as regular order flow stayed net-buy.
