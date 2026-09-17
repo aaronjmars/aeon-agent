@@ -1,0 +1,168 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-17"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "section1",
+        "section2",
+        "section3"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme1-heading",
+        "tweet1-container"
+      ]
+    },
+    "theme1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped — Aeon Hook Series",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet1-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "link1"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Episode 6 of the Aeon hook series ships \"TotalizerTrap,\" a superstition-themed hook live on four mainnets, exploitable for one wei — video in the replies."
+      },
+      "children": []
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2100550545840689164"
+      },
+      "children": []
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme2-heading",
+        "tweet2-container"
+      ]
+    },
+    "theme2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Content & Comparisons",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet2-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "link2"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "New blog post compares the Aeon framework against @noahrshinn's Instinct, link in the replies."
+      },
+      "children": []
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2100600170291286450"
+      },
+      "children": []
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "theme3-heading",
+        "tweet3-container"
+      ]
+    },
+    "theme3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Community & Growth",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet3-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet3",
+        "link3"
+      ]
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Quote-tweeted a builder saying \"building with @aeonframework agents is absolutely incredible.\""
+      },
+      "children": []
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2100551593871491232"
+      },
+      "children": []
+    }
+  }
+}
