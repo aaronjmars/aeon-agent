@@ -1,0 +1,237 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon — new since last check"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-summary",
+        "stats-section",
+        "separator-1",
+        "heading-new",
+        "repos-new",
+        "separator-2",
+        "heading-updated",
+        "repos-updated"
+      ]
+    },
+    "text-summary": {
+      "type": "Text",
+      "props": {
+        "text": "8 new repos joined the board. one severity got re-scoped. the pipeline doesn't sleep.",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "stats-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-repos",
+        "stat-stars"
+      ]
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "99",
+        "delta": "+8",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total ★",
+        "value": "3,020,006",
+        "delta": "+333,792",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-new": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (8)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repos-new": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-1",
+        "repo-2",
+        "repo-3",
+        "repo-4",
+        "repo-5",
+        "repo-6",
+        "repo-7",
+        "repo-8"
+      ]
+    },
+    "repo-1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "infiniflow/ragflow",
+        "href": "https://github.com/infiniflow/ragflow",
+        "source": "HIGH",
+        "score": "90,881★"
+      },
+      "children": []
+    },
+    "repo-2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "opendatalab/MinerU",
+        "href": "https://github.com/opendatalab/MinerU",
+        "source": "MEDIUM",
+        "score": "80,106★"
+      },
+      "children": []
+    },
+    "repo-3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "omacom/omarchy",
+        "href": "https://github.com/omacom/omarchy",
+        "source": "HIGH",
+        "score": "41,693★"
+      },
+      "children": []
+    },
+    "repo-4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "herdrdev/herdr",
+        "href": "https://github.com/herdrdev/herdr",
+        "source": "HIGH",
+        "score": "39,176★"
+      },
+      "children": []
+    },
+    "repo-5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "chatwoot/chatwoot",
+        "href": "https://github.com/chatwoot/chatwoot",
+        "source": "MEDIUM",
+        "score": "36,907★"
+      },
+      "children": []
+    },
+    "repo-6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Tencent/WeKnora",
+        "href": "https://github.com/Tencent/WeKnora",
+        "source": "HIGH",
+        "score": "26,110★"
+      },
+      "children": []
+    },
+    "repo-7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "jo-inc/camofox-browser",
+        "href": "https://github.com/jo-inc/camofox-browser/commit/4d12dc3c",
+        "source": "HIGH+MEDIUM",
+        "score": "11,069★"
+      },
+      "children": []
+    },
+    "repo-8": {
+      "type": "StoryLink",
+      "props": {
+        "title": "oomol-lab/open-connector",
+        "href": "https://github.com/oomol-lab/open-connector",
+        "source": "HIGH",
+        "score": "5,792★"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading-updated": {
+      "type": "Heading",
+      "props": {
+        "text": "🔁 Updated fix / severity (1)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repos-updated": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo-updated-1"
+      ]
+    },
+    "repo-updated-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-updated-1-link",
+        "repo-updated-1-change"
+      ]
+    },
+    "repo-updated-1-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "ruvnet/RuView",
+        "href": "https://github.com/ruvnet/RuView/pull/580",
+        "source": "HIGH+MEDIUM",
+        "score": "94,496★"
+      },
+      "children": []
+    },
+    "repo-updated-1-change": {
+      "type": "Text",
+      "props": {
+        "text": "Severity updated: HIGH → HIGH+MEDIUM",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}

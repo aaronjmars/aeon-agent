@@ -1,8 +1,20 @@
-**secured-watch (2026-09-17): no change.** Fetched aeon.fun/security (91 rows, http=200) and diffed against yesterday's snapshot (2026-09-16, 91 repos / 2,686,214★) — board is identical: no new entries, no severity/fix-link changes, nothing dropped. State advanced to today; per the skill's silence rule, no notification was sent.
+ℹ️ Secured by Aeon
 
-## Summary
-- Ran `skills/secured-watch/SKILL.md`: fetched the board, parsed 91 rows, diffed against `memory/state/secured-repos.json` (last updated 2026-09-16 by yesterday's run) → `NO_CHANGE`.
-- Updated `memory/state/secured-repos.json` (`updated_at` → 2026-09-17, totals unchanged: 91 repos, 2,686,214★).
-- Appended a `### secured-watch` entry to `memory/logs/2026-09-17.md`.
-- No notification sent (nothing new/changed, per skill rule).
-- Note: found stale `.tmp-sw/` artifacts (parse.py/report.md/notify.md) from yesterday's already-completed and already-notified run, reused the workdir tmp folder for today's fresh fetch/parse — no follow-up needed.
+## Secured by Aeon — new since last check
+
+8 new repos joined the board. one severity got re-scoped. the pipeline doesn't sleep.
+
+**99 repos** secured (+8) · **3,020,006★** total (+333,792)
+
+### 🆕 Newly secured (8)
+- **[infiniflow/ragflow](https://github.com/infiniflow/ragflow)** — `HIGH` · 90,881★ — 
+- **[opendatalab/MinerU](https://github.com/opendatalab/MinerU)** — `MEDIUM` · 80,106★ — 
+- **[omacom/omarchy](https://github.com/omacom/omarchy)** — `HIGH` · 41,693★ — 
+- **[herdrdev/herdr](https://github.com/herdrdev/herdr)** — `HIGH` · 39,176★ — 
+- **[chatwoot/chatwoot](https://github.com/chatwoot/chatwoot)** — `MEDIUM` · 36,907★ — 
+- **[Tencent/WeKnora](https://github.com/Tencent/WeKnora)** — `HIGH` · 26,110★ — 
+- **[jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser/commit/4d12dc3c)** — `HIGH+MEDIUM` · 11,069★ — 
+- **[oomol-lab/open-connector](https://github.com/oomol-lab/open-connector)** — `HIGH` · 5,792★ — 
+
+### 🔁 Updated fix / severity (1)
+- **[ruvnet/RuView](https://github.com/ruvnet/RuView/pull/580)** — `HIGH+MEDIUM` · 94,496★ —  _(severity HIGH → HIGH+MEDIUM)_

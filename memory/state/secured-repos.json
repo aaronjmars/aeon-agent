@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-17",
-  "total_repos": 91,
-  "total_stars": 2686214,
+  "updated_at": "2026-09-18",
+  "total_repos": 99,
+  "total_stars": 3020006,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -28,9 +28,15 @@
       "note": ""
     },
     "ruvnet/RuView": {
-      "severity": "HIGH",
-      "stars": 92681,
+      "severity": "HIGH+MEDIUM",
+      "stars": 94496,
       "fix_url": "https://github.com/ruvnet/RuView/pull/580",
+      "note": ""
+    },
+    "infiniflow/ragflow": {
+      "severity": "HIGH",
+      "stars": 90881,
+      "fix_url": "https://github.com/infiniflow/ragflow",
       "note": ""
     },
     "odysseus-dev/odysseus": {
@@ -43,6 +49,12 @@
       "severity": "HIGH",
       "stars": 85949,
       "fix_url": "https://github.com/koala73/worldmonitor/pull/5477",
+      "note": ""
+    },
+    "opendatalab/MinerU": {
+      "severity": "MEDIUM",
+      "stars": 80106,
+      "fix_url": "https://github.com/opendatalab/MinerU",
       "note": ""
     },
     "Panniantong/Agent-Reach": {
@@ -117,6 +129,12 @@
       "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
       "note": ""
     },
+    "omacom/omarchy": {
+      "severity": "HIGH",
+      "stars": 41693,
+      "fix_url": "https://github.com/omacom/omarchy",
+      "note": ""
+    },
     "Wei-Shaw/sub2api": {
       "severity": "HIGH",
       "stars": 41107,
@@ -129,6 +147,12 @@
       "fix_url": "https://github.com/tinyhumansai/openhuman/commit/b1bbc53fce",
       "note": ""
     },
+    "herdrdev/herdr": {
+      "severity": "HIGH",
+      "stars": 39176,
+      "fix_url": "https://github.com/herdrdev/herdr",
+      "note": ""
+    },
     "lfnovo/open-notebook": {
       "severity": "MEDIUM",
       "stars": 38346,
@@ -139,6 +163,12 @@
       "severity": "HIGH+LOW",
       "stars": 37418,
       "fix_url": "https://github.com/soxoj/maigret/pull/2635",
+      "note": ""
+    },
+    "chatwoot/chatwoot": {
+      "severity": "MEDIUM",
+      "stars": 36907,
+      "fix_url": "https://github.com/chatwoot/chatwoot",
       "note": ""
     },
     "esengine/DeepSeek-Reasonix": {
@@ -211,6 +241,12 @@
       "severity": "HIGH",
       "stars": 26537,
       "fix_url": "https://hackerone.com/x",
+      "note": ""
+    },
+    "Tencent/WeKnora": {
+      "severity": "HIGH",
+      "stars": 26110,
+      "fix_url": "https://github.com/Tencent/WeKnora",
       "note": ""
     },
     "tashfeenahmed/freellmapi": {
@@ -291,6 +327,12 @@
       "fix_url": "https://github.com/cocoindex-io/cocoindex/pull/1947",
       "note": ""
     },
+    "jo-inc/camofox-browser": {
+      "severity": "HIGH+MEDIUM",
+      "stars": 11069,
+      "fix_url": "https://github.com/jo-inc/camofox-browser/commit/4d12dc3c",
+      "note": ""
+    },
     "BigBodyCobain/Shadowbroker": {
       "severity": "MEDIUM",
       "stars": 11068,
@@ -363,6 +405,12 @@
       "fix_url": "https://github.com/google/agents-cli/issues/51",
       "note": ""
     },
+    "oomol-lab/open-connector": {
+      "severity": "HIGH",
+      "stars": 5792,
+      "fix_url": "https://github.com/oomol-lab/open-connector",
+      "note": ""
+    },
     "huangruiteng/loopx": {
       "severity": "HIGH",
       "stars": 5772,
@@ -381,16 +429,16 @@
       "fix_url": "https://github.com/dograh-hq/dograh/pull/332",
       "note": ""
     },
+    "shy3130/tick-stock-panel": {
+      "severity": "HIGH",
+      "stars": 4772,
+      "fix_url": "https://github.com/shy3130/tick-stock-panel/pull/122",
+      "note": ""
+    },
     "CJackHwang/ds2api": {
       "severity": "LOW",
       "stars": 4747,
       "fix_url": "https://github.com/CJackHwang/ds2api/security/advisories/GHSA-rf34-c5jc-4ffw",
-      "note": ""
-    },
-    "shy3130/tick-stock-panel": {
-      "severity": "HIGH",
-      "stars": 4529,
-      "fix_url": "https://github.com/shy3130/tick-stock-panel/pull/122",
       "note": ""
     },
     "cloudflare/workers-sdk": {
