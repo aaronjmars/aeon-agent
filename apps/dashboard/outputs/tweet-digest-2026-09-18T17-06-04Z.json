@@ -1,0 +1,164 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-18"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section1",
+        "sep1",
+        "section2",
+        "sep2",
+        "section3"
+      ]
+    },
+    "section1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge1",
+        "text1_author",
+        "text1_desc",
+        "link1"
+      ]
+    },
+    "badge1": {
+      "type": "Badge",
+      "props": {
+        "text": "Weekly Recap",
+        "variant": "default"
+      }
+    },
+    "text1_author": {
+      "type": "Text",
+      "props": {
+        "text": "@aeonframework",
+        "variant": "lead"
+      }
+    },
+    "text1_desc": {
+      "type": "Text",
+      "props": {
+        "text": "week-in-review thread rounding up framework & ecosystem updates from Sept 11–18",
+        "variant": "body"
+      }
+    },
+    "link1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2100912557984723183"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge2",
+        "text2_author",
+        "text2_desc",
+        "link2"
+      ]
+    },
+    "badge2": {
+      "type": "Badge",
+      "props": {
+        "text": "Skill Drop",
+        "variant": "secondary"
+      }
+    },
+    "text2_author": {
+      "type": "Text",
+      "props": {
+        "text": "@aeonframework",
+        "variant": "lead"
+      }
+    },
+    "text2_desc": {
+      "type": "Text",
+      "props": {
+        "text": "new Smart Contract Audit skill spotlight — an aeon agent can now run a detailed audit of any smart contract on request",
+        "variant": "body"
+      }
+    },
+    "link2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2100909787303063920"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge3",
+        "text3_author",
+        "text3_desc",
+        "link3"
+      ]
+    },
+    "badge3": {
+      "type": "Badge",
+      "props": {
+        "text": "Ecosystem & Builder Tooling",
+        "variant": "outline"
+      }
+    },
+    "text3_author": {
+      "type": "Text",
+      "props": {
+        "text": "@aeonframework",
+        "variant": "lead"
+      }
+    },
+    "text3_desc": {
+      "type": "Text",
+      "props": {
+        "text": "quote-tweets @aaronjmars's benchmark of 6 headless coding-agent harnesses (omp, pi, fx, opencode, dsh, crush) scored on programmatic drivability",
+        "variant": "body"
+      }
+    },
+    "link3": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2100858401374810214"
+      }
+    }
+  }
+}
