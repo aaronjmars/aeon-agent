@@ -1,5 +1,3 @@
-ℹ️ AEON Token Report
-
 *$AEON — CONSOLIDATING*
 
 Down 1.9% to $0.00001614 on thin 0.64x volume; whale sells ($16.6K) outweighed buys ($5.8K) nearly 3-to-1.
