@@ -1,20 +1,20 @@
-ℹ️ Secured by Aeon
+The `secured-watch` run is complete.
 
-## Secured by Aeon — new since last check
+## Secured by Aeon — leaderboard check (2026-09-19)
 
-8 new repos joined the board. one severity got re-scoped. the pipeline doesn't sleep.
+Fetched `https://www.aeon.fun/security` (http=200, 412KB), parsed **99 rows** via the aria-label selector.
 
-**99 repos** secured (+8) · **3,020,006★** total (+333,792)
+**Result: no change since 2026-09-18.**
+- New repos: none
+- Changed entries (fix link / severity): none
+- Dropped from board: none
+- Totals: 99 repos (±0), 3,020,006★ (±0)
 
-### 🆕 Newly secured (8)
-- **[infiniflow/ragflow](https://github.com/infiniflow/ragflow)** — `HIGH` · 90,881★ — 
-- **[opendatalab/MinerU](https://github.com/opendatalab/MinerU)** — `MEDIUM` · 80,106★ — 
-- **[omacom/omarchy](https://github.com/omacom/omarchy)** — `HIGH` · 41,693★ — 
-- **[herdrdev/herdr](https://github.com/herdrdev/herdr)** — `HIGH` · 39,176★ — 
-- **[chatwoot/chatwoot](https://github.com/chatwoot/chatwoot)** — `MEDIUM` · 36,907★ — 
-- **[Tencent/WeKnora](https://github.com/Tencent/WeKnora)** — `HIGH` · 26,110★ — 
-- **[jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser/commit/4d12dc3c)** — `HIGH+MEDIUM` · 11,069★ — 
-- **[oomol-lab/open-connector](https://github.com/oomol-lab/open-connector)** — `HIGH` · 5,792★ — 
+Per the skill's silence rule, no notification was sent — a quiet run reports nothing to the channels, only advances state and logs.
 
-### 🔁 Updated fix / severity (1)
-- **[ruvnet/RuView](https://github.com/ruvnet/RuView/pull/580)** — `HIGH+MEDIUM` · 94,496★ —  _(severity HIGH → HIGH+MEDIUM)_
+## Summary
+- Fetched and parsed the aeon.fun/security board (99 rows), diffed against `memory/state/secured-repos.json` (previous snapshot dated 2026-09-18, also 99 repos / 3,020,006★) — no additions or changes detected.
+- Advanced `memory/state/secured-repos.json` to today's snapshot (updated_at 2026-09-19).
+- Appended a `### secured-watch` entry to `memory/logs/2026-09-19.md`.
+- No notification sent (NO_CHANGE per skill rules).
+- No follow-up action needed; next scheduled tick will pick up from this baseline.
