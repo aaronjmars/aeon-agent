@@ -1,12 +1,5 @@
-ℹ️ Tweet Digest — 2026-09-18
+No notification sent per the skill spec (dry cycle, no signal to report).
 
-*Tweet Digest — 2026-09-18*
+## Summary
 
-*Theme: Weekly Recap*
-@aeonframework: week-in-review thread rounding up framework & ecosystem updates from Sept 11–18 — [link](https://x.com/aeonframework/status/2100912557984723183)
-
-*Theme: Skill Drop*
-@aeonframework: new Smart Contract Audit skill spotlight — an aeon agent can now run a detailed audit of any smart contract on request — [link](https://x.com/aeonframework/status/2100909787303063920)
-
-*Theme: Ecosystem & Builder Tooling*
-@aeonframework: quote-tweets @aaronjmars's benchmark of 6 headless coding-agent harnesses (omp, pi, fx, opencode, dsh, crush) scored on programmatic drivability — [link](https://x.com/aeonframework/status/2100858401374810214)
+Ran `tweet-digest` for the tracked account (`aeonframework`, sole entry in `memory/topics/tracked-accounts.yml`). Fetched via twitterapi.io Path A (http=200, 20 tweets, full 2026-09-16..09-19 window covered in one page). After deduping against the 09-16/09-17/09-18 logs and filtering bare retweets, every candidate was either a duplicate of an already-reported original or a bare RT — zero new original posts since the 09-18 digest. Logged `TWEET_DIGEST_OK` with the reasoning to `memory/logs/2026-09-19.md`; sent no notification (per skill spec, a dry cycle gets no alert). No follow-up action needed.
