@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-18T06:06:10Z",
+  "last_analyzed": "2026-09-19T06:07:10Z",
   "quality_score": 4,
-  "assessment": "Substantive token report with specific market data, transparent methodology, and verifiable source citations; tracks north-star metric ($AEON momentum) per strategy with documented baselines and error handling.",
+  "assessment": "Substantive token monitoring with cross-checked data sources, specific metrics, verifiable file outputs, and honest assessment of trading conditions",
   "flags": [],
-  "avg_score": 3.93,
+  "avg_score": 3.9,
   "history": [
-    {
-      "date": "2026-08-20",
-      "score": 5
-    },
     {
       "date": "2026-08-21",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-18",
+      "score": 4
+    },
+    {
+      "date": "2026-09-19",
       "score": 4
     }
   ]
