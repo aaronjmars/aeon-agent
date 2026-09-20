@@ -10,6 +10,13 @@ Older entries rotated out of MEMORY.md's Recent Digests table.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-05 | tweet-digest | Skill Drop (Skill Article skill spotlight), Security disclosures (vuln-scanner flagged MoonshotAI/kimi-cli, advisory + fix PR) |
+| 2026-09-04 | tweet-digest | Content & Growth (blog rebrand, YouTube subscriber push), Security disclosures (vuln-scanner flagged HKUDS/DeepTutor, advisory + fix PR), Narrative ("outsourcing from humans to agents" post) |
+| 2026-09-03 | tweet-digest | Skill Drop (rightstack advisor spotlight), Shipped (Uniswap v4 hooks — 4-network deploy + "Tail Twins" hook), Security disclosures (vuln-scanner flagged heyito/moo, advisory + fix PR) |
+| 2026-09-02 | tweet-digest | Content & Shipped (self-healing loop blog post, skill catalogue plug), Security disclosures (Graphify-Labs/graphify vuln), Growth & Partnerships (UsePodAI cheaper-inference shoutout) |
+| 2026-09-01 | tweet-digest | Shipped & integrations (Cursor support, Remotion resource-page listing, NousResearch Hermes harness, 700+ stars milestone), Content (agentic fight series: Cursor + Grok-bot videos), Security disclosures (dlt-hub/dlt, doodlestein/destructive_command_guard) — two dispatches same day, gateway-outage catch-up |
+| 2026-08-30 | tweet-digest | Security disclosures (vuln-scanner flagged synthetic-sciences/openscience, private advisory + fix PR filed) |
+| 2026-08-29 | tweet-digest | Skill Drop & Content (aeon vs another framework comparison), Growth & Partnerships (aeon x FD_XYZ x CoinMarketCap), Security disclosures (TencentCloud TencentDB-Agent-Memory vuln) |
 | 2026-08-28 | tweet-digest | Skill Drop & Content (aeon vs ChatGPT comparison article), Security disclosures (vuln report + PR to @hanghuang_/@insforge) |
 | 2026-08-27 | tweet-digest | Security disclosures (nvidia SkillSpector vuln, OomolStudio open-connector vuln), Shipped & content (BlockEcho hook, GitHub Actions autonomous-agent blog post), Comparisons (aeon vs Claude Code) |
 | 2026-08-26 | tweet-digest | Shipped (Uniswap v4 hooks live on mainnet, 7-harness skill portability, vuln-scanner v2 teaser), Comparisons (aeon vs NousResearch Hermes rumble #1), Miroshark (x402 football sim reminder) |

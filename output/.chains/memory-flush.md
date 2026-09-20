@@ -1,19 +1,21 @@
-Watermark stamped and mirrored correctly. This is a `read-only`-mode-compatible skill run with local file writes only (no `git`/`gh` mutation, `gh pr list`/`gh pr view` were read-only lookups) — memory-flush is a `write` mode skill per its metadata, so this is expected to land directly.
+All expected files changed. Log rotation staged the August logs for deletion (via `git rm` from step 0) and created the archive file, which is deterministic and expected.
 
 ## Summary
 
-Ran `memory-flush` for the 2026-09-06→09-13 window (8 log files).
+Ran the memory-flush skill, consolidating logs from 2026-09-13 through 2026-09-20 into `memory/MEMORY.md`:
 
 **Promoted:**
-- 5 missing Recent Digests rows (09-07, 09-10, 09-11, 09-12, 09-13)
-- Refreshed `repo-pulse` bullet with 09-07's weekly data (aeon 717★/256 forks, soul.md 663★, opendia 1920★ — was stale on 08-31 figures)
-- Updated `aeon-update` bullet: PR #221 confirmed **merged** 2026-09-07 (baseline now `21b82db`), success rate 50%→56%
-- Bumped working-tree-anomaly confirmation to today (26+ days unresolved)
+- 7 new Recent Digests rows (tweet-digest 09-14 through 09-20)
+- Refreshed `aeon:` priority bullet with shiplog's 09-14 headline (Uniswap v4 Hook Marketplace fully live, Submit Hook skill, 3 external contributors, OpenAI Daybreak acceptance, x402aff official extension, 1,000-PR milestone) — replaced a stale 3-week-old headline
+- Refreshed `repo-pulse` bullet with 09-14 weekly-tick numbers (aeon 729★/263 forks, soul.md 671★, opendia 1921★)
+- Refreshed `aeon-update` bullet — verified PR #228 merged 2026-09-14 (via `gh pr view`), baseline advanced to `95142d1`, success rate 56%→60%
+- Bumped working-tree anomaly to 33+ days (reconfirmed still present via `git status`)
+- Added lessons: a secured-watch RSC-hydration parser edge case, and a scratch-file git-hygiene issue (a `.tmp-sw/` dir got tracked and swept into an unrelated commit, plus a prompt-injection attempt in fetched content that was correctly ignored)
 
-**Found and flagged as a new issue:** the 09-13 `tweet-digest` run re-reported 4 of 5 "new" tweets that were exact duplicates of tweets already published in the 09-11 digest — its dedup only checked the most-recent day's log (09-12) instead of the full 09-10..09-13 fetch window it declared. Logged as both a new Lesson Learned and a new Next Priority (dedup lookback needs to span the full fetch window).
+**Pruned/resolved:**
+- Closed the tweet-digest dedup-regression priority — confirmed fixed and holding across 7 consecutive runs; archived the corresponding lesson as settled
+- Archived 7 oldest Recent Digests rows and 2 lower-value lessons to keep both sections in budget
 
-**Pruned:** archived 5 oldest digest rows and 2 low-value lessons ("eyebrow can run in sandbox" — superseded; "feature governance-docs" one-off) to their respective `-history.md` files to stay within budget. Confirmed 0 open improvement PRs, 0 open issues — nothing else to prune.
+**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/topics/lessons-history.md`, `memory/logs/2026-09-20.md`, plus deterministic bookkeeping (`memory/memory-flush-state.json` watermark stamp, one month of logs rotated to `memory/logs/archive/2026-08.md`).
 
-**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/topics/lessons-history.md`, `memory/logs/2026-09-13.md`, `memory/memory-flush-state.json` (watermark stamp).
-
-**Follow-up needed:** someone should fix `tweet-digest`'s dedup logic to check every log inside its declared fetch window, not just the prior day — otherwise it'll keep re-publishing stale content.
+**Follow-up needed:** a skill-repair pass to clean the tracked `.tmp-sw/` path and audit other skills' `/tmp` scratch-file fallback (new Next Priority in MEMORY.md).
