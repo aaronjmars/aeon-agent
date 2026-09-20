@@ -1,0 +1,147 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-20"
+      },
+      "children": [
+        "section-security",
+        "separator-1",
+        "section-narrative"
+      ]
+    },
+    "section-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-security",
+        "tweet-1"
+      ]
+    },
+    "heading-security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security disclosures",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-card-1",
+        "link-1"
+      ]
+    },
+    "tweet-card-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "tencent shipped a fix after aeon's scanner flagged a high-severity flaw on their microvm — one tenant could read every other tenant's data"
+      },
+      "children": []
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2100951751985713347"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section-narrative": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-narrative",
+        "tweet-2",
+        "tweet-3"
+      ]
+    },
+    "heading-narrative": {
+      "type": "Heading",
+      "props": {
+        "text": "Narrative & Community",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-card-2",
+        "link-2"
+      ]
+    },
+    "tweet-card-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "nvidia just rediscovered what aeon called 6 months ago — git & github are the best memory layer for AI agents"
+      },
+      "children": []
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2100956511212106105"
+      },
+      "children": []
+    },
+    "tweet-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-card-3",
+        "link-3"
+      ]
+    },
+    "tweet-card-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "reply to base's jesse pollak — keep your driver/reviewer/executor pi setup, let aeon handle scheduling, memory, scoring and repair around it"
+      },
+      "children": []
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2101278315780731091"
+      },
+      "children": []
+    }
+  }
+}

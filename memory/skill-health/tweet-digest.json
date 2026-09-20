@@ -1,15 +1,14 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-19T17:03:09Z",
-  "quality_score": 4,
-  "assessment": "Well-executed monitoring run: verified fetch (http=200, 20 tweets, current date range), clear dedup logic against existing logs, zero new signal correctly identified, proper dry-cycle handling, and substantive logging — a solid operational task.",
-  "flags": [],
-  "avg_score": 3.6,
+  "last_analyzed": "2026-09-20T17:04:40Z",
+  "quality_score": 3,
+  "assessment": "Competent execution — fetched and deduped tweets cleanly (http=200, 19 tweets, 14 dropped as duplicates/low-value) — but low strategic alignment and no insight. Outputs a formatted digest with no analysis of engagement, resonance, or momentum indicators. Also passes through unverified claims (Tencent fix, Nvidia rediscovery) uncritically, and leaves cleanup debt (scratch files untracked).",
+  "flags": [
+    "generic_content",
+    "unverifiable_claim"
+  ],
+  "avg_score": 3.57,
   "history": [
-    {
-      "date": "2026-08-20",
-      "score": 4
-    },
     {
       "date": "2026-08-21",
       "score": 4
@@ -125,6 +124,10 @@
     {
       "date": "2026-09-19",
       "score": 4
+    },
+    {
+      "date": "2026-09-20",
+      "score": 3
     }
   ]
 }
