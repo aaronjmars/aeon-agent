@@ -1,0 +1,817 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse — 2026-09-21"
+      },
+      "children": [
+        "badge-surge",
+        "stats-table",
+        "sep1",
+        "aeon-section",
+        "sep2",
+        "soul-section",
+        "sep3",
+        "opendia-section",
+        "sep4",
+        "minitor-section",
+        "sep5",
+        "source-text"
+      ]
+    },
+    "badge-surge": {
+      "type": "Badge",
+      "props": {
+        "text": "SURGE",
+        "variant": "destructive"
+      }
+    },
+    "stats-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "743 (+14)",
+            "264 (+1)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "677 (+6)",
+            "74 (+1)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1923 (+2)",
+            "161 (+1)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "17 (+1)",
+            "5 (—)",
+            "—",
+            "SURGE"
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "aeon-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-status",
+        "aeon-notable-title",
+        "aeon-notable",
+        "aeon-other-title",
+        "aeon-other-list",
+        "aeon-forks-title",
+        "aeon-forks"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h3"
+      }
+    },
+    "aeon-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 16.5)",
+        "variant": "lead"
+      }
+    },
+    "aeon-notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 13 of 14)",
+        "level": "h4"
+      }
+    },
+    "aeon-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-sg-1",
+        "aeon-sg-2",
+        "aeon-sg-3",
+        "aeon-sg-4",
+        "aeon-sg-5",
+        "aeon-sg-6"
+      ]
+    },
+    "aeon-sg-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-sg-1-link",
+        "aeon-sg-1-text"
+      ]
+    },
+    "aeon-sg-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "euxaristia",
+        "href": "https://github.com/euxaristia"
+      }
+    },
+    "aeon-sg-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 🍁 · 🏢 @cairn · 72 repos · 🌐 euxaristia.github.io · 🐦 @euxaristia · 89 followers",
+        "variant": "caption"
+      }
+    },
+    "aeon-sg-2": {
+      "type": "Link",
+      "props": {
+        "label": "enving",
+        "href": "https://github.com/enving"
+      }
+    },
+    "aeon-sg-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-sg-3-link",
+        "aeon-sg-3-text"
+      ]
+    },
+    "aeon-sg-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "Mamdouh Aboammar",
+        "href": "https://github.com/imMamdouhaboammar"
+      }
+    },
+    "aeon-sg-3-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 UAE · 🏢 PrePilot LLC · 92 repos · 🌐 https://prepilot-system-agency.space/ · 30 followers\n\"Vibe coder & conversion copywriter I build agentic tooling for marketing work with a strategist's paranoia. Founder of PrePilot.\"",
+        "variant": "caption"
+      }
+    },
+    "aeon-sg-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-sg-4-link",
+        "aeon-sg-4-text"
+      ]
+    },
+    "aeon-sg-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "Suriyaa Sundararuban",
+        "href": "https://github.com/suriyaa"
+      }
+    },
+    "aeon-sg-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Germany · 58 repos · 🌐 https://www.suriyaasundararuban.com · 🐦 @SuriyaaKudoIsc · 1.1k followers\n\"I 💖 Open Source! Making the world better day by day. I build things that outlive the commit. Code for future you. Building for the next…\"",
+        "variant": "caption"
+      }
+    },
+    "aeon-sg-5": {
+      "type": "Link",
+      "props": {
+        "label": "Pedro Guimarães",
+        "href": "https://github.com/0x7067"
+      }
+    },
+    "aeon-sg-6": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-sg-6-link",
+        "aeon-sg-6-text"
+      ]
+    },
+    "aeon-sg-6-link": {
+      "type": "Link",
+      "props": {
+        "label": "0xSam",
+        "href": "https://github.com/sammed-21"
+      }
+    },
+    "aeon-sg-6-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 web3 · 196 repos · 🌐 sammed.xyz · 🐦 @0xSam_21 · 27 followers\n\"builder\"",
+        "variant": "caption"
+      }
+    },
+    "aeon-other-title": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers",
+        "variant": "caption"
+      }
+    },
+    "aeon-other-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-other-1",
+        "aeon-other-2",
+        "aeon-other-3",
+        "aeon-other-4",
+        "aeon-other-5",
+        "aeon-other-6",
+        "aeon-other-7"
+      ]
+    },
+    "aeon-other-1": {
+      "type": "Link",
+      "props": {
+        "label": "shervin-blip",
+        "href": "https://github.com/shervin-blip"
+      }
+    },
+    "aeon-other-2": {
+      "type": "Link",
+      "props": {
+        "label": "MoZoHuJa",
+        "href": "https://github.com/MoZoHuJa"
+      }
+    },
+    "aeon-other-3": {
+      "type": "Link",
+      "props": {
+        "label": "kenrinzero",
+        "href": "https://github.com/kenrinzero"
+      }
+    },
+    "aeon-other-4": {
+      "type": "Link",
+      "props": {
+        "label": "eschneider8255",
+        "href": "https://github.com/eschneider8255"
+      }
+    },
+    "aeon-other-5": {
+      "type": "Link",
+      "props": {
+        "label": "locomoki",
+        "href": "https://github.com/locomoki"
+      }
+    },
+    "aeon-other-6": {
+      "type": "Link",
+      "props": {
+        "label": "benjacomputergitman",
+        "href": "https://github.com/benjacomputergitman"
+      }
+    },
+    "aeon-other-7": {
+      "type": "Link",
+      "props": {
+        "label": "nimeshvaghasiya",
+        "href": "https://github.com/nimeshvaghasiya"
+      }
+    },
+    "aeon-forks-title": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks (4 events; net forks +1)",
+        "level": "h4"
+      }
+    },
+    "aeon-forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-fork-1",
+        "aeon-fork-2",
+        "aeon-fork-3",
+        "aeon-fork-4"
+      ]
+    },
+    "aeon-fork-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-1-link",
+        "aeon-fork-1-text"
+      ]
+    },
+    "aeon-fork-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "Corykidios Seio Clokydaros",
+        "href": "https://github.com/Corykidios"
+      }
+    },
+    "aeon-fork-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Franklin, Pennsylvania · 🏢 Echoing Orpheus Studios · 25 repos · 78 followers (also starred aeon)\n\"Composer of music, myth, poetry, prose, systems, and software. Conceiver of semiotics, set theory, linguistics, library science,…\"",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-2": {
+      "type": "Link",
+      "props": {
+        "label": "quell-the-monster",
+        "href": "https://github.com/quell-the-monster"
+      }
+    },
+    "aeon-fork-3": {
+      "type": "Link",
+      "props": {
+        "label": "iamziek",
+        "href": "https://github.com/iamziek"
+      }
+    },
+    "aeon-fork-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-4-link",
+        "aeon-fork-4-text"
+      ]
+    },
+    "aeon-fork-4-link": {
+      "type": "Link",
+      "props": {
+        "label": "Traveler",
+        "href": "https://github.com/traveler3022"
+      }
+    },
+    "aeon-fork-4-text": {
+      "type": "Text",
+      "props": {
+        "text": "17 repos\n\"Life is a journey This also makes it more exciting I am excited about what challenges will come my way Hello, I am Ehsan, a computer engine\"",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "soul-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul-heading",
+        "soul-status",
+        "soul-notable-title",
+        "soul-notable-note",
+        "soul-other-title",
+        "soul-other-list",
+        "soul-forks-title",
+        "soul-forks"
+      ]
+    },
+    "soul-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h3"
+      }
+    },
+    "soul-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 7.25)",
+        "variant": "lead"
+      }
+    },
+    "soul-notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers",
+        "level": "h4"
+      }
+    },
+    "soul-notable-note": {
+      "type": "Text",
+      "props": {
+        "text": "None (enriched 7 of 8, all under notable threshold)",
+        "variant": "muted"
+      }
+    },
+    "soul-other-title": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers",
+        "variant": "caption"
+      }
+    },
+    "soul-other-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-other-1",
+        "soul-other-2",
+        "soul-other-3",
+        "soul-other-4",
+        "soul-other-5",
+        "soul-other-6",
+        "soul-other-7"
+      ]
+    },
+    "soul-other-1": {
+      "type": "Link",
+      "props": {
+        "label": "alexanderjacuna",
+        "href": "https://github.com/alexanderjacuna"
+      }
+    },
+    "soul-other-2": {
+      "type": "Link",
+      "props": {
+        "label": "CloudBranch",
+        "href": "https://github.com/CloudBranch"
+      }
+    },
+    "soul-other-3": {
+      "type": "Link",
+      "props": {
+        "label": "zhenrez",
+        "href": "https://github.com/zhenrez"
+      }
+    },
+    "soul-other-4": {
+      "type": "Link",
+      "props": {
+        "label": "robertoatila",
+        "href": "https://github.com/robertoatila"
+      }
+    },
+    "soul-other-5": {
+      "type": "Link",
+      "props": {
+        "label": "aeonframework",
+        "href": "https://github.com/aeonframework"
+      }
+    },
+    "soul-other-6": {
+      "type": "Link",
+      "props": {
+        "label": "jeansweden",
+        "href": "https://github.com/jeansweden"
+      }
+    },
+    "soul-other-7": {
+      "type": "Link",
+      "props": {
+        "label": "benjacomputergitman",
+        "href": "https://github.com/benjacomputergitman"
+      }
+    },
+    "soul-forks-title": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h4"
+      }
+    },
+    "soul-forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul-fork-1"
+      ]
+    },
+    "soul-fork-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-fork-1-link",
+        "soul-fork-1-text"
+      ]
+    },
+    "soul-fork-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "Green CulturED",
+        "href": "https://github.com/greencultured"
+      }
+    },
+    "soul-fork-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Denver, Colorado · 🏢 Green CulturED · 194 repos · 🌐 www.GreenCulturED.co · 🐦 @greencultured (also starred soul.md)\n\"Cannabis Industry Training & eLearning Solutions\"",
+        "variant": "caption"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "opendia-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia-heading",
+        "opendia-status",
+        "opendia-notable-title",
+        "opendia-notable",
+        "opendia-other-title",
+        "opendia-other-list",
+        "opendia-forks-title",
+        "opendia-forks"
+      ]
+    },
+    "opendia-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h3"
+      }
+    },
+    "opendia-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 3.0)",
+        "variant": "lead"
+      }
+    },
+    "opendia-notable-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 4 of 4)",
+        "level": "h4"
+      }
+    },
+    "opendia-notable": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia-sg-1",
+        "opendia-sg-2"
+      ]
+    },
+    "opendia-sg-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-sg-1-link",
+        "opendia-sg-1-text"
+      ]
+    },
+    "opendia-sg-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "Corykidios Seio Clokydaros",
+        "href": "https://github.com/Corykidios"
+      }
+    },
+    "opendia-sg-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Franklin, Pennsylvania · 🏢 Echoing Orpheus Studios · 25 repos · 78 followers\n\"Composer of music, myth, poetry, prose, systems, and software. Conceiver of semiotics, set theory, linguistics, library science,…\"",
+        "variant": "caption"
+      }
+    },
+    "opendia-sg-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-sg-2-link",
+        "opendia-sg-2-text"
+      ]
+    },
+    "opendia-sg-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "dxiiren",
+        "href": "https://github.com/dxiiren"
+      }
+    },
+    "opendia-sg-2-text": {
+      "type": "Text",
+      "props": {
+        "text": "26 repos\n\"Technical Lead · I write code, lead people, and teach robots to do my chores\"",
+        "variant": "caption"
+      }
+    },
+    "opendia-other-title": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers",
+        "variant": "caption"
+      }
+    },
+    "opendia-other-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-other-1",
+        "opendia-other-2"
+      ]
+    },
+    "opendia-other-1": {
+      "type": "Link",
+      "props": {
+        "label": "aeonframework",
+        "href": "https://github.com/aeonframework"
+      }
+    },
+    "opendia-other-2": {
+      "type": "Link",
+      "props": {
+        "label": "benjacomputergitman",
+        "href": "https://github.com/benjacomputergitman"
+      }
+    },
+    "opendia-forks-title": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h4"
+      }
+    },
+    "opendia-forks": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia-fork-1"
+      ]
+    },
+    "opendia-fork-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-fork-1-link",
+        "opendia-fork-1-text"
+      ]
+    },
+    "opendia-fork-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "Jason",
+        "href": "https://github.com/see0"
+      }
+    },
+    "opendia-fork-1-text": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Indiana · 🏢 Purdue Student · 189 repos · 18 followers",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "minitor-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor-heading",
+        "minitor-badge",
+        "minitor-alert",
+        "minitor-other-title",
+        "minitor-other-list"
+      ]
+    },
+    "minitor-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/minitor",
+        "level": "h3"
+      }
+    },
+    "minitor-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "SURGE",
+        "variant": "destructive"
+      }
+    },
+    "minitor-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Surge Detected",
+        "message": "Rule fired: week_stars(1) > 3×avg4w(0) — 4 straight QUIET weeks broken by a single new star",
+        "type": "success"
+      }
+    },
+    "minitor-other-title": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers",
+        "variant": "caption"
+      }
+    },
+    "minitor-other-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "minitor-other-1"
+      ]
+    },
+    "minitor-other-1": {
+      "type": "Link",
+      "props": {
+        "label": "aeonframework",
+        "href": "https://github.com/aeonframework"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "source-text": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events · all 4 repos complete windows (no truncation)",
+        "variant": "muted"
+      }
+    }
+  }
+}
