@@ -1,0 +1,232 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-21"
+      },
+      "children": [
+        "section_shipped",
+        "sep_1",
+        "section_growth",
+        "sep_2",
+        "section_content"
+      ]
+    },
+    "section_shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_shipped",
+        "tweet_shipped_1",
+        "tweet_shipped_2"
+      ]
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_shipped_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "card_shipped_1",
+        "link_shipped_1"
+      ]
+    },
+    "card_shipped_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner got a new brain — the Riva method decides what must never happen, tries to make it happen, then proves the exploit before calling it a bug"
+      },
+      "children": []
+    },
+    "link_shipped_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2101903160327413948"
+      },
+      "children": []
+    },
+    "tweet_shipped_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "card_shipped_2",
+        "link_shipped_2"
+      ]
+    },
+    "card_shipped_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "first Uniswap v4 Hooks Marketplace is live, full walkthrough posted"
+      },
+      "children": []
+    },
+    "link_shipped_2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2102007245286322466"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_growth": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_growth",
+        "tweet_growth_1",
+        "tweet_growth_2"
+      ]
+    },
+    "heading_growth": {
+      "type": "Heading",
+      "props": {
+        "text": "Growth & Channels",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_growth_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "card_growth_1",
+        "link_growth_1"
+      ]
+    },
+    "card_growth_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "aeon's now on Substack, intro article up on the open-source agent framework"
+      },
+      "children": []
+    },
+    "link_growth_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2102026852613140771"
+      },
+      "children": []
+    },
+    "tweet_growth_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "card_growth_2",
+        "link_growth_2"
+      ]
+    },
+    "card_growth_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "giving away 5 HivePunkz (agentic $NVDA-mining bees on Base) to the community, 5 winners in 72h"
+      },
+      "children": []
+    },
+    "link_growth_2": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2101995750146158812"
+      },
+      "children": []
+    },
+    "sep_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_content",
+        "tweet_content_1"
+      ]
+    },
+    "heading_content": {
+      "type": "Heading",
+      "props": {
+        "text": "Content & Comparisons",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_content_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "card_content_1",
+        "link_content_1"
+      ]
+    },
+    "card_content_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Jev went ultra-viral this week, but Sage by @levantolabs is basically the same idea with a different approach"
+      },
+      "children": []
+    },
+    "link_content_1": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2101890917573484868"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,18 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-20T17:04:40Z",
-  "quality_score": 3,
-  "assessment": "Competent execution — fetched and deduped tweets cleanly (http=200, 19 tweets, 14 dropped as duplicates/low-value) — but low strategic alignment and no insight. Outputs a formatted digest with no analysis of engagement, resonance, or momentum indicators. Also passes through unverified claims (Tencent fix, Nvidia rediscovery) uncritically, and leaves cleanup debt (scratch files untracked).",
-  "flags": [
-    "generic_content",
-    "unverifiable_claim"
-  ],
+  "last_analyzed": "2026-09-21T17:04:38Z",
+  "quality_score": 4,
+  "assessment": "Substantive, well-organized digest of shipped work aligned with strategy; verifiable via provided links and logged actions; operational friction flagged transparently.",
+  "flags": [],
   "avg_score": 3.57,
   "history": [
-    {
-      "date": "2026-08-21",
-      "score": 4
-    },
     {
       "date": "2026-08-22",
       "score": 3
@@ -128,6 +121,10 @@
     {
       "date": "2026-09-20",
       "score": 3
+    },
+    {
+      "date": "2026-09-21",
+      "score": 4
     }
   ]
 }
