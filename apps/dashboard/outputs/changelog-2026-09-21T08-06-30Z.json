@@ -1,0 +1,83 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog (push-to)",
+        "description": "2026-09-21"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repos-text",
+        "prs-stat",
+        "sep-1",
+        "entry-section",
+        "pr-link"
+      ]
+    },
+    "repos-text": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon → aaronjmars/aeon-website",
+        "variant": "muted"
+      }
+    },
+    "prs-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs consolidated",
+        "value": "8"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "entry-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "entry-label",
+        "entry-title"
+      ]
+    },
+    "entry-label": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog entry:",
+        "variant": "caption"
+      }
+    },
+    "entry-title": {
+      "type": "Heading",
+      "props": {
+        "text": "Dev-loop live proof and Telegram triggers",
+        "level": "h3"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View PR #521",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/521",
+        "source": "aaronjmars/aeon-website"
+      }
+    }
+  }
+}
