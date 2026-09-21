@@ -1,8 +1,8 @@
 {
   "skill": "shiplog",
-  "last_analyzed": "2026-09-14T09:16:04Z",
-  "quality_score": 3,
-  "assessment": "Substantive shiplog with specific findings and proper execution, but verifiability relies on summary-level reporting—article content promised but not shown, and metrics lack source citations.",
+  "last_analyzed": "2026-09-21T09:14:52Z",
+  "quality_score": 4,
+  "assessment": "Substantive weekly shiplog with specific metrics (19 PRs, named contributors, star growth, shipped features) well-aligned to framework priorities; properly committed and notified.",
   "flags": [],
   "avg_score": 3.94,
   "history": [
@@ -73,6 +73,10 @@
     {
       "date": "2026-09-14",
       "score": 3
+    },
+    {
+      "date": "2026-09-21",
+      "score": 4
     }
   ]
 }

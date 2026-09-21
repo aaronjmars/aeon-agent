@@ -1,0 +1,164 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "✅ Aeon Shiplog",
+        "description": "aeon shiplog ⭐ sep 14 → sep 21"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "text_intro",
+        "separator_1",
+        "heading_shipped",
+        "stack_features",
+        "separator_2",
+        "heading_traction",
+        "stack_traction_metrics",
+        "separator_3",
+        "text_moat_quote",
+        "link_fulldigest"
+      ]
+    },
+    "text_intro": {
+      "type": "Text",
+      "props": {
+        "text": "19 PRs merged into aeonfun/aeon this window. an external contributor shipped exactly half of them. the bytes:"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h3"
+      }
+    },
+    "stack_features": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "feature_devloop",
+        "feature_vulnscanner",
+        "feature_audit",
+        "feature_security",
+        "feature_basehub"
+      ]
+    },
+    "feature_devloop": {
+      "type": "Text",
+      "props": {
+        "text": "dev-loop now requires live behavioral proof before a self-authored change ships, not just a clean review — and it ships off a [dev-loop::ship] reply in telegram now. no laptop needed. built almost entirely by @svector_eth"
+      }
+    },
+    "feature_vulnscanner": {
+      "type": "Text",
+      "props": {
+        "text": "vuln-scanner got a new brain: the Riva method. instead of pattern-matching known bugs it decides what must never happen, tries to make it happen, and proves the damage before calling it a bug"
+      }
+    },
+    "feature_audit": {
+      "type": "Text",
+      "props": {
+        "text": "new skill: Smart Contract Audit — agent audits any contract on request, not just the ones it deploys itself"
+      }
+    },
+    "feature_security": {
+      "type": "Text",
+      "props": {
+        "text": "security hardening: XSS fix in the vuln-scanner's own dashboard, disclosure routing now checks SECURITY.md first"
+      }
+    },
+    "feature_basehub": {
+      "type": "Text",
+      "props": {
+        "text": "@BaseHubHB (58k) featured aeon 3x this week: #5 top AI project on Base, \"Based\" tier ecosystem list, and Sunday's weekly recap"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_traction": {
+      "type": "Heading",
+      "props": {
+        "text": "traction",
+        "level": "h3"
+      }
+    },
+    "stack_traction_metrics": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "text_miroshark",
+        "text_thecultos"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon",
+        "value": "743 ⭐",
+        "delta": "+14",
+        "trend": "up"
+      }
+    },
+    "text_miroshark": {
+      "type": "Text",
+      "props": {
+        "text": "@miroshark_ crossed 1B tokens consumed on its x402 endpoint (135k agent actions, 5k agents, 300 sims)"
+      }
+    },
+    "text_thecultos": {
+      "type": "Text",
+      "props": {
+        "text": "@thecultos integrated the miroshark_ x402aff standard"
+      }
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_moat_quote": {
+      "type": "Text",
+      "props": {
+        "text": "self-repair is the moat ⭐",
+        "variant": "lead"
+      }
+    },
+    "link_fulldigest": {
+      "type": "Link",
+      "props": {
+        "label": "full digest",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-09-21.md"
+      }
+    }
+  }
+}
