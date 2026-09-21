@@ -1,0 +1,284 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update: 19 commits synced → PR #229"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "heading-summary",
+        "sep-1",
+        "heading-sync-details",
+        "text-baseline",
+        "table-changes",
+        "sep-2",
+        "heading-shipped",
+        "stack-shipped",
+        "sep-3",
+        "heading-left",
+        "stack-left",
+        "sep-4",
+        "heading-notes",
+        "stack-notes",
+        "sep-5",
+        "link-pr"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "✅ 2026-09-21",
+        "variant": "default"
+      }
+    },
+    "heading-summary": {
+      "type": "Heading",
+      "props": {
+        "text": "Synced 19 upstream commits → PR",
+        "level": "h3"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-sync-details": {
+      "type": "Heading",
+      "props": {
+        "text": "Sync Details",
+        "level": "h4"
+      }
+    },
+    "text-baseline": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon was 19 commits ahead (95142d1..ba01e9f). Baseline moves to ba01e9f when you merge.",
+        "variant": "body"
+      }
+    },
+    "table-changes": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Category",
+          "Count"
+        ],
+        "rows": [
+          [
+            "New files",
+            "6"
+          ],
+          [
+            "Updated files",
+            "28"
+          ],
+          [
+            "Auto-merged 3-way",
+            "2"
+          ],
+          [
+            "Total files applied clean",
+            "36"
+          ]
+        ]
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped In",
+        "level": "h4"
+      }
+    },
+    "stack-shipped": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "shipped-1",
+        "shipped-2",
+        "shipped-3",
+        "shipped-4"
+      ]
+    },
+    "shipped-1": {
+      "type": "Text",
+      "props": {
+        "text": "• dev-loop proof/repair stack + ci-gate",
+        "variant": "body"
+      }
+    },
+    "shipped-2": {
+      "type": "Text",
+      "props": {
+        "text": "• vuln-scanner disclosure hardening",
+        "variant": "body"
+      }
+    },
+    "shipped-3": {
+      "type": "Text",
+      "props": {
+        "text": "• reflected-XSS fix on the mcp-auth callback",
+        "variant": "body"
+      }
+    },
+    "shipped-4": {
+      "type": "Text",
+      "props": {
+        "text": "• mcp-server riva isolation",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-left": {
+      "type": "Heading",
+      "props": {
+        "text": "Left For You (14)",
+        "level": "h4"
+      }
+    },
+    "stack-left": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "left-1",
+        "left-2",
+        "left-3",
+        "left-4",
+        "left-5",
+        "left-6"
+      ]
+    },
+    "left-1": {
+      "type": "Text",
+      "props": {
+        "text": "• New skills sc-audit + create-prove need a generator + eyebrow scan on install",
+        "variant": "body"
+      }
+    },
+    "left-2": {
+      "type": "Text",
+      "props": {
+        "text": "• Can't run headless",
+        "variant": "body"
+      }
+    },
+    "left-3": {
+      "type": "Text",
+      "props": {
+        "text": "• Overlap conflicts on: aeon.yml-wf, ci-tests.yml, README, CHANGELOG, docs/skill-packs",
+        "variant": "body"
+      }
+    },
+    "left-4": {
+      "type": "Text",
+      "props": {
+        "text": "• aeon.yml also gains an sc-audit entry + dev-loop max_dispatches: 2→5",
+        "variant": "body"
+      }
+    },
+    "left-5": {
+      "type": "Badge",
+      "props": {
+        "text": "Merge by hand",
+        "variant": "outline"
+      }
+    },
+    "left-6": {
+      "type": "Text",
+      "props": {
+        "text": "",
+        "variant": "caption"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "heading-notes": {
+      "type": "Heading",
+      "props": {
+        "text": "Notes",
+        "level": "h4"
+      }
+    },
+    "stack-notes": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "note-1",
+        "note-2",
+        "note-3",
+        "note-4"
+      ]
+    },
+    "note-1": {
+      "type": "Text",
+      "props": {
+        "text": "• Catalogs + eyebrowlock untouched on purpose",
+        "variant": "body"
+      }
+    },
+    "note-2": {
+      "type": "Text",
+      "props": {
+        "text": "• Every updated skill is byte-identical to upstream",
+        "variant": "body"
+      }
+    },
+    "note-3": {
+      "type": "Text",
+      "props": {
+        "text": "• Drift allowed",
+        "variant": "body"
+      }
+    },
+    "note-4": {
+      "type": "Badge",
+      "props": {
+        "text": "Gates green",
+        "variant": "default"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "link-pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #229",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/229",
+        "source": "GitHub"
+      }
+    }
+  }
+}

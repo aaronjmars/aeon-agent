@@ -1,15 +1,16 @@
-✅ aeon-update: PR #228
+✅ aeon-update: 19 commits synced → PR #229
 
-⭐ *aeon-update — 2026-09-14*
+⭐ *aeon-update — 2026-09-21*
+synced 19 upstream commits → PR
 
-synced 25 upstream commits → PR #228, all checks green.
+`aeonfun/aeon` was 19 commits ahead (`95142d1..ba01e9f`). 36 files applied clean — 6 new, 28 updated, 2 auto-merged 3-way. baseline moves to `ba01e9f` when you merge.
 
-`aeonfun/aeon` was 25 ahead (`21b82db..95142d1`). 44 files applied clean: deploy-uni-hook's mandatory 10bps AeonFee, vuln-scanner Riva kernel, competitor-monitor row-diffing, read-only sandbox keeps memory/output writable, chain no-action telemetry. eyebrowlock + catalog reconciled by hand (generators can't run headless) — verify + all catalog gates pass, coverage 84/84.
+shipped in: dev-loop proof/repair stack + ci-gate, `vuln-scanner` disclosure hardening, reflected-XSS fix on the mcp-auth callback, mcp-server riva isolation.
 
-3 new skills deferred — `compute-resell`, `miroshark-matchday`, `submit-hook` need `bin/generate-*` + `eyebrow scan`, blocked in the sandbox. PR carries the exact install commands.
+left for you (14): new skills `sc-audit` + `create-prove` need a generator + `eyebrow scan` on install — can't run headless. overlap conflicts on `aeon.yml`-wf, `ci-tests.yml`, `README`, `CHANGELOG`, `docs/skill-packs`. `aeon.yml` also gains an `sc-audit` entry + dev-loop `max_dispatches: 2→5` — merge by hand.
 
-manual reconcile still owed: the 3 workflow files, CHANGELOG, README, skill-health (#1018). baseline advances to `95142d1` on merge.
+catalogs + eyebrowlock untouched on purpose: every updated skill is byte-identical to upstream, drift allowed, gates green.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/228
+PR: https://github.com/aaronjmars/aeon-agent/pull/229
 
-🔗 https://github.com/aaronjmars/aeon-agent/pull/228
+🔗 https://github.com/aaronjmars/aeon-agent/pull/229

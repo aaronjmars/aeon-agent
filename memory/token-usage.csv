@@ -520,3 +520,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-09-21,changelog,claude-sonnet-5,3069,23839,4959761,105792
 2026-09-21,shiplog,claude-sonnet-5,3675,45501,9732495,117800
 2026-09-21,repo-pulse,claude-sonnet-5,3087,45355,4952029,97485
+2026-09-21,aeon-update,claude-opus-4-8,6552,84921,9403188,150297
