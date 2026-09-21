@@ -1,0 +1,77 @@
+{
+  "root": "card-holdings",
+  "state": {},
+  "elements": {
+    "card-holdings": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings — aeon"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat-holdings",
+        "progress-supply",
+        "separator-1",
+        "stack-changes"
+      ]
+    },
+    "stat-holdings": {
+      "type": "Stat",
+      "props": {
+        "label": "Current holdings",
+        "value": "14.56B"
+      }
+    },
+    "progress-supply": {
+      "type": "Progress",
+      "props": {
+        "value": 14.56,
+        "label": "Supply percentage"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack-changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-7d",
+        "stat-30d"
+      ]
+    },
+    "stat-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7-day change",
+        "value": "96.28M",
+        "delta": "+0.67%",
+        "trend": "up"
+      }
+    },
+    "stat-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30-day change",
+        "value": "629.10M",
+        "delta": "+4.51%",
+        "trend": "up"
+      }
+    }
+  }
+}

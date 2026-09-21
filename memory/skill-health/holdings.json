@@ -1,10 +1,10 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-09-14T08:03:32Z",
+  "last_analyzed": "2026-09-21T08:03:29Z",
   "quality_score": 4,
-  "assessment": "Substantive, verifiable holdings report tracking $AEON north-star metric; well-sourced data, clean structure, procedurally sound but observational rather than actionable.",
+  "assessment": "Substantive weekly report with auditable sourcing (public RPC, snapshot deltas, GeckoTerminal), proper state management, and clear methodology. Serves north-star metric (token holdings/momentum tracking). No invented claims, complete workflow documented.",
   "flags": [],
-  "avg_score": 3.9,
+  "avg_score": 3.91,
   "history": [
     {
       "date": "2026-07-30",
@@ -44,6 +44,10 @@
     },
     {
       "date": "2026-09-14",
+      "score": 4
+    },
+    {
+      "date": "2026-09-21",
       "score": 4
     }
   ]
