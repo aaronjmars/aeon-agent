@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-21T06:07:57Z",
+  "last_analyzed": "2026-09-22T19:37:01Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-sourced token report with verifiable metrics, proper source attribution, and honest handling of data limitations. Directly tracks strategy priority #4 (momentum tracking) with real on-chain and market data.",
+  "assessment": "Substantive, well-sourced token report with clear BREAKOUT classification, verifiable metrics, and honest transparency about data gaps and unverified claims.",
   "flags": [],
-  "avg_score": 3.9,
+  "avg_score": 3.97,
   "history": [
-    {
-      "date": "2026-08-23",
-      "score": 2
-    },
     {
       "date": "2026-08-24",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-21",
+      "score": 4
+    },
+    {
+      "date": "2026-09-22",
       "score": 4
     }
   ]

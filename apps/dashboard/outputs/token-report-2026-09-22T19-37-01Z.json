@@ -1,0 +1,154 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report — BREAKOUT",
+        "description": "$AEON — BREAKOUT"
+      },
+      "children": [
+        "alert",
+        "price-stats",
+        "sep1",
+        "volume-stats",
+        "sep2",
+        "whale-stats",
+        "sep3",
+        "link"
+      ]
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "type": "success",
+        "message": "Price up 64.7% to $0.00003282 on 5.85× average volume — the sharpest daily move in the tracked window. Liquidity followed, +39.5% to $1.85M. Trade flow was heavy both ways (buy/sell ratio cooled to 1.20 from 1.88) rather than one-sided FOMO."
+      }
+    },
+    "price-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "liquidity-stat",
+        "volume-stat"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00003282",
+        "delta": "+64.7%",
+        "trend": "up"
+      }
+    },
+    "liquidity-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.85M",
+        "delta": "+39.5%",
+        "trend": "up"
+      }
+    },
+    "volume-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$410.1K",
+        "delta": "5.85× 7d avg",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "volume-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "buys-stat",
+        "sells-stat",
+        "ratio-stat"
+      ]
+    },
+    "buys-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "441"
+      }
+    },
+    "sells-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "368"
+      }
+    },
+    "ratio-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "1.20",
+        "delta": "(was 1.88)",
+        "trend": "down"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "whale-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "whale-count",
+        "whale-net"
+      ]
+    },
+    "whale-count": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "44"
+      }
+    },
+    "whale-net": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Net (buy-side)",
+        "value": "+$15.8K"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
