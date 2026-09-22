@@ -1,14 +1,6 @@
-ℹ️ Tweet Digest — 2026-09-21
+ℹ️ Tweet Digest — 2026-09-22
 
-*Tweet Digest — 2026-09-21*
+*Tweet Digest — 2026-09-22*
 
 *Theme: Shipped*
-@aeonframework: vuln-scanner got a new brain — the Riva method decides what must never happen, tries to make it happen, then proves the exploit before calling it a bug — [link](https://x.com/aeonframework/status/2101903160327413948)
-@aeonframework: first Uniswap v4 Hooks Marketplace is live, full walkthrough posted — [link](https://x.com/aeonframework/status/2102007245286322466)
-
-*Theme: Growth & Channels*
-@aeonframework: aeon's now on Substack, intro article up on the open-source agent framework — [link](https://x.com/aeonframework/status/2102026852613140771)
-@aeonframework: giving away 5 HivePunkz (agentic $NVDA-mining bees on Base) to the community, 5 winners in 72h — [link](https://x.com/aeonframework/status/2101995750146158812)
-
-*Theme: Content & Comparisons*
-@aeonframework (RT @aaronjmars): Jev went ultra-viral this week, but Sage by @levantolabs is basically the same idea with a different approach — [link](https://x.com/aeonframework/status/2101890917573484868)
+@aeonframework: dropped part one of the Uniswap v4 Hook series, next episode coming soon — [link](https://x.com/aeonframework/status/2102056687456621021)

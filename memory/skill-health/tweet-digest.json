@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-21T17:04:38Z",
+  "last_analyzed": "2026-09-22T17:03:31Z",
   "quality_score": 4,
-  "assessment": "Substantive, well-organized digest of shipped work aligned with strategy; verifiable via provided links and logged actions; operational friction flagged transparently.",
+  "assessment": "Substantive and verifiable execution of routine tweet monitoring — specific URL provided, clear dedup logic, proper logging; thin output (1 new tweet) is legitimate, not a failure.",
   "flags": [],
-  "avg_score": 3.57,
+  "avg_score": 3.6,
   "history": [
-    {
-      "date": "2026-08-22",
-      "score": 3
-    },
     {
       "date": "2026-08-23",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-21",
+      "score": 4
+    },
+    {
+      "date": "2026-09-22",
       "score": 4
     }
   ]

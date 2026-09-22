@@ -1,0 +1,48 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-22"
+      },
+      "children": [
+        "stack_content"
+      ]
+    },
+    "stack_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_theme",
+        "separator_1",
+        "tweet_1"
+      ]
+    },
+    "badge_theme": {
+      "type": "Badge",
+      "props": {
+        "text": "Shipped",
+        "variant": "default"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "dropped part one of the Uniswap v4 Hook series, next episode coming soon — [link](https://x.com/aeonframework/status/2102056687456621021)"
+      }
+    }
+  }
+}
