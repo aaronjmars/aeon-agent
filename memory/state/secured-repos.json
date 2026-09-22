@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-21",
-  "total_repos": 99,
-  "total_stars": 3020006,
+  "updated_at": "2026-09-22",
+  "total_repos": 100,
+  "total_stars": 3107434,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -17,8 +17,14 @@
     },
     "harry0703/MoneyPrinterTurbo": {
       "severity": "HIGH",
-      "stars": 122092,
+      "stars": 124931,
       "fix_url": "https://github.com/harry0703/MoneyPrinterTurbo/commit/28a55ddc1d3f4fc094837352ee9a74e1b264484a",
+      "note": ""
+    },
+    "ruvnet/RuView": {
+      "severity": "HIGH+MEDIUM",
+      "stars": 94643,
+      "fix_url": "https://github.com/ruvnet/RuView/pull/580",
       "note": ""
     },
     "nexu-io/open-design": {
@@ -27,16 +33,16 @@
       "fix_url": "https://github.com/nexu-io/open-design/pull/1176",
       "note": ""
     },
-    "ruvnet/RuView": {
-      "severity": "HIGH+MEDIUM",
-      "stars": 94496,
-      "fix_url": "https://github.com/ruvnet/RuView/pull/580",
-      "note": ""
-    },
     "infiniflow/ragflow": {
       "severity": "HIGH",
-      "stars": 90881,
-      "fix_url": "https://github.com/infiniflow/ragflow",
+      "stars": 91098,
+      "fix_url": "https://github.com/infiniflow/ragflow/pull/19348",
+      "note": ""
+    },
+    "koala73/worldmonitor": {
+      "severity": "HIGH",
+      "stars": 87140,
+      "fix_url": "https://github.com/koala73/worldmonitor/pull/5477",
       "note": ""
     },
     "odysseus-dev/odysseus": {
@@ -45,16 +51,10 @@
       "fix_url": "https://github.com/pewdiepie-archdaemon/odysseus/pull/347",
       "note": ""
     },
-    "koala73/worldmonitor": {
-      "severity": "HIGH",
-      "stars": 85949,
-      "fix_url": "https://github.com/koala73/worldmonitor/pull/5477",
-      "note": ""
-    },
     "opendatalab/MinerU": {
       "severity": "MEDIUM",
-      "stars": 80106,
-      "fix_url": "https://github.com/opendatalab/MinerU",
+      "stars": 80394,
+      "fix_url": "https://github.com/opendatalab/MinerU/commit/b31d3be7de",
       "note": ""
     },
     "Panniantong/Agent-Reach": {
@@ -87,6 +87,12 @@
       "fix_url": "https://github.com/headroomlabs-ai/headroom/pull/605",
       "note": ""
     },
+    "diegosouzapw/OmniRoute": {
+      "severity": "HIGH",
+      "stars": 68792,
+      "fix_url": "https://github.com/diegosouzapw/OmniRoute/pull/13745",
+      "note": ""
+    },
     "ZhuLinsen/daily_stock_analysis": {
       "severity": "HIGH",
       "stars": 64731,
@@ -113,7 +119,7 @@
     },
     "HKUDS/nanobot": {
       "severity": "HIGH",
-      "stars": 47972,
+      "stars": 48452,
       "fix_url": "https://github.com/HKUDS/nanobot/commit/207813d3b",
       "note": ""
     },
@@ -125,32 +131,32 @@
     },
     "DeusData/codebase-memory-mcp": {
       "severity": "HIGH+MEDIUM+LOW",
-      "stars": 43378,
+      "stars": 43960,
       "fix_url": "https://github.com/DeusData/codebase-memory-mcp/pull/941",
       "note": ""
     },
     "omacom/omarchy": {
       "severity": "HIGH",
-      "stars": 41693,
-      "fix_url": "https://github.com/omacom/omarchy",
+      "stars": 42477,
+      "fix_url": "https://github.com/omacom/omarchy/pull/7884",
       "note": ""
     },
     "Wei-Shaw/sub2api": {
       "severity": "HIGH",
-      "stars": 41107,
+      "stars": 42260,
       "fix_url": "https://github.com/Wei-Shaw/sub2api/pull/6122",
-      "note": ""
-    },
-    "tinyhumansai/openhuman": {
-      "severity": "HIGH",
-      "stars": 39603,
-      "fix_url": "https://github.com/tinyhumansai/openhuman/commit/b1bbc53fce",
       "note": ""
     },
     "herdrdev/herdr": {
       "severity": "HIGH",
-      "stars": 39176,
-      "fix_url": "https://github.com/herdrdev/herdr",
+      "stars": 39999,
+      "fix_url": "https://github.com/herdrdev/herdr/commit/322ab6a5a9",
+      "note": ""
+    },
+    "tinyhumansai/openhuman": {
+      "severity": "HIGH",
+      "stars": 39997,
+      "fix_url": "https://github.com/tinyhumansai/openhuman/commit/b1bbc53fce",
       "note": ""
     },
     "lfnovo/open-notebook": {
@@ -161,19 +167,19 @@
     },
     "soxoj/maigret": {
       "severity": "HIGH+LOW",
-      "stars": 37418,
+      "stars": 37869,
       "fix_url": "https://github.com/soxoj/maigret/pull/2635",
       "note": ""
     },
     "chatwoot/chatwoot": {
       "severity": "MEDIUM",
-      "stars": 36907,
-      "fix_url": "https://github.com/chatwoot/chatwoot",
+      "stars": 37025,
+      "fix_url": "https://github.com/chatwoot/chatwoot/pull/15463",
       "note": ""
     },
     "esengine/DeepSeek-Reasonix": {
       "severity": "HIGH+MEDIUM",
-      "stars": 35477,
+      "stars": 35659,
       "fix_url": "https://github.com/esengine/DeepSeek-Reasonix/pull/9599",
       "note": ""
     },
@@ -183,16 +189,16 @@
       "fix_url": "https://github.com/THU-MAIC/OpenMAIC/pull/1357",
       "note": ""
     },
+    "HKUDS/Vibe-Trading": {
+      "severity": "MEDIUM",
+      "stars": 33774,
+      "fix_url": "https://github.com/HKUDS/Vibe-Trading/pull/390",
+      "note": ""
+    },
     "jdx/mise": {
       "severity": "HIGH",
       "stars": 33756,
       "fix_url": "https://github.com/jdx/mise/pull/12714",
-      "note": ""
-    },
-    "HKUDS/Vibe-Trading": {
-      "severity": "MEDIUM",
-      "stars": 33167,
-      "fix_url": "https://github.com/HKUDS/Vibe-Trading/pull/390",
       "note": ""
     },
     "CloakHQ/CloakBrowser": {
@@ -203,7 +209,7 @@
     },
     "davila7/claude-code-templates": {
       "severity": "HIGH",
-      "stars": 30582,
+      "stars": 30877,
       "fix_url": "https://github.com/davila7/claude-code-templates/commit/bc4618b0",
       "note": ""
     },
@@ -215,8 +221,14 @@
     },
     "karakeep-app/karakeep": {
       "severity": "MEDIUM",
-      "stars": 28938,
+      "stars": 29188,
       "fix_url": "https://github.com/karakeep-app/karakeep/pull/2945",
+      "note": ""
+    },
+    "Tencent/WeKnora": {
+      "severity": "HIGH",
+      "stars": 28385,
+      "fix_url": "https://github.com/Tencent/WeKnora/pull/3305",
       "note": ""
     },
     "rohitg00/agentmemory": {
@@ -243,12 +255,6 @@
       "fix_url": "https://hackerone.com/x",
       "note": ""
     },
-    "Tencent/WeKnora": {
-      "severity": "HIGH",
-      "stars": 26110,
-      "fix_url": "https://github.com/Tencent/WeKnora",
-      "note": ""
-    },
     "tashfeenahmed/freellmapi": {
       "severity": "HIGH",
       "stars": 24702,
@@ -270,7 +276,7 @@
     "guillaumemeyer/watermarks-remover": {
       "severity": "MEDIUM",
       "stars": 21627,
-      "fix_url": "https://github.com/guillaumemeyer/watermarks-remover/security/advisories/GHSA-pjg6-92pm-mmcf",
+      "fix_url": "https://github.com/guillaumemeyer/watermarks-remover/pull/146",
       "note": ""
     },
     "mksglu/context-mode": {
@@ -293,19 +299,19 @@
     },
     "lidge-jun/opencodex": {
       "severity": "LOW",
-      "stars": 14159,
+      "stars": 15743,
       "fix_url": "https://github.com/lidge-jun/opencodex/commit/a616078949ca5b5e9b024d3a1619744a3fb62ac8",
       "note": ""
     },
     "microsoft/agent-framework": {
       "severity": "MEDIUM",
-      "stars": 13447,
+      "stars": 13686,
       "fix_url": "https://github.com/microsoft/agent-framework/pull/8172",
       "note": ""
     },
     "fuma-nama/fumadocs": {
       "severity": "MEDIUM",
-      "stars": 13108,
+      "stars": 13202,
       "fix_url": "https://github.com/fuma-nama/fumadocs/commit/6c949cb541",
       "note": ""
     },
@@ -317,13 +323,13 @@
     },
     "TencentCloud/CubeSandbox": {
       "severity": "CRITICAL",
-      "stars": 11904,
+      "stars": 12639,
       "fix_url": "https://github.com/TencentCloud/CubeSandbox/pull/756",
       "note": ""
     },
     "cocoindex-io/cocoindex": {
       "severity": "MEDIUM",
-      "stars": 11519,
+      "stars": 11583,
       "fix_url": "https://github.com/cocoindex-io/cocoindex/pull/1947",
       "note": ""
     },
@@ -351,16 +357,16 @@
       "fix_url": "https://github.com/omnigent-ai/omnigent/security/advisories/GHSA-7mqg-cx4g-x2rf",
       "note": ""
     },
+    "usekaneo/kaneo": {
+      "severity": "HIGH",
+      "stars": 9146,
+      "fix_url": "https://github.com/usekaneo/kaneo/pull/1457",
+      "note": ""
+    },
     "Universal-Debloater-Alliance/universal-android-debloater-next-generation": {
       "severity": "LOW",
       "stars": 9078,
       "fix_url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/pull/1424",
-      "note": ""
-    },
-    "usekaneo/kaneo": {
-      "severity": "HIGH",
-      "stars": 9028,
-      "fix_url": "https://github.com/usekaneo/kaneo/pull/1457",
       "note": ""
     },
     "nexu-io/html-anything": {
@@ -389,7 +395,7 @@
     },
     "katanemo/plano": {
       "severity": "HIGH+MEDIUM",
-      "stars": 7046,
+      "stars": 7061,
       "fix_url": "https://github.com/katanemo/plano/pull/1001",
       "note": ""
     },
@@ -401,25 +407,25 @@
     },
     "google/agents-cli": {
       "severity": "HIGH+MEDIUM",
-      "stars": 5900,
+      "stars": 5971,
       "fix_url": "https://github.com/google/agents-cli/issues/51",
+      "note": ""
+    },
+    "loopx-project/loopx": {
+      "severity": "HIGH",
+      "stars": 5916,
+      "fix_url": "https://github.com/loopx-project/loopx/security/advisories/GHSA-vx2m-gpq4-8j5q",
       "note": ""
     },
     "oomol-lab/open-connector": {
       "severity": "HIGH",
-      "stars": 5792,
-      "fix_url": "https://github.com/oomol-lab/open-connector",
-      "note": ""
-    },
-    "huangruiteng/loopx": {
-      "severity": "HIGH",
-      "stars": 5772,
-      "fix_url": "https://github.com/huangruiteng/loopx/security/advisories/GHSA-vx2m-gpq4-8j5q",
+      "stars": 5854,
+      "fix_url": "https://github.com/oomol-lab/open-connector/pull/369",
       "note": ""
     },
     "baairon/torlink": {
       "severity": "LOW",
-      "stars": 5610,
+      "stars": 5750,
       "fix_url": "https://github.com/baairon/torlink/pull/44",
       "note": ""
     },
@@ -429,9 +435,15 @@
       "fix_url": "https://github.com/dograh-hq/dograh/pull/332",
       "note": ""
     },
+    "pacifio/atlas": {
+      "severity": "HIGH+MEDIUM",
+      "stars": 5170,
+      "fix_url": "https://github.com/pacifio/atlas/pull/233",
+      "note": ""
+    },
     "shy3130/tick-stock-panel": {
       "severity": "HIGH",
-      "stars": 4772,
+      "stars": 4856,
       "fix_url": "https://github.com/shy3130/tick-stock-panel/pull/122",
       "note": ""
     },
@@ -495,12 +507,6 @@
       "fix_url": "https://github.com/vercel-labs/wterm/pull/33",
       "note": ""
     },
-    "pacifio/atlas": {
-      "severity": "HIGH+MEDIUM",
-      "stars": 3293,
-      "fix_url": "https://github.com/pacifio/atlas/pull/233",
-      "note": ""
-    },
     "cpaczek/skylight": {
       "severity": "HIGH",
       "stars": 3240,
@@ -513,21 +519,21 @@
       "fix_url": "https://github.com/Sophomoresty/gemini-web2api/pull/23",
       "note": ""
     },
+    "music-assistant/server": {
+      "severity": "HIGH+MEDIUM",
+      "stars": 3097,
+      "fix_url": "https://github.com/music-assistant/server/pull/4544",
+      "note": ""
+    },
     "cosmicstack-labs/mercury-agent": {
       "severity": "CRITICAL",
       "stars": 3068,
       "fix_url": "https://github.com/cosmicstack-labs/mercury-agent/pull/48",
       "note": ""
     },
-    "music-assistant/server": {
-      "severity": "HIGH+MEDIUM",
-      "stars": 3049,
-      "fix_url": "https://github.com/music-assistant/server/pull/4544",
-      "note": ""
-    },
     "makecindy/cindy": {
       "severity": "HIGH+MEDIUM",
-      "stars": 2495,
+      "stars": 2779,
       "fix_url": "https://github.com/makecindy/cindy/pull/1116",
       "note": ""
     },
@@ -593,7 +599,7 @@
     },
     "Capminal/capminal-contracts": {
       "severity": "HIGH",
-      "stars": 95,
+      "stars": 96,
       "fix_url": "https://github.com/Capminal/capminal-contracts/pull/4",
       "note": ""
     }

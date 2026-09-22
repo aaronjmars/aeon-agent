@@ -1,5 +1,3 @@
-ℹ️ Secured by Aeon
-
 ## Secured by Aeon — new since last check
 **100 repos** secured (+1) · **3,107,434★** total (+87,428)
 

@@ -1,0 +1,447 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon"
+      },
+      "children": [
+        "subtitle",
+        "stats_stack",
+        "sep1",
+        "newly_stack",
+        "sep2",
+        "updated_stack",
+        "sep3",
+        "footer_note"
+      ]
+    },
+    "subtitle": {
+      "type": "Text",
+      "props": {
+        "text": "new since last check",
+        "variant": "caption"
+      }
+    },
+    "stats_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "100",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "3,107,434",
+        "delta": "+87,428",
+        "trend": "up"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "newly_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "newly_heading",
+        "newly_item_1",
+        "newly_item_2"
+      ]
+    },
+    "newly_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (2)",
+        "level": "h3"
+      }
+    },
+    "newly_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "newly_link_1",
+        "newly_badge_1",
+        "newly_stat_1"
+      ]
+    },
+    "newly_link_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "diegosouzapw/OmniRoute",
+        "href": "https://github.com/diegosouzapw/OmniRoute/pull/13745"
+      }
+    },
+    "newly_badge_1": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "newly_stat_1": {
+      "type": "Stat",
+      "props": {
+        "value": "68,792★"
+      }
+    },
+    "newly_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "newly_link_2",
+        "newly_badge_2",
+        "newly_stat_2"
+      ]
+    },
+    "newly_link_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "loopx-project/loopx",
+        "href": "https://github.com/loopx-project/loopx/security/advisories/GHSA-vx2m-gpq4-8j5q"
+      }
+    },
+    "newly_badge_2": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "newly_stat_2": {
+      "type": "Stat",
+      "props": {
+        "value": "5,916★"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "updated_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "updated_heading",
+        "updated_item_1",
+        "updated_item_2",
+        "updated_item_3",
+        "updated_item_4",
+        "updated_item_5",
+        "updated_item_6",
+        "updated_item_7",
+        "updated_item_8"
+      ]
+    },
+    "updated_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🔁 Updated fix / severity (8)",
+        "level": "h3"
+      }
+    },
+    "updated_item_1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_1",
+        "updated_badge_1",
+        "updated_stat_1"
+      ]
+    },
+    "updated_link_1": {
+      "type": "StoryLink",
+      "props": {
+        "title": "infiniflow/ragflow",
+        "href": "https://github.com/infiniflow/ragflow/pull/19348"
+      }
+    },
+    "updated_badge_1": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "updated_stat_1": {
+      "type": "Stat",
+      "props": {
+        "value": "91,098★"
+      }
+    },
+    "updated_item_2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_2",
+        "updated_badge_2",
+        "updated_stat_2"
+      ]
+    },
+    "updated_link_2": {
+      "type": "StoryLink",
+      "props": {
+        "title": "opendatalab/MinerU",
+        "href": "https://github.com/opendatalab/MinerU/commit/b31d3be7de"
+      }
+    },
+    "updated_badge_2": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "updated_stat_2": {
+      "type": "Stat",
+      "props": {
+        "value": "80,394★"
+      }
+    },
+    "updated_item_3": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_3",
+        "updated_badge_3",
+        "updated_stat_3"
+      ]
+    },
+    "updated_link_3": {
+      "type": "StoryLink",
+      "props": {
+        "title": "omacom/omarchy",
+        "href": "https://github.com/omacom/omarchy/pull/7884"
+      }
+    },
+    "updated_badge_3": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "updated_stat_3": {
+      "type": "Stat",
+      "props": {
+        "value": "42,477★"
+      }
+    },
+    "updated_item_4": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_4",
+        "updated_badge_4",
+        "updated_stat_4"
+      ]
+    },
+    "updated_link_4": {
+      "type": "StoryLink",
+      "props": {
+        "title": "herdrdev/herdr",
+        "href": "https://github.com/herdrdev/herdr/commit/322ab6a5a9"
+      }
+    },
+    "updated_badge_4": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "updated_stat_4": {
+      "type": "Stat",
+      "props": {
+        "value": "39,999★"
+      }
+    },
+    "updated_item_5": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_5",
+        "updated_badge_5",
+        "updated_stat_5"
+      ]
+    },
+    "updated_link_5": {
+      "type": "StoryLink",
+      "props": {
+        "title": "chatwoot/chatwoot",
+        "href": "https://github.com/chatwoot/chatwoot/pull/15463"
+      }
+    },
+    "updated_badge_5": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "updated_stat_5": {
+      "type": "Stat",
+      "props": {
+        "value": "37,025★"
+      }
+    },
+    "updated_item_6": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_6",
+        "updated_badge_6",
+        "updated_stat_6"
+      ]
+    },
+    "updated_link_6": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Tencent/WeKnora",
+        "href": "https://github.com/Tencent/WeKnora/pull/3305"
+      }
+    },
+    "updated_badge_6": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "updated_stat_6": {
+      "type": "Stat",
+      "props": {
+        "value": "28,385★"
+      }
+    },
+    "updated_item_7": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_7",
+        "updated_badge_7",
+        "updated_stat_7"
+      ]
+    },
+    "updated_link_7": {
+      "type": "StoryLink",
+      "props": {
+        "title": "guillaumemeyer/watermarks-remover",
+        "href": "https://github.com/guillaumemeyer/watermarks-remover/pull/146"
+      }
+    },
+    "updated_badge_7": {
+      "type": "Badge",
+      "props": {
+        "text": "MEDIUM",
+        "variant": "secondary"
+      }
+    },
+    "updated_stat_7": {
+      "type": "Stat",
+      "props": {
+        "value": "21,627★"
+      }
+    },
+    "updated_item_8": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "updated_link_8",
+        "updated_badge_8",
+        "updated_stat_8"
+      ]
+    },
+    "updated_link_8": {
+      "type": "StoryLink",
+      "props": {
+        "title": "oomol-lab/open-connector",
+        "href": "https://github.com/oomol-lab/open-connector/pull/369"
+      }
+    },
+    "updated_badge_8": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "updated_stat_8": {
+      "type": "Stat",
+      "props": {
+        "value": "5,854★"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "footer_note": {
+      "type": "Text",
+      "props": {
+        "text": "Dropped from board: huangruiteng/loopx",
+        "variant": "muted"
+      }
+    }
+  }
+}
