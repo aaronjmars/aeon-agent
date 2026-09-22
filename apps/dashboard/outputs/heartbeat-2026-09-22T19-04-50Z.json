@@ -1,0 +1,287 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat — Fleet Health",
+        "description": "Fleet status and anomaly detection report"
+      },
+      "children": [
+        "alert-main",
+        "sep-1",
+        "section-failed",
+        "sep-2",
+        "section-analysis",
+        "sep-3",
+        "section-issues",
+        "sep-4",
+        "section-memory",
+        "sep-5",
+        "section-status"
+      ]
+    },
+    "alert-main": {
+      "type": "Alert",
+      "props": {
+        "title": "⚠️ FAILED",
+        "message": "token-report (4 consecutive failures today, last ~13:26 UTC, zero-token signature) · secured-watch (3 consecutive failures today, last ~13:25 UTC, same signature)",
+        "type": "error"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-failed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-failed",
+        "stack-failures"
+      ]
+    },
+    "heading-failed": {
+      "type": "Heading",
+      "props": {
+        "text": "Failed Skills",
+        "level": "h2"
+      }
+    },
+    "stack-failures": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-token-report",
+        "text-secured-watch"
+      ]
+    },
+    "text-token-report": {
+      "type": "Text",
+      "props": {
+        "text": "token-report: 4 consecutive failures today, last ~13:26 UTC, zero-token signature",
+        "variant": "body"
+      }
+    },
+    "text-secured-watch": {
+      "type": "Text",
+      "props": {
+        "text": "secured-watch: 3 consecutive failures today, last ~13:25 UTC, same signature",
+        "variant": "body"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-analysis": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-analysis",
+        "text-signature",
+        "text-recovery"
+      ]
+    },
+    "heading-analysis": {
+      "type": "Heading",
+      "props": {
+        "text": "Root Cause Analysis",
+        "level": "h2"
+      }
+    },
+    "text-signature": {
+      "type": "Text",
+      "props": {
+        "text": "Both share the total_cost_usd:0/all-zero-token error signature — looks like a shared-dependency blip (LLM gateway), not two separate code regressions.",
+        "variant": "body"
+      }
+    },
+    "text-recovery": {
+      "type": "Text",
+      "props": {
+        "text": "tweet-digest dispatched later (17:00 UTC) and completed cleanly, so the dependency likely recovered by then — a manual re-dispatch of either skill would confirm before tomorrow's cron.",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-issues": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-issues",
+        "stack-issue-links"
+      ]
+    },
+    "heading-issues": {
+      "type": "Heading",
+      "props": {
+        "text": "Auto-filed Health Threads",
+        "level": "h2"
+      }
+    },
+    "stack-issue-links": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "link-issue-230",
+        "link-issue-231"
+      ]
+    },
+    "link-issue-230": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#230 - token-report (4 regression comments today)",
+        "href": "https://github.com/aaronjmars/aeon-agent/issues/230",
+        "source": "GitHub"
+      }
+    },
+    "link-issue-231": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#231 - secured-watch (3 regression comments today)",
+        "href": "https://github.com/aaronjmars/aeon-agent/issues/231",
+        "source": "GitHub"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-memory": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-memory",
+        "text-memory-intro",
+        "stack-memory-items"
+      ]
+    },
+    "heading-memory": {
+      "type": "Heading",
+      "props": {
+        "text": "🔵 Carried Memory Flags",
+        "level": "h2"
+      }
+    },
+    "text-memory-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Two carried flags, unchanged, no new alert",
+        "variant": "caption"
+      }
+    },
+    "stack-memory-items": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "memory-item-1",
+        "memory-item-2"
+      ]
+    },
+    "memory-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-memory-1",
+        "text-memory-detail-1"
+      ]
+    },
+    "badge-memory-1": {
+      "type": "Badge",
+      "props": {
+        "text": "Working-tree Anomaly",
+        "variant": "outline"
+      }
+    },
+    "text-memory-detail-1": {
+      "type": "Text",
+      "props": {
+        "text": "AGENTS.md deleted-uncommitted, notify/notify-jsonrender untracked, 35+ days",
+        "variant": "caption"
+      }
+    },
+    "memory-item-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-memory-2",
+        "text-memory-detail-2"
+      ]
+    },
+    "badge-memory-2": {
+      "type": "Badge",
+      "props": {
+        "text": "Git Hygiene Issue",
+        "variant": "outline"
+      }
+    },
+    "text-memory-detail-2": {
+      "type": "Text",
+      "props": {
+        "text": "Scratch-file git tracking: .tmp-sw/, output/.tw-* tracked in git from /tmp sandbox fallback",
+        "variant": "caption"
+      }
+    },
+    "sep-5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-status",
+        "text-status-change"
+      ]
+    },
+    "heading-status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Page Change",
+        "level": "h2"
+      }
+    },
+    "text-status-change": {
+      "type": "Text",
+      "props": {
+        "text": "🟡 WATCH → 🔴 DEGRADED",
+        "variant": "lead"
+      }
+    }
+  }
+}
