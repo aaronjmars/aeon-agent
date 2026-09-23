@@ -1,20 +1,18 @@
-ℹ️ Secured by Aeon
+## Secured Watch — 2026-09-23
 
-## Secured by Aeon — new since last check
-**100 repos** secured (+1) · **3,107,434★** total (+87,428)
+Fetched `https://www.aeon.fun/security` (HTTP 200, 416,006 bytes), parsed 100 secured-repo rows via the aria-label pattern.
 
-### 🆕 Newly secured (2)
-- **[diegosouzapw/OmniRoute](https://github.com/diegosouzapw/OmniRoute/pull/13745)** — `HIGH` · 68,792★ — 
-- **[loopx-project/loopx](https://github.com/loopx-project/loopx/security/advisories/GHSA-vx2m-gpq4-8j5q)** — `HIGH` · 5,916★ — 
+**Result: NO_CHANGE** — the board is identical to the last snapshot (2026-09-22):
+- **100 repos** secured (±0)
+- **3,107,434★** total stars (±0)
+- New: none · Changed (fix link / severity): none · Dropped: none
 
-### 🔁 Updated fix / severity (8)
-- **[infiniflow/ragflow](https://github.com/infiniflow/ragflow/pull/19348)** — `HIGH` · 91,098★ — 
-- **[opendatalab/MinerU](https://github.com/opendatalab/MinerU/commit/b31d3be7de)** — `MEDIUM` · 80,394★ — 
-- **[omacom/omarchy](https://github.com/omacom/omarchy/pull/7884)** — `HIGH` · 42,477★ — 
-- **[herdrdev/herdr](https://github.com/herdrdev/herdr/commit/322ab6a5a9)** — `HIGH` · 39,999★ — 
-- **[chatwoot/chatwoot](https://github.com/chatwoot/chatwoot/pull/15463)** — `MEDIUM` · 37,025★ — 
-- **[Tencent/WeKnora](https://github.com/Tencent/WeKnora/pull/3305)** — `HIGH` · 28,385★ — 
-- **[guillaumemeyer/watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover/pull/146)** — `MEDIUM` · 21,627★ — 
-- **[oomol-lab/open-connector](https://github.com/oomol-lab/open-connector/pull/369)** — `HIGH` · 5,854★ — 
+Per the skill's silence rule, no notification was sent — a quiet run doesn't get a report. State (`memory/state/secured-repos.json`) was advanced to today's date with the same content to keep the next diff correct.
 
-_Dropped from board: huangruiteng/loopx_
+**Note (not part of this run's scope, logged for awareness):** `output/.sw/` (parse.py, report.md, security.html) is tracked in git from a prior run — matches the known "scratch-file git hygiene" issue already flagged in `memory/MEMORY.md` under Next Priorities. Left as-is since cleanup wasn't this run's job and `rm` isn't a granted tool.
+
+## Summary
+- Ran `secured-watch` (default mode, no `${var}` flag) — fetch → parse → diff → advance state.
+- Modified: `memory/state/secured-repos.json` (timestamp bump only, no data change), `memory/logs/2026-09-23.md` (appended `### secured-watch` log entry).
+- No notification sent (NO_CHANGE — nothing new or updated on the board).
+- Follow-up: none required for this run; the pre-existing tracked `output/.sw/` scratch files remain a cleanup item for a future skill-repair pass.
