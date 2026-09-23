@@ -1,0 +1,306 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-23"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "security_section",
+        "sep1",
+        "skill_section",
+        "sep2",
+        "shipped_section",
+        "sep3",
+        "growth_section"
+      ]
+    },
+    "security_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "security_heading",
+        "tweet_sec1"
+      ]
+    },
+    "security_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Security Disclosures",
+        "level": "h3"
+      }
+    },
+    "tweet_sec1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_sec1",
+        "link_sec1"
+      ]
+    },
+    "tweetcard_sec1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "aaronjmars got acknowledged in nvidia's latest security report — vuln found in their open-shell repo via the aeon vuln-scanner, fix already merged"
+      }
+    },
+    "link_sec1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2102653996330823701"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "skill_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "skill_heading",
+        "tweet_skill1"
+      ]
+    },
+    "skill_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Skill Drop",
+        "level": "h3"
+      }
+    },
+    "tweet_skill1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_skill1",
+        "link_skill1"
+      ]
+    },
+    "tweetcard_skill1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "New skill spotlight, Create-Prove — makes an aeon agent run the changed skill through a real workflow and post the actual run as evidence on the PR, tied to the tested commit"
+      }
+    },
+    "link_skill1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2102775282918662260"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "shipped_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped_heading",
+        "tweet_ship1",
+        "tweet_ship2"
+      ]
+    },
+    "shipped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Shipped",
+        "level": "h3"
+      }
+    },
+    "tweet_ship1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_ship1",
+        "link_ship1"
+      ]
+    },
+    "tweetcard_ship1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "CapGate Aeon Hook — rejects any swap bigger than 5% of a pool's reserve"
+      }
+    },
+    "link_ship1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2102367312141779375"
+      }
+    },
+    "tweet_ship2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_ship2",
+        "link_ship2"
+      ]
+    },
+    "tweetcard_ship2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "vuln-scanner has now secured repos with 4.3M+ combined GitHub stars, incl. nvidia, google, microsoft, alibaba, tencent, cloudflare"
+      }
+    },
+    "link_ship2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2102284535014793378"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "growth_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "growth_heading",
+        "tweet_growth1",
+        "tweet_growth2",
+        "tweet_growth3"
+      ]
+    },
+    "growth_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Growth & Community",
+        "level": "h3"
+      }
+    },
+    "tweet_growth1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_growth1",
+        "link_growth1"
+      ]
+    },
+    "tweetcard_growth1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "RT of @PremierBase's \"Base Build 001\" spotlight naming aeon an autonomous agent framework"
+      }
+    },
+    "link_growth1": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2102428346436981107"
+      }
+    },
+    "tweet_growth2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_growth2",
+        "link_growth2"
+      ]
+    },
+    "tweetcard_growth2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "RT of aaronjmars introducing aeon products — tokenholders don't just own aeon IP, they also own what's built on top"
+      }
+    },
+    "link_growth2": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2102112992527556920"
+      }
+    },
+    "tweet_growth3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweetcard_growth3",
+        "link_growth3"
+      ]
+    },
+    "tweetcard_growth3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "Announced the 5 HivePunkz giveaway winners, asking them to DM their address to claim"
+      }
+    },
+    "link_growth3": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2102751783189610816"
+      }
+    }
+  }
+}
