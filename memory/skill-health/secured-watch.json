@@ -1,15 +1,11 @@
 {
   "skill": "secured-watch",
-  "last_analyzed": "2026-09-23T12:04:22Z",
-  "quality_score": 3,
-  "assessment": "Operational task completed cleanly—monitoring skill ran successfully, fetched verified data, correctly applied no-change silence rule, and updated state. Well-structured output. Does not advance north-star metrics or ship framework code; appropriate for routine ops work but outside strategic priorities.",
+  "last_analyzed": "2026-09-24T12:05:20Z",
+  "quality_score": 4,
+  "assessment": "Substantive, verifiable ops task — correctly tracked repo state, detected no changes, suppressed noise per design, and caught/fixed an in-run anomaly (stale scratch files with hardcoded date).",
   "flags": [],
   "avg_score": 3.73,
   "history": [
-    {
-      "date": "2026-08-25",
-      "score": 4
-    },
     {
       "date": "2026-08-26",
       "score": 4
@@ -125,6 +121,10 @@
     {
       "date": "2026-09-23",
       "score": 3
+    },
+    {
+      "date": "2026-09-24",
+      "score": 4
     }
   ]
 }
