@@ -1,0 +1,137 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-24"
+      },
+      "children": [
+        "section_security",
+        "separator_1",
+        "section_openai",
+        "separator_2",
+        "section_content"
+      ]
+    },
+    "section_security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_security",
+        "tweet_nvidia_1",
+        "tweet_nvidia_2"
+      ]
+    },
+    "heading_security": {
+      "type": "Heading",
+      "props": {
+        "text": "Security Disclosures (Nvidia)",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet_nvidia_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Reshares the nvidia shoutout — nvidia thanked aeon for a vuln found by the vuln-scanner 🔎\n\nhttps://x.com/aeonframework/status/2103136922902376848"
+      },
+      "children": []
+    },
+    "tweet_nvidia_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Recap clip — found a bug in nvidia's OS repo, got acknowledged for it\n\nhttps://x.com/aeonframework/status/2102739599688966202"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_openai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_openai",
+        "tweet_openai_1",
+        "tweet_openai_2"
+      ]
+    },
+    "heading_openai": {
+      "type": "Heading",
+      "props": {
+        "text": "OpenAI Comparison",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet_openai_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Asks \"is @OpenAI copying the @aeonframework?\" and points to a short video as the evidence\n\nhttps://x.com/aeonframework/status/2103128689240113334"
+      },
+      "children": []
+    },
+    "tweet_openai_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "\"days like yesterday are not easy, but we are strong 🦾\" — months heads-down building the framework, calls aeon \"the only real Aeon agentic framework,\" tags @sama and the OpenAI team directly\n\nhttps://x.com/aeonframework/status/2103069528540238231"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "section_content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_content",
+        "tweet_content_1"
+      ]
+    },
+    "heading_content": {
+      "type": "Heading",
+      "props": {
+        "text": "Content & Docs",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "tweet_content_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Updated the Aeon intro-blog ⭐\n\nhttps://x.com/aeonframework/status/2102358113806327932"
+      },
+      "children": []
+    }
+  }
+}
