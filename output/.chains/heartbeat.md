@@ -1,18 +1,23 @@
-Fleet is healthy — nothing rises to notification level, so no `./notify` send this run per dedup rules.
+## Heartbeat — Ambient fleet check (2026-09-24, mode: ambient)
 
-## Heartbeat — Ambient check, 2026-09-23 19:02 UTC
+**P0 — Failed & stuck skills:** CLEAR. All 10 enabled skills (`heartbeat`, `token-report`, `holdings`, `repo-pulse`, `tweet-digest`, `secured-watch`, `changelog`, `aeon-update`, `shiplog`, `memory-flush`) show `last_status: success`, 0 consecutive failures fleet-wide. Lowest success rates (aeon-update 64%, holdings 73%, changelog 75%) are all above the 0.5 chronic-failure bar. No stuck/dispatched skills other than this in-flight run. Self-check clear (heartbeat's own last success 2026-09-23 19:03 UTC, well under 36h).
 
-**P0 (failed/stuck skills):** CLEAR. The fleet fully recovered from yesterday's shared LLM-gateway outage — `token-report` (06:01 UTC) and `secured-watch` (12:02 UTC) both succeeded on their next scheduled dispatch; `consecutive_failures` is back to 0 across the board. No skill has `consecutive_failures ≥ 3`, `success_rate < 0.5`, or a stuck `dispatched` state. Heartbeat self-check clear (last success <24h ago).
+**P1 — Stalled PRs & urgent issues:** CLEAR. 0 open PRs. 2 open GitHub issues (`#230` token-report, `#231` secured-watch) — these are the auto-filed health threads from the 09-22 shared-LLM-gateway outage; both skills have since fully recovered and neither issue carries an urgent label. Unchanged since yesterday.
 
-**P1 (stalled PRs / urgent issues):** CLEAR. 0 open PRs. 2 open issues (#230 token-report, #231 secured-watch — the health threads auto-filed for yesterday's outage, still open pending a repair-loop close), neither labeled urgent.
+**P2 — Flagged memory items:** Two long-carried flags, both already reported within the last 48h (deduped, no re-alert):
+- Working-tree anomaly — `AGENTS.md` deleted-uncommitted, `notify`/`notify-jsonrender` untracked — persisting 37+ days (since 08-18), still needs an operator decision (restore/delete/gitignore).
+- Scratch-file git hygiene — tracked `.tmp-sw/`/`output/.tw-*` scratch artifacts, awaiting a skill-repair cleanup pass. Today's `secured-watch` run hit a fresh instance (stale `.tmp-sw/report.md`, `.tmp-sw/notify.md`, a `parse.py` with a hardcoded stale date from an earlier aborted attempt) but self-corrected in-run without serving bad data — no new flag needed.
 
-**P2 (flagged memory items):** Two long-carried flags persist, both deduped (already reported within 48h, no re-alert):
-- Working-tree anomaly — `AGENTS.md` deleted-on-disk (uncommitted), `notify`/`notify-jsonrender` untracked, 36+ days unresolved.
-- Scratch-file git hygiene — `.tmp-sw/`, `output/.tw-*` tracked scratch files awaiting a skill-repair cleanup.
+**P3 — Missing scheduled skills:** CLEAR. All 10 enabled skills have `cron-state.json` entries; none exceed 2x their schedule interval.
 
-**P3 (missing scheduled skills):** CLEAR. All 10 enabled skills have cron-state entries; none exceed 2x their schedule interval.
+**Notification:** none sent — no new findings, everything above was already reported within the dedup window.
 
-**Status page:** Regenerated `docs/status.md` — verdict moved 🔴 DEGRADED → 🟡 WATCH (fleet green, but #230/#231 still open plus the two carried P2 flags keep it off 🟢). Token pulse restored using today's report ($0.00002663, -18.8% 24h, BREAKDOWN verdict).
+**Status page:** `docs/status.md` regenerated — verdict holds at **🟡 WATCH** (fleet fully green operationally, but the two open health-thread issues + two long-carried P2 flags keep it off 🟢). Token pulse refreshed from today's `token-report` article: AEON $0.00002371, 24h -11.0%, liquidity $1.48M, volume $156.7K, FDV $2.37M, verdict **CONSOLIDATING**. Next scheduled run: `token-report` at 2026-09-25 06:00 UTC.
+
+`HEARTBEAT_OK · STATUS_PAGE=WATCH`
 
 ## Summary
-Ran the ambient heartbeat check. Confirmed yesterday's token-report/secured-watch failures fully recovered; sent no notification (nothing new, existing flags already deduped). Updated `docs/status.md` (🔴→🟡) and appended the `### heartbeat` log entry to `memory/logs/2026-09-23.md`. Follow-up still needed (unchanged from prior days, not actioned by heartbeat): close #230/#231 once repair loop picks them up, resolve the AGENTS.md/notify working-tree anomaly, and clean up tracked scratch files.
+- Read `memory/MEMORY.md`, last 2 days of logs, `cron-state.json`, `aeon.yml`, open PRs/issues — no new findings, fleet is fully green.
+- Updated `docs/status.md` (fresh timestamps, refreshed token pulse from 09-24 report, updated "next scheduled run").
+- Appended a `### heartbeat` entry to `memory/logs/2026-09-24.md` under `mode: ambient`.
+- No notification sent (nothing new to report). No follow-up actions beyond the two already-tracked, unresolved items (working-tree anomaly, scratch-file hygiene) which remain queued for a skill-repair pass.
