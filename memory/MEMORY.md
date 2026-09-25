@@ -30,6 +30,7 @@ Older rows archived to `memory/topics/digests-history.md`.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-25 | tweet-digest | TWEET_DIGEST_OK — no notable new tweets; only new item was a same-day RT of @aaronjmars's bytedance/TikTok bug-report thread, excluded per skip-RTs rule; all other window originals already reported 09-23/09-24 |
 | 2026-09-24 | tweet-digest | Security disclosures (Nvidia reshare — vuln-scanner thanks + bug-found recap), OpenAI comparison ("is OpenAI copying aeon" short + "only real Aeon agentic framework" post tagging @sama), Content & Docs (intro-blog updated) |
 | 2026-09-20 | tweet-digest | Security disclosures (Tencent MicroVM vuln via aaronjmars RT), Narrative & Community (git-as-agent-memory/nvidia narrative, pi-harness automation reply to @jessepollak) |
 | 2026-09-19 | tweet-digest | TWEET_DIGEST_OK — no notable new tweets, genuine thin cycle (0 net-new originals since 09-18) |
