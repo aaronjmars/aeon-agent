@@ -1,0 +1,108 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report",
+        "description": "$AEON — CONSOLIDATING"
+      },
+      "children": [
+        "narrative",
+        "sep1",
+        "metrics-grid",
+        "sep2",
+        "chart-link"
+      ]
+    },
+    "narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price eased -2.3% on just 0.45x avg volume — quiet-adjacent, but 21 whale trades ($23.7K buys vs $20.9K sells) kept it off the QUIET label. 7d still up +43.5%.",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "liq-stat",
+        "vol-stat",
+        "buys-stat",
+        "whales-stat",
+        "perf-progress"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price (24h)",
+        "value": "$0.00002316",
+        "delta": "-2.3%",
+        "trend": "down"
+      }
+    },
+    "liq-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.48M",
+        "delta": "+0.1%",
+        "trend": "up"
+      }
+    },
+    "vol-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (0.45x avg)",
+        "value": "$82.7K"
+      }
+    },
+    "buys-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys / Sells",
+        "value": "86 / 90 (0.96)"
+      }
+    },
+    "whales-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Trades",
+        "value": "21"
+      }
+    },
+    "perf-progress": {
+      "type": "Progress",
+      "props": {
+        "label": "7-day Performance",
+        "value": 43.5,
+        "max": 100
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}

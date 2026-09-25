@@ -1,8 +1,10 @@
+ℹ️ AEON Token Report
+
 *$AEON — CONSOLIDATING*
 
-Price -11.0% but volume just 0.94x the 7d average — well short of the 2.0x bar BREAKDOWN needs, so the drop reads as drift, not a confirmed reversal.
+Price eased -2.3% on just 0.45x avg volume — quiet-adjacent, but 21 whale trades ($23.7K buys vs $20.9K sells) kept it off the QUIET label. 7d still up +43.5%.
 
-Price $0.00002371 (-11.0% 24h) | Liq $1.48M (-7.7%) | Vol $156.7K (0.94x 7d)
-Buys/Sells 198/182 (ratio 1.09) | Whales: 26
+Price $0.00002316 (-2.3% 24h) | Liq $1.48M (+0.1%) | Vol $82.7K (0.45x 7d)
+Buys/Sells 86/90 (ratio 0.96) | Whales: 21
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
