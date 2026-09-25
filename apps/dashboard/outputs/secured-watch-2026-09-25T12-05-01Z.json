@@ -1,0 +1,120 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon — new since last check"
+      },
+      "children": [
+        "stats-container",
+        "separator-1",
+        "newly-secured-section"
+      ]
+    },
+    "stats-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-repos",
+        "stat-stars-total"
+      ]
+    },
+    "stat-repos": {
+      "type": "Stat",
+      "props": {
+        "label": "Repos secured",
+        "value": "101",
+        "delta": "+1",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-stars-total": {
+      "type": "Stat",
+      "props": {
+        "label": "Total stars",
+        "value": "3,261,756",
+        "delta": "+154,322",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "newly-secured-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "newly-secured-heading",
+        "repo-list"
+      ]
+    },
+    "newly-secured-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (1)",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "repo-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "repo-item-1"
+      ]
+    },
+    "repo-item-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "repo-storylink",
+        "repo-severity",
+        "repo-stars"
+      ]
+    },
+    "repo-storylink": {
+      "type": "StoryLink",
+      "props": {
+        "title": "bytedance/UI-TARS-desktop",
+        "href": "https://github.com/bytedance/UI-TARS-desktop/pull/1975"
+      },
+      "children": []
+    },
+    "repo-severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "repo-stars": {
+      "type": "Text",
+      "props": {
+        "text": "39,107★",
+        "variant": "caption"
+      },
+      "children": []
+    }
+  }
+}
