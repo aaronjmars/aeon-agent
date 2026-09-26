@@ -1,0 +1,118 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text_token_status",
+        "text_narrative",
+        "separator_1",
+        "grid_metrics",
+        "separator_2",
+        "link_chart"
+      ]
+    },
+    "text_token_status": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "variant": "lead"
+      }
+    },
+    "text_narrative": {
+      "type": "Text",
+      "props": {
+        "text": "Price -7.0% on 0.86x avg volume — soft, but 26 whale trades (net -$4.4K to sells) keep it off QUIET.",
+        "variant": "body"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "grid_metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat_price",
+        "stat_liquidity",
+        "stat_volume",
+        "stat_buysells",
+        "stat_whales"
+      ]
+    },
+    "stat_price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002154",
+        "delta": "-7.0% 24h",
+        "trend": "down"
+      }
+    },
+    "stat_liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.42M",
+        "delta": "-4.0%",
+        "trend": "down"
+      }
+    },
+    "stat_volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$139.3K",
+        "delta": "0.86x 7d"
+      }
+    },
+    "stat_buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "111/101",
+        "delta": "ratio 1.10"
+      }
+    },
+    "stat_whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "26"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_chart": {
+      "type": "Link",
+      "props": {
+        "label": "GeckoTerminal Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
