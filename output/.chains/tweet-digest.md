@@ -1,18 +1,19 @@
-Good, well within the 200-line limit. Per the SKILL, no notable tweets means no `./notify` call. Final output below.
+Ran the tweet-digest skill for the single tracked account (`aeonframework`, per `memory/topics/tracked-accounts.yml`) and found no new original tweets — same thin-cycle pattern as yesterday's run.
 
-## Tweet Digest — 2026-09-25
+## Tweet Digest — 2026-09-26
 
-Fetched `@aeonframework` (the only tracked account) via twitterapi.io — `http=200`, 20 tweets returned, covering the full 3-day window (2026-09-22 through today).
+**Account:** aeonframework (only entry in tracked-accounts.yml)
+**Fetch:** twitterapi.io `/user/last_tweets`, http=200, 20 tweets returned, window since 2026-09-23
 
-**Result: nothing new to report.**
+**Result:** No new candidates. The account's newest activity is a same-day retweet from 09-25 05:39 UTC (RT of @aaronjmars's bytedance/TikTok bug-report thread) — already flagged and excluded on 09-25 per the skip-RTs rule, and nothing has posted since. The last original tweet is still the 09-24 10:30 UTC post ("heads down... only real Aeon agentic framework"), already reported in the 09-24 digest.
 
-- The only tweet posted *since* the last digest was a same-day retweet of @aaronjmars's thread about a BYTEDANCE/TikTok bug report (134 days of silence, then acknowledgment) — excluded per the skill's skip-replies/RTs rule, since it's a repost of the founder's account, not an original `aeonframework` post.
-- Every original (non-RT) tweet inside the 3-day window — the Nvidia thank-you, the "is OpenAI copying aeon" post, the "heads down for months" @sama-tagged post, the Create-Prove skill spotlight, the Hive Punkz congrats, the founder's Nvidia vuln acknowledgment, the CapGate hook clip, the intro-blog update, and the 4.3M-stars vuln-scanner milestone — was already surfaced in the 09-23 or 09-24 digests.
-- Net-new original candidates: **0**.
+All 7 non-RT candidates in the 3-day window were already reported in the 09-23/09-24 logs; the 3 RTs in-window were excluded per the skip-retweets rule. Zero net-new items — no notification sent (per skill rule, a clean/no-change cycle stays silent).
 
-`TWEET_DIGEST_OK` — no notification sent (clean/no-change run, per CLAUDE.md: notify only on signal).
+`TWEET_DIGEST_OK` logged.
 
 ## Summary
-- Ran `tweet-digest` for `aeonframework` (sole tracked account); no new original tweets since the last digest — thin cycle, correctly suppressed notification.
-- Modified: `memory/logs/2026-09-25.md` (appended `### tweet-digest` entry), `memory/MEMORY.md` (added 2026-09-25 row to Recent Digests table).
-- Follow-up: none required — next scheduled tick will pick up any new originals posted after today's RT.
+- Fetched and parsed aeonframework's last 20 tweets via twitterapi.io, deduped against the 09-23–09-25 logs.
+- Outcome: no notable new tweets (second thin cycle in a row); no notification sent, per the "notify only on signal" rule.
+- Modified: `memory/logs/2026-09-26.md` (appended `### tweet-digest` section).
+- Left in place: `output/.tw-td.json`, `output/.tw-td.jq`, `output/.tw-td-parse.py` — scratch/helper files for the fetch (kept as stable, reusable filenames so future runs overwrite in place rather than accumulating new ones; `rm` isn't a granted tool, consistent with the known scratch-file git-hygiene issue already tracked in `memory/MEMORY.md`).
+- Follow-up: none needed — will re-check tomorrow; no new activity to escalate.
