@@ -1,23 +1,13 @@
-No notifications sent this run — fleet is fully green and the two carried flags (health issues #230/#231, working-tree anomaly, scratch-file hygiene) were already reported within the last 48h.
+The `AGENTS.md` deletion and untracked `notify`/`notify-jsonrender` files are the pre-existing working-tree anomaly (flagged in memory, out of heartbeat's scope) — not something I touched. Only `docs/status.md` and today's log were modified, as expected.
 
-## Ambient fleet-health check — 2026-09-26 19:02 UTC
-
-**P0 (failed/stuck skills): CLEAR.** All 10 enabled skills (`heartbeat`, `tweet-digest`, `secured-watch`, `token-report`, `aeon-update`, `repo-pulse`, `shiplog`, `changelog`, `holdings`, `memory-flush`) show `last_status: success`, 0 consecutive failures fleet-wide. Lowest success rates — `aeon-update` 64%, `changelog` 75%, `holdings` 73% — are all above the 0.5 chronic-failure bar. No stuck/hung dispatches. Heartbeat's own self-check is clear (last success 2026-09-25 19:03 UTC, <36h).
-
-**P1 (stalled PRs / urgent issues): CLEAR.** 0 open PRs. 2 open GitHub issues (#230 `health: token-report`, #231 `health: secured-watch`) — auto-filed from the 09-22 outage, unlabeled urgent, unchanged since 09-22, and both source skills have run green for 4+ days since. Already reported in yesterday's log — deduped, no re-alert.
-
-**P2 (flagged memory items):** two long-carried, cosmetic flags, both already reported within 48h:
-- Working-tree anomaly: `AGENTS.md` deleted-on-disk (uncommitted), `notify`/`notify-jsonrender` untracked — persisting since 08-18 (39+ days), still awaiting an operator decision.
-- Scratch-file git hygiene: tracked `.tmp-sw/`/`output/.tw-*` scratch files from sandboxed `/tmp` fallback writes, not yet cleaned by skill-repair.
-
-**P3 (missing scheduled skills): CLEAR.** All 10 enabled skills have cron-state entries; none exceed 2x their schedule interval.
-
-**Status page:** regenerated `docs/status.md` — verdict holds **🟡 WATCH** (fleet fully green, but the two open health issues + two carried P2 flags keep it off 🟢). Token pulse refreshed from today's `token-report-2026-09-26.md`: AEON $0.00002154, -7.0% 24h (below-trend volume, $139.3K vs $161.9K 7d avg), $1.42M liquidity, $2.15M FDV, verdict CONSOLIDATING. Next scheduled run: `token-report` at 2026-09-27 06:00 UTC.
-
-`HEARTBEAT_OK · STATUS_PAGE=WATCH`
+Fleet is healthy — nothing new needs a notification, so none was sent (per the dedup rule, all carried items were already reported).
 
 ## Summary
-- Ran the ambient heartbeat check (default `${var}`); no new findings — everything either green or already deduped within 48h.
-- Regenerated `docs/status.md` with today's timestamps/success rates and refreshed token pulse.
-- Appended a `### heartbeat` entry to `memory/logs/2026-09-26.md`.
-- No notification sent (nothing new to surface). No follow-up actions needed beyond the standing carried items (operator decision on the working-tree anomaly; skill-repair pass on scratch-file hygiene) — both already tracked in `memory/MEMORY.md` Next Priorities.
+
+Ran heartbeat in **ambient check** mode (default, `${var}` empty):
+- **P0 (failures):** Clear — all 10 enabled skills (`heartbeat`, `memory-flush`, `tweet-digest`, `secured-watch`, `token-report`, `aeon-update`, `repo-pulse`, `shiplog`, `changelog`, `holdings`) show `last_status: success`, 0 consecutive failures.
+- **P1 (PRs/issues):** Clear — 0 open PRs, 2 open non-urgent health issues (#230, #231) unchanged from yesterday.
+- **P2 (memory flags):** 3 carried items, all already known within the dedup window — working-tree anomaly, scratch-file git hygiene, and a newly-promoted (but pre-existing) secured-watch parser-drift note.
+- **P3 (missing skills):** Clear.
+
+Regenerated `docs/status.md` (verdict holds 🟡 WATCH — fleet green, cosmetic flags only) with fresh token pulse from today's `token-report-2026-09-27.md` (+2.1% 24h, CONSOLIDATING). Appended the `### heartbeat` findings to `memory/logs/2026-09-27.md`. No notification sent (nothing new since yesterday's run). Files modified: `docs/status.md`, `memory/logs/2026-09-27.md`.
