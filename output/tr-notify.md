@@ -1,5 +1,3 @@
-ℹ️ AEON Token Report
-
 *$AEON — CONSOLIDATING*
 
 Price +2.1% on 0.3x avg volume — too thin for rallying, buy/sell ratio 0.92 too flat for accumulating. Whale flow leaned buy (+$2.6K net) even as raw sells outnumbered buys.

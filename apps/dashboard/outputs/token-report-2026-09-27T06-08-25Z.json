@@ -1,0 +1,125 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report",
+        "description": "CONSOLIDATING"
+      },
+      "children": [
+        "analysis-text",
+        "separator-1",
+        "stats-grid",
+        "separator-2",
+        "chart-link"
+      ]
+    },
+    "analysis-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price +2.1% on 0.3x avg volume — too thin for rallying, buy/sell ratio 0.92 too flat for accumulating. Whale flow leaned buy (+$2.6K net) even as raw sells outnumbered buys.",
+        "variant": "body"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "liq-stat",
+        "vol-stat",
+        "whale-flow-stat",
+        "buys-stat",
+        "sells-stat",
+        "ratio-stat",
+        "whales-stat"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00002199",
+        "delta": "+2.1%",
+        "trend": "up"
+      }
+    },
+    "liq-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$1.43M",
+        "delta": "+0.4%",
+        "trend": "up"
+      }
+    },
+    "vol-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$41.8K",
+        "delta": "0.3× 7d avg"
+      }
+    },
+    "whale-flow-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Flow (net)",
+        "value": "+$2.6K",
+        "trend": "up"
+      }
+    },
+    "buys-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys",
+        "value": "67"
+      }
+    },
+    "sells-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Sells",
+        "value": "73"
+      }
+    },
+    "ratio-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "0.92"
+      }
+    },
+    "whales-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "12"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
