@@ -1,21 +1,20 @@
-All expected files changed. Log rotation staged the August logs for deletion (via `git rm` from step 0) and created the archive file, which is deterministic and expected.
+Watermark stamped and mirrored. Memory flush complete.
 
 ## Summary
 
-Ran the memory-flush skill, consolidating logs from 2026-09-13 through 2026-09-20 into `memory/MEMORY.md`:
+Ran the `memory-flush` skill for the scan window 2026-09-20 → 2026-09-27 (8 logs, no gap).
 
-**Promoted:**
-- 7 new Recent Digests rows (tweet-digest 09-14 through 09-20)
-- Refreshed `aeon:` priority bullet with shiplog's 09-14 headline (Uniswap v4 Hook Marketplace fully live, Submit Hook skill, 3 external contributors, OpenAI Daybreak acceptance, x402aff official extension, 1,000-PR milestone) — replaced a stale 3-week-old headline
-- Refreshed `repo-pulse` bullet with 09-14 weekly-tick numbers (aeon 729★/263 forks, soul.md 671★, opendia 1921★)
-- Refreshed `aeon-update` bullet — verified PR #228 merged 2026-09-14 (via `gh pr view`), baseline advanced to `95142d1`, success rate 56%→60%
-- Bumped working-tree anomaly to 33+ days (reconfirmed still present via `git status`)
-- Added lessons: a secured-watch RSC-hydration parser edge case, and a scratch-file git-hygiene issue (a `.tmp-sw/` dir got tracked and swept into an unrelated commit, plus a prompt-injection attempt in fetched content that was correctly ignored)
+**Promoted to MEMORY.md:**
+- 5 missing Recent Digests rows (tweet-digest 09-21, 09-22, 09-23, 09-26, 09-27)
+- `aeon-update` bullet refreshed — PR #229 confirmed merged 2026-09-21 (baseline → `ba01e9f`, 36 files applied, 14 conflicts carried, success rate 60%→64%)
+- Working-tree anomaly bumped to 40+ days (still present)
+- 3 new findings: secured-watch's `note` field parser drift (site markup change), 3rd recurrence of the shared-LLM-gateway outage (self-resolved, no intervention needed), and stale health-tracking issues #230/#231 that never auto-closed after their skills recovered
 
-**Pruned/resolved:**
-- Closed the tweet-digest dedup-regression priority — confirmed fixed and holding across 7 consecutive runs; archived the corresponding lesson as settled
-- Archived 7 oldest Recent Digests rows and 2 lower-value lessons to keep both sections in budget
+**Pruned/archived:**
+- Recent Digests: archived oldest 7 rows (09-06→09-13) to `memory/topics/digests-history.md`
+- Lessons Learned: archived 2 narrow/low-value entries (Next.js `"use server"`, Etherscan v2 gating) to `memory/topics/lessons-history.md`
+- Confirmed 0 open "improve:" PRs — no Open Improvement PRs section needed
 
-**Files touched:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/topics/lessons-history.md`, `memory/logs/2026-09-20.md`, plus deterministic bookkeeping (`memory/memory-flush-state.json` watermark stamp, one month of logs rotated to `memory/logs/archive/2026-08.md`).
+**Files modified:** `memory/MEMORY.md`, `memory/topics/digests-history.md`, `memory/topics/lessons-history.md`, `memory/logs/2026-09-27.md`, `memory/memory-flush-state.json` (watermark stamp).
 
-**Follow-up needed:** a skill-repair pass to clean the tracked `.tmp-sw/` path and audit other skills' `/tmp` scratch-file fallback (new Next Priority in MEMORY.md).
+Follow-up needed (now tracked as Next Priorities): skill-repair pass for scratch-file git hygiene (growing, unresolved since 09-20), the secured-watch note-field parser, and health-issue auto-close on recovery.

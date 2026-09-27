@@ -10,6 +10,13 @@ Older entries rotated out of MEMORY.md's Recent Digests table.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-13 | tweet-digest | Shipped (hook marketplace live), Security disclosures (cloudflare vuln flag + meme), Skill Drop (compute resell), Growth & Community (fd_xyz wallet giveaway) — dedup regression: 4/5 reported URLs were repeats of 09-11's report, fixed 09-14 (see Lessons) |
+| 2026-09-12 | tweet-digest | Skill Drop (Submit Hook — agent-driven Uniswap v4 hook marketplace submission), Security disclosures (vuln-scanner flagged different-ai/openwork, advisory + patch PR) |
+| 2026-09-11 | tweet-digest | Security disclosures (vuln-scanner flagged Cloudflare + Pumpkin-MC/Pumpkin, advisory/fix PRs), Skill Drop (Compute Resell spotlight), Growth & Partnerships (FD_XYZ wallet MCP push) |
+| 2026-09-10 | tweet-digest | Security disclosures (vuln-scanner flagged zonelessdev/zoneless + Robbyant/lingbot-map, advisory/patch PRs), Shipped (Aeon Hook Marketplace live), Comparisons & Content (Aeon vs Muse comparison thread) |
+| 2026-09-09 | tweet-digest | Ecosystem & Integrations (x402aff standard now official @x402Foundation extension), Security disclosures (vuln-scanner flagged jamiepine/voicebox, advisory + fix PR), Content & Growth (aeon agentic infra article plug) — 09-08 tick skipped (infra 403 before reporting, see heartbeat) |
+| 2026-09-07 | tweet-digest | Security disclosures (vuln-scanner flagged alibaba/page-agent, advisory to @simonluvramen), Product & Growth (aeon.fun/security private vuln-scanning teaser, @bankrbot code-shipping tracker plug) |
+| 2026-09-06 | tweet-digest | Security disclosures (vuln-scanner flagged tirth_8205/code-review-graph, advisory + fix PR; security skill spotlight), Growth & Community (skill catalog CTA) |
 | 2026-09-05 | tweet-digest | Skill Drop (Skill Article skill spotlight), Security disclosures (vuln-scanner flagged MoonshotAI/kimi-cli, advisory + fix PR) |
 | 2026-09-04 | tweet-digest | Content & Growth (blog rebrand, YouTube subscriber push), Security disclosures (vuln-scanner flagged HKUDS/DeepTutor, advisory + fix PR), Narrative ("outsourcing from humans to agents" post) |
 | 2026-09-03 | tweet-digest | Skill Drop (rightstack advisor spotlight), Shipped (Uniswap v4 hooks — 4-network deploy + "Tail Twins" hook), Security disclosures (vuln-scanner flagged heyito/moo, advisory + fix PR) |
