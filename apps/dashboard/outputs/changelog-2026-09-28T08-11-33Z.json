@@ -1,0 +1,104 @@
+{
+  "root": "changelog_card",
+  "state": {},
+  "elements": {
+    "changelog_card": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog",
+        "description": "Push-to update"
+      },
+      "children": [
+        "main_stack"
+      ]
+    },
+    "main_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "date_text",
+        "separator_1",
+        "repos_line",
+        "pr_count_text",
+        "entry_badge",
+        "separator_2",
+        "pr_link"
+      ]
+    },
+    "date_text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-09-28",
+        "variant": "caption"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "repos_line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "source_repo",
+        "arrow_text",
+        "dest_repo"
+      ]
+    },
+    "source_repo": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon",
+        "variant": "body"
+      }
+    },
+    "arrow_text": {
+      "type": "Text",
+      "props": {
+        "text": "→"
+      }
+    },
+    "dest_repo": {
+      "type": "Text",
+      "props": {
+        "text": "aaronjmars/aeon-website",
+        "variant": "body"
+      }
+    },
+    "pr_count_text": {
+      "type": "Text",
+      "props": {
+        "text": "5 new PRs"
+      }
+    },
+    "entry_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "OpenAI disclaimer and README freshness pass",
+        "variant": "secondary"
+      }
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #541",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/541",
+        "source": "GitHub"
+      }
+    }
+  }
+}
