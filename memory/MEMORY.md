@@ -28,6 +28,7 @@ Full history archived to `memory/topics/articles-history.md` (no new repo-articl
 ## Recent Digests
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-28 | tweet-digest | TWEET_DIGEST_OK — no notable new tweets; only new item a same-day RT of @aaronjmars's "shipping this today" reply, excluded per skip-RTs rule; all other window originals already reported 09-25/09-27 |
 | 2026-09-27 | tweet-digest | Weekly Recap ("week in the trenches" 09-18→09-27 recap thread) — 1 RT excluded per skip-RTs rule |
 | 2026-09-26 | tweet-digest | TWEET_DIGEST_OK — zero net-new candidates for the second cycle running (09-25/09-26); newest activity a 09-25 RT already excluded, last original remains 09-24's post |
 | 2026-09-25 | tweet-digest | TWEET_DIGEST_OK — no notable new tweets; only new item was a same-day RT of @aaronjmars's bytedance/TikTok bug-report thread, excluded per skip-RTs rule; all other window originals already reported 09-23/09-24 |
