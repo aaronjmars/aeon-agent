@@ -1,0 +1,264 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update: PR #232"
+      },
+      "children": [
+        "heading_sync",
+        "stat_commits",
+        "separator_1",
+        "stack_files",
+        "separator_2",
+        "stack_headline",
+        "separator_3",
+        "stack_deferred",
+        "separator_4",
+        "stack_manual",
+        "separator_5",
+        "text_baseline",
+        "separator_6",
+        "link_pr"
+      ]
+    },
+    "heading_sync": {
+      "type": "Heading",
+      "props": {
+        "text": "aeon-update — synced 13 upstream commits",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "stat_commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Upstream commits",
+        "value": "13",
+        "delta": "ba01e9f → 531f575"
+      },
+      "children": []
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_files": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_files",
+        "text_files_clean",
+        "text_files_manual"
+      ]
+    },
+    "heading_files": {
+      "type": "Heading",
+      "props": {
+        "text": "File Changes",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_files_clean": {
+      "type": "Text",
+      "props": {
+        "text": "40 files applied clean"
+      },
+      "children": []
+    },
+    "text_files_manual": {
+      "type": "Text",
+      "props": {
+        "text": "8 files need manual merge"
+      },
+      "children": []
+    },
+    "separator_2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_headline": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_headline",
+        "text_hivemind",
+        "text_hunter22",
+        "text_arcstudio_merged"
+      ]
+    },
+    "heading_headline": {
+      "type": "Heading",
+      "props": {
+        "text": "Headline Changes",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_hivemind": {
+      "type": "Text",
+      "props": {
+        "text": "HivemindOS credit-token gateway (#1079/#1080) — 3-way merged into llm-gateway.sh + aeon.yml with narrowing preserved"
+      },
+      "children": []
+    },
+    "text_hunter22": {
+      "type": "Text",
+      "props": {
+        "text": "hunter-22 expired-match gate + pack-submit included"
+      },
+      "children": []
+    },
+    "text_arcstudio_merged": {
+      "type": "Text",
+      "props": {
+        "text": "aeon.yml arc-studio CLI step already merged (inert until installation)"
+      },
+      "children": []
+    },
+    "separator_3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_deferred": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_deferred",
+        "text_arcstudio_deferred",
+        "text_blockers",
+        "text_older_skills"
+      ]
+    },
+    "heading_deferred": {
+      "type": "Heading",
+      "props": {
+        "text": "Deferred",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_arcstudio_deferred": {
+      "type": "Text",
+      "props": {
+        "text": "New arc-studio skill (#1082) — fresh skill needs catalog + eyebrow generators"
+      },
+      "children": []
+    },
+    "text_blockers": {
+      "type": "Text",
+      "props": {
+        "text": "Blockers: catalog and eyebrow generators blocked in headless runner"
+      },
+      "children": []
+    },
+    "text_older_skills": {
+      "type": "Text",
+      "props": {
+        "text": "Carried alongside: 5 older new skills"
+      },
+      "children": []
+    },
+    "separator_4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "stack_manual": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_manual",
+        "text_manual_1",
+        "text_manual_2",
+        "text_manual_3"
+      ]
+    },
+    "heading_manual": {
+      "type": "Heading",
+      "props": {
+        "text": "Manual Merge Required",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "text_manual_1": {
+      "type": "Text",
+      "props": {
+        "text": "apps/dashboard/package.json + lock (coupled dependency bump)"
+      },
+      "children": []
+    },
+    "text_manual_2": {
+      "type": "Text",
+      "props": {
+        "text": "ci-tests.yml (new test steps unwired)"
+      },
+      "children": []
+    },
+    "text_manual_3": {
+      "type": "Text",
+      "props": {
+        "text": "README / CHANGELOG / skill-packs / llms.txt (doc overlaps)"
+      },
+      "children": []
+    },
+    "separator_5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "text_baseline": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline advances to 531f575 when merged",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "separator_6": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "link_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #232: aeon-update sync",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/232",
+        "source": "GitHub"
+      },
+      "children": []
+    }
+  }
+}

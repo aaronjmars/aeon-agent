@@ -1,16 +1,17 @@
-✅ aeon-update: 19 commits synced → PR #229
+✅ aeon-update: PR #232
 
-⭐ *aeon-update — 2026-09-21*
-synced 19 upstream commits → PR
+⭐ **aeon-update — synced 13 upstream commits → PR #232**
 
-`aeonfun/aeon` was 19 commits ahead (`95142d1..ba01e9f`). 36 files applied clean — 6 new, 28 updated, 2 auto-merged 3-way. baseline moves to `ba01e9f` when you merge.
+upstream `aeonfun/aeon` is 13 commits ahead (ba01e9f..531f575). 40 files applied clean, 8 need a manual merge.
 
-shipped in: dev-loop proof/repair stack + ci-gate, `vuln-scanner` disclosure hardening, reflected-XSS fix on the mcp-auth callback, mcp-server riva isolation.
+headline: HivemindOS credit-token gateway (#1079/#1080) — 3-way merged into `llm-gateway.sh` + `aeon.yml`, your narrowing kept. hunter-22 expired-match gate + pack-submit also in.
 
-left for you (14): new skills `sc-audit` + `create-prove` need a generator + `eyebrow scan` on install — can't run headless. overlap conflicts on `aeon.yml`-wf, `ci-tests.yml`, `README`, `CHANGELOG`, `docs/skill-packs`. `aeon.yml` also gains an `sc-audit` entry + dev-loop `max_dispatches: 2→5` — merge by hand.
+deferred: new `arc-studio` skill (#1082) — a fresh skill needs the catalog + eyebrow generators, both blocked in the headless runner. carried alongside 5 older new skills. the aeon.yml arc-studio CLI step is already merged (inert till you install it).
 
-catalogs + eyebrowlock untouched on purpose: every updated skill is byte-identical to upstream, drift allowed, gates green.
+manual: `apps/dashboard/package.json`+lock (coupled dep bump), `ci-tests.yml` (new test steps unwired), README / CHANGELOG / skill-packs / llms.txt doc overlaps.
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/229
+baseline advances to `531f575` when you merge.
 
-🔗 https://github.com/aaronjmars/aeon-agent/pull/229
+PR: https://github.com/aaronjmars/aeon-agent/pull/232
+
+🔗 https://github.com/aaronjmars/aeon-agent/pull/232
