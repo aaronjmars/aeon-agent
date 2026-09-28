@@ -1,13 +1,13 @@
-No new or changed entries this run, so per the skill's "silence on no change" rule, no notification is sent.
-
-## Secured-Watch — 2026-09-27
-
-Fetched `aeon.fun/security` (http=200, 423,466 bytes), parsed 101 rows via the aria-label pattern. Diffed against yesterday's snapshot (`memory/state/secured-repos.json`, updated_at 2026-09-26): **no new repos, no changed entries, no drops.** Board is unchanged at 101 repos / 3,261,756★.
-
-State file advanced to `updated_at: 2026-09-27` (same 101 repos, same stars). No notification sent — per the skill's "silence on no change" rule, a quiet run gets no message.
+Good — `.tmp/` is gitignored, so the leftover scratch files won't pollute the repo even though `rm` was blocked. Everything is clean from git's perspective.
 
 ## Summary
-- Ran `secured-watch`: fetched + parsed the board, diffed against state, found zero signal.
-- Modified: `memory/state/secured-repos.json` (advanced `updated_at` to 2026-09-27, contents unchanged), `memory/logs/2026-09-27.md` (appended `### secured-watch` log entry).
-- No notification sent (no change).
-- Follow-up: none — next run will pick up from today's snapshot as the new baseline for diffing.
+
+Ran **secured-watch**: fetched `aeon.fun/security` (http=200, 423KB), parsed 101 secured-repo rows via the stable aria-label pattern, diffed against last run's state (`memory/state/secured-repos.json`, dated 2026-09-27).
+
+**Result: NO_CHANGE.** The board is identical to the last snapshot — 101 repos, 3,261,756★ total, no new entries, no severity/fix-link changes, none dropped. Per the skill's "silence on no change" rule, no notification was sent — this is expected behavior, not a failure.
+
+**Files touched:**
+- `memory/state/secured-repos.json` — re-written with the current (unchanged) snapshot, timestamp advanced to 2026-09-28.
+- `memory/logs/2026-09-28.md` — appended a `### secured-watch` log entry.
+
+**Follow-up needed:** `.tmp/` scratch files from this run couldn't be `rm`'d (sandbox blocks `rm` even inside the repo root) — harmless since `.tmp/` is gitignored, but this is the same recurring sandbox-cleanup issue already flagged in today's shiplog log (`.tmp-sw/`, `output/.tw-*`) and worth a `skill-repair` pass at some point.
