@@ -1,0 +1,1015 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse"
+      },
+      "children": [
+        "header-info",
+        "sep-1",
+        "table-summary",
+        "sep-2",
+        "section-aeon",
+        "sep-3",
+        "section-soul",
+        "sep-4",
+        "section-opendia",
+        "sep-5",
+        "section-minitor",
+        "sep-6",
+        "source-note"
+      ]
+    },
+    "header-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "text-date",
+        "badge-status"
+      ]
+    },
+    "text-date": {
+      "type": "Text",
+      "props": {
+        "text": "Repo Pulse — 2026-09-28",
+        "variant": "lead"
+      }
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "STEADY",
+        "variant": "default"
+      }
+    },
+    "table-summary": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "757 (+14)",
+            "271 (+7)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "681 (+4)",
+            "75 (+1)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1922 (-1)",
+            "161 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "17 (—)",
+            "5 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep-1": {
+      "type": "Separator"
+    },
+    "sep-2": {
+      "type": "Separator"
+    },
+    "sep-3": {
+      "type": "Separator"
+    },
+    "sep-4": {
+      "type": "Separator"
+    },
+    "sep-5": {
+      "type": "Separator"
+    },
+    "sep-6": {
+      "type": "Separator"
+    },
+    "section-aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-header",
+        "aeon-status",
+        "aeon-stargazers-notable-heading",
+        "aeon-stargazer-werserk",
+        "aeon-stargazers-other-heading",
+        "aeon-stargazers-other-grid",
+        "aeon-forks-heading",
+        "aeon-forks-stack"
+      ]
+    },
+    "aeon-header": {
+      "type": "Link",
+      "props": {
+        "label": "aeonfun/aeon",
+        "href": "https://github.com/aeonfun/aeon"
+      }
+    },
+    "aeon-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 12.7)",
+        "variant": "body"
+      }
+    },
+    "aeon-stargazers-notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 10 of 18)",
+        "level": "h4"
+      }
+    },
+    "aeon-stargazer-werserk": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-werserk-profile",
+        "aeon-werserk-details"
+      ]
+    },
+    "aeon-werserk-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-werserk-github",
+        "text-werserk-name"
+      ]
+    },
+    "link-werserk-github": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/werserk",
+        "href": "https://github.com/werserk"
+      }
+    },
+    "text-werserk-name": {
+      "type": "Text",
+      "props": {
+        "text": "Maxim Kirilyuk",
+        "variant": "body"
+      }
+    },
+    "aeon-werserk-details": {
+      "type": "Text",
+      "props": {
+        "text": "🏢 OrangeHack · 24 repos · 🌐 werserk.com · 25 followers",
+        "variant": "caption"
+      }
+    },
+    "aeon-stargazers-other-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h4"
+      }
+    },
+    "aeon-stargazers-other-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-alleniver",
+        "link-prathapraj",
+        "link-winios",
+        "link-pablohmo",
+        "link-ativalink",
+        "link-defifund",
+        "link-yngmbs",
+        "link-igonnafio",
+        "link-watchalways",
+        "link-lukeanthony",
+        "link-bolvin",
+        "link-patill",
+        "link-msrishav",
+        "link-mastergurushift",
+        "link-tobihih",
+        "link-nhutminh",
+        "link-franktank"
+      ]
+    },
+    "link-alleniver": {
+      "type": "Link",
+      "props": {
+        "label": "alleniver",
+        "href": "https://github.com/alleniver"
+      }
+    },
+    "link-prathapraj": {
+      "type": "Link",
+      "props": {
+        "label": "prathapraj-bettrlabs",
+        "href": "https://github.com/prathapraj-bettrlabs"
+      }
+    },
+    "link-winios": {
+      "type": "Link",
+      "props": {
+        "label": "winios",
+        "href": "https://github.com/winios"
+      }
+    },
+    "link-pablohmo": {
+      "type": "Link",
+      "props": {
+        "label": "pablohmo11-web",
+        "href": "https://github.com/pablohmo11-web"
+      }
+    },
+    "link-ativalink": {
+      "type": "Link",
+      "props": {
+        "label": "ativalink01-crypto",
+        "href": "https://github.com/ativalink01-crypto"
+      }
+    },
+    "link-defifund": {
+      "type": "Link",
+      "props": {
+        "label": "defifund",
+        "href": "https://github.com/defifund"
+      }
+    },
+    "link-yngmbs": {
+      "type": "Link",
+      "props": {
+        "label": "yngmbs",
+        "href": "https://github.com/yngmbs"
+      }
+    },
+    "link-igonnafio": {
+      "type": "Link",
+      "props": {
+        "label": "igonnafio",
+        "href": "https://github.com/igonnafio"
+      }
+    },
+    "link-watchalways": {
+      "type": "Link",
+      "props": {
+        "label": "watchalways",
+        "href": "https://github.com/watchalways"
+      }
+    },
+    "link-lukeanthony": {
+      "type": "Link",
+      "props": {
+        "label": "lukeanthony007",
+        "href": "https://github.com/lukeanthony007"
+      }
+    },
+    "link-bolvin": {
+      "type": "Link",
+      "props": {
+        "label": "Bolvin11",
+        "href": "https://github.com/Bolvin11"
+      }
+    },
+    "link-patill": {
+      "type": "Link",
+      "props": {
+        "label": "patilldeepak",
+        "href": "https://github.com/patilldeepak"
+      }
+    },
+    "link-msrishav": {
+      "type": "Link",
+      "props": {
+        "label": "msrishav-28",
+        "href": "https://github.com/msrishav-28"
+      }
+    },
+    "link-mastergurushift": {
+      "type": "Link",
+      "props": {
+        "label": "MasterGuruShifu",
+        "href": "https://github.com/MasterGuruShifu"
+      }
+    },
+    "link-tobihih": {
+      "type": "Link",
+      "props": {
+        "label": "tobihih",
+        "href": "https://github.com/tobihih"
+      }
+    },
+    "link-nhutminh": {
+      "type": "Link",
+      "props": {
+        "label": "nhutminh159",
+        "href": "https://github.com/nhutminh159"
+      }
+    },
+    "link-franktank": {
+      "type": "Link",
+      "props": {
+        "label": "FrankTheTank74",
+        "href": "https://github.com/FrankTheTank74"
+      }
+    },
+    "aeon-forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h4"
+      }
+    },
+    "aeon-forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork-ant-apex",
+        "fork-ditto190",
+        "fork-oscar",
+        "fork-brainsparker",
+        "fork-googio",
+        "fork-meetpatel",
+        "fork-rohitctrl",
+        "fork-super-ai"
+      ]
+    },
+    "fork-ant-apex": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-ant-apex-profile",
+        "fork-ant-apex-meta",
+        "fork-ant-apex-bio"
+      ]
+    },
+    "fork-ant-apex-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ant-apex",
+        "text-ant-apex-name"
+      ]
+    },
+    "link-ant-apex": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Ant-Apex",
+        "href": "https://github.com/Ant-Apex"
+      }
+    },
+    "text-ant-apex-name": {
+      "type": "Text",
+      "props": {
+        "text": "Apex Ant",
+        "variant": "body"
+      }
+    },
+    "fork-ant-apex-meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Peer to peer network · 🏢 AntSeed · 5 repos · 🌐 apex-ant.net · 🐦 @Apex_inference",
+        "variant": "caption"
+      }
+    },
+    "fork-ant-apex-bio": {
+      "type": "Text",
+      "props": {
+        "text": "An independent provider on the AntSeed peer-to-peer marketplace.",
+        "variant": "caption"
+      }
+    },
+    "fork-ditto190": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-ditto190-profile"
+      ]
+    },
+    "fork-ditto190-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ditto190",
+        "text-ditto190-info"
+      ]
+    },
+    "link-ditto190": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Ditto190",
+        "href": "https://github.com/Ditto190"
+      }
+    },
+    "text-ditto190-info": {
+      "type": "Text",
+      "props": {
+        "text": "DT · 🏢 ModifyMe · 369 repos",
+        "variant": "caption"
+      }
+    },
+    "fork-oscar": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-oscar-profile"
+      ]
+    },
+    "fork-oscar-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-oscar",
+        "text-oscar-info"
+      ]
+    },
+    "link-oscar": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Oscar-Williams",
+        "href": "https://github.com/Oscar-Williams"
+      }
+    },
+    "text-oscar-info": {
+      "type": "Text",
+      "props": {
+        "text": "Oscar · 82 repos",
+        "variant": "caption"
+      }
+    },
+    "fork-brainsparker": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-brainsparker-profile",
+        "fork-brainsparker-bio"
+      ]
+    },
+    "fork-brainsparker-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-brainsparker",
+        "text-brainsparker-info"
+      ]
+    },
+    "link-brainsparker": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/brainsparker",
+        "href": "https://github.com/brainsparker"
+      }
+    },
+    "text-brainsparker-info": {
+      "type": "Text",
+      "props": {
+        "text": "Brian Sparker · 82 repos · 🌐 https://sparker.co",
+        "variant": "caption"
+      }
+    },
+    "fork-brainsparker-bio": {
+      "type": "Text",
+      "props": {
+        "text": "I try to read most of the PRs I write. Product @ you.com.",
+        "variant": "caption"
+      }
+    },
+    "fork-googio": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-googio-profile"
+      ]
+    },
+    "fork-googio-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-googio",
+        "text-googio-info"
+      ]
+    },
+    "link-googio": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/googio",
+        "href": "https://github.com/googio"
+      }
+    },
+    "text-googio-info": {
+      "type": "Text",
+      "props": {
+        "text": "Serply · 📍 NY USA · 🏢 Serply Inc. · 139 repos · 🌐 https://serply.io",
+        "variant": "caption"
+      }
+    },
+    "fork-meetpatel": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-meetpatel-profile"
+      ]
+    },
+    "fork-meetpatel-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-meetpatel",
+        "text-meetpatel-info"
+      ]
+    },
+    "link-meetpatel": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/meetpatel-7",
+        "href": "https://github.com/meetpatel-7"
+      }
+    },
+    "text-meetpatel-info": {
+      "type": "Text",
+      "props": {
+        "text": "6 repos",
+        "variant": "caption"
+      }
+    },
+    "fork-rohitctrl": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-rohitctrl-profile",
+        "fork-rohitctrl-bio"
+      ]
+    },
+    "fork-rohitctrl-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-rohitctrl",
+        "text-rohitctrl-info"
+      ]
+    },
+    "link-rohitctrl": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/rohitctrl",
+        "href": "https://github.com/rohitctrl"
+      }
+    },
+    "text-rohitctrl-info": {
+      "type": "Text",
+      "props": {
+        "text": "📍 India · 🏢 Mindmic · 37 repos · 🌐 https://www.mindmic.xyz/",
+        "variant": "caption"
+      }
+    },
+    "fork-rohitctrl-bio": {
+      "type": "Text",
+      "props": {
+        "text": "Data Analyst · Bengaluru. SQL, Python, Power BI, Excel. Public-data analyses with reproducible numbers.",
+        "variant": "caption"
+      }
+    },
+    "fork-super-ai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "fork-super-ai-profile"
+      ]
+    },
+    "fork-super-ai-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-super-ai",
+        "text-super-ai-info"
+      ]
+    },
+    "link-super-ai": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/super-ai-8453",
+        "href": "https://github.com/super-ai-8453"
+      }
+    },
+    "text-super-ai-info": {
+      "type": "Text",
+      "props": {
+        "text": "1 repos",
+        "variant": "caption"
+      }
+    },
+    "section-soul": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul-header",
+        "soul-status",
+        "soul-stargazers-notable-heading",
+        "soul-stargazer-ucok",
+        "soul-stargazer-alkai",
+        "soul-stargazers-other-heading",
+        "soul-stargazers-other-grid",
+        "soul-forks-heading",
+        "soul-forks-stack"
+      ]
+    },
+    "soul-header": {
+      "type": "Link",
+      "props": {
+        "label": "aeonfun/soul.md",
+        "href": "https://github.com/aeonfun/soul.md"
+      }
+    },
+    "soul-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 8.0)",
+        "variant": "body"
+      }
+    },
+    "soul-stargazers-notable-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 4 of 5)",
+        "level": "h4"
+      }
+    },
+    "soul-stargazer-ucok": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-ucok-profile",
+        "soul-ucok-details"
+      ]
+    },
+    "soul-ucok-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-ucok",
+        "text-ucok-name"
+      ]
+    },
+    "link-ucok": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/Ucokgreget",
+        "href": "https://github.com/Ucokgreget"
+      }
+    },
+    "text-ucok-name": {
+      "type": "Text",
+      "props": {
+        "text": "Muhammad Luqman Al-Fauzan",
+        "variant": "body"
+      }
+    },
+    "soul-ucok-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "soul-ucok-meta",
+        "soul-ucok-bio"
+      ]
+    },
+    "soul-ucok-meta": {
+      "type": "Text",
+      "props": {
+        "text": "37 repos · 12 followers",
+        "variant": "caption"
+      }
+    },
+    "soul-ucok-bio": {
+      "type": "Text",
+      "props": {
+        "text": "Besok aja",
+        "variant": "caption"
+      }
+    },
+    "soul-stargazer-alkai": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-alkai-profile",
+        "soul-alkai-details"
+      ]
+    },
+    "soul-alkai-profile": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-alkai",
+        "text-alkai-name"
+      ]
+    },
+    "link-alkai": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/AlkaiDynamics",
+        "href": "https://github.com/AlkaiDynamics"
+      }
+    },
+    "text-alkai-name": {
+      "type": "Text",
+      "props": {
+        "text": "Morgan Sherer",
+        "variant": "body"
+      }
+    },
+    "soul-alkai-details": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "xs"
+      },
+      "children": [
+        "soul-alkai-meta",
+        "soul-alkai-bio"
+      ]
+    },
+    "soul-alkai-meta": {
+      "type": "Text",
+      "props": {
+        "text": "📍 The Desert · 🏢 Alkai Morphos Dynamics (MorphIQ) · 38 repos · 163 followers",
+        "variant": "caption"
+      }
+    },
+    "soul-alkai-bio": {
+      "type": "Text",
+      "props": {
+        "text": "Just trying to make my life and the world a better place while both battling and utilizing extreme neurodivergence.",
+        "variant": "caption"
+      }
+    },
+    "soul-stargazers-other-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h4"
+      }
+    },
+    "soul-stargazers-other-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-lyravein",
+        "link-nguynbon",
+        "link-48ms"
+      ]
+    },
+    "link-lyravein": {
+      "type": "Link",
+      "props": {
+        "label": "Lyravein",
+        "href": "https://github.com/Lyravein"
+      }
+    },
+    "link-nguynbon": {
+      "type": "Link",
+      "props": {
+        "label": "nguynbon03",
+        "href": "https://github.com/nguynbon03"
+      }
+    },
+    "link-48ms": {
+      "type": "Link",
+      "props": {
+        "label": "48ms",
+        "href": "https://github.com/48ms"
+      }
+    },
+    "soul-forks-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks",
+        "level": "h4"
+      }
+    },
+    "soul-forks-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork-soul-meetpatel"
+      ]
+    },
+    "fork-soul-meetpatel": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-soul-meetpatel",
+        "text-soul-meetpatel-info"
+      ]
+    },
+    "link-soul-meetpatel": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/meetpatel-7",
+        "href": "https://github.com/meetpatel-7"
+      }
+    },
+    "text-soul-meetpatel-info": {
+      "type": "Text",
+      "props": {
+        "text": "6 repos (also forked aeon)",
+        "variant": "caption"
+      }
+    },
+    "section-opendia": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia-header",
+        "opendia-status",
+        "opendia-stargazers-heading",
+        "opendia-stargazers-grid"
+      ]
+    },
+    "opendia-header": {
+      "type": "Link",
+      "props": {
+        "label": "aeonfun/opendia",
+        "href": "https://github.com/aeonfun/opendia"
+      }
+    },
+    "opendia-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 4.3)",
+        "variant": "body"
+      }
+    },
+    "opendia-stargazers-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers",
+        "level": "h4"
+      }
+    },
+    "opendia-stargazers-grid": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "link-shaydcoder",
+        "link-locomoki"
+      ]
+    },
+    "link-shaydcoder": {
+      "type": "Link",
+      "props": {
+        "label": "Shaydcoder",
+        "href": "https://github.com/Shaydcoder"
+      }
+    },
+    "link-locomoki": {
+      "type": "Link",
+      "props": {
+        "label": "locomoki",
+        "href": "https://github.com/locomoki"
+      }
+    },
+    "section-minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "minitor-header",
+        "minitor-status"
+      ]
+    },
+    "minitor-header": {
+      "type": "Link",
+      "props": {
+        "label": "minitor",
+        "href": "https://github.com/minitor"
+      }
+    },
+    "minitor-status": {
+      "type": "Text",
+      "props": {
+        "text": "QUIET (no activity)",
+        "variant": "body"
+      }
+    },
+    "source-note": {
+      "type": "Text",
+      "props": {
+        "text": "Source: events",
+        "variant": "caption"
+      }
+    }
+  }
+}

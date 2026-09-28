@@ -1,56 +1,45 @@
 ℹ️ Repo Pulse
 
-*Repo Pulse — 2026-09-21* — [SURGE]
+*Repo Pulse — 2026-09-28* — [STEADY]
 
 | Repo | Stars | Forks | Rel | Verdict |
 |---|---|---|---|---|
-| aeon | 743 (+14) | 264 (+1) | — | STEADY |
-| soul.md | 677 (+6) | 74 (+1) | — | STEADY |
-| opendia | 1923 (+2) | 161 (+1) | — | STEADY |
-| minitor | 17 (+1) | 5 (—) | — | SURGE |
+| aeon | 757 (+14) | 271 (+7) | — | STEADY |
+| soul.md | 681 (+4) | 75 (+1) | — | STEADY |
+| opendia | 1922 (-1) | 161 (—) | — | STEADY |
+| minitor | 17 (—) | 5 (—) | — | QUIET |
 
-**aeonfun/aeon** — STEADY (avg4w ≈ 16.5)
-Notable new stargazers (enriched 13 of 14):
-github.com/euxaristia — euxaristia · 📍 🍁 · 🏢 @cairn · 72 repos · 🌐 euxaristia.github.io · 🐦 @euxaristia · 89 followers
-github.com/enving — enving · 📍 Berlin · 31 repos
-github.com/imMamdouhaboammar — Mamdouh Aboammar · 📍 UAE · 🏢 PrePilot LLC · 92 repos · 🌐 https://prepilot-system-agency.space/ · 30 followers
-  "Vibe coder & conversion copywriter I build agentic tooling for marketing work with a strategist's paranoia. Founder of PrePilot."
-github.com/suriyaa — Suriyaa Sundararuban · 📍 Germany · 58 repos · 🌐 https://www.suriyaasundararuban.com · 🐦 @SuriyaaKudoIsc · 1.1k followers
-  "I 💖 Open Source! Making the world better day by day. I build things that outlive the commit. Code for future you. Building for the next…"
-github.com/0x7067 — Pedro Guimarães · 📍 Curitiba - PR · 87 repos · 🌐 https://www.linkedin.com/in/pedromguimaraes/ · 40 followers
-github.com/sammed-21 — 0xSam · 📍 web3 · 196 repos · 🌐 sammed.xyz · 🐦 @0xSam_21 · 27 followers
-  "builder"
+**aeonfun/aeon** — STEADY (avg4w ≈ 12.7)
+Notable new stargazers (enriched 10 of 18):
+github.com/werserk — Maxim Kirilyuk · 🏢 OrangeHack · 24 repos · 🌐 werserk.com · 25 followers
 Other new stargazers:
-github.com/shervin-blip | github.com/MoZoHuJa | github.com/kenrinzero | github.com/eschneider8255 | github.com/locomoki | github.com/benjacomputergitman | github.com/nimeshvaghasiya
-New forks (4 events; net forks_count only +1 — some new forks were deleted by their owners within the window):
-github.com/Corykidios — Corykidios Seio Clokydaros · 📍 Franklin, Pennsylvania · 🏢 Echoing Orpheus Studios · 25 repos · 78 followers (also starred aeon)
-  "Composer of music, myth, poetry, prose, systems, and software. Conceiver of semiotics, set theory, linguistics, library science,…"
-github.com/quell-the-monster · 0 repos
-github.com/iamziek — some guy · 1 repos · 32 followers
-github.com/traveler3022 — Traveler · 17 repos
-  "Life is a journey This also makes it more exciting I am excited about what challenges will come my way Hello, I am Ehsan, a computer engine"
-
-**aeonfun/soul.md** — STEADY (avg4w ≈ 7.25)
-Notable new stargazers: none (enriched 7 of 8, all under notable threshold)
-Other new stargazers:
-github.com/alexanderjacuna | github.com/CloudBranch | github.com/zhenrez | github.com/robertoatila | github.com/aeonframework | github.com/jeansweden | github.com/benjacomputergitman
+github.com/alleniver | github.com/prathapraj-bettrlabs | github.com/winios | github.com/pablohmo11-web | github.com/ativalink01-crypto | github.com/defifund | github.com/yngmbs | github.com/igonnafio | github.com/watchalways | github.com/lukeanthony007 | github.com/Bolvin11 | github.com/patilldeepak | github.com/msrishav-28 | github.com/MasterGuruShifu | github.com/tobihih | github.com/nhutminh159 | github.com/FrankTheTank74
 New forks:
-github.com/greencultured — Green CulturED · 📍 Denver, Colorado · 🏢 Green CulturED · 194 repos · 🌐 www.GreenCulturED.co · 🐦 @greencultured (also starred soul.md)
-  "Cannabis Industry Training & eLearning Solutions"
+github.com/Ant-Apex — Apex Ant · 📍 Peer to peer network · 🏢 AntSeed · 5 repos · 🌐 apex-ant.net · 🐦 @Apex_inference
+  "An independent provider on the AntSeed peer-to-peer marketplace."
+github.com/Ditto190 — DT · 🏢 ModifyMe · 369 repos
+github.com/Oscar-Williams — Oscar · 82 repos
+github.com/brainsparker — Brian Sparker · 82 repos · 🌐 https://sparker.co
+  "I try to read most of the PRs I write. Product @ you.com."
+github.com/googio — Serply · 📍 NY USA · 🏢 Serply Inc. · 139 repos · 🌐 https://serply.io
+github.com/meetpatel-7 — 6 repos
+github.com/rohitctrl — 📍 India · 🏢 Mindmic · 37 repos · 🌐 https://www.mindmic.xyz/
+  "Data Analyst · Bengaluru. SQL, Python, Power BI, Excel. Public-data analyses with reproducible numbers."
+github.com/super-ai-8453 — 1 repos
 
-**aeonfun/opendia** — STEADY (avg4w ≈ 3.0)
-Notable new stargazers (enriched 4 of 4):
-github.com/Corykidios — Corykidios Seio Clokydaros · 📍 Franklin, Pennsylvania · 🏢 Echoing Orpheus Studios · 25 repos · 78 followers
-  "Composer of music, myth, poetry, prose, systems, and software. Conceiver of semiotics, set theory, linguistics, library science,…"
-github.com/dxiiren — dxiiren · 26 repos
-  "Technical Lead · I write code, lead people, and teach robots to do my chores"
+**aeonfun/soul.md** — STEADY (avg4w ≈ 8.0)
+Notable new stargazers (enriched 4 of 5):
+github.com/Ucokgreget — Muhammad Luqman Al-Fauzan · 37 repos · 12 followers
+  "Besok aja"
+github.com/AlkaiDynamics — Morgan Sherer · 📍 The Desert · 🏢 Alkai Morphos Dynamics (MorphIQ) · 38 repos · 163 followers
+  "Just trying to make my life and the world a better place while both battling and utilizing extreme neurodivergence."
 Other new stargazers:
-github.com/aeonframework | github.com/benjacomputergitman
+github.com/Lyravein | github.com/nguynbon03 | github.com/48ms
 New forks:
-github.com/see0 — Jason · 📍 Indiana · 🏢 Purdue Student · 189 repos · 🌐 none at moment · 18 followers
+github.com/meetpatel-7 — 6 repos (also forked aeon)
 
-**aeonfun/minitor** — SURGE (avg4w ≈ 0; rule fired: week_stars(1) > 3×avg4w(0) — 4 straight QUIET weeks broken by a single new star)
+**aeonfun/opendia** — STEADY (avg4w ≈ 4.3)
 Other new stargazers:
-github.com/aeonframework
+github.com/Shaydcoder | github.com/locomoki
 
-Source: events · all 4 repos complete windows (no truncation)
+Source: events · minitor QUIET (no activity)
