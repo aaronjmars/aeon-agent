@@ -1,15 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-28T17:04:03Z",
-  "quality_score": 3,
-  "assessment": "Completed the task adequately with well-structured filtering and proper no-signal decision, but specific tweet content and API details cannot be independently verified.",
+  "last_analyzed": "2026-09-29T17:03:40Z",
+  "quality_score": 4,
+  "assessment": "Substantive digest with verifiable methodology, proper dedup tracking, and clear filtering logic; completed its task well but limited strategic actionability",
   "flags": [],
   "avg_score": 3.67,
   "history": [
-    {
-      "date": "2026-08-29",
-      "score": 4
-    },
     {
       "date": "2026-08-30",
       "score": 3
@@ -125,6 +121,10 @@
     {
       "date": "2026-09-28",
       "score": 3
+    },
+    {
+      "date": "2026-09-29",
+      "score": 4
     }
   ]
 }

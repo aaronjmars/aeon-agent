@@ -1,0 +1,115 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest"
+      },
+      "children": [
+        "date_heading",
+        "sep1",
+        "theme_shipped_heading",
+        "tweet1_stack",
+        "sep2",
+        "theme_narrative_heading",
+        "tweet2_stack"
+      ]
+    },
+    "date_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "2026-09-29",
+        "level": "h4"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "theme_shipped_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Shipped",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet1_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet1",
+        "tweet1_link"
+      ]
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "8th Hook drop — first one in the catalog that can't block a trade, instead runs an opt-in game"
+      },
+      "children": []
+    },
+    "tweet1_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2104875236445274290"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "theme_narrative_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Narrative",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet2_stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet2",
+        "tweet2_link"
+      ]
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "@aeonframework",
+        "text": "is openai copying us? we are the real Aeon"
+      },
+      "children": []
+    },
+    "tweet2_link": {
+      "type": "Link",
+      "props": {
+        "label": "View tweet",
+        "href": "https://x.com/aeonframework/status/2104866049434714477"
+      },
+      "children": []
+    }
+  }
+}
