@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-28T06:07:25Z",
-  "quality_score": 5,
-  "assessment": "Excellent — substantive, well-sourced, methodologically transparent token report with auditable data and honest handling of limitations. Serves the operator's core momentum-tracking need.",
+  "last_analyzed": "2026-09-29T06:05:50Z",
+  "quality_score": 4,
+  "assessment": "Substantive token report with verifiable metrics, proper source attribution, methodical audit trail, and honest treatment of data gaps — aligns strongly with strategy's requirement to track momentum honestly without publishing unverified numbers.",
   "flags": [],
   "avg_score": 4.1,
   "history": [
-    {
-      "date": "2026-08-30",
-      "score": 4
-    },
     {
       "date": "2026-09-01",
       "score": 5
@@ -125,6 +121,10 @@
     {
       "date": "2026-09-28",
       "score": 5
+    },
+    {
+      "date": "2026-09-29",
+      "score": 4
     }
   ]
 }
