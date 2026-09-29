@@ -1,0 +1,125 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon — new since last check",
+        "description": "one more repo just got hardened. 122k★ worth."
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stats_section",
+        "separator_1",
+        "heading_newly_secured",
+        "repo_list"
+      ]
+    },
+    "stats_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "repos secured",
+        "value": "102",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "3,407,968",
+        "delta": "+146,212",
+        "trend": "up"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_newly_secured": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured (1)",
+        "level": "h3"
+      }
+    },
+    "repo_list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "repo_item"
+      ]
+    },
+    "repo_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "story_link_graphify",
+        "metadata_row"
+      ]
+    },
+    "metadata_row": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge_severity",
+        "star_count"
+      ]
+    },
+    "story_link_graphify": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Graphify-Labs/graphify",
+        "href": "https://github.com/Graphify-Labs/graphify/security/advisories/GHSA-pcc4-rvhr-2pr8",
+        "source": "GitHub"
+      }
+    },
+    "badge_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "HIGH",
+        "variant": "destructive"
+      }
+    },
+    "star_count": {
+      "type": "Text",
+      "props": {
+        "text": "122,027★",
+        "variant": "muted"
+      }
+    }
+  }
+}

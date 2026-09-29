@@ -1,5 +1,3 @@
-ℹ️ Secured by Aeon
-
 ## Secured by Aeon — new since last check
 one more repo just got hardened. 122k★ worth.
 
