@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-09-29",
-  "total_repos": 102,
-  "total_stars": 3407968,
+  "updated_at": "2026-09-30",
+  "total_repos": 103,
+  "total_stars": 3409349,
   "repos": {
     "obra/superpowers": {
       "severity": "HIGH",
@@ -577,6 +577,12 @@
       "severity": "HIGH",
       "stars": 1457,
       "fix_url": "https://github.com/MiroShark/MiroShark/pull/297",
+      "note": ""
+    },
+    "microsoft/mxc": {
+      "severity": "LOW",
+      "stars": 1381,
+      "fix_url": "https://github.com/microsoft/mxc/pull/1124",
       "note": ""
     },
     "ClaudioDrews/memory-os": {

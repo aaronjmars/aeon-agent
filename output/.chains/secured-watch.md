@@ -1,9 +1,7 @@
 ℹ️ Secured by Aeon
 
-## Secured by Aeon — new since last check
-one more repo just got hardened. 122k★ worth.
-
-**102 repos** secured (+1) · **3,407,968★** total (+146,212)
+## Secured by Aeon — one more on the board ⭐
+**103 repos** secured (+1) · **3,409,349★** total (+1,381)
 
 ### 🆕 Newly secured (1)
-- **[Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify/security/advisories/GHSA-pcc4-rvhr-2pr8)** — `HIGH` · 122,027★
+- **[microsoft/mxc](https://github.com/microsoft/mxc/pull/1124)** — `LOW` · 1,381★ —

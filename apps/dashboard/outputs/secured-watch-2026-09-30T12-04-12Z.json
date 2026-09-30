@@ -1,0 +1,113 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Secured by Aeon — one more on the board ⭐"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stack_stats",
+        "separator_1",
+        "stack_newly"
+      ]
+    },
+    "stack_stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_repos",
+        "stat_stars"
+      ]
+    },
+    "stat_repos": {
+      "type": "Stat",
+      "props": {
+        "label": "repos secured",
+        "value": "103",
+        "delta": "+1",
+        "trend": "up"
+      }
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "total stars",
+        "value": "3,409,349",
+        "delta": "+1,381",
+        "trend": "up"
+      }
+    },
+    "separator_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_newly": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_newly",
+        "stack_repo_item"
+      ]
+    },
+    "heading_newly": {
+      "type": "Heading",
+      "props": {
+        "text": "🆕 Newly secured",
+        "level": "h3"
+      }
+    },
+    "stack_repo_item": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "link_mxc",
+        "badge_severity",
+        "text_stars"
+      ]
+    },
+    "link_mxc": {
+      "type": "StoryLink",
+      "props": {
+        "title": "microsoft/mxc",
+        "href": "https://github.com/microsoft/mxc/pull/1124"
+      }
+    },
+    "badge_severity": {
+      "type": "Badge",
+      "props": {
+        "text": "LOW",
+        "variant": "outline"
+      }
+    },
+    "text_stars": {
+      "type": "Text",
+      "props": {
+        "text": "1,381★",
+        "variant": "muted"
+      }
+    }
+  }
+}
