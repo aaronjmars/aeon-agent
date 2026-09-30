@@ -1,0 +1,173 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "⚠️ Heartbeat — ambient check"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "alert_new_issue",
+        "sep1",
+        "stack_carried",
+        "sep2",
+        "stack_fleet_status",
+        "sep3",
+        "status_page"
+      ]
+    },
+    "alert_new_issue": {
+      "type": "Alert",
+      "props": {
+        "title": "🟡 NEW: Health Issue #234 (tweet-digest)",
+        "message": "Quality score dropped to 2/4 today, flagged `low_quality` for hype-adjacent framing (OpenAI-rename angle) vs strategy's 'avoid hype' directive. Not a reliability issue — tweet-digest itself ran clean (97% success, 0 consecutive failures); same one-off dip pattern last seen 09-12, recovered same week.",
+        "type": "warning"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_carried": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_carried",
+        "text_carried_info",
+        "text_carried_duration",
+        "text_carried_issues",
+        "text_carried_action"
+      ]
+    },
+    "heading_carried": {
+      "type": "Heading",
+      "props": {
+        "text": "🔵 Carried (unchanged, already reported)"
+      }
+    },
+    "text_carried_info": {
+      "type": "Text",
+      "props": {
+        "text": "Health issues #230/#231"
+      }
+    },
+    "text_carried_duration": {
+      "type": "Text",
+      "props": {
+        "text": "Still open 8+ days post-recovery"
+      }
+    },
+    "text_carried_issues": {
+      "type": "Text",
+      "props": {
+        "text": "Pending items: working-tree anomaly, scratch-file hygiene, secured-watch note-field gap"
+      }
+    },
+    "text_carried_action": {
+      "type": "Text",
+      "props": {
+        "text": "Action: pending repair pass",
+        "variant": "muted"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stack_fleet_status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_fleet",
+        "stat_failed",
+        "stat_stalled_prs",
+        "stat_urgent_issues",
+        "text_schedules"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status"
+      }
+    },
+    "stat_failed": {
+      "type": "Stat",
+      "props": {
+        "label": "Failed/stuck skills",
+        "value": "0"
+      }
+    },
+    "stat_stalled_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "Stalled PRs",
+        "value": "0"
+      }
+    },
+    "stat_urgent_issues": {
+      "type": "Stat",
+      "props": {
+        "label": "Urgent issues",
+        "value": "0"
+      }
+    },
+    "text_schedules": {
+      "type": "Text",
+      "props": {
+        "text": "All schedules current"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status_page": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "text_status_label",
+        "badge_status"
+      ]
+    },
+    "text_status_label": {
+      "type": "Text",
+      "props": {
+        "text": "Status page:"
+      }
+    },
+    "badge_status": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH (unchanged)",
+        "variant": "secondary"
+      }
+    }
+  }
+}
