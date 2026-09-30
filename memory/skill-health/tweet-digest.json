@@ -1,15 +1,13 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-09-29T17:03:40Z",
-  "quality_score": 4,
-  "assessment": "Substantive digest with verifiable methodology, proper dedup tracking, and clear filtering logic; completed its task well but limited strategic actionability",
-  "flags": [],
-  "avg_score": 3.67,
+  "last_analyzed": "2026-09-30T17:04:52Z",
+  "quality_score": 2,
+  "assessment": "Functionally executed tweet digest, but reports social media monitoring rather than advancing stated priorities; includes hype-adjacent narrative framing (OpenAI rename validation angle) at odds with strategy's 'avoid hype' directive.",
+  "flags": [
+    "low_quality"
+  ],
+  "avg_score": 3.63,
   "history": [
-    {
-      "date": "2026-08-30",
-      "score": 3
-    },
     {
       "date": "2026-09-01",
       "score": 5
@@ -125,6 +123,10 @@
     {
       "date": "2026-09-29",
       "score": 4
+    },
+    {
+      "date": "2026-09-30",
+      "score": 2
     }
   ]
 }

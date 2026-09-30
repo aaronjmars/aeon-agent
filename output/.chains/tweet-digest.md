@@ -1,9 +1,15 @@
 ℹ️ Tweet Digest
 
-*Tweet Digest — 2026-09-29*
+*Tweet Digest — 2026-09-30*
 
-*Theme: Shipped*
-@aeonframework: 8th Hook drop — first one in the catalog that can't block a trade, instead runs an opt-in game — [link](https://x.com/aeonframework/status/2104875236445274290)
+*Theme: Skill Drop*
+@aeonframework: new skill spotlight — feedback-builder: agent-users file bugs on /feedback, aeon clusters the pile and ships the best request as a PR — [link](https://x.com/aeonframework/status/2105315554361831825)
+
+*Theme: Content & Docs*
+@aeonframework: new blog post goes deeper on the skill packs, the thecultos platform, and the $aeon token — [link](https://x.com/aeonframework/status/2105308725947097338)
 
 *Theme: Narrative*
-@aeonframework: "is openai copying us? we are the real Aeon" — via YouTube link — [link](https://x.com/aeonframework/status/2104866049434714477)
+@aeonframework: "we made @sama an offer he couldn't refuse" — quote-tweets a post noting OpenAI renamed their agent from Aeon to Dots, framed as validation — [link](https://x.com/aeonframework/status/2105008209102885169)
+
+*Theme: Growth & Community*
+@aeonframework: community push to keep Aeon "blossoming" — upvote-the-link call to action — [link](https://x.com/aeonframework/status/2105295346285089172)

@@ -1,0 +1,113 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-09-30"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "theme1-heading",
+        "tweet1",
+        "separator1",
+        "theme2-heading",
+        "tweet2",
+        "separator2",
+        "theme3-heading",
+        "tweet3",
+        "separator3",
+        "theme4-heading",
+        "tweet4"
+      ]
+    },
+    "theme1-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Skill Drop",
+        "level": "h3"
+      }
+    },
+    "tweet1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "new skill spotlight — feedback-builder: agent-users file bugs on /feedback, aeon clusters the pile and ships the best request as a PR — https://x.com/aeonframework/status/2105315554361831825"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme2-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Content & Docs",
+        "level": "h3"
+      }
+    },
+    "tweet2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "new blog post goes deeper on the skill packs, the thecultos platform, and the $aeon token — https://x.com/aeonframework/status/2105308725947097338"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme3-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Narrative",
+        "level": "h3"
+      }
+    },
+    "tweet3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "\"we made @sama an offer he couldn't refuse\" — quote-tweets a post noting OpenAI renamed their agent from Aeon to Dots, framed as validation — https://x.com/aeonframework/status/2105008209102885169"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme4-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Growth & Community",
+        "level": "h3"
+      }
+    },
+    "tweet4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "community push to keep Aeon \"blossoming\" — upvote-the-link call to action — https://x.com/aeonframework/status/2105295346285089172"
+      }
+    }
+  }
+}
