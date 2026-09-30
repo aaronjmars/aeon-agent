@@ -1,15 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-09-29T06:05:50Z",
+  "last_analyzed": "2026-09-30T06:08:16Z",
   "quality_score": 4,
-  "assessment": "Substantive token report with verifiable metrics, proper source attribution, methodical audit trail, and honest treatment of data gaps — aligns strongly with strategy's requirement to track momentum honestly without publishing unverified numbers.",
+  "assessment": "Solid tracking report with verified data (liquidity drop cross-confirmed), clear structure, and proper sourcing—useful momentum tracking that flags the key signal, but primarily reporting/monitoring rather than actionable insights or shipped work.",
   "flags": [],
-  "avg_score": 4.1,
+  "avg_score": 4.07,
   "history": [
-    {
-      "date": "2026-09-01",
-      "score": 5
-    },
     {
       "date": "2026-09-01",
       "score": 4
@@ -124,6 +120,10 @@
     },
     {
       "date": "2026-09-29",
+      "score": 4
+    },
+    {
+      "date": "2026-09-30",
       "score": 4
     }
   ]

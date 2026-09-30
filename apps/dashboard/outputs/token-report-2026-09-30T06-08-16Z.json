@@ -1,0 +1,104 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "⚠️ AEON Token Report"
+      },
+      "children": [
+        "stack-content"
+      ]
+    },
+    "stack-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "status-text",
+        "alert-liquidity",
+        "grid-metrics",
+        "link-chart"
+      ]
+    },
+    "status-text": {
+      "type": "Text",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "variant": "lead"
+      }
+    },
+    "alert-liquidity": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Price only -4.6%, but the AEON/WETH pool lost -67.7% of its liquidity in 24h ($1.30M → $419.1K, confirmed by DexScreener)."
+      }
+    },
+    "grid-metrics": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liquidity",
+        "stat-volume",
+        "stat-buys-sells",
+        "stat-whales"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001799",
+        "delta": "-4.6%",
+        "trend": "down"
+      }
+    },
+    "stat-liquidity": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$419.1K",
+        "delta": "-67.7%",
+        "trend": "down"
+      }
+    },
+    "stat-volume": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume 24h",
+        "value": "$76.2K",
+        "delta": "0.9x vs 7d avg"
+      }
+    },
+    "stat-buys-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "140/136",
+        "delta": "1.03 ratio"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "20"
+      }
+    },
+    "link-chart": {
+      "type": "Link",
+      "props": {
+        "label": "📊 View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
