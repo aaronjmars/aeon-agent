@@ -1,7 +1,7 @@
 import json
 from datetime import datetime, timezone
 
-SINCE = "2026-09-26"
+SINCE = "2026-09-28"
 
 with open("output/.tw-td.json") as f:
     data = json.load(f)

@@ -1,0 +1,145 @@
+{
+  "root": "main-card",
+  "state": {},
+  "elements": {
+    "main-card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-10-01"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "section-1",
+        "separator-1",
+        "section-2"
+      ]
+    },
+    "section-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-1",
+        "tweet-1-stack",
+        "tweet-2-stack"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Shipped — New Skills",
+        "level": "h2"
+      }
+    },
+    "tweet-1-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1-card",
+        "tweet-1-link"
+      ]
+    },
+    "tweet-1-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "Spotlighted the new Arc Studio skill — agents can now run Arc Studio themselves, going from a prompt to a full onchain app (contracts, DeFi integrations, 9-chain testing, native CCTP, Gateway, Wallets)"
+      }
+    },
+    "tweet-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2105618259588403448"
+      }
+    },
+    "tweet-2-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2-card",
+        "tweet-2-link"
+      ]
+    },
+    "tweet-2-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "Posted an X article, \"The most recent aeon Skills: A safety-first approach is what they share the most,\" covering the 20 skills added to the catalog between 08-04 and 09-28"
+      }
+    },
+    "tweet-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2105637263568703618"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-2",
+        "tweet-3-stack"
+      ]
+    },
+    "heading-2": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Content & Comparisons",
+        "level": "h2"
+      }
+    },
+    "tweet-3-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3-card",
+        "tweet-3-link"
+      ]
+    },
+    "tweet-3-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "@aeonframework",
+        "text": "Shared a comparison article between Aeon and OpenAI's \"dots\" agent framework"
+      }
+    },
+    "tweet-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2105543858666840533"
+      }
+    }
+  }
+}

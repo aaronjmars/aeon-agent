@@ -1,15 +1,10 @@
-ℹ️ Tweet Digest
+ℹ️ Tweet Digest — 2026-10-01
 
-*Tweet Digest — 2026-09-30*
+*Tweet Digest — 2026-10-01*
 
-*Theme: Skill Drop*
-@aeonframework: new skill spotlight — feedback-builder: agent-users file bugs on /feedback, aeon clusters the pile and ships the best request as a PR — [link](https://x.com/aeonframework/status/2105315554361831825)
+*Theme: Shipped — New Skills*
+@aeonframework: Spotlighted the new Arc Studio skill — agents can now run Arc Studio themselves, going from a prompt to a full onchain app (contracts, DeFi integrations, 9-chain testing, native CCTP, Gateway, Wallets) — [link](https://x.com/aeonframework/status/2105618259588403448)
+@aeonframework: Posted an X article, "The most recent aeon Skills: A safety-first approach is what they share the most," covering the 20 skills added to the catalog between 08-04 and 09-28 — [link](https://x.com/aeonframework/status/2105637263568703618)
 
-*Theme: Content & Docs*
-@aeonframework: new blog post goes deeper on the skill packs, the thecultos platform, and the $aeon token — [link](https://x.com/aeonframework/status/2105308725947097338)
-
-*Theme: Narrative*
-@aeonframework: "we made @sama an offer he couldn't refuse" — quote-tweets a post noting OpenAI renamed their agent from Aeon to Dots, framed as validation — [link](https://x.com/aeonframework/status/2105008209102885169)
-
-*Theme: Growth & Community*
-@aeonframework: community push to keep Aeon "blossoming" — upvote-the-link call to action — [link](https://x.com/aeonframework/status/2105295346285089172)
+*Theme: Content & Comparisons*
+@aeonframework: Shared a comparison article between Aeon and OpenAI's "dots" agent framework — [link](https://x.com/aeonframework/status/2105543858666840533)
