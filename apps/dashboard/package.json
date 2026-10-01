@@ -38,6 +38,7 @@
   "allowScripts": {
     "esbuild": true,
     "fsevents": true,
-    "sharp": true
+    "sharp": true,
+    "unrs-resolver": true
   }
 }
