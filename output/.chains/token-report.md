@@ -1,10 +1,10 @@
-⚠️ AEON Token Report
+ℹ️ AEON Token Report
 
 *$AEON — CONSOLIDATING*
 
-Price only -4.6%, but the AEON/WETH pool lost -67.7% of its liquidity in 24h ($1.30M → $419.1K, confirmed by DexScreener).
+Price slipped 2.4% on half the 7d-avg volume, sells outpacing buys 94/84 — light distribution, not an exit.
 
-Price $0.00001799 (-4.6% 24h) | Liq $419.1K (-67.7%) | Vol $76.2K (0.9x 7d)
-Buys/Sells 140/136 (ratio 1.03) | Whales: 20
+Price $0.0000175554 (-2.4% 24h) | Liq $426.1K (+1.7%) | Vol $44.4K (0.5× 7d)
+Buys/Sells 84/94 (ratio 0.89) | Whales: 12
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
