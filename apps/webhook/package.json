@@ -30,7 +30,7 @@
     }
   },
   "devDependencies": {
-    "wrangler": "4.127.1",
+    "wrangler": "4.142.0",
     "eslint": "^9.39.5",
     "globals": "^15.15.0"
   },
