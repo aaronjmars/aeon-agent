@@ -1,0 +1,261 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Heartbeat",
+        "description": "2026-10-01"
+      },
+      "children": [
+        "stack-main"
+      ]
+    },
+    "stack-main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fleet-status-heading",
+        "p0-section",
+        "sep1",
+        "p1-section",
+        "sep2",
+        "new-section",
+        "sep3",
+        "carried-section",
+        "sep4",
+        "token-section"
+      ]
+    },
+    "fleet-status-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "🟡 FLEET STATUS — 2026-10-01",
+        "level": "h2"
+      }
+    },
+    "p0-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "p0-badge",
+        "p0-text",
+        "p0-skills-stack"
+      ]
+    },
+    "p0-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 P0 CLEAR",
+        "variant": "default"
+      }
+    },
+    "p0-text": {
+      "type": "Text",
+      "props": {
+        "text": "All 9 enabled skills green, 0 consecutive failures fleet-wide — none chronic. Heartbeat self-check clear."
+      }
+    },
+    "p0-skills-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "skill-aeon",
+        "skill-holdings",
+        "skill-changelog"
+      ]
+    },
+    "skill-aeon": {
+      "type": "Progress",
+      "props": {
+        "value": 67,
+        "max": 100,
+        "label": "aeon-update"
+      }
+    },
+    "skill-holdings": {
+      "type": "Progress",
+      "props": {
+        "value": 75,
+        "max": 100,
+        "label": "holdings"
+      }
+    },
+    "skill-changelog": {
+      "type": "Progress",
+      "props": {
+        "value": 77,
+        "max": 100,
+        "label": "changelog"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "p1-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "p1-badge",
+        "p1-text"
+      ]
+    },
+    "p1-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢 P1 CLEAR",
+        "variant": "default"
+      }
+    },
+    "p1-text": {
+      "type": "Text",
+      "props": {
+        "text": "0 stalled PRs, 0 urgent issues."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "new-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "new-badge",
+        "new-text"
+      ]
+    },
+    "new-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🔵 NEW",
+        "variant": "outline"
+      }
+    },
+    "new-text": {
+      "type": "Text",
+      "props": {
+        "text": "secured-watch flipped enabled:true→false in aeon.yml since yesterday's status page (10→9 enabled skills). Its 2026-10-01 12:00 UTC slot didn't fire — consistent with the disable, not a failure, but no log/memory entry explains why. Flagging in case it wasn't intentional.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "carried-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "carried-badge",
+        "carried-text"
+      ]
+    },
+    "carried-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🔵 CARRIED",
+        "variant": "outline"
+      }
+    },
+    "carried-text": {
+      "type": "Text",
+      "props": {
+        "text": "No action, already known: AGENTS.md deleted-uncommitted (44+ days) · tracked scratch files (.tmp-sw/, .tmp_td/, .tw-*) · secured-watch note-field parser gap · health issues #230/#231/#234 still open (skills recovered).",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "token-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "token-heading",
+        "token-stat",
+        "status-line"
+      ]
+    },
+    "token-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Token Pulse",
+        "level": "h3"
+      }
+    },
+    "token-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "AEON",
+        "value": "$0.0000175554",
+        "delta": "-2.4%",
+        "trend": "down"
+      }
+    },
+    "status-line": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "consolidating-text",
+        "status-link",
+        "watch-badge"
+      ]
+    },
+    "consolidating-text": {
+      "type": "Text",
+      "props": {
+        "text": "CONSOLIDATING. Status page:"
+      }
+    },
+    "status-link": {
+      "type": "Link",
+      "props": {
+        "label": "docs/status.md",
+        "href": "docs/status.md"
+      }
+    },
+    "watch-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "🟡 WATCH",
+        "variant": "secondary"
+      }
+    }
+  }
+}

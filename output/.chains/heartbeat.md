@@ -1,9 +1,12 @@
-⚠️ Heartbeat — ambient check
+ℹ️ Heartbeat — 2026-10-01
 
-🟡 NEW: health issue #234 (tweet-digest) — quality score dropped to 2/4 today, flagged `low_quality` for hype-adjacent framing (OpenAI-rename angle) vs strategy's 'avoid hype' directive. Not a reliability issue — tweet-digest itself ran clean (97% success, 0 consecutive failures); same one-off dip pattern last seen 09-12, recovered same week.
+🟡 FLEET STATUS — 2026-10-01
 
-🔵 Carried (unchanged, already reported): health issues #230/#231 still open 8+ days post-recovery; working-tree anomaly, scratch-file hygiene, secured-watch note-field gap all still pending a repair pass.
+🟢 P0 CLEAR: all 9 enabled skills green, 0 consecutive failures fleet-wide (aeon-update 67%, holdings 75%, changelog 77% — none chronic). Heartbeat self-check clear.
+🟢 P1 CLEAR: 0 stalled PRs, 0 urgent issues.
 
-Fleet otherwise green — 0 failed/stuck skills, no stalled PRs, no urgent issues, all schedules current.
+🔵 NEW: secured-watch flipped enabled:true→false in aeon.yml since yesterday's status page (10→9 enabled skills). Its 2026-10-01 12:00 UTC slot didn't fire — consistent with the disable, not a failure, but no log/memory entry explains why. Flagging in case it wasn't intentional.
 
-Status page: 🟡 WATCH (unchanged).
+🔵 CARRIED (no action, already known): AGENTS.md deleted-uncommitted (44+ days) · tracked scratch files (.tmp-sw/, .tmp_td/, .tw-*) · secured-watch note-field parser gap · health issues #230/#231/#234 still open (skills recovered).
+
+Token pulse: AEON $0.0000175554, -2.4% 24h, CONSOLIDATING. Status page: docs/status.md (🟡 WATCH).
