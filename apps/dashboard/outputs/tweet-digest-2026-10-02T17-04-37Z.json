@@ -1,0 +1,71 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest",
+        "description": "2026-10-02"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_shipped",
+        "tweet_1",
+        "sep_1",
+        "heading_recap",
+        "tweet_2"
+      ]
+    },
+    "heading_shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped — Security",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "Quote-posted @aaronjmars's announcement: Aeon has been auditing smart contracts for months and is now shipping a public audit dashboard showing every vulnerability found. (with 21s video) https://x.com/aeonframework/status/2105967661947502914"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "heading_recap": {
+      "type": "Heading",
+      "props": {
+        "text": "Weekly Recap",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "tweet_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "\"Week in the trenches\" thread: Framework & ecosystem updates for Sept 27 → Oct 2. https://x.com/aeonframework/status/2105925545787883791"
+      },
+      "children": []
+    }
+  }
+}

@@ -1,10 +1,9 @@
-ℹ️ Tweet Digest — 2026-10-01
+ℹ️ Tweet Digest
 
-*Tweet Digest — 2026-10-01*
+*Tweet Digest — 2026-10-02*
 
-*Theme: Shipped — New Skills*
-@aeonframework: Spotlighted the new Arc Studio skill — agents can now run Arc Studio themselves, going from a prompt to a full onchain app (contracts, DeFi integrations, 9-chain testing, native CCTP, Gateway, Wallets) — [link](https://x.com/aeonframework/status/2105618259588403448)
-@aeonframework: Posted an X article, "The most recent aeon Skills: A safety-first approach is what they share the most," covering the 20 skills added to the catalog between 08-04 and 09-28 — [link](https://x.com/aeonframework/status/2105637263568703618)
+*Theme: Shipped — Security*
+@aeonframework: quote-posted (with a 21s video) @aaronjmars's announcement that aeon has been auditing smart contracts for months and is now shipping a public audit dashboard showing every vulnerability found — [link](https://x.com/aeonframework/status/2105967661947502914)
 
-*Theme: Content & Comparisons*
-@aeonframework: Shared a comparison article between Aeon and OpenAI's "dots" agent framework — [link](https://x.com/aeonframework/status/2105543858666840533)
+*Theme: Weekly Recap*
+@aeonframework: posted the "week in the trenches" thread covering framework & ecosystem updates, Sept 27 → Oct 2 — [link](https://x.com/aeonframework/status/2105925545787883791)
