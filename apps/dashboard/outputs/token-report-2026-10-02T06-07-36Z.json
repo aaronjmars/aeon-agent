@@ -1,0 +1,102 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Token Report — 2026-10-02"
+      },
+      "children": [
+        "heading-consolidating",
+        "text-description",
+        "stats-section",
+        "secondary-stats",
+        "chart-link"
+      ]
+    },
+    "heading-consolidating": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "level": "h2"
+      }
+    },
+    "text-description": {
+      "type": "Text",
+      "props": {
+        "text": "Price +2.5% to $0.0000179985 on 0.36x avg volume; two whale sells couldn't tip the balance."
+      }
+    },
+    "stats-section": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.0000179985",
+        "delta": "+2.5% 24h",
+        "trend": "up"
+      }
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liq",
+        "value": "$426.9K",
+        "delta": "+0.2%",
+        "trend": "up"
+      }
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol",
+        "value": "$25.2K",
+        "delta": "0.36x 7d"
+      }
+    },
+    "secondary-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-buys-sells",
+        "stat-whales"
+      ]
+    },
+    "stat-buys-sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "65/51 (1.27x)"
+      }
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "2"
+      }
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
