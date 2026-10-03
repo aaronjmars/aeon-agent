@@ -1,0 +1,115 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status_badge",
+        "narrative_text",
+        "separator1",
+        "main_stats",
+        "detail_section",
+        "separator2",
+        "chart_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "RALLYING",
+        "variant": "default"
+      }
+    },
+    "narrative_text": {
+      "type": "Text",
+      "props": {
+        "text": "Price up 7.5% to $0.0000193572 on 2.04x average volume — buy/sell ratio actually cooled to 1.08 from yesterday's 1.27, so this reads as broad demand, not one-sided accumulation.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "main_stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "price_stat",
+        "liquidity_stat",
+        "volume_stat"
+      ]
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.0000193572",
+        "delta": "+7.5%",
+        "trend": "up"
+      }
+    },
+    "liquidity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$420.3K",
+        "delta": "−1.6%",
+        "trend": "down"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume (24h)",
+        "value": "$124.7K",
+        "delta": "2.04× 7d avg"
+      }
+    },
+    "detail_section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "buysells_text",
+        "whales_text"
+      ]
+    },
+    "buysells_text": {
+      "type": "Text",
+      "props": {
+        "text": "Buys/Sells: 127/118 (ratio 1.08)"
+      }
+    },
+    "whales_text": {
+      "type": "Text",
+      "props": {
+        "text": "Whales: 27"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
