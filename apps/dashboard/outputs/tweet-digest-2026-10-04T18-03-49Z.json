@@ -1,0 +1,49 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "ℹ️ Tweet Digest"
+      },
+      "children": [
+        "meta-section",
+        "tweet-card"
+      ]
+    },
+    "meta-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "date-text",
+        "theme-badge"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-04",
+        "variant": "caption"
+      }
+    },
+    "theme-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Shipped — Security",
+        "variant": "default"
+      }
+    },
+    "tweet-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "reminds followers that aeon agents can now audit both Uniswap v4 hook contracts and general smart contracts — https://x.com/aeonframework/status/2106672012919759038"
+      }
+    }
+  }
+}
