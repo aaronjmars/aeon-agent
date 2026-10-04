@@ -10,6 +10,12 @@ Older entries rotated out of MEMORY.md's Recent Digests table.
 
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-09-19 | tweet-digest | TWEET_DIGEST_OK — no notable new tweets, genuine thin cycle (0 net-new originals since 09-18) |
+| 2026-09-18 | tweet-digest | Weekly Recap (Sept 11-18 week-in-review thread), Skill Drop (Smart Contract Audit spotlight), Ecosystem & Builder Tooling (aaronjmars's 6-harness headless coding-agent benchmark) |
+| 2026-09-17 | tweet-digest | Shipped (Aeon Hook Series — TotalizerTrap, episode 6, live on 4 mainnets), Content & Comparisons (aeon vs @noahrshinn's Instinct blog post), Community & Growth (builder-praise quote-tweet) |
+| 2026-09-16 | tweet-digest | Hook Marketplace & Security (Uniswap v4 hook risk framed against Aeon's create→scan→deploy flow) — thin cycle, 1 net-new original |
+| 2026-09-15 | tweet-digest | Hook Marketplace & Security (intro video, "use audited hooks not avoidance" pitch), thecultos x402 Partnership (vuln-scanner + 10+ aeon skills live via x402 on demand) |
+| 2026-09-14 | tweet-digest | Shipped (Uniswap v4 hooks marketplace live — create/audit/list/launch flow), Security disclosures (vuln-scanner flagged usekaneo/kaneo + perplexityai/numbat, advisory + fix PRs) |
 | 2026-09-13 | tweet-digest | Shipped (hook marketplace live), Security disclosures (cloudflare vuln flag + meme), Skill Drop (compute resell), Growth & Community (fd_xyz wallet giveaway) — dedup regression: 4/5 reported URLs were repeats of 09-11's report, fixed 09-14 (see Lessons) |
 | 2026-09-12 | tweet-digest | Skill Drop (Submit Hook — agent-driven Uniswap v4 hook marketplace submission), Security disclosures (vuln-scanner flagged different-ai/openwork, advisory + patch PR) |
 | 2026-09-11 | tweet-digest | Security disclosures (vuln-scanner flagged Cloudflare + Pumpkin-MC/Pumpkin, advisory/fix PRs), Skill Drop (Compute Resell spotlight), Growth & Partnerships (FD_XYZ wallet MCP push) |
