@@ -1,5 +1,3 @@
-ℹ️ AEON Token Report — ACCUMULATING
-
 # $AEON — 2026-10-04
 
 **Verdict:** ACCUMULATING — Price flat (-1.1%) at $0.0000191483, buy/sell ratio jumps to 1.71 with 26 whale buys vs 18 sells.
@@ -26,5 +24,3 @@ Price held nearly flat at $0.0000191483 (−1.1% over 24h), but the order flow u
 *Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4*
 *Contract: 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | Chain: Base*
 *Sources: gt=ok · ds=ok · xai=skip · treasury=skip*
-
-🔗 https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4

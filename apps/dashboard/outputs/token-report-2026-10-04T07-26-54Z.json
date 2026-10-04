@@ -1,0 +1,266 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report",
+        "description": "2026-10-04"
+      },
+      "children": [
+        "verdict-section",
+        "separator1",
+        "metrics-section",
+        "separator2",
+        "trend-section",
+        "separator3",
+        "what-changed-section",
+        "separator4",
+        "links-section"
+      ]
+    },
+    "verdict-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "verdict-badge",
+        "verdict-stats"
+      ]
+    },
+    "verdict-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "ACCUMULATING",
+        "variant": "secondary"
+      }
+    },
+    "verdict-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "price-stat",
+        "buysell-stat"
+      ]
+    },
+    "price-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.0000191483",
+        "delta": "-1.1%",
+        "trend": "down"
+      }
+    },
+    "buysell-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buy/Sell Ratio",
+        "value": "1.71",
+        "delta": "+58.3%",
+        "trend": "up"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "metrics-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics-heading",
+        "metrics-table"
+      ]
+    },
+    "metrics-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "24h at a glance",
+        "level": "h3"
+      }
+    },
+    "metrics-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Metric",
+          "Now",
+          "24h Δ",
+          "vs 7d avg"
+        ],
+        "rows": [
+          [
+            "Price",
+            "$0.0000191483",
+            "−1.1%",
+            "—"
+          ],
+          [
+            "Liquidity",
+            "$423.1K",
+            "+0.7%",
+            "—"
+          ],
+          [
+            "Volume (24h)",
+            "$162.5K",
+            "—",
+            "2.75×"
+          ],
+          [
+            "Buys / Sells",
+            "193 / 113",
+            "ratio 1.71 (yest 1.08)",
+            "—"
+          ],
+          [
+            "Whale trades (≥$1k)",
+            "44",
+            "—",
+            "—"
+          ],
+          [
+            "FDV",
+            "$1.9M",
+            "—",
+            "—"
+          ]
+        ]
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "trend-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "trend-heading",
+        "trend-stats"
+      ]
+    },
+    "trend-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Trend",
+        "level": "h3"
+      }
+    },
+    "trend-stats": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "trend-7d",
+        "trend-30d"
+      ]
+    },
+    "trend-7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "-12.9%",
+        "trend": "down"
+      }
+    },
+    "trend-30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "-15.2%",
+        "trend": "down"
+      }
+    },
+    "separator3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "what-changed-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "what-changed-heading",
+        "what-changed-text"
+      ]
+    },
+    "what-changed-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "What changed",
+        "level": "h3"
+      }
+    },
+    "what-changed-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price held nearly flat at $0.0000191483 (−1.1% over 24h), but the order flow underneath turned clearly bullish: 193 buys against 113 sells pushed the buy/sell ratio to 1.71, up sharply from yesterday's 1.08, on volume running 2.75× the 7-day average ($162.5K vs a $59.0K average). Whale activity (≥$1K) nearly doubled to 44 trades, split 26 buys to 18 sells — net accumulation. Yet the three largest single prints were all sells — sell $7.5K @ $0.0000174 · 11:06 UTC, sell $6.4K @ $0.0000174 · 10:16 UTC, sell $5.2K @ $0.0000184 · 10:14 UTC — which is why heavier buy-side participation didn't translate into a price pop. Liquidity ticked up slightly (+0.7% to $423.1K), ruling out a pool drain as the explanation for the stalled price.",
+        "variant": "body"
+      }
+    },
+    "separator4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "links-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "geckoterminal-link",
+        "contract-info",
+        "sources-info"
+      ]
+    },
+    "geckoterminal-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View on GeckoTerminal",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    },
+    "contract-info": {
+      "type": "Text",
+      "props": {
+        "text": "Contract: 0xbf8e8f0e8866a7052f948c16508644347c57aba3 | Chain: Base",
+        "variant": "caption"
+      }
+    },
+    "sources-info": {
+      "type": "Text",
+      "props": {
+        "text": "Sources: gt=ok · ds=ok · xai=skip · treasury=skip",
+        "variant": "caption"
+      }
+    }
+  }
+}
