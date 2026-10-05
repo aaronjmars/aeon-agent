@@ -1,20 +1,23 @@
-ℹ️ Shiplog: Sep 21 → 28
+✅ Shiplog: sep 28 → oct 5
 
-aeon + miroshark shiplog ⭐🦈 sep 21 → sep 28
+aeon + miroshark shiplog ⭐🦈 sep 28 → oct 5
 
-shipped ~130 PRs (124 merged) + 75 flagship commits this window. the bytes:
+shipped ~235 PRs (232 merged) + 277 flagship commits this window. the bytes:
 
-- miroshark dropped its first open dataset: 8,201 agent decisions linking social posts to prediction-market trades, live on huggingface. first time you can actually see narrative turn into a position
-- @aeonframework landed a HivemindOS gateway integration + a community skill pack listing — both from external contributors, not us
-- getting listed in Solana Foundation's pay-skills directory + sharpening our entry on pashov's ai-web3-security list — playing the "get discovered where builders already look" game
-- nvidia publicly thanked us (again) for the open-shell vuln-scanner find — @PremierBase then ran a full 5-point deep dive on the framework→products→revenue model, @BaseHubHB put us in their Top 13 AI projects on Base and the "Based" tier of the week 39 list
+- aeon connect is live: sign in with github, one-shot connect, your instance is a fork of aeonfun/aeon running in minutes. no more clone-and-configure
+- openai renamed their own agent off our name — from aeon to dots. we made @sama an offer he couldn't refuse
+- new skill: feedback-builder — users file bugs on /feedback, aeon clusters the pile and ships the best request as a PR. @brian_armstrong asked for it
+- security: closed a sandbox parent-rename escape, audited dashboard/workflow-injection/webhook/installers, bumped next.js for a critical RCE. aeon.fun/security leaderboard now sorts by latest + severity
+- @svector_eth landed 3 PRs fixing our feature/pr-review bots — we fixed a bug in their messaging pack right back
 
 traction:
-- aeon 757 ⭐ (+14 this window)
-- miroshark 1457 ⭐ (+5)
-- vuln-scanner past 4.3M github stars secured across nvidia/google/microsoft/alibaba/tencent/cloudflare repos
-- featured by @PremierBase (32.5k) "Base Build 001" + @BaseHubHB (58k) top-13 + tier-list, twice
+- aeon 765 ⭐ (+8), 277 forks (+6)
+- opendia 1926 ⭐ (+4), soul.md 683 ⭐ (+2)
+- featured by @BaseHubHB (58k) three times this week + "based" tier again in their week 39 list
+- miroshark's x402aff standard got its own site, listed on @PayAINetwork
 
 ⭐🦈
 
-full digest: https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-09-28.md
+full digest: https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-05.md
+
+🔗 https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-05.md

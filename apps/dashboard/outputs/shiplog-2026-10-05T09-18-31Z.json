@@ -1,0 +1,293 @@
+{
+  "root": "card-shiplog",
+  "state": {},
+  "elements": {
+    "card-shiplog": {
+      "type": "Card",
+      "props": {
+        "title": "Shiplog: Sep 28 → Oct 5",
+        "description": "aeon + miroshark shipping digest"
+      },
+      "children": [
+        "heading-main",
+        "sep-1",
+        "stats-window",
+        "sep-2",
+        "heading-shipped",
+        "shipped-list",
+        "sep-3",
+        "heading-traction",
+        "traction-list",
+        "sep-4",
+        "full-digest"
+      ]
+    },
+    "heading-main": {
+      "type": "Heading",
+      "props": {
+        "text": "⭐🦈 aeon + miroshark shiplog",
+        "level": "h2"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "stats-window": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-prs",
+        "stat-commits"
+      ]
+    },
+    "stat-prs": {
+      "type": "Stat",
+      "props": {
+        "label": "PRs shipped",
+        "value": "235",
+        "delta": "232 merged"
+      }
+    },
+    "stat-commits": {
+      "type": "Stat",
+      "props": {
+        "label": "Flagship commits",
+        "value": "277"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-shipped": {
+      "type": "Heading",
+      "props": {
+        "text": "Shipped",
+        "level": "h3"
+      }
+    },
+    "shipped-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "shipped-1",
+        "shipped-2",
+        "shipped-3",
+        "shipped-4",
+        "shipped-5"
+      ]
+    },
+    "shipped-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-shipped-1",
+        "badge-1"
+      ]
+    },
+    "text-shipped-1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon connect is live: sign in with github, one-shot connect, your instance is a fork of aeonfun/aeon running in minutes. no more clone-and-configure",
+        "variant": "body"
+      }
+    },
+    "badge-1": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon connect",
+        "variant": "secondary"
+      }
+    },
+    "shipped-2": {
+      "type": "Text",
+      "props": {
+        "text": "openai renamed their own agent off our name — from aeon to dots. we made @sama an offer he couldn't refuse",
+        "variant": "body"
+      }
+    },
+    "shipped-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-shipped-3",
+        "badge-3"
+      ]
+    },
+    "text-shipped-3": {
+      "type": "Text",
+      "props": {
+        "text": "new skill: feedback-builder — users file bugs on /feedback, aeon clusters the pile and ships the best request as a PR. @brian_armstrong asked for it",
+        "variant": "body"
+      }
+    },
+    "badge-3": {
+      "type": "Badge",
+      "props": {
+        "text": "New Skill",
+        "variant": "secondary"
+      }
+    },
+    "shipped-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "text-shipped-4",
+        "badge-4"
+      ]
+    },
+    "text-shipped-4": {
+      "type": "Text",
+      "props": {
+        "text": "security: closed a sandbox parent-rename escape, audited dashboard/workflow-injection/webhook/installers, bumped next.js for a critical RCE. aeon.fun/security leaderboard now sorts by latest + severity",
+        "variant": "body"
+      }
+    },
+    "badge-4": {
+      "type": "Badge",
+      "props": {
+        "text": "Security",
+        "variant": "destructive"
+      }
+    },
+    "shipped-5": {
+      "type": "Text",
+      "props": {
+        "text": "@svector_eth landed 3 PRs fixing our feature/pr-review bots — we fixed a bug in their messaging pack right back",
+        "variant": "body"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading-traction": {
+      "type": "Heading",
+      "props": {
+        "text": "Traction",
+        "level": "h3"
+      }
+    },
+    "traction-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "traction-aeon",
+        "traction-opendia-soul",
+        "traction-featured",
+        "traction-miroshark"
+      ]
+    },
+    "traction-aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-aeon-stars",
+        "stat-aeon-forks"
+      ]
+    },
+    "stat-aeon-stars": {
+      "type": "Stat",
+      "props": {
+        "label": "aeon ⭐",
+        "value": "765",
+        "delta": "+8",
+        "trend": "up"
+      }
+    },
+    "stat-aeon-forks": {
+      "type": "Stat",
+      "props": {
+        "label": "forks",
+        "value": "277",
+        "delta": "+6",
+        "trend": "up"
+      }
+    },
+    "traction-opendia-soul": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-opendia",
+        "stat-soul"
+      ]
+    },
+    "stat-opendia": {
+      "type": "Stat",
+      "props": {
+        "label": "opendia ⭐",
+        "value": "1926",
+        "delta": "+4",
+        "trend": "up"
+      }
+    },
+    "stat-soul": {
+      "type": "Stat",
+      "props": {
+        "label": "soul.md ⭐",
+        "value": "683",
+        "delta": "+2",
+        "trend": "up"
+      }
+    },
+    "traction-featured": {
+      "type": "Text",
+      "props": {
+        "text": "featured by @BaseHubHB (58k) three times this week + \"based\" tier again in their week 39 list",
+        "variant": "body"
+      }
+    },
+    "traction-miroshark": {
+      "type": "Text",
+      "props": {
+        "text": "miroshark's x402aff standard got its own site, listed on @PayAINetwork",
+        "variant": "body"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "full-digest": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full digest",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-05.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}

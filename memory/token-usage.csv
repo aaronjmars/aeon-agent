@@ -578,3 +578,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-10-04,heartbeat,claude-sonnet-5,2485,16182,1022981,96030
 2026-10-05,token-report,claude-sonnet-5,2789,16951,2864077,66965
 2026-10-05,changelog,claude-sonnet-5,3077,20664,5646456,112694
+2026-10-05,shiplog,claude-sonnet-5,4058,51186,11962571,153067
