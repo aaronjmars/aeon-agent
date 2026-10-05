@@ -1,0 +1,408 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-10-05 — [STEADY]"
+      },
+      "children": [
+        "table-repos",
+        "sep-1",
+        "section-aeon",
+        "sep-2",
+        "section-opendia",
+        "sep-3",
+        "section-soul",
+        "sep-4",
+        "section-minitor"
+      ]
+    },
+    "table-repos": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "765 (+8)",
+            "277 (+6)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1926 (+4)",
+            "163 (+2)",
+            "+1",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "683 (+2)",
+            "75 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "17 (—)",
+            "5 (—)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-aeon": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-aeon",
+        "alert-aeon-window",
+        "heading-aeon-forks",
+        "forks-aeon-stack",
+        "heading-aeon-stars",
+        "text-aeon-stars"
+      ]
+    },
+    "heading-aeon": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon — STEADY (avg4w ≈ 14.0)",
+        "level": "h2"
+      }
+    },
+    "alert-aeon-window": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Window truncated: the /events feed only reached back to 2026-10-01T07:21Z this run (cutoff was 2026-09-28T10:22Z) — aeon's volume fills the 300-event cap before 7 days. Counts below are a floor for 2026-10-01→10-05, missing ~3 days."
+      }
+    },
+    "heading-aeon-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h3"
+      }
+    },
+    "forks-aeon-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "fork-djh4ck3r",
+        "fork-normancomics",
+        "fork-domimueller85",
+        "fork-blockchains",
+        "fork-nkipa"
+      ]
+    },
+    "fork-djh4ck3r": {
+      "type": "StoryLink",
+      "props": {
+        "title": "djh4ck3r",
+        "source": "A4r0n$t0n3 · 3 repos · https://ubiquitous-alpaca-247db6.netlify.app",
+        "href": "https://github.com/djh4ck3r"
+      }
+    },
+    "fork-normancomics": {
+      "type": "StoryLink",
+      "props": {
+        "title": "normancomics",
+        "source": "normancomics.eth · East-Coast 🇺🇸 · BibleFi · 62 repos · https://app.icebreaker.xyz/profiles/fTu9Z9w4XNzzURf8lfaS6 · @KEKBONDS · 131 followers · Cartoonist of the comic-strip, NORMAN® • Author—\"iatrogenic\" • Founder/Lead Engineer @BibleFi • Anti-Pop-Culture Style Consultant • Esoter…",
+        "href": "https://github.com/normancomics"
+      }
+    },
+    "fork-domimueller85": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Domimueller85",
+        "source": "Dominik · de · 387 repos · @Dominik_mu5237 (also starred aeon) · Ich bin Koch und Dichter ,einer der besseren Richter, wer nicht wagt der nicht gewinnt, nun bläst eine spezieller wind den ich selbst noch f…",
+        "href": "https://github.com/Domimueller85"
+      }
+    },
+    "fork-blockchains": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Blockchains",
+        "source": "Blockchain Lab · London · Blockchain Lab · 588 repos · https://blockchainlab.com · @BlockchainLab · 125 followers · The Worlds First Blockchain Lab; Venture Studio with deep expertise in Digital Assets, Tokenization & Stablecoins",
+        "href": "https://github.com/Blockchains"
+      }
+    },
+    "fork-nkipa": {
+      "type": "StoryLink",
+      "props": {
+        "title": "nkipa",
+        "source": "Paul Dawidowicz · Chile · NKIPA, LLC. · 223 repos · Consultant, Data Scientist, Engineer and Entrepreneur",
+        "href": "https://github.com/nkipa"
+      }
+    },
+    "heading-aeon-stars": {
+      "type": "Heading",
+      "props": {
+        "text": "Other new stargazers:",
+        "level": "h3"
+      }
+    },
+    "text-aeon-stars": {
+      "type": "Text",
+      "props": {
+        "text": "AndresPuglia98 | Bentley7988 | Cacrowley01 | Ninoweer | alexiss31 | bravoxcapitan | eterru"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-opendia": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-opendia",
+        "heading-opendia-notablestars",
+        "stars-opendia-stack",
+        "text-opendia-otherstars",
+        "heading-opendia-forks",
+        "fork-opendia-adeyholar",
+        "heading-opendia-releases",
+        "badge-release-v114"
+      ]
+    },
+    "heading-opendia": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia — STEADY (avg4w ≈ 3.75)",
+        "level": "h2"
+      }
+    },
+    "heading-opendia-notablestars": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 5 of 5):",
+        "level": "h3"
+      }
+    },
+    "stars-opendia-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "star-jarjut",
+        "star-n1106836",
+        "star-termaulmaul"
+      ]
+    },
+    "star-jarjut": {
+      "type": "StoryLink",
+      "props": {
+        "title": "jarjut",
+        "source": "Ahmad Fajrul Falah · Surabaya, Indonesia · 42 repos · https://jarjut.dev/ · 16 followers",
+        "href": "https://github.com/jarjut"
+      }
+    },
+    "star-n1106836": {
+      "type": "StoryLink",
+      "props": {
+        "title": "n1106836-collab",
+        "source": "99 repos · Passionate about technology, particularly the .NET framework. As a Backend Developer and student at the esteemed National Taipei Univer…",
+        "href": "https://github.com/n1106836-collab"
+      }
+    },
+    "star-termaulmaul": {
+      "type": "StoryLink",
+      "props": {
+        "title": "termaulmaul",
+        "source": "Maulana Rafi · Jakarta · Mandiri Sekuritas · 95 repos · 15 followers",
+        "href": "https://github.com/termaulmaul"
+      }
+    },
+    "text-opendia-otherstars": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers: alekseizadubnenko-art | robertoatila",
+        "variant": "caption"
+      }
+    },
+    "heading-opendia-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h3"
+      }
+    },
+    "fork-opendia-adeyholar": {
+      "type": "StoryLink",
+      "props": {
+        "title": "adeyholar",
+        "source": "12721 repos",
+        "href": "https://github.com/adeyholar"
+      }
+    },
+    "heading-opendia-releases": {
+      "type": "Heading",
+      "props": {
+        "text": "New releases:",
+        "level": "h3"
+      }
+    },
+    "badge-release-v114": {
+      "type": "Badge",
+      "props": {
+        "text": "v1.1.4",
+        "variant": "secondary"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-soul": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-soul",
+        "heading-soul-notablestars",
+        "stars-soul-stack",
+        "text-soul-otherstars",
+        "heading-soul-forks",
+        "fork-soul-towa"
+      ]
+    },
+    "heading-soul": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md — STEADY (avg4w ≈ 7.25)",
+        "level": "h2"
+      }
+    },
+    "heading-soul-notablestars": {
+      "type": "Heading",
+      "props": {
+        "text": "Notable new stargazers (enriched 4 of 4):",
+        "level": "h3"
+      }
+    },
+    "stars-soul-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "star-colin",
+        "star-alif",
+        "star-khairi"
+      ]
+    },
+    "star-colin": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Colinchiu007",
+        "source": "ColinChiu · 43 repos",
+        "href": "https://github.com/Colinchiu007"
+      }
+    },
+    "star-alif": {
+      "type": "StoryLink",
+      "props": {
+        "title": "alifndaru",
+        "source": "alif ndaru kusuma · Jakarta · 36 repos · 12 followers · hello my name alif",
+        "href": "https://github.com/alifndaru"
+      }
+    },
+    "star-khairi": {
+      "type": "StoryLink",
+      "props": {
+        "title": "khairi-u28",
+        "source": "Khairi Ubaidah · Jakarta, Indonesia · Japan Dream Tour Co., Ltd. · 28 repos · https://khairiu.site · @khairiu28 · 15 followers · Web Developer & Web Designer",
+        "href": "https://github.com/khairi-u28"
+      }
+    },
+    "text-soul-otherstars": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers: emkaters",
+        "variant": "caption"
+      }
+    },
+    "heading-soul-forks": {
+      "type": "Heading",
+      "props": {
+        "text": "New forks:",
+        "level": "h3"
+      }
+    },
+    "fork-soul-towa": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Towa-1",
+        "source": "Emmanuel Kofi Ntow Gyamfi · 23 repos",
+        "href": "https://github.com/Towa-1"
+      }
+    },
+    "sep-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "section-minitor": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-minitor",
+        "text-minitor-status"
+      ]
+    },
+    "heading-minitor": {
+      "type": "Heading",
+      "props": {
+        "text": "minitor — QUIET",
+        "level": "h2"
+      }
+    },
+    "text-minitor-status": {
+      "type": "Text",
+      "props": {
+        "text": "No activity",
+        "variant": "muted"
+      }
+    }
+  }
+}
