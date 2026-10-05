@@ -85,6 +85,13 @@
     "repo-pulse": "<path d='M4 4v16a1 1 0 0 0 1 1h16'/><path d='M7 15l4-4 3 3 5-6'/><path d='M19 8h1v1'/>",
     "secured-watch": "<path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/><path d='M9 12l2 2 4-4'/>",
     "token-report": "<circle cx='12' cy='12' r='9'/><path d='M12 7v10M9.5 9h3.5a1.75 1.75 0 0 1 0 3.5H10a1.75 1.75 0 0 0 0 3.5h3.5'/>",
-    "tweet-digest": "<path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/><path d='M8 9h8M8 13h5'/>"
+    "tweet-digest": "<path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/><path d='M8 9h8M8 13h5'/>",
+    "arc-studio": "<path d='M22 17a10 10 0 0 0-20 0'/><path d='M18 17a6 6 0 0 0-12 0'/><path d='M14 17a2 2 0 0 0-4 0'/>",
+    "compute-resell": "<rect x='3' y='4' width='18' height='7' rx='2'/><rect x='3' y='13' width='18' height='7' rx='2'/><path d='M7 7.5h.01'/><path d='M7 16.5h.01'/>",
+    "create-prove": "<path d='M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z'/><path d='m9 12 2 2 4-4'/>",
+    "feedback-builder": "<path d='M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z'/><path d='M12 7v6'/><path d='M9 10h6'/>",
+    "miroshark-matchday": "<circle cx='12' cy='12' r='9'/><path d='M12 6.2l4.5 3.3-1.7 5.3H9.2l-1.7-5.3z'/><path d='M12 6.2V2.5M16.5 9.5l3.6-1.1M14.8 14.8l2.2 3M9.2 14.8l-2.2 3M7.5 9.5L3.9 8.4'/>",
+    "sc-audit": "<path d='M12 2 5 5v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V5z'/><path d='M13 10a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'/><path d='M12.4 11.8 15 14.4'/>",
+    "submit-hook": "<path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/><path d='M17 8l-5-5-5 5'/><path d='M12 3v12'/>"
   }
 }
