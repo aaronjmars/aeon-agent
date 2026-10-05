@@ -224,13 +224,13 @@
     "last_error": "2c02c0\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"s"
   },
   "holdings": {
-    "last_status": "dispatched",
-    "last_success": "2026-09-28T08:09:31Z",
-    "total_runs": 16,
-    "total_successes": 12,
+    "last_status": "success",
+    "last_success": "2026-10-05T08:28:57Z",
+    "total_runs": 17,
+    "total_successes": 13,
     "total_failures": 4,
     "consecutive_failures": 0,
-    "success_rate": 0.75,
+    "success_rate": 0.76,
     "last_quality_score": 4,
     "last_dispatch": "2026-10-05T08:26:42Z",
     "last_failed": "2026-08-31T14:39:03Z",
