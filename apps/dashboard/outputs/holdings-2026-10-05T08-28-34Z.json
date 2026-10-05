@@ -1,0 +1,75 @@
+{
+  "root": "card-holdings",
+  "state": {},
+  "elements": {
+    "card-holdings": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "context-text",
+        "holdings-stat",
+        "supply-stat",
+        "separator-1",
+        "change-7d-stat",
+        "change-30d-stat"
+      ]
+    },
+    "context-text": {
+      "type": "Text",
+      "props": {
+        "text": "aeon",
+        "variant": "muted"
+      }
+    },
+    "holdings-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Holdings",
+        "value": "14.76B"
+      }
+    },
+    "supply-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Supply",
+        "value": "14.76%"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "change-7d-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "7d Change",
+        "value": "49.06M",
+        "delta": "+0.33%",
+        "trend": "up"
+      }
+    },
+    "change-30d-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "30d Change",
+        "value": "482.38M",
+        "delta": "+3.38%",
+        "trend": "up"
+      }
+    }
+  }
+}
