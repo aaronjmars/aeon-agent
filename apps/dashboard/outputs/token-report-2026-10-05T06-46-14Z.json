@@ -1,0 +1,141 @@
+{
+  "root": "root-card",
+  "state": {},
+  "elements": {
+    "root-card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "heading-1",
+        "narrative-text",
+        "separator-1",
+        "metrics-stack",
+        "separator-2",
+        "chart-link"
+      ]
+    },
+    "heading-1": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "narrative-text": {
+      "type": "Text",
+      "props": {
+        "text": "Price slipped -1.4% to $0.0000188870 on 3.24x average volume; order flow normalized to near 1:1 (250/251) after yesterday's buy-heavy skew, and whale activity cooled to 37 trades (net sell-leaning, 21/16).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "metrics-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "metrics-line-1",
+        "metrics-line-2"
+      ]
+    },
+    "metrics-line-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-price",
+        "stat-liq",
+        "stat-vol"
+      ]
+    },
+    "stat-price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.0000188870",
+        "delta": "-1.4%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "stat-liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$425.5K",
+        "delta": "+0.6%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat-vol": {
+      "type": "Stat",
+      "props": {
+        "label": "24h Volume",
+        "value": "$247.2K",
+        "delta": "3.24× 7d avg",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "metrics-line-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat-buysells",
+        "stat-whales"
+      ]
+    },
+    "stat-buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "250/251",
+        "delta": "ratio 1.00",
+        "trend": "neutral"
+      },
+      "children": []
+    },
+    "stat-whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale Trades",
+        "value": "37",
+        "delta": "net sell-leaning (21/16)"
+      },
+      "children": []
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "chart-link": {
+      "type": "Link",
+      "props": {
+        "label": "View Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}
