@@ -1,0 +1,65 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge_date",
+        "text_push",
+        "stat_prs",
+        "text_entry",
+        "story_pr"
+      ]
+    },
+    "badge_date": {
+      "type": "Badge",
+      "props": {
+        "text": "2026-10-05",
+        "variant": "secondary"
+      }
+    },
+    "text_push": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon → aaronjmars/aeon-website",
+        "variant": "lead"
+      }
+    },
+    "stat_prs": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs",
+        "value": "6"
+      }
+    },
+    "text_entry": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog entry: Aeon Connect onboarding and a privacy pitch",
+        "variant": "body"
+      }
+    },
+    "story_pr": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Aeon Connect onboarding and a privacy pitch",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/574",
+        "source": "GitHub PR"
+      }
+    }
+  }
+}
