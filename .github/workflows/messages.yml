@@ -42,7 +42,7 @@ concurrency:
 jobs:
   poll:
     if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.message == '') || (github.event_name == 'repository_dispatch' && github.event.action == 'cron-tick')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
 
     steps:
@@ -285,7 +285,7 @@ jobs:
     # mirroring what the poller does inline. See scripts/telegram-route.sh.
     if: >-
       github.event_name == 'repository_dispatch' && contains(fromJSON('["telegram-command","telegram-callback","telegram-reply"]'), github.event.action)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - name: Checkout repo
@@ -352,7 +352,7 @@ jobs:
     if: >-
       (github.event_name == 'repository_dispatch' && contains(fromJSON('["telegram-message","discord-message","slack-message"]'), github.event.action))
       || (github.event_name == 'workflow_dispatch' && inputs.message != '')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
 
     steps:
@@ -409,7 +409,7 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: ~/.npm
-          key: claude-code-${{ runner.os }}-2.1.168
+          key: claude-code-${{ runner.os }}-2.1.287
           restore-keys: |
             claude-code-${{ runner.os }}-
 
@@ -417,7 +417,7 @@ jobs:
         if: steps.msg.outputs.source != ''
         # Pinned for supply-chain safety — keep in sync with aeon.yml's pin
         # (and the cache key version above).
-        run: npm install -g @anthropic-ai/claude-code@2.1.168 --prefer-offline
+        run: npm install -g @anthropic-ai/claude-code@2.1.287 --prefer-offline
 
       # Inbound messaging isn't a per-skill run, so no skill name is passed and
       # the repo-global `harness:`/`model:` keys decide — the same script aeon.yml
@@ -431,11 +431,18 @@ jobs:
           # harness runs on (native login/key > OpenRouter). Never echoed.
           CODEX_AUTH: ${{ secrets.CODEX_AUTH }}
           KIMI_AUTH: ${{ secrets.KIMI_AUTH }}
+          HERMES_AUTH: ${{ secrets.HERMES_AUTH }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_OAUTH_TOKEN: ${{ secrets.ANTHROPIC_OAUTH_TOKEN }}
+          # claude's auth label: the Claude subscription token is the gateway's
+          # first pick, so the resolve line names it instead of "openrouter".
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GROK_CREDENTIALS: ${{ secrets.GROK_CREDENTIALS }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
         run: bash scripts/resolve-harness.sh >> "$GITHUB_OUTPUT"
@@ -464,6 +471,10 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           CODEX_AUTH: ${{ secrets.CODEX_AUTH }}
           KIMI_AUTH: ${{ secrets.KIMI_AUTH }}
+          HERMES_AUTH: ${{ secrets.HERMES_AUTH }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
@@ -498,10 +509,13 @@ jobs:
           # ${NAME} with no per-name env wiring. Consumed by the MCP preflight
           # below, then unset before Claude runs so it never reaches skill code.
           ALL_SECRETS: >-
-            {"ADMANAGE_API_KEY":${{ toJSON(secrets.ADMANAGE_API_KEY) }},"ALCHEMY_API_KEY":${{ toJSON(secrets.ALCHEMY_API_KEY) }},"ANTHROPIC_API_KEY":${{ toJSON(secrets.ANTHROPIC_API_KEY) }},"ANTHROPIC_OAUTH_TOKEN":${{ toJSON(secrets.ANTHROPIC_OAUTH_TOKEN) }},"BANKR_API_KEY":${{ toJSON(secrets.BANKR_API_KEY) }},"BANKR_LLM_KEY":${{ toJSON(secrets.BANKR_LLM_KEY) }},"BASESCAN_API_KEY":${{ toJSON(secrets.BASESCAN_API_KEY) }},"BASE_RPC_URL":${{ toJSON(secrets.BASE_RPC_URL) }},"BEAMR_GATEWAY_URL":${{ toJSON(secrets.BEAMR_GATEWAY_URL) }},"BEAMR_PAYER_KEY":${{ toJSON(secrets.BEAMR_PAYER_KEY) }},"CLAUDE_CODE_OAUTH_TOKEN":${{ toJSON(secrets.CLAUDE_CODE_OAUTH_TOKEN) }},"CODEX_AUTH":${{ toJSON(secrets.CODEX_AUTH) }},"COINGECKO_API_KEY":${{ toJSON(secrets.COINGECKO_API_KEY) }},"DISCORD_BOT_TOKEN":${{ toJSON(secrets.DISCORD_BOT_TOKEN) }},"DISCORD_CHANNEL_ID":${{ toJSON(secrets.DISCORD_CHANNEL_ID) }},"DISCORD_WEBHOOK_URL":${{ toJSON(secrets.DISCORD_WEBHOOK_URL) }},"ETHERSCAN_API_KEY":${{ toJSON(secrets.ETHERSCAN_API_KEY) }},"FLEET_ENDPOINT":${{ toJSON(secrets.FLEET_ENDPOINT) }},"FLEET_TOKEN":${{ toJSON(secrets.FLEET_TOKEN) }},"GH_GLOBAL":${{ toJSON(secrets.GH_GLOBAL) }},"GH_READ_PAT":${{ toJSON(secrets.GH_READ_PAT) }},"GH_SECRETS_PAT":${{ toJSON(secrets.GH_SECRETS_PAT) }},"GITHUB_TOKEN":${{ toJSON(secrets.GITHUB_TOKEN) }},"GROK_CREDENTIALS":${{ toJSON(secrets.GROK_CREDENTIALS) }},"HOOK_DEPLOYER_PRIVATE_KEY":${{ toJSON(secrets.HOOK_DEPLOYER_PRIVATE_KEY) }},"HOOK_MAINNET_OK":${{ toJSON(secrets.HOOK_MAINNET_OK) }},"KIMI_AUTH":${{ toJSON(secrets.KIMI_AUTH) }},"LANGFUSE_PUBLIC_KEY":${{ toJSON(secrets.LANGFUSE_PUBLIC_KEY) }},"LANGFUSE_SECRET_KEY":${{ toJSON(secrets.LANGFUSE_SECRET_KEY) }},"MISTRAL_API_KEY":${{ toJSON(secrets.MISTRAL_API_KEY) }},"MOONSHOT_API_KEY":${{ toJSON(secrets.MOONSHOT_API_KEY) }},"NOTIFY_EMAIL_TO":${{ toJSON(secrets.NOTIFY_EMAIL_TO) }},"OPENAI_API_KEY":${{ toJSON(secrets.OPENAI_API_KEY) }},"OPENROUTER_API_KEY":${{ toJSON(secrets.OPENROUTER_API_KEY) }},"PAGESPEED_API_KEY":${{ toJSON(secrets.PAGESPEED_API_KEY) }},"REPLICATE_API_TOKEN":${{ toJSON(secrets.REPLICATE_API_TOKEN) }},"RESEND_API_KEY":${{ toJSON(secrets.RESEND_API_KEY) }},"RESEND_FROM":${{ toJSON(secrets.RESEND_FROM) }},"RESEND_REPLY_TO":${{ toJSON(secrets.RESEND_REPLY_TO) }},"SLACK_BOT_TOKEN":${{ toJSON(secrets.SLACK_BOT_TOKEN) }},"SLACK_CHANNEL_ID":${{ toJSON(secrets.SLACK_CHANNEL_ID) }},"SLACK_WEBHOOK_URL":${{ toJSON(secrets.SLACK_WEBHOOK_URL) }},"SURPLUS_API_KEY":${{ toJSON(secrets.SURPLUS_API_KEY) }},"TELEGRAM_BOT_TOKEN":${{ toJSON(secrets.TELEGRAM_BOT_TOKEN) }},"TELEGRAM_CHAT_ID":${{ toJSON(secrets.TELEGRAM_CHAT_ID) }},"USEPOD_TOKEN":${{ toJSON(secrets.USEPOD_TOKEN) }},"VENICE_API_KEY":${{ toJSON(secrets.VENICE_API_KEY) }},"VERCEL_TOKEN":${{ toJSON(secrets.VERCEL_TOKEN) }},"XAI_API_KEY":${{ toJSON(secrets.XAI_API_KEY) }},"YDC_API_KEY":${{ toJSON(secrets.YDC_API_KEY) }}}
+            {"ADMANAGE_API_KEY":${{ toJSON(secrets.ADMANAGE_API_KEY) }},"AI_GATEWAY_API_KEY":${{ toJSON(secrets.AI_GATEWAY_API_KEY) }},"ALCHEMY_API_KEY":${{ toJSON(secrets.ALCHEMY_API_KEY) }},"ANTHROPIC_API_KEY":${{ toJSON(secrets.ANTHROPIC_API_KEY) }},"ANTHROPIC_OAUTH_TOKEN":${{ toJSON(secrets.ANTHROPIC_OAUTH_TOKEN) }},"ARC_STUDIO_TOKEN":${{ toJSON(secrets.ARC_STUDIO_TOKEN) }},"AWS_COMPUTE_RESELL_CONFIG":${{ toJSON(secrets.AWS_COMPUTE_RESELL_CONFIG) }},"BANKR_API_KEY":${{ toJSON(secrets.BANKR_API_KEY) }},"BANKR_LLM_KEY":${{ toJSON(secrets.BANKR_LLM_KEY) }},"BASESCAN_API_KEY":${{ toJSON(secrets.BASESCAN_API_KEY) }},"BASE_RPC_URL":${{ toJSON(secrets.BASE_RPC_URL) }},"BEDROCK_API_KEY":${{ toJSON(secrets.BEDROCK_API_KEY) }},"BLOCKSCOUT_API_KEY":${{ toJSON(secrets.BLOCKSCOUT_API_KEY) }},"CLAUDE_CODE_OAUTH_TOKEN":${{ toJSON(secrets.CLAUDE_CODE_OAUTH_TOKEN) }},"CODEX_AUTH":${{ toJSON(secrets.CODEX_AUTH) }},"COINGECKO_API_KEY":${{ toJSON(secrets.COINGECKO_API_KEY) }},"COMPUTE_RESELL_CONFIG":${{ toJSON(secrets.COMPUTE_RESELL_CONFIG) }},"DISCORD_BOT_TOKEN":${{ toJSON(secrets.DISCORD_BOT_TOKEN) }},"DISCORD_CHANNEL_ID":${{ toJSON(secrets.DISCORD_CHANNEL_ID) }},"DISCORD_WEBHOOK_URL":${{ toJSON(secrets.DISCORD_WEBHOOK_URL) }},"ETHERSCAN_API_KEY":${{ toJSON(secrets.ETHERSCAN_API_KEY) }},"FEEDBACK_TOKEN":${{ toJSON(secrets.FEEDBACK_TOKEN) }},"FLEET_ENDPOINT":${{ toJSON(secrets.FLEET_ENDPOINT) }},"FLEET_TOKEN":${{ toJSON(secrets.FLEET_TOKEN) }},"GH_GLOBAL":${{ toJSON(secrets.GH_GLOBAL) }},"GH_READ_PAT":${{ toJSON(secrets.GH_READ_PAT) }},"GH_SECRETS_PAT":${{ toJSON(secrets.GH_SECRETS_PAT) }},"GITHUB_TOKEN":${{ toJSON(secrets.GITHUB_TOKEN) }},"GROK_CREDENTIALS":${{ toJSON(secrets.GROK_CREDENTIALS) }},"HOOK_DEPLOYER_PRIVATE_KEY":${{ toJSON(secrets.HOOK_DEPLOYER_PRIVATE_KEY) }},"KIMI_AUTH":${{ toJSON(secrets.KIMI_AUTH) }},"LANGFUSE_PUBLIC_KEY":${{ toJSON(secrets.LANGFUSE_PUBLIC_KEY) }},"LANGFUSE_SECRET_KEY":${{ toJSON(secrets.LANGFUSE_SECRET_KEY) }},"MIROSHARK_AFFILIATE":${{ toJSON(secrets.MIROSHARK_AFFILIATE) }},"MISTRAL_API_KEY":${{ toJSON(secrets.MISTRAL_API_KEY) }},"MOONSHOT_API_KEY":${{ toJSON(secrets.MOONSHOT_API_KEY) }},"NEON_API_KEY":${{ toJSON(secrets.NEON_API_KEY) }},"NOTIFY_EMAIL_TO":${{ toJSON(secrets.NOTIFY_EMAIL_TO) }},"OPENAI_API_KEY":${{ toJSON(secrets.OPENAI_API_KEY) }},"OPENROUTER_API_KEY":${{ toJSON(secrets.OPENROUTER_API_KEY) }},"PAGESPEED_API_KEY":${{ toJSON(secrets.PAGESPEED_API_KEY) }},"RAILWAY_TOKEN":${{ toJSON(secrets.RAILWAY_TOKEN) }},"REPLICATE_API_TOKEN":${{ toJSON(secrets.REPLICATE_API_TOKEN) }},"RESEND_API_KEY":${{ toJSON(secrets.RESEND_API_KEY) }},"RESEND_FROM":${{ toJSON(secrets.RESEND_FROM) }},"RESEND_REPLY_TO":${{ toJSON(secrets.RESEND_REPLY_TO) }},"SLACK_BOT_TOKEN":${{ toJSON(secrets.SLACK_BOT_TOKEN) }},"SLACK_CHANNEL_ID":${{ toJSON(secrets.SLACK_CHANNEL_ID) }},"SLACK_WEBHOOK_URL":${{ toJSON(secrets.SLACK_WEBHOOK_URL) }},"SOLANA_RPC_URL":${{ toJSON(secrets.SOLANA_RPC_URL) }},"SURPLUS_API_KEY":${{ toJSON(secrets.SURPLUS_API_KEY) }},"SURPLUS_SELLER_AWS_KEY":${{ toJSON(secrets.SURPLUS_SELLER_AWS_KEY) }},"SURPLUS_SELLER_KEY":${{ toJSON(secrets.SURPLUS_SELLER_KEY) }},"SURPLUS_SELLER_VERTEX_KEY":${{ toJSON(secrets.SURPLUS_SELLER_VERTEX_KEY) }},"TASKMARKET_API_KEY":${{ toJSON(secrets.TASKMARKET_API_KEY) }},"TASKMARKET_WORKER_ADDRESS":${{ toJSON(secrets.TASKMARKET_WORKER_ADDRESS) }},"TELEGRAM_BOT_TOKEN":${{ toJSON(secrets.TELEGRAM_BOT_TOKEN) }},"TELEGRAM_CHAT_ID":${{ toJSON(secrets.TELEGRAM_CHAT_ID) }},"TWITTER_API_KEY":${{ toJSON(secrets.TWITTER_API_KEY) }},"USEPOD_TOKEN":${{ toJSON(secrets.USEPOD_TOKEN) }},"VENICE_API_KEY":${{ toJSON(secrets.VENICE_API_KEY) }},"VERCEL_OIDC_TOKEN":${{ toJSON(secrets.VERCEL_OIDC_TOKEN) }},"VERCEL_TOKEN":${{ toJSON(secrets.VERCEL_TOKEN) }},"VERTEX_API_KEY":${{ toJSON(secrets.VERTEX_API_KEY) }},"VERTEX_COMPUTE_RESELL_CONFIG":${{ toJSON(secrets.VERTEX_COMPUTE_RESELL_CONFIG) }},"VERTEX_SERVICE_ACCOUNT_JSON":${{ toJSON(secrets.VERTEX_SERVICE_ACCOUNT_JSON) }},"XAI_API_KEY":${{ toJSON(secrets.XAI_API_KEY) }},"YDC_API_KEY":${{ toJSON(secrets.YDC_API_KEY) }}}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
+          # Mainnet opt-in lock for deploy-uni-hook (repo variable, not a secret -
+          # a secret value of "1" masks every "1" in the log). See aeon.yml.
+          HOOK_MAINNET_OK: ${{ vars.HOOK_MAINNET_OK }}
           BANKR_LLM_KEY: ${{ secrets.BANKR_LLM_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
@@ -522,6 +536,12 @@ jobs:
           HIVEMINDOS_MAX_TOKENS: ${{ vars.HIVEMINDOS_MAX_TOKENS }}
           VENICE_CLEANCACHE: ${{ vars.VENICE_CLEANCACHE }}
           SURPLUS_MODEL: ${{ vars.SURPLUS_MODEL }}
+          GLM_MODEL: ${{ vars.GLM_MODEL }}
+          GLM_MODEL_SONNET: ${{ vars.GLM_MODEL_SONNET }}
+          GLM_MODEL_OPUS: ${{ vars.GLM_MODEL_OPUS }}
+          GLM_MODEL_HAIKU: ${{ vars.GLM_MODEL_HAIKU }}
+          GROK_MODEL: ${{ vars.GROK_MODEL }}
+          GLM_REASONING_EFFORT: ${{ vars.GLM_REASONING_EFFORT }}
           CCR_LOG: ${{ vars.CCR_LOG }}
           # Optional Langfuse observability — traces the conversational-reply run
           # (scripts/langfuse-otel.sh; no-op unless both LANGFUSE_* keys are set).
@@ -566,9 +586,15 @@ jobs:
           # staged config names). OPENROUTER_API_KEY is already declared above.
           CODEX_AUTH: ${{ secrets.CODEX_AUTH }}
           KIMI_AUTH: ${{ secrets.KIMI_AUTH }}
+          HERMES_AUTH: ${{ secrets.HERMES_AUTH }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
           _MSG_SOURCE: ${{ steps.msg.outputs.source }}
@@ -576,7 +602,7 @@ jobs:
         run: |
           TODAY=$(date -u +%Y-%m-%d)
           CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
-          MODEL="${CONFIG_MODEL:-claude-sonnet-5}"
+          MODEL="${CONFIG_MODEL:-claude-sonnet-5-5}"
 
           # HARNESS / AUTH_MODE / MODEL_ARG come from the "Resolve harness" step
           # (scripts/resolve-harness.sh), and the CLI was staged by "Install harness
@@ -585,7 +611,7 @@ jobs:
           # with a ::warning::, because nothing on this workflow could install them.
           # On grok a claude-* model id is meaningless — fall back to grok's default.
           if [ "$HARNESS" = "grok" ]; then
-            case "$MODEL" in claude-*|"") MODEL="grok-4.5" ;; esac
+            case "$MODEL" in claude-*|default|"") MODEL="grok-4.7" ;; esac
           fi
           echo "Using harness: $HARNESS  |  auth: $AUTH_MODE  |  model: ${MODEL_ARG:-$MODEL}"
 
@@ -667,7 +693,7 @@ jobs:
               source "${GITHUB_WORKSPACE}/scripts/mcp-oauth-refresh.sh" || true
             fi
             MCP_MISSING=""
-            # ALL_SECRETS is an explicit named-secret JSON blob. Guard the empty case via a temp var —
+            # ALL_SECRETS is toJSON(secrets). Guard the empty case via a temp var —
             # NOT the inline ${ALL_SECRETS:-{}} form: bash closes ${...} at the first
             # '}', so the default is just '{' and a stray '}' gets appended to the
             # value, corrupting the JSON (jq: parse error "Unmatched '}'").
@@ -745,6 +771,14 @@ jobs:
           HARNESS_ERR=$(mktemp)
           if ! CLAUDE_OUTPUT=$(echo "$PROMPT" | bash "$RH" "$HARNESS" \
             "${RH_MODEL_ARGS[@]}" "${RH_ARGS[@]}" 2>"$HARNESS_ERR"); then
+            # Full diagnostic to the step log unconditionally (matches
+            # aeon.yml's Run step) before the short summary — a
+            # tail-c-400-only view previously dropped the actual error
+            # whenever the harness's JSON result envelope put the
+            # diagnostic fields (is_error/api_error_status/result) before
+            # the trailing usage/modelUsage/uuid boilerplate, which is the
+            # common case.
+            tail -c 4000 "$HARNESS_ERR" >&2 || true
             echo "::error::$HARNESS harness failed: $(tail -c 400 "$HARNESS_ERR" | tr '\n' ' ')"
             exit 1
           fi
@@ -819,48 +853,13 @@ jobs:
           git config user.email "aeonframework@proton.me"
           rm -f ./notify
 
-          CURRENT_BRANCH=$(git branch --show-current)
           SOURCE="$_COMMIT_SOURCE"
-
-          if [ "$CURRENT_BRANCH" != "main" ] && [ -n "$CURRENT_BRANCH" ]; then
-            echo "On feature branch: $CURRENT_BRANCH"
-            git add -A
-            git diff --staged --quiet || git commit -m "chore($SOURCE): auto-commit $(date +%Y-%m-%d)"
-            git push --force-with-lease -u origin "$CURRENT_BRANCH" || true
-
-            git checkout -f main
-            git pull --rebase origin main || true
-          fi
-
-          git add -A
-          git diff --staged --quiet && exit 0
-          git commit -m "chore($SOURCE): auto-commit $(date +%Y-%m-%d)"
           JITTER=$((RANDOM % 10))
           echo "Waiting ${JITTER}s jitter before push..."
           sleep "$JITTER"
-          for i in 1 2 3 4 5; do
-            if git pull --rebase origin main; then
-              git push -u origin HEAD && exit 0
-            else
-              echo "Rebase conflict on attempt $i, auto-resolving..."
-              for f in $(git diff --name-only --diff-filter=U); do
-                if [[ "$f" == memory/logs/* ]] || [[ "$f" == memory/topics/* ]] || [[ "$f" == memory/MEMORY.md ]]; then
-                  sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$f"
-                  git add "$f"
-                else
-                  git checkout --theirs "$f"
-                  git add "$f"
-                fi
-              done
-              if git diff --cached --quiet; then
-                git rebase --skip
-              else
-                GIT_EDITOR=true git rebase --continue
-              fi
-            fi
-            BACKOFF=$(( (2 ** i) + RANDOM % 5 ))
-            echo "Push attempt $i failed, retrying in ${BACKOFF}s..."
-            sleep "$BACKOFF"
-          done
-          echo "Failed to push after 5 attempts"
-          exit 1
+          # Shared feature-branch/main split (scripts/commit-run-results.sh): the
+          # PR branch gets only the agent's change, post-run state is committed
+          # on main via git-push-retry.sh. Run the copy from the run's starting
+          # commit so an agent edit to the script can't change its own commit.
+          git show "$GITHUB_SHA:scripts/commit-run-results.sh" > "$RUNNER_TEMP/commit-run-results.sh"
+          bash "$RUNNER_TEMP/commit-run-results.sh" "$SOURCE"
