@@ -1,5 +1,5 @@
 name: Aeon · Skill Runner
-run-name: "skill: ${{ inputs.skill || 'feature' }}${{ inputs.var && format(' ({0})', inputs.var) || '' }}"
+run-name: "skill: ${{ inputs.skill || 'feature' }}${{ inputs.var && format(' ({0})', inputs.var) || '' }}${{ inputs.dispatch_id && format(' [dispatch: {0}]', inputs.dispatch_id) || '' }}"
 
 on:
   workflow_dispatch:
@@ -13,20 +13,36 @@ on:
         required: false
         type: choice
         default: '(config default)'
-        # Keep in sync with the dashboard's MODELS/GROK_MODELS/CODEX_MODELS/
-        # VIBE_MODELS/PI_MODELS/KIMI_MODELS (apps/dashboard/lib/constants.ts): the
-        # dashboard dispatches `-f model=<id>` and this is a `choice` input, so any id
-        # it offers that's missing here is rejected with HTTP 422 at dispatch time.
-        # Each harness runs its own native family: codex uses openai/* ids; kimi
-        # moonshotai/*; vibe mistralai/mistral-medium-3-5 (default) + deepseek/
-        # deepseek-v4-flash; pi deepseek/deepseek-v4-flash (default) + deepseek-v4-pro.
-        # "Resolve harness" forwards them verbatim as the harness model.
+        # Keep in sync with every dashboard model list (MODELS/GROK_MODELS/
+        # CODEX_MODELS/VIBE_MODELS/PI_MODELS/KIMI_MODELS/CURSOR_MODELS/HERMES_MODELS
+        # in apps/dashboard/lib/constants.ts): the dashboard dispatches
+        # `-f model=<id>` and this is a `choice` input, so any id it offers that's
+        # missing here is rejected with HTTP 422 at dispatch time.
+        # scripts/tests/test_dashboard_model_choices.sh enforces it.
+        # Each harness runs its own native family: codex uses openai/* ids; grok
+        # grok-4.7 (default) + grok-4.6; kimi moonshotai/kimi-k2.7-code (default) +
+        # kimi-k3; vibe mistralai/mistral-medium-3-5 (default) + deepseek/
+        # deepseek-v4.1-flash; pi deepseek/deepseek-v4.1-flash (default) +
+        # deepseek-v4-pro; cursor its own ids (`auto` default); hermes `default`
+        # (its configured provider) or an OpenRouter-style override
+        # (anthropic/claude-sonnet-5.5, openai/gpt-6.1-sol). Ids no longer offered by
+        # any picker (e.g. `gpt-5.1`, grok-4.5, kimi-k2.6, kimi-k2.5,
+        # deepseek-v4-flash, claude-sonnet-4.6, gpt-5.4, gemini-2.5-pro) stay here
+        # so existing configs still dispatch. "Resolve harness" forwards them
+        # verbatim as the harness model (`default` means no override).
         options:
           - '(config default)'
+          - claude-sonnet-5-5
+          - claude-opus-5-5
+          - claude-haiku-4-5-20251001
           - claude-sonnet-5
           - claude-opus-4-8
-          - claude-haiku-4-5-20251001
+          - grok-4.7
+          - grok-4.6
           - grok-4.5
+          - openai/gpt-6-luna
+          - openai/gpt-6-sol
+          - openai/gpt-6.1-sol
           - openai/gpt-5-mini
           - openai/gpt-5.1-codex-mini
           - openai/gpt-5.3-codex
@@ -35,9 +51,18 @@ on:
           - mistralai/mistral-medium-3-5
           - deepseek/deepseek-v4-flash
           - deepseek/deepseek-v4-pro
-          - moonshotai/kimi-k2.5
+          - deepseek/deepseek-v4.1-flash
+          - moonshotai/kimi-k2.6
           - moonshotai/kimi-k3
           - moonshotai/kimi-k2.7-code
+          - moonshotai/kimi-k2.5
+          - auto
+          - gpt-5.1
+          - default
+          - anthropic/claude-sonnet-5.5
+          - anthropic/claude-sonnet-4.6
+          - openai/gpt-5.4
+          - google/gemini-2.5-pro
       harness:
         description: 'Agent harness'
         required: false
@@ -51,12 +76,19 @@ on:
           - pi
           - vibe
           - kimi
+          - fx
+          - cursor
+          - hermes
       var:
         description: 'Variable (e.g. AI, bitcoin, owner/repo)'
         required: false
         type: string
       chain_context_file:
         description: 'Path to file with prior chain step outputs (set by chain runner)'
+        required: false
+        type: string
+      dispatch_id:
+        description: 'Correlation ID for chain dispatches'
         required: false
         type: string
   workflow_call:
@@ -70,7 +102,7 @@ on:
         required: false
         type: string
       harness:
-        description: 'Agent harness override (claude | grok | codex | pi | vibe | kimi)'
+        description: 'Agent harness override (claude | grok | codex | pi | vibe | kimi | fx | cursor | hermes)'
         required: false
         type: string
       var:
@@ -79,6 +111,10 @@ on:
         type: string
       chain_context_file:
         description: 'Chain context file path'
+        required: false
+        type: string
+      dispatch_id:
+        description: 'Correlation ID for chain dispatches'
         required: false
         type: string
   issues:
@@ -102,13 +138,34 @@ env:
   FLEET_TOKEN:    ${{ secrets.FLEET_TOKEN }}
 
 concurrency:
+  # Keyed by skill name alone, `var` was ignored entirely: dispatching the
+  # same skill at two different explicit targets (e.g. vuln-scanner against
+  # two different owner/repo values, or digest against two different topics)
+  # collided into the same group. With cancel-in-progress:false, GitHub only
+  # keeps ONE run queued behind the currently-active one at a time -- so a
+  # burst of dispatches to the same skill with different targets silently
+  # cancelled every run except the first and whichever landed last. The ones
+  # in between never executed at all, with no error surfaced anywhere.
+  # Live-observed: 10 vuln-scanner dispatches, 8 silently cancelled, only 2
+  # ever ran. Appending inputs.var to the group key when it's set fixes that
+  # without changing behavior for the common case (var empty/unset):
+  # same-skill scheduled/manual runs with no target still serialize exactly
+  # as before, preserving the original guard against a genuine duplicate run.
+  #
+  # Known remaining gap, not fixed by this change: a skill invoked
+  # repeatedly with an EMPTY var that auto-selects a different target
+  # internally on each run (e.g. vuln-scanner's "auto-select a trending
+  # repo" mode) still collides, since the workflow trigger layer has no
+  # visibility into what the skill will pick once it's running -- that
+  # would need a client-side distinguishing value (e.g. a per-dispatch
+  # nonce), a separate, narrower change.
   group: aeon-${{ inputs.skill || github.event.action || github.run_id }}${{ inputs.var && format('-{0}', inputs.var) || '' }}
   cancel-in-progress: false
 
 jobs:
   run:
     if: github.event_name != 'issues' || github.event.label.name == 'ai-build'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 50
 
     steps:
@@ -189,7 +246,7 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: ~/.npm
-          key: claude-code-${{ runner.os }}-2.1.168
+          key: claude-code-${{ runner.os }}-2.1.287
           restore-keys: |
             claude-code-${{ runner.os }}-
 
@@ -200,7 +257,7 @@ jobs:
         # the release notes: https://github.com/anthropics/claude-code/releases
         # (--prefer-offline uses the cached tarball above; keep the pin and the
         # cache key version in sync.)
-        run: npm install -g @anthropic-ai/claude-code@2.1.168 --prefer-offline
+        run: npm install -g @anthropic-ai/claude-code@2.1.287 --prefer-offline
 
       # ──────────────────────────────────────────────────────────────────────
       # Harness swap: resolve the harness HERE, not in "Run"
@@ -230,11 +287,18 @@ jobs:
           # should run on (native login/key > OpenRouter). Never echoed.
           CODEX_AUTH: ${{ secrets.CODEX_AUTH }}
           KIMI_AUTH: ${{ secrets.KIMI_AUTH }}
+          HERMES_AUTH: ${{ secrets.HERMES_AUTH }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_OAUTH_TOKEN: ${{ secrets.ANTHROPIC_OAUTH_TOKEN }}
+          # claude's auth label: the Claude subscription token is the gateway's
+          # first pick, so the resolve line names it instead of "openrouter".
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           # grok's native auth (X-account OAuth capture > xAI key), so its AUTH_MODE
           # is detected like the other harnesses instead of defaulting to openrouter.
           GROK_CREDENTIALS: ${{ secrets.GROK_CREDENTIALS }}
@@ -262,12 +326,21 @@ jobs:
       # grok by name — so those two had no sandbox available even when asked for
       # one, and run-harness would have degraded to "read-only is advisory" with
       # only a stderr notice. Now every harness gets it, so --mode read-only means
-      # the same thing on all six.
+      # the same thing on all seven.
       - name: Install bubblewrap (read-only sandbox)
         if: steps.work.outputs.mode != ''
+        # Bound this step. apt can block on the runner's unattended-upgrades dpkg
+        # lock, and with no cap a stall here consumed the entire 50-min job wall and
+        # the run was cancelled before the skill ever executed (nur create-skill/
+        # digest/heartbeat + data kpi-daily all self-flagged run_failed 2026-08-19,
+        # each a ~50-min hang on this exact step). timeout-minutes fails the step
+        # fast; DPkg::Lock::Timeout waits a bounded time for the lock instead of
+        # hanging indefinitely.
+        timeout-minutes: 5
         run: |
           set -euo pipefail
-          sudo apt-get update -qq && sudo apt-get install -y -qq bubblewrap
+          APT_OPTS="-o DPkg::Lock::Timeout=120"
+          sudo apt-get $APT_OPTS update -qq && sudo apt-get $APT_OPTS install -y -qq bubblewrap
           # Ubuntu 24.04 (including GitHub's ubuntu-latest) restricts unprivileged
           # user namespaces via AppArmor, so bwrap dies with 'setting up uid map:
           # Permission denied' and run-harness fails CLOSED on every read-only
@@ -302,6 +375,10 @@ jobs:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           CODEX_AUTH: ${{ secrets.CODEX_AUTH }}
           KIMI_AUTH: ${{ secrets.KIMI_AUTH }}
+          HERMES_AUTH: ${{ secrets.HERMES_AUTH }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
@@ -339,6 +416,7 @@ jobs:
           COINGECKO_API_KEY: ${{ secrets.COINGECKO_API_KEY }}
           ALCHEMY_API_KEY: ${{ secrets.ALCHEMY_API_KEY }}
           REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
         run: |
           SKILL_FILE="skills/${{ steps.skill.outputs.name }}/SKILL.md"
           [ ! -f "$SKILL_FILE" ] && exit 0
@@ -435,6 +513,16 @@ jobs:
             echo "::warning::could not materialize cron-state from the Issue; readers use the committed file"
           fi
 
+      - name: Install Foundry (vuln-scanner PoC gate)
+        # High/Critical smart-contract findings must survive a deterministic test
+        # against a pinned live-chain fork before the skill may claim that severity.
+        # Install before stage-vuln-scanner so that script can wrap forge and leave
+        # machine-readable, redacted execution evidence.
+        if: steps.work.outputs.mode != '' && steps.skill.outputs.name == 'vuln-scanner'
+        uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: stable
+
       - name: Stage vuln-scanner tools
         # Purpose-built binary staging for vuln-scanner's scan arm — NOT a network
         # workaround (there is no network sandbox). Installs semgrep/trufflehog/
@@ -449,6 +537,31 @@ jobs:
         # Best-effort: the script self-guards to vuln-scanner and never fails the run.
         if: steps.work.outputs.mode != '' && steps.skill.outputs.name == 'vuln-scanner'
         run: bash scripts/stage-vuln-scanner.sh "${{ steps.skill.outputs.name }}"
+
+      - name: Install Foundry (sc-audit)
+        # sc-audit's fuzz arm (SKILL.md S6.5) needs forge; provision it via the
+        # official action (cached, pinned, retried) so the stage script's
+        # `command -v forge` guard skips its own rate-limit-prone curl install -
+        # same lesson as the deploy-uni-hook step below.
+        if: steps.work.outputs.mode != '' && steps.skill.outputs.name == 'sc-audit'
+        uses: foundry-rs/foundry-toolchain@908c540300062bd5a7e473851cdb4282204cee09 # v1
+        with:
+          version: stable
+
+      - name: Stage sc-audit tools
+        # Provisions the smart-contract toolchain (slither/solc-select/crytic-compile
+        # + echidna/medusa) and appends /tmp/bin to $GITHUB_PATH so the bare names
+        # resolve in the later claude -p step and its per-call fresh shells (an in-run
+        # `export PATH` doesn't survive between Claude's Bash calls). Without this the
+        # audit's Slither and fuzz arms degrade to skipped and sc-audit falls back to
+        # the agentic source pass only. GH_TOKEN authenticates the echidna/medusa
+        # release-asset lookups (the unauthenticated 60/hr shared-runner limit 403s
+        # them). In-run tool use is separately gated by the write-tier grant in
+        # scripts/skill_mode.sh. Self-guards to sc-audit; best-effort, never fails.
+        if: steps.work.outputs.mode != '' && steps.skill.outputs.name == 'sc-audit'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/stage-sc-audit.sh "${{ steps.skill.outputs.name }}"
 
       - name: Install Foundry (deploy-uni-hook)
         # The official action installs a cached, pinned Foundry from GitHub
@@ -531,12 +644,15 @@ jobs:
 
       - name: Stage weekly-aeoncard rasterizer
         # weekly-aeoncard renders an SVG card and needs a rasterizer to also emit a PNG
-        # for inline Telegram delivery (sendPhoto). apt needs root and the agent
-        # allowlist blocks in-run pip/apt, so install librsvg2-bin (rsvg-convert) here —
-        # render_card.py's fallback picks it up. Best-effort: never fails the run; without
-        # it the skill degrades to the SVG + a text notify.
+        # copy (committed next to the SVG; the notify is text + link). apt needs root and
+        # the agent allowlist blocks in-run pip/apt, so install librsvg2-bin
+        # (rsvg-convert) here - render_card.py's fallback picks it up. Best-effort: never
+        # fails the run; without it the skill ships the SVG alone.
         if: steps.work.outputs.mode != '' && steps.skill.outputs.name == 'weekly-aeoncard'
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin || true
+        # Best-effort, but `|| true` only catches a non-zero exit, not a hang on the
+        # dpkg lock, so bound the lock wait too and an apt stall can't eat the job wall.
+        timeout-minutes: 5
+        run: sudo apt-get -o DPkg::Lock::Timeout=120 update -qq && sudo apt-get -o DPkg::Lock::Timeout=120 install -y -qq librsvg2-bin || true
 
       # Single-source standing instructions. AGENTS.md is the full, self-contained
       # mirror of CLAUDE.md (operating manual + @STRATEGY.md inlined) that the
@@ -555,6 +671,18 @@ jobs:
         run: |
           [ -n "$HARNESS" ] || { echo "no harness resolved — leaving both files"; exit 0; }
           if [ "$HARNESS" = "claude" ]; then HIDE="AGENTS.md"; KEPT="CLAUDE.md"; else HIDE="CLAUDE.md"; KEPT="AGENTS.md"; fi
+          # AGENTS.md is generated, and nothing regenerated it when the dashboard or
+          # strategy-builder rewrote STRATEGY.md (only ci-agents-md checks it, on PRs).
+          # Non-claude harnesses then ran on the OLD strategy. Refresh it when stale;
+          # a write-mode run commits the fresh copy, read-only runs revert it after.
+          if [ "$KEPT" = "AGENTS.md" ] && [ -f scripts/gen-agents-md.js ] \
+             && ! node scripts/gen-agents-md.js --check >/dev/null 2>&1; then
+            if node scripts/gen-agents-md.js >/dev/null 2>&1; then
+              echo "::notice::AGENTS.md was out of date with CLAUDE.md/STRATEGY.md; regenerated so $HARNESS loads the current strategy"
+            else
+              echo "::warning::AGENTS.md is out of date and regenerating it failed; $HARNESS runs on the committed copy"
+            fi
+          fi
           if [ -f "$HIDE" ]; then
             mv "$HIDE" "$RUNNER_TEMP/$HIDE.singlesrc"
             echo "hidden=$HIDE" >> "$GITHUB_OUTPUT"
@@ -562,8 +690,12 @@ jobs:
           fi
 
       # Egress hardening P2 (audit). OPT-IN: set repo var EGRESS_AUDIT=1 to enable.
-      # Warn mode (nothing blocked; EGRESS_MODE=enforce opts into blocking), fail-open.
-      # Env reaches the claude process inside bwrap (no --clearenv in the sandbox prefix).
+      # Starts iron-proxy in WARN mode (nothing blocked; EGRESS_MODE=enforce opts into
+      # blocking off-list hosts) and routes this job's egress through it for a per-request
+      # audit log; fail-open, so a proxy that never comes up just skips the audit and the
+      # run proceeds. Env is exported via $GITHUB_ENV and reaches the claude process
+      # inside bwrap (no --clearenv in the sandbox prefix). This is egress control +
+      # audit, NOT credential isolation on a same-box runner; WebFetch/WebSearch bypass it.
       - name: Egress audit
         if: steps.work.outputs.mode != '' && vars.EGRESS_AUDIT == '1'
         uses: ./.github/actions/egress-audit
@@ -571,6 +703,37 @@ jobs:
           skill: ${{ steps.skill.outputs.name }}
           mode: ${{ vars.EGRESS_MODE || 'audit' }}
 
+      # Snapshot the harness config a skill run must not be able to change. A
+      # read-only skill runs sandboxed, but the harness's own $HOME state stays
+      # writable in the sandbox (sessions, token refresh), and that state includes
+      # config that makes a harness EXECUTE things: MCP servers, hooks, plugins,
+      # provider settings. "Restore harness config" puts this copy back before the
+      # scorer and the feed render run a harness again, outside the sandbox and
+      # holding the LLM keys. The archive's sha256 rides on this step's output,
+      # which nothing later can rewrite. Per-harness path list and the auth files
+      # kept live: scripts/harness-config-snapshot.sh. continue-on-error: a failed
+      # snapshot must not stop the skill; restore then fails closed and the
+      # post-run harness calls are skipped.
+      - name: Snapshot harness config
+        id: harness_config
+        if: steps.work.outputs.mode != ''
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          SNAP="$RUNNER_TEMP/aeon-harness-config"
+          DIGEST=$(AEON_HARNESS_CONFIG_SNAPSHOT="$SNAP" bash scripts/harness-config-snapshot.sh snapshot)
+          # Exported so lib/sandbox.sh also binds the snapshot read-only in the run.
+          echo "AEON_HARNESS_CONFIG_SNAPSHOT=$SNAP" >> "$GITHUB_ENV"
+          echo "digest=$DIGEST" >> "$GITHUB_OUTPUT"
+
+      # The Run script must stay well below GitHub's 21,000-character expression
+      # ceiling after interpolation. Keep explanatory prose at YAML level rather
+      # than inside the run scalar; scripts/tests/test_workflow_harness_choices.sh
+      # enforces headroom for input expansion.
+      #
+      # Chain context is env-bound and restricted to output/.chains/ so an input
+      # cannot splice an arbitrary runner file into the prompt. Every harness then
+      # uses the adapter's normalized result/usage/session_id envelope.
       - name: Run
         id: run
         if: steps.work.outputs.mode != ''
@@ -581,12 +744,16 @@ jobs:
           # workflow scanner HOLDS (action_required) any run that serializes the
           # entire secret store via toJSON(secrets). This list must cover EVERY
           # secret named in a skill's `requires:` frontmatter or a .mcp.json ${VAR}
-          # ref — the loops below jq-resolve from this blob, so a missing key is
-          # silently not injected. To expose a NEW secret to MCP/requires, add its
-          # name here (and set it in the dashboard).
+          # ref - the loops below jq-resolve from this blob, so a missing key is
+          # silently not injected. Connecting an MCP in the dashboard auto-splices
+          # the secret names its .mcp.json references into this blob (see
+          # apps/dashboard/lib/workflow-secrets.ts). To expose a NEW secret to a
+          # skill's `requires:`, add its name here by hand (and set it in the
+          # dashboard); scripts/tests/test_all_secrets_allowlist.sh fails CI on a
+          # `requires:` key missing from this list.
           # Consumed by the MCP/requires loops below, then unset before Claude runs.
           ALL_SECRETS: >-
-            {"ADMANAGE_API_KEY":${{ toJSON(secrets.ADMANAGE_API_KEY) }},"AI_GATEWAY_API_KEY":${{ toJSON(secrets.AI_GATEWAY_API_KEY) }},"ALCHEMY_API_KEY":${{ toJSON(secrets.ALCHEMY_API_KEY) }},"ANTHROPIC_API_KEY":${{ toJSON(secrets.ANTHROPIC_API_KEY) }},"ANTHROPIC_OAUTH_TOKEN":${{ toJSON(secrets.ANTHROPIC_OAUTH_TOKEN) }},"BANKR_API_KEY":${{ toJSON(secrets.BANKR_API_KEY) }},"BANKR_LLM_KEY":${{ toJSON(secrets.BANKR_LLM_KEY) }},"BASESCAN_API_KEY":${{ toJSON(secrets.BASESCAN_API_KEY) }},"BASE_RPC_URL":${{ toJSON(secrets.BASE_RPC_URL) }},"CLAUDE_CODE_OAUTH_TOKEN":${{ toJSON(secrets.CLAUDE_CODE_OAUTH_TOKEN) }},"CODEX_AUTH":${{ toJSON(secrets.CODEX_AUTH) }},"COINGECKO_API_KEY":${{ toJSON(secrets.COINGECKO_API_KEY) }},"ETHERSCAN_API_KEY":${{ toJSON(secrets.ETHERSCAN_API_KEY) }},"FLEET_ENDPOINT":${{ toJSON(secrets.FLEET_ENDPOINT) }},"FLEET_TOKEN":${{ toJSON(secrets.FLEET_TOKEN) }},"GH_GLOBAL":${{ toJSON(secrets.GH_GLOBAL) }},"GH_READ_PAT":${{ toJSON(secrets.GH_READ_PAT) }},"GH_SECRETS_PAT":${{ toJSON(secrets.GH_SECRETS_PAT) }},"GITHUB_TOKEN":${{ toJSON(secrets.GITHUB_TOKEN) }},"GROK_CREDENTIALS":${{ toJSON(secrets.GROK_CREDENTIALS) }},"HOOK_DEPLOYER_PRIVATE_KEY":${{ toJSON(secrets.HOOK_DEPLOYER_PRIVATE_KEY) }},"HOOK_MAINNET_OK":${{ toJSON(secrets.HOOK_MAINNET_OK) }},"KIMI_AUTH":${{ toJSON(secrets.KIMI_AUTH) }},"LANGFUSE_PUBLIC_KEY":${{ toJSON(secrets.LANGFUSE_PUBLIC_KEY) }},"LANGFUSE_SECRET_KEY":${{ toJSON(secrets.LANGFUSE_SECRET_KEY) }},"MISTRAL_API_KEY":${{ toJSON(secrets.MISTRAL_API_KEY) }},"MOONSHOT_API_KEY":${{ toJSON(secrets.MOONSHOT_API_KEY) }},"OPENAI_API_KEY":${{ toJSON(secrets.OPENAI_API_KEY) }},"OPENROUTER_API_KEY":${{ toJSON(secrets.OPENROUTER_API_KEY) }},"PAGESPEED_API_KEY":${{ toJSON(secrets.PAGESPEED_API_KEY) }},"REPLICATE_API_TOKEN":${{ toJSON(secrets.REPLICATE_API_TOKEN) }},"RESEND_API_KEY":${{ toJSON(secrets.RESEND_API_KEY) }},"RESEND_FROM":${{ toJSON(secrets.RESEND_FROM) }},"RESEND_REPLY_TO":${{ toJSON(secrets.RESEND_REPLY_TO) }},"SURPLUS_API_KEY":${{ toJSON(secrets.SURPLUS_API_KEY) }},"USEPOD_TOKEN":${{ toJSON(secrets.USEPOD_TOKEN) }},"VENICE_API_KEY":${{ toJSON(secrets.VENICE_API_KEY) }},"VERCEL_OIDC_TOKEN":${{ toJSON(secrets.VERCEL_OIDC_TOKEN) }},"VERCEL_TOKEN":${{ toJSON(secrets.VERCEL_TOKEN) }},"XAI_API_KEY":${{ toJSON(secrets.XAI_API_KEY) }},"TWITTER_API_KEY":${{ toJSON(secrets.TWITTER_API_KEY) }},"YDC_API_KEY":${{ toJSON(secrets.YDC_API_KEY) }}}
+            {"ADMANAGE_API_KEY":${{ toJSON(secrets.ADMANAGE_API_KEY) }},"AI_GATEWAY_API_KEY":${{ toJSON(secrets.AI_GATEWAY_API_KEY) }},"ALCHEMY_API_KEY":${{ toJSON(secrets.ALCHEMY_API_KEY) }},"ANTHROPIC_API_KEY":${{ toJSON(secrets.ANTHROPIC_API_KEY) }},"ANTHROPIC_OAUTH_TOKEN":${{ toJSON(secrets.ANTHROPIC_OAUTH_TOKEN) }},"ARC_STUDIO_TOKEN":${{ toJSON(secrets.ARC_STUDIO_TOKEN) }},"AWS_COMPUTE_RESELL_CONFIG":${{ toJSON(secrets.AWS_COMPUTE_RESELL_CONFIG) }},"BANKR_API_KEY":${{ toJSON(secrets.BANKR_API_KEY) }},"BANKR_LLM_KEY":${{ toJSON(secrets.BANKR_LLM_KEY) }},"BASESCAN_API_KEY":${{ toJSON(secrets.BASESCAN_API_KEY) }},"BASE_RPC_URL":${{ toJSON(secrets.BASE_RPC_URL) }},"BEDROCK_API_KEY":${{ toJSON(secrets.BEDROCK_API_KEY) }},"BLOCKSCOUT_API_KEY":${{ toJSON(secrets.BLOCKSCOUT_API_KEY) }},"CLAUDE_CODE_OAUTH_TOKEN":${{ toJSON(secrets.CLAUDE_CODE_OAUTH_TOKEN) }},"CODEX_AUTH":${{ toJSON(secrets.CODEX_AUTH) }},"COINGECKO_API_KEY":${{ toJSON(secrets.COINGECKO_API_KEY) }},"COMPUTE_RESELL_CONFIG":${{ toJSON(secrets.COMPUTE_RESELL_CONFIG) }},"ETHERSCAN_API_KEY":${{ toJSON(secrets.ETHERSCAN_API_KEY) }},"FEEDBACK_TOKEN":${{ toJSON(secrets.FEEDBACK_TOKEN) }},"FLEET_ENDPOINT":${{ toJSON(secrets.FLEET_ENDPOINT) }},"FLEET_TOKEN":${{ toJSON(secrets.FLEET_TOKEN) }},"GH_GLOBAL":${{ toJSON(secrets.GH_GLOBAL) }},"GH_READ_PAT":${{ toJSON(secrets.GH_READ_PAT) }},"GH_SECRETS_PAT":${{ toJSON(secrets.GH_SECRETS_PAT) }},"GITHUB_TOKEN":${{ toJSON(secrets.GITHUB_TOKEN) }},"GROK_CREDENTIALS":${{ toJSON(secrets.GROK_CREDENTIALS) }},"HOOK_DEPLOYER_PRIVATE_KEY":${{ toJSON(secrets.HOOK_DEPLOYER_PRIVATE_KEY) }},"KIMI_AUTH":${{ toJSON(secrets.KIMI_AUTH) }},"LANGFUSE_PUBLIC_KEY":${{ toJSON(secrets.LANGFUSE_PUBLIC_KEY) }},"LANGFUSE_SECRET_KEY":${{ toJSON(secrets.LANGFUSE_SECRET_KEY) }},"MIROSHARK_AFFILIATE":${{ toJSON(secrets.MIROSHARK_AFFILIATE) }},"MISTRAL_API_KEY":${{ toJSON(secrets.MISTRAL_API_KEY) }},"MOONSHOT_API_KEY":${{ toJSON(secrets.MOONSHOT_API_KEY) }},"NEON_API_KEY":${{ toJSON(secrets.NEON_API_KEY) }},"OPENAI_API_KEY":${{ toJSON(secrets.OPENAI_API_KEY) }},"OPENROUTER_API_KEY":${{ toJSON(secrets.OPENROUTER_API_KEY) }},"PAGESPEED_API_KEY":${{ toJSON(secrets.PAGESPEED_API_KEY) }},"RAILWAY_TOKEN":${{ toJSON(secrets.RAILWAY_TOKEN) }},"REPLICATE_API_TOKEN":${{ toJSON(secrets.REPLICATE_API_TOKEN) }},"RESEND_API_KEY":${{ toJSON(secrets.RESEND_API_KEY) }},"RESEND_FROM":${{ toJSON(secrets.RESEND_FROM) }},"RESEND_REPLY_TO":${{ toJSON(secrets.RESEND_REPLY_TO) }},"SOLANA_RPC_URL":${{ toJSON(secrets.SOLANA_RPC_URL) }},"SURPLUS_API_KEY":${{ toJSON(secrets.SURPLUS_API_KEY) }},"SURPLUS_SELLER_AWS_KEY":${{ toJSON(secrets.SURPLUS_SELLER_AWS_KEY) }},"SURPLUS_SELLER_KEY":${{ toJSON(secrets.SURPLUS_SELLER_KEY) }},"SURPLUS_SELLER_VERTEX_KEY":${{ toJSON(secrets.SURPLUS_SELLER_VERTEX_KEY) }},"TASKMARKET_API_KEY":${{ toJSON(secrets.TASKMARKET_API_KEY) }},"TASKMARKET_WORKER_ADDRESS":${{ toJSON(secrets.TASKMARKET_WORKER_ADDRESS) }},"TWITTER_API_KEY":${{ toJSON(secrets.TWITTER_API_KEY) }},"USEPOD_TOKEN":${{ toJSON(secrets.USEPOD_TOKEN) }},"VENICE_API_KEY":${{ toJSON(secrets.VENICE_API_KEY) }},"VERCEL_OIDC_TOKEN":${{ toJSON(secrets.VERCEL_OIDC_TOKEN) }},"VERCEL_TOKEN":${{ toJSON(secrets.VERCEL_TOKEN) }},"VERTEX_API_KEY":${{ toJSON(secrets.VERTEX_API_KEY) }},"VERTEX_COMPUTE_RESELL_CONFIG":${{ toJSON(secrets.VERTEX_COMPUTE_RESELL_CONFIG) }},"VERTEX_SERVICE_ACCOUNT_JSON":${{ toJSON(secrets.VERTEX_SERVICE_ACCOUNT_JSON) }},"XAI_API_KEY":${{ toJSON(secrets.XAI_API_KEY) }},"YDC_API_KEY":${{ toJSON(secrets.YDC_API_KEY) }}}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           ANTHROPIC_BASE_URL: ${{ vars.ANTHROPIC_BASE_URL }}
@@ -599,6 +766,8 @@ jobs:
           ANTHROPIC_OAUTH_TOKEN: ${{ secrets.ANTHROPIC_OAUTH_TOKEN }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
           VENICE_API_KEY: ${{ secrets.VENICE_API_KEY }}
           HIVEMINDOS_CREDIT_TOKEN: ${{ secrets.HIVEMINDOS_CREDIT_TOKEN }}
@@ -622,6 +791,8 @@ jobs:
           GLM_MODEL_SONNET: ${{ vars.GLM_MODEL_SONNET }}
           GLM_MODEL_OPUS: ${{ vars.GLM_MODEL_OPUS }}
           GLM_MODEL_HAIKU: ${{ vars.GLM_MODEL_HAIKU }}
+          GROK_MODEL: ${{ vars.GROK_MODEL }}
+          GLM_REASONING_EFFORT: ${{ vars.GLM_REASONING_EFFORT }}
           CCR_LOG: ${{ vars.CCR_LOG }}
           # Optional Langfuse observability — set both keys to stream Claude Code's
           # run to Langfuse as a trace (scripts/langfuse-otel.sh; no-op when unset).
@@ -645,6 +816,8 @@ jobs:
           # so a skill can ask for a message but cannot read the credential that sends
           # it. GITHUB_TOKEN/GH_GLOBAL stay in-run (deferred, broad gh surface).
           GROK_CREDENTIALS: ${{ secrets.GROK_CREDENTIALS }}
+          HERMES_AUTH: ${{ secrets.HERMES_AUTH }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
           GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           # Send caps + audit CC for the IN-RUN email senders (send-email + vuln-scanner
@@ -666,6 +839,25 @@ jobs:
           # VERCEL_TOKEN. Model-gateway / GITHUB_TOKEN / GROK / LANGFUSE stay (infra).
           # BEAMR_* removed: no consumer in scripts/ or skills/ (dead ambient binding).
           JSONRENDER_ENABLED: ${{ vars.JSONRENDER_ENABLED || 'true' }}
+          # Mainnet opt-in lock for deploy-uni-hook, read by hook-deploy.sh. A
+          # repo VARIABLE, not a secret: its value is the flag "1", and a secret
+          # value of "1" makes GitHub mask every "1" digit across the run log, so
+          # tx hashes, addresses, and explorer links print as ***. It gates
+          # nothing sensitive on its own (the burner key is the real secret), so a
+          # plaintext variable is correct.
+          HOOK_MAINNET_OK: ${{ vars.HOOK_MAINNET_OK }}
+          # Other non-secret repo VARIABLES that skills document and read from env
+          # (unset => the skill's own default). Not secrets, so not in ALL_SECRETS:
+          # deploy-uni-hook gas cap + float warning, compute-resell aws/vertex
+          # wiring, heartbeat brief email recipients, you-web-search tuning.
+          MAX_GAS_GWEI: ${{ vars.MAX_GAS_GWEI }}
+          HOOK_MAX_FLOAT_ETH: ${{ vars.HOOK_MAX_FLOAT_ETH }}
+          BEDROCK_BASE_URL: ${{ vars.BEDROCK_BASE_URL }}
+          VERTEX_PROJECT_ID: ${{ vars.VERTEX_PROJECT_ID }}
+          VERTEX_LOCATION: ${{ vars.VERTEX_LOCATION }}
+          BRIEF_RECIPIENTS: ${{ vars.BRIEF_RECIPIENTS }}
+          YOUCOM_FRESHNESS: ${{ vars.YOUCOM_FRESHNESS }}
+          YOUCOM_LIVECRAWL: ${{ vars.YOUCOM_LIVECRAWL }}
           SKILL_VAR: ${{ inputs.var }}
           SKILL_NAME: ${{ steps.skill.outputs.name }}
           INPUT_MODEL: ${{ inputs.model }}
@@ -673,29 +865,36 @@ jobs:
           RH_MODEL_ARG: ${{ steps.harness.outputs.MODEL_ARG }}
           RH_HARNESS_MODEL: ${{ steps.harness.outputs.HARNESS_MODEL }}
           INPUT_CHAIN_CTX: ${{ inputs.chain_context_file }}
+          AEON_DISPATCH_ID: ${{ inputs.dispatch_id }}
         run: |
           TODAY=$(date -u +%Y-%m-%d)
           export SKILL_NAME
           CONFIG_MODEL=$(grep -E '^model:' aeon.yml | sed 's/^model: *//' | tr -d ' ')
-          # Check for per-skill model override in aeon.yml (extract quoted value, ignore comments)
-          SKILL_MODEL=$(grep "^  ${SKILL_NAME}:" aeon.yml | sed -n 's/.*model: *"\([^"]*\)".*/\1/p')
+          # Per-skill model override in aeon.yml. Must handle BOTH entry shapes:
+          #   single-line   name: { enabled: true, model: "x", ... }
+          #   block         name:
+          #                   { enabled: true,
+          #                     model: "x", ... }
+          # scripts/skill_entry.sh captures the whole entry (shared with
+          # resolve-harness.sh), so a block entry's model: is not missed.
+          SKILL_MODEL=$(bash scripts/skill_entry.sh "$SKILL_NAME" | sed -n 's/.*model:[[:space:]]*"\([^"]*\)".*/\1/p' | head -1)
           if [ -n "$INPUT_MODEL" ] && [ "$INPUT_MODEL" != "(config default)" ]; then
             MODEL="$INPUT_MODEL"
           elif [ -n "$SKILL_MODEL" ]; then
             MODEL="$SKILL_MODEL"
           else
-            MODEL="${CONFIG_MODEL:-claude-sonnet-5}"
+            MODEL="${CONFIG_MODEL:-claude-sonnet-5-5}"
           fi
 
           # --- Harness resolution (which agent CLI runs the skill) ---
           # Resolved in the "Resolve harness" step above, which had to run before
           # "Install harness CLI". Same 3-tier precedence as model, moved verbatim.
           HARNESS="$RESOLVED_HARNESS"
-          # On the grok harness a claude-* model id is meaningless — fall back to
-          # grok's current default (grok-4.5) unless an explicit grok model was
+          # On the grok harness a claude-* model id is meaningless, so fall back to
+          # grok's current default (grok-4.7) unless an explicit grok model was
           # chosen. The grok adapter omits --model for a non-grok value as a safety net.
           if [ "$HARNESS" = "grok" ]; then
-            case "$MODEL" in claude-*|"") MODEL="grok-4.5" ;; esac
+            case "$MODEL" in claude-*|default|"") MODEL="grok-4.7" ;; esac
           fi
           # Banner must name the model that ACTUALLY runs. For claude/grok that is
           # $MODEL (their native id). For the adapter harnesses (codex/pi/vibe/kimi)
@@ -755,6 +954,23 @@ jobs:
           echo "AEON_PENDING_DIR=$AEON_PENDING_DIR" >> "$GITHUB_ENV"
           export AEON_PENDING_DIR
 
+          # Structured audit log (scripts/audit.sh): one append-only JSON line per
+          # privileged action that reaches outside the run (notify send, secretcurl,
+          # git push). Lives beside the notify queue OUTSIDE the workspace so a
+          # read-only-sandboxed skill can still append to it, then a post-run step
+          # uploads it as an artifact. Touch it now so a run that performs no
+          # privileged action ends with an empty file, not a missing one.
+          AEON_AUDIT_LOG="$AEON_PENDING_DIR/audit.jsonl"
+          : > "$AEON_AUDIT_LOG"
+          echo "AEON_AUDIT_LOG=$AEON_AUDIT_LOG" >> "$GITHUB_ENV"
+          export AEON_AUDIT_LOG
+          # Name the running skill in every audit record (audit.sh reads AEON_SKILL).
+          # Without this the notify/secretcurl subprocesses don't see $SKILL and each
+          # record's skill field falls back to "unknown".
+          AEON_SKILL="${{ steps.skill.outputs.name }}"
+          echo "AEON_SKILL=$AEON_SKILL" >> "$GITHUB_ENV"
+          export AEON_SKILL
+
           # notify / notify-jsonrender are the committed scripts/*.sh (testable; see scripts/tests/).
           cp scripts/notify.sh ./notify
           cp scripts/notify-jsonrender.sh ./notify-jsonrender
@@ -772,23 +988,17 @@ jobs:
           # the helper scripts need). A skill with `mode: read-only` frontmatter gets a
           # toolset with no Write/Edit/git/gh, so it physically cannot mutate the repo;
           # the post-run read-only guard reverts any stray redirected writes.
-          SKILL_MODE=$(bash scripts/skill_mode.sh mode "${{ steps.skill.outputs.name }}")
-          ALLOWED=$(bash scripts/skill_mode.sh allowed-tools "$SKILL_MODE")
-          echo "SKILL_MODE=$SKILL_MODE" >> "$GITHUB_ENV"
-          echo "Capability mode: $SKILL_MODE"
+          source scripts/resolve-riva-capabilities.sh
 
-          # MCP (opt-in): when a project .mcp.json exists, load it for this run
-          # and allow each server's tools. No-op when the file is absent, so
-          # existing forks are unaffected. Any ${VAR} the config references is
-          # auto-resolved from this repo's secrets (ALL_SECRETS) — set the secret
-          # in the dashboard and it just works, no per-name workflow wiring. If a
-          # referenced secret genuinely isn't set, skip MCP with a warning rather
-          # than let Claude's config parse-failure break the whole skill run.
+          # MCP (opt-in): when .mcp.json exists, load it and allow each server's
+          # tools. Its ${VAR}s resolve from this repo's secrets (ALL_SECRETS); if one
+          # isn't set, skip MCP with a warning rather than break the run.
+          # MCP_STATUS feeds the run's Context line (run-context-summary.sh).
           # The MCP_FLAGS/ALLOWED additions below are the CLAUDE path; the exported
           # ${VAR}s are harness-agnostic and also feed grok, which reads .mcp.json
           # natively and expands them (the adapter adds --trust + MCPTool allows).
           MCP_FLAGS=()
-          if [ -f .mcp.json ] && jq -e '.mcpServers' .mcp.json >/dev/null 2>&1; then
+          if [ "$SHADOW_MODE" != "1" ] && [ -f .mcp.json ] && jq -e '.mcpServers' .mcp.json >/dev/null 2>&1; then
             # MCP OAuth (durable): mint a fresh access token from any captured refresh
             # token (MCP_<SLUG>_OAUTH secret) and export MCP_<SLUG>_TOKEN BEFORE the
             # ${VAR} loop, so its "already in env" check keeps the live token over the
@@ -809,29 +1019,33 @@ jobs:
             done
             if [ -n "$MCP_MISSING" ]; then
               echo "::warning::.mcp.json references secret(s) not set:${MCP_MISSING} — add them in the dashboard (Settings or the MCP tab); the next run picks them up. Skipping MCP this run."
+              echo "MCP_STATUS=skipped:${MCP_MISSING}" >> "$GITHUB_OUTPUT"
             else
               for srv in $(jq -r '.mcpServers | keys[]' .mcp.json); do
                 ALLOWED="$ALLOWED,mcp__${srv}"
               done
               MCP_FLAGS=(--mcp-config .mcp.json --strict-mcp-config)
-              echo "MCP enabled: $(jq -r '.mcpServers | keys | join(", ")' .mcp.json)"
+              MCP_ON="$(jq -r '.mcpServers | keys | join(", ")' .mcp.json | tr -d '\r\n')"
+              echo "MCP enabled: $MCP_ON"; echo "MCP_STATUS=on:$MCP_ON" >> "$GITHUB_OUTPUT"
             fi
           fi
 
-          # Per-skill least-privilege secrets: inject ONLY the keys this skill
-          # declares in its `requires:` frontmatter (both required and `?` works-better
-          # tiers). Same resolve-from-ALL_SECRETS shape as the MCP loop above. A skill
-          # sees nothing else from the secret store — so an injected read skill has
-          # only its own (capped) keys to leak. Optional key with no secret set → not
-          # exported, skill degrades to its public path (unchanged behaviour).
+          # Inject only secrets declared by this skill's requires: frontmatter.
           SECRETS_JSON="${ALL_SECRETS:-}"; [ -z "$SECRETS_JSON" ] && SECRETS_JSON='{}'
           INJECTED=""
-          while IFS= read -r key; do
-            [ -z "$key" ] && continue
-            [ -n "${!key:-}" ] && continue                     # already in env (infra) — leave it
-            val="$(jq -r --arg k "$key" '.[$k] // empty' <<<"$SECRETS_JSON")"
-            [ -n "$val" ] && { export "$key=$val"; INJECTED="$INJECTED $key"; }
-          done < <(bash scripts/skill_requires.sh "$SKILL_NAME" 2>/dev/null)
+          if [ "$SHADOW_MODE" != "1" ]; then
+            while IFS= read -r key; do
+              [ -z "$key" ] && continue
+              [ -n "${!key:-}" ] && continue                     # already in env (infra) — leave it
+              val="$(jq -r --arg k "$key" '.[$k] // empty' <<<"$SECRETS_JSON")"
+              [ -n "$val" ] && { export "$key=$val"; INJECTED="$INJECTED $key"; }
+            done < <(bash scripts/skill_requires.sh "$SKILL_NAME" 2>/dev/null)
+          else
+            # Shadow is research-only. Remove both declared and ambient credentials
+            # before the harness starts; post-run workflow steps retain their own env.
+            unset ALL_SECRETS GH_GLOBAL GH_TOKEN GITHUB_TOKEN RESEND_API_KEY RESEND_FROM RESEND_REPLY_TO XAI_API_KEY
+            echo "Riva shadow mode: declared and disclosure credentials withheld"
+          fi
           [ -n "$INJECTED" ] && echo "::notice::Injected declared secrets for ${SKILL_NAME}:${INJECTED}"
 
           unset ALL_SECRETS   # drop the secrets blob before any skill/Claude code runs
@@ -839,12 +1053,7 @@ jobs:
           SKILL_NAME="${{ steps.skill.outputs.name }}"
           VAR="$SKILL_VAR"
 
-          # Build prompt — inject chain context if running as part of a chain.
-          # env-bound (passed via env:, not expanded into this run: block) +
-          # path-contained: the context file
-          # must be a chain-runner artifact under output/.chains/, never an
-          # arbitrary path — otherwise cat would read any file on the runner (e.g.
-          # /proc/self/environ, secrets) into the prompt/logs. (GHSA-cqvj-gr78-24mc)
+          # Inject path-contained chain context when present. (GHSA-cqvj-gr78-24mc)
           CHAIN_CTX="$INPUT_CHAIN_CTX"
           if [ -n "$CHAIN_CTX" ]; then
             case "$CHAIN_CTX" in
@@ -873,17 +1082,19 @@ jobs:
           Use this variable (override the default in the skill file):
           var=$VAR"
           fi
-          # Unified execution: EVERY harness runs through the harness-adapter
-          # (harness-adapter/run-harness), which speaks one Claude-Code-shaped
-          # contract — prompt on stdin, a normalized {result,usage{...},session_id}
-          # envelope on stdout, diagnostics on stderr — so everything downstream
-          # (.result/.usage jq, scoring, token accounting) is identical for all six.
-          # There is no longer a native `claude -p` or `run-grok.sh` run path; the
-          # two features those paths carried are preserved AROUND the adapter call:
+          if [[ "$AEON_DISPATCH_ID" =~ ^chain-[0-9a-f]{32}$ ]]; then
+            PROMPT="$PROMPT
+
+          Workflow correlation ID: $AEON_DISPATCH_ID
+          Follow the selected skill's instructions for recording this ID in any artifact it creates."
+          elif [ -n "$AEON_DISPATCH_ID" ]; then
+            echo "::warning::ignoring malformed dispatch correlation ID"
+          fi
+          # Unified execution through harness-adapter; harness-specific behavior:
           #   * claude  — wrapped in the multi-provider gateway cascade below, so it
-          #               keeps 8-provider failover + Langfuse tracing.
+          #               keeps 9-provider failover + Langfuse tracing.
           #   * grok    — GROK_* run-knobs from frontmatter (adapters/grok.sh maps them).
-          # ALL six now run read-only under the wrapper OS sandbox (bwrap). claude and
+          # ALL seven now run read-only under the wrapper OS sandbox (bwrap). claude and
           # grok used to pass --no-sandbox because ./notify needed to write its queue
           # inside the workspace; that queue moved to $AEON_PENDING_DIR, so the reason
           # is gone. It mattered most on grok, whose adapter runs
@@ -895,6 +1106,9 @@ jobs:
           CLAUDE_OK=0
           RH="${GITHUB_WORKSPACE}/harness-adapter/run-harness"
           RH_ARGS=(--mode "$SKILL_MODE" --allowed-tools "$ALLOWED" --timeout 1800)
+          # Tier notes (skill_mode.sh run-notes): notify via stdin, no shell file writes.
+          RUN_NOTES=$(bash scripts/skill_mode.sh run-notes "$SKILL_MODE")
+          if [ -n "$RUN_NOTES" ]; then RH_ARGS+=(--append-system-prompt "$RUN_NOTES"); fi
           # Pass --mcp-config only when the MCP preflight actually ENABLED MCP (every
           # required ${VAR} resolved) — MCP_FLAGS is set to the flags in that case and
           # left empty otherwise, so it doubles as the "MCP on" gate. run-harness does
@@ -902,26 +1116,40 @@ jobs:
           if [ "${#MCP_FLAGS[@]}" -gt 0 ]; then RH_ARGS+=(--mcp-config .mcp.json); fi
 
           if [ "$HARNESS" = "claude" ]; then
-            # Cascade: try each provider in priority order; fall over on ANY failure.
-            # Each attempt is an isolated subshell that sets up its provider env (+
-            # optional Langfuse), THEN runs `run-harness claude` (which invokes
-            # `claude -p` under that env). Gateway/Langfuse notices go to the step
-            # log (>&2); only run-harness's stdout envelope is captured. A hard
-            # gateway setup failure `exit 1`s the subshell → this attempt fails →
-            # fall over, exactly as the old inline `claude -p` cascade did.
+            # Cascade: try each provider in order; fall over only on a provider-shaped
+            # failure, never a timeout or skill failure (scripts/gateway-failover.sh).
+            # Each attempt is a subshell that sets up its provider env (+ Langfuse),
+            # then runs `run-harness claude`; only its stdout envelope is captured. A
+            # gateway setup `exit 1` fails the attempt and falls over. Only a failover
+            # is annotated; the first route is the gateway's own notice.
             USED_GATEWAY=""
             for cand in $CANDIDATES; do
-              echo "::notice::Routing attempt via '$cand'"
-              if CLAUDE_OUTPUT=$(
+              if [ "$cand" = "${CANDIDATES%% *}" ]; then echo "Routing attempt via '$cand'"; else echo "::notice::Failing over to '$cand'"; fi
+              rm -f /tmp/harness-stderr.txt; RC=0
+              CLAUDE_OUTPUT=$(
                 GATEWAY="$cand"
                 MODEL="$BASE_MODEL"
                 source "$GW" >&2
                 source "$LF" >&2   # optional Langfuse tracing (no-op unless LANGFUSE_* set)
                 echo "$PROMPT" | bash "$RH" claude --model "$MODEL" "${RH_ARGS[@]}" 2>/tmp/harness-stderr.txt
-              ); then
+              ) || RC=$?
+              # The adapter's permission-denial warning; stderr is only dumped on failure.
+              grep '^::warning::claude denied' /tmp/harness-stderr.txt 2>/dev/null || true
+              if [ "$RC" -eq 0 ]; then
                 USED_GATEWAY="$cand"; CLAUDE_OK=1; break
               fi
+              # Full diagnostic goes to the step log unconditionally (matches the
+              # non-claude harness path below, which already does this at its
+              # `tail -c 4000 ... >&2` line) — the ::warning:: summary line stays
+              # short for a quick scan, but a truncated summary was previously the
+              # ONLY trace of a per-attempt failure, silently discarding the real
+              # cause whenever it exceeded ~160 chars (Claude Code's JSON result
+              # envelope puts is_error/api_error_status/result near the front and
+              # usage/modelUsage/uuid boilerplate at the end, so a tail-only view
+              # keeps the boilerplate and drops the actual error).
+              tail -c 4000 /tmp/harness-stderr.txt >&2 || true
               echo "::warning::provider '$cand' failed — $(tail -c 160 /tmp/harness-stderr.txt 2>/dev/null | tr '\n' ' ')"
+              bash scripts/gateway-failover.sh "$RC" /tmp/harness-stderr.txt || { echo "::warning::exit $RC is not a provider failure; not failing over"; break; }
             done
             if [ "$CLAUDE_OK" != "1" ]; then
               echo "::error::All gateway providers failed ($CANDIDATES). Last: $(tail -c 200 /tmp/harness-stderr.txt 2>/dev/null | tr '\n' ' ')"
@@ -939,7 +1167,7 @@ jobs:
               # consumed by adapters/grok.sh — the same frontmatter mapping the
               # native path used. SKILL_MODEL was already set to grok's model above.
               eval "$(bash "${GITHUB_WORKSPACE}/scripts/skill_mode.sh" grok-run-env "$SKILL_NAME")"
-              # BASE_MODEL is grok-4.5 or an explicit grok id (forced above); pass
+              # BASE_MODEL is grok-4.7 or an explicit grok id (forced above); pass
               # only a real grok id — the adapter falls back to grok's default
               # otherwise. (BASE_MODEL, not MODEL: identical here, but MODEL is the
               # var the claude cascade rewrites in a subshell, so referencing it here
@@ -950,14 +1178,6 @@ jobs:
               # harness's staged config choose). Never aeon's BASE_MODEL: that is
               # always a claude-*/grok-* id these CLIs cannot resolve.
               if [ -n "${RH_MODEL_ARG:-}" ]; then RH_MODEL_ARGS=(--model "$RH_MODEL_ARG"); fi
-              # Re-emit SKILL_MODEL with what ACTUALLY ran. It was written above from
-              # BASE_MODEL, before the harness was applied — leaving it would file
-              # these tokens under a model that never ran in memory/token-usage.csv,
-              # and put a false model into the run manifest that attestation signs.
-              # Later writes to $GITHUB_OUTPUT win, so this corrects every consumer.
-              EFFECTIVE_MODEL="${RH_MODEL_ARG:-$HARNESS-default}"   # no spaces: the notice is parsed by field
-              echo "SKILL_MODEL=$EFFECTIVE_MODEL" >> "$GITHUB_OUTPUT"
-              echo "::notice::effective model for $HARNESS: $EFFECTIVE_MODEL"
             fi
 
             # Tier-2 harness tracing: export the OTLP env (Langfuse keys or a raw
@@ -969,18 +1189,25 @@ jobs:
             if CLAUDE_OUTPUT=$(echo "$PROMPT" | bash "$RH" "$HARNESS" "${RH_MODEL_ARGS[@]}" "${RH_ARGS[@]}" 2>/tmp/harness-stderr.txt); then
               CLAUDE_OK=1
             fi
+            if [ "$HARNESS" != "grok" ]; then
+              # Re-emit SKILL_MODEL (token-usage.csv, signed run manifest) with what
+              # ACTUALLY ran: the model the harness reports (codex: its session
+              # rollout), else RH_MODEL_ARG, else <harness>-default. Later writes win.
+              # Model-id charset only: later run: scripts interpolate it.
+              EFFECTIVE_MODEL=$(echo "$CLAUDE_OUTPUT" | jq -r '.model // empty | strings' 2>/dev/null || true)
+              [[ "$EFFECTIVE_MODEL" =~ ^[A-Za-z0-9._:/@+-]{1,100}$ ]] || EFFECTIVE_MODEL="${RH_MODEL_ARG:-$HARNESS-default}"
+              echo "SKILL_MODEL=$EFFECTIVE_MODEL" >> "$GITHUB_OUTPUT"
+              echo "::notice::effective model for $HARNESS: $EFFECTIVE_MODEL"   # no spaces: parsed by field
+            fi
             # run-harness's diagnostics are the only signal when a harness stalls;
             # surface them in the step log either way, not just on failure.
             tail -c 4000 /tmp/harness-stderr.txt >&2 || true
-            # harness-adapter/lib/envelope.sh's wrap_raw_output turns output the
-            # adapter could not parse into a schema-valid SUCCESS envelope and
-            # exits 0, so the run lands here green and the blob below becomes the
-            # skill's published deliverable. That is being measured before it is
-            # turned into a hard failure (see the comment on that function), so
-            # promote its marker to a ::warning:: - countable from the Actions API
-            # without downloading logs. When the count is known, make it fatal.
+            # An unparseable adapter response is rejected by run-harness with
+            # exit 3, and its output is withheld from the successful envelope.
+            # Keep surfacing the marker so the failure has a concise harness-
+            # specific diagnostic in the Actions log.
             if grep -q 'rh-wrap-fallback:' /tmp/harness-stderr.txt 2>/dev/null; then
-              echo "::warning::$HARNESS output was unparseable and wrapped as success. This run is GREEN but its output may be junk: $(grep -m1 'rh-wrap-fallback:' /tmp/harness-stderr.txt | tr -d '\r')"
+              echo "::warning::$HARNESS output was unparseable and rejected: $(grep -m1 'rh-wrap-fallback:' /tmp/harness-stderr.txt | tr -d '\r')"
             fi
             if [ "$CLAUDE_OK" != "1" ]; then
               echo "::error::run-harness $HARNESS failed: $(tail -c 200 /tmp/harness-stderr.txt | tr '\n' ' ')"
@@ -1012,7 +1239,7 @@ jobs:
           # Empty on the grok harness (no Claude transcript) — the step then no-ops.
           echo "SESSION_ID=$(echo "$CLAUDE_OUTPUT" | jq -r '.session_id // empty')" >> "$GITHUB_OUTPUT"
 
-          echo "::notice::Token usage — input: $INPUT_TOKENS, output: $OUTPUT_TOKENS, cache_read: $CACHE_READ, cache_creation: $CACHE_CREATION, total: $TOTAL_TOKENS"
+          echo "::notice::Token usage — model: ${EFFECTIVE_MODEL:-$BANNER_MODEL}, input: $INPUT_TOKENS, output: $OUTPUT_TOKENS, cache_read: $CACHE_READ, cache_creation: $CACHE_CREATION, total: $TOTAL_TOKENS"
 
       # Egress hardening P2: publish the warn-mode audit log. always() so it lands
       # even if the run failed; the host list is the allowlist oracle P3 builds from.
@@ -1034,19 +1261,73 @@ jobs:
           path: ${{ runner.temp }}/iron/audit.jsonl
           if-no-files-found: ignore
 
+      # Prove the vuln-scanner actually invoked a scanner: the staged wrappers log
+      # each call to executions.log; model prose is not execution evidence. Best-effort,
+      # warnings only, never gates the run.
+      - name: Verify vuln-scanner execution evidence
+        if: always() && steps.work.outputs.mode != '' && steps.skill.outputs.name == 'vuln-scanner'
+        run: |
+          set -u
+          echo '--- staged scanner manifest ---'
+          if [ -f /tmp/vuln-scan/prefetch.txt ]; then cat /tmp/vuln-scan/prefetch.txt; else echo 'manifest=missing'; fi
+          echo '--- actual scanner invocations ---'
+          if [ -s /tmp/vuln-scan/executions.log ]; then
+            cat /tmp/vuln-scan/executions.log
+          else
+            echo 'executions=none'
+            echo '::warning::vuln-scanner produced no machine-readable scanner invocation evidence'
+          fi
+          echo '--- per-tool execution status ---'
+          for tool in semgrep trufflehog osv-scanner; do
+            if [ -s /tmp/vuln-scan/executions.log ] && grep -q "^${tool} " /tmp/vuln-scan/executions.log; then
+              echo "${tool}=observed"
+            else
+              echo "${tool}=not-observed"
+              echo "::warning::${tool} was staged but no invocation was recorded"
+            fi
+          done
+          for tool in slither cargo-fuzz; do
+            if [ -s /tmp/vuln-scan/executions.log ] && grep -q "^${tool} " /tmp/vuln-scan/executions.log; then
+              echo "${tool}=observed"
+            else
+              echo "${tool}=not-observed-or-not-applicable"
+            fi
+          done
+          if [ -s /tmp/vuln-scan/executions.log ] && grep -q '^forge \[redacted\]$' /tmp/vuln-scan/executions.log \
+             && [ -s /tmp/vuln-scan/poc-executions.log ] && grep -q ' foundry-fork verified$' /tmp/vuln-scan/poc-executions.log; then
+            echo 'foundry-poc=verified'
+          elif [ -s /tmp/vuln-scan/poc-executions.log ] && grep -q ' foundry-fork failed$' /tmp/vuln-scan/poc-executions.log; then
+            echo 'foundry-poc=failed'
+          else
+            echo 'foundry-poc=not-observed-or-not-applicable'
+          fi
+          echo '--- PoC gate verdicts (redacted) ---'
+          if [ -s /tmp/vuln-scan/poc-executions.log ]; then
+            cat /tmp/vuln-scan/poc-executions.log
+          else
+            echo 'poc-gate=not-observed-or-not-applicable'
+          fi
+
       # Undo "Single-source standing instructions" so the working tree matches HEAD
       # before any capture/guard/commit step runs. always(): the file must come back
-      # even if Run failed or timed out. The move is a plain rename back — it touches
-      # only the one file that was hidden, so it can't clobber skill outputs.
+      # even if Run failed or timed out. It touches only the one file that was hidden,
+      # so it can't clobber skill outputs. The file is restored from git, not from the
+      # parked copy: $RUNNER_TEMP is writable inside the read-only sandbox, so a run
+      # could edit (or delete) the parked copy and have "Commit results" push that
+      # change to CLAUDE.md / AGENTS.md. The parked copy is only discarded.
       - name: Restore standing instructions
         if: always()
         env:
           HIDDEN: ${{ steps.singlesrc.outputs.hidden }}
         run: |
-          if [ -n "$HIDDEN" ] && [ -f "$RUNNER_TEMP/$HIDDEN.singlesrc" ]; then
-            mv "$RUNNER_TEMP/$HIDDEN.singlesrc" "$HIDDEN"
-            echo "restored $HIDDEN"
-          fi
+          case "$HIDDEN" in
+            CLAUDE.md|AGENTS.md)
+              rm -f "$RUNNER_TEMP/$HIDDEN.singlesrc"
+              git checkout HEAD -- "$HIDDEN"
+              echo "restored $HIDDEN from HEAD" ;;
+            "") ;;
+            *) echo "::error::unexpected hidden file '$HIDDEN'"; exit 1 ;;
+          esac
 
       # ──────────────────────────────────────────────────────────────────────
       # Fleet Watcher postflight (opt-in, always-runs)
@@ -1096,6 +1377,11 @@ jobs:
 
       - name: Log token usage
         if: steps.work.outputs.mode != ''
+        env:
+          RUN_HARNESS: ${{ steps.run.outputs.HARNESS }}
+          RUN_MODEL: ${{ steps.run.outputs.SKILL_MODEL }}
+          MCP_STATUS: ${{ steps.run.outputs.MCP_STATUS }}
+          SESSION_ID: ${{ steps.run.outputs.SESSION_ID }}
         run: |
           SKILL="${{ steps.skill.outputs.name }}"
           INPUT="${{ steps.run.outputs.SKILL_INPUT_TOKENS }}"
@@ -1104,6 +1390,12 @@ jobs:
           CACHE_CREATION="${{ steps.run.outputs.SKILL_CACHE_CREATION_TOKENS }}"
           TOTAL="${{ steps.run.outputs.SKILL_TOTAL_TOKENS }}"
           echo "## Token Usage: $SKILL" >> "$GITHUB_STEP_SUMMARY"
+          # Model that actually ran (claude/grok: the resolved id; adapter harnesses:
+          # what the harness reports, e.g. codex's rollout). Via env, not inline expressions, so
+          # an odd configured id cannot inject into the script. Backticks stripped
+          # so it cannot break out of the inline code span.
+          # shellcheck disable=SC2016  # literal backticks: markdown code span
+          printf 'Harness: `%s` | Model: `%s`\n\n' "${RUN_HARNESS//\`/}" "${RUN_MODEL//\`/}" >> "$GITHUB_STEP_SUMMARY"
           echo "| Metric | Tokens |" >> "$GITHUB_STEP_SUMMARY"
           echo "|--------|--------|" >> "$GITHUB_STEP_SUMMARY"
           echo "| Input | $INPUT |" >> "$GITHUB_STEP_SUMMARY"
@@ -1111,6 +1403,11 @@ jobs:
           echo "| Cache read | $CACHE_READ |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Cache creation | $CACHE_CREATION |" >> "$GITHUB_STEP_SUMMARY"
           echo "| **Total** | **$TOTAL** |" >> "$GITHUB_STEP_SUMMARY"
+          # Which operator context this run had: STRATEGY.md, soul/, MCP.
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          HARNESS="$RUN_HARNESS" bash scripts/run-context-summary.sh --md >> "$GITHUB_STEP_SUMMARY" || true
+          CTX=$(HARNESS="$RUN_HARNESS" bash scripts/run-context-summary.sh --line || true)
+          [ -n "$CTX" ] && echo "::notice::$CTX"
 
       # "Under the hood" — tally the tool actions Claude actually took this run
       # (Read/Edit/Grep/Bash + network/exec breakdown), from its session transcript.
@@ -1180,11 +1477,12 @@ jobs:
           if [ "${ATTEST_ENABLED}" = "true" ]; then
             SKILL="${SKILL_NAME}"
 
-            # Tier 1 — per-skill override in aeon.yml (operator config, one line,
-            # no skill file touched). Same grep idiom as model:/harness:, but with
-            # ERE alternation (sed -nE) so (true|false) is portable across BSD/GNU sed.
-            SKILL_ATTEST=$(grep "^  ${SKILL}:" aeon.yml \
-              | sed -nE 's/.*attest:[[:space:]]*(true|false).*/\1/p' || true)
+            # Tier 1 - per-skill override in aeon.yml (operator config, no skill
+            # file touched). Same whole-entry reader as model:/harness: (block
+            # entries too), with ERE alternation (sed -nE) so (true|false) is
+            # portable across BSD/GNU sed.
+            SKILL_ATTEST=$(bash scripts/skill_entry.sh "$SKILL" \
+              | sed -nE 's/.*attest:[[:space:]]*(true|false).*/\1/p' | head -1 || true)
 
             # Tier 2 — SKILL.md frontmatter (author intent, travels with the skill).
             # Accepts legacy top-level `attest:` or the Agent Skills spec form
@@ -1273,9 +1571,31 @@ jobs:
             ${{ steps.manifest.outputs.snapshot }}
             ${{ steps.manifest.outputs.manifest }}
 
+      # Put back the pre-run harness config (see "Snapshot harness config") before
+      # anything runs a harness again: "Analyze skill output" re-runs the skill's
+      # harness with --no-sandbox and the LLM keys, and "Convert feed outputs"
+      # runs `claude -p`. Whatever MCP server, hook or plugin the skill run added
+      # to the harness's $HOME config is dropped here, and processes the sandboxed
+      # run left behind are killed so they cannot rewrite it afterwards. Placed
+      # after "Under the hood", which still reads this run's ~/.claude transcript.
+      # The script is piped from the run's starting commit (like "Commit
+      # results") so a skill edit to it cannot change its own restore, and no
+      # file is written that a leftover process could swap before it runs. Both
+      # harness steps below require this step's success: a missing or modified
+      # snapshot skips them (non-fatal) instead of running on unknown config.
+      - name: Restore harness config
+        id: harness_config_restore
+        if: steps.work.outputs.mode != ''
+        continue-on-error: true
+        env:
+          SNAPSHOT_DIGEST: ${{ steps.harness_config.outputs.digest }}
+        run: |
+          set -euo pipefail
+          git show "$GITHUB_SHA:scripts/harness-config-snapshot.sh" | bash -s -- restore "$SNAPSHOT_DIGEST"
+
       - name: Analyze skill output
         id: analyze
-        if: steps.work.outputs.mode != '' && steps.run.outcome == 'success'
+        if: steps.work.outputs.mode != '' && steps.run.outcome == 'success' && steps.harness_config_restore.outcome == 'success'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -1289,12 +1609,16 @@ jobs:
           ANTHROPIC_OAUTH_TOKEN: ${{ secrets.ANTHROPIC_OAUTH_TOKEN }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
           VENICE_API_KEY: ${{ secrets.VENICE_API_KEY }}
           HIVEMINDOS_CREDIT_TOKEN: ${{ secrets.HIVEMINDOS_CREDIT_TOKEN }}
           SURPLUS_API_KEY: ${{ secrets.SURPLUS_API_KEY }}
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}   # grok scorer: API-key auth path
           GROK_CREDENTIALS: ${{ secrets.GROK_CREDENTIALS }}   # grok scorer: X-account OAuth (restored by run-grok.sh)
+          HERMES_AUTH: ${{ secrets.HERMES_AUTH }}
+          CURSOR_API_KEY: ${{ secrets.CURSOR_API_KEY }}
           GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
           ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           RH_MODEL_ARG: ${{ steps.harness.outputs.MODEL_ARG }}   # run-harness scorer: same --model the run used
@@ -1316,6 +1640,8 @@ jobs:
           GLM_MODEL_SONNET: ${{ vars.GLM_MODEL_SONNET }}
           GLM_MODEL_OPUS: ${{ vars.GLM_MODEL_OPUS }}
           GLM_MODEL_HAIKU: ${{ vars.GLM_MODEL_HAIKU }}
+          GROK_MODEL: ${{ vars.GROK_MODEL }}
+          GLM_REASONING_EFFORT: ${{ vars.GLM_REASONING_EFFORT }}
           CCR_LOG: ${{ vars.CCR_LOG }}
           LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
           LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
@@ -1344,23 +1670,38 @@ jobs:
           # so this is a no-op there and correct for the added harnesses.)
           if [ "$HARNESS" = "claude" ]; then
             GATEWAY="${{ steps.run.outputs.GATEWAY }}"
-            source "${GITHUB_WORKSPACE}/scripts/llm-gateway.sh"
+            AEON_GATEWAY_QUIET=1 source "${GITHUB_WORKSPACE}/scripts/llm-gateway.sh"
             AEON_OTEL_COMPONENT=scorer source "${GITHUB_WORKSPACE}/scripts/langfuse-otel.sh"
           fi
 
-          # Read skill output for analysis. Sample head + tail so the judge sees the
-          # conclusion of long outputs, not just the intro - a flat 3KB head-truncate
-          # graded only the opening and biased the score against skills that build to
-          # their payoff (articles, digests, research compendia routinely exceed a few
-          # KB). `iconv -c` drops any partial UTF-8 char left at a byte cut.
+          # Grade the artifact the skill actually SENT, not its closing summary.
+          # For a notify-first skill the deliverable is the ./notify card, captured
+          # to output/.chains/<skill>.md (from .pending-<skill>.md) by the "Capture
+          # skill output" step above. The harness's final .result message is often
+          # just a terse "sent the card, 13 PRs, 769 runs" recap - which strips every
+          # figure of its labeled source and reliably draws an unverifiable_claim cap
+          # (kpi-daily, github-trending). Prefer the captured card; fall back to
+          # .result. Non-notify skills are unaffected: their chain file is a copy of
+          # /tmp/skill-result.txt (see the capture step's elif), so SRC is identical.
+          SRC=/tmp/skill-result.txt
+          CHAIN="output/.chains/${SKILL}.md"
+          if [ -f "$CHAIN" ] && [ -s "$CHAIN" ] && [ "$(head -n1 "$CHAIN")" != "_No output captured._" ]; then
+            SRC="$CHAIN"
+          fi
+
+          # Sample head + tail so the judge sees the conclusion of long outputs, not
+          # just the intro - a flat 3KB head-truncate graded only the opening and
+          # biased the score against skills that build to their payoff (articles,
+          # digests, research compendia routinely exceed a few KB). `iconv -c` drops
+          # any partial UTF-8 char left at a byte cut.
           OUTPUT=""
-          if [ -f /tmp/skill-result.txt ] && [ -s /tmp/skill-result.txt ]; then
-            BYTES=$(wc -c < /tmp/skill-result.txt)
+          if [ -f "$SRC" ] && [ -s "$SRC" ]; then
+            BYTES=$(wc -c < "$SRC")
             if [ "$BYTES" -le 14000 ]; then
-              OUTPUT=$(iconv -f UTF-8 -t UTF-8 -c < /tmp/skill-result.txt)
+              OUTPUT=$(iconv -f UTF-8 -t UTF-8 -c < "$SRC")
             else
-              OHEAD=$(head -c 10000 /tmp/skill-result.txt | iconv -f UTF-8 -t UTF-8 -c)
-              OTAIL=$(tail -c 4000 /tmp/skill-result.txt | iconv -f UTF-8 -t UTF-8 -c)
+              OHEAD=$(head -c 10000 "$SRC" | iconv -f UTF-8 -t UTF-8 -c)
+              OTAIL=$(tail -c 4000 "$SRC" | iconv -f UTF-8 -t UTF-8 -c)
               OUTPUT=$(printf '%s\n\n[... middle truncated ...]\n\n%s' "$OHEAD" "$OTAIL")
             fi
           fi
@@ -1410,6 +1751,8 @@ jobs:
           # read-only + --no-sandbox: scoring is a single text call needing no tools
           # or workspace, so the wrapper sandbox would only add a failure mode; any
           # stray write is reverted by the "Read-only capability guard" step.
+          # --no-sandbox is safe only because "Restore harness config" already put
+          # back the pre-run harness config, so nothing the skill wrote to it runs here.
           # --timeout 300 = half the run guard. No --json-schema: ANALYSIS_PROMPT
           # already asks for a {score,assessment,flags} object and the robust parse
           # below is tuned for that (composer/pi/vibe/kimi lack a native schema flag).
@@ -1421,12 +1764,13 @@ jobs:
               # scoring model (haiku by default).
               SCORE_ARGS+=(--model "$SCORE_MODEL") ;;
             grok)
-              # Pin grok-4.5 — the only model the X-account (GROK_CREDENTIALS) login
-              # exposes. grok-composer-2.5-fast was a phantom id: the grok CLI rejects
+              # Pin grok-4.7, the grok harness default and a model the X-account
+              # (GROK_CREDENTIALS) login exposes (`grok models`, verified 2026-10-01).
+              # grok-composer-2.5-fast was a phantom id: the grok CLI rejects
               # it with "unknown model id" (verified live, run 29944263287), so pinning
               # it made every grok scorer call fail-then-fall-back. Scoring is one short
-              # text call, so grok-4.5's cost is pennies.
-              SCORE_ARGS+=(--model grok-4.5) ;;
+              # text call, so grok-4.7's cost is pennies.
+              SCORE_ARGS+=(--model grok-4.7) ;;
             *)
               # RH_MODEL_ARG is the same --model the run used (empty = harness default).
               [ -n "${RH_MODEL_ARG:-}" ] && SCORE_ARGS+=(--model "$RH_MODEL_ARG") ;;
@@ -1470,7 +1814,7 @@ jobs:
           # P4: fold a deterministic egress_blocked flag into the model's flags.
           # iron-report reads this run's audit log (present only when EGRESS_AUDIT is
           # on and enforce rejected something) and reports hosts the allowlist blocked
-          # that the skill needed - an allowlist gap for the repair loop. Intentional
+          # that the skill needed - an allowlist gap for the §7 repair loop. Intentional
           # denies (Claude Code telemetry) are excluded, so the by-design block never fires it.
           EGRESS_DENIED='[]'
           if [ -f "$RUNNER_TEMP/iron/audit.jsonl" ]; then
@@ -1505,9 +1849,14 @@ jobs:
             HISTORY='[]'
           fi
 
-          # Append to history (keep last 30 entries)
+          # Append to history (keep last 30 entries). HARNESS is the harness
+          # that ran the skill; scoring is routed through that same harness.
+          # The new fields are additive, so existing {date,score} entries stay
+          # valid and model is omitted when the harness used its own default.
           HISTORY=$(echo "$HISTORY" | jq -c --arg d "$TODAY" --argjson s "$SCORE" \
-            '. + [{"date": $d, "score": $s}] | .[-30:]')
+            --arg ts "$NOW_ISO" --arg h "$HARNESS" --arg m "${RH_MODEL_ARG:-}" \
+            '. + [{"date": $d, "score": $s, "ts": $ts, "harness": $h}
+                  + (if ($m | length) > 0 then {"model": $m} else {} end)] | .[-30:]')
 
           AVG=$(echo "$HISTORY" | jq '([.[].score] | add / length * 100 | round) / 100')
 
@@ -1528,7 +1877,7 @@ jobs:
         # authenticate. Unlike scoring, this one is NOT worth routing through
         # run-harness: it is a rendering convenience, not a quality signal, and
         # skipping it costs the run nothing.
-        if: steps.work.outputs.mode != '' && vars.JSONRENDER_ENABLED != 'false' && steps.run.outputs.HARNESS == 'claude'
+        if: steps.work.outputs.mode != '' && vars.JSONRENDER_ENABLED != 'false' && steps.run.outputs.HARNESS == 'claude' && steps.harness_config_restore.outcome == 'success'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -1542,12 +1891,12 @@ jobs:
           ANTHROPIC_OAUTH_TOKEN: ${{ secrets.ANTHROPIC_OAUTH_TOKEN }}
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
+          VERCEL_OIDC_TOKEN: ${{ secrets.VERCEL_OIDC_TOKEN }}
           USEPOD_TOKEN: ${{ secrets.USEPOD_TOKEN }}
           VENICE_API_KEY: ${{ secrets.VENICE_API_KEY }}
           HIVEMINDOS_CREDIT_TOKEN: ${{ secrets.HIVEMINDOS_CREDIT_TOKEN }}
           SURPLUS_API_KEY: ${{ secrets.SURPLUS_API_KEY }}
-          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
-          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           OPENROUTER_MODEL: ${{ vars.OPENROUTER_MODEL }}
           OPENROUTER_MODEL_SONNET: ${{ vars.OPENROUTER_MODEL_SONNET }}
           OPENROUTER_MODEL_HAIKU: ${{ vars.OPENROUTER_MODEL_HAIKU }}
@@ -1566,6 +1915,10 @@ jobs:
           GLM_MODEL_SONNET: ${{ vars.GLM_MODEL_SONNET }}
           GLM_MODEL_OPUS: ${{ vars.GLM_MODEL_OPUS }}
           GLM_MODEL_HAIKU: ${{ vars.GLM_MODEL_HAIKU }}
+          GROK_MODEL: ${{ vars.GROK_MODEL }}
+          GLM_REASONING_EFFORT: ${{ vars.GLM_REASONING_EFFORT }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
           CCR_LOG: ${{ vars.CCR_LOG }}
           LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
           LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
@@ -1576,7 +1929,7 @@ jobs:
           # GATEWAY may be empty when the Run step failed early — the script
           # treats that as `direct`, matching the old inline behavior.
           GATEWAY="${{ steps.run.outputs.GATEWAY }}"
-          source "${GITHUB_WORKSPACE}/scripts/llm-gateway.sh"
+          AEON_GATEWAY_QUIET=1 source "${GITHUB_WORKSPACE}/scripts/llm-gateway.sh"
           AEON_OTEL_COMPONENT=feed source "${GITHUB_WORKSPACE}/scripts/langfuse-otel.sh"
           for pending in "${AEON_PENDING_DIR:-${RUNNER_TEMP:-/tmp}/aeon-pending}"/.pending-*.md; do
             [ -f "$pending" ] || continue
@@ -1653,16 +2006,50 @@ jobs:
           rm -f "$Q"/*.json
 
       - name: Read-only capability guard
-        if: steps.work.outputs.mode != '' && env.SKILL_MODE == 'read-only'
+        # !cancelled() (same idiom "Send pending notifications" already uses for
+        # #912 R1, not always() — a manually-cancelled job should still skip
+        # this, only a genuine failure shouldn't): a bare `mode != ''` implies
+        # success() and skips this step entirely on a failed Run, so the "no
+        # output captured" branch below was previously unreachable in practice.
+        if: ${{ !cancelled() && steps.work.outputs.mode != '' && env.SKILL_MODE == 'read-only' }}
         run: |
           # read-only skills (mode: read-only) get no Write/Edit/git/gh, so they can't
-          # mutate the repo. Two jobs here: (1) record the run-log entry on their behalf
-          # (they couldn't), (2) revert any code/config that slipped through a shell
-          # redirection. State/memory and output/ (incl. .chains/) are preserved for the commit step.
+          # mutate the repo. Three jobs here: (1) record the run-log entry on their
+          # behalf (they couldn't), (2) reuse the output "Capture skill output"
+          # already staged so that entry carries the skill's real structured output
+          # under the "### <skill>" heading CLAUDE.md's Log contract (and every
+          # read-only skill's own SKILL.md) expects — a content-free/wrong-level
+          # stub here silently breaks each skill's own dedup/diff baseline, AND
+          # trips aeon-doctor's own "wrong heading level" health check, (3) revert
+          # any code/config that slipped through a shell redirection. State/memory
+          # and output/ (incl. .chains/) are preserved for the commit step below —
+          # on a failed run specifically, "Commit read-only failure log" (next
+          # step) commits just the memory/logs/ entry, since "Commit results"
+          # still requires success() and stays that way (see that step's note).
           SKILL="${{ steps.skill.outputs.name }}"
+          RUN_OUTCOME="${{ steps.run.outcome }}"
           TODAY=$(date -u +%Y-%m-%d)
           mkdir -p memory/logs
-          printf '\n## %s (read-only)\nRan %s UTC.\n' "$SKILL" "$(date -u +%FT%TZ)" >> "memory/logs/${TODAY}.md"
+          LOG="memory/logs/${TODAY}.md"
+          CAPTURED="output/.chains/${SKILL}.md"
+          RESULT=/tmp/skill-result.txt
+          HEADING="^### ${SKILL}[[:space:]]*$"
+          # Never double-log: a stray self-written "### <skill>" entry from this
+          # run (more such headings now than in the checked-out file) is kept as is.
+          BEFORE=$(git show "HEAD:${LOG}" 2>/dev/null | grep -cE "$HEADING" || true)
+          NOW=$(grep -cE "$HEADING" "$LOG" 2>/dev/null || true)
+          if [ "${NOW:-0}" -gt "${BEFORE:-0}" ]; then
+            echo "read-only guard: $SKILL already logged itself this run; not appending a duplicate"
+          elif [ "$RUN_OUTCOME" = "success" ] && [ -s "$CAPTURED" ] && [ "$(cat "$CAPTURED")" != "_No output captured._" ]; then
+            # CAPTURED is the notify payload when the skill notified, so the final
+            # output (where read-only skills put their log record) is appended too
+            # when it differs. Inner "### <skill>" lines are dropped: one heading.
+            { printf '\n### %s\n' "$SKILL"
+              { cat "$CAPTURED"; if [ -s "$RESULT" ] && ! cmp -s "$RESULT" "$CAPTURED"; then printf '\n'; cat "$RESULT"; fi; } | grep -vE "$HEADING" || true
+              printf '\n'; } >> "$LOG"
+          else
+            printf '\n### %s\nRun outcome=%s at %s UTC - no output captured; nothing to log.\n' "$SKILL" "$RUN_OUTCOME" "$(date -u +%FT%TZ)" >> "$LOG"
+          fi
           CODE_PATHS="skills .github apps/mcp-server apps/webhook apps/dashboard/app apps/dashboard/lib apps/dashboard/components scripts docs catalog bin *.md *.json *.yml aeon"
           git checkout -- $CODE_PATHS 2>/dev/null || true
           # Same path set as CODE_PATHS above. `git checkout` only reverts EDITS to
@@ -1675,14 +2062,47 @@ jobs:
           git clean -fd -- $CODE_PATHS 2>/dev/null || true
           echo "read-only guard: logged run + reverted code/config writes for $SKILL"
 
+      - name: Commit read-only failure log
+        # Deliberately its own narrow step rather than widening "Commit
+        # results" to always()/!cancelled(): that step does `git add -A` for
+        # every skill including write-mode ones, and running it unconditionally
+        # would risk committing a write-mode skill's partial/broken mid-edit
+        # state on a genuine failure. Read-only skills can't Write/Edit at all,
+        # so the ONLY thing a failed read-only run could ever need committed is
+        # the memory/logs/ entry "Read-only capability guard" (previous step)
+        # just staged — this step stages that path and nothing else, so by
+        # construction it can't ship code, and it never fires for write-mode
+        # skills regardless (SKILL_MODE == 'read-only' gate). It is also skipped
+        # for proof runs (dispatch_id prefix 'prove-'): a proof re-runs a skill on
+        # the PR's attested head branch, so committing a failure log here would push
+        # a stray commit onto the very head the proof must not move.
+        if: ${{ !cancelled() && steps.work.outputs.mode != '' && env.SKILL_MODE == 'read-only' && steps.run.outcome != 'success' && !startsWith(inputs.dispatch_id, 'prove-') }}
+        run: |
+          git config user.name "aeonframework"
+          git config user.email "aeonframework@proton.me"
+          TODAY=$(date -u +%Y-%m-%d)
+          git add "memory/logs/${TODAY}.md"
+          if git diff --staged --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "chore(${{ steps.skill.outputs.name }}): log read-only failure $(date +%Y-%m-%d)"
+          bash scripts/git-push-retry.sh
+
       - name: Commit results
-        if: steps.work.outputs.mode != ''
+        # (Read-only failures are handled above, in "Commit read-only failure
+        # log" — deliberately not by widening this step to always(), since
+        # this step's `git add -A` covers write-mode skills too and running it
+        # unconditionally would risk committing a partial/broken mid-edit state
+        # from a genuinely failed write-mode run.)
+        # proof runs must not move the immutable branch head they attest.
+        if: steps.work.outputs.mode != '' && steps.skill.outputs.name != 'create-prove' && !startsWith(inputs.dispatch_id, 'prove-')
         env:
           STATE_BACKEND: ${{ vars.STATE_BACKEND }}
         run: |
           git config user.name "aeonframework"
           git config user.email "aeonframework@proton.me"
-          rm -f ./notify ./notify-jsonrender  # Remove generated notify scripts before committing
+          rm -f ./notify ./notify-jsonrender ./secretcurl  # Remove generated notify/secretcurl scripts before committing
 
           # Issues-as-state (hardening §3): cron-state.json was materialized from the
           # pinned Issue for this run's readers — it's a projection, not source of truth.
@@ -1692,77 +2112,16 @@ jobs:
             git checkout -- memory/cron-state.json 2>/dev/null || rm -f memory/cron-state.json
           fi
 
-          CURRENT_BRANCH=$(git branch --show-current)
           LABEL="${{ steps.work.outputs.label }}"
-
-          # If Claude created a feature branch, push it then switch back to main
-          if [ "$CURRENT_BRANCH" != "main" ] && [ -n "$CURRENT_BRANCH" ]; then
-            echo "On feature branch: $CURRENT_BRANCH"
-            git add -A
-            git diff --staged --quiet || git commit -m "chore($LABEL): auto-commit $(date +%Y-%m-%d)"
-            git push --force-with-lease -u origin "$CURRENT_BRANCH" || true
-
-            # Switch back to main to record memory/log changes. main is only
-            # guaranteed present when the run STARTED on main (the normal
-            # scheduled / Run-now path). A run dispatched against a non-main ref
-            # gets a single-branch checkout with no local main, so `checkout main`
-            # would fail the step under `set -e` (and a blind rebase would
-            # conflict). The feature branch is already pushed above — just stop.
-            if git show-ref --verify --quiet refs/heads/main; then
-              git checkout main
-              git pull --rebase origin main || true
-            else
-              echo "main not present locally (non-main dispatch) — feature branch pushed, nothing to record on main"
-              exit 0
-            fi
-          fi
-
-          # Commit any remaining changes on main
-          git add -A
-          if git diff --staged --quiet; then
-            # Nothing new to commit — but Claude may have committed during its run.
-            # Check for unpushed commits and push them if any exist.
-            if [ "$(git rev-list origin/main..HEAD --count 2>/dev/null)" = "0" ]; then
-              echo "No changes to commit or push"
-              exit 0
-            fi
-            echo "No new changes, but found unpushed commits — pushing"
-          else
-            git commit -m "chore($LABEL): auto-commit $(date +%Y-%m-%d)"
-          fi
-          for i in 1 2 3 4 5 6 7 8 9 10; do
-            # Pull and rebase onto latest remote
-            if ! git pull --rebase origin main 2>/dev/null; then
-              echo "Rebase conflict on attempt $i, auto-resolving..."
-              while true; do
-                CONFLICTED=$(git diff --name-only --diff-filter=U) || true
-                [ -z "$CONFLICTED" ] && break
-                for f in $CONFLICTED; do
-                  if [[ "$f" == memory/logs/* ]] || [[ "$f" == memory/topics/* ]] || [[ "$f" == memory/MEMORY.md ]] || [[ "$f" == memory/skill-health/* ]] || [[ "$f" == apps/dashboard/outputs/* ]] || [[ "$f" == output/* ]]; then
-                    sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' "$f"
-                    git add "$f"
-                  else
-                    git checkout --theirs "$f"
-                    git add "$f"
-                  fi
-                done
-                if git diff --cached --quiet; then
-                  git rebase --skip || true
-                else
-                  GIT_EDITOR=true git rebase --continue || true
-                fi
-              done
-            fi
-            # Try to push — if it fails, another job beat us, loop and re-pull
-            if git push -u origin HEAD 2>/dev/null; then
-              echo "Pushed successfully on attempt $i"
-              exit 0
-            fi
-            echo "Push attempt $i failed (ref moved), retrying in ${i}s..."
-            sleep "$(( (RANDOM % 4) + i ))"  # jittered backoff - a deterministic sleep re-collides lockstep writers under push contention
-          done
-          echo "Failed to push after 5 attempts"
-          exit 1
+          # Shared feature-branch/main split (scripts/commit-run-results.sh): the
+          # PR branch gets only the agent's change, post-run state is committed
+          # on main via git-push-retry.sh. Run the copy from the run's starting
+          # commit so an agent edit to the script can't change its own commit.
+          # mktemp: a fresh O_EXCL file, so nothing a sandboxed run left in
+          # $RUNNER_TEMP (a symlink or a pre-made file) can stand in for the script.
+          CRR=$(mktemp "$RUNNER_TEMP/commit-run-results.XXXXXX")
+          git show "$GITHUB_SHA:scripts/commit-run-results.sh" > "$CRR"
+          bash "$CRR" "$LABEL"
 
       - name: Update cron state
         if: always() && steps.skill.outputs.name != ''
@@ -1874,14 +2233,24 @@ jobs:
             exit 0
           fi
           git checkout main 2>/dev/null || true
-          git pull --rebase origin main 2>/dev/null || true
+          # --autostash: a failed write-mode run skips "Commit results" and leaves a
+          # dirty tree, which makes a plain `pull --rebase` refuse, so the failure
+          # would never be recorded (breaker/retry blind to it).
+          git pull --rebase --autostash origin main 2>/dev/null || git rebase --abort 2>/dev/null || true
 
-          # Read current state
-          if [ -f "$STATE_FILE" ] && jq empty "$STATE_FILE" 2>/dev/null; then
-            STATE=$(cat "$STATE_FILE")
-          else
-            STATE='{}'
-          fi
+          # Read current state. A garbled working copy (e.g. an autostash pop that
+          # conflicted) falls back to the committed copy instead of {}, which would
+          # wipe every other skill's state on commit.
+          read_state() {
+            if [ -f "$STATE_FILE" ] && jq -e 'type == "object"' "$STATE_FILE" >/dev/null 2>&1; then
+              STATE=$(cat "$STATE_FILE")
+            elif git show "HEAD:$STATE_FILE" 2>/dev/null | jq -e 'type == "object"' >/dev/null 2>&1; then
+              STATE=$(git show "HEAD:$STATE_FILE")
+            else
+              STATE='{}'
+            fi
+          }
+          read_state
 
           apply_state_update
 
@@ -1896,21 +2265,24 @@ jobs:
 
           git commit -m "chore(cron): $SKILL $CRON_STATUS"
           for i in 1 2 3 4 5 6 7 8 9 10; do
-            if git pull --rebase origin main 2>/dev/null && git push -u origin HEAD 2>/dev/null; then
+            if git pull --rebase --autostash origin main 2>/dev/null && git push -u origin HEAD 2>/dev/null; then
               echo "Cron state updated: $SKILL=$CRON_STATUS"
               exit 0
             fi
-            # On conflict, take theirs and re-apply our update
+            # Lost the race: drop our commit, take UPSTREAM's file and re-apply this
+            # run's update to it. (`checkout -- file` restores from the index, i.e.
+            # our own staged copy after the soft reset, so the old loop re-applied
+            # onto stale state and the following pull refused every time.)
             git rebase --abort 2>/dev/null || true
             git reset --soft HEAD~1 2>/dev/null || true
-            git checkout -- "$STATE_FILE" 2>/dev/null || true
-            git pull origin main 2>/dev/null || true
-
-            if [ -f "$STATE_FILE" ] && jq empty "$STATE_FILE" 2>/dev/null; then
-              STATE=$(cat "$STATE_FILE")
-            else
-              STATE='{}'
+            git checkout HEAD -- "$STATE_FILE" 2>/dev/null || { git rm -q --cached --ignore-unmatch -- "$STATE_FILE"; rm -f "$STATE_FILE"; }
+            if ! git pull --rebase --autostash origin main 2>/dev/null; then
+              git rebase --abort 2>/dev/null || true
+              git fetch origin main 2>/dev/null || true
+              git checkout origin/main -- "$STATE_FILE" 2>/dev/null || true
             fi
+
+            read_state
             apply_state_update
             echo "$STATE" | jq '.' > "$STATE_FILE"
             git add "$STATE_FILE"
@@ -1928,17 +2300,28 @@ jobs:
         if: always() && steps.skill.outputs.name != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Step outputs go through env, never inline ${{ }} in the script: FLAGS is
+          # judge output derived from untrusted skill output, and a quote in it would
+          # break out of the shell string in a step that holds a write token.
+          HEALTH_ISSUES: ${{ vars.HEALTH_ISSUES }}
+          SKILL: ${{ steps.skill.outputs.name }}
+          SCORE_IN: ${{ steps.analyze.outputs.QUALITY_SCORE }}
+          FLAGS_IN: ${{ steps.analyze.outputs.FLAGS }}
+          RUN_OUTCOME: ${{ steps.run.outcome }}
         run: |
           # §7 is default-ON; disable only with repo var HEALTH_ISSUES=0. The toggle is
           # checked HERE in bash, NOT in the step `if:`. A GitHub Actions `if:` comparison
           # like `vars.HEALTH_ISSUES != '0'` does numeric coercion, and an UNSET var (null)
           # coerces to 0 — so `!= '0'` is FALSE when unset, silently skipping the step by
           # default (the opposite of "default-on"). Bash string comparison has no such trap.
-          if [ "${{ vars.HEALTH_ISSUES }}" = "0" ]; then echo "votable health disabled (HEALTH_ISSUES=0)"; exit 0; fi
-          SKILL="${{ steps.skill.outputs.name }}"
-          SCORE="${{ steps.analyze.outputs.QUALITY_SCORE }}"; [ -z "$SCORE" ] && SCORE=0
-          FLAGS='${{ steps.analyze.outputs.FLAGS }}'; [ -z "$FLAGS" ] && FLAGS='[]'
-          if [ "${{ steps.run.outcome }}" != "success" ]; then SCORE=1; FLAGS='["run_failed"]'; fi
+          if [ "$HEALTH_ISSUES" = "0" ]; then echo "votable health disabled (HEALTH_ISSUES=0)"; exit 0; fi
+          SCORE="$SCORE_IN"; [[ "$SCORE" =~ ^[0-9]+$ ]] || SCORE=0
+          # Accept FLAGS only as a JSON array of strings; anything else is dropped.
+          FLAGS='[]'
+          if [ -n "$FLAGS_IN" ] && printf '%s' "$FLAGS_IN" | jq -e 'type == "array" and all(.[]; type == "string")' >/dev/null 2>&1; then
+            FLAGS=$(printf '%s' "$FLAGS_IN" | jq -c '.')
+          fi
+          if [ "$RUN_OUTCOME" != "success" ]; then SCORE=1; FLAGS='["run_failed"]'; fi
           REC=$(jq -cn --arg s "$SKILL" --argjson sc "$SCORE" --argjson fl "$FLAGS" '{skill:$s,score:$sc,flags:$fl}')
           NEEDS=$(printf '%s' "$REC" | python3 -c "import sys,json; sys.path.insert(0,'scripts'); import health_triage as h; print('yes' if h.needs_comment(json.load(sys.stdin)) else 'no')" 2>/dev/null || echo no)
           if [ "$NEEDS" = "yes" ]; then
@@ -1951,3 +2334,36 @@ jobs:
           else
             echo "no regression for $SKILL; health issue silent"
           fi
+
+      # Structured audit log (scripts/audit.sh) -> run artifact. Runs on failure too
+      # so a run that pushed a commit or sent a notify before dying still leaves its
+      # trail. The log lives outside the workspace (beside the notify queue); stage a
+      # copy into the workspace so upload-artifact picks it up, guaranteeing a file
+      # even when nothing privileged happened (empty, not missing).
+      - name: Stage audit log
+        if: always()
+        run: |
+          mkdir -p audit-artifact
+          if [ -n "${AEON_AUDIT_LOG:-}" ] && [ -f "$AEON_AUDIT_LOG" ]; then
+            cp "$AEON_AUDIT_LOG" audit-artifact/audit.jsonl
+          else
+            : > audit-artifact/audit.jsonl
+          fi
+          echo "audit records: $(wc -l < audit-artifact/audit.jsonl)"
+
+      - name: Upload audit log
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        env:
+          # Same as the egress audit upload: bypass the iron-proxy MITM for this
+          # Actions-internal artifact upload so a proxied run cannot 403 it, and keep
+          # it non-fatal so a telemetry-upload hiccup never reds a successful run.
+          HTTP_PROXY: ''
+          HTTPS_PROXY: ''
+          NO_PROXY: '*'
+        with:
+          name: audit-log-${{ github.run_id }}
+          path: audit-artifact/audit.jsonl
+          if-no-files-found: warn
+          retention-days: 30
