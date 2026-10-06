@@ -1,0 +1,279 @@
+{
+  "root": "card_main",
+  "state": {},
+  "elements": {
+    "card_main": {
+      "type": "Card",
+      "props": {
+        "title": "🚨 Heartbeat: Fleet DEGRADED",
+        "description": "2026-10-06 19:05 UTC"
+      },
+      "children": [
+        "alert_degraded",
+        "sep1",
+        "section_failed",
+        "sep2",
+        "section_root_cause",
+        "sep3",
+        "section_outcome",
+        "sep4",
+        "section_health",
+        "sep5",
+        "section_fleet",
+        "sep6",
+        "status_update",
+        "sep7",
+        "issue_link"
+      ]
+    },
+    "alert_degraded": {
+      "type": "Alert",
+      "props": {
+        "type": "error",
+        "message": "Fleet status is DEGRADED — 4 consecutive failures across critical skills"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_failed": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_failed",
+        "failed_tweet_digest",
+        "failed_token_report",
+        "failed_heartbeat"
+      ]
+    },
+    "heading_failed": {
+      "type": "Heading",
+      "props": {
+        "text": "FAILED / API Degradation",
+        "level": "h2"
+      }
+    },
+    "failed_tweet_digest": {
+      "type": "Text",
+      "props": {
+        "text": "tweet-digest — failed 10-06 17:01 UTC | 4 consecutive failures | last success 10-04 18:04 UTC (49h stale)",
+        "variant": "body"
+      }
+    },
+    "failed_token_report": {
+      "type": "Text",
+      "props": {
+        "text": "token-report — failed 10-06 07:34 UTC | 3 consecutive failures | last success 10-05 06:47 UTC",
+        "variant": "body"
+      }
+    },
+    "failed_heartbeat": {
+      "type": "Text",
+      "props": {
+        "text": "heartbeat (self) — last clean run 10-04 19:21 UTC (47h+ stale) | failed once 10-05 19:03 UTC",
+        "variant": "body"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_root_cause": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_root_cause",
+        "cause_text_1",
+        "cause_text_2",
+        "cause_text_3"
+      ]
+    },
+    "heading_root_cause": {
+      "type": "Heading",
+      "props": {
+        "text": "Shared Root Cause",
+        "level": "h2"
+      }
+    },
+    "cause_text_1": {
+      "type": "Text",
+      "props": {
+        "text": "All three skills — plus aeon-update (10-05 11:01 UTC) — hit the same zero-token/zero-cost error signature.",
+        "variant": "body"
+      }
+    },
+    "cause_text_2": {
+      "type": "Text",
+      "props": {
+        "text": "Already logged as a shared-LLM-gateway outage on 08-31 and 09-22.",
+        "variant": "body"
+      }
+    },
+    "cause_text_3": {
+      "type": "Alert",
+      "props": {
+        "type": "warning",
+        "message": "Unlike 09-22, this has NOT self-resolved yet — failure counts are still climbing"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_outcome": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_outcome",
+        "outcome_text_1",
+        "outcome_text_2"
+      ]
+    },
+    "heading_outcome": {
+      "type": "Heading",
+      "props": {
+        "text": "Lost Outcome-Write Found",
+        "level": "h2"
+      }
+    },
+    "outcome_text_1": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-update's cron-state shows it stuck dispatched since 10-05T11:01 UTC, but PR #246 actually merged cleanly at 10-05T11:20 UTC with full log entry written.",
+        "variant": "body"
+      }
+    },
+    "outcome_text_2": {
+      "type": "Text",
+      "props": {
+        "text": "The sync itself worked — only the state-file outcome-write got clobbered by the gateway hiccup. Requires skill-repair fix so a late LLM-only step can't erase a real completed success.",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_health": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_health",
+        "health_text_1",
+        "health_text_2"
+      ]
+    },
+    "heading_health": {
+      "type": "Heading",
+      "props": {
+        "text": "New Health Issues",
+        "level": "h2"
+      }
+    },
+    "health_text_1": {
+      "type": "Text",
+      "props": {
+        "text": "#247 (aeon-update, run_failed) and #248 (heartbeat, run_failed) — joining already-open #230 (token-report), #231 (secured-watch), #234 (tweet-digest)",
+        "variant": "body"
+      }
+    },
+    "health_text_2": {
+      "type": "Badge",
+      "props": {
+        "text": "5 open health threads — none auto-closed",
+        "variant": "destructive"
+      }
+    },
+    "sep5": {
+      "type": "Separator",
+      "props": {}
+    },
+    "section_fleet": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading_fleet",
+        "fleet_text"
+      ]
+    },
+    "heading_fleet": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet Status",
+        "level": "h2"
+      }
+    },
+    "fleet_text": {
+      "type": "Text",
+      "props": {
+        "text": "No stalled PRs, no urgent-labeled issues. Fleet composition unchanged: 9 enabled, secured-watch still off.",
+        "variant": "body"
+      }
+    },
+    "sep6": {
+      "type": "Separator",
+      "props": {}
+    },
+    "status_update": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading_status",
+        "status_badge_previous",
+        "status_badge_current"
+      ]
+    },
+    "heading_status": {
+      "type": "Heading",
+      "props": {
+        "text": "Status Page Update",
+        "level": "h2"
+      }
+    },
+    "status_badge_previous": {
+      "type": "Badge",
+      "props": {
+        "text": "Previous: 🟡 WATCH",
+        "variant": "secondary"
+      }
+    },
+    "status_badge_current": {
+      "type": "Badge",
+      "props": {
+        "text": "Current: 🔴 DEGRADED",
+        "variant": "destructive"
+      }
+    },
+    "sep7": {
+      "type": "Separator",
+      "props": {}
+    },
+    "issue_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Health Issue #247",
+        "href": "https://github.com/aaronjmars/aeon-agent/issues/247",
+        "source": "GitHub"
+      }
+    }
+  }
+}
