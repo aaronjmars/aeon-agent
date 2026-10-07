@@ -1,0 +1,286 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "⚠️ Heartbeat: root cause found for tweet-digest failures"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "timestamp",
+        "status-section",
+        "sep1",
+        "what-happened",
+        "sep2",
+        "recovery-section",
+        "sep3",
+        "p1p2-section",
+        "sep4",
+        "status-page-section"
+      ]
+    },
+    "timestamp": {
+      "type": "Heading",
+      "props": {
+        "text": "Heartbeat — 2026-10-07 19:05 UTC",
+        "level": "h3"
+      }
+    },
+    "status-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-digest-status",
+        "token-report-status"
+      ]
+    },
+    "tweet-digest-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-red",
+        "text-tweet-digest"
+      ]
+    },
+    "badge-red": {
+      "type": "Badge",
+      "props": {
+        "text": "🔴",
+        "variant": "destructive"
+      }
+    },
+    "text-tweet-digest": {
+      "type": "Text",
+      "props": {
+        "text": "tweet-digest — root cause found, fix already merged, not yet confirmed",
+        "variant": "body"
+      }
+    },
+    "token-report-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-green",
+        "text-token-report"
+      ]
+    },
+    "badge-green": {
+      "type": "Badge",
+      "props": {
+        "text": "🟢",
+        "variant": "default"
+      }
+    },
+    "text-token-report": {
+      "type": "Text",
+      "props": {
+        "text": "token-report — recovered, ran clean this morning",
+        "variant": "body"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "what-happened": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-what-happened",
+        "text-what-happened-intro",
+        "pr-links-stack"
+      ]
+    },
+    "heading-what-happened": {
+      "type": "Heading",
+      "props": {
+        "text": "What happened",
+        "level": "h4"
+      }
+    },
+    "text-what-happened-intro": {
+      "type": "Text",
+      "props": {
+        "text": "Yesterday's heartbeat blamed a \"shared LLM-gateway outage\" for the 10-05/10-06 failures across token-report, tweet-digest, aeon-update, and heartbeat itself. That theory is now corrected by the operator's own PRs, both merged today:",
+        "variant": "body"
+      }
+    },
+    "pr-links-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "pr-255",
+        "pr-256"
+      ]
+    },
+    "pr-255": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#255 (18:09 UTC) — root-caused tweet-digest's failures to an unbounded apt-get update hanging the full 5-minute cap in the bubblewrap-install CI step, and separately names an already-fixed npm ETARGET pin issue as the real cause of the earlier token-report/heartbeat/aeon-update failures (not a gateway outage)",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/255",
+        "source": "GitHub"
+      }
+    },
+    "pr-256": {
+      "type": "StoryLink",
+      "props": {
+        "title": "#256 (18:23 UTC) — same guard extended to 2 more CI workflows after 3 timeouts hit today's canon-port PR",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/256",
+        "source": "GitHub"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "recovery-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-confirmed",
+        "text-confirmed",
+        "heading-not-confirmed",
+        "text-not-confirmed",
+        "heading-benign",
+        "text-benign"
+      ]
+    },
+    "heading-confirmed": {
+      "type": "Heading",
+      "props": {
+        "text": "Confirmed recovered",
+        "level": "h4"
+      }
+    },
+    "text-confirmed": {
+      "type": "Text",
+      "props": {
+        "text": "token-report ran clean today 06:08 UTC. heartbeat's own last success is a healthy ~24h old (self-check clear).",
+        "variant": "body"
+      }
+    },
+    "heading-not-confirmed": {
+      "type": "Heading",
+      "props": {
+        "text": "Not yet confirmed",
+        "level": "h4"
+      }
+    },
+    "text-not-confirmed": {
+      "type": "Text",
+      "props": {
+        "text": "tweet-digest failed once more at 17:14 UTC — before the fix landed — so it's still at 5 consecutive failures in cron-state. Next dispatch (tomorrow 17:00 UTC) is the first real test of whether #255 holds.",
+        "variant": "body"
+      }
+    },
+    "heading-benign": {
+      "type": "Heading",
+      "props": {
+        "text": "Benign, already explained",
+        "level": "h4"
+      }
+    },
+    "text-benign": {
+      "type": "Text",
+      "props": {
+        "text": "aeon-update's cron-state still shows a stale dispatched watermark from 10-05 — confirmed days ago as a lost state-write (PR #246 merged cleanly that day), not a hang.",
+        "variant": "body"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "p1p2-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "heading-p1p2",
+        "text-p1p2"
+      ]
+    },
+    "heading-p1p2": {
+      "type": "Heading",
+      "props": {
+        "text": "P1/P2",
+        "level": "h4"
+      }
+    },
+    "text-p1p2": {
+      "type": "Text",
+      "props": {
+        "text": "No stalled PRs, no urgent issues. Fleet composition unchanged (9 enabled, secured-watch off). 5 auto-filed health issues (#230, #231, #234, #247, #248) remain open despite most flagged skills now running clean — health loop doesn't auto-close. 3 long-carried cosmetic flags unchanged since 10-04 (working-tree anomaly, scratch-file hygiene, secured-watch note-field gap).",
+        "variant": "body"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "status-page-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "text-status-page",
+        "link-pr"
+      ]
+    },
+    "text-status-page": {
+      "type": "Text",
+      "props": {
+        "text": "STATUS_PAGE=DEGRADED — wrote docs/status.md (one unrecovered skill: tweet-digest; verdict holds at 🔴 pending tomorrow's confirmation run).",
+        "variant": "body"
+      }
+    },
+    "link-pr": {
+      "type": "Link",
+      "props": {
+        "label": "🔗 https://github.com/aaronjmars/aeon-agent/pull/255",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/255"
+      }
+    }
+  }
+}

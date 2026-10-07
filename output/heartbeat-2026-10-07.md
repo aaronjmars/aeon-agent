@@ -1,5 +1,3 @@
-⚠️ Heartbeat: root cause found for tweet-digest failures
-
 ## Heartbeat — 2026-10-07 19:05 UTC
 
 🔴 **tweet-digest** — root cause found, fix already merged, not yet confirmed
@@ -18,5 +16,3 @@
 **P1/P2:** No stalled PRs, no urgent issues. Fleet composition unchanged (9 enabled, `secured-watch` off). 5 auto-filed health issues (#230, #231, #234, #247, #248) remain open despite most flagged skills now running clean — health loop doesn't auto-close. 3 long-carried cosmetic flags unchanged since 10-04 (working-tree anomaly, scratch-file hygiene, secured-watch note-field gap).
 
 STATUS_PAGE=DEGRADED — wrote docs/status.md (one unrecovered skill: tweet-digest; verdict holds at 🔴 pending tomorrow's confirmation run).
-
-🔗 https://github.com/aaronjmars/aeon-agent/pull/255
