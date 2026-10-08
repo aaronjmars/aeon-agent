@@ -1,0 +1,98 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-10-08"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "heading_theme1",
+        "tweet1_1",
+        "tweet1_2",
+        "sep1",
+        "heading_theme2",
+        "tweet2_1",
+        "sep2",
+        "heading_theme3",
+        "tweet3_1"
+      ]
+    },
+    "heading_theme1": {
+      "type": "Heading",
+      "props": {
+        "text": "Aeon Connect ships",
+        "level": "h3"
+      }
+    },
+    "tweet1_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "Aeon Connect launched — one-click cloud agent on your own GitHub, you keep the data (no Meta/NousResearch-style train-and-keep), runs 24/7 for you. https://x.com/aeonframework/status/2107875391662629106"
+      }
+    },
+    "tweet1_2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "the dashboard's live in-browser now — log in with GitHub, create an agent, run it, equip it with skills. https://x.com/aeonframework/status/2108080146817466751"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_theme2": {
+      "type": "Heading",
+      "props": {
+        "text": "New Hooks",
+        "level": "h3"
+      }
+    },
+    "tweet2_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "new Uniswap v4 hook, ComboBreaker — consecutive buys build a combo that cuts fees, and the sell that breaks the streak pays the buyers who held. https://x.com/aeonframework/status/2108139119255699908"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_theme3": {
+      "type": "Heading",
+      "props": {
+        "text": "Community",
+        "level": "h3"
+      }
+    },
+    "tweet3_1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "congrats to x.com/svector_eth, tagged into \"such an exciting epoch.\" https://x.com/aeonframework/status/2108218414875730404"
+      }
+    }
+  }
+}

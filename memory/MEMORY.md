@@ -28,6 +28,7 @@ Full history archived to `memory/topics/articles-history.md` (no new repo-articl
 ## Recent Digests
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-10-08 | tweet-digest | First run since the 10-04→10-07 CI-hang failure streak (see Lessons) — Aeon Connect ships (launch + in-browser dashboard), New Hooks (Uniswap v4 ComboBreaker), Community (congrats @svector_eth); 2 RTs + 1 thin teaser excluded |
 | 2026-10-03 | tweet-digest | TWEET_DIGEST_OK — thin cycle, 0 net-new originals (2 RTs excluded per skip-RTs rule) |
 | 2026-10-02 | tweet-digest | Shipped — Security (public smart-contract audit dashboard quote-tweet), Weekly Recap ("week in the trenches" Sept 27→Oct 2 thread) |
 | 2026-10-01 | tweet-digest | Shipped — New Skills (Arc Studio spotlight, skills-catalog X-article covering 20 skills added 08-04→09-28), Content & Comparisons (OpenAI "dots" rename comparison article) |
@@ -41,9 +42,7 @@ Full history archived to `memory/topics/articles-history.md` (no new repo-articl
 | 2026-09-23 | tweet-digest | Security Disclosures (Nvidia security-report acknowledgment — vuln-scanner fix merged), Skill Drop (Create-Prove spotlight), Shipped (CapGate Aeon Hook, vuln-scanner 4.3M-star milestone), Growth & Community (@PremierBase "Base Build 001" feature, aaronjmars "introducing aeon products", HivePunkz winners) |
 | 2026-09-22 | tweet-digest | Shipped (Uniswap v4 Hook series part one video teaser) — thin cycle, 1 net-new original |
 | 2026-09-21 | tweet-digest | Shipped (vuln-scanner Riva brain announcement, Uniswap v4 Hooks Marketplace live video), Growth & Channels (Substack launch, HivePunkz community giveaway), Content & Comparisons (Jev/Sage comparison RT) |
-| 2026-09-20 | tweet-digest | Security disclosures (Tencent MicroVM vuln via aaronjmars RT), Narrative & Community (git-as-agent-memory/nvidia narrative, pi-harness automation reply to @jessepollak) |
-
-Older rows (09-06 through 09-19) archived to `memory/topics/digests-history.md`.
+Older rows (09-06 through 09-20) archived to `memory/topics/digests-history.md`.
 
 ## Skills Built
 | Skill | Date | Notes |
