@@ -1,0 +1,186 @@
+{
+  "root": "card-changelog",
+  "state": {},
+  "elements": {
+    "card-changelog": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog — 2026-10-08"
+      },
+      "children": [
+        "week-label",
+        "repos-status",
+        "changes-breakdown",
+        "separator-1",
+        "highlights-section",
+        "separator-2",
+        "full-changelog-link"
+      ]
+    },
+    "week-label": {
+      "type": "Text",
+      "props": {
+        "text": "Week of 2026-10-08",
+        "variant": "lead"
+      }
+    },
+    "repos-status": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "active-repos-text",
+        "quiet-repos-text"
+      ]
+    },
+    "active-repos-text": {
+      "type": "Text",
+      "props": {
+        "text": "Active: aeonfun/aeon, aeonfun/opendia"
+      }
+    },
+    "quiet-repos-text": {
+      "type": "Text",
+      "props": {
+        "text": "Quiet: minitor, soul.md"
+      }
+    },
+    "changes-breakdown": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "changes-total",
+        "changes-table"
+      ]
+    },
+    "changes-total": {
+      "type": "Stat",
+      "props": {
+        "value": "46",
+        "label": "User-facing changes"
+      }
+    },
+    "changes-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Type",
+          "Count"
+        ],
+        "rows": [
+          [
+            "Added",
+            "13"
+          ],
+          [
+            "Changed",
+            "10"
+          ],
+          [
+            "Fixed",
+            "27"
+          ],
+          [
+            "Security",
+            "6"
+          ],
+          [
+            "Removed",
+            "2"
+          ],
+          [
+            "Breaking",
+            "0"
+          ]
+        ]
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "highlights-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "highlights-heading",
+        "aeon-section",
+        "opendia-section"
+      ]
+    },
+    "highlights-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Highlights",
+        "level": "h3"
+      }
+    },
+    "aeon-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-repo-badge",
+        "aeon-changes-text"
+      ]
+    },
+    "aeon-repo-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "aeonfun/aeon",
+        "variant": "default"
+      }
+    },
+    "aeon-changes-text": {
+      "type": "Text",
+      "props": {
+        "text": "Shipped aeon init/aeon auth CLI + one-shot dashboard connect flow (onboarding push); closed sandbox parent-rename escape"
+      }
+    },
+    "opendia-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-repo-badge",
+        "opendia-changes-text"
+      ]
+    },
+    "opendia-repo-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "aeonfun/opendia",
+        "variant": "default"
+      }
+    },
+    "opendia-changes-text": {
+      "type": "Text",
+      "props": {
+        "text": "Cut two patch releases (v1.1.3, v1.1.4) with dependency security patch"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "full-changelog-link": {
+      "type": "Link",
+      "props": {
+        "label": "Full changelog",
+        "href": "output/articles/changelog-2026-10-08.md"
+      }
+    }
+  }
+}
