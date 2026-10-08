@@ -213,12 +213,12 @@
   "changelog": {
     "last_dispatch": "2026-10-05T08:26:42Z",
     "last_status": "success",
-    "last_success": "2026-10-05T08:33:33Z",
-    "total_runs": 14,
-    "total_successes": 11,
+    "last_success": "2026-10-08T15:11:15Z",
+    "total_runs": 15,
+    "total_successes": 12,
     "total_failures": 3,
     "consecutive_failures": 0,
-    "success_rate": 0.79,
+    "success_rate": 0.8,
     "last_quality_score": 4,
     "last_failed": "2026-08-31T09:32:01Z",
     "last_error": "2c02c0\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"s"
