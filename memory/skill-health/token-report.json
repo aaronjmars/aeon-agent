@@ -1,15 +1,13 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-10-07T06:07:49Z",
-  "quality_score": 4,
-  "assessment": "Substantive market report with specific sourced metrics; well-aligned to strategy priority #4 (track momentum honestly); minor formatting oddity and could include deeper context",
-  "flags": [],
-  "avg_score": 4.03,
+  "last_analyzed": "2026-10-08T06:08:32Z",
+  "quality_score": 3,
+  "assessment": "Substantive token snapshot with real-time data, but lacks timestamp and source methodology—violates strategy's 'never publish unverified numbers' constraint by not proving verification",
+  "flags": [
+    "unverifiable_claim"
+  ],
+  "avg_score": 4,
   "history": [
-    {
-      "date": "2026-09-07",
-      "score": 4
-    },
     {
       "date": "2026-09-08",
       "score": 4
@@ -126,6 +124,12 @@
       "date": "2026-10-07",
       "score": 4,
       "ts": "2026-10-07T06:07:49Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-08",
+      "score": 3,
+      "ts": "2026-10-08T06:08:32Z",
       "harness": "claude"
     }
   ]
