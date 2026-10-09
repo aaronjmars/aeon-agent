@@ -1,5 +1,5 @@
 .data.tweets[]
 | select((.isReply // false) | not)
 | (try (.createdAt | strptime("%a %b %d %H:%M:%S %z %Y") | strftime("%Y-%m-%d")) catch (.createdAt[0:10])) as $d
-| select($d >= "2026-10-01")
-| [.author.userName, $d, .likeCount, .retweetCount, .replyCount, .url, (.isRetweet // false), .text] | @tsv
+| select($d >= "2026-10-06")
+| [.author.userName, $d, (.likeCount|tostring), (.retweetCount|tostring), (.replyCount|tostring), .url, .text] | join(" | ")

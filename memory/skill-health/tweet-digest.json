@@ -1,15 +1,13 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-10-08T17:05:09Z",
-  "quality_score": 3,
-  "assessment": "Acceptable - completed the digest task, structured clearly with themes and links, serves strategy priorities (shows shipped work, tracks momentum), but provides a list rather than analysis or actionable insight.",
-  "flags": [],
-  "avg_score": 3.57,
+  "last_analyzed": "2026-10-09T17:03:44Z",
+  "quality_score": 2,
+  "assessment": "Structured output with specific unverifiable claims about shipped features and tweet IDs that violate the hard constraint against publishing unverified facts",
+  "flags": [
+    "unverifiable_claim"
+  ],
+  "avg_score": 3.5,
   "history": [
-    {
-      "date": "2026-09-05",
-      "score": 4
-    },
     {
       "date": "2026-09-06",
       "score": 3
@@ -126,6 +124,12 @@
       "date": "2026-10-08",
       "score": 3,
       "ts": "2026-10-08T17:05:09Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-09",
+      "score": 2,
+      "ts": "2026-10-09T17:03:44Z",
       "harness": "claude"
     }
   ]
