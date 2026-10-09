@@ -1,26 +1,27 @@
-## Heartbeat — ambient fleet check (2026-10-08 19:04 UTC)
+Ambient fleet check complete — no notification sent (the one live flag, `aeon-update`'s stuck dispatch, was already reported within the last 48h).
+
+## Heartbeat — Ambient check (2026-10-09 19:05 UTC)
+
+**Overall: 🔴 DEGRADED** — one stuck skill, everything else clean.
 
 **P0 — Failed & stuck skills**
-🔴 DEGRADED, down to one item.
-- `tweet-digest` **confirmed recovered**: ran clean today at 17:01 UTC (0 consecutive failures), closing out the CI `apt-get`/bubblewrap-install hang that PR [#255](https://github.com/aaronjmars/aeon-agent/pull/255)/[#256](https://github.com/aaronjmars/aeon-agent/pull/256) fixed on 10-07. `token-report` and `changelog` also ran clean today.
-- Remaining flag: `aeon-update` cron-state still shows `last_status: "dispatched"` from **2026-10-05T11:01:23Z**, no completion since. Already confirmed on 10-06 as a lost state-write, not a real hang (its PR [#246](https://github.com/aaronjmars/aeon-agent/pull/246) merged cleanly that same day) — but the stale entry has now sat unresolved for 3+ days, and its next scheduled dispatch isn't until Monday 2026-10-12. This item was already reported twice on 10-07, so per the dedup rule it is **not** re-notified.
-- New minor data-quality signal (not a health flag — doesn't change any skill's status): `changelog`'s cron-state `last_dispatch` field is still stamped 10-05 even though it ran and succeeded again today (`last_success` correctly shows 2026-10-08T15:11:15Z, matching today's own `### changelog` log entry). Same class of stale-field write issue as `aeon-update`'s, on the opposite field.
+- 🔴 `aeon-update`: cron-state still `dispatched` since `2026-10-05T11:01:23Z`, no completion since (now 4+ days stale). Already confirmed 10-06 as a lost state-write, not a real hang (its PR #246 merged cleanly that day) — but the entry itself remains uncorrected. Next scheduled dispatch isn't until Monday 2026-10-12. Already reported 10-07 (×2) and 10-08 — deduped per the 48h rule, not re-notified today.
+- ✅ `token-report` (06:08 UTC) and `tweet-digest` (17:04 UTC) both ran clean today. `changelog` is weekly — no new run due until Monday, its 10-08 clean run stands.
 
-**P1 — Stalled PRs & urgent issues:** CLEAR — 0 open PRs, 0 issues labeled `urgent` on `aaronjmars/aeon-agent`.
+**P1 — Stalled PRs & urgent issues:** CLEAR. 0 open PRs, 0 issues labeled `urgent`.
 
-**P2 — Flagged memory items:** no new flags. Working-tree anomaly (`AGENTS.md` deleted-on-disk, `notify`/`notify-jsonrender`/`secretcurl` untracked), scratch-file git hygiene, and secured-watch's empty `note` field are all unchanged and already deduped within 48h.
+**P2 — Flagged memory items:** No new flags. Working-tree anomaly, scratch-file git hygiene, secured-watch's empty `note` field, and the health-issue auto-close gap are all unchanged and already deduped within 48h.
 
-**P3 — Missing scheduled skills:** fleet composition unchanged — 9 enabled (`changelog`, `aeon-update`, `shiplog`, `memory-flush`, `token-report`, `holdings`, `repo-pulse`, `tweet-digest`, `heartbeat`), `secured-watch` still off. No skill is stale beyond 2× its schedule interval.
+**P3 — Missing scheduled skills:** None. Fleet composition unchanged — 9 enabled skills, `secured-watch` still off, nothing exceeds 2× its schedule interval.
 
-**GitHub health issues:** still 5 open (#230 token-report, #231 secured-watch, #234 tweet-digest, #247 aeon-update, #248 heartbeat) — no auto-close despite most flagged skills now running clean; known gap, not new.
+**GitHub health issues:** Still 5 open (#230 token-report, #231 secured-watch, #234 tweet-digest, #247 aeon-update, #248 heartbeat) — no change; flagged skills are running clean but the loop doesn't auto-close on recovery.
 
-**Notification:** skipped — the one live flag (aeon-update stuck) was already reported in the last 48h; tweet-digest's recovery is good news, not an alert.
+**Status page:** `docs/status.md` regenerated — verdict stays 🔴 DEGRADED (same single `aeon-update` item), token pulse refreshed from today's report (AEON $0.00001963, 24h -4.4%, liquidity $392.2K, volume $40.9K, FDV $2.0M, verdict CONSOLIDATING), skill table re-sorted by last-run timestamp (heartbeat → tweet-digest → token-report → changelog → aeon-update → repo-pulse → shiplog → holdings → memory-flush).
 
-**Status page:** `docs/status.md` regenerated — verdict stays 🔴 DEGRADED (now carried by `aeon-update` alone), skill table re-sorted by actual last-activity timestamp, token pulse refreshed from today's `token-report-2026-10-08.md` (AEON $0.00002053, 24h −6.4%, liquidity $403.0K, volume $61.7K, FDV $2.1M, verdict CONSOLIDATING).
-
-`STATUS_PAGE=DEGRADED`
+`HEARTBEAT_OK` would not be accurate here — the aeon-update flag is real, just already-known and deduped from notification.
 
 ## Summary
-- Ran the heartbeat ambient check (default `${var}`): P0 improved — `tweet-digest` recovered, leaving only the already-known `aeon-update` stuck cron-state entry (deduped, not re-notified).
-- Modified `docs/status.md` (overall 🔴 DEGRADED, refreshed skill table/token pulse) and appended a `### heartbeat` entry to `memory/logs/2026-10-08.md`.
-- No `./notify` sent (no new signal). Follow-up needed: operator should check why `aeon-update`'s cron-state write didn't land after 10-05, and whether the same write-reliability gap also caused `changelog`'s stale `last_dispatch` field today.
+- Updated `docs/status.md` (overall verdict, timestamp, token pulse, skill table).
+- Appended `### heartbeat` log entry to `memory/logs/2026-10-09.md` (`mode: ambient`).
+- No `./notify` sent — nothing new beyond what was reported 10-07/10-08.
+- Follow-up still needed (unowned, carried from prior runs): aeon-update's stale `dispatched` state needs a corrective write or manual re-dispatch before Monday; 5 stale health issues need auto-close logic; scratch-file git hygiene and the `AGENTS.md` working-tree anomaly still need a human/skill-repair decision.
