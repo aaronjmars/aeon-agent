@@ -1,17 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-10-09T17:03:44Z",
-  "quality_score": 2,
-  "assessment": "Structured output with specific unverifiable claims about shipped features and tweet IDs that violate the hard constraint against publishing unverified facts",
-  "flags": [
-    "unverifiable_claim"
-  ],
-  "avg_score": 3.5,
+  "last_analyzed": "2026-10-10T17:02:59Z",
+  "quality_score": 4,
+  "assessment": "Competent execution: verified HTTP 200 fetch, systematically checked 3-day window against 2 days of logs, correctly identified zero new candidates, properly followed no-signal rule, documented the run with specific dates and counts",
+  "flags": [],
+  "avg_score": 3.53,
   "history": [
-    {
-      "date": "2026-09-06",
-      "score": 3
-    },
     {
       "date": "2026-09-07",
       "score": 3
@@ -130,6 +124,12 @@
       "date": "2026-10-09",
       "score": 2,
       "ts": "2026-10-09T17:03:44Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-10",
+      "score": 4,
+      "ts": "2026-10-10T17:02:59Z",
       "harness": "claude"
     }
   ]
