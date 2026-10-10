@@ -1,10 +1,10 @@
-ℹ️ AEON Token Report
+ℹ️ Token Report
 
 *$AEON — CONSOLIDATING*
 
-down 4.4% on 24h but volume's at 0.3x the 7d avg — too quiet to call it a trend. buy/sell flow actually flipped bullish (1.82 vs 0.95 yesterday).
+Price +4.9% on just 0.6x the 7d average volume — too thin to call a trend.
 
-Price $0.00001963 (-4.4% 24h) | Liq $392.2K (-2.7%) | Vol $40.9K (0.3x 7d)
-Buys/Sells 124/68 (ratio 1.82) | Whales: 9
+Price $0.00002059 (+4.9% 24h) | Liq $393.4K (+0.3%) | Vol $63.3K (0.6x 7d)
+Buys/Sells 103/97 (ratio 1.06) | Whales: 12
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
