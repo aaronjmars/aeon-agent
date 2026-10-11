@@ -140,8 +140,8 @@
     "last_quality_score": 4
   },
   "memory-flush": {
-    "last_dispatch": "2026-10-04T18:01:04Z",
-    "last_status": "success",
+    "last_dispatch": "2026-10-11T18:01:19Z",
+    "last_status": "dispatched",
     "last_success": "2026-10-04T18:06:54Z",
     "total_runs": 18,
     "total_successes": 18,
