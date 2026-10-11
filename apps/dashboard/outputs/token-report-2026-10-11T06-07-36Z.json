@@ -1,0 +1,99 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status_badge",
+        "price_note",
+        "separator1",
+        "price_stat",
+        "liquidity_stat",
+        "volume_stat",
+        "buys_sells_stat",
+        "whales_stat",
+        "separator2",
+        "chart_link"
+      ]
+    },
+    "status_badge": {
+      "type": "Badge",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "variant": "default"
+      }
+    },
+    "price_note": {
+      "type": "Text",
+      "props": {
+        "text": "Price slipped -5.0% on just 0.2x the 7d average volume — too thin to call a trend.",
+        "variant": "body"
+      }
+    },
+    "separator1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "price_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001957",
+        "delta": "-5.0%",
+        "trend": "down"
+      }
+    },
+    "liquidity_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Liquidity",
+        "value": "$393.6K",
+        "delta": "+0.1%",
+        "trend": "up"
+      }
+    },
+    "volume_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Volume",
+        "value": "$16.8K",
+        "delta": "0.2x 7d avg"
+      }
+    },
+    "buys_sells_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "41/39",
+        "delta": "ratio 1.05"
+      }
+    },
+    "whales_stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "2"
+      }
+    },
+    "separator2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart_link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "GeckoTerminal Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4",
+        "source": "GeckoTerminal"
+      }
+    }
+  }
+}
