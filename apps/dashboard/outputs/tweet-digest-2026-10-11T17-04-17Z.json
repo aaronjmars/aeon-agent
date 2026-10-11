@@ -1,0 +1,59 @@
+{
+  "root": "card-main",
+  "state": {},
+  "elements": {
+    "card-main": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest"
+      },
+      "children": [
+        "date-text",
+        "theme-text",
+        "separator",
+        "tweet-card",
+        "tweet-link"
+      ]
+    },
+    "date-text": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-11",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "theme-text": {
+      "type": "Text",
+      "props": {
+        "text": "Theme: Weekly Recap",
+        "variant": "muted"
+      },
+      "children": []
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "tweet-card": {
+      "type": "TweetCard",
+      "props": {
+        "author": "Aeon Framework",
+        "handle": "aeonframework",
+        "text": "week-in-the-trenches thread, oct 2 → oct 11, framework & ecosystem updates"
+      },
+      "children": []
+    },
+    "tweet-link": {
+      "type": "Link",
+      "props": {
+        "label": "View on X",
+        "href": "https://x.com/aeonframework/status/2109206030060290269"
+      },
+      "children": []
+    }
+  }
+}

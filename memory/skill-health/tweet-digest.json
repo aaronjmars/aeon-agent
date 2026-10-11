@@ -1,15 +1,14 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-10-10T17:02:59Z",
-  "quality_score": 4,
-  "assessment": "Competent execution: verified HTTP 200 fetch, systematically checked 3-day window against 2 days of logs, correctly identified zero new candidates, properly followed no-signal rule, documented the run with specific dates and counts",
-  "flags": [],
-  "avg_score": 3.53,
+  "last_analyzed": "2026-10-11T17:04:17Z",
+  "quality_score": 2,
+  "assessment": "Ran but asserts unverifiable URLs; digest too thin (one tweet, no analysis) and lacks evidence of real data fetch",
+  "flags": [
+    "unverifiable_claim",
+    "low_quality"
+  ],
+  "avg_score": 3.5,
   "history": [
-    {
-      "date": "2026-09-07",
-      "score": 3
-    },
     {
       "date": "2026-09-09",
       "score": 4
@@ -130,6 +129,12 @@
       "date": "2026-10-10",
       "score": 4,
       "ts": "2026-10-10T17:02:59Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-11",
+      "score": 2,
+      "ts": "2026-10-11T17:04:17Z",
       "harness": "claude"
     }
   ]
