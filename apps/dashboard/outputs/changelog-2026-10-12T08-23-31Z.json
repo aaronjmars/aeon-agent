@@ -1,0 +1,64 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Changelog",
+        "description": "Changelog synced — 2026-10-12"
+      },
+      "children": [
+        "content-stack"
+      ]
+    },
+    "content-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "sync-direction",
+        "pr-count",
+        "changelog-entry",
+        "status-badge",
+        "pr-link"
+      ]
+    },
+    "sync-direction": {
+      "type": "Text",
+      "props": {
+        "text": "aeonfun/aeon → aaronjmars/aeon-website"
+      }
+    },
+    "pr-count": {
+      "type": "Stat",
+      "props": {
+        "label": "New PRs synced",
+        "value": "27"
+      }
+    },
+    "changelog-entry": {
+      "type": "Text",
+      "props": {
+        "text": "Changelog entry: CI hardening, hosted Connect, Haiku 5.5"
+      }
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "draft",
+        "variant": "outline"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "PR #627",
+        "href": "https://github.com/aaronjmars/aeon-website/pull/627",
+        "source": "aaronjmars/aeon-website"
+      }
+    }
+  }
+}

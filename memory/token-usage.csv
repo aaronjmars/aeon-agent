@@ -600,3 +600,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-10-11,heartbeat,claude-sonnet-5,22,12904,776844,67611
 2026-10-12,token-report,claude-sonnet-5,96,21064,3417682,70957
 2026-10-12,holdings,claude-sonnet-5,22,3719,549908,38042
+2026-10-12,changelog,claude-sonnet-5,96,22786,3896863,77483
