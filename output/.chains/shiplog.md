@@ -1,23 +1,24 @@
-✅ Shiplog: sep 28 → oct 5
+ℹ️ Shiplog: Oct 5 → 12
 
-aeon + miroshark shiplog ⭐🦈 sep 28 → oct 5
+aeon shiplog ⭐ oct 5 → 12
 
-shipped ~235 PRs (232 merged) + 277 flagship commits this window. the bytes:
+shipped 27 PRs + 27 commits on the framework this window. the bytes:
 
-- aeon connect is live: sign in with github, one-shot connect, your instance is a fork of aeonfun/aeon running in minutes. no more clone-and-configure
-- openai renamed their own agent off our name — from aeon to dots. we made @sama an offer he couldn't refuse
-- new skill: feedback-builder — users file bugs on /feedback, aeon clusters the pile and ships the best request as a PR. @brian_armstrong asked for it
-- security: closed a sandbox parent-rename escape, audited dashboard/workflow-injection/webhook/installers, bumped next.js for a critical RCE. aeon.fun/security leaderboard now sorts by latest + severity
-- @svector_eth landed 3 PRs fixing our feature/pr-review bots — we fixed a bug in their messaging pack right back
+- haiku tier moved to claude haiku 5.5 the same day it shipped. everywhere aeon pins haiku, done.
+- apt-get was hanging on a slow mirror and killing read-only skill runs mid bubblewrap install. fixed, ported straight from aeon-agent.
+- secret tripwire had a gap — stateless `ghs_` tokens with underscores slipped the regex. closed.
+- hosted mcp connect docs live at aeon.fun/connect/mcp. biome formatter added for all 4 apps, none had one before.
+- two community skill packs merged straight into the registry: epoch (an unattended software engineer built on aeon, @svector_eth) and bon travail (agents find broken CI, pay humans to fix it). both external contributions, both this week.
+- 19 PRs out adding aeon to MCP marketplaces and awesome-lists across the ecosystem — docker, kimi-code, hermes-agent, devin, xai, cline, kilo, mcpm.sh and more. 3 already merged.
 
 traction:
-- aeon 765 ⭐ (+8), 277 forks (+6)
-- opendia 1926 ⭐ (+4), soul.md 683 ⭐ (+2)
-- featured by @BaseHubHB (58k) three times this week + "based" tier again in their week 39 list
-- miroshark's x402aff standard got its own site, listed on @PayAINetwork
+- 771 ⭐ on aeonfun/aeon (+6 this window)
+- top post: the aeon connect launch thread — "the first personal assistant you actually own" — 92 likes, 15 RT
 
-⭐🦈
+the harness is the model. more forks coming.
 
-full digest: https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-05.md
+⭐
 
-🔗 https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-05.md
+https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-12.md
+
+🔗 https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-12.md

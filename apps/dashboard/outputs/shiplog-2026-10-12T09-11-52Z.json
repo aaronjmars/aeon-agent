@@ -1,0 +1,162 @@
+{
+  "root": "card_root",
+  "state": {},
+  "elements": {
+    "card_root": {
+      "type": "Card",
+      "props": {
+        "title": "aeon shiplog ⭐ oct 5 → 12"
+      },
+      "children": [
+        "text_shipped",
+        "sep1",
+        "heading_work",
+        "stack_work",
+        "sep2",
+        "heading_traction",
+        "stack_traction",
+        "sep3",
+        "text_closing",
+        "sep4",
+        "link_full_article"
+      ]
+    },
+    "text_shipped": {
+      "type": "Text",
+      "props": {
+        "text": "shipped 27 PRs + 27 commits on the framework this window. the bytes:",
+        "variant": "lead"
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_work": {
+      "type": "Heading",
+      "props": {
+        "text": "The Work",
+        "level": "h3"
+      }
+    },
+    "stack_work": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "work_item_1",
+        "work_item_2",
+        "work_item_3",
+        "work_item_4",
+        "work_item_5",
+        "work_item_6"
+      ]
+    },
+    "work_item_1": {
+      "type": "Text",
+      "props": {
+        "text": "haiku tier moved to claude haiku 5.5 the same day it shipped. everywhere aeon pins haiku, done."
+      }
+    },
+    "work_item_2": {
+      "type": "Text",
+      "props": {
+        "text": "apt-get was hanging on a slow mirror and killing read-only skill runs mid bubblewrap install. fixed, ported straight from aeon-agent."
+      }
+    },
+    "work_item_3": {
+      "type": "Text",
+      "props": {
+        "text": "secret tripwire had a gap — stateless `ghs_` tokens with underscores slipped the regex. closed."
+      }
+    },
+    "work_item_4": {
+      "type": "Text",
+      "props": {
+        "text": "hosted mcp connect docs live at aeon.fun/connect/mcp. biome formatter added for all 4 apps, none had one before."
+      }
+    },
+    "work_item_5": {
+      "type": "Text",
+      "props": {
+        "text": "two community skill packs merged straight into the registry: epoch (an unattended software engineer built on aeon, @svector_eth) and bon travail (agents find broken CI, pay humans to fix it). both external contributions, both this week."
+      }
+    },
+    "work_item_6": {
+      "type": "Text",
+      "props": {
+        "text": "19 PRs out adding aeon to MCP marketplaces and awesome-lists across the ecosystem — docker, kimi-code, hermes-agent, devin, xai, cline, kilo, mcpm.sh and more. 3 already merged."
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "heading_traction": {
+      "type": "Heading",
+      "props": {
+        "text": "Traction",
+        "level": "h3"
+      }
+    },
+    "stack_traction": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "stat_stars",
+        "text_top_post"
+      ]
+    },
+    "stat_stars": {
+      "type": "Stat",
+      "props": {
+        "label": "Stars on aeonfun/aeon",
+        "value": "771",
+        "delta": "+6",
+        "trend": "up"
+      }
+    },
+    "text_top_post": {
+      "type": "Text",
+      "props": {
+        "text": "Top post: the aeon connect launch thread — \"the first personal assistant you actually own\" — 92 likes, 15 RT"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "text_closing": {
+      "type": "Text",
+      "props": {
+        "text": "the harness is the model. more forks coming.",
+        "variant": "muted"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "link_full_article": {
+      "type": "StoryLink",
+      "props": {
+        "title": "Full shiplog article",
+        "href": "https://github.com/aaronjmars/aeon-agent/blob/main/output/articles/shiplog-2026-10-12.md",
+        "source": "GitHub"
+      }
+    }
+  }
+}
