@@ -1,0 +1,81 @@
+{
+  "root": "card_holdings",
+  "state": {},
+  "elements": {
+    "card_holdings": {
+      "type": "Card",
+      "props": {
+        "title": "Holdings — aeon"
+      },
+      "children": [
+        "group_main",
+        "sep_1",
+        "group_changes"
+      ]
+    },
+    "group_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "stat_main",
+        "text_pct"
+      ]
+    },
+    "stat_main": {
+      "type": "Stat",
+      "props": {
+        "value": "14.93B"
+      },
+      "children": []
+    },
+    "text_pct": {
+      "type": "Text",
+      "props": {
+        "text": "14.93% of supply",
+        "variant": "caption"
+      },
+      "children": []
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "group_changes": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "lg"
+      },
+      "children": [
+        "stat_7d",
+        "stat_30d"
+      ]
+    },
+    "stat_7d": {
+      "type": "Stat",
+      "props": {
+        "label": "7d",
+        "value": "+169.64M",
+        "delta": "+1.15%",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "stat_30d": {
+      "type": "Stat",
+      "props": {
+        "label": "30d",
+        "value": "+462.18M",
+        "delta": "+3.19%",
+        "trend": "up"
+      },
+      "children": []
+    }
+  }
+}

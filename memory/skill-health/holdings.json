@@ -1,10 +1,10 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-10-05T08:28:34Z",
-  "quality_score": 4,
-  "assessment": "Solid routine execution: fetched verified holdings data, computed period deltas with transparent methodology, created structured report with clear source attribution and status checks.",
+  "last_analyzed": "2026-10-12T08:19:17Z",
+  "quality_score": 3,
+  "assessment": "Holdings data reported with specific figures aligned to north-star metric, but output lacks source citations and explanatory context around movements.",
   "flags": [],
-  "avg_score": 3.92,
+  "avg_score": 3.86,
   "history": [
     {
       "date": "2026-07-30",
@@ -57,6 +57,12 @@
     {
       "date": "2026-10-05",
       "score": 4
+    },
+    {
+      "date": "2026-10-12",
+      "score": 3,
+      "ts": "2026-10-12T08:19:17Z",
+      "harness": "claude"
     }
   ]
 }
