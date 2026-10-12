@@ -1,0 +1,642 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "Repo Pulse",
+        "description": "2026-10-12 — [STEADY]"
+      },
+      "children": [
+        "main-stack"
+      ]
+    },
+    "main-stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "summary-table",
+        "sep1",
+        "aeon-section",
+        "sep2",
+        "soul-section",
+        "sep3",
+        "opendia-section",
+        "sep4",
+        "source-note"
+      ]
+    },
+    "summary-table": {
+      "type": "Table",
+      "props": {
+        "columns": [
+          "Repo",
+          "Stars",
+          "Forks",
+          "Rel",
+          "Verdict"
+        ],
+        "rows": [
+          [
+            "aeon",
+            "771 (+6)",
+            "280 (+3)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "soul.md",
+            "688 (+5)",
+            "75 (—)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "opendia",
+            "1927 (+1)",
+            "161 (-2)",
+            "—",
+            "STEADY"
+          ],
+          [
+            "minitor",
+            "17 (—)",
+            "4 (-1)",
+            "—",
+            "QUIET"
+          ]
+        ]
+      }
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {}
+    },
+    "aeon-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "aeon-heading",
+        "aeon-status",
+        "aeon-notable-header",
+        "aeon-sg1",
+        "aeon-sg2",
+        "aeon-sg3",
+        "aeon-other-header",
+        "aeon-other-list",
+        "aeon-forks-header",
+        "aeon-forks-list"
+      ]
+    },
+    "aeon-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/aeon",
+        "level": "h3"
+      }
+    },
+    "aeon-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 13.25)",
+        "variant": "lead"
+      }
+    },
+    "aeon-notable-header": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers (enriched 3 of 6):",
+        "variant": "muted"
+      }
+    },
+    "aeon-sg1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-sg1-link",
+        "aeon-sg1-details",
+        "aeon-sg1-website",
+        "aeon-sg1-bio"
+      ]
+    },
+    "aeon-sg1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/fabiomatricardi — Fabio Matricardi",
+        "href": "https://github.com/fabiomatricardi"
+      }
+    },
+    "aeon-sg1-details": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Novara, Italy · 🏢 @key-solution.eu · 211 repos · 88 followers",
+        "variant": "caption"
+      }
+    },
+    "aeon-sg1-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 medium.com/@fabio.matricardi",
+        "href": "https://medium.com/@fabio.matricardi"
+      }
+    },
+    "aeon-sg1-bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"thepoorgpuguy. Medium writer on Artificial Intelligence\"",
+        "variant": "caption"
+      }
+    },
+    "aeon-sg2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-sg2-link",
+        "aeon-sg2-details",
+        "aeon-sg2-website",
+        "aeon-sg2-bio"
+      ]
+    },
+    "aeon-sg2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/lourenzoavelar — Lourenço Avelar",
+        "href": "https://github.com/lourenzoavelar"
+      }
+    },
+    "aeon-sg2-details": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Brazil · 🏢 PSWEX · 22 repos",
+        "variant": "caption"
+      }
+    },
+    "aeon-sg2-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 pswex.com.br",
+        "href": "https://pswex.com.br"
+      }
+    },
+    "aeon-sg2-bio": {
+      "type": "Text",
+      "props": {
+        "text": "\"Computer Scientist\"",
+        "variant": "caption"
+      }
+    },
+    "aeon-sg3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-sg3-link",
+        "aeon-sg3-details"
+      ]
+    },
+    "aeon-sg3-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/carvalab",
+        "href": "https://github.com/carvalab"
+      }
+    },
+    "aeon-sg3-details": {
+      "type": "Text",
+      "props": {
+        "text": "50 repos · 26 followers",
+        "variant": "caption"
+      }
+    },
+    "aeon-other-header": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:",
+        "variant": "muted"
+      }
+    },
+    "aeon-other-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-other-1",
+        "aeon-other-2",
+        "aeon-other-3"
+      ]
+    },
+    "aeon-other-1": {
+      "type": "Link",
+      "props": {
+        "label": "Enor75",
+        "href": "https://github.com/Enor75"
+      }
+    },
+    "aeon-other-2": {
+      "type": "Link",
+      "props": {
+        "label": "c0ntractor",
+        "href": "https://github.com/c0ntractor"
+      }
+    },
+    "aeon-other-3": {
+      "type": "Link",
+      "props": {
+        "label": "bermespython",
+        "href": "https://github.com/bermespython"
+      }
+    },
+    "aeon-forks-header": {
+      "type": "Text",
+      "props": {
+        "text": "New forks:",
+        "variant": "muted"
+      }
+    },
+    "aeon-forks-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-1",
+        "aeon-fork-2",
+        "aeon-fork-3"
+      ]
+    },
+    "aeon-fork-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-1-link",
+        "aeon-fork-1-meta"
+      ]
+    },
+    "aeon-fork-1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/unifirer",
+        "href": "https://github.com/unifirer"
+      }
+    },
+    "aeon-fork-1-meta": {
+      "type": "Text",
+      "props": {
+        "text": "200 repos",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-2-link",
+        "aeon-fork-2-meta"
+      ]
+    },
+    "aeon-fork-2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/stevenclaus00",
+        "href": "https://github.com/stevenclaus00"
+      }
+    },
+    "aeon-fork-2-meta": {
+      "type": "Text",
+      "props": {
+        "text": "Steven Claus · 6 repos",
+        "variant": "caption"
+      }
+    },
+    "aeon-fork-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "aeon-fork-3-link",
+        "aeon-fork-3-meta"
+      ]
+    },
+    "aeon-fork-3-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/rikomuslimnur1001",
+        "href": "https://github.com/rikomuslimnur1001"
+      }
+    },
+    "aeon-fork-3-meta": {
+      "type": "Text",
+      "props": {
+        "text": "1 repo",
+        "variant": "caption"
+      }
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {}
+    },
+    "soul-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "soul-heading",
+        "soul-status",
+        "soul-notable-header",
+        "soul-sg1",
+        "soul-sg2",
+        "soul-other-header",
+        "soul-other-list"
+      ]
+    },
+    "soul-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/soul.md",
+        "level": "h3"
+      }
+    },
+    "soul-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 6.25)",
+        "variant": "lead"
+      }
+    },
+    "soul-notable-header": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers (enriched 2 of 5):",
+        "variant": "muted"
+      }
+    },
+    "soul-sg1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-sg1-link",
+        "soul-sg1-details",
+        "soul-sg1-website",
+        "soul-sg1-social"
+      ]
+    },
+    "soul-sg1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/croogie — Michał Świtoń",
+        "href": "https://github.com/croogie"
+      }
+    },
+    "soul-sg1-details": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Poznań, Poland · 🏢 2Exist Michał Świtoń · 27 repos · 40 followers",
+        "variant": "caption"
+      }
+    },
+    "soul-sg1-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 michal.switon.pl",
+        "href": "https://michal.switon.pl"
+      }
+    },
+    "soul-sg1-social": {
+      "type": "Link",
+      "props": {
+        "label": "🐦 @croogie",
+        "href": "https://x.com/croogie"
+      }
+    },
+    "soul-sg2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-sg2-link",
+        "soul-sg2-details"
+      ]
+    },
+    "soul-sg2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/naufalilyasa — Naufal Ilyasa",
+        "href": "https://github.com/naufalilyasa"
+      }
+    },
+    "soul-sg2-details": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Jakarta · 23 repos",
+        "variant": "caption"
+      }
+    },
+    "soul-other-header": {
+      "type": "Text",
+      "props": {
+        "text": "Other new stargazers:",
+        "variant": "muted"
+      }
+    },
+    "soul-other-list": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "soul-other-1",
+        "soul-other-2",
+        "soul-other-3"
+      ]
+    },
+    "soul-other-1": {
+      "type": "Link",
+      "props": {
+        "label": "Clawtan",
+        "href": "https://github.com/Clawtan"
+      }
+    },
+    "soul-other-2": {
+      "type": "Link",
+      "props": {
+        "label": "ryanpratamah28",
+        "href": "https://github.com/ryanpratamah28"
+      }
+    },
+    "soul-other-3": {
+      "type": "Link",
+      "props": {
+        "label": "privateca",
+        "href": "https://github.com/privateca"
+      }
+    },
+    "sep3": {
+      "type": "Separator",
+      "props": {}
+    },
+    "opendia-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "opendia-heading",
+        "opendia-status",
+        "opendia-notable-header",
+        "opendia-sg1",
+        "opendia-sg2",
+        "opendia-sg3"
+      ]
+    },
+    "opendia-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "aeonfun/opendia",
+        "level": "h3"
+      }
+    },
+    "opendia-status": {
+      "type": "Text",
+      "props": {
+        "text": "STEADY (avg4w ≈ 3.25)",
+        "variant": "lead"
+      }
+    },
+    "opendia-notable-header": {
+      "type": "Text",
+      "props": {
+        "text": "Notable new stargazers (enriched 3 of 3):",
+        "variant": "muted"
+      }
+    },
+    "opendia-sg1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-sg1-link",
+        "opendia-sg1-details",
+        "opendia-sg1-website"
+      ]
+    },
+    "opendia-sg1-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/ManzoliW — William Manzoli",
+        "href": "https://github.com/ManzoliW"
+      }
+    },
+    "opendia-sg1-details": {
+      "type": "Text",
+      "props": {
+        "text": "📍 Brasil, São Paulo - SP · 6 repos · 169 followers",
+        "variant": "caption"
+      }
+    },
+    "opendia-sg1-website": {
+      "type": "Link",
+      "props": {
+        "label": "🌐 manzoli.dev",
+        "href": "https://manzoli.dev"
+      }
+    },
+    "opendia-sg2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-sg2-link",
+        "opendia-sg2-details"
+      ]
+    },
+    "opendia-sg2-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/mohammadbaghaei — MOHAMMAD BAGHAEI",
+        "href": "https://github.com/mohammadbaghaei"
+      }
+    },
+    "opendia-sg2-details": {
+      "type": "Text",
+      "props": {
+        "text": "20 repos · 42 followers",
+        "variant": "caption"
+      }
+    },
+    "opendia-sg3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "opendia-sg3-link",
+        "opendia-sg3-details"
+      ]
+    },
+    "opendia-sg3-link": {
+      "type": "Link",
+      "props": {
+        "label": "github.com/heldaysousa",
+        "href": "https://github.com/heldaysousa"
+      }
+    },
+    "opendia-sg3-details": {
+      "type": "Text",
+      "props": {
+        "text": "📍 brasil · 45 repos",
+        "variant": "caption"
+      }
+    },
+    "sep4": {
+      "type": "Separator",
+      "props": {}
+    },
+    "source-note": {
+      "type": "Alert",
+      "props": {
+        "type": "info",
+        "message": "Source: events · minitor QUIET (no activity)"
+      }
+    }
+  }
+}

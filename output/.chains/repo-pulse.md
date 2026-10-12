@@ -1,52 +1,39 @@
 ℹ️ Repo Pulse
 
-*Repo Pulse — 2026-10-05* — [STEADY]
+*Repo Pulse — 2026-10-12* — [STEADY]
 
 | Repo | Stars | Forks | Rel | Verdict |
 |---|---|---|---|---|
-| aeon | 765 (+8) | 277 (+6) | — | STEADY |
-| opendia | 1926 (+4) | 163 (+2) | +1 | STEADY |
-| soul.md | 683 (+2) | 75 (—) | — | STEADY |
-| minitor | 17 (—) | 5 (—) | — | QUIET |
+| aeon | 771 (+6) | 280 (+3) | — | STEADY |
+| soul.md | 688 (+5) | 75 (—) | — | STEADY |
+| opendia | 1927 (+1) | 161 (-2) | — | STEADY |
+| minitor | 17 (—) | 4 (-1) | — | QUIET |
 
-**aeonfun/aeon** — STEADY (avg4w ≈ 14.0)
-⚠ Window truncated: the /events feed only reached back to 2026-10-01T07:21Z this run (cutoff was 2026-09-28T10:22Z) — aeon's volume fills the 300-event cap before 7 days. Counts below are a floor for 2026-10-01→10-05, missing ~3 days.
-New forks:
-github.com/djh4ck3r — A4r0n$t0n3 · 3 repos · 🌐 https://ubiquitous-alpaca-247db6.netlify.app
-github.com/normancomics — normancomics.eth · 📍 East-Coast🇺🇸 · 🏢 BibleFi · 62 repos · 🌐 https://app.icebreaker.xyz/profiles/fTu9Z9w4XNzzURf8lfaS6 · 🐦 @KEKBONDS · 131 followers
-  "Cartoonist of the comic-strip, NORMAN® • Author—"iatrogenic" • Founder/Lead Engineer @BibleFi • Anti-Pop-Culture Style Consultant • Esoter…"
-github.com/Domimueller85 — Dominik · 📍 de · 387 repos · 🐦 @Dominik_mu5237 (also starred aeon)
-  "Ich bin Koch und Dichter ,einer der besseren Richter, wer nicht wagt der nicht gewinnt, nun bläst eine spezieller wind den ich selbst noch f…"
-github.com/Blockchains — Blockchain Lab · 📍 London · 🏢 Blockchain Lab · 588 repos · 🌐 BlockchainLab.com · 🐦 @BlockchainLab · 125 followers
-  "The Worlds First Blockchain Lab; Venture Studio with deep expertise in Digital Assets, Tokenization & Stablecoins"
-github.com/nkipa — Paul Dawidowicz · 📍 Chile · 🏢 NKIPA, LLC. · 223 repos
-  "Consultant, Data Scientist, Engineer and Entrepreneur"
+**aeonfun/aeon** — STEADY (avg4w ≈ 13.25)
+Notable new stargazers (enriched 3 of 6):
+github.com/fabiomatricardi — Fabio Matricardi · 📍 Novara, Italy · 🏢 @key-solution.eu · 211 repos · 🌐 medium.com/@fabio.matricardi · 88 followers
+  "thepoorgpuguy. Medium writer on Artificial Intelligence"
+github.com/lourenzoavelar — Lourenço Avelar · 📍 Brazil · 🏢 PSWEX · 22 repos · 🌐 pswex.com.br
+  "Computer Scientist"
+github.com/carvalab — 50 repos · 26 followers
 Other new stargazers:
-AndresPuglia98 | Bentley7988 | Cacrowley01 | Ninoweer | alexiss31 | bravoxcapitan | eterru
+github.com/Enor75 | github.com/c0ntractor | github.com/bermespython
+New forks:
+github.com/unifirer — 200 repos
+github.com/stevenclaus00 — Steven Claus · 6 repos
+github.com/rikomuslimnur1001 — 1 repos
 
-**aeonfun/opendia** — STEADY (avg4w ≈ 3.75)
-Notable new stargazers (enriched 5 of 5):
-github.com/jarjut — Ahmad Fajrul Falah · 📍 Surabaya, Indonesia · 42 repos · 🌐 https://jarjut.dev/ · 16 followers
-github.com/n1106836-collab — 99 repos
-  "I am passionate about technology, particularly the .NET framework. As a Backend Developer and student at the esteemed National Taipei Univer…"
-github.com/termaulmaul — Maulana Rafi · 📍 Jakarta · 🏢 Mandiri Sekuritas · 95 repos · 15 followers
+**aeonfun/soul.md** — STEADY (avg4w ≈ 6.25)
+Notable new stargazers (enriched 2 of 5):
+github.com/croogie — Michał Świtoń · 📍 Poznań, Poland · 🏢 2Exist Michał Świtoń · 27 repos · 🌐 michal.switon.pl · 🐦 @croogie · 40 followers
+github.com/naufalilyasa — Naufal Ilyasa · 📍 Jakarta · 23 repos
 Other new stargazers:
-alekseizadubnenko-art | robertoatila
-New forks:
-github.com/adeyholar — 12721 repos
-New releases:
-v1.1.4
+github.com/Clawtan | github.com/ryanpratamah28 | github.com/privateca
 
-**aeonfun/soul.md** — STEADY (avg4w ≈ 7.25)
-Notable new stargazers (enriched 4 of 4):
-github.com/Colinchiu007 — ColinChiu · 43 repos
-github.com/alifndaru — alif ndaru kusuma · 📍 Jakarta · 36 repos · 12 followers
-  "hello my name alif"
-github.com/khairi-u28 — Khairi Ubaidah · 📍 Jakarta, Indonesia · 🏢 Japan Dream Tour Co., Ltd. · 28 repos · 🌐 khairiu.site · 🐦 @khairiu28 · 15 followers
-  "Web Developer & Web Designer"
-Other new stargazers:
-emkaters
-New forks:
-github.com/Towa-1 — Emmanuel Kofi Ntow Gyamfi · 23 repos
+**aeonfun/opendia** — STEADY (avg4w ≈ 3.25)
+Notable new stargazers (enriched 3 of 3):
+github.com/ManzoliW — William Manzoli · 📍 Brasil, São Paulo - SP · 6 repos · 🌐 manzoli.dev · 169 followers
+github.com/mohammadbaghaei — MOHAMMAD BAGHAEI · 20 repos · 42 followers
+github.com/heldaysousa — 📍 brasil · 45 repos
 
 Source: events · minitor QUIET (no activity)
