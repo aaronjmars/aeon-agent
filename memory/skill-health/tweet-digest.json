@@ -1,18 +1,13 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-10-11T17:04:17Z",
+  "last_analyzed": "2026-10-12T17:03:24Z",
   "quality_score": 2,
-  "assessment": "Ran but asserts unverifiable URLs; digest too thin (one tweet, no analysis) and lacks evidence of real data fetch",
+  "assessment": "Well-formatted but asserts specific tweet IDs and content that cannot be verified as real without source confirmation",
   "flags": [
-    "unverifiable_claim",
-    "low_quality"
+    "unverifiable_claim"
   ],
-  "avg_score": 3.5,
+  "avg_score": 3.43,
   "history": [
-    {
-      "date": "2026-09-09",
-      "score": 4
-    },
     {
       "date": "2026-09-10",
       "score": 4
@@ -135,6 +130,12 @@
       "date": "2026-10-11",
       "score": 2,
       "ts": "2026-10-11T17:04:17Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-12",
+      "score": 2,
+      "ts": "2026-10-12T17:03:24Z",
       "harness": "claude"
     }
   ]

@@ -1,0 +1,71 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-10-12"
+      },
+      "children": [
+        "theme1_heading",
+        "theme1_tweet",
+        "theme1_link",
+        "separator",
+        "theme2_heading",
+        "theme2_tweet",
+        "theme2_link"
+      ]
+    },
+    "theme1_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: New Hooks",
+        "level": "h3"
+      }
+    },
+    "theme1_tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "new hook \"TeamWar\" splits traders red vs blue — every trade feeds your team's pot at 0.25%, and the losing team's pot gets taken by the winners too, so your exit liquidity is the other team"
+      }
+    },
+    "theme1_link": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2109660367789961334"
+      }
+    },
+    "separator": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme2_heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Comparisons",
+        "level": "h3"
+      }
+    },
+    "theme2_tweet": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "posted a side-by-side graphic comparing aeon agents to openai's \"dots\""
+      }
+    },
+    "theme2_link": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2109579398563176932"
+      }
+    }
+  }
+}
