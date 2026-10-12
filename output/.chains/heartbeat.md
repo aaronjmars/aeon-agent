@@ -1,23 +1,21 @@
-## HEARTBEAT_OK · STATUS_PAGE=DEGRADED
+The ambient check is complete — fleet is green, nothing needs a notification. Here's the substance of the run:
 
-Ambient fleet check for 2026-10-11 19:02 UTC.
+## Heartbeat — ambient check, 2026-10-12 19:03 UTC
 
-**P0 — Failed & stuck skills:** 🔴 one unchanged item — `aeon-update`'s cron-state has shown `last_status: dispatched` since **2026-10-05T11:01:23Z**, now **6+ days stale**, with no completion write landing since (confirmed as a lost state-write, not a hang — its PR [#246](https://github.com/aaronjmars/aeon-agent/pull/246) merged cleanly 10-05). Next scheduled dispatch isn't until Monday 2026-10-12 11:00 UTC. `token-report` (06:08 UTC), `tweet-digest` (17:04 UTC), and `memory-flush` (18:06 UTC) all ran clean today; `changelog` is weekly, no new run due until Monday.
+**P0 — CLEAR.** The `aeon-update` stuck-dispatch state that had been open since 2026-10-05 (and kept the status page red through 10-08→10-11) has cleared: cron-state now shows `last_status: success`, dispatched 11:02 UTC and completed 11:20 UTC, syncing `aeonfun/aeon` into [PR #259](https://github.com/aaronjmars/aeon-agent/pull/259). All 9 enabled skills are `last_status: success`, 0 consecutive failures fleet-wide. Heartbeat self-check clear (~24h since last success).
 
-**P1 — Stalled PRs & urgent issues:** CLEAR — `gh pr list --state open` = 0, `gh issue list --state open` shows no `urgent`-labeled issues.
+**P1 — CLEAR.** 0 open PRs, 0 issues labeled `urgent`.
 
-**P2 — Flagged memory items:** no new flags — working-tree anomaly (`AGENTS.md` deleted-on-disk, `notify`/`notify-jsonrender`/`secretcurl` untracked, 54+ days), scratch-file git hygiene, secured-watch's empty `note` field, and the health-issue auto-close gap are all unchanged, already deduped within the last 48h.
+**P2 — mostly unchanged, one new item.** The usual carried flags (working-tree anomaly, scratch-file git hygiene, secured-watch note-field gap) are all deduped. New: GitHub health issue [#258](https://github.com/aaronjmars/aeon-agent/issues/258) (`health: changelog`) filed today — quality score 2, flagged `unverifiable_claim`. This traces to changelog's own disclosure that it couldn't run `npm ci`/`tsc`/build (sandboxed, no node_modules) and only verified via `biome format:check` — a known, already-documented gap (apps/** has no build/type-check CI gate), not a fresh regression. Health issues are now 6 open (#230, #231, #234, #247, #248, #258), still none auto-closed on recovery.
 
-**P3 — Missing scheduled skills:** fleet composition unchanged — 9 enabled skills (`token-report`, `holdings`, `repo-pulse`, `tweet-digest`, `changelog`, `aeon-update`, `shiplog`, `memory-flush`, `heartbeat`), `secured-watch` still disabled. No skill is stale beyond 2× its schedule interval.
+**P3 — CLEAR.** Fleet composition unchanged (9 enabled, `secured-watch` still off), nothing stale vs. schedule.
 
-**GitHub health issues:** still 5 open — [#230](https://github.com/aaronjmars/aeon-agent/issues/230) token-report, [#231](https://github.com/aaronjmars/aeon-agent/issues/231) secured-watch, [#234](https://github.com/aaronjmars/aeon-agent/issues/234) tweet-digest, [#247](https://github.com/aaronjmars/aeon-agent/issues/247) aeon-update, [#248](https://github.com/aaronjmars/aeon-agent/issues/248) heartbeat — all recovered on cron-state but none auto-closed.
+**Status page:** flipped 🔴 DEGRADED → 🟡 WATCH (fleet green, but 6 health threads + 3 cosmetic flags keep it off 🟢). Token pulse refreshed: AEON $0.00001862, -4.9% 24h, CONSOLIDATING verdict.
 
-**Notification:** skipped — the only live flag (aeon-update stuck) was already reported within the last 48h (10-10 entry); nothing else rises to new signal, so no `./notify` send per the "notify only on signal" rule.
-
-**Status page:** `docs/status.md` regenerated — overall stays 🔴 DEGRADED (same single root cause), token pulse refreshed from today's `token-report-2026-10-11.md` (price $0.00001957, 24h −5.0%, liquidity $393.6K, volume $16.8K, FDV $2.0M, verdict CONSOLIDATING), skill table re-sorted by last-run timestamp.
+**Notification:** skipped — aeon-update's recovery is good news rather than an alert, and the new health issue reflects an already-known limitation, not actionable new signal.
 
 ## Summary
-- Read `memory/MEMORY.md`, last 4 days of `memory/logs/`, `memory/cron-state.json`, `aeon.yml`, `memory/issues/INDEX.md`, latest token-report; cross-checked with `gh pr list`/`gh issue list`/`gh pr view 246`.
-- Modified: `docs/status.md` (regenerated), `memory/logs/2026-10-11.md` (appended `### heartbeat` entry, mode: ambient).
-- No notification sent — only live flag (aeon-update stuck dispatch) already reported within 48h.
-- Follow-up still open (unowned by heartbeat): skill-repair pass on aeon-update's final-state-write reliability; health-issue auto-close on recovery; scratch-file git hygiene cleanup; working-tree anomaly resolution.
+- Updated `docs/status.md` (verdict DEGRADED→WATCH, refreshed skill table, token pulse, issue list).
+- Appended `### heartbeat` entry to `memory/logs/2026-10-12.md`.
+- No notification sent (nothing met the bar).
+- Follow-up still outstanding (unchanged from MEMORY.md Next Priorities): health-issue auto-close gap (now 6 issues), scratch-file git hygiene, working-tree anomaly (`AGENTS.md`/`notify`/`notify-jsonrender`/`secretcurl`).
