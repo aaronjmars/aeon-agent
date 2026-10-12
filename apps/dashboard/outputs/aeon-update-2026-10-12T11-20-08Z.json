@@ -1,0 +1,204 @@
+{
+  "root": "card-root",
+  "state": {},
+  "elements": {
+    "card-root": {
+      "type": "Card",
+      "props": {
+        "title": "aeon-update",
+        "description": "27 commits synced → PR #259"
+      },
+      "children": [
+        "header-info",
+        "separator-1",
+        "upstream-sync",
+        "stats-container",
+        "separator-2",
+        "changes-section",
+        "separator-3",
+        "manual-merge-alert",
+        "separator-4",
+        "gates-section",
+        "separator-5",
+        "pr-link"
+      ]
+    },
+    "header-info": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "badge-status",
+        "text-date"
+      ]
+    },
+    "badge-status": {
+      "type": "Badge",
+      "props": {
+        "text": "aeon-update ⭐",
+        "variant": "default"
+      }
+    },
+    "text-date": {
+      "type": "Text",
+      "props": {
+        "text": "2026-10-12",
+        "variant": "caption"
+      }
+    },
+    "separator-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "upstream-sync": {
+      "type": "Text",
+      "props": {
+        "text": "Upstream aeonfun/aeon is 27 commits ahead (1a7f07e..df013db, 10-05→10-10)",
+        "variant": "lead"
+      }
+    },
+    "stats-container": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "md"
+      },
+      "children": [
+        "stat-clean",
+        "stat-merge"
+      ]
+    },
+    "stat-clean": {
+      "type": "Stat",
+      "props": {
+        "label": "Files applied clean",
+        "value": "184"
+      }
+    },
+    "stat-merge": {
+      "type": "Stat",
+      "props": {
+        "label": "Need manual merge",
+        "value": "5"
+      }
+    },
+    "separator-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "changes-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-changes",
+        "text-mcp",
+        "text-ci",
+        "text-cleanup"
+      ]
+    },
+    "heading-changes": {
+      "type": "Heading",
+      "props": {
+        "text": "What's included",
+        "level": "h3"
+      }
+    },
+    "text-mcp": {
+      "type": "Text",
+      "props": {
+        "text": "Hosted MCP server — drive your agent from ChatGPT/Claude/Cursor at www.aeon.fun/connect/mcp",
+        "variant": "body"
+      }
+    },
+    "text-ci": {
+      "type": "Text",
+      "props": {
+        "text": "Haiku 5.5 tier move, CI hardening (apt-hang fix, harness-adapter snapshot, npm-cache restore-keys drop), Biome formatter, plugin-manifest cleanup",
+        "variant": "body"
+      }
+    },
+    "text-cleanup": {
+      "type": "Text",
+      "props": {
+        "text": "3 files 3-way auto-merged, 2 retired, catalogs + eyebrowlock reconciled",
+        "variant": "body"
+      }
+    },
+    "separator-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "manual-merge-alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Manual merges required",
+        "message": ".github/workflows/aeon.yml — ships apt-hang guard + harness-snapshot run-loop fixes, overlaps your local workflow edits. Also: .github/README.md, CHANGELOG.md, llms.txt, docs/examples/README.md — all your instance narrative sitting on the same lines upstream added hosted-MCP pointers.",
+        "type": "warning"
+      }
+    },
+    "separator-4": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "gates-section": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "heading-gates",
+        "text-gates",
+        "text-baseline"
+      ]
+    },
+    "heading-gates": {
+      "type": "Heading",
+      "props": {
+        "text": "Validation gates",
+        "level": "h3"
+      }
+    },
+    "text-gates": {
+      "type": "Text",
+      "props": {
+        "text": "All gates green locally: eyebrow verify --ci (rc0), validate-config, validate-skill-packs, categories, parity, skill-sync",
+        "variant": "body"
+      }
+    },
+    "text-baseline": {
+      "type": "Text",
+      "props": {
+        "text": "Baseline moves to df013db on merge",
+        "variant": "caption"
+      }
+    },
+    "separator-5": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "pr-link": {
+      "type": "StoryLink",
+      "props": {
+        "title": "View PR #259",
+        "href": "https://github.com/aaronjmars/aeon-agent/pull/259",
+        "source": "GitHub"
+      }
+    }
+  }
+}

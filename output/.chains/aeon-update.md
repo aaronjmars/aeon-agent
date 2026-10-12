@@ -1,17 +1,16 @@
-✅ aeon-update: PR #232
+ℹ️ aeon-update: 27 commits → PR #259
 
-⭐ **aeon-update — synced 13 upstream commits → PR #232**
+*aeon-update ⭐ 2026-10-12*
+synced 27 upstream commits → PR #259
 
-upstream `aeonfun/aeon` is 13 commits ahead (ba01e9f..531f575). 40 files applied clean, 8 need a manual merge.
+upstream `aeonfun/aeon` is 27 ahead (`1a7f07e..df013db`, 10-05→10-10). 184 files applied clean, 5 need a hand-merge.
 
-headline: HivemindOS credit-token gateway (#1079/#1080) — 3-way merged into `llm-gateway.sh` + `aeon.yml`, your narrowing kept. hunter-22 expired-match gate + pack-submit also in.
+mostly the **hosted MCP server** (drive your agent from ChatGPT/Claude/Cursor at www.aeon.fun/connect/mcp), the **Haiku 5.5** tier move, CI hardening (apt-hang fix, harness-adapter snapshot, npm-cache restore-keys drop), a Biome formatter, and plugin-manifest cleanup. 3 files 3-way auto-merged, 2 retired, catalogs + eyebrowlock reconciled.
 
-deferred: new `arc-studio` skill (#1082) — a fresh skill needs the catalog + eyebrow generators, both blocked in the headless runner. carried alongside 5 older new skills. the aeon.yml arc-studio CLI step is already merged (inert till you install it).
+manual (not written): `.github/workflows/aeon.yml` is the one worth pulling in by hand — it ships the apt-hang guard + harness-snapshot run-loop fixes, but overlaps your local workflow edits. also `.github/README.md`, `CHANGELOG.md`, `llms.txt`, `docs/examples/README.md` — all your instance narrative sitting on the same lines upstream added hosted-MCP pointers.
 
-manual: `apps/dashboard/package.json`+lock (coupled dep bump), `ci-tests.yml` (new test steps unwired), README / CHANGELOG / skill-packs / llms.txt doc overlaps.
+all gates green locally: eyebrow verify --ci (rc0), validate-config, validate-skill-packs, categories, parity, skill-sync. baseline moves to `df013db` on merge.
 
-baseline advances to `531f575` when you merge.
+PR: https://github.com/aaronjmars/aeon-agent/pull/259
 
-PR: https://github.com/aaronjmars/aeon-agent/pull/232
-
-🔗 https://github.com/aaronjmars/aeon-agent/pull/232
+🔗 https://github.com/aaronjmars/aeon-agent/pull/259
