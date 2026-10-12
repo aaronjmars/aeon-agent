@@ -1128,10 +1128,10 @@
       "files": [
         {
           "path": "SKILL.md",
-          "hash": "817deb2f4a3163ff9897a3f30a885045cd740b8e8de554b6f0833f2e1f7f6144"
+          "hash": "312b970cc90482bf28c26bad47115cbfbc8c7d6b3ef147beae8f3bfe7a306983"
         }
       ],
-      "contentHash": "sha256-483be02a32970c9cd98ba3fa6bc7722050f738e8da50077e8d0bcb38b1f3e2be",
+      "contentHash": "sha256-9238cf6904874deb3a6c2b2e25ffaaadac5db1f54f02881b16d3ff4d729f251c",
       "discoveredFrom": "skills/create-skill/SKILL.md"
     },
     {
