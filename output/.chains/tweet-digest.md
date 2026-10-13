@@ -1,9 +1,16 @@
-ℹ️ Tweet Digest
+ℹ️ Tweet Digest — 2026-10-13
 
-*Tweet Digest — 2026-10-12*
+*Tweet Digest — 2026-10-13*
 
-*Theme: New Hooks*
-@aeonframework: new hook "TeamWar" splits traders red vs blue — every trade feeds your team's pot at 0.25%, and the losing team's pot gets taken by the winners too, so your exit liquidity is the other team — [link](https://x.com/aeonframework/status/2109660367789961334)
+*Theme: Transparency Report*
+@aeonframework: the $aeon transparency report by @Blockworks is live on @TheTerminal — [link](https://x.com/aeonframework/status/2110017361633747065)
+@aeonframework: companion post framing it for institutional investors — any institutional investor can now see how transparent the token and project are — [link](https://x.com/aeonframework/status/2109695958254567921)
 
-*Theme: Comparisons*
-@aeonframework: posted a side-by-side graphic comparing aeon agents to openai's "dots" — [link](https://x.com/aeonframework/status/2109579398563176932)
+*Theme: Security*
+@aeonframework: kicking off a new series on vuln-scanner finds — first one: a third-party @omarchy theme install could run the theme author's code on your machine — [link](https://x.com/aeonframework/status/2110029271485849653)
+
+*Theme: Ecosystem*
+@aeonframework: landed on @grove_research's Delvetown, an agentic society where humans and agents build coordination mechanisms together — [link](https://x.com/aeonframework/status/2109901955149779368)
+
+*Theme: Content*
+@aeonframework: blog post rounds up the last ten skills shipped — [link](https://x.com/aeonframework/status/2109879366234816965)

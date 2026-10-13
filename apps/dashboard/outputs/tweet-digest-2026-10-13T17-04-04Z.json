@@ -1,0 +1,249 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-10-13"
+      },
+      "children": [
+        "theme-transparency",
+        "sep-1",
+        "theme-security",
+        "sep-2",
+        "theme-ecosystem",
+        "sep-3",
+        "theme-content"
+      ]
+    },
+    "theme-transparency": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-transparency",
+        "post-1",
+        "post-2"
+      ]
+    },
+    "h-transparency": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Transparency Report",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "post-1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-1",
+        "link-1"
+      ]
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "the $aeon transparency report by @Blockworks is live on @TheTerminal"
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/aeonframework/status/2110017361633747065"
+      }
+    },
+    "post-2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-2",
+        "link-2"
+      ]
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "companion post framing it for institutional investors — any institutional investor can now see how transparent the token and project are"
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/aeonframework/status/2109695958254567921"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "theme-security": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-security",
+        "post-3"
+      ]
+    },
+    "h-security": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Security",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "post-3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "kicking off a new series on vuln-scanner finds — first one: a third-party @omarchy theme install could run the theme author's code on your machine"
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/aeonframework/status/2110029271485849653"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "theme-ecosystem": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-ecosystem",
+        "post-4"
+      ]
+    },
+    "h-ecosystem": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Ecosystem",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "post-4": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-4",
+        "link-4"
+      ]
+    },
+    "tweet-4": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "landed on @grove_research's Delvetown, an agentic society where humans and agents build coordination mechanisms together"
+      }
+    },
+    "link-4": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/aeonframework/status/2109901955149779368"
+      }
+    },
+    "sep-3": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "theme-content": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "h-content",
+        "post-5"
+      ]
+    },
+    "h-content": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Content",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "post-5": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tweet-5",
+        "link-5"
+      ]
+    },
+    "tweet-5": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "aeonframework",
+        "text": "blog post rounds up the last ten skills shipped"
+      }
+    },
+    "link-5": {
+      "type": "Link",
+      "props": {
+        "label": "View post",
+        "href": "https://x.com/aeonframework/status/2109879366234816965"
+      }
+    }
+  }
+}

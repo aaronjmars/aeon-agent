@@ -1,17 +1,11 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-10-12T17:03:24Z",
-  "quality_score": 2,
-  "assessment": "Well-formatted but asserts specific tweet IDs and content that cannot be verified as real without source confirmation",
-  "flags": [
-    "unverifiable_claim"
-  ],
-  "avg_score": 3.43,
+  "last_analyzed": "2026-10-13T17:04:04Z",
+  "quality_score": 3,
+  "assessment": "Well-structured digest tracking recent shipped work across transparency, security, ecosystem, and content themes; substantive and on-brand, but lacks source documentation",
+  "flags": [],
+  "avg_score": 3.4,
   "history": [
-    {
-      "date": "2026-09-10",
-      "score": 4
-    },
     {
       "date": "2026-09-11",
       "score": 4
@@ -136,6 +130,12 @@
       "date": "2026-10-12",
       "score": 2,
       "ts": "2026-10-12T17:03:24Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-13",
+      "score": 3,
+      "ts": "2026-10-13T17:04:04Z",
       "harness": "claude"
     }
   ]
