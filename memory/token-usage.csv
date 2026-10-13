@@ -606,3 +606,4 @@ date,skill,model,input_tokens,output_tokens,cache_read,cache_creation
 2026-10-12,aeon-update,claude-opus-4-8,192,68857,9499285,147097
 2026-10-12,tweet-digest,claude-sonnet-5,34,5925,933804,43758
 2026-10-12,heartbeat,claude-sonnet-5,60,19874,2272060,84596
+2026-10-13,token-report,claude-sonnet-5,110,22814,3892491,70889

@@ -2,11 +2,9 @@
 
 *$AEON — CONSOLIDATING*
 
-Price −4.9% 24h but on just 0.7× average volume — too thin to call a trend; buy/sell count actually skewed bullish (2.24 vs yest 1.05) while whale sells drove the dip.
+Price −7.1% on just 0.9× the 7d avg volume — too thin to confirm a trend.
 
-Price $0.00001862 (−4.9% 24h) | Liq $400.9K (+1.8%) | Vol $59.9K (0.7× 7d)
-Buys/Sells 159/71 (ratio 2.24) | Whales: 11
+Price $0.00001730 (−7.1% 24h) | Liq $396.2K (−1.2%) | Vol $46.6K (0.9× 7d)
+Buys/Sells 151/80 (ratio 1.89) | Whales: 4
 
 Chart: https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
-
-🔗 https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4
