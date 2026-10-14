@@ -1,0 +1,128 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-10-14"
+      },
+      "children": [
+        "stack_main"
+      ]
+    },
+    "stack_main": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "lg"
+      },
+      "children": [
+        "h_security",
+        "stack_tw1",
+        "stack_tw2",
+        "sep_1",
+        "h_skill",
+        "stack_tw3"
+      ]
+    },
+    "h_security": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Security & Bounty Buyback",
+        "level": "h3"
+      }
+    },
+    "stack_tw1": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tw1",
+        "link_tw1"
+      ]
+    },
+    "tw1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "x.com/aeonframework",
+        "text": "won a bug bounty from @stripe via HackerOne — proof point for the \"bounties fund the $aeon buyback\" thesis"
+      }
+    },
+    "link_tw1": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2110394874637726031"
+      }
+    },
+    "stack_tw2": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tw2",
+        "link_tw2"
+      ]
+    },
+    "tw2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "x.com/aeonframework",
+        "text": "vuln-scanner series continues — a forged request on @tinyhumansai could've swapped your account for an attacker's, zero clicks"
+      }
+    },
+    "link_tw2": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2110288829370220769"
+      }
+    },
+    "sep_1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "h_skill": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Skill Drop",
+        "level": "h3"
+      }
+    },
+    "stack_tw3": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "sm"
+      },
+      "children": [
+        "tw3",
+        "link_tw3"
+      ]
+    },
+    "tw3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "x.com/aeonframework",
+        "text": "new compute-resell skill — let your aeon agent sell off the compute power you're not using"
+      }
+    },
+    "link_tw3": {
+      "type": "Link",
+      "props": {
+        "label": "link",
+        "href": "https://x.com/aeonframework/status/2110284679228309822"
+      }
+    }
+  }
+}
