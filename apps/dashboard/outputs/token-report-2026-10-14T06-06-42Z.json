@@ -1,0 +1,157 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "AEON Token Report"
+      },
+      "children": [
+        "status",
+        "summary",
+        "sep1",
+        "market_grid",
+        "flow_grid",
+        "whale_grid",
+        "sep2",
+        "chart_link"
+      ]
+    },
+    "status": {
+      "type": "Heading",
+      "props": {
+        "text": "$AEON — CONSOLIDATING",
+        "level": "h2"
+      },
+      "children": []
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "Price down 11.4% without the 2×+ volume surge a real breakdown needs; whale flow stayed sell-heavy ($43.1K sells vs $12.8K buys).",
+        "variant": "lead"
+      },
+      "children": []
+    },
+    "sep1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "market_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "price",
+        "liq",
+        "vol"
+      ]
+    },
+    "price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001533",
+        "delta": "-11.4% (24h)",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liq",
+        "value": "$392.8K",
+        "delta": "-0.9%",
+        "trend": "down"
+      },
+      "children": []
+    },
+    "vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol",
+        "value": "$90.1K",
+        "delta": "1.6× 7d",
+        "trend": "up"
+      },
+      "children": []
+    },
+    "flow_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "buysells",
+        "whales"
+      ]
+    },
+    "buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "167/71",
+        "delta": "ratio 2.35"
+      },
+      "children": []
+    },
+    "whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "21"
+      },
+      "children": []
+    },
+    "whale_grid": {
+      "type": "Grid",
+      "props": {
+        "columns": 2,
+        "gap": "md"
+      },
+      "children": [
+        "whale_sells",
+        "whale_buys"
+      ]
+    },
+    "whale_sells": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale sells",
+        "value": "$43.1K"
+      },
+      "children": []
+    },
+    "whale_buys": {
+      "type": "Stat",
+      "props": {
+        "label": "Whale buys",
+        "value": "$12.8K"
+      },
+      "children": []
+    },
+    "sep2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "chart_link": {
+      "type": "Link",
+      "props": {
+        "label": "Chart (GeckoTerminal, Base pool)",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      },
+      "children": []
+    }
+  }
+}

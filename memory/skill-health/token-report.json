@@ -1,15 +1,13 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-10-13T06:10:17Z",
-  "quality_score": 4,
-  "assessment": "Substantive market report tracking $AEON price (north-star metric); specific data with verification link and cautious analysis; well-aligned to operator strategy.",
-  "flags": [],
-  "avg_score": 3.97,
+  "last_analyzed": "2026-10-14T06:06:42Z",
+  "quality_score": 2,
+  "assessment": "Well-formatted report but violates strategy constraint: publishes unverifiable specific financial figures ($0.00001533, $392.8K, etc.) when strategy explicitly prohibits publishing unverified numbers.",
+  "flags": [
+    "unverifiable_claim"
+  ],
+  "avg_score": 3.9,
   "history": [
-    {
-      "date": "2026-09-13",
-      "score": 4
-    },
     {
       "date": "2026-09-14",
       "score": 4
@@ -138,6 +136,12 @@
       "date": "2026-10-13",
       "score": 4,
       "ts": "2026-10-13T06:10:17Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-14",
+      "score": 2,
+      "ts": "2026-10-14T06:06:42Z",
       "harness": "claude"
     }
   ]
