@@ -1,4 +1,4 @@
 *Holdings — aeon*
 
-14.93B · 14.93% of supply
-7d +169.64M (+1.15%) · 30d +462.18M (+3.19%)
+15.01B · 15.01% of supply
+Since last (3d) +76.41M (+0.51%) · 7d building · 30d +538.58M (+3.72%)

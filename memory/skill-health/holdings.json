@@ -1,10 +1,13 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-10-12T08:19:17Z",
-  "quality_score": 3,
-  "assessment": "Holdings data reported with specific figures aligned to north-star metric, but output lacks source citations and explanatory context around movements.",
-  "flags": [],
-  "avg_score": 3.86,
+  "last_analyzed": "2026-10-15T18:58:16Z",
+  "quality_score": 2,
+  "assessment": "Bare stat line with no data source, wallet/address, or timestamp behind the 15.01B holdings figure; the percentages are arithmetically consistent but unverifiable, and there is no substance beyond the numbers.",
+  "flags": [
+    "unverifiable_claim",
+    "low_quality"
+  ],
+  "avg_score": 3.73,
   "history": [
     {
       "date": "2026-07-30",
@@ -62,6 +65,12 @@
       "date": "2026-10-12",
       "score": 3,
       "ts": "2026-10-12T08:19:17Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-15",
+      "score": 2,
+      "ts": "2026-10-15T18:58:16Z",
       "harness": "claude"
     }
   ]
