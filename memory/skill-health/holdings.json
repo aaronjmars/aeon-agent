@@ -1,10 +1,12 @@
 {
   "skill": "holdings",
-  "last_analyzed": "2026-10-12T08:19:17Z",
-  "quality_score": 3,
-  "assessment": "Holdings data reported with specific figures aligned to north-star metric, but output lacks source citations and explanatory context around movements.",
-  "flags": [],
-  "avg_score": 3.86,
+  "last_analyzed": "2026-10-15T17:37:36Z",
+  "quality_score": 2,
+  "assessment": "Terse figure dump with no source, as-of timestamp, or scope (which wallets/treasury), so the numbers cannot be verified from the output. The percentages and deltas reconcile internally, but there is no Summary section or context.",
+  "flags": [
+    "low_quality"
+  ],
+  "avg_score": 3.73,
   "history": [
     {
       "date": "2026-07-30",
@@ -62,6 +64,12 @@
       "date": "2026-10-12",
       "score": 3,
       "ts": "2026-10-12T08:19:17Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-15",
+      "score": 2,
+      "ts": "2026-10-15T17:37:36Z",
       "harness": "claude"
     }
   ]
