@@ -28,6 +28,7 @@ Full history archived to `memory/topics/articles-history.md` (no new repo-articl
 ## Recent Digests
 | Date | Type | Key Topics |
 |------|------|------------|
+| 2026-10-15 | tweet-digest | Security (reasonix CLI vuln-scanner finding, nvidia/google/spacex/stripe security-tools pitch), Token (base buybacks continue) — thin cycle, 3 net-new originals, rest already reported 10-12/10-13/10-14 |
 | 2026-10-12 | tweet-digest | New Hooks (TeamWar red/blue team-pot hook), Comparisons (Aeon Agents vs OpenAI Dots graphic) — thin cycle, 2 net-new originals, rest already reported 10-09/10-11 |
 | 2026-10-11 | tweet-digest | Weekly Recap (pinned Oct 2→11 "week in the trenches" thread) — thin cycle, 1 net-new original, rest already reported 10-08/10-09 |
 | 2026-10-10 | tweet-digest | TWEET_DIGEST_OK — zero net-new candidates, no activity at all on 10-10 |
