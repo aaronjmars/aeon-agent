@@ -1,0 +1,195 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "alert-new",
+        "holdings-stat",
+        "holdings-progress",
+        "sep-1",
+        "issues-heading",
+        "issues-stat",
+        "issues-text",
+        "issues-badges",
+        "sep-2",
+        "fleet-heading",
+        "fleet-stat",
+        "fleet-text",
+        "status-badge"
+      ]
+    },
+    "alert-new": {
+      "type": "Alert",
+      "props": {
+        "title": "NEW: health issue #261 (health: holdings) filed",
+        "message": "holdings succeeded 10-12 (78% lifetime, 0 consecutive failures), so likely a quality flag, not an outage.",
+        "type": "info"
+      },
+      "children": []
+    },
+    "holdings-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "holdings succeeded",
+        "value": "10-12"
+      },
+      "children": []
+    },
+    "holdings-progress": {
+      "type": "Progress",
+      "props": {
+        "value": 78,
+        "max": 100,
+        "label": "holdings lifetime success (78%)"
+      },
+      "children": []
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "issues-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Open health issues",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "issues-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Open health issues",
+        "value": "7"
+      },
+      "children": []
+    },
+    "issues-text": {
+      "type": "Text",
+      "props": {
+        "text": "Open health issues now 7: #230, #231, #234, #247, #248, #258, #261. None auto-close on recovery.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "issues-badges": {
+      "type": "Stack",
+      "props": {
+        "direction": "horizontal",
+        "gap": "sm"
+      },
+      "children": [
+        "badge-230",
+        "badge-231",
+        "badge-234",
+        "badge-247",
+        "badge-248",
+        "badge-258",
+        "badge-261"
+      ]
+    },
+    "badge-230": {
+      "type": "Badge",
+      "props": {
+        "text": "#230",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-231": {
+      "type": "Badge",
+      "props": {
+        "text": "#231",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-234": {
+      "type": "Badge",
+      "props": {
+        "text": "#234",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-247": {
+      "type": "Badge",
+      "props": {
+        "text": "#247",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-248": {
+      "type": "Badge",
+      "props": {
+        "text": "#248",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-258": {
+      "type": "Badge",
+      "props": {
+        "text": "#258",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "badge-261": {
+      "type": "Badge",
+      "props": {
+        "text": "#261",
+        "variant": "outline"
+      },
+      "children": []
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      },
+      "children": []
+    },
+    "fleet-heading": {
+      "type": "Heading",
+      "props": {
+        "text": "Fleet status",
+        "level": "h3"
+      },
+      "children": []
+    },
+    "fleet-stat": {
+      "type": "Stat",
+      "props": {
+        "label": "Skills with last_status success",
+        "value": "9/9"
+      },
+      "children": []
+    },
+    "fleet-text": {
+      "type": "Text",
+      "props": {
+        "text": "Fleet otherwise clean: 9/9 skills last_status success, no stuck or failing skills.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "status-badge": {
+      "type": "Badge",
+      "props": {
+        "text": "Status page: WATCH",
+        "variant": "secondary"
+      },
+      "children": []
+    }
+  }
+}
