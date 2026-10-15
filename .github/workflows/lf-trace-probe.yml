@@ -27,18 +27,17 @@ jobs:
           source scripts/langfuse-otel.sh
           mkdir -p /tmp/mcpdir /tmp/emptydir
           printf '%s\n' '{"mcpServers":{"base":{"type":"http","url":"https://mcp.base.org","headers":{"Authorization":"Bearer ${MCP_BASE_TOKEN}"}}}}' > /tmp/mcpdir/.mcp.json
-          printf '%s\n' '{"mcpServers":{}}' > /tmp/emptydir/.mcp.json
           run() { # variant dir extra-args claude-bin
-            local v=$1 d=$2 x=$3 bin=$4 i
+            local v=$1 d=$2 x=$3 i
             for i in 1 2 3 4 5 6; do
               local s="probe-${GITHUB_RUN_ID}-${v}-${i}"
               ( cd "$d"
                 export OTEL_RESOURCE_ATTRIBUTES="service.name=aeon,deployment.environment=fix-probe,langfuse.session.id=${s},langfuse.trace.name=probe:${v}"
-                # shellcheck disable=SC2086
-                echo "Run the Bash command: ls -1 / | head -3 . Then reply with just: ok" | $bin -p - --output-format json --model claude-haiku-5-5 --permission-mode default --allowedTools "Bash(ls:*),Bash(head:*)" $x | jq -c '{v:"'"$v"'", s:"'"$s"'", is_error, num_turns, duration_ms}' )
+                export TRACEPARENT="00-$(openssl rand -hex 16)-$(openssl rand -hex 8)-01"; echo "TP $s $TRACEPARENT"
+                echo "Run the Bash command: ls -1 / | head -3 . Then reply with just: ok" | claude -p - --output-format json --model claude-haiku-5-5 --permission-mode default --allowedTools "Bash(ls:*),Bash(head:*)" --settings "$x" | jq -c '{v:"'"$v"'", s:"'"$s"'", is_error, num_turns, duration_ms}' )
             done
           }
-          run E-emptymcpjson /tmp/emptydir "" claude
-          run F-emptymcpflag "$GITHUB_WORKSPACE" "--strict-mcp-config --mcp-config /tmp/emptydir/.mcp.json" claude
-          run H-cc301 "$GITHUB_WORKSPACE" "" /tmp/cc301/node_modules/.bin/claude
+          run S-hook1s "$GITHUB_WORKSPACE" '{"hooks":{"SessionStart":[{"hooks":[{"type":"command","command":"sleep 1"}]}]}}'
+          run T-hook05s "$GITHUB_WORKSPACE" '{"hooks":{"SessionStart":[{"hooks":[{"type":"command","command":"sleep 0.5"}]}]}}'
+          run U-nohook "$GITHUB_WORKSPACE" '{}'
           sleep 5
