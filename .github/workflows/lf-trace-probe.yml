@@ -1,0 +1,44 @@
+name: lf-trace-probe
+# Temporary probe for the Langfuse trace-tree break (removed before merge).
+on:
+  push:
+    branches: [fix/langfuse-trace-probe]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: '22'
+      - run: npm install -g @anthropic-ai/claude-code@2.1.287
+      - name: Probe
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          LANGFUSE_PUBLIC_KEY: ${{ secrets.LANGFUSE_PUBLIC_KEY }}
+          LANGFUSE_SECRET_KEY: ${{ secrets.LANGFUSE_SECRET_KEY }}
+          LANGFUSE_HOST: ${{ vars.LANGFUSE_HOST }}
+        run: |
+          set -uo pipefail
+          claude --version
+          source scripts/langfuse-otel.sh
+          mkdir -p /tmp/mcpdir /tmp/emptydir
+          printf '%s\n' '{"mcpServers":{"base":{"type":"http","url":"https://mcp.base.org","headers":{"Authorization":"Bearer ${MCP_BASE_TOKEN}"}}}}' > /tmp/mcpdir/.mcp.json
+          run() { # variant dir traceparent
+            local v=$1 d=$2 tp=$3 i
+            for i in 1 2; do
+              local s="probe-${GITHUB_RUN_ID}-${v}-${i}"
+              ( cd "$d"
+                export OTEL_RESOURCE_ATTRIBUTES="service.name=aeon,deployment.environment=fix-probe,langfuse.session.id=${s},langfuse.trace.name=probe:${v}"
+                if [ -n "$tp" ]; then export TRACEPARENT="00-$(openssl rand -hex 16)-$(openssl rand -hex 8)-01"; fi
+                echo "Reply with just: ok" | claude -p - --output-format json --model claude-haiku-5-5 --permission-mode default | jq -c '{v:"'"$v"'", s:"'"$s"'", is_error, num_turns, duration_ms}' )
+            done
+          }
+          run A-workspace "$GITHUB_WORKSPACE" ""
+          run B-mcpjson /tmp/mcpdir ""
+          run C-traceparent "$GITHUB_WORKSPACE" 1
+          run D-emptydir /tmp/emptydir ""
+          sleep 5
