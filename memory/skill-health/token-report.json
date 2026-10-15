@@ -1,17 +1,11 @@
 {
   "skill": "token-report",
-  "last_analyzed": "2026-10-14T06:06:42Z",
-  "quality_score": 2,
-  "assessment": "Well-formatted report but violates strategy constraint: publishes unverifiable specific financial figures ($0.00001533, $392.8K, etc.) when strategy explicitly prohibits publishing unverified numbers.",
-  "flags": [
-    "unverifiable_claim"
-  ],
-  "avg_score": 3.9,
+  "last_analyzed": "2026-10-15T06:07:13Z",
+  "quality_score": 3,
+  "assessment": "Token report completed successfully; provides tracked metrics ($AEON price, liquidity, volume) aligned with strategy's north-star tracking goal. Data appears sourced from real APIs (GeckoTerminal), analysis is sound but minimal. Acceptable execution of its monitoring function; doesn't rise to substantive insight or actionable next steps.",
+  "flags": [],
+  "avg_score": 3.87,
   "history": [
-    {
-      "date": "2026-09-14",
-      "score": 4
-    },
     {
       "date": "2026-09-15",
       "score": 4
@@ -142,6 +136,12 @@
       "date": "2026-10-14",
       "score": 2,
       "ts": "2026-10-14T06:06:42Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-15",
+      "score": 3,
+      "ts": "2026-10-15T06:07:13Z",
       "harness": "claude"
     }
   ]
