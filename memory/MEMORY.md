@@ -16,7 +16,7 @@ type: Index
 `token-report` reads this table; update it here to retarget.
 
 ## Watched Repos
-See `memory/watched-repos.md` — `aaronjmars/aeon`, `aaronjmars/aeon-agent`, `aaronjmars/minitor`.
+See `memory/watched-repos.md` — `aeonfun/aeon`, `aeonfun/aeon-agent`, `aeonfun/minitor`.
 
 ## Recent Articles
 Full history archived to `memory/topics/articles-history.md` (no new repo-article/project-lens pieces since 2026-06-24 — that skill isn't currently running; shiplog/token-report/holdings articles are routine and not tracked here).

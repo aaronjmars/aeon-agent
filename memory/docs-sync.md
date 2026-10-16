@@ -11,7 +11,7 @@ skill still reads `memory/docs-sync.md`). Defines which product repo's merged PR
 become the changelog, and which marketing-site repo to open the PR against.
 
 - product_repo: aeonfun/aeon
-- website_repo: aaronjmars/aeon-website
+- website_repo: aeonfun/aeon-website
 - min_prs: 1
 - lookback_days: 7
 - draft: true
