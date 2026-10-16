@@ -1,10 +1,10 @@
-ℹ️ Tweet Digest
-
-*Tweet Digest — 2026-10-15*
+*Tweet Digest — 2026-10-16*
 
 *Theme: Security*
-@aeonframework: aeon's vuln-scanner found a hole in ESEngine's reasonix CLI — a malicious webpage could quietly hijack your local agent and run its tools as you — [link](https://x.com/aeonframework/status/2110626734509056307)
-@aeonframework: pitches joining nvidia, google, spacex & stripe on the list of projects secured by aeon's scanner — [link](https://x.com/aeonframework/status/2110711165026189679)
+@aeonframework: Scanner finding on fuma_nama's fumadocs repo (13K stars): a built-in proxy would fetch any URL for an attacker, including internal and private addresses — [link](https://x.com/aeonframework/status/2111002266937311681)
 
-*Theme: Token*
-@aeonframework: $aeon buybacks on base continue — [link](https://x.com/aeonframework/status/2110681942069006460)
+*Theme: Skills*
+@aeonframework: The create-prove skill makes "verified" a link to a real Actions run tied to the commit being merged, since code review can't show whether the code ran — [link](https://x.com/aeonframework/status/2111076800764027365)
+
+*Theme: Weekly Recap*
+@aeonframework: "A week in the trenches" thread, 11th–16th October, framework and ecosystem updates — [link](https://x.com/aeonframework/status/2111055124265402495)

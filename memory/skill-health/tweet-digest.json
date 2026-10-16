@@ -1,17 +1,13 @@
 {
   "skill": "tweet-digest",
-  "last_analyzed": "2026-10-15T17:03:30Z",
+  "last_analyzed": "2026-10-16T19:37:23Z",
   "quality_score": 2,
-  "assessment": "Well-formatted but contains unverifiable claims: specific tweet IDs and major company partnerships (Nvidia, Google, SpaceX, Stripe) presented as fact without verification, violating explicit strategy constraint against publishing unverified numbers",
+  "assessment": "Three one-line restatements of the account's own tweets with no substance behind them; the 'Weekly Recap' entry names a thread without its content, and the fumadocs security and star-count claims rest only on the operator's own tweet link, so they can't be checked from the output.",
   "flags": [
-    "unverifiable_claim"
+    "low_quality"
   ],
-  "avg_score": 3.33,
+  "avg_score": 3.3,
   "history": [
-    {
-      "date": "2026-09-13",
-      "score": 3
-    },
     {
       "date": "2026-09-14",
       "score": 4
@@ -142,6 +138,12 @@
       "date": "2026-10-15",
       "score": 2,
       "ts": "2026-10-15T17:03:30Z",
+      "harness": "claude"
+    },
+    {
+      "date": "2026-10-16",
+      "score": 2,
+      "ts": "2026-10-16T19:37:23Z",
       "harness": "claude"
     }
   ]

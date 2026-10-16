@@ -1,0 +1,103 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "Tweet Digest — 2026-10-16"
+      },
+      "children": [
+        "theme-security",
+        "tweet-1",
+        "link-1",
+        "sep-1",
+        "theme-skills",
+        "tweet-2",
+        "link-2",
+        "sep-2",
+        "theme-recap",
+        "tweet-3",
+        "link-3"
+      ]
+    },
+    "theme-security": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Security",
+        "level": "h3"
+      }
+    },
+    "tweet-1": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "Scanner finding on fuma_nama's fumadocs repo (13K stars): a built-in proxy would fetch any URL for an attacker, including internal and private addresses"
+      }
+    },
+    "link-1": {
+      "type": "Link",
+      "props": {
+        "label": "Tweet link",
+        "href": "https://x.com/aeonframework/status/2111002266937311681"
+      }
+    },
+    "sep-1": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme-skills": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Skills",
+        "level": "h3"
+      }
+    },
+    "tweet-2": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "The create-prove skill makes \"verified\" a link to a real Actions run tied to the commit being merged, since code review can't show whether the code ran"
+      }
+    },
+    "link-2": {
+      "type": "Link",
+      "props": {
+        "label": "Tweet link",
+        "href": "https://x.com/aeonframework/status/2111076800764027365"
+      }
+    },
+    "sep-2": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "theme-recap": {
+      "type": "Heading",
+      "props": {
+        "text": "Theme: Weekly Recap",
+        "level": "h3"
+      }
+    },
+    "tweet-3": {
+      "type": "TweetCard",
+      "props": {
+        "author": "aeonframework",
+        "handle": "@aeonframework",
+        "text": "\"A week in the trenches\" thread, 11th–16th October, framework and ecosystem updates"
+      }
+    },
+    "link-3": {
+      "type": "Link",
+      "props": {
+        "label": "Tweet link",
+        "href": "https://x.com/aeonframework/status/2111055124265402495"
+      }
+    }
+  }
+}
