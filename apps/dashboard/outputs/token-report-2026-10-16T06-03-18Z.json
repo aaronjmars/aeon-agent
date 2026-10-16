@@ -1,0 +1,97 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "$AEON — CONSOLIDATING"
+      },
+      "children": [
+        "summary",
+        "stats",
+        "sep",
+        "chart"
+      ]
+    },
+    "summary": {
+      "type": "Text",
+      "props": {
+        "text": "Price +8.9% on volume only 0.90× the 7d mean, so it misses the RALLYING bar.",
+        "variant": "lead"
+      }
+    },
+    "stats": {
+      "type": "Grid",
+      "props": {
+        "columns": 3,
+        "gap": "md"
+      },
+      "children": [
+        "price",
+        "liq",
+        "vol",
+        "buysells",
+        "whales"
+      ]
+    },
+    "price": {
+      "type": "Stat",
+      "props": {
+        "label": "Price",
+        "value": "$0.00001533",
+        "delta": "+8.9% 24h",
+        "trend": "up"
+      }
+    },
+    "liq": {
+      "type": "Stat",
+      "props": {
+        "label": "Liq",
+        "value": "$366.0K",
+        "delta": "+4.2%",
+        "trend": "up"
+      }
+    },
+    "vol": {
+      "type": "Stat",
+      "props": {
+        "label": "Vol",
+        "value": "$42.7K",
+        "delta": "0.90× 7d",
+        "trend": "neutral"
+      }
+    },
+    "buysells": {
+      "type": "Stat",
+      "props": {
+        "label": "Buys/Sells",
+        "value": "60/90",
+        "delta": "ratio 0.67",
+        "trend": "neutral"
+      }
+    },
+    "whales": {
+      "type": "Stat",
+      "props": {
+        "label": "Whales",
+        "value": "7",
+        "delta": "all buys",
+        "trend": "neutral"
+      }
+    },
+    "sep": {
+      "type": "Separator",
+      "props": {
+        "orientation": "horizontal"
+      }
+    },
+    "chart": {
+      "type": "Link",
+      "props": {
+        "label": "Chart",
+        "href": "https://www.geckoterminal.com/base/pools/0x4a9b9e13975d26f4e3e17c655593bb82145dd4452aedafb826d856b817c9cfd4"
+      }
+    }
+  }
+}
