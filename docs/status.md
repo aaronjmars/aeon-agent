@@ -26,8 +26,8 @@ _Source: `output/articles/token-report-2026-10-16.md` · verdict: CONSOLIDATING_
 | Skill | Last run | Status | Success rate | Consecutive failures |
 |-------|----------|--------|-------------:|---------------------:|
 | token-report | 2026-10-16 06:03 UTC | ✅ success | 91% | 0 |
+| heartbeat | 2026-10-16 15:28 UTC | ✅ success | 98% | 0 |
 | tweet-digest | 2026-10-15 17:03 UTC | ✅ success | 94% | 0 |
-| heartbeat | 2026-10-15 19:02 UTC | ✅ success | 98% | 0 |
 | aeon-update | 2026-10-12 11:20 UTC | ✅ success | 69% | 0 |
 | repo-pulse | 2026-10-12 10:09 UTC | ✅ success | 91% | 0 |
 | shiplog | 2026-10-12 09:12 UTC | ✅ success | 88% | 0 |
