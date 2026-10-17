@@ -1,10 +1,12 @@
-*Tweet Digest — 2026-10-16*
+**TWEET_DIGEST_OK**: nothing new to report, so I sent no notification.
 
-*Theme: Security*
-@aeonframework: Scanner finding on fuma_nama's fumadocs repo (13K stars): a built-in proxy would fetch any URL for an attacker, including internal and private addresses — [link](https://x.com/aeonframework/status/2111002266937311681)
+I fetched @aeonframework, the only tracked account, from twitterapi.io (HTTP 200). I checked the last three days, 10-14 to 10-17, against the logs.
 
-*Theme: Skills*
-@aeonframework: The create-prove skill makes "verified" a link to a real Actions run tied to the commit being merged, since code review can't show whether the code ran — [link](https://x.com/aeonframework/status/2111076800764027365)
+- **Already reported:** every substantive original in the window appeared in the 10-14, 10-15 or 10-16 logs.
+- **Excluded as retweets:** two, found by the "RT @" text prefix. They are bankrbot's "Agent Hour /026" retweet and the retweet of @aaronjmars's bug-bounty-buyback post.
+- **Excluded as empty:** one tweet that is only a t.co link with no text (`2110804566149300730`).
 
-*Theme: Weekly Recap*
-@aeonframework: "A week in the trenches" thread, 11th–16th October, framework and ecosystem updates — [link](https://x.com/aeonframework/status/2111055124265402495)
+## Summary
+- Appended a `### tweet-digest` entry with the `TWEET_DIGEST_OK` result to `memory/logs/2026-10-17.md`.
+- Left a scratch file at `output/.tw-td.json` because `rm` isn't granted.
+- No follow-up needed.
