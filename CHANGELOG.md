@@ -9,6 +9,12 @@ from or pin to; the template keeps serving latest `main` to new forks.
 
 ## [Unreleased]
 
+### Fixed
+
+- Restore trusted HTTP push credentials after the post-run Git config guard removes checkout's credential includes, without allowing untrusted includes.
+- Report redacted Git push errors and retry only concurrent ref-update rejections, not authentication, permission, or transport failures.
+- Remove stale `.docs-sync-work` and `output/.changelog-work/work` submodule entries and ignore those scratch directories.
+
 ## [0.1.0] - 2026-07-09
 
 First tagged snapshot — a stable, fully documented point to fork from or pin to.
