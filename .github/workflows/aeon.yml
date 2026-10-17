@@ -225,6 +225,19 @@ jobs:
           git config user.name "aeonframework"
           git config user.email "aeonframework@proton.me"
 
+      # memory-flush with nothing new to fold in: skip the model call. `idle` exits 0
+      # only when no daily log changed since the last flush (fingerprints recorded by
+      # `stamp`) and that flush is under 7 days old; any doubt or error runs it as usual.
+      # The skipped run is recorded as a success so the slot is not retried.
+      - name: Idle gate (memory-flush)
+        id: idle
+        if: steps.work.outputs.mode != '' && steps.skill.outputs.name == 'memory-flush'
+        run: |
+          if python3 scripts/memory_prep.py idle; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::memory-flush skipped: no new log entries since the last flush"
+          fi
+
       # Egress hardening P1: default-deny outbound to link-local + cloud metadata.
       # No skill has a legitimate reason to reach 169.254.0.0/16. Kills the SSRF /
       # DNS-rebinding-to-metadata class before any skill runs. REJECT (not DROP) so a
@@ -260,7 +273,7 @@ jobs:
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: ~/.npm
-          key: claude-code-${{ runner.os }}-2.1.287
+          key: claude-code-${{ runner.os }}-2.1.301
 
       - name: Install Claude Code
         if: steps.work.outputs.mode != ''
@@ -269,7 +282,7 @@ jobs:
         # the release notes: https://github.com/anthropics/claude-code/releases
         # (--prefer-offline uses the cached tarball above; keep the pin and the
         # cache key version in sync.)
-        run: npm install -g @anthropic-ai/claude-code@2.1.287 --prefer-offline
+        run: npm install -g @anthropic-ai/claude-code@2.1.301 --prefer-offline
 
       # ──────────────────────────────────────────────────────────────────────
       # Harness swap: resolve the harness HERE, not in "Run"
@@ -720,7 +733,8 @@ jobs:
       # audit log; fail-open, so a proxy that never comes up just skips the audit and the
       # run proceeds. Env is exported via $GITHUB_ENV and reaches the claude process
       # inside bwrap (no --clearenv in the sandbox prefix). This is egress control +
-      # audit, NOT credential isolation on a same-box runner; WebFetch/WebSearch bypass it.
+      # audit, NOT credential isolation on a same-box runner; WebFetch/WebSearch bypass it
+      # (enforce also sets CLAUDE_CODE_DISABLE_WEB_FETCH=1; WebSearch still bypasses).
       - name: Egress audit
         if: steps.work.outputs.mode != '' && vars.EGRESS_AUDIT == '1'
         uses: ./.github/actions/egress-audit
@@ -761,7 +775,7 @@ jobs:
       # uses the adapter's normalized result/usage/session_id envelope.
       - name: Run
         id: run
-        if: steps.work.outputs.mode != ''
+        if: steps.work.outputs.mode != '' && steps.idle.outputs.skip != 'true'
         env:
           # Secrets available to .mcp.json ${NAME} refs + per-skill `requires:`
           # injection. Built from an explicit allowlist of named secrets rather
@@ -1072,6 +1086,7 @@ jobs:
             echo "Riva shadow mode: declared and disclosure credentials withheld"
           fi
           [ -n "$INJECTED" ] && echo "::notice::Injected declared secrets for ${SKILL_NAME}:${INJECTED}"
+          export AEON_SECRETCURL_ALLOW="$([ "$SHADOW_MODE" = "1" ] || bash scripts/skill_requires.sh "$SKILL_NAME" 2>/dev/null | tr '\n' ' ')"
 
           unset ALL_SECRETS   # drop the secrets blob before any skill/Claude code runs
 
@@ -1266,6 +1281,14 @@ jobs:
 
           echo "::notice::Token usage — model: ${EFFECTIVE_MODEL:-$BANNER_MODEL}, input: $INPUT_TOKENS, output: $OUTPUT_TOKENS, cache_read: $CACHE_READ, cache_creation: $CACHE_CREATION, total: $TOTAL_TOKENS"
 
+      # The run can write .git/config, and every later git step runs in this
+      # checkout with push credentials. Drop the config that makes git run a
+      # program (fsmonitor, filters, merge drivers, credential helpers, includes,
+      # ...) and pin hooks off, from the starting commit's copy of the script.
+      - name: Lock git config
+        if: always() && steps.work.outputs.mode != ''
+        run: git show "$GITHUB_SHA:scripts/git-config-guard.sh" | bash
+
       # Egress hardening P2: publish the warn-mode audit log. always() so it lands
       # even if the run failed; the host list is the allowlist oracle P3 builds from.
       - name: Upload egress audit log
@@ -1367,8 +1390,10 @@ jobs:
           SKILL:       ${{ steps.skill.outputs.name }}
           RUN_OUTCOME: ${{ steps.run.outcome }}
           AUDIT_REF:   ${{ steps.fleet_preflight.outputs.audit_ref }}
+          IDLE_SKIP:   ${{ steps.idle.outputs.skip }}
         run: |
           set -euo pipefail
+          [ "$IDLE_SKIP" = "true" ] && RUN_OUTCOME="success"
           case "$RUN_OUTCOME" in
             success) STATUS="ok" ;;
             failure) STATUS="error" ;;
@@ -2119,7 +2144,12 @@ jobs:
             exit 0
           fi
           git commit -m "chore(${{ steps.skill.outputs.name }}): log read-only failure $(date +%Y-%m-%d)"
-          bash scripts/git-push-retry.sh
+          # Push helpers from the starting commit, as in "Commit results": they run
+          # with push credentials and the run could have edited the working tree.
+          HELPERS=$(mktemp -d "$RUNNER_TEMP/push-helpers.XXXXXX")
+          git show "$GITHUB_SHA:scripts/git-push-retry.sh" > "$HELPERS/git-push-retry.sh"
+          git show "$GITHUB_SHA:scripts/audit.sh" > "$HELPERS/audit.sh"
+          AEON_AUDIT_SCRIPT="$HELPERS/audit.sh" bash "$HELPERS/git-push-retry.sh"
 
       - name: Commit results
         # (Read-only failures are handled above, in "Commit read-only failure
@@ -2165,6 +2195,7 @@ jobs:
           LANGFUSE_HOST: ${{ vars.LANGFUSE_HOST }}
           LANGFUSE_TRACING: ${{ vars.LANGFUSE_TRACING }}
           RUN_HARNESS: ${{ steps.run.outputs.HARNESS }}
+          IDLE_SKIP: ${{ steps.idle.outputs.skip }}
         run: |
           SKILL="${{ steps.skill.outputs.name }}"
           RUN_OUTCOME="${{ steps.run.outcome }}"
@@ -2172,8 +2203,8 @@ jobs:
           STATE_FILE="memory/cron-state.json"
           QUALITY_SCORE="${{ steps.analyze.outputs.QUALITY_SCORE }}"
 
-          # Determine status from step outcome
-          if [ "$RUN_OUTCOME" = "success" ]; then
+          # Determine status from step outcome (an idle-gated memory-flush counts as done)
+          if [ "$RUN_OUTCOME" = "success" ] || [ "${IDLE_SKIP:-}" = "true" ]; then
             CRON_STATUS="success"
           else
             CRON_STATUS="failed"

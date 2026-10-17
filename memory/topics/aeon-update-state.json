@@ -1,60 +1,43 @@
 {
-  "baseline_sha": "df013dbe0be81e63771b7b013ec055380c766986",
+  "baseline_sha": "3a747cd035152c4556944d5ce60be0a3198670fb",
   "upstream": "aeonfun/aeon",
-  "last_run": "2026-10-12",
-  "last_pr": 259,
+  "last_run": "2026-10-17",
+  "last_pr": 268,
   "applied": {
-    "added": 1,
-    "updated": 178,
-    "deleted": 2,
-    "merged_3way": 3
+    "files": 90,
+    "note": "git read-tree 3-way (base df013db / local / head 3a747cd) + merge-index; 42 commits"
   },
   "pending_conflicts": [
-    {
-      "path": ".github/README.md",
-      "reason": "operator-customized-overlap (3-way merge-file non-zero)",
-      "upstream_commits": ["1560dcc"]
-    },
-    {
-      "path": ".github/workflows/aeon.yml",
-      "reason": "operator-customized-overlap (3-way merge-file non-zero)",
-      "upstream_commits": ["11aa692", "e5e465d", "d840d2f", "e2aae65"]
-    },
-    {
-      "path": "CHANGELOG.md",
-      "reason": "operator-customized-overlap (3-way merge-file non-zero)",
-      "upstream_commits": ["1560dcc", "11aa692", "9ecb3c3", "5f41362", "1375769", "6ec6f28"]
-    },
-    {
-      "path": "llms.txt",
-      "reason": "operator-customized-overlap (3-way merge-file non-zero)",
-      "upstream_commits": ["1560dcc"]
-    },
-    {
-      "path": "docs/examples/README.md",
-      "reason": "operator-customized-overlap (3-way merge-file non-zero)",
-      "upstream_commits": ["1560dcc"]
-    },
-    {
-      "path": "docs/skill-packs.md",
-      "reason": "operator-customized (carried from prior run; upstream untouched this window, local still divergent from HEAD)",
-      "upstream_commits": ["1a7f07e"]
-    },
-    {
-      "path": "skills/shiplog/SKILL.md",
-      "reason": "operator-customized (carried from prior run; upstream untouched this window, local still divergent from HEAD)",
-      "upstream_commits": ["1a7f07e"]
-    }
+    { "path": ".github/README.md", "reason": "operator-customized-overlap", "upstream_commits": ["1560dcc", "2cd951a", "5c6200b"] },
+    { "path": ".github/workflows/aeon.yml", "reason": "operator-customized-overlap", "upstream_commits": ["11aa692", "e5e465d", "d840d2f", "e2aae65", "7fd335d", "c47b155", "88ec745", "db179eb"] },
+    { "path": ".github/workflows/ci-aeon-skill-sync.yml", "reason": "operator-customized-overlap (runs-on AEON_RUNNER vs Blacksmith)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-agents-md.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-capabilities-parity.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-gate.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d", "ca26beb"] },
+    { "path": ".github/workflows/ci-harnesses-json.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-packs-json.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-readme-catalog.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-skill-category.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-skill-integrity.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-skill-packs.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-skills-json.yml", "reason": "operator-customized-overlap (runs-on)", "upstream_commits": ["95d7f7d"] },
+    { "path": ".github/workflows/ci-tests.yml", "reason": "operator-customized-overlap (runs-on, 10 parallel lanes)", "upstream_commits": ["0bc7a70", "f9ec0bf"] },
+    { "path": "CHANGELOG.md", "reason": "operator-customized-overlap", "upstream_commits": ["1560dcc", "11aa692", "9ecb3c3", "5f41362", "1375769", "6ec6f28"] },
+    { "path": "llms.txt", "reason": "operator-customized (carried; upstream untouched this window)", "upstream_commits": ["1560dcc"] },
+    { "path": "docs/examples/README.md", "reason": "operator-customized-overlap", "upstream_commits": ["1560dcc"] },
+    { "path": "docs/skill-packs.md", "reason": "operator-customized-overlap", "upstream_commits": ["1a7f07e", "0bc3806"] },
+    { "path": "skills/shiplog/SKILL.md", "reason": "operator-customized (carried; upstream untouched this window)", "upstream_commits": ["1a7f07e"] },
+    { "path": "docs/aeon-setup.md", "reason": "operator-customized-overlap", "upstream_commits": ["2cd951a"] },
+    { "path": "docs/langfuse.md", "reason": "operator-customized-overlap", "upstream_commits": ["7fd335d", "c47b155"] },
+    { "path": "docs/assets/hero-animated.svg", "reason": "operator-customized-overlap", "upstream_commits": ["2cd951a"] },
+    { "path": "harness-adapter/lib/otel-span.sh", "reason": "operator-customized-overlap", "upstream_commits": ["7fd335d", "88ec745"] },
+    { "path": "scripts/langfuse-otel.sh", "reason": "operator-customized-overlap", "upstream_commits": ["7fd335d", "c47b155", "88ec745", "d01bae9", "3dc55bb", "7686a1d"] },
+    { "path": "scripts/tests/test_langfuse_otel.sh", "reason": "operator-customized-overlap", "upstream_commits": ["7fd335d"] },
+    { "path": "scripts/tests/test_otel_span.sh", "reason": "operator-customized-overlap", "upstream_commits": ["7fd335d"] },
+    { "path": "scripts/skill_mode.sh", "reason": "paired-with-conflicting-test (test_skill_mode.sh overlaps; held together)", "upstream_commits": ["ac3045a"] },
+    { "path": "scripts/tests/test_skill_mode.sh", "reason": "operator-customized-overlap", "upstream_commits": ["ac3045a"] },
+    { "path": "skills/anatomy", "reason": "needs-catalog-regen-and-eyebrowlock-scan (generators/eyebrow not executable in this run); also holds docs/assets/skill-icons/anatomy.svg, scripts/tests/test_anatomy_integration.sh, skill-icons.data.ts", "upstream_commits": ["a588d72"] }
   ],
-  "resolved_this_run": {
-    "prior_pending_now_resolved": [
-      ".github/workflows/ci-tests.yml",
-      ".github/workflows/messages.yml",
-      "apps/webhook/package.json",
-      "apps/dashboard/package.json",
-      "apps/dashboard/package-lock.json"
-    ],
-    "note": "ci-tests.yml, apps/webhook/package.json, apps/dashboard/package.json+lock converged to upstream HEAD (local==HEAD now). messages.yml was CLEAN-MERGE-applied this run (operator customization kept + upstream disjoint change applied), so dropped from pending per S8."
-  },
-  "notes": "27-commit / 200-file window (1a7f07e..df013db, 2026-10-05->10-10). No 300-file cap hit; upstream objects fetched into .git and diffed locally for authoritative 3-way merges. 1 add (biome.json), 178 clean-updates, 3 3-way auto-merges (.github/workflows/messages.yml, docs/aeon-setup.md, scripts/llm-gateway.sh), 2 deletes (plugin/.minimax-plugin/plugin.json, plugin/plugin.json). catalog/skills.json+packs.json+skill-icons regenerated; AGENTS.md regen no-diff. eyebrowlock.json: create-skill entry carried from upstream HEAD (byte-identical tree); eyebrow v0.5.6 (CI pin, checksum-verified) verify --ci = rc0 (content drift advisory, no capability expansion). validate-config, validate-skill-packs, check-skill-categories, check-capabilities-parity, check-aeon-skill-sync, generate-skill-icons --check all green. 5 conflicts surfaced (not written): README.md, aeon.yml workflow, CHANGELOG.md, llms.txt, docs/examples/README.md - all operator-customized overlapping upstream's hosted-MCP-server / Haiku-5.5 / apt-hang edits."
+  "operator_owned_changed_upstream": ["aeon.yml", "catalog/skills.json", "catalog/packs.json", "catalog/skill-icons.json", "eyebrowlock.json", "AGENTS.md (regenerated locally)"],
+  "notes": "Run could not execute bin/generate-* or eyebrow (bash scripts need approval in this headless run), so the new anatomy skill was held back rather than shipping a red CI PR. langfuse-score.sh landed but is unused until the aeon.yml workflow is reconciled."
 }
