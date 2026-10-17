@@ -72,6 +72,8 @@ skills/remotion/project/props.json
 /.aeon-tmp/
 /.sw-tmp/
 /.scratch/
+/.docs-sync-work/
+/output/.changelog-work/
 /xai-td*.json
 /.pending-xai-td*.json
 /digest-*.md
