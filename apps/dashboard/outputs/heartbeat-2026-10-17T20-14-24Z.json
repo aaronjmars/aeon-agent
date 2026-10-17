@@ -1,0 +1,70 @@
+{
+  "root": "card",
+  "state": {},
+  "elements": {
+    "card": {
+      "type": "Card",
+      "props": {
+        "title": "heartbeat"
+      },
+      "children": [
+        "stack"
+      ]
+    },
+    "stack": {
+      "type": "Stack",
+      "props": {
+        "direction": "vertical",
+        "gap": "md"
+      },
+      "children": [
+        "badge",
+        "alert",
+        "t1",
+        "t2",
+        "t3"
+      ]
+    },
+    "badge": {
+      "type": "Badge",
+      "props": {
+        "text": "token-report",
+        "variant": "destructive"
+      },
+      "children": []
+    },
+    "alert": {
+      "type": "Alert",
+      "props": {
+        "title": "Run failed",
+        "message": "2026-10-17 08:48 UTC run failed at the \"Commit results\" step.",
+        "type": "error"
+      },
+      "children": []
+    },
+    "t1": {
+      "type": "Text",
+      "props": {
+        "text": "cron-state still shows `dispatched`, and there is no 10-17 article.",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "t2": {
+      "type": "Text",
+      "props": {
+        "text": "Likely cause: the post-run git-auth bug, fixed by #269 (merged 15:06 UTC).",
+        "variant": "body"
+      },
+      "children": []
+    },
+    "t3": {
+      "type": "Text",
+      "props": {
+        "text": "Next run: 10-18 06:00 UTC should confirm the fix.",
+        "variant": "muted"
+      },
+      "children": []
+    }
+  }
+}
